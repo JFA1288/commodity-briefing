@@ -1,0 +1,55 @@
+name: Daily Commodity Briefing
+
+on:
+  schedule:
+    - cron: '0 23 * * *'   # 7:00 AM Malaysia time every day
+  workflow_dispatch:         # lets you click Run to test manually
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Check out files
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install libraries
+        run: pip install -r requirements.txt
+
+      - name: Generate today's report
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TZ: Asia/Kuala_Lumpur
+        run: python commodity_news_agent.py
+
+      - name: Build dashboard
+        env:
+          TZ: Asia/Kuala_Lumpur
+        run: python make_dashboard.py
+
+      - name: Package dashboard for web
+        run: |
+          mkdir -p _site
+          cp commodity_reports/commodity_dashboard.html _site/index.html
+
+      - name: Upload site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
