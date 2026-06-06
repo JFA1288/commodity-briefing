@@ -41,7 +41,7 @@ class CompanyDigest(BaseModel):
     country: str
     items: list[NewsItem] = Field(default_factory=list)
     flags: list[str] = Field(default_factory=list)
-    highlight: str = ""        # Claude-generated strategic insight for top companies
+    highlight: str = ""
 
 
 class CommodityDigest(BaseModel):
@@ -65,7 +65,7 @@ class OpportunityItem(BaseModel):
     why: str
     published: Optional[datetime] = None
     score: float = 0.0
-    engagement_context: str = ""   # Claude-generated scope/team/duration hint
+    engagement_context: str = ""
 
 
 class SectorSummary(BaseModel):
@@ -84,6 +84,74 @@ class ExecutiveBrief(BaseModel):
     themes: list[str] = Field(default_factory=list)
 
 
+# ── New: demand-driver opportunity intelligence ────────────────────────────────
+
+class TriggerMatch(BaseModel):
+    """A demand-driver keyword match detected in a news item."""
+    driver: str                  # demand_driver key from config (e.g. "ma", "digital_tech")
+    service_line: str            # display label (e.g. "Strategy & Transactions")
+    suggested_angle: str         # templated next-step text
+    keywords_matched: list[str] = Field(default_factory=list)
+    materiality_weight: float = 1.0
+
+
+class OpportunityCard(BaseModel):
+    """Ranked consulting opportunity for the Opportunity Radar."""
+    company: str
+    sector: str
+    country: str
+    relationship: str            # client | target | audit_restricted
+    priority: str                # high | med | low
+    headline: str
+    url: str
+    driver: str                  # demand_driver key
+    service_line: str            # display label
+    suggested_angle: str
+    score: float = 0.0
+    score_breakdown: dict = Field(default_factory=dict)  # {materiality, recency, source, priority_mult}
+    published: Optional[datetime] = None
+    is_restricted: bool = False
+    is_new: bool = True          # False if same company appeared in previous run
+
+
+class AccountBrief(BaseModel):
+    """Enriched account card for Account Intelligence section."""
+    name: str
+    sector: str
+    country: str
+    relationship: str
+    priority: str
+    ticker: str = ""
+    one_liner: str = ""
+    active_triggers: list[TriggerMatch] = Field(default_factory=list)
+    top_headlines: list[str] = Field(default_factory=list)
+    top_urls: list[str] = Field(default_factory=list)
+    consulting_angles: list[str] = Field(default_factory=list)
+    talking_points: list[str] = Field(default_factory=list)
+    is_restricted: bool = False
+    has_news: bool = False
+
+
+class SectorTheme(BaseModel):
+    """Cross-account thematic roll-up derived from clustered triggers."""
+    theme: str                   # human-readable theme name
+    driver: str                  # dominant demand_driver key
+    service_lines: list[str] = Field(default_factory=list)
+    accounts: list[str] = Field(default_factory=list)
+    description: str = ""
+
+
+class WeeklyBrief(BaseModel):
+    """Partner-level executive summary for the top of the dashboard."""
+    period: str = ""             # e.g. "Week of 2026-06-06"
+    top_opportunities: list[str] = Field(default_factory=list)   # narrative bullets
+    hottest_accounts: list[str] = Field(default_factory=list)
+    key_themes: list[str] = Field(default_factory=list)
+    what_changed: list[str] = Field(default_factory=list)
+    opportunity_count: int = 0
+    active_account_count: int = 0
+
+
 class DailyDigest(BaseModel):
     generated_at: datetime
     executive_brief: Optional[ExecutiveBrief] = None
@@ -94,3 +162,8 @@ class DailyDigest(BaseModel):
     prices: list[PriceRecord] = Field(default_factory=list)
     opportunities: list[OpportunityItem] = Field(default_factory=list)
     sector_summaries: list[SectorSummary] = Field(default_factory=list)
+    # New fields — absent keys degrade gracefully in the dashboard
+    opportunity_radar: list[OpportunityCard] = Field(default_factory=list)
+    account_briefs: list[AccountBrief] = Field(default_factory=list)
+    sector_themes: list[SectorTheme] = Field(default_factory=list)
+    weekly_brief: Optional[WeeklyBrief] = None

@@ -1,4 +1,4 @@
-"""Dedup, relevance filter, and sector grouping of news items."""
+"""Dedup, relevance filter, sector grouping, and demand-driver trigger detection."""
 
 from __future__ import annotations
 
@@ -8,7 +8,7 @@ from datetime import datetime, timedelta, timezone
 from typing import Optional
 
 from . import config
-from .models import NewsItem
+from .models import NewsItem, TriggerMatch
 
 # ── Dedup ─────────────────────────────────────────────────────────────────────
 
@@ -133,6 +133,31 @@ def filter_recent(items: list[NewsItem], hours: Optional[int] = None) -> list[Ne
 
 
 # ── Sector grouping ───────────────────────────────────────────────────────────
+
+# ── Demand-driver trigger detection ──────────────────────────────────────────
+
+def detect_triggers(item: NewsItem) -> list[TriggerMatch]:
+    """Match demand-driver keywords against a news item; return all matching triggers."""
+    cfg = config.load()
+    drivers: dict = cfg.get("demand_drivers", {})
+    sl_labels: dict = cfg.get("service_lines", {})
+    text = (item.title + " " + item.summary).lower()
+
+    matches: list[TriggerMatch] = []
+    for driver_key, driver_cfg in drivers.items():
+        keywords: list[str] = driver_cfg.get("keywords", [])
+        matched = [kw for kw in keywords if kw.lower() in text]
+        if matched:
+            sl_key = driver_cfg.get("service_line", driver_key)
+            matches.append(TriggerMatch(
+                driver=driver_key,
+                service_line=sl_labels.get(sl_key, sl_key.replace("_", " ").title()),
+                suggested_angle=driver_cfg.get("suggested_angle", ""),
+                keywords_matched=matched[:5],
+                materiality_weight=float(driver_cfg.get("materiality_weight", 1.0)),
+            ))
+    return matches
+
 
 def group_by_sector(company_news: dict[str, list[NewsItem]]) -> dict[str, list[tuple[str, list[NewsItem]]]]:
     """Returns {sector: [(company_name, [items]), ...]}"""

@@ -1,23 +1,31 @@
-"""Rule-based ranking, material-event flagging, and consulting signal generation."""
+"""Rule-based ranking, material-event flagging, consulting signal and opportunity generation."""
 
 from __future__ import annotations
 
+import json
 import math
 from datetime import datetime, timezone
+from pathlib import Path
 from typing import Optional
 
 from . import config
 from .models import (
+    AccountBrief,
     CompanyDigest,
     CommodityDigest,
     DailyDigest,
     ExecutiveBrief,
     NewsItem,
+    OpportunityCard,
     OpportunityItem,
     PriceRecord,
     SectorSummary,
+    SectorTheme,
+    TriggerMatch,
     WatchBullet,
+    WeeklyBrief,
 )
+from .process import detect_triggers
 
 # ── Consulting signal labels (priority order — first match wins) ───────────────
 
@@ -358,6 +366,280 @@ def what_to_watch(
     return bullets
 
 
+# ── Opportunity Radar ─────────────────────────────────────────────────────────
+
+def _recency_score_opp(published: Optional[datetime]) -> float:
+    if published is None:
+        return 0.3
+    halflife = config.get("opportunity_scoring", {}).get("recency_halflife_hours", 18)
+    age_h = max(0, (datetime.now(timezone.utc) - published).total_seconds() / 3600)
+    return math.exp(-math.log(2) * age_h / halflife)
+
+
+def build_opportunity_radar(
+    company_news: dict[str, list[NewsItem]],
+    prev_companies: set[str],
+) -> list[OpportunityCard]:
+    cfg = config.load()
+    company_meta = {c["name"]: c for c in cfg.get("companies", [])}
+    opp_cfg = cfg.get("opportunity_scoring", {})
+    priority_mults: dict = opp_cfg.get("priority_multipliers", {"high": 1.5, "med": 1.0, "low": 0.7})
+    max_cards = opp_cfg.get("max_opportunities", 12)
+    source_weights = {f["name"]: f.get("weight", 1.0) for f in cfg.get("supplementary_feeds", [])}
+
+    cards: list[OpportunityCard] = []
+    for company, items in company_news.items():
+        meta = company_meta.get(company, {})
+        relationship = meta.get("relationship", "target")
+        priority = meta.get("priority", "med")
+        priority_mult = priority_mults.get(priority, 1.0)
+
+        for item in items:
+            triggers = detect_triggers(item)
+            if not triggers:
+                continue
+            # pick the highest-materiality trigger per item
+            trigger = max(triggers, key=lambda t: t.materiality_weight)
+            recency = _recency_score_opp(item.published)
+            src_w = source_weights.get(item.source, cfg.get("scoring", {}).get("source_weight_default", 1.0))
+            score = round(trigger.materiality_weight * recency * src_w * priority_mult, 3)
+
+            cards.append(OpportunityCard(
+                company=company,
+                sector=meta.get("sector", "other"),
+                country=meta.get("country", ""),
+                relationship=relationship,
+                priority=priority,
+                headline=item.title,
+                url=item.url,
+                driver=trigger.driver,
+                service_line=trigger.service_line,
+                suggested_angle="" if relationship == "audit_restricted" else trigger.suggested_angle,
+                score=score,
+                score_breakdown={
+                    "materiality": trigger.materiality_weight,
+                    "recency": round(recency, 3),
+                    "source": src_w,
+                    "priority_mult": priority_mult,
+                },
+                published=item.published,
+                is_restricted=(relationship == "audit_restricted"),
+                is_new=(company not in prev_companies),
+            ))
+
+    # one card per company (highest score), then sort by score descending
+    seen: set[str] = set()
+    deduped: list[OpportunityCard] = []
+    for card in sorted(cards, key=lambda c: c.score, reverse=True):
+        if card.company not in seen:
+            seen.add(card.company)
+            deduped.append(card)
+
+    return deduped[:max_cards]
+
+
+# ── Account Intelligence briefs ───────────────────────────────────────────────
+
+_SECTOR_DISPLAY = {
+    'energy': 'Energy',
+    'metals_mining': 'Metals & Mining',
+    'power_utilities': 'Power & Utilities',
+    'trading': 'Trading',
+}
+
+
+def _build_talking_points(
+    company: str,
+    relationship: str,
+    priority: str,
+    triggers: list[TriggerMatch],
+    headlines: list[str],
+) -> list[str]:
+    points: list[str] = []
+    if relationship == "audit_restricted":
+        points.append("Independence note — confirm permissibility with Risk/Independence before any pursuit.")
+        if headlines:
+            points.append(f"Awareness: {headlines[0]}")
+        return points
+
+    if triggers:
+        top = triggers[0]
+        points.append(f"{top.service_line} signal detected — {top.suggested_angle.lower()}.")
+    if len(triggers) > 1:
+        others = ", ".join(t.service_line for t in triggers[1:3])
+        points.append(f"Additional signals: {others}.")
+    if headlines:
+        points.append(f"Key development: \"{headlines[0]}\"")
+    if priority == "high":
+        points.append("High-priority account — consider partner-level outreach this week.")
+    elif priority == "low":
+        points.append("Monitor for further signals before formal outreach.")
+    return points[:4]
+
+
+def build_account_briefs(
+    company_news: dict[str, list[NewsItem]],
+    opportunity_cards: list[OpportunityCard],
+) -> list[AccountBrief]:
+    cfg = config.load()
+    company_meta = {c["name"]: c for c in cfg.get("companies", [])}
+    card_by_company: dict[str, OpportunityCard] = {c.company: c for c in opportunity_cards}
+    sl_labels: dict = cfg.get("service_lines", {})
+
+    briefs: list[AccountBrief] = []
+    for company_cfg in cfg.get("companies", []):
+        name = company_cfg["name"]
+        relationship = company_cfg.get("relationship", "target")
+        priority = company_cfg.get("priority", "med")
+        items = company_news.get(name, [])
+
+        # collect all triggers across all items
+        all_triggers: list[TriggerMatch] = []
+        for item in items[:10]:
+            all_triggers.extend(detect_triggers(item))
+
+        # deduplicate triggers by driver, keep highest materiality
+        seen_drivers: dict[str, TriggerMatch] = {}
+        for t in sorted(all_triggers, key=lambda x: x.materiality_weight, reverse=True):
+            if t.driver not in seen_drivers:
+                seen_drivers[t.driver] = t
+        unique_triggers = list(seen_drivers.values())[:5]
+
+        headlines = [i.title for i in items[:5]]
+        urls = [i.url for i in items[:5]]
+
+        consulting_angles = []
+        for t in unique_triggers[:3]:
+            if relationship != "audit_restricted":
+                consulting_angles.append(f"{t.service_line}: {t.suggested_angle}")
+        if relationship == "audit_restricted" and unique_triggers:
+            consulting_angles.append("Awareness only — BD suggestions suppressed for this account.")
+
+        talking_points = _build_talking_points(name, relationship, priority, unique_triggers, headlines)
+
+        briefs.append(AccountBrief(
+            name=name,
+            sector=company_cfg.get("sector", "other"),
+            country=company_cfg.get("country", ""),
+            relationship=relationship,
+            priority=priority,
+            ticker=company_cfg.get("ticker", ""),
+            one_liner=company_cfg.get("one_liner", ""),
+            active_triggers=unique_triggers,
+            top_headlines=headlines,
+            top_urls=urls,
+            consulting_angles=consulting_angles,
+            talking_points=talking_points,
+            is_restricted=(relationship == "audit_restricted"),
+            has_news=bool(items),
+        ))
+
+    briefs.sort(key=lambda b: (
+        {"high": 0, "med": 1, "low": 2}.get(b.priority, 9),
+        0 if b.has_news else 1,
+        b.name,
+    ))
+    return briefs
+
+
+# ── Sector themes ─────────────────────────────────────────────────────────────
+
+_THEME_NAMES: dict[str, str] = {
+    "ma":               "M&A / Transaction Activity",
+    "capital_projects": "Capital Project Pipeline",
+    "cost_performance": "Cost & Margin Pressure",
+    "leadership":       "Leadership Transition",
+    "regulation_risk":  "Regulatory & Sanctions Exposure",
+    "sustainability":   "Energy Transition & ESG",
+    "digital_tech":     "Digital & Technology Transformation",
+    "cyber":            "Cyber & Operational Resilience",
+    "tax":              "Tax & Fiscal Risk",
+    "supply_chain":     "Supply Chain Disruption",
+}
+
+
+def build_sector_themes(opportunity_cards: list[OpportunityCard]) -> list[SectorTheme]:
+    driver_map: dict[str, list[OpportunityCard]] = {}
+    for card in opportunity_cards:
+        driver_map.setdefault(card.driver, []).append(card)
+
+    themes: list[SectorTheme] = []
+    for driver, cards in sorted(driver_map.items(), key=lambda x: -len(x[1])):
+        if len(cards) < 2:
+            continue
+        accounts = list(dict.fromkeys(c.company for c in cards))
+        service_lines = list(dict.fromkeys(c.service_line for c in cards))
+        sectors = list(dict.fromkeys(_SECTOR_DISPLAY.get(c.sector, c.sector) for c in cards))
+        description = (
+            f"{len(accounts)} accounts show {_THEME_NAMES.get(driver, driver)} signals "
+            f"across {', '.join(sectors)} — potential cross-sector engagement opportunity."
+        )
+        themes.append(SectorTheme(
+            theme=_THEME_NAMES.get(driver, driver.replace("_", " ").title()),
+            driver=driver,
+            service_lines=service_lines,
+            accounts=accounts,
+            description=description,
+        ))
+
+    return themes[:6]
+
+
+# ── Partner Weekly Brief ──────────────────────────────────────────────────────
+
+def build_weekly_brief(
+    opportunity_cards: list[OpportunityCard],
+    account_briefs: list[AccountBrief],
+    themes: list[SectorTheme],
+    prev_companies: set[str],
+    generated_at: datetime,
+) -> WeeklyBrief:
+    period = generated_at.strftime("Week of %d %b %Y")
+
+    top_opps: list[str] = []
+    for card in opportunity_cards[:5]:
+        if card.is_restricted:
+            top_opps.append(f"{card.company} [{card.service_line}] — awareness only (independence restricted).")
+        else:
+            top_opps.append(f"{card.company} [{card.service_line}] — {card.suggested_angle.split('—')[-1].strip() if '—' in card.suggested_angle else card.suggested_angle}")
+
+    hottest = [c.company for c in opportunity_cards[:5]]
+    key_themes = [t.theme for t in themes[:4]]
+
+    what_changed: list[str] = []
+    new_cos = [c.company for c in opportunity_cards if c.is_new]
+    if new_cos:
+        what_changed.append(f"New signals: {', '.join(new_cos[:4])}.")
+    returning = [c.company for c in opportunity_cards if not c.is_new]
+    if returning:
+        what_changed.append(f"Continuing signals: {', '.join(returning[:4])}.")
+    if not what_changed:
+        what_changed.append("No change vs previous run.")
+
+    return WeeklyBrief(
+        period=period,
+        top_opportunities=top_opps,
+        hottest_accounts=hottest,
+        key_themes=key_themes,
+        what_changed=what_changed,
+        opportunity_count=len(opportunity_cards),
+        active_account_count=sum(1 for b in account_briefs if b.has_news),
+    )
+
+
+# ── Load previous run companies for week-over-week diff ───────────────────────
+
+def _load_prev_companies() -> set[str]:
+    latest = Path(__file__).parent.parent / "docs" / "data" / "latest.json"
+    if not latest.exists():
+        return set()
+    try:
+        data = json.loads(latest.read_text())
+        return {c["company"] for c in data.get("opportunity_radar", [])}
+    except Exception:
+        return set()
+
+
 # ── Assemble full digest ──────────────────────────────────────────────────────
 
 def build_digest(
@@ -367,6 +649,8 @@ def build_digest(
     prices: list[PriceRecord],
 ) -> DailyDigest:
     from .summarize import enrich_opportunities, summarize_company_highlights, summarize_executive_brief
+
+    now = datetime.now(timezone.utc)
 
     company_digests = build_company_digests(company_news)
     commodity_digests = build_commodity_digests(commodity_news, prices)
@@ -414,8 +698,17 @@ def build_digest(
             narrative, themes = result
             brief = ExecutiveBrief(narrative=narrative, themes=themes)
 
+    # ── New: demand-driver intelligence layer ─────────────────────────────────
+    prev_companies = _load_prev_companies()
+    opportunity_radar = build_opportunity_radar(company_news, prev_companies)
+    account_briefs = build_account_briefs(company_news, opportunity_radar)
+    sector_themes = build_sector_themes(opportunity_radar)
+    weekly_brief = build_weekly_brief(
+        opportunity_radar, account_briefs, sector_themes, prev_companies, now
+    )
+
     return DailyDigest(
-        generated_at=datetime.now(timezone.utc),
+        generated_at=now,
         executive_brief=brief,
         top_headlines=headlines,
         companies=company_digests,
@@ -424,4 +717,8 @@ def build_digest(
         prices=prices,
         opportunities=opps,
         sector_summaries=sector_sums,
+        opportunity_radar=opportunity_radar,
+        account_briefs=account_briefs,
+        sector_themes=sector_themes,
+        weekly_brief=weekly_brief,
     )

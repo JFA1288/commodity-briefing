@@ -1,31 +1,35 @@
 # ─────────────────────────────────────────────────────────────────────────────
-# Commodity Briefing — Configuration
-# Edit companies, commodities, feeds, and behavioural toggles here.
-# No code changes needed for routine maintenance.
+# Energy & Resources — Sector Intelligence
+# Configuration for Deloitte E&R advisory team
+# Edit companies, drivers, and scoring weights here; no code changes needed.
 # ─────────────────────────────────────────────────────────────────────────────
 
 # ── Summarizer ────────────────────────────────────────────────────────────────
-# "heuristic" = fully rule-based, no external services (default, works in CI)
-# "ollama"    = narrative summaries via a locally running Ollama instance
-#               (only works on your own machine, NOT in GitHub Actions)
+# "heuristic" = fully rule-based (default, works in CI, no API costs)
+# "ollama"    = narrative summaries via local Ollama (local only, not CI)
 summarizer: heuristic
 
 ollama:
   base_url: http://localhost:11434
   model: llama3.1
 
+# ── Dashboard identity ────────────────────────────────────────────────────────
+dashboard:
+  site_title: "Energy & Resources — Sector Intelligence"
+  subtitle: "Deloitte Advisory | SEA Commodity Markets"
+  timezone_display: "SGT (UTC+8)"
+
 # ── News fetch settings ───────────────────────────────────────────────────────
 news:
-  lookback_hours: 36          # how far back to keep articles
-  max_per_company: 10         # maximum headlines retained per company
-  max_per_commodity: 6        # maximum headlines retained per commodity
-  top_headlines_count: 15     # number of "top headlines" in digest
-  request_timeout_s: 15       # HTTP timeout per request
-  inter_request_delay_s: 1.2  # polite delay between RSS fetches
-  feed_cache_ttl_min: 60      # re-use on-disk cache within this window
+  lookback_hours: 36
+  max_per_company: 10
+  max_per_commodity: 6
+  top_headlines_count: 15
+  request_timeout_s: 15
+  inter_request_delay_s: 1.2
+  feed_cache_ttl_min: 60
 
 # ── Google News RSS region bias ───────────────────────────────────────────────
-# Rotated across runs to broaden coverage.  Choices: SG, MY, ID, TH, AU
 google_news_regions:
   - { gl: SG, ceid: "SG:en", hl: en-SG }
   - { gl: MY, ceid: "MY:en", hl: en-MY }
@@ -33,102 +37,178 @@ google_news_regions:
   - { gl: TH, ceid: "TH:en", hl: en-TH }
 
 # ── Companies ─────────────────────────────────────────────────────────────────
-# sector tags: energy | metals_mining | power_utilities | trading
+# sector:       energy | metals_mining | power_utilities | trading
+# relationship: client | target | audit_restricted
+#               audit_restricted → BD next steps suppressed; independence notice shown
+# priority:     high | med | low  (multiplies opportunity score)
+# ticker:       listed ticker for reference (blank if private)
+# one_liner:    brief description shown in Account Intelligence
 companies:
   - name: Shell
     aliases: [Shell, "Shell plc", "Royal Dutch Shell"]
     country: NL
     sector: energy
+    relationship: target
+    priority: high
+    ticker: SHEL.L
+    one_liner: "Global supermajor; major LNG trader and downstream operator across Asia-Pacific."
 
   - name: ExxonMobil
     aliases: [ExxonMobil, Exxon, "Exxon Mobil"]
     country: US
     sector: energy
+    relationship: target
+    priority: med
+    ticker: XOM
+    one_liner: "US supermajor with significant upstream and chemicals exposure across SEA."
 
   - name: Chevron
     aliases: [Chevron, "Chevron Corporation"]
     country: US
     sector: energy
+    relationship: target
+    priority: med
+    ticker: CVX
+    one_liner: "US supermajor; upstream production in Australia, Indonesia, and Thailand."
 
   - name: TotalEnergies Trading Asia
     aliases: [TotalEnergies, "Total Energies", "TotalEnergies Trading Asia"]
     country: FR
     sector: trading
+    relationship: target
+    priority: high
+    ticker: TTE.PA
+    one_liner: "Trading arm of TotalEnergies; significant LNG and crude trading hub in Singapore."
 
   - name: Aramco Trading Singapore
     aliases: ["Aramco Trading", "Saudi Aramco", "Aramco Trading Singapore"]
     country: SA
     sector: trading
+    relationship: target
+    priority: high
+    ticker: ""
+    one_liner: "Trading subsidiary of Saudi Aramco; crude and products marketing across Asia."
 
   - name: Anglo American
     aliases: ["Anglo American", "Anglo American plc"]
     country: GB
     sector: metals_mining
+    relationship: target
+    priority: med
+    ticker: AAL.L
+    one_liner: "Diversified global miner; platinum, copper, iron ore, and steelmaking coal."
 
   - name: Rio Tinto
     aliases: ["Rio Tinto", "Rio Tinto Group"]
     country: GB
     sector: metals_mining
+    relationship: target
+    priority: high
+    ticker: RIO.L
+    one_liner: "Global miner; iron ore, copper, aluminium, and battery-materials strategy."
 
   - name: BHP
     aliases: [BHP, "BHP Group", "BHP Billiton"]
     country: AU
     sector: metals_mining
+    relationship: target
+    priority: high
+    ticker: BHP.AX
+    one_liner: "Diversified global miner; iron ore, copper, coal, and nickel operations."
 
   - name: Woodside Energy
     aliases: ["Woodside Energy", "Woodside Petroleum", Woodside]
     country: AU
     sector: energy
+    relationship: target
+    priority: med
+    ticker: WDS.AX
+    one_liner: "Australian LNG producer; Pluto, North West Shelf, and emerging hydrogen assets."
 
   - name: PETRONAS
     aliases: [PETRONAS, "Petronas", "Petronas Trading", PFLB]
     country: MY
     sector: energy
+    relationship: client
+    priority: high
+    ticker: ""
+    one_liner: "Malaysian national oil company; major LNG exporter, upstream, and trading arm."
 
   - name: Tenaga Nasional Berhad
     aliases: [TNB, "Tenaga Nasional", "Tenaga Nasional Berhad"]
     country: MY
     sector: power_utilities
+    relationship: target
+    priority: med
+    ticker: TENAGA.KL
+    one_liner: "Malaysia's national electricity utility; generation, transmission, and distribution."
 
   - name: PTT
     aliases: [PTT, "PTT Public", "PTT Thailand", "PTT Group"]
     country: TH
     sector: energy
+    relationship: target
+    priority: high
+    ticker: PTT.BK
+    one_liner: "Thai national oil and gas company; upstream, downstream, LNG, and petrochemicals."
 
   - name: Pertamina
     aliases: [Pertamina, "PT Pertamina"]
     country: ID
     sector: energy
+    relationship: target
+    priority: high
+    ticker: ""
+    one_liner: "Indonesian national oil company; refining, upstream, and trading operations."
 
   - name: MIND ID
     aliases: ["MIND ID", ANTAM, "Aneka Tambang", "Bukit Asam", PTBA, Timah]
     country: ID
     sector: metals_mining
+    relationship: target
+    priority: med
+    ticker: ""
+    one_liner: "Indonesian state mining holding company; nickel, coal, aluminium, tin, and gold."
 
   - name: EGAT
     aliases: [EGAT, "Electricity Generating Authority of Thailand"]
     country: TH
     sector: power_utilities
+    relationship: target
+    priority: low
+    ticker: ""
+    one_liner: "Thailand's state electricity authority; power generation, grid, and renewable projects."
 
   - name: Cargill Asia
     aliases: [Cargill, "Cargill Asia", "Cargill Singapore"]
     country: US
     sector: trading
+    relationship: target
+    priority: med
+    ticker: ""
+    one_liner: "Global agri-commodity trading and processing giant; large Asia-Pacific presence."
 
   - name: Mercuria
     aliases: [Mercuria, "Mercuria Energy"]
     country: CH
     sector: trading
+    relationship: target
+    priority: high
+    ticker: ""
+    one_liner: "Swiss-origin independent commodity trading house; energy and metals trading globally."
 
   - name: Danantara
     aliases: [Danantara, "Danantara Indonesia", "BPI Danantara"]
     country: ID
     sector: trading
+    relationship: target
+    priority: high
+    ticker: ""
+    one_liner: "Indonesia's sovereign wealth and state-asset management vehicle, managing c.$900bn."
 
 # ── Commodities ───────────────────────────────────────────────────────────────
 # Only tickers confirmed to return live data via yfinance (Yahoo Finance).
 commodities:
-  # Crude oil
   - id: brent
     display: "Brent Crude"
     unit: "USD/bbl"
@@ -141,22 +221,19 @@ commodities:
     group: crude_oil
     yfinance_ticker: "CL=F"
 
-  # Natural gas
   - id: henry_hub
     display: "Henry Hub Gas"
     unit: "USD/MMBtu"
     group: natgas_lng
     yfinance_ticker: "NG=F"
 
-  # Metals
   - id: copper
     display: "Copper (COMEX)"
     unit: "USD/t"
     group: base_metals
     yfinance_ticker: "HG=F"
-    yfinance_unit_multiplier: 2204.62   # HG=F is USD/lb → USD/t
+    yfinance_unit_multiplier: 2204.62
 
-  # Agri (Cargill context)
   - id: soybeans
     display: "Soybeans (CBOT)"
     unit: "USc/bu"
@@ -170,7 +247,6 @@ commodities:
     yfinance_ticker: "ZW=F"
 
 # ── Supplementary RSS feeds ───────────────────────────────────────────────────
-# These are fetched in addition to the per-company Google News searches.
 supplementary_feeds:
   - name: Reuters Commodities
     url: "https://feeds.reuters.com/reuters/businessNews"
@@ -212,13 +288,225 @@ supplementary_feeds:
     url: "https://www.spglobal.com/commodityinsights/en/rss-feed/oil"
     weight: 1.5
 
-# ── Scoring & ranking ─────────────────────────────────────────────────────────
-scoring:
-  recency_halflife_hours: 12      # score halves every N hours
-  source_weight_default: 1.0
-  material_event_bonus: 2.5       # added to score if a material-event keyword fires
+# ── Service lines ─────────────────────────────────────────────────────────────
+# Key → display label used in Opportunity Radar and Account Intelligence.
+service_lines:
+  ma:               "Strategy & Transactions"
+  capital_projects: "Capital Projects"
+  cost_performance: "Cost & Performance"
+  leadership:       "Leadership Advisory"
+  regulation_risk:  "Risk Advisory"
+  sustainability:   "Sustainability & Climate"
+  digital_tech:     "Digital & Technology"
+  cyber:            "Cyber Advisory"
+  tax:              "Tax & Legal"
+  supply_chain:     "Supply Chain"
 
-# ── Material-event keyword lists ──────────────────────────────────────────────
+# ── Demand-driver taxonomy ─────────────────────────────────────────────────────
+# Each driver: keywords matched against headline+summary, materiality_weight
+# (higher = more impactful mandate), service_line key, and suggested_angle
+# (a templated one-liner shown as the "next step" on opportunity cards).
+# Add/remove keywords here without touching code.
+demand_drivers:
+  ma:
+    keywords:
+      - acquisition
+      - merger
+      - takeover
+      - "take-over"
+      - buyout
+      - "take private"
+      - bid
+      - divest
+      - divestiture
+      - divestment
+      - stake
+      - "asset sale"
+      - IPO
+      - listing
+      - JV
+      - "joint venture"
+    materiality_weight: 3.0
+    service_line: ma
+    suggested_angle: "BD outreach — offer integration-readiness assessment or transaction due-diligence support"
+
+  capital_projects:
+    keywords:
+      - FID
+      - "final investment decision"
+      - "new plant"
+      - refinery
+      - expansion
+      - megaproject
+      - capex
+      - "capital expenditure"
+      - greenfield
+      - brownfield
+      - "new terminal"
+      - "new facility"
+      - "capacity addition"
+    materiality_weight: 2.5
+    service_line: capital_projects
+    suggested_angle: "Propose major-programme advisory or owner's-engineer support for capital delivery"
+
+  cost_performance:
+    keywords:
+      - "profit warning"
+      - "earnings miss"
+      - impairment
+      - write-down
+      - writedown
+      - "cost cutting"
+      - restructuring
+      - layoffs
+      - "margin pressure"
+      - "cost reduction"
+      - "net loss"
+      - "profit decline"
+      - turnaround
+    materiality_weight: 2.3
+    service_line: cost_performance
+    suggested_angle: "Offer performance-improvement or turnaround diagnostic"
+
+  leadership:
+    keywords:
+      - "new CEO"
+      - "new CFO"
+      - "new COO"
+      - appoints
+      - "steps down"
+      - resignation
+      - succession
+      - "management change"
+      - "leadership change"
+      - "new president"
+      - "new MD"
+      - "new managing director"
+    materiality_weight: 2.0
+    service_line: leadership
+    suggested_angle: "Relationship trigger — schedule partner introduction or strategy conversation with new leadership"
+
+  regulation_risk:
+    keywords:
+      - regulation
+      - sanction
+      - "export ban"
+      - embargo
+      - tariff
+      - investigation
+      - compliance
+      - licence
+      - license
+      - permit
+      - fine
+      - penalty
+      - CBAM
+      - antitrust
+      - lawsuit
+      - court
+    materiality_weight: 2.4
+    service_line: regulation_risk
+    suggested_angle: "Offer regulatory-response advisory or compliance-framework review"
+
+  sustainability:
+    keywords:
+      - "net zero"
+      - decarbonisation
+      - decarbonization
+      - emissions
+      - carbon
+      - CCS
+      - CCUS
+      - hydrogen
+      - renewables
+      - ESG
+      - sustainability
+      - "energy transition"
+      - "climate risk"
+      - "scope 3"
+    materiality_weight: 2.0
+    service_line: sustainability
+    suggested_angle: "Engage on ESG reporting, transition roadmap, or carbon-accounting advisory"
+
+  digital_tech:
+    keywords:
+      - "digital transformation"
+      - automation
+      - ERP
+      - SAP
+      - cloud
+      - "data platform"
+      - "trading platform"
+      - TMS
+      - "treasury management"
+      - "finance transformation"
+      - "system implementation"
+      - "IT modernisation"
+      - "IT modernization"
+      - "AI implementation"
+    materiality_weight: 2.8
+    service_line: digital_tech
+    suggested_angle: "Propose digital or technology-transformation advisory — strong team capability fit"
+
+  cyber:
+    keywords:
+      - breach
+      - ransomware
+      - cyberattack
+      - "IT outage"
+      - "cyber incident"
+      - hacked
+      - "data breach"
+      - "security incident"
+    materiality_weight: 2.6
+    service_line: cyber
+    suggested_angle: "Offer cyber-resilience assessment or incident-response advisory"
+
+  tax:
+    keywords:
+      - "transfer pricing"
+      - "windfall tax"
+      - "carbon tax"
+      - "tax dispute"
+      - "tax investigation"
+      - "tax ruling"
+      - "tax reform"
+      - "excise duty"
+    materiality_weight: 2.1
+    service_line: tax
+    suggested_angle: "Engage tax advisory team on transfer-pricing or tax-reform response"
+
+  supply_chain:
+    keywords:
+      - "supply disruption"
+      - "force majeure"
+      - "logistics bottleneck"
+      - "supply chain"
+      - diversification
+      - "sourcing strategy"
+      - "supply shortage"
+      - "shipping delay"
+    materiality_weight: 2.0
+    service_line: supply_chain
+    suggested_angle: "Offer supply-chain resilience or procurement-optimisation advisory"
+
+# ── Opportunity scoring weights ────────────────────────────────────────────────
+# Final score = materiality_weight × recency_factor × source_weight × priority_multiplier
+# All component values are stored per card for dashboard transparency.
+opportunity_scoring:
+  recency_halflife_hours: 18      # longer than news scoring — opportunities stay relevant longer
+  priority_multipliers:
+    high: 1.5
+    med:  1.0
+    low:  0.7
+  max_opportunities: 12           # maximum cards shown in Opportunity Radar
+
+# ── Legacy material-event keyword lists (used by consulting signal flags) ─────
+scoring:
+  recency_halflife_hours: 12
+  source_weight_default: 1.0
+  material_event_bonus: 2.5
+
 material_event_keywords:
   earnings:         [earnings, profit, loss, revenue, EBITDA, "net income", quarterly, annual, results, EPS, dividend, guidance, outlook, forecast]
   ma:               [merger, acquisition, takeover, "take-over", buyout, "take private", bid, deal, stake, divest, divestment, JV, "joint venture", partnership]
@@ -231,7 +519,6 @@ material_event_keywords:
   growth_strategy:  [expansion, "new market", greenfield, investment, "capacity addition", "new project", "strategic plan", "growth strategy", "market entry", "new terminal", "new plant"]
   trading_risk:     [hedge, hedging, derivatives, exposure, position, "margin call", counterparty, "mark-to-market", "risk limit", VaR, "stop-loss", "basis risk", "price risk", "market risk", volatility]
   enterprise_risk:  ["risk management", "enterprise risk", ERM, "internal controls", "internal audit", governance, "risk appetite", "risk register", "risk committee", "board risk", oversight, "control framework"]
-  price_shock:    [surge, plunge, crash, spike, record, "all-time high", "all-time low", collapse, rally, soar]
 
 # ── "What to watch" macro context terms ───────────────────────────────────────
 macro_watch_terms:
@@ -248,7 +535,10 @@ macro_watch_terms:
 # ── Price history cap ─────────────────────────────────────────────────────────
 price_history_days: 90
 
-# ── Dashboard ─────────────────────────────────────────────────────────────────
-dashboard:
-  site_title: "SEA Commodity Briefing"
-  timezone_display: "SGT (UTC+8)"
+# ── Independence & conflicts disclaimer ───────────────────────────────────────
+# Shown in footer and Partner Weekly Brief on every run.
+independence_disclaimer: >
+  This tool aggregates public news for awareness purposes only.
+  All pursuits are subject to client-acceptance, independence, and conflict checks
+  in line with Deloitte policy. Confirm permissibility with Risk/Independence
+  before any business development action on accounts marked audit_restricted.
