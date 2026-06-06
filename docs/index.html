@@ -490,11 +490,40 @@ footer { margin-top: 40px; padding-top: 18px; border-top: 1px solid var(--border
   .themes-grid { grid-template-columns: 1fr 1fr; }
 }
 
+/* ── Mobile menu button ──────────────────────────────────────────────── */
+#menu-btn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 200;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  box-shadow: 0 3px 12px rgba(0,0,0,.4);
+  align-items: center;
+  justify-content: center;
+}
+#sidebar-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.5);
+  z-index: 99;
+}
+
 /* ── Responsive ──────────────────────────────────────────────────────── */
 @media (max-width: 700px) {
   :root { --sidebar-w: 0px; }
   html { font-size: 17px; }
-  #sidebar { display: none; }
+  #sidebar { display: flex; transform: translateX(-100%); transition: transform .25s; position: fixed; width: 240px; z-index: 150; }
+  #sidebar.open { transform: translateX(0); }
+  #menu-btn { display: flex; }
   #main { margin-left: 0; padding: 14px; }
   .brief-grid, .themes-grid { grid-template-columns: 1fr; }
   .opp-company, .acc-name { font-size: 1.05rem; }
@@ -511,6 +540,8 @@ footer { margin-top: 40px; padding-top: 18px; border-top: 1px solid var(--border
 </head>
 <body>
 
+<div id="sidebar-overlay" onclick="closeSidebar()"></div>
+<button id="menu-btn" onclick="toggleSidebar()" aria-label="Open navigation">☰</button>
 <nav id="sidebar" aria-label="Page navigation">
   <div class="sidebar-brand">
     <div class="brand-title">Energy &amp; Resources<br>Sector Intelligence</div>
@@ -591,6 +622,22 @@ footer { margin-top: 40px; padding-top: 18px; border-top: 1px solid var(--border
 </main>
 
 <script>
+/* ── Sidebar toggle ─────────────────────────────────────────────────────────── */
+function toggleSidebar() {
+  const open = document.getElementById('sidebar').classList.toggle('open');
+  document.getElementById('sidebar-overlay').style.display = open ? 'block' : 'none';
+  document.getElementById('menu-btn').textContent = open ? '✕' : '☰';
+}
+function closeSidebar() {
+  document.getElementById('sidebar').classList.remove('open');
+  document.getElementById('sidebar-overlay').style.display = 'none';
+  document.getElementById('menu-btn').textContent = '☰';
+}
+// Close sidebar when a nav link is tapped on mobile
+document.querySelectorAll('.nav-link').forEach(l => l.addEventListener('click', () => {
+  if (window.innerWidth <= 700) closeSidebar();
+}));
+
 /* ── Theme ──────────────────────────────────────────────────────────────────── */
 function toggleTheme() {
   const root = document.documentElement;
