@@ -126,6 +126,7 @@ companies:
     sector: trading
 
 # ── Commodities ───────────────────────────────────────────────────────────────
+# Only tickers confirmed to return live data via yfinance (Yahoo Finance).
 commodities:
   # Crude oil
   - id: brent
@@ -140,63 +141,12 @@ commodities:
     group: crude_oil
     yfinance_ticker: "CL=F"
 
-  - id: dubai_oman
-    display: "Dubai/Oman Crude"
-    unit: "USD/bbl"
-    group: crude_oil
-    yfinance_ticker: null           # web-sourced
-    web_search_query: "Dubai Oman crude oil price today"
-
-  - id: tapis
-    display: "Tapis Crude"
-    unit: "USD/bbl"
-    group: crude_oil
-    yfinance_ticker: null
-    web_search_query: "Tapis crude oil price today Singapore"
-
-  # Natural gas / LNG
+  # Natural gas
   - id: henry_hub
     display: "Henry Hub Gas"
     unit: "USD/MMBtu"
     group: natgas_lng
     yfinance_ticker: "NG=F"
-
-  - id: jkm
-    display: "JKM LNG (Asian spot)"
-    unit: "USD/MMBtu"
-    group: natgas_lng
-    yfinance_ticker: null
-    web_search_query: "JKM LNG spot price today Asia"
-
-  # Refined products
-  - id: sing_gasoil
-    display: "Singapore Gasoil/Diesel"
-    unit: "USD/bbl"
-    group: refined
-    yfinance_ticker: null
-    web_search_query: "Singapore gasoil diesel price today"
-
-  - id: sing_jet
-    display: "Singapore Jet Fuel"
-    unit: "USD/bbl"
-    group: refined
-    yfinance_ticker: null
-    web_search_query: "Singapore jet fuel kerosene price today"
-
-  - id: sing_gasoline
-    display: "Singapore Gasoline 92R"
-    unit: "USD/bbl"
-    group: refined
-    yfinance_ticker: null
-    web_search_query: "Singapore gasoline 92R price today"
-
-  # Coal
-  - id: newcastle_coal
-    display: "Newcastle Thermal Coal"
-    unit: "USD/t"
-    group: coal
-    yfinance_ticker: null
-    web_search_query: "Newcastle thermal coal price today API5"
 
   # Metals
   - id: copper
@@ -205,41 +155,6 @@ commodities:
     group: base_metals
     yfinance_ticker: "HG=F"
     yfinance_unit_multiplier: 2204.62   # HG=F is USD/lb → USD/t
-
-  - id: nickel
-    display: "Nickel (LME)"
-    unit: "USD/t"
-    group: base_metals
-    yfinance_ticker: null               # LME nickel not on Yahoo; web fallback
-    web_search_query: "LME nickel cash price today USD tonne"
-
-  - id: aluminium
-    display: "Aluminium (LME)"
-    unit: "USD/t"
-    group: base_metals
-    yfinance_ticker: null               # LME aluminium not on Yahoo; web fallback
-    web_search_query: "LME aluminium cash price today USD tonne"
-
-  - id: iron_ore
-    display: "Iron Ore (62% Fe CFR)"
-    unit: "USD/t"
-    group: bulk
-    yfinance_ticker: null
-    web_search_query: "iron ore 62 Fe CFR China price today"
-
-  - id: tin
-    display: "Tin (LME)"
-    unit: "USD/t"
-    group: base_metals
-    yfinance_ticker: null
-    web_search_query: "LME tin metal price today"
-
-  - id: bauxite
-    display: "Bauxite (FOB)"
-    unit: "USD/t"
-    group: bulk
-    yfinance_ticker: null
-    web_search_query: "bauxite FOB price today Guinea"
 
   # Agri (Cargill context)
   - id: soybeans
@@ -253,13 +168,6 @@ commodities:
     unit: "USc/bu"
     group: agri
     yfinance_ticker: "ZW=F"
-
-  - id: palm_oil
-    display: "Palm Oil (BMD)"
-    unit: "MYR/t"
-    group: agri
-    yfinance_ticker: null                # FCPO.MYR unreliable on Yahoo Finance
-    web_search_query: "palm oil futures price today MYR tonne Bursa Malaysia"
 
 # ── Supplementary RSS feeds ───────────────────────────────────────────────────
 # These are fetched in addition to the per-company Google News searches.
