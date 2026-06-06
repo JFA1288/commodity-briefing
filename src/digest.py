@@ -11,6 +11,7 @@ from .models import (
     CompanyDigest,
     CommodityDigest,
     DailyDigest,
+    ExecutiveBrief,
     NewsItem,
     OpportunityItem,
     PriceRecord,
@@ -365,6 +366,8 @@ def build_digest(
     supplementary: list[NewsItem],
     prices: list[PriceRecord],
 ) -> DailyDigest:
+    from .summarize import enrich_opportunities, summarize_company_highlights, summarize_executive_brief
+
     company_digests = build_company_digests(company_news)
     commodity_digests = build_commodity_digests(commodity_news, prices)
     headlines = top_headlines(company_news, commodity_news, supplementary)
@@ -372,8 +375,48 @@ def build_digest(
     opps = build_opportunities(company_digests)
     sector_sums = build_sector_summaries(company_digests)
 
+    # Enrich opportunities with engagement context (Haiku)
+    opp_dicts = [{"company": o.company, "signal": o.signal, "headline": o.headline} for o in opps]
+    contexts = enrich_opportunities(opp_dicts)
+    if contexts:
+        for opp, ctx in zip(opps, contexts):
+            opp.engagement_context = ctx
+
+    # Add highlight to top 3 companies by opportunity priority (Haiku)
+    top_co_names = list(dict.fromkeys(o.company for o in opps))[:3]
+    top_co_digests = [d for d in company_digests if d.name in top_co_names]
+    if top_co_digests:
+        co_dicts = [
+            {
+                "name": d.name,
+                "sector": d.sector,
+                "signal": d.items[0].consulting_label if d.items else "",
+                "headlines": [i.title for i in d.items],
+            }
+            for d in top_co_digests
+        ]
+        highlights = summarize_company_highlights(co_dicts)
+        if highlights:
+            co_map = {d.name: d for d in top_co_digests}
+            for name, hl in zip(top_co_names, highlights):
+                if name in co_map:
+                    co_map[name].highlight = hl
+
+    # Build executive brief (Sonnet) using sector narratives + opportunities
+    brief: Optional[ExecutiveBrief] = None
+    sector_dicts = [
+        {"label": s.sector_label, "narrative": s.narrative, "active_count": len(s.active_companies)}
+        for s in sector_sums if s.narrative
+    ]
+    if sector_dicts and opp_dicts:
+        result = summarize_executive_brief(sector_dicts, opp_dicts)
+        if result:
+            narrative, themes = result
+            brief = ExecutiveBrief(narrative=narrative, themes=themes)
+
     return DailyDigest(
         generated_at=datetime.now(timezone.utc),
+        executive_brief=brief,
         top_headlines=headlines,
         companies=company_digests,
         commodities=commodity_digests,

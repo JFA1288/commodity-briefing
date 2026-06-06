@@ -19,8 +19,8 @@ class NewsItem(BaseModel):
     flags: list[str] = Field(default_factory=list)
     score: float = 0.0
     title_norm: str = ""
-    consulting_label: str = ""    # e.g. "Integration", "Compliance Risk"
-    why_it_matters: str = ""      # one-liner for the consulting angle
+    consulting_label: str = ""
+    why_it_matters: str = ""
 
 
 class PriceRecord(BaseModel):
@@ -41,6 +41,7 @@ class CompanyDigest(BaseModel):
     country: str
     items: list[NewsItem] = Field(default_factory=list)
     flags: list[str] = Field(default_factory=list)
+    highlight: str = ""        # Claude-generated strategic insight for top companies
 
 
 class CommodityDigest(BaseModel):
@@ -58,12 +59,13 @@ class WatchBullet(BaseModel):
 class OpportunityItem(BaseModel):
     company: str
     sector: str
-    signal: str         # consulting label, e.g. "Integration"
+    signal: str
     headline: str
     url: str
-    why: str            # why it matters one-liner
+    why: str
     published: Optional[datetime] = None
     score: float = 0.0
+    engagement_context: str = ""   # Claude-generated scope/team/duration hint
 
 
 class SectorSummary(BaseModel):
@@ -74,11 +76,17 @@ class SectorSummary(BaseModel):
     active_companies: list[str] = Field(default_factory=list)
     quiet_companies: list[str] = Field(default_factory=list)
     pulse: str = ""
-    narrative: str = ""   # Claude-generated or rule-based narrative paragraph
+    narrative: str = ""
+
+
+class ExecutiveBrief(BaseModel):
+    narrative: str
+    themes: list[str] = Field(default_factory=list)
 
 
 class DailyDigest(BaseModel):
     generated_at: datetime
+    executive_brief: Optional[ExecutiveBrief] = None
     top_headlines: list[NewsItem] = Field(default_factory=list)
     companies: list[CompanyDigest] = Field(default_factory=list)
     commodities: list[CommodityDigest] = Field(default_factory=list)
