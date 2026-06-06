@@ -259,6 +259,22 @@ section{margin-bottom:2.5rem}
   background:var(--surface2);color:var(--muted);border:1px solid var(--border);
 }
 
+/* ── Sector summary card ─────────────────────────────────────────────────── */
+.sector-summary{
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+  padding:.85rem 1.1rem;margin-bottom:.75rem;box-shadow:var(--shadow);
+}
+.ss-row{display:flex;align-items:center;gap:.75rem;flex-wrap:wrap;margin-bottom:.45rem}
+.ss-signals{display:flex;gap:.35rem;flex-wrap:wrap}
+.ss-pill{
+  font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;
+  padding:.15rem .45rem;border-radius:3px;
+  background:var(--surface2);color:var(--muted);border:1px solid var(--border);
+}
+.ss-activity{font-size:.78rem;color:var(--muted);margin-left:auto;white-space:nowrap}
+.ss-activity .active{color:var(--text);font-weight:600}
+.ss-pulse{font-size:.83rem;color:var(--muted);line-height:1.5}
+
 /* ── Company panels ──────────────────────────────────────────────────────── */
 .company-panels{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:.75rem}
 .company-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);border-left:3px solid transparent}
@@ -781,13 +797,43 @@ function renderHeadlines(items){
 }
 
 /* ── Companies ────────────────────────────────────────────────────────────── */
-function renderCompanies(companies){
+function renderCompanies(companies, sectorSummaries){
+  const summaryMap={};
+  (sectorSummaries||[]).forEach(s=>{summaryMap[s.sector]=s});
+
   ['energy','metals_mining','power_utilities','trading'].forEach(sector=>{
     const el=$('sector-'+sector);
     const list=(companies||[]).filter(c=>c.sector===sector);
-    if(!list.length){el.innerHTML='<div class="no-matches">No company signals today.</div>';return}
+    const ss=summaryMap[sector];
 
-    el.innerHTML=list.map(co=>{
+    // Sector summary card
+    let summaryHtml='';
+    if(ss){
+      const sigPills=Object.entries(ss.signal_counts||{})
+        .sort((a,b)=>b[1]-a[1])
+        .map(([sig,cnt])=>`<span class="ss-pill">${esc(sig)}${cnt>1?' ×'+cnt:''}</span>`)
+        .join('');
+      const activeCount=ss.active_companies?.length||0;
+      const quietCount=ss.quiet_companies?.length||0;
+      summaryHtml=`
+        <div class="sector-summary">
+          <div class="ss-row">
+            <div class="ss-signals">${sigPills||'<span class="ss-pill" style="opacity:.5">No signals</span>'}</div>
+            <div class="ss-activity">
+              <span class="active">${activeCount} active</span>
+              ${quietCount?` · ${quietCount} quiet`:''}
+            </div>
+          </div>
+          <div class="ss-pulse">${esc(ss.pulse)}</div>
+        </div>`;
+    }
+
+    if(!list.length){
+      el.innerHTML=summaryHtml+'<div class="no-matches">No company signals today.</div>';
+      return;
+    }
+
+    const cardsHtml=list.map(co=>{
       const items=co.items||[];
       const flag=FLAGS[co.country]||'';
       const signal=items[0]?.consulting_label||'';
@@ -821,6 +867,8 @@ function renderCompanies(companies){
         <div class="company-body">${itemsHtml}</div>
       </details>`;
     }).join('');
+
+    el.innerHTML=summaryHtml+cardsHtml;
   });
 }
 
@@ -963,7 +1011,7 @@ async function loadDashboard(){
     renderOpportunities(data.opportunities||[]);
     renderWatch(data.what_to_watch||[]);
     renderHeadlines(data.top_headlines||[]);
-    renderCompanies(data.companies||[]);
+    renderCompanies(data.companies||[], data.sector_summaries||[]);
     renderWatchlist();
     applyFilters();
   }catch(e){
@@ -971,7 +1019,7 @@ async function loadDashboard(){
     b.textContent=`Could not load data (${e.message}). Run: python -m src.main`;
     b.style.display='block';
     ['price-grid','watch-panel','headline-list','overview-content','opp-list',
-     'sector-energy','sector-metals_mining','sector-power_utilities','sector-trading']
+      'sector-energy','sector-metals_mining','sector-power_utilities','sector-trading']
       .forEach(id=>{const el=$(id);if(el)el.innerHTML='<div class="no-matches">Data unavailable.</div>'});
   }
   renderArchive();

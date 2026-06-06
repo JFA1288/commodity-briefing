@@ -14,6 +14,7 @@ from .models import (
     NewsItem,
     OpportunityItem,
     PriceRecord,
+    SectorSummary,
     WatchBullet,
 )
 
@@ -206,6 +207,79 @@ def build_opportunities(company_digests: list[CompanyDigest]) -> list[Opportunit
     return deduped[:8]
 
 
+# ── Sector summaries ─────────────────────────────────────────────────────────
+
+_SECTOR_LABELS = {
+    'energy': 'Energy',
+    'metals_mining': 'Metals & Mining',
+    'power_utilities': 'Power & Utilities',
+    'trading': 'Trading',
+}
+
+
+def _make_pulse(label: str, signal_counts: dict[str, int], company_signals: dict[str, str], active: list[str]) -> str:
+    if not signal_counts:
+        return f"{label} sector quiet today — no material signals detected."
+
+    sorted_sigs = sorted(signal_counts.items(), key=lambda x: -x[1])
+    top_sig = sorted_sigs[0][0]
+    flagged = [co for co, sig in company_signals.items() if sig == top_sig]
+    flagged_str = ", ".join(flagged[:3])
+
+    if len(sorted_sigs) == 1:
+        count = sorted_sigs[0][1]
+        suffix = f"{flagged_str}" if len(flagged) <= 2 else f"{len(flagged)} companies"
+        return f"{label}: {top_sig} signal detected — {suffix}."
+    else:
+        second_sig = sorted_sigs[1][0]
+        return f"{label}: {top_sig} and {second_sig} signals across {len(active)} active {'company' if len(active)==1 else 'companies'}."
+
+
+def build_sector_summaries(company_digests: list[CompanyDigest]) -> list[SectorSummary]:
+    cfg = config.load()
+    cfg_companies = cfg.get("companies", [])
+
+    # all companies per sector from config
+    all_by_sector: dict[str, list[str]] = {}
+    for c in cfg_companies:
+        all_by_sector.setdefault(c["sector"], []).append(c["name"])
+
+    # active digests per sector
+    active_by_sector: dict[str, list[CompanyDigest]] = {}
+    for d in company_digests:
+        active_by_sector.setdefault(d.sector, []).append(d)
+
+    summaries: list[SectorSummary] = []
+    for sector, label in _SECTOR_LABELS.items():
+        active_digests = active_by_sector.get(sector, [])
+        all_names = all_by_sector.get(sector, [])
+        active_names = [d.name for d in active_digests]
+        quiet_names = [n for n in all_names if n not in active_names]
+
+        signal_counts: dict[str, int] = {}
+        company_signals: dict[str, str] = {}
+        for d in active_digests:
+            sig = d.items[0].consulting_label if d.items else ""
+            if sig:
+                signal_counts[sig] = signal_counts.get(sig, 0) + 1
+                company_signals[d.name] = sig
+
+        top_signal = max(signal_counts, key=lambda k: signal_counts[k]) if signal_counts else ""
+        pulse = _make_pulse(label, signal_counts, company_signals, active_names)
+
+        summaries.append(SectorSummary(
+            sector=sector,
+            sector_label=label,
+            top_signal=top_signal,
+            signal_counts=signal_counts,
+            active_companies=active_names,
+            quiet_companies=quiet_names,
+            pulse=pulse,
+        ))
+
+    return summaries
+
+
 # ── Top headlines ─────────────────────────────────────────────────────────────
 
 def top_headlines(
@@ -285,6 +359,7 @@ def build_digest(
     headlines = top_headlines(company_news, commodity_news, supplementary)
     watch = what_to_watch(prices, company_digests)
     opps = build_opportunities(company_digests)
+    sector_sums = build_sector_summaries(company_digests)
 
     return DailyDigest(
         generated_at=datetime.now(timezone.utc),
@@ -294,4 +369,5 @@ def build_digest(
         what_to_watch=watch,
         prices=prices,
         opportunities=opps,
+        sector_summaries=sector_sums,
     )

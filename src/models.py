@@ -66,6 +66,16 @@ class OpportunityItem(BaseModel):
     score: float = 0.0
 
 
+class SectorSummary(BaseModel):
+    sector: str
+    sector_label: str
+    top_signal: str = ""
+    signal_counts: dict[str, int] = Field(default_factory=dict)
+    active_companies: list[str] = Field(default_factory=list)
+    quiet_companies: list[str] = Field(default_factory=list)
+    pulse: str = ""
+
+
 class DailyDigest(BaseModel):
     generated_at: datetime
     top_headlines: list[NewsItem] = Field(default_factory=list)
@@ -74,3 +84,4 @@ class DailyDigest(BaseModel):
     what_to_watch: list[WatchBullet] = Field(default_factory=list)
     prices: list[PriceRecord] = Field(default_factory=list)
     opportunities: list[OpportunityItem] = Field(default_factory=list)
+    sector_summaries: list[SectorSummary] = Field(default_factory=list)
