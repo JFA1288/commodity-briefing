@@ -200,23 +200,25 @@ commodities:
 
   # Metals
   - id: copper
-    display: "Copper (LME)"
+    display: "Copper (COMEX)"
     unit: "USD/t"
     group: base_metals
     yfinance_ticker: "HG=F"
-    yfinance_unit_multiplier: 2204.62   # HG=F is cents/lb → USD/t
+    yfinance_unit_multiplier: 2204.62   # HG=F is USD/lb → USD/t
 
   - id: nickel
     display: "Nickel (LME)"
     unit: "USD/t"
     group: base_metals
-    yfinance_ticker: "NI=F"
+    yfinance_ticker: null               # LME nickel not on Yahoo; web fallback
+    web_search_query: "LME nickel cash price today USD tonne"
 
   - id: aluminium
     display: "Aluminium (LME)"
     unit: "USD/t"
     group: base_metals
-    yfinance_ticker: "ALI=F"
+    yfinance_ticker: null               # LME aluminium not on Yahoo; web fallback
+    web_search_query: "LME aluminium cash price today USD tonne"
 
   - id: iron_ore
     display: "Iron Ore (62% Fe CFR)"

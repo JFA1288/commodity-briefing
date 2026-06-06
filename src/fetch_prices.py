@@ -17,23 +17,41 @@ _cfg = config.load
 
 
 def _yf_price(ticker: str, multiplier: float = 1.0) -> tuple[Optional[float], Optional[float], Optional[datetime]]:
-    """Return (price, prev_close, as_of) or (None, None, None) on failure."""
+    """Return (price, prev_close, as_of) or (None, None, None) on failure.
+
+    Tries fast_info first (current quote, no session issues), falls back to
+    history() for prev_close calculation.
+    """
     try:
         t = yf.Ticker(ticker)
+
+        # fast_info gives regularMarketPrice without a full history download
+        fi = t.fast_info
+        price_raw = getattr(fi, "last_price", None) or getattr(fi, "regular_market_price", None)
+        prev_raw = getattr(fi, "previous_close", None) or getattr(fi, "regular_market_previous_close", None)
+
+        if price_raw is not None:
+            price = float(price_raw) * multiplier
+            prev_close = float(prev_raw) * multiplier if prev_raw is not None else None
+            as_of = datetime.now(timezone.utc)
+            return price, prev_close, as_of
+
+        # Fallback: history-based fetch
         hist = t.history(period="5d", auto_adjust=True)
-        if hist.empty or len(hist) < 1:
+        if hist.empty:
             return None, None, None
         price = float(hist["Close"].iloc[-1]) * multiplier
         prev_close = float(hist["Close"].iloc[-2]) * multiplier if len(hist) >= 2 else None
         as_of = hist.index[-1].to_pydatetime().replace(tzinfo=timezone.utc)
         return price, prev_close, as_of
+
     except Exception as exc:
         print(f"    [prices] yfinance error for {ticker}: {exc}")
         return None, None, None
 
 
 def _extract_price_from_text(text: str) -> Optional[float]:
-    """Pull the first USD/numeric price-like value from a text snippet."""
+    """Pull the first plausible price value from a text snippet."""
     patterns = [
         r"\$\s*([\d,]+\.?\d*)",
         r"([\d,]+\.?\d*)\s*(?:USD|usd|US\$)",
@@ -43,27 +61,35 @@ def _extract_price_from_text(text: str) -> Optional[float]:
         m = re.search(pat, text)
         if m:
             try:
-                return float(m.group(1).replace(",", ""))
+                val = float(m.group(1).replace(",", ""))
+                if val > 0:
+                    return val
             except ValueError:
                 pass
     return None
 
 
 def _web_fallback(commodity: dict) -> tuple[Optional[float], str]:
-    """
-    Perform a DuckDuckGo instant-answer / lite search for indicative price.
-    Returns (price_or_None, source_label).
-    """
+    """DuckDuckGo HTML search for an indicative price. Returns (price|None, source_label)."""
     query = commodity.get("web_search_query", "")
     if not query:
         return None, "unavailable"
 
-    headers = {"User-Agent": "Mozilla/5.0 (compatible; CommodityBot/1.0)"}
-    url = f"https://duckduckgo.com/html/?q={httpx.QueryParams({'q': query})}"
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                      "(KHTML, like Gecko) Chrome/124.0 Safari/537.36",
+        "Accept-Language": "en-US,en;q=0.9",
+    }
     try:
-        resp = httpx.get(url, headers=headers, timeout=12, follow_redirects=True)
+        resp = httpx.get(
+            "https://duckduckgo.com/html/",
+            params={"q": query},
+            headers=headers,
+            timeout=14,
+            follow_redirects=True,
+        )
         if resp.status_code == 200:
-            price = _extract_price_from_text(resp.text[:4000])
+            price = _extract_price_from_text(resp.text[:6000])
             if price:
                 return price, "web"
     except Exception as exc:
@@ -95,7 +121,7 @@ def fetch_all() -> list[PriceRecord]:
             price, source = _web_fallback(c)
             if price is not None:
                 as_of = datetime.now(timezone.utc)
-                print(f"  [prices] {cid}: indicative price {price} (web-sourced, treat as approximate)")
+                print(f"  [prices] {cid}: indicative price {price} (web-sourced — approximate)")
             else:
                 print(f"  [prices] {cid}: no price available — marked unavailable")
 
@@ -115,6 +141,6 @@ def fetch_all() -> list[PriceRecord]:
             as_of=as_of,
         ))
 
-        time.sleep(0.3)
+        time.sleep(0.4)
 
     return records
