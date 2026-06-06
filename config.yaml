@@ -258,7 +258,8 @@ commodities:
     display: "Palm Oil (BMD)"
     unit: "MYR/t"
     group: agri
-    yfinance_ticker: "FCPO.MYR"
+    yfinance_ticker: null                # FCPO.MYR unreliable on Yahoo Finance
+    web_search_query: "palm oil futures price today MYR tonne Bursa Malaysia"
 
 # ── Supplementary RSS feeds ───────────────────────────────────────────────────
 # These are fetched in addition to the per-company Google News searches.
