@@ -15,8 +15,8 @@ ollama:
 
 # ── Dashboard identity ────────────────────────────────────────────────────────
 dashboard:
-  site_title: "Energy & Resources — Sector Intelligence"
-  subtitle: "Deloitte Advisory | SEA Commodity Markets"
+  site_title: "Commodity Trading — Sector Intelligence"
+  subtitle: "Deloitte Advisory | SEA Commodity Trading"
   timezone_display: "SGT (UTC+8)"
 
 # ── News fetch settings ───────────────────────────────────────────────────────
