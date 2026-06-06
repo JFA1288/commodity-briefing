@@ -24,15 +24,42 @@
   --restricted:   #c0392b;
 }
 [data-theme="dark"] {
-  --bg:         #111111;
-  --surface:    #1e1e1e;
-  --surface2:   #252525;
-  --border:     #333333;
-  --text:       #e8e8e8;
-  --text-muted: #aaaaaa;
-  --text-light: #777777;
-  --shadow:     0 1px 4px rgba(0,0,0,.4);
+  --bg:           #0f0f0f;
+  --surface:      #1c1c1c;
+  --surface2:     #242424;
+  --border:       #2e2e2e;
+  --text:         #f0f0f0;
+  --text-muted:   #b0b0b0;
+  --text-light:   #6a6a6a;
+  --shadow:       0 1px 6px rgba(0,0,0,.5);
+  --black:        #000000;
+  --accent-dark:  #a0d933;   /* brighter green for links on dark bg */
 }
+/* Dark-mode targeted overrides for elements that use --black as a surface */
+[data-theme="dark"] .tag.sl {
+  background: #1f2e0a;
+  color: var(--accent);
+  border-color: #3a5212;
+}
+[data-theme="dark"] .filter-btn.active,
+[data-theme="dark"] .filter-btn:hover {
+  background: #1f2e0a;
+  color: var(--accent);
+  border-color: #3a5212;
+}
+[data-theme="dark"] details.acc[open] { border-color: #3a3a3a; }
+[data-theme="dark"] #brief-card {
+  background: #141414;
+  border: 1px solid #2e2e2e;
+}
+[data-theme="dark"] .opp-card { background: #1c1c1c; }
+[data-theme="dark"] .theme-card { background: #1c1c1c; }
+[data-theme="dark"] details.acc { background: #1c1c1c; }
+[data-theme="dark"] .hl-item { background: #1c1c1c; }
+[data-theme="dark"] .archive-item { background: #1c1c1c; }
+[data-theme="dark"] .market-strip { background: #1c1c1c; }
+[data-theme="dark"] .price-chip { background: #242424; }
+[data-theme="dark"] .indicative { background: #242424; }
 
 /* ── Reset / base ────────────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
