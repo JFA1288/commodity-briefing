@@ -1,4 +1,4 @@
-"""Rule-based ranking, material-event flagging, and 'what to watch' generation."""
+"""Rule-based ranking, material-event flagging, and consulting signal generation."""
 
 from __future__ import annotations
 
@@ -12,9 +12,52 @@ from .models import (
     CommodityDigest,
     DailyDigest,
     NewsItem,
+    OpportunityItem,
     PriceRecord,
     WatchBullet,
 )
+
+# ── Consulting signal labels (priority order — first match wins) ───────────────
+
+_SIGNAL_PRIORITY = [
+    'ma', 'enterprise_risk', 'trading_risk', 'regulatory', 'outage',
+    'earnings', 'growth_strategy', 'esg', 'trading_moves', 'geopolitical',
+]
+
+_SIGNAL_MAP: dict[str, tuple[str, str]] = {
+    'ma':             ('Integration',       'M&A or JV activity — potential integration, due diligence, or PMI mandate.'),
+    'earnings':       ('Performance',       'Earnings or guidance release — CFO advisory, margin improvement, or FP&A opportunity.'),
+    'outage':         ('Ops Resilience',    'Operational disruption — business continuity or resilience advisory opportunity.'),
+    'regulatory':     ('Compliance Risk',   'Regulatory action — compliance advisory, remediation, or sanctions screening.'),
+    'esg':            ('Sustainability',    'ESG or decarbonisation signal — sustainability strategy or reporting mandate.'),
+    'trading_moves':  ('Leadership Change', 'Senior leadership transition — change management or org design opportunity.'),
+    'geopolitical':   ('Compliance Risk',   'Geopolitical exposure — sanctions risk or trade compliance advisory.'),
+    'trading_risk':   ('Trading Risk',      'Trading or market risk exposure — hedging framework, VaR, or desk controls review.'),
+    'enterprise_risk':('Enterprise Risk',   'Enterprise risk or governance signal — ERM framework or internal audit advisory.'),
+    'growth_strategy':('Growth Strategy',   'Expansion or investment signal — market entry, feasibility, or strategy advisory.'),
+}
+
+# flags that alone carry no consulting insight
+_NOISE_FLAGS = {'price_shock'}
+
+# signal display order for the Opportunities section
+_OPP_PRIORITY = {
+    'Integration': 0, 'Compliance Risk': 1, 'Enterprise Risk': 2,
+    'Trading Risk': 3, 'Ops Resilience': 4, 'Performance': 5,
+    'Growth Strategy': 6, 'Sustainability': 7, 'Leadership Change': 8,
+}
+
+
+def _assign_signal(flags: list[str]) -> tuple[str, str]:
+    for cat in _SIGNAL_PRIORITY:
+        if cat in flags:
+            label, why = _SIGNAL_MAP[cat]
+            return label, why
+    return '', ''
+
+
+def _is_consulting_relevant(item: NewsItem) -> bool:
+    return bool(set(item.flags) - _NOISE_FLAGS)
 
 
 # ── Source weights ────────────────────────────────────────────────────────────
@@ -58,23 +101,35 @@ def _score(item: NewsItem) -> float:
     return round(s, 4)
 
 
+def _enrich(item: NewsItem) -> None:
+    """Flag, score, and assign consulting label to an item in place."""
+    if not item.flags:
+        item.flags = _flag_item(item)
+    if item.score == 0.0:
+        item.score = _score(item)
+    if not item.consulting_label:
+        item.consulting_label, item.why_it_matters = _assign_signal(item.flags)
+
+
 # ── Build company digests ─────────────────────────────────────────────────────
 
 def build_company_digests(company_news: dict[str, list[NewsItem]]) -> list[CompanyDigest]:
     cfg = config.load()
     company_meta = {c["name"]: c for c in cfg.get("companies", [])}
-    max_items = cfg.get("news", {}).get("max_per_company", 10)
     digests = []
 
     for name, items in company_news.items():
-        # flag + score each item
         for item in items:
-            item.flags = _flag_item(item)
-            item.score = _score(item)
+            _enrich(item)
 
-        ranked = sorted(items, key=lambda x: x.score, reverse=True)[:max_items]
+        # keep only consulting-relevant items, top 2 by score
+        relevant = [i for i in items if _is_consulting_relevant(i)]
+        ranked = sorted(relevant, key=lambda x: x.score, reverse=True)[:2]
+
+        if not ranked:
+            continue
+
         all_flags = list({f for item in ranked for f in item.flags})
-
         meta = company_meta.get(name, {})
         digests.append(CompanyDigest(
             name=name,
@@ -84,7 +139,7 @@ def build_company_digests(company_news: dict[str, list[NewsItem]]) -> list[Compa
             flags=all_flags,
         ))
 
-    return sorted(digests, key=lambda d: d.sector)
+    return sorted(digests, key=lambda d: (d.sector, d.name))
 
 
 # ── Build commodity digests ───────────────────────────────────────────────────
@@ -95,15 +150,14 @@ def build_commodity_digests(
 ) -> list[CommodityDigest]:
     cfg = config.load()
     max_items = cfg.get("news", {}).get("max_per_commodity", 6)
-    price_by_group = {}
+    price_by_group: dict[str, list[PriceRecord]] = {}
     for pr in prices:
         price_by_group.setdefault(pr.group, []).append(pr)
 
     digests = []
     for group_id, items in commodity_news.items():
         for item in items:
-            item.flags = _flag_item(item)
-            item.score = _score(item)
+            _enrich(item)
 
         ranked = sorted(items, key=lambda x: x.score, reverse=True)[:max_items]
         group_prices = price_by_group.get(group_id, [])
@@ -119,7 +173,40 @@ def build_commodity_digests(
     return digests
 
 
-# ── Top headlines (across all sources) ───────────────────────────────────────
+# ── Opportunities roll-up (consulting intel feed) ─────────────────────────────
+
+def build_opportunities(company_digests: list[CompanyDigest]) -> list[OpportunityItem]:
+    candidates: list[OpportunityItem] = []
+    for co in company_digests:
+        for item in co.items:
+            if not item.consulting_label:
+                continue
+            candidates.append(OpportunityItem(
+                company=co.name,
+                sector=co.sector,
+                signal=item.consulting_label,
+                headline=item.title,
+                url=item.url,
+                why=item.why_it_matters,
+                published=item.published,
+                score=item.score,
+            ))
+
+    # sort by signal priority, then score descending
+    candidates.sort(key=lambda o: (_OPP_PRIORITY.get(o.signal, 99), -o.score))
+
+    # one opportunity per company (highest-priority item)
+    seen: set[str] = set()
+    deduped: list[OpportunityItem] = []
+    for o in candidates:
+        if o.company not in seen:
+            seen.add(o.company)
+            deduped.append(o)
+
+    return deduped[:8]
+
+
+# ── Top headlines ─────────────────────────────────────────────────────────────
 
 def top_headlines(
     company_news: dict[str, list[NewsItem]],
@@ -133,14 +220,9 @@ def top_headlines(
         all_items.extend(items)
     all_items.extend(supplementary)
 
-    # flag + score if not already done
     for item in all_items:
-        if not item.flags:
-            item.flags = _flag_item(item)
-        if item.score == 0.0:
-            item.score = _score(item)
+        _enrich(item)
 
-    # dedup by url before ranking
     seen: set[str] = set()
     unique: list[NewsItem] = []
     for item in all_items:
@@ -161,7 +243,6 @@ def what_to_watch(
 ) -> list[WatchBullet]:
     bullets: list[WatchBullet] = []
 
-    # 1. Biggest price movers
     movers = [p for p in prices if p.change_pct is not None]
     movers.sort(key=lambda p: abs(p.change_pct), reverse=True)
     for p in movers[:3]:
@@ -171,7 +252,6 @@ def what_to_watch(
             text=f"{p.display} moved {direction} {abs(p.change_pct):.1f}% to {p.price:.2f} {p.unit} — watch for follow-through.",
         ))
 
-    # 2. Companies with material event flags
     flagged = [(d.name, d.flags) for d in company_digests if d.flags]
     flagged.sort(key=lambda x: len(x[1]), reverse=True)
     for name, flags in flagged[:4]:
@@ -181,7 +261,6 @@ def what_to_watch(
             text=f"{name}: material events flagged ({flag_str}) — review headlines below.",
         ))
 
-    # 3. Data gaps (web-sourced or unavailable prices)
     gaps = [p for p in prices if p.source in ("web", "unavailable")]
     if gaps:
         names = ", ".join(p.display for p in gaps[:4])
@@ -205,6 +284,7 @@ def build_digest(
     commodity_digests = build_commodity_digests(commodity_news, prices)
     headlines = top_headlines(company_news, commodity_news, supplementary)
     watch = what_to_watch(prices, company_digests)
+    opps = build_opportunities(company_digests)
 
     return DailyDigest(
         generated_at=datetime.now(timezone.utc),
@@ -213,4 +293,5 @@ def build_digest(
         commodities=commodity_digests,
         what_to_watch=watch,
         prices=prices,
+        opportunities=opps,
     )

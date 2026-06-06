@@ -160,30 +160,36 @@ section{margin-bottom:2.5rem}
 .wl-unpin:hover{color:var(--dn)}
 
 /* ── Market overview ─────────────────────────────────────────────────────── */
-.movers-strip{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.25rem}
+.movers-strip{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:.85rem}
 .mover-pill{display:flex;align-items:center;gap:.45rem;padding:.4rem .85rem;border-radius:8px;font-size:.85rem;font-weight:600}
 .mover-pill.up{background:var(--up-bg);color:var(--up)}
 .mover-pill.dn{background:var(--dn-bg);color:var(--dn)}
-.heatmap-wrap{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.1rem;overflow-x:auto}
-.heatmap-label{font-size:.78rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-bottom:.75rem}
-.heatmap-grid{display:inline-grid;gap:3px}
-.hm-cell{
-  width:56px;height:56px;border-radius:4px;display:flex;align-items:center;
-  justify-content:center;font-size:.65rem;font-weight:700;cursor:default;
-  position:relative;transition:filter .15s;
+.market-snapshot{font-size:.83rem;color:var(--muted);padding:.5rem 0}
+
+/* ── Opportunities ───────────────────────────────────────────────────────── */
+.opp-list{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.opp-item{
+  padding:.9rem 1.2rem;border-bottom:1px solid var(--border);
+  border-left:3px solid transparent;transition:background .1s;
 }
-.hm-cell:hover{filter:brightness(1.08);z-index:2}
-.hm-col-label{
-  width:56px;height:56px;background:transparent;font-size:.63rem;font-weight:700;
-  color:var(--muted);writing-mode:vertical-rl;text-orientation:mixed;
-  display:flex;align-items:center;justify-content:flex-start;overflow:hidden;
+.opp-item:last-child{border-bottom:none}
+.opp-item:hover{background:var(--surface2)}
+.opp-item[data-signal="Integration"]{border-left-color:var(--accent)}
+.opp-item[data-signal="Compliance Risk"]{border-left-color:var(--warn)}
+.opp-item[data-signal="Enterprise Risk"]{border-left-color:#7c3aed}
+.opp-item[data-signal="Trading Risk"]{border-left-color:#7c3aed}
+.opp-item[data-signal="Ops Resilience"]{border-left-color:var(--dn)}
+.opp-header{display:flex;align-items:center;gap:.55rem;margin-bottom:.3rem;flex-wrap:wrap}
+.opp-signal{
+  font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;
+  padding:.1rem .4rem;border-radius:3px;background:var(--surface2);color:var(--muted);
+  border:1px solid var(--border);flex-shrink:0;
 }
-.hm-row-label{
-  width:56px;height:56px;background:transparent;font-size:.63rem;font-weight:700;
-  color:var(--muted);display:flex;align-items:center;justify-content:flex-end;
-  padding-right:.3rem;overflow:hidden;white-space:nowrap;
-}
-.hm-corner{width:56px;height:56px}
+.opp-company{font-size:.83rem;font-weight:700;color:var(--text)}
+.opp-sector{font-size:.75rem;color:var(--muted)}
+.opp-headline{display:block;font-size:.92rem;font-weight:500;color:var(--text);line-height:1.45;margin-bottom:.25rem}
+.opp-headline:hover{color:var(--accent)}
+.opp-why{font-size:.78rem;color:var(--muted);line-height:1.4}
 
 /* ── Price grid ──────────────────────────────────────────────────────────── */
 .price-controls{display:flex;align-items:center;gap:.5rem;margin-bottom:.75rem;flex-wrap:wrap}
@@ -247,36 +253,44 @@ section{margin-bottom:2.5rem}
 .headline-item a{font-size:.92rem;font-weight:500;color:var(--text);display:block;line-height:1.45}
 .headline-item a:hover{color:var(--accent)}
 .headline-meta{margin-top:.25rem;font-size:.77rem;color:var(--muted);display:flex;gap:.55rem;flex-wrap:wrap;align-items:center}
-.flag-tag{display:inline-block;font-size:.67rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:.12rem .4rem;border-radius:3px;background:var(--accent2);color:var(--accent)}
-.flag-tag.earnings{background:var(--up-bg);color:var(--up)}
-.flag-tag.outage,.flag-tag.price_shock{background:var(--dn-bg);color:var(--dn)}
-.flag-tag.ma{background:var(--warn-bg);color:var(--warn)}
-.flag-tag.regulatory,.flag-tag.geopolitical{background:#f3e8ff;color:#7c3aed}
-:root[data-theme="dark"] .flag-tag.regulatory,:root[data-theme="dark"] .flag-tag.geopolitical{background:#2d1a4e;color:#c084fc}
-@media(prefers-color-scheme:dark){
-  :root[data-theme="system"] .flag-tag.regulatory,
-  :root[data-theme="system"] .flag-tag.geopolitical{background:#2d1a4e;color:#c084fc}
+.signal-tag{
+  display:inline-block;font-size:.67rem;font-weight:700;letter-spacing:.04em;
+  text-transform:uppercase;padding:.1rem .4rem;border-radius:3px;
+  background:var(--surface2);color:var(--muted);border:1px solid var(--border);
 }
 
 /* ── Company panels ──────────────────────────────────────────────────────── */
-.company-panels{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:.75rem}
-.company-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow)}
-.company-card summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:.5rem;padding:.9rem 1.1rem;font-weight:600;font-size:.9rem;user-select:none}
-.company-card summary::-webkit-details-marker{display:none}
-.company-card summary .arrow{font-size:.6rem;transition:transform .15s;color:var(--muted);flex-shrink:0}
-.company-card[open] summary .arrow{transform:rotate(90deg)}
-.company-card summary:hover{background:var(--surface2);border-radius:var(--radius)}
-.company-card[open] summary:hover{border-radius:var(--radius) var(--radius) 0 0}
-.co-name-wrap{display:flex;align-items:center;gap:.4rem;flex:1;min-width:0}
-.co-name-wrap>span:first-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.company-body{padding:.25rem 1.1rem .8rem}
-.company-item{padding:.45rem 0;border-bottom:1px solid var(--border);font-size:.85rem}
-.company-item:last-child{border-bottom:none}
-.company-item a{color:var(--text);font-weight:500}
-.company-item a:hover{color:var(--accent)}
-.item-meta{font-size:.73rem;color:var(--muted);margin-top:.15rem}
-.co-flags{display:flex;gap:.3rem;flex-wrap:wrap;margin-left:auto}
-.no-news{font-size:.82rem;color:var(--muted);padding:.5rem 0}
+.company-panels{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:.75rem}
+.company-card{
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+  box-shadow:var(--shadow);border-left:3px solid transparent;
+  padding:1rem 1.1rem;
+}
+.company-card[data-signal="Integration"]{border-left-color:var(--accent)}
+.company-card[data-signal="Compliance Risk"]{border-left-color:var(--warn)}
+.company-card[data-signal="Enterprise Risk"],.company-card[data-signal="Trading Risk"]{border-left-color:#7c3aed}
+.company-card[data-signal="Ops Resilience"]{border-left-color:var(--dn)}
+.co-header{display:flex;align-items:flex-start;justify-content:space-between;gap:.5rem;margin-bottom:.65rem}
+.co-info{flex:1;min-width:0}
+.co-name{font-size:.95rem;font-weight:700;display:block;margin-bottom:.15rem}
+.co-meta{font-size:.75rem;color:var(--muted)}
+.co-actions{display:flex;align-items:center;gap:.4rem;flex-shrink:0}
+.co-signal{
+  font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;
+  padding:.1rem .38rem;border-radius:3px;background:var(--surface2);
+  color:var(--muted);border:1px solid var(--border);
+}
+.co-lead{margin-bottom:.5rem}
+.co-lead-link{
+  display:block;font-size:.9rem;font-weight:600;color:var(--text);
+  line-height:1.45;margin-bottom:.2rem;
+}
+.co-lead-link:hover{color:var(--accent)}
+.co-why{font-size:.77rem;color:var(--muted);line-height:1.4}
+.co-also{font-size:.82rem;color:var(--muted);padding-top:.45rem;border-top:1px solid var(--border);margin-top:.1rem}
+.co-also-link{color:var(--muted);font-weight:500}
+.co-also-link:hover{color:var(--accent)}
+.no-news{font-size:.82rem;color:var(--muted)}
 
 /* ── Archive ─────────────────────────────────────────────────────────────── */
 .archive-list{display:flex;flex-wrap:wrap;gap:.5rem}
@@ -300,9 +314,6 @@ section{margin-bottom:2.5rem}
   .shell{display:block}
   .main{padding:0;max-width:100%}
   section{page-break-inside:avoid}
-  details.company-card{display:block}
-  .company-body{display:block!important}
-  a[href]::after{content:" ("attr(href)")";font-size:.7rem;color:var(--muted)}
 }
 </style>
 </head>
@@ -319,6 +330,7 @@ section{margin-bottom:2.5rem}
       <li><a href="#overview">Market Overview</a></li>
       <li><a href="#watchlist">Watchlist</a></li>
       <li><a href="#prices">Prices</a></li>
+      <li><a href="#opportunities">Opportunities</a></li>
       <li><a href="#watch">What to Watch</a></li>
       <li><a href="#headlines">Top Headlines</a></li>
       <li><div class="nav-section">Companies</div></li>
@@ -393,9 +405,9 @@ section{margin-bottom:2.5rem}
     <div class="section-title">Market Overview</div>
     <div id="overview-content">
       <div class="price-grid">
-        <div class="skel-card"><div class="skeleton sk w60"></div><div class="skeleton sk t w80"></div><div class="skeleton sk w40"></div><div class="skeleton sk s"></div></div>
-        <div class="skel-card"><div class="skeleton sk w60"></div><div class="skeleton sk t w80"></div><div class="skeleton sk w40"></div><div class="skeleton sk s"></div></div>
-        <div class="skel-card"><div class="skeleton sk w60"></div><div class="skeleton sk t w80"></div><div class="skeleton sk w40"></div><div class="skeleton sk s"></div></div>
+        <div class="skel-card"><div class="skeleton sk w60"></div><div class="skeleton sk t w80"></div><div class="skeleton sk w40"></div></div>
+        <div class="skel-card"><div class="skeleton sk w60"></div><div class="skeleton sk t w80"></div><div class="skeleton sk w40"></div></div>
+        <div class="skel-card"><div class="skeleton sk w60"></div><div class="skeleton sk t w80"></div><div class="skeleton sk w40"></div></div>
       </div>
     </div>
   </section>
@@ -414,6 +426,16 @@ section{margin-bottom:2.5rem}
       <div class="skel-card"><div class="skeleton sk w60"></div><div class="skeleton sk t w80"></div><div class="skeleton sk w40"></div><div class="skeleton sk s"></div></div>
       <div class="skel-card"><div class="skeleton sk w60"></div><div class="skeleton sk t w80"></div><div class="skeleton sk w40"></div><div class="skeleton sk s"></div></div>
       <div class="skel-card"><div class="skeleton sk w60"></div><div class="skeleton sk t w80"></div><div class="skeleton sk w40"></div><div class="skeleton sk s"></div></div>
+    </div>
+  </section>
+
+  <!-- Consulting Opportunities -->
+  <section id="opportunities" aria-label="Consulting opportunities">
+    <div class="section-title">Opportunities <span class="count" id="opp-count"></span></div>
+    <div id="opp-list" class="opp-list">
+      <div class="headline-item"><div class="skeleton sk w100"></div><div class="skeleton sk w70" style="margin-top:.4rem"></div></div>
+      <div class="headline-item"><div class="skeleton sk w90"></div><div class="skeleton sk w60" style="margin-top:.4rem"></div></div>
+      <div class="headline-item"><div class="skeleton sk w95"></div><div class="skeleton sk w65" style="margin-top:.4rem"></div></div>
     </div>
   </section>
 
@@ -473,7 +495,7 @@ section{margin-bottom:2.5rem}
   </section>
 
   <footer style="margin-top:3rem;padding-top:1.25rem;border-top:1px solid var(--border);font-size:.78rem;color:var(--muted)">
-    Rule-based extractive digest · Prices via yfinance (daily) · No LLM · Auto-published 07:00 SGT
+    Rule-based extractive digest · Consulting signals auto-detected · Prices via yfinance · No LLM · Auto-published 07:00 SGT
   </footer>
 </main>
 </div>
@@ -486,6 +508,9 @@ const esc = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>
 const fmt = (n,d=2) => n==null ? '—' : Number(n).toFixed(d);
 const pct = n => n==null ? '' : (n>=0?'+':'')+n.toFixed(1)+'%';
 const cls = n => n==null ? 'na' : n>=0 ? 'up' : 'dn';
+
+const SECTOR_LABELS = {energy:'Energy',metals_mining:'Metals & Mining',power_utilities:'Power & Utilities',trading:'Trading'};
+const FLAGS = {NL:'🇳🇱',US:'🇺🇸',GB:'🇬🇧',AU:'🇦🇺',SA:'🇸🇦',MY:'🇲🇾',ID:'🇮🇩',TH:'🇹🇭',FR:'🇫🇷',CH:'🇨🇭'};
 
 function fmtDate(iso){
   if(!iso) return '';
@@ -556,7 +581,7 @@ function unpinPrice(id){
   renderWatchlist();
 }
 
-/* ── Price history & correlations ────────────────────────────────────────── */
+/* ── Price history ────────────────────────────────────────────────────────── */
 let hist={};
 
 async function loadHistory(){
@@ -570,33 +595,6 @@ async function loadHistory(){
     }));
     Object.values(hist).forEach(a=>a.sort((a,b)=>a.date<b.date?-1:1));
   }catch{}
-}
-
-function pearson(a,b){
-  const n=a.length; if(n<3) return null;
-  const mA=a.reduce((s,v)=>s+v,0)/n, mB=b.reduce((s,v)=>s+v,0)/n;
-  let num=0,dA=0,dB=0;
-  for(let i=0;i<n;i++){const da=a[i]-mA,db=b[i]-mB;num+=da*db;dA+=da*da;dB+=db*db}
-  return(dA===0||dB===0)?0:num/Math.sqrt(dA*dB);
-}
-
-function computeCorr(){
-  const ids=Object.keys(hist); if(ids.length<2) return null;
-  const retMaps={};
-  ids.forEach(id=>{
-    const pts=hist[id], m={};
-    for(let i=1;i<pts.length;i++)
-      if(pts[i-1].price&&pts[i].price)
-        m[pts[i].date]=(pts[i].price-pts[i-1].price)/pts[i-1].price;
-    retMaps[id]=m;
-  });
-  const corr={};
-  ids.forEach(a=>{corr[a]={};ids.forEach(b=>{
-    if(a===b){corr[a][b]=1;return}
-    const shared=Object.keys(retMaps[a]).filter(d=>retMaps[b][d]!==undefined);
-    corr[a][b]=shared.length<5?null:pearson(shared.map(d=>retMaps[a][d]),shared.map(d=>retMaps[b][d]));
-  })});
-  return{ids,corr};
 }
 
 /* ── Sparklines ───────────────────────────────────────────────────────────── */
@@ -635,9 +633,14 @@ function drawSparkline(canvas,data){
 /* ── Market Overview ──────────────────────────────────────────────────────── */
 function renderOverview(prices){
   const el=$('overview-content');
-  const movers=prices.filter(p=>p.change_pct!=null).sort((a,b)=>Math.abs(b.change_pct)-Math.abs(a.change_pct));
+  const withChange=prices.filter(p=>p.change_pct!=null);
+  const up=withChange.filter(p=>p.change_pct>0);
+  const dn=withChange.filter(p=>p.change_pct<0);
+  const flat=withChange.filter(p=>p.change_pct===0);
+
+  const movers=[...up,...dn].sort((a,b)=>Math.abs(b.change_pct)-Math.abs(a.change_pct));
   const gainers=movers.filter(p=>p.change_pct>0).slice(0,3);
-  const losers =movers.filter(p=>p.change_pct<0).slice(0,3);
+  const losers=movers.filter(p=>p.change_pct<0).slice(0,3);
 
   let html='';
   if(gainers.length||losers.length){
@@ -650,35 +653,35 @@ function renderOverview(prices){
       +`</div>`;
   }
 
-  const res=computeCorr();
-  if(!res){
-    html+=`<div style="color:var(--muted);font-size:.85rem;padding:.5rem 0">Correlation heatmap available after ≥5 days of price history.</div>`;
-  } else {
-    const {ids,corr}=res;
-    const short=id=>id.replace(/_/g,'').slice(0,6).toUpperCase();
-    const N=ids.length;
-    let cells=`<div class="hm-corner"></div>`;
-    ids.forEach(id=>cells+=`<div class="hm-col-label" title="${esc(id)}">${esc(short(id))}</div>`);
-    ids.forEach(r=>{
-      cells+=`<div class="hm-row-label" title="${esc(r)}">${esc(short(r))}</div>`;
-      ids.forEach(c=>{
-        const v=corr[r][c];
-        if(v===null){cells+=`<div class="hm-cell" style="background:var(--surface2);color:var(--muted)" title="Insufficient data">—</div>`;return}
-        const a=Math.abs(v), pct100=Math.round(v*100);
-        const bg=v>=0
-          ?`color-mix(in srgb,var(--up-bg) ${Math.round(a*100)}%,var(--surface2))`
-          :`color-mix(in srgb,var(--dn-bg) ${Math.round(a*100)}%,var(--surface2))`;
-        const tc=a>0.5?(v>0?'var(--up)':'var(--dn)'):'var(--muted)';
-        cells+=`<div class="hm-cell" style="background:${bg};color:${tc}" title="${esc(r)} / ${esc(c)}: ${pct100}%">${pct100}%</div>`;
-      });
-    });
-    const days=Object.values(hist)[0]?.length||0;
-    html+=`<div class="heatmap-wrap">
-      <div class="heatmap-label">Return Correlation — ${days} days of history</div>
-      <div class="heatmap-grid" style="grid-template-columns:repeat(${N+1},56px)">${cells}</div>
-    </div>`;
+  if(withChange.length){
+    const parts=[];
+    if(up.length) parts.push(`<span style="color:var(--up);font-weight:600">${up.length} up</span>`);
+    if(dn.length) parts.push(`<span style="color:var(--dn);font-weight:600">${dn.length} down</span>`);
+    if(flat.length) parts.push(`<span style="color:var(--muted)">${flat.length} unchanged</span>`);
+    html+=`<div class="market-snapshot">${parts.join(' · ')} today across tracked commodities</div>`;
   }
-  el.innerHTML=html||'<div class="no-matches">No overview data.</div>';
+
+  el.innerHTML=html||'<div class="no-matches">No market data available.</div>';
+}
+
+/* ── Opportunities ────────────────────────────────────────────────────────── */
+function renderOpportunities(opps){
+  const el=$('opp-list');
+  if(!opps?.length){
+    el.innerHTML='<div class="no-matches">No consulting signals detected in today\'s news.</div>';
+    return;
+  }
+  $('opp-count').textContent=opps.length;
+  el.innerHTML=opps.map(o=>`
+    <div class="opp-item" data-signal="${esc(o.signal)}">
+      <div class="opp-header">
+        <span class="opp-signal">${esc(o.signal)}</span>
+        <span class="opp-company">${esc(o.company)}</span>
+        <span class="opp-sector">${esc(SECTOR_LABELS[o.sector]||o.sector)}</span>
+      </div>
+      <a href="${esc(o.url)}" target="_blank" rel="noopener noreferrer" class="opp-headline">${esc(o.headline)}</a>
+      <div class="opp-why">${esc(o.why)}</div>
+    </div>`).join('');
 }
 
 /* ── Prices ───────────────────────────────────────────────────────────────── */
@@ -766,16 +769,19 @@ function renderHeadlines(items){
   const el=$('headline-list');
   if(!items?.length){el.innerHTML='<div class="no-matches">No headlines available.</div>';return}
   $('hl-count').textContent=items.length;
-  el.innerHTML=items.map(item=>`
+  el.innerHTML=items.map(item=>{
+    const label=item.consulting_label||'';
+    return `
     <div class="headline-item" role="listitem"
       data-text="${esc((item.title+' '+(item.source||'')).toLowerCase())}">
       <a href="${esc(item.url)}" target="_blank" rel="noopener noreferrer">${esc(item.title)}</a>
       <div class="headline-meta">
         <span>${esc(item.source)}</span>
         ${item.published?`<span>${fmtDate(item.published)}</span>`:''}
-        ${(item.flags||[]).map(f=>`<span class="flag-tag ${esc(f)}">${esc(f)}</span>`).join('')}
+        ${label?`<span class="signal-tag">${esc(label)}</span>`:''}
       </div>
-    </div>`).join('');
+    </div>`;
+  }).join('');
 }
 
 /* ── Companies ────────────────────────────────────────────────────────────── */
@@ -783,37 +789,46 @@ function renderCompanies(companies){
   ['energy','metals_mining','power_utilities','trading'].forEach(sector=>{
     const el=$('sector-'+sector);
     const list=(companies||[]).filter(c=>c.sector===sector);
-    if(!list.length){el.innerHTML='<div class="no-matches">No data.</div>';return}
+    if(!list.length){el.innerHTML='<div class="no-matches">No company signals today.</div>';return}
+
     el.innerHTML=list.map(co=>{
-      const flags=(co.flags||[]).map(f=>`<span class="flag-tag ${esc(f)}">${esc(f)}</span>`).join('');
-      const pinned=_wl.has('c:'+co.name);
-      const items=(co.items||[]).map(it=>`
-        <div class="company-item">
-          <a href="${esc(it.url)}" target="_blank" rel="noopener noreferrer">${esc(it.title)}</a>
-          <div class="item-meta">${esc(it.source)}${it.published?' · '+fmtDate(it.published):''}
-            ${(it.flags||[]).map(f=>`<span class="flag-tag ${esc(f)}">${esc(f)}</span>`).join('')}
-          </div>
-        </div>`).join('')||'<div class="no-news">No recent news.</div>';
+      const items=co.items||[];
+      const top=items[0];
+      const second=items[1];
+      const flag=FLAGS[co.country]||'';
+      const secLabel=SECTOR_LABELS[co.sector]||co.sector;
+      const signal=top?.consulting_label||'';
+
+      const topHtml=top?`
+        <div class="co-lead">
+          <a href="${esc(top.url)}" target="_blank" rel="noopener noreferrer" class="co-lead-link">${esc(top.title)}</a>
+          ${top.why_it_matters?`<div class="co-why">${esc(top.why_it_matters)}</div>`:''}
+        </div>`:
+        `<div class="no-news">No significant news today.</div>`;
+
+      const alsoHtml=second?`
+        <div class="co-also">
+          Also: <a href="${esc(second.url)}" target="_blank" rel="noopener noreferrer" class="co-also-link">${esc(second.title)}</a>
+        </div>`:'';
+
       return `
-      <details class="company-card"
+      <div class="company-card"
         data-company="${esc(co.name.toLowerCase())}"
         data-sector="${esc(co.sector)}"
-        data-hasflags="${(co.flags||[]).length?'1':'0'}">
-        <summary aria-expanded="false"
-          onmousedown="this.parentElement.hasAttribute('open')&&setTimeout(()=>this.setAttribute('aria-expanded','false'),0)||this.setAttribute('aria-expanded','true')">
-          <span class="arrow" aria-hidden="true">▶</span>
-          <div class="co-name-wrap">
-            <span title="${esc(co.name)}">${esc(co.name)}</span>
-            <span class="co-flags">${flags}</span>
+        data-hasflags="${items.length?'1':'0'}"
+        data-signal="${esc(signal)}">
+        <div class="co-header">
+          <div class="co-info">
+            <span class="co-name">${esc(co.name)}</span>
+            <span class="co-meta">${flag} ${esc(secLabel)}</span>
           </div>
-          <button class="star-btn ${pinned?'pinned':''}" data-wid="c:${esc(co.name)}"
-            aria-label="${pinned?'Remove':'Add'} ${esc(co.name)} ${pinned?'from':'to'} watchlist"
-            onclick="event.stopPropagation();event.preventDefault();togglePin('c:${esc(co.name)}',this)">
-            ${pinned?'★':'☆'}
-          </button>
-        </summary>
-        <div class="company-body">${items}</div>
-      </details>`;
+          <div class="co-actions">
+            ${signal?`<span class="co-signal">${esc(signal)}</span>`:''}
+          </div>
+        </div>
+        ${topHtml}
+        ${alsoHtml}
+      </div>`;
     }).join('');
   });
 }
@@ -954,6 +969,7 @@ async function loadDashboard(){
 
     renderOverview(data.prices||[]);
     renderPrices(data.prices||[]);
+    renderOpportunities(data.opportunities||[]);
     renderWatch(data.what_to_watch||[]);
     renderHeadlines(data.top_headlines||[]);
     renderCompanies(data.companies||[]);
@@ -963,7 +979,7 @@ async function loadDashboard(){
     const b=$('error-banner');
     b.textContent=`Could not load data (${e.message}). Run: python -m src.main`;
     b.style.display='block';
-    ['price-grid','watch-panel','headline-list','overview-content',
+    ['price-grid','watch-panel','headline-list','overview-content','opp-list',
      'sector-energy','sector-metals_mining','sector-power_utilities','sector-trading']
       .forEach(id=>{const el=$(id);if(el)el.innerHTML='<div class="no-matches">Data unavailable.</div>'});
   }

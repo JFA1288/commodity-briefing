@@ -14,12 +14,13 @@ class NewsItem(BaseModel):
     source: str
     published: Optional[datetime] = None
     summary: str = ""
-    company: Optional[str] = None      # matched company name
-    commodity: Optional[str] = None    # matched commodity id
+    company: Optional[str] = None
+    commodity: Optional[str] = None
     flags: list[str] = Field(default_factory=list)
     score: float = 0.0
-    # normalised title used for dedup
     title_norm: str = ""
+    consulting_label: str = ""    # e.g. "Integration", "Compliance Risk"
+    why_it_matters: str = ""      # one-liner for the consulting angle
 
 
 class PriceRecord(BaseModel):
@@ -30,7 +31,7 @@ class PriceRecord(BaseModel):
     price: Optional[float] = None
     prev_close: Optional[float] = None
     change_pct: Optional[float] = None
-    source: str = "yfinance"          # "yfinance" | "web" | "unavailable"
+    source: str = "yfinance"
     as_of: Optional[datetime] = None
 
 
@@ -39,7 +40,7 @@ class CompanyDigest(BaseModel):
     sector: str
     country: str
     items: list[NewsItem] = Field(default_factory=list)
-    flags: list[str] = Field(default_factory=list)   # union of item flags
+    flags: list[str] = Field(default_factory=list)
 
 
 class CommodityDigest(BaseModel):
@@ -50,8 +51,19 @@ class CommodityDigest(BaseModel):
 
 
 class WatchBullet(BaseModel):
-    category: str    # "price_mover" | "event" | "data_gap"
+    category: str
     text: str
+
+
+class OpportunityItem(BaseModel):
+    company: str
+    sector: str
+    signal: str         # consulting label, e.g. "Integration"
+    headline: str
+    url: str
+    why: str            # why it matters one-liner
+    published: Optional[datetime] = None
+    score: float = 0.0
 
 
 class DailyDigest(BaseModel):
@@ -61,3 +73,4 @@ class DailyDigest(BaseModel):
     commodities: list[CommodityDigest] = Field(default_factory=list)
     what_to_watch: list[WatchBullet] = Field(default_factory=list)
     prices: list[PriceRecord] = Field(default_factory=list)
+    opportunities: list[OpportunityItem] = Field(default_factory=list)

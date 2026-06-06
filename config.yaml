@@ -220,13 +220,17 @@ scoring:
 
 # ── Material-event keyword lists ──────────────────────────────────────────────
 material_event_keywords:
-  earnings:       [earnings, profit, loss, revenue, EBITDA, "net income", quarterly, annual, results, EPS, dividend, guidance, outlook, forecast]
-  ma:             [merger, acquisition, takeover, "take-over", buyout, "take private", bid, deal, stake, divest, divestment, JV, "joint venture", partnership]
-  outage:         [outage, shutdown, "force majeure", disruption, offline, curtailment, maintenance, explosion, fire, accident, spill, leak]
-  regulatory:     [sanction, ban, embargo, tariff, export, import, licence, license, permit, regulation, investigation, fine, penalty, court, lawsuit, antitrust]
-  trading_moves:  [trader, "trading desk", hire, appoint, resign, restructure, layoff, headcount, "cost cut"]
-  esg:            [ESG, decarbonization, "net zero", carbon, emissions, renewable, solar, wind, hydrogen, CCS, CCUS, sustainability]
-  geopolitical:   [OPEC, OPEC+, Russia, Ukraine, Iran, China, "Red Sea", Strait, blockade, war, conflict, tension, sanctions]
+  earnings:         [earnings, profit, loss, revenue, EBITDA, "net income", quarterly, annual, results, EPS, dividend, guidance, outlook, forecast]
+  ma:               [merger, acquisition, takeover, "take-over", buyout, "take private", bid, deal, stake, divest, divestment, JV, "joint venture", partnership]
+  outage:           [outage, shutdown, "force majeure", disruption, offline, curtailment, maintenance, explosion, fire, accident, spill, leak]
+  regulatory:       [sanction, ban, embargo, tariff, export, import, licence, license, permit, regulation, investigation, fine, penalty, court, lawsuit, antitrust]
+  trading_moves:    [trader, "trading desk", hire, appoint, resign, restructure, layoff, headcount, "cost cut"]
+  esg:              [ESG, decarbonization, "net zero", carbon, emissions, renewable, solar, wind, hydrogen, CCS, CCUS, sustainability]
+  geopolitical:     [OPEC, OPEC+, Russia, Ukraine, Iran, China, "Red Sea", Strait, blockade, war, conflict, tension, sanctions]
+  price_shock:      [surge, plunge, crash, spike, record, "all-time high", "all-time low", collapse, rally, soar]
+  growth_strategy:  [expansion, "new market", greenfield, investment, "capacity addition", "new project", "strategic plan", "growth strategy", "market entry", "new terminal", "new plant"]
+  trading_risk:     [hedge, hedging, derivatives, exposure, position, "margin call", counterparty, "mark-to-market", "risk limit", VaR, "stop-loss", "basis risk", "price risk", "market risk", volatility]
+  enterprise_risk:  ["risk management", "enterprise risk", ERM, "internal controls", "internal audit", governance, "risk appetite", "risk register", "risk committee", "board risk", oversight, "control framework"]
   price_shock:    [surge, plunge, crash, spike, record, "all-time high", "all-time low", collapse, rally, soar]
 
 # ── "What to watch" macro context terms ───────────────────────────────────────
