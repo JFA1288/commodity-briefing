@@ -1,1 +1,14 @@
-anthropic>=0.92.0
+feedparser==6.0.11
+httpx==0.27.0
+yfinance==0.2.54
+pydantic==2.7.4
+Jinja2==3.1.4
+PyYAML==6.0.2
+python-dateutil==2.9.0.post0
+requests==2.32.3
+urllib3==2.2.2
+certifi==2024.6.2
+charset-normalizer==3.3.2
+# optional extractive summarizer (off by default; toggle via config)
+# sumy==0.11.0
+# nltk==3.8.1

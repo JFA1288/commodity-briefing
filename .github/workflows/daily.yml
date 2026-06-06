@@ -1,55 +1,53 @@
-name: Daily Commodity Briefing
+name: Daily Commodity Digest
 
 on:
   schedule:
-    - cron: '0 23 * * *'   # 7:00 AM Malaysia time every day
-  workflow_dispatch:         # lets you click Run to test manually
+    # 23:00 UTC ≈ 07:00 Singapore (SGT, UTC+8). Adjust as needed.
+    - cron: "0 23 * * *"
+  workflow_dispatch:        # manual "Run workflow" button (and a backup if
+                            # GitHub disables the schedule after ~60d inactivity)
 
+# Allow the workflow to commit the regenerated docs/ back to the repo.
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
+
+# Don't let two runs overlap (e.g. a manual run during the scheduled one).
+concurrency:
+  group: daily-digest
+  cancel-in-progress: false
 
 jobs:
-  build-and-deploy:
+  build-and-publish:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
     steps:
-      - name: Check out files
+      - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0     # full history so the commit/push is clean
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: "3.11"
+          cache: "pip"
 
-      - name: Install libraries
-        run: pip install -r requirements.txt
-
-      - name: Generate today's report
-        env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          TZ: Asia/Kuala_Lumpur
-        run: python commodity_news_agent.py
-
-      - name: Build dashboard
-        env:
-          TZ: Asia/Kuala_Lumpur
-        run: python make_dashboard.py
-
-      - name: Package dashboard for web
+      - name: Install dependencies
         run: |
-          mkdir -p _site
-          cp commodity_reports/commodity_dashboard.html _site/index.html
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
 
-      - name: Upload site
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: _site
+      - name: Run the agent
+        run: python -m src.main
 
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Commit and push updated dashboard
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/
+          # Only commit if something actually changed.
+          if git diff --staged --quiet; then
+            echo "No changes to publish today."
+          else
+            git commit -m "chore: daily commodity digest $(date -u +'%Y-%m-%d')"
+            git push
+          fi
