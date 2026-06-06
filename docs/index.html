@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,7 +36,7 @@
 
 /* ── Reset / base ────────────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { font-size: 14px; scroll-behavior: smooth; }
+html { font-size: 16px; scroll-behavior: smooth; }
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   background: var(--bg);
@@ -466,9 +466,19 @@ footer { margin-top: 40px; padding-top: 18px; border-top: 1px solid var(--border
 /* ── Responsive ──────────────────────────────────────────────────────── */
 @media (max-width: 700px) {
   :root { --sidebar-w: 0px; }
+  html { font-size: 17px; }
   #sidebar { display: none; }
-  #main { margin-left: 0; padding: 16px; }
+  #main { margin-left: 0; padding: 14px; }
   .brief-grid, .themes-grid { grid-template-columns: 1fr; }
+  .opp-company, .acc-name { font-size: 1.05rem; }
+  .opp-headline, .hl-title { font-size: 1rem; }
+  .opp-angle, .opp-restricted-notice { font-size: .95rem; }
+  .acc-list li, .acc-one-liner { font-size: .95rem; }
+  .price-chip .pc-val { font-size: 1.1rem; }
+  .score-badge { font-size: .85rem; padding: 3px 10px; }
+  .brief-col li { font-size: .95rem; }
+  .tag { font-size: .78rem; padding: 3px 9px; }
+  .section-title { font-size: .78rem; }
 }
 </style>
 </head>
@@ -562,7 +572,7 @@ function toggleTheme() {
   localStorage.setItem('er-theme', next);
 }
 (function(){
-  const saved = localStorage.getItem('er-theme') || 'light';
+  const saved = localStorage.getItem('er-theme') || 'dark';
   document.documentElement.setAttribute('data-theme', saved);
 })();
 
