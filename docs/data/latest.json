@@ -1,6 +1,20 @@
 {
-  "generated_at": "2026-06-06T02:54:26.974504Z",
+  "generated_at": "2026-06-06T03:04:30.189102Z",
   "top_headlines": [
+    {
+      "title": "Absa under fire for TotalEnergies financing in Cabo Delgado - Business Day",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQM3lKdjlZZnFrdHp0RTVldmFFQ2NXRnNXNHVoMXhwYjAzdVFSWi05U1kxbUhLeEl0M3c1LXFneDAxM21LTnF2RVU1a3lXY0dZekRQN1c1cHpPQ0JpY0haV3FOYXhZUko4NE95Q1QtdlZ3bUlNUHl3R2s4QzVqVjgxRVRWV0FHQjVKU0V6NElmNzJ6eW1JeGZLVWdzYS0zcGttNy00bmo2ZWoyNFMyRV9salJhTGN4dWM?oc=5",
+      "source": "Google News",
+      "published": "2026-06-06T03:00:00Z",
+      "summary": "Absa under fire for TotalEnergies financing in Cabo Delgado&nbsp;&nbsp;Business Day",
+      "company": "TotalEnergies Trading Asia",
+      "commodity": null,
+      "flags": [
+        "outage"
+      ],
+      "score": 3.4957,
+      "title_norm": "absa business cabo day delgado financing fire totalenergies under"
+    },
     {
       "title": "PV Gas expands strategic partnerships with leading Southeast Asian energy firms - Theinvestor",
       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPZ2YzRjlwcExxRGp3UnhCMGNXYmw1d3lEcEJiOGlMOTJKNzBPZUphZzdIRm43akwwX3NYTkZ0WG9KMnZlSlVvcDZjam0yaFBFaDNMc1dQNGkwX0tUT3RlWHM3ZmtEd1d3VDB3bWVzVUlxRF9ZOGVCdlQ1NHBpT2RuR0NnV2w0ckltZG5Sa0xucW4tTmZRdjBoeGdUUGRkcFJEVURjd25VSVJyZkM0dnVVRV9qQzI?oc=5",
@@ -12,7 +26,7 @@
       "flags": [
         "ma"
       ],
-      "score": 3.4526,
+      "score": 3.4434,
       "title_norm": "asian energy expands firms gas leading partnerships southeast strategic theinvestor"
     },
     {
@@ -27,8 +41,22 @@
         "earnings",
         "ma"
       ],
-      "score": 3.4,
+      "score": 3.3913,
       "title_norm": "expanded finance losses means partnership shareholders shell what wider yahoo"
+    },
+    {
+      "title": "Oil (USCrude) Price Forecast for Today, Tomorrow, Next Week, and Next 30 Days - LiteFinance",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQcm51RHFTMGNQcnB2aFl5bjNQQzFXUVVHckh1eW1IVktpM0lfaXlCQ2p6RF9nYWxkajlxb2R2V0lkRi1FNnljalUwMlhaU2FFT2dCUDBwem9tVG14Y1FXZGVKbWJvSm0xNlVVZ1BwdTItWnJkOTF3TnFTU2FQLWZibmhXRXlnX2RJY25leTB2ekVVUHZMZS1zbjBhWkNJLWs?oc=5",
+      "source": "Google News",
+      "published": "2026-06-06T00:51:45Z",
+      "summary": "Oil (USCrude) Price Forecast for Today, Tomorrow, Next Week, and Next 30 Days&nbsp;&nbsp;LiteFinance",
+      "company": null,
+      "commodity": "crude_oil",
+      "flags": [
+        "earnings"
+      ],
+      "score": 3.38,
+      "title_norm": "days forecast litefinance next next oil price today tomorrow uscrude week"
     },
     {
       "title": "ExxonMobil Baytown bids farewell to three - Baytown Sun",
@@ -41,7 +69,7 @@
       "flags": [
         "ma"
       ],
-      "score": 3.3544,
+      "score": 3.3462,
       "title_norm": "baytown baytown bids exxonmobil farewell sun three"
     },
     {
@@ -56,7 +84,7 @@
         "geopolitical",
         "price_shock"
       ],
-      "score": 3.3052,
+      "score": 3.2974,
       "title_norm": "further opec output plunges shows survey"
     },
     {
@@ -70,7 +98,7 @@
       "flags": [
         "regulatory"
       ],
-      "score": 3.2975,
+      "score": 3.2898,
       "title_norm": "abandoning com dutch dutch implications legal plc plc reputational royal royal shell shell shell"
     },
     {
@@ -85,7 +113,7 @@
         "trading_moves",
         "geopolitical"
       ],
-      "score": 3.2925,
+      "score": 3.2848,
       "title_norm": "demand fears global oil retreats"
     },
     {
@@ -99,7 +127,7 @@
       "flags": [
         "earnings"
       ],
-      "score": 3.2772,
+      "score": 3.2697,
       "title_norm": "because berhad buy dividend don gas going just klse out petgas petronas race simplywall"
     },
     {
@@ -113,7 +141,7 @@
       "flags": [
         "earnings"
       ],
-      "score": 3.2772,
+      "score": 3.2697,
       "title_norm": "berhad bright dagangan earnings klse may petdag petronas simplywall some spots there"
     },
     {
@@ -127,7 +155,7 @@
       "flags": [
         "earnings"
       ],
-      "score": 3.2654,
+      "score": 3.258,
       "title_norm": "berhad beyond can dagangan earnings finance klse lackluster look petdag petronas think yahoo you"
     },
     {
@@ -141,7 +169,7 @@
       "flags": [
         "ma"
       ],
-      "score": 3.265,
+      "score": 3.2577,
       "title_norm": "bhp coast deals inks mine move new phoenix potash rail star west"
     },
     {
@@ -155,8 +183,23 @@
       "flags": [
         "ma"
       ],
-      "score": 3.2607,
+      "score": 3.2534,
       "title_norm": "bhp coast deals inks mine move msn new potash rail west"
+    },
+    {
+      "title": "SPR Borrowers Owe Uncle Sam 40 Million Extra Barrels",
+      "url": "https://oilprice.com/Latest-Energy-News/World-News/SPR-Borrowers-Owe-Uncle-Sam-40-Million-Extra-Barrels.html",
+      "source": "OilPrice.com",
+      "published": "2026-06-05T17:30:00Z",
+      "summary": "The US Strategic Petroleum Reserve has taken a beating during the Iran war, but Energy Secretary Chris Wright says the government's emergency oil stash is headed for a surprisingly lucrative refill. Companies that borrowed crude from the SPR during the conflict will return those barrels with premiums attached, leaving the reserve about 40 million barrels larger than it would have been otherwise once the war ends, Wright said Friday. For an oil market accustomed to hearing about SPR drawdowns, em",
+      "company": null,
+      "commodity": null,
+      "flags": [
+        "esg",
+        "geopolitical"
+      ],
+      "score": 3.2477,
+      "title_norm": "barrels borrowers extra million owe sam spr uncle"
     },
     {
       "title": "Officials inch towards negative income tax",
@@ -169,50 +212,8 @@
       "flags": [
         "geopolitical"
       ],
-      "score": 3.236,
+      "score": 3.2289,
       "title_norm": "inch income negative officials tax towards"
-    },
-    {
-      "title": "WED 2026: Chevron Nigeria and Mid-Africa Region’s Commitment to Environmental Stewardship - Energy Focus Report",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNR3VpbmxGazU5bERuVHBucUVab3dRTXZpa0gyTXNzRXpmTHlmZmlEenBJUHlKRDNJb0hHQkdCUHEtRHFVSXJKQ1VWRTNuZGhObGJLSUhfYVI4OENYOVBuNzZNNTJMN2ZYZ3B0TTUzRmFaMXI4LTdRemw0NGx6OUdlbE90d1ZRTjdSd1g5eU9oUl9sRl9mSmlKc2pxb0VuTXFzUGpiWURBTS1DM0pKMmk0eHBoM2ZrVDREZDBFcnEzOA?oc=5",
-      "source": "Google News",
-      "published": "2026-06-05T21:29:55Z",
-      "summary": "WED 2026: Chevron Nigeria and Mid-Africa Region’s Commitment to Environmental Stewardship&nbsp;&nbsp;Energy Focus Report",
-      "company": "Chevron",
-      "commodity": null,
-      "flags": [
-        "geopolitical"
-      ],
-      "score": 3.2317,
-      "title_norm": "2026 africa chevron commitment energy environmental focus mid nigeria regions report stewardship wed"
-    },
-    {
-      "title": "Central Asia Soft-Gel Capsule Shell Gelatin - Market Analysis, Forecast, Size, Trends and Insights - IndexBox",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQMzctQTd4aEhGMnVoUmtxMlFnRXVGMlk1YmNMUXVRR2lDOUxPTlZRemRzNFJkeXpscDJVRnZkRmhDVDhGQnk3UlI0LXdFT3NCOGxrU29XRFRiX2ZkZ2NmZFpkRV84c3FwSmZ2SndFUE5PQS1ZTHNJZFlnUFZpdWlXeE1MdUxkMGE1MXRnaHVTY2ctQjFCc0hQaU10Q1ppM0toUEhERlBaRWstZUVCM1NuY1NWczRwemdrRmdwdjh2YmU0UQ?oc=5",
-      "source": "Google News",
-      "published": "2026-06-05T21:24:10Z",
-      "summary": "Central Asia Soft-Gel Capsule Shell Gelatin - Market Analysis, Forecast, Size, Trends and Insights&nbsp;&nbsp;IndexBox",
-      "company": "Shell",
-      "commodity": null,
-      "flags": [
-        "earnings"
-      ],
-      "score": 3.2276,
-      "title_norm": "analysis asia capsule central forecast gel gelatin indexbox insights market shell size soft trends"
-    },
-    {
-      "title": "Dry Bulk Market: Indonesian Coal Exports Retreating",
-      "url": "https://www.hellenicshippingnews.com/dry-bulk-market-indonesian-coal-exports-retreating/",
-      "source": "Hellenic Shipping News",
-      "published": "2026-06-05T21:00:59Z",
-      "summary": "Seaborne coal exports from Indonesia have been falling so far in 2026. In its latest weekly report, shipbroker Banchero Costa said that “in Jan-Apr 2026, global seaborne coal loadings declined by -0.1% y-o-y to 410.7 mln t (excluding cabotage), based on vessel tracking data from AXS Marine. In Jan-Apr 2026, exports from Indonesia declined by ...",
-      "company": null,
-      "commodity": null,
-      "flags": [
-        "regulatory"
-      ],
-      "score": 3.2116,
-      "title_norm": "bulk coal dry exports indonesian market retreating"
     }
   ],
   "companies": [
@@ -233,7 +234,7 @@
             "earnings",
             "ma"
           ],
-          "score": 3.4,
+          "score": 3.3913,
           "title_norm": "expanded finance losses means partnership shareholders shell what wider yahoo"
         },
         {
@@ -247,7 +248,7 @@
           "flags": [
             "regulatory"
           ],
-          "score": 3.2975,
+          "score": 3.2898,
           "title_norm": "abandoning com dutch dutch implications legal plc plc reputational royal royal shell shell shell"
         },
         {
@@ -261,7 +262,7 @@
           "flags": [
             "earnings"
           ],
-          "score": 3.2276,
+          "score": 3.2206,
           "title_norm": "analysis asia capsule central forecast gel gelatin indexbox insights market shell size soft trends"
         },
         {
@@ -276,7 +277,7 @@
             "regulatory",
             "geopolitical"
           ],
-          "score": 3.0374,
+          "score": 3.0322,
           "title_norm": "bns finance fuel links rewards scotiabank shell spending tie valuation yahoo"
         },
         {
@@ -292,7 +293,7 @@
             "ma",
             "regulatory"
           ],
-          "score": 2.9569,
+          "score": 2.9525,
           "title_norm": "bank bns deeper did earnings investment just narrative nova partnership scotia shell shift simplywall stronger tsx"
         },
         {
@@ -306,7 +307,7 @@
           "flags": [
             "ma"
           ],
-          "score": 2.9515,
+          "score": 2.9471,
           "title_norm": "adds buy deal extends million shell siebels spotlight"
         },
         {
@@ -320,7 +321,7 @@
           "flags": [
             "outage"
           ],
-          "score": 2.9131,
+          "score": 2.9092,
           "title_norm": "agents automate how maintenance news predictive shell"
         },
         {
@@ -334,7 +335,7 @@
           "flags": [
             "outage"
           ],
-          "score": 2.9123,
+          "score": 2.9083,
           "title_norm": "data expands let maintenance predictive science shell"
         },
         {
@@ -349,7 +350,7 @@
             "ma",
             "esg"
           ],
-          "score": 2.8975,
+          "score": 2.8937,
           "title_norm": "4bn assets deal mercuria news oil shell snaps tradewinds ventures"
         },
         {
@@ -363,17 +364,17 @@
           "flags": [
             "outage"
           ],
-          "score": 2.8558,
+          "score": 2.8524,
           "title_norm": "expands iot maintenance news predictive programme shell"
         }
       ],
       "flags": [
         "ma",
-        "geopolitical",
         "earnings",
+        "regulatory",
         "outage",
-        "esg",
-        "regulatory"
+        "geopolitical",
+        "esg"
       ]
     },
     {
@@ -392,7 +393,7 @@
           "flags": [
             "ma"
           ],
-          "score": 3.3544,
+          "score": 3.3462,
           "title_norm": "baytown baytown bids exxonmobil farewell sun three"
         },
         {
@@ -406,7 +407,7 @@
           "flags": [
             "ma"
           ],
-          "score": 2.883,
+          "score": 2.8793,
           "title_norm": "capital corporation decreases exxonmobil inc management marketbeat regency stake xom"
         },
         {
@@ -420,7 +421,7 @@
           "flags": [
             "geopolitical"
           ],
-          "score": 2.8804,
+          "score": 2.8767,
           "title_norm": "150160 amid brent exxon firstpost hit inventories low oil sees shock squeeze supply warning year"
         },
         {
@@ -434,7 +435,7 @@
           "flags": [
             "price_shock"
           ],
-          "score": 2.6337,
+          "score": 2.6324,
           "title_norm": "approved democratic eciks energy exit exxon org prices says shareholders state surge"
         },
         {
@@ -446,7 +447,7 @@
           "company": "ExxonMobil",
           "commodity": null,
           "flags": [],
-          "score": 0.96,
+          "score": 0.9507,
           "title_norm": "energy enters express newspapers oxy sector trinidad"
         },
         {
@@ -458,7 +459,7 @@
           "company": "ExxonMobil",
           "commodity": null,
           "flags": [],
-          "score": 0.7226,
+          "score": 0.7157,
           "title_norm": "down exxonmobil marketbeat nyse sell trading xom you"
         },
         {
@@ -470,7 +471,7 @@
           "company": "ExxonMobil",
           "commodity": null,
           "flags": [],
-          "score": 0.5836,
+          "score": 0.578,
           "title_norm": "advantaged assets drive exxonmobil growth here how resilience tradingview"
         },
         {
@@ -482,7 +483,7 @@
           "company": "ExxonMobil",
           "commodity": null,
           "flags": [],
-          "score": 0.4094,
+          "score": 0.4054,
           "title_norm": "acquired corporation exxonmobil inc marketbeat shares technologies vise xom"
         },
         {
@@ -494,7 +495,7 @@
           "company": "ExxonMobil",
           "commodity": null,
           "flags": [],
-          "score": 0.4054,
+          "score": 0.4015,
           "title_norm": "advisors corporation exxonmobil holdings llc marketbeat million parallel xom"
         },
         {
@@ -506,14 +507,14 @@
           "company": "ExxonMobil",
           "commodity": null,
           "flags": [],
-          "score": 0.3965,
+          "score": 0.3927,
           "title_norm": "corporation exxonmobil inc increases marketbeat position randolph xom"
         }
       ],
       "flags": [
+        "geopolitical",
         "ma",
-        "price_shock",
-        "geopolitical"
+        "price_shock"
       ]
     },
     {
@@ -532,7 +533,7 @@
           "flags": [
             "geopolitical"
           ],
-          "score": 3.2317,
+          "score": 3.2246,
           "title_norm": "2026 africa chevron commitment energy environmental focus mid nigeria regions report stewardship wed"
         },
         {
@@ -546,7 +547,7 @@
           "flags": [
             "outage"
           ],
-          "score": 3.0954,
+          "score": 3.0897,
           "title_norm": "abc breaking fired gunmen innocent killed latest news news news police say shots target videos who woman wrong"
         },
         {
@@ -560,7 +561,7 @@
           "flags": [
             "earnings"
           ],
-          "score": 3.0433,
+          "score": 3.0381,
           "title_norm": "cash chevron choice dividends flow investors long make pluang steady stock strong term top"
         },
         {
@@ -574,7 +575,7 @@
           "flags": [
             "earnings"
           ],
-          "score": 3.0237,
+          "score": 3.0186,
           "title_norm": "3rd annual chevron pbr recap showdown yourbasin"
         },
         {
@@ -588,7 +589,7 @@
           "flags": [
             "price_shock"
           ],
-          "score": 3.0155,
+          "score": 3.0106,
           "title_norm": "can chevron finance high how prediction price soar yahoo year"
         },
         {
@@ -603,7 +604,7 @@
             "ma",
             "geopolitical"
           ],
-          "score": 2.9353,
+          "score": 2.9311,
           "title_norm": "alpha chevron cvx deal downgrade fully iran looks lower oil rating seeking send valued"
         },
         {
@@ -617,7 +618,7 @@
           "flags": [
             "esg"
           ],
-          "score": 2.9351,
+          "score": 2.9309,
           "title_norm": "bart chevron emissions know project richmond richmondside service signals smarter sunday things traffic week"
         },
         {
@@ -631,7 +632,7 @@
           "flags": [
             "ma"
           ],
-          "score": 2.9034,
+          "score": 2.8995,
           "title_norm": "advisors chevron corporation cvx increases llc marketbeat stake wcg wealth"
         },
         {
@@ -645,7 +646,7 @@
           "flags": [
             "earnings"
           ],
-          "score": 2.7901,
+          "score": 2.7873,
           "title_norm": "3rd annual bull chevron com flash magic newswest9 professional riders second showdown"
         },
         {
@@ -659,17 +660,17 @@
           "flags": [
             "earnings"
           ],
-          "score": 2.7868,
+          "score": 2.784,
           "title_norm": "3rd annual bull chevron com glory highlights newswest9 riders second showdown"
         }
       ],
       "flags": [
         "ma",
-        "geopolitical",
         "earnings",
         "outage",
-        "esg",
-        "price_shock"
+        "geopolitical",
+        "price_shock",
+        "esg"
       ]
     },
     {
@@ -688,7 +689,7 @@
           "flags": [
             "outage"
           ],
-          "score": 2.9227,
+          "score": 2.9186,
           "title_norm": "daily district district fire journal mateo midpeninsula open preparedness protection regional san space step wildfire woodside"
         },
         {
@@ -702,7 +703,7 @@
           "flags": [
             "ma"
           ],
-          "score": 2.7921,
+          "score": 2.7893,
           "title_norm": "bound floater japanese mexico online player stake take upstream"
         },
         {
@@ -714,7 +715,7 @@
           "company": "Woodside Energy",
           "commodity": null,
           "flags": [],
-          "score": 0.691,
+          "score": 0.6843,
           "title_norm": "arrested avenue bronx collision com driver fatal garbage killed nypd qns roosevelt teenager truck woodside"
         },
         {
@@ -726,7 +727,7 @@
           "company": "Woodside Energy",
           "commodity": null,
           "flags": [],
-          "score": 0.6831,
+          "score": 0.6765,
           "title_norm": "estate french listed mercury million news photos vcs woodside"
         },
         {
@@ -738,7 +739,7 @@
           "company": "Woodside Energy",
           "commodity": null,
           "flags": [],
-          "score": 0.6332,
+          "score": 0.6271,
           "title_norm": "attention conditions daily eagle mta officials pay poor press queens queens transit woodside"
         },
         {
@@ -750,7 +751,7 @@
           "company": "Woodside Energy",
           "commodity": null,
           "flags": [],
-          "score": 0.6092,
+          "score": 0.6033,
           "title_norm": "06810 ave com danbury e52 realtor unit woodside"
         },
         {
@@ -762,7 +763,7 @@
           "company": "Woodside Energy",
           "commodity": null,
           "flags": [],
-          "score": 0.1786,
+          "score": 0.1769,
           "title_norm": "councils domestic finance lead louisiana prevention senior southwest support violence wellness woodside yahoo"
         },
         {
@@ -774,7 +775,7 @@
           "company": "Woodside Energy",
           "commodity": null,
           "flags": [],
-          "score": 0.1583,
+          "score": 0.1568,
           "title_norm": "almanac antisemitism baking district express housing school settles show suit winner woodside"
         }
       ],
@@ -799,7 +800,7 @@
           "flags": [
             "earnings"
           ],
-          "score": 3.2772,
+          "score": 3.2697,
           "title_norm": "because berhad buy dividend don gas going just klse out petgas petronas race simplywall"
         },
         {
@@ -813,7 +814,7 @@
           "flags": [
             "earnings"
           ],
-          "score": 3.2772,
+          "score": 3.2697,
           "title_norm": "berhad bright dagangan earnings klse may petdag petronas simplywall some spots there"
         },
         {
@@ -827,7 +828,7 @@
           "flags": [
             "earnings"
           ],
-          "score": 3.2654,
+          "score": 3.258,
           "title_norm": "berhad beyond can dagangan earnings finance klse lackluster look petdag petronas think yahoo you"
         },
         {
@@ -841,22 +842,8 @@
           "flags": [
             "ma"
           ],
-          "score": 2.836,
+          "score": 2.8328,
           "title_norm": "aramco downstream malaysian meed petronas stake transfers"
-        },
-        {
-          "title": "Courtesy Call by PETRONAS Iraq - Home - Embassy of Malaysia, Kuwait - kln.gov.my",
-          "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPNG9QMnprRkR3TkN1b0d1SmdzcU5mVmhLM2F1WkVyemZ4cGxyX1F3YUZwbTZxSW5zT1pvMWVDRklueXRZdzY5a2dXamhkdnJxRXppUzdVOVgybEkxUGx6MmhnN1gyQlgzN2pmLV9CdW1DaDcySlRSMURXZjF6cmZVVGFxSXJjczdtZGRiSm9lUUw1UlZzckdTYktyZHE2d09OdGpUb1V0cFNuR3dDVk9NWkNQSHpCcThXdzYyZzVfOGk2NWl3TnFndDNB?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T06:42:39Z",
-          "summary": "Courtesy Call by PETRONAS Iraq - Home - Embassy of Malaysia, Kuwait&nbsp;&nbsp;kln.gov.my",
-          "company": "PETRONAS",
-          "commodity": null,
-          "flags": [
-            "regulatory"
-          ],
-          "score": 2.8114,
-          "title_norm": "call courtesy embassy gov home iraq kln kuwait malaysia petronas"
         },
         {
           "title": "Asean energy heavyweights team up on oil recovery initiative - Upstream Online",
@@ -867,7 +854,7 @@
           "company": "PETRONAS",
           "commodity": null,
           "flags": [],
-          "score": 0.8429,
+          "score": 0.8348,
           "title_norm": "asean energy heavyweights initiative oil online recovery team upstream"
         },
         {
@@ -879,7 +866,7 @@
           "company": "PETRONAS",
           "commodity": null,
           "flags": [],
-          "score": 0.3472,
+          "score": 0.3438,
           "title_norm": "advance borneo offshore oil partners petronas post recovery regional"
         },
         {
@@ -891,26 +878,13 @@
           "company": "PETRONAS",
           "commodity": null,
           "flags": [],
-          "score": 0.1509,
+          "score": 0.1495,
           "title_norm": "agreement baird evaluate maritime offshore oil partners petronas recovery regional sign"
-        },
-        {
-          "title": "Petronas leads regional push for enhanced oil recovery collaboration and launches Digital Intelligence Centre - The Malaysian Reserve",
-          "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNc25nTzZyX2EtNTJLMWpSWFROM2p2ZmYyMUtsYURjR0wxSFJmNVBRMDNjUVRvX21CUmxLN2E4bDQxcW5wUm9zX1hOQXh2Nkp4cDdLcDJPUXlMUWdJTF9TYnRyY2ZOR3NJR3VmdWw1aUxKYnJvWlNZY1RKbXJuNHc0Ri10Q2lRdEdPbXQtbTFKZzJULVZDVzdvYmRDN3dMLW8tbVNfVXZ2VUwyR0Q1M2ZoY25iZUNodUZyNm5RVDFpVUVRVWpmNmlzZ1hQMGJCQmN2ZGxLY3NXZ1h6M09EeTA5aFU4Umlxd3Ey?oc=5",
-          "source": "Google News",
-          "published": "2026-06-04T15:58:40Z",
-          "summary": "Petronas leads regional push for enhanced oil recovery collaboration and launches Digital Intelligence Centre&nbsp;&nbsp;The Malaysian Reserve",
-          "company": "PETRONAS",
-          "commodity": null,
-          "flags": [],
-          "score": 0.133,
-          "title_norm": "centre collaboration digital enhanced intelligence launches leads malaysian oil petronas push recovery regional reserve"
         }
       ],
       "flags": [
-        "regulatory",
-        "ma",
-        "earnings"
+        "earnings",
+        "ma"
       ]
     },
     {
@@ -929,7 +903,7 @@
           "flags": [
             "ma"
           ],
-          "score": 3.4526,
+          "score": 3.4434,
           "title_norm": "asian energy expands firms gas leading partnerships southeast strategic theinvestor"
         }
       ],
@@ -951,7 +925,7 @@
           "company": "Pertamina",
           "commodity": null,
           "flags": [],
-          "score": 0.634,
+          "score": 0.6278,
           "title_norm": "energy highlight news pertamina petromindo photo pln progress transition"
         },
         {
@@ -963,7 +937,7 @@
           "company": "Pertamina",
           "commodity": null,
           "flags": [],
-          "score": 0.3423,
+          "score": 0.3391,
           "title_norm": "asia conrad contract drilling energy field gas indexbox mako news pertamina rig signs statistics"
         }
       ],
@@ -985,7 +959,7 @@
           "flags": [
             "ma"
           ],
-          "score": 3.1648,
+          "score": 3.1584,
           "title_norm": "american anglo coal exit focus gb00b1xzs820 hoc merger news plan plc shifts stock teck valuation"
         },
         {
@@ -999,20 +973,8 @@
           "flags": [
             "ma"
           ],
-          "score": 2.9478,
+          "score": 2.9435,
           "title_norm": "acquire american anglo beers bloomberg botswana diamond help nation news oman rich stake strategic talks tradingview uae"
-        },
-        {
-          "title": "Anglo American plc stock (GB00B1XZS820): Shares trade lower while investors weigh coal exit and Teck - AD HOC NEWS",
-          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNeklXWEJlM3hlZVc3RDJxaXdIWDZYYWJkanhieFNDSkpyRlRBclVCUzdNRGc3cWxEZ2ViWUlVMXFDNzhwWWlaNkd3X2wzMTU5aGhRaXRjcmhWLWpacWlyVzdqeHdVZmxTb3BTdzJsdVdaa2pTMnNnbmVmTUhXTjQwVkdaQ21mN09qbzdUS1FtV3ZkT21pVWd3LWFPZmxDazFZVk80ZGxUTTJWQV8yUkhyTmZ4dFg4M2h5VWlZVUJ3?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T21:24:00Z",
-          "summary": "Anglo American plc stock (GB00B1XZS820): Shares trade lower while investors weigh coal exit and Teck&nbsp;&nbsp;AD HOC NEWS",
-          "company": "Anglo American",
-          "commodity": null,
-          "flags": [],
-          "score": 0.7275,
-          "title_norm": "american anglo coal exit gb00b1xzs820 hoc investors lower news plc shares stock teck trade weigh while"
         },
         {
           "title": "Broker tips: Anglo American, DiscoverIE, B&M - London South East",
@@ -1023,7 +985,7 @@
           "company": "Anglo American",
           "commodity": null,
           "flags": [],
-          "score": 0.4423,
+          "score": 0.438,
           "title_norm": "american anglo broker discoverie east london south tips"
         },
         {
@@ -1035,7 +997,7 @@
           "company": "Anglo American",
           "commodity": null,
           "flags": [],
-          "score": 0.3537,
+          "score": 0.3503,
           "title_norm": "american anglo get live plans polyhalite production remove restrictions support teesside unanimous"
         },
         {
@@ -1047,7 +1009,7 @@
           "company": "Anglo American",
           "commodity": null,
           "flags": [],
-          "score": 0.3062,
+          "score": 0.3032,
           "title_norm": "american anglo kalkine media now right trending why"
         }
       ],
@@ -1071,7 +1033,7 @@
           "flags": [
             "regulatory"
           ],
-          "score": 2.9967,
+          "score": 2.9919,
           "title_norm": "approves australasian compulsory court era federal lawyer remaining rio shares taking tinto unit"
         },
         {
@@ -1085,7 +1047,7 @@
           "flags": [
             "esg"
           ],
-          "score": 2.9024,
+          "score": 2.8985,
           "title_norm": "alert aluminium automation carbon discovery low production rio strategy tintos"
         },
         {
@@ -1099,7 +1061,7 @@
           "flags": [
             "esg"
           ],
-          "score": 2.8758,
+          "score": 2.8722,
           "title_norm": "aluminium amid automation carbon circle concerns emphasises low production rio tinto valuation"
         },
         {
@@ -1113,7 +1075,7 @@
           "flags": [
             "ma"
           ],
-          "score": 2.828,
+          "score": 2.8249,
           "title_norm": "about boardroom crisis innovation management rio school stakeholder taught tinto turkana what yale"
         },
         {
@@ -1125,7 +1087,7 @@
           "company": "Rio Tinto",
           "commodity": null,
           "flags": [],
-          "score": 0.9087,
+          "score": 0.8999,
           "title_norm": "bakersfield boron com looking major mine rio sell tinto"
         },
         {
@@ -1137,7 +1099,7 @@
           "company": "Rio Tinto",
           "commodity": null,
           "flags": [],
-          "score": 0.876,
+          "score": 0.8675,
           "title_norm": "after assessing group lse one price pullback recent return rio rio share simplywall strong tinto valuation year"
         },
         {
@@ -1149,7 +1111,7 @@
           "company": "Rio Tinto",
           "commodity": null,
           "flags": [],
-          "score": 0.6289,
+          "score": 0.6229,
           "title_norm": "back backdr gb0007188757 hoc investors iron news ore plc price pulls rio share stock tinto weaker weigh"
         },
         {
@@ -1161,7 +1123,7 @@
           "company": "Rio Tinto",
           "commodity": null,
           "flags": [],
-          "score": 0.5839,
+          "score": 0.5783,
           "title_norm": "access aluminum boosts canada canadian capacity cim gains grid institute labour metallurgy mining mining petroleum project quebec rio shortages targets tinto troilus"
         },
         {
@@ -1173,7 +1135,7 @@
           "company": "Rio Tinto",
           "commodity": null,
           "flags": [],
-          "score": 0.4061,
+          "score": 0.4022,
           "title_norm": "com goldman marketscreener neutral rating reiterates rio sachs tinto"
         },
         {
@@ -1185,14 +1147,14 @@
           "company": "Rio Tinto",
           "commodity": null,
           "flags": [],
-          "score": 0.3261,
+          "score": 0.323,
           "title_norm": "berenberg finimize oyu rio silver stream tinto tolgoi wants"
         }
       ],
       "flags": [
+        "ma",
         "regulatory",
-        "esg",
-        "ma"
+        "esg"
       ]
     },
     {
@@ -1211,7 +1173,7 @@
           "flags": [
             "ma"
           ],
-          "score": 3.265,
+          "score": 3.2577,
           "title_norm": "bhp coast deals inks mine move new phoenix potash rail star west"
         },
         {
@@ -1225,7 +1187,7 @@
           "flags": [
             "ma"
           ],
-          "score": 3.2607,
+          "score": 3.2534,
           "title_norm": "bhp coast deals inks mine move msn new potash rail west"
         },
         {
@@ -1239,7 +1201,7 @@
           "flags": [
             "esg"
           ],
-          "score": 2.8214,
+          "score": 2.8183,
           "title_norm": "bhp biofuel bulk carriers emissions gcmd lower magazine mining trialling"
         },
         {
@@ -1253,7 +1215,7 @@
           "flags": [
             "outage"
           ],
-          "score": 2.8103,
+          "score": 2.8073,
           "title_norm": "action australian bhp blames boss fired looming strike"
         },
         {
@@ -1267,7 +1229,7 @@
           "flags": [
             "geopolitical"
           ],
-          "score": 2.6961,
+          "score": 2.6942,
           "title_norm": "afr china counter government intervention iron miners monopoly ore seek"
         },
         {
@@ -1281,7 +1243,7 @@
           "flags": [
             "ma"
           ],
-          "score": 2.6737,
+          "score": 2.672,
           "title_norm": "against bhp biofuel canadian deals push rail shipping simplywall valuation weighs"
         },
         {
@@ -1295,7 +1257,7 @@
           "flags": [
             "esg"
           ],
-          "score": 2.6641,
+          "score": 2.6626,
           "title_norm": "b100 bhp blend decarbonization gcmd inspenet maritime promote test"
         },
         {
@@ -1309,7 +1271,7 @@
           "flags": [
             "regulatory"
           ],
-          "score": 2.637,
+          "score": 2.6357,
           "title_norm": "bhp exports finimize jansen locks potash rail routes"
         },
         {
@@ -1321,7 +1283,7 @@
           "company": "BHP",
           "commodity": null,
           "flags": [],
-          "score": 0.8065,
+          "score": 0.7987,
           "title_norm": "analyst asx bhp bhp finance group how investment shaping steady story view yahoo"
         },
         {
@@ -1333,16 +1295,16 @@
           "company": "BHP",
           "commodity": null,
           "flags": [],
-          "score": 0.7922,
+          "score": 0.7846,
           "title_norm": "against bhp case drops media media michael michael orders remain report suppression west west west"
         }
       ],
       "flags": [
         "ma",
-        "geopolitical",
+        "regulatory",
         "outage",
-        "esg",
-        "regulatory"
+        "geopolitical",
+        "esg"
       ]
     },
     {
@@ -1361,7 +1323,7 @@
           "flags": [
             "earnings"
           ],
-          "score": 3.134,
+          "score": 3.1278,
           "title_norm": "first jump mind petromindo posts profit quarter reaches revenue rp50 trillion"
         }
       ],
@@ -1385,7 +1347,7 @@
           "flags": [
             "earnings"
           ],
-          "score": 3.204,
+          "score": 3.1972,
           "title_norm": "bhd earnings hoc investors look myl5347oo009 nasional news past recent shares steady stock tenaga"
         },
         {
@@ -1400,7 +1362,7 @@
             "ma",
             "esg"
           ],
-          "score": 3.2012,
+          "score": 3.1944,
           "title_norm": "1gw business dayone energy landmark macau malaysia over partnership renewable secures tnb"
         },
         {
@@ -1414,7 +1376,7 @@
           "flags": [
             "esg"
           ],
-          "score": 2.6728,
+          "score": 2.6711,
           "title_norm": "bernama capacity delivers energy energy installed renewable support tnb transition"
         },
         {
@@ -1426,26 +1388,26 @@
           "company": "Tenaga Nasional Berhad",
           "commodity": null,
           "flags": [],
-          "score": 0.2601,
+          "score": 0.2576,
           "title_norm": "conference connectivity demonstrates digital energy integrated technologies tnb transition utility zte zte"
         },
         {
-          "title": "Malakoff, TNB REMACO team up to enhance MRO services for Malaysian power plants - thestar.com.my",
+          "title": "Malakoff, TNB REMACO team up to enhance MRO services for Malaysian power plants - The Star",
           "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPNUU3ZGVxWklLSEJHLUlJMXFWakhyUGNEZjNyeVlYZERFdTZPZ2xJSjNCcF9OWk5BZVF6c1JaQjRUcEVweVlMcnhkekIwOTFBUFdCR3ZrRF9qMDFQLUE5aU9hME04NlU5UU1iS3M2bktUbHp2Q2lEck92Z1BSWjhoZGx1b0tQd1N1NkYxbVJQcEp3WU05RG1WWkI0ZjY5NGVvdFNNalFoa0YtNzJxWkhBRDRhSG9OV3l1ZFJtb0c1M1VrczJ3R1ppd1V6cXRSUWpFRWpZTDZn?oc=5",
           "source": "Google News",
           "published": "2026-06-05T03:14:00Z",
-          "summary": "Malakoff, TNB REMACO team up to enhance MRO services for Malaysian power plants&nbsp;&nbsp;thestar.com.my",
+          "summary": "Malakoff, TNB REMACO team up to enhance MRO services for Malaysian power plants&nbsp;&nbsp;The Star",
           "company": "Tenaga Nasional Berhad",
           "commodity": null,
           "flags": [],
-          "score": 0.2547,
-          "title_norm": "com enhance malakoff malaysian mro plants power remaco services team thestar tnb"
+          "score": 0.2523,
+          "title_norm": "enhance malakoff malaysian mro plants power remaco services star team tnb"
         }
       ],
       "flags": [
-        "esg",
+        "earnings",
         "ma",
-        "earnings"
+        "esg"
       ]
     },
     {
@@ -1461,6 +1423,20 @@
       "country": "FR",
       "items": [
         {
+          "title": "Absa under fire for TotalEnergies financing in Cabo Delgado - Business Day",
+          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQM3lKdjlZZnFrdHp0RTVldmFFQ2NXRnNXNHVoMXhwYjAzdVFSWi05U1kxbUhLeEl0M3c1LXFneDAxM21LTnF2RVU1a3lXY0dZekRQN1c1cHpPQ0JpY0haV3FOYXhZUko4NE95Q1QtdlZ3bUlNUHl3R2s4QzVqVjgxRVRWV0FHQjVKU0V6NElmNzJ6eW1JeGZLVWdzYS0zcGttNy00bmo2ZWoyNFMyRV9salJhTGN4dWM?oc=5",
+          "source": "Google News",
+          "published": "2026-06-06T03:00:00Z",
+          "summary": "Absa under fire for TotalEnergies financing in Cabo Delgado&nbsp;&nbsp;Business Day",
+          "company": "TotalEnergies Trading Asia",
+          "commodity": null,
+          "flags": [
+            "outage"
+          ],
+          "score": 3.4957,
+          "title_norm": "absa business cabo day delgado financing fire totalenergies under"
+        },
+        {
           "title": "Totalenergies Nigeria Sees Q3 Revenue 191.81 Bln Naira, PBT 2.62 Bln Naira - TradingView",
           "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPWHdVLVhvSkpyeDBRNGpDUUlNOXVYMmZkczZEeEd1RzVVencxSHVieTdfVDA1YUJQbXQ5a3NUajNLZk1zUGNfSl9GNXI0ZTdEX2pHQlZJUk1tbTBDTldULVlDXzR3UHNtSHBNeWtoY3BweWFId05lZ1BaTVhsc3gtcmc1VFJQRENqcDQ3N0l2T0F3MnE0bk5zZG1ZR1h0SXhMbktyaV83LUdDUGczZFdCTVhtU2stTFpmUi1kcnBiRExGN2lZTUtKbTBOSFpUdDY5d0o0dmRZUTNLWVU?oc=5",
           "source": "Google News",
@@ -1471,7 +1447,7 @@
           "flags": [
             "earnings"
           ],
-          "score": 3.1502,
+          "score": 3.144,
           "title_norm": "191 bln bln naira naira nigeria pbt revenue sees totalenergies tradingview"
         },
         {
@@ -1485,7 +1461,7 @@
           "flags": [
             "esg"
           ],
-          "score": 3.109,
+          "score": 3.1031,
           "title_norm": "admins business cancellation causes energy jazeera projects trump turmoil wind"
         },
         {
@@ -1499,7 +1475,7 @@
           "flags": [
             "regulatory"
           ],
-          "score": 3.0979,
+          "score": 3.0921,
           "title_norm": "argentina com expand exports eyes gas higher marketscreener production regional totalenergies"
         },
         {
@@ -1513,7 +1489,7 @@
           "flags": [
             "ma"
           ],
-          "score": 3.0209,
+          "score": 3.0158,
           "title_norm": "acquisition directors discloses employee globe mail plan savings totalenergies"
         },
         {
@@ -1527,7 +1503,7 @@
           "flags": [
             "ma"
           ],
-          "score": 3.0129,
+          "score": 3.008,
           "title_norm": "acquisition committee discloses employee executive globe mail members share totalenergies"
         },
         {
@@ -1541,22 +1517,22 @@
           "flags": [
             "esg"
           ],
-          "score": 2.8204,
+          "score": 2.8173,
           "title_norm": "challenge leads legal new offshore settlement splash247 totalenergies wind york"
         },
         {
-          "title": "TotalEnergies SE (TTE) Files for Authorization to Build 1.5 GW Offshore Wind Farm in France - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOSGlxb042cy1fdkFVdUxRbjZCSGJ6VmpLdXJ5UkJyZUdmUENhZkFCU0gzdkJxOVhPTmtpU216b1BFcTA5WWw0dEVTOWN1S0xXSF9BeFNPdnFJeS00OVNuUVBubnlTa0o1S0dTYzhBcDJZUDA5cUd0SVc5bnh1MDU4SW9rMG1IUWJhdkFHNDlRT2lxLTBxTWtXVlZVc1RyLXVrMFM4OHEyUWM?oc=5",
+          "title": "TotalEnergies SE (TTE) Files for Authorization to Build 1.5 GW Offshore Wind Farm in France - Insider Monkey",
+          "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOdmlWdzh3NjhCRnp1bGU5U0laLVlsWUx5bExMOF9DeFp4eVc3WEVEYUxKb1R3UDBOS3U5NzZtV0hGcTZ4S1J3bl9rNllVVTFialhEa1NkRUUtdmo4Szk1OGs3VlZ3M0xlbUF1Wk5aWWplZzZXMnR1QzZUTjlJT3dYNnNicTFEZXlsazBqV0NEZEpnZmN3YS1haGdoQVFNeG1ybzd2Sm85UE50SnM3Z1Q0My1GUk1KeGZ0c09iRnBUWHB6eE5BWGlwREkzY3ZKd9IB1gFBVV95cUxNV3VCTGJJOVY1bTgwWFVCdWo5a0htODZDME1uLUZNb2tzb1lPSXJMLUk1QkFPQTNlc1RsMmpRbmluN0lsV2wwSUVMdnlZSEVKcldrbzNnd0VTN2tlUlVlX3BPNzFrUkltZjlvZ3BNWXl5eXdpblQtUDY1M3Z2UUlWMGtCNFdWRFhGU1E2RmR0SndaRUNCV3picU4zZkxuY2F5dFoyRjR0UU1ZZW5JTGdvT0FIdm1fUk45c19mbmhvWHFkdDBfeWUzMl9VODk5c1FGc3F5RkVB?oc=5",
           "source": "Google News",
-          "published": "2026-06-04T18:12:03Z",
-          "summary": "TotalEnergies SE (TTE) Files for Authorization to Build 1.5 GW Offshore Wind Farm in France&nbsp;&nbsp;Yahoo Finance",
+          "published": "2026-06-04T18:17:58Z",
+          "summary": "TotalEnergies SE (TTE) Files for Authorization to Build 1.5 GW Offshore Wind Farm in France&nbsp;&nbsp;Insider Monkey",
           "company": "TotalEnergies Trading Asia",
           "commodity": null,
           "flags": [
             "esg"
           ],
-          "score": 2.6512,
-          "title_norm": "authorization build farm files finance france offshore totalenergies tte wind yahoo"
+          "score": 2.6506,
+          "title_norm": "authorization build farm files france insider monkey offshore totalenergies tte wind"
         },
         {
           "title": "TotalEnergies SE (TTES:CA) Shareholder/Analyst Call - Slideshow (TSX:TTES:CA) 2026-06-05 - Seeking Alpha",
@@ -1567,7 +1543,7 @@
           "company": "TotalEnergies Trading Asia",
           "commodity": null,
           "flags": [],
-          "score": 0.7995,
+          "score": 0.7918,
           "title_norm": "2026 alpha analyst call seeking shareholder slideshow totalenergies tsx ttes ttes"
         },
         {
@@ -1579,27 +1555,16 @@
           "company": "TotalEnergies Trading Asia",
           "commodity": null,
           "flags": [],
-          "score": 0.5265,
+          "score": 0.5214,
           "title_norm": "around direction ideal investisseur seeking shares stagnate totalenergies"
-        },
-        {
-          "title": "TotalEnergies appeal exposes the new face of climate misinformation - Daily Maverick",
-          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOTWo4SWRqWXhQYjY1QVRTVkFCdDRsTnJUWG1IZTc3NEtUZEJ2bkpjVW1QQTZzYWZsN2VZNWpzNnlVYWpZSkhleXZWN24td3lxV19wZWJTZzhtcXRCeFlUaTJGdWpIUG1Nc0pvZWd3V09Gc0ZDQ013ZzEyeXVqOUc3dnp1UkU4YkxMS2FicS00QlBsTWFVZ3RiUjQzajc2RU5vTHMwa1lwbVQzelhqamhremlxcnl3aGVzWnR4Y2pVUm4?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T10:26:38Z",
-          "summary": "TotalEnergies appeal exposes the new face of climate misinformation&nbsp;&nbsp;Daily Maverick",
-          "company": "TotalEnergies Trading Asia",
-          "commodity": null,
-          "flags": [],
-          "score": 0.3864,
-          "title_norm": "appeal climate daily exposes face maverick misinformation new totalenergies"
         }
       ],
       "flags": [
-        "esg",
-        "regulatory",
+        "ma",
         "earnings",
-        "ma"
+        "regulatory",
+        "outage",
+        "esg"
       ]
     },
     {
@@ -1618,7 +1583,7 @@
           "flags": [
             "trading_moves"
           ],
-          "score": 2.8732,
+          "score": 2.8696,
           "title_norm": "appoints aramco large manager mcdermott project projects saudi scale tradingview zawya"
         },
         {
@@ -1632,7 +1597,7 @@
           "flags": [
             "geopolitical"
           ],
-          "score": 2.6433,
+          "score": 2.6419,
           "title_norm": "arabia baird discuss energy maritime meet ministers russia saudi sector stabilisation"
         },
         {
@@ -1646,7 +1611,7 @@
           "flags": [
             "ma"
           ],
-          "score": 2.6269,
+          "score": 2.6257,
           "title_norm": "aramco com marketscreener petronas prefchem saudi stakes transfers"
         },
         {
@@ -1658,7 +1623,7 @@
           "company": "Aramco Trading Singapore",
           "commodity": null,
           "flags": [],
-          "score": 0.6212,
+          "score": 0.6152,
           "title_norm": "aramco emea fuel global join limited moc oil paper trading"
         },
         {
@@ -1670,13 +1635,13 @@
           "company": "Aramco Trading Singapore",
           "commodity": null,
           "flags": [],
-          "score": 0.2372,
+          "score": 0.235,
           "title_norm": "agency aramco cooperation discusses energy exec industry minister news security vice yonhap"
         }
       ],
       "flags": [
-        "trading_moves",
         "geopolitical",
+        "trading_moves",
         "ma"
       ]
     },
@@ -1696,7 +1661,7 @@
           "flags": [
             "trading_moves"
           ],
-          "score": 3.1424,
+          "score": 3.1362,
           "title_norm": "appoints cargill erin human people president resources shepperd vice"
         },
         {
@@ -1710,7 +1675,7 @@
           "flags": [
             "esg"
           ],
-          "score": 2.9173,
+          "score": 2.9133,
           "title_norm": "cargill first fixes ion linked newbuilding news out tanker tradewinds varouxakis venture"
         },
         {
@@ -1722,7 +1687,7 @@
           "company": "Cargill Asia",
           "commodity": null,
           "flags": [],
-          "score": 0.934,
+          "score": 0.925,
           "title_norm": "2026 cargill charlotte flair highlights jade june michin smackdown stratton tiffany wwe"
         },
         {
@@ -1734,7 +1699,7 @@
           "company": "Cargill Asia",
           "commodity": null,
           "flags": [],
-          "score": 0.8749,
+          "score": 0.8664,
           "title_norm": "agrolatam cargill exit eyes major metals new shake signals strategy"
         },
         {
@@ -1746,7 +1711,7 @@
           "company": "Cargill Asia",
           "commodity": null,
           "flags": [],
-          "score": 0.6363,
+          "score": 0.6302,
           "title_norm": "2026 cargill county courier east herald iosco news obituary post tawas virginia"
         },
         {
@@ -1758,7 +1723,7 @@
           "company": "Cargill Asia",
           "commodity": null,
           "flags": [],
-          "score": 0.6164,
+          "score": 0.6105,
           "title_norm": "after big breath cargill death havah linn name near parents pioneer rapids resonates saving why"
         },
         {
@@ -1770,7 +1735,7 @@
           "company": "Cargill Asia",
           "commodity": null,
           "flags": [],
-          "score": 0.5581,
+          "score": 0.5527,
           "title_norm": "cargill exclusive macquarie metals reuters say sell sources talks unit"
         },
         {
@@ -1782,7 +1747,7 @@
           "company": "Cargill Asia",
           "commodity": null,
           "flags": [],
-          "score": 0.5571,
+          "score": 0.5517,
           "title_norm": "cargill macquarie metals say sell sources talks tradingview unit"
         },
         {
@@ -1794,7 +1759,7 @@
           "company": "Cargill Asia",
           "commodity": null,
           "flags": [],
-          "score": 0.5494,
+          "score": 0.5441,
           "title_norm": "cargill exclusive macquarie metals msn say sell sources talks unit"
         },
         {
@@ -1806,13 +1771,13 @@
           "company": "Cargill Asia",
           "commodity": null,
           "flags": [],
-          "score": 0.5082,
+          "score": 0.5033,
           "title_norm": "after agreement arbitrator binds canada cargill chance early firing last law left poultry station worker"
         }
       ],
       "flags": [
-        "esg",
-        "trading_moves"
+        "trading_moves",
+        "esg"
       ]
     },
     {
@@ -1831,7 +1796,7 @@
           "flags": [
             "ma"
           ],
-          "score": 3.0979,
+          "score": 3.0921,
           "title_norm": "42bn acquisition argentina assets com completes marketscreener mercuria raizens"
         },
         {
@@ -1845,7 +1810,7 @@
           "flags": [
             "ma"
           ],
-          "score": 3.0692,
+          "score": 3.0637,
           "title_norm": "deals gcaptain got government hormuz lawyers mercuria oil say through"
         },
         {
@@ -1859,7 +1824,7 @@
           "flags": [
             "ma"
           ],
-          "score": 2.9447,
+          "score": 2.9405,
           "title_norm": "bloomberg com deals got government hormuz lawyers mercuria oil say through"
         },
         {
@@ -1874,22 +1839,8 @@
             "ma",
             "esg"
           ],
-          "score": 2.8975,
+          "score": 2.8937,
           "title_norm": "4bn assets deal mercuria news oil shell snaps tradewinds ventures"
-        },
-        {
-          "title": "Raizen Divests Argentina Downstream Assets to Mercuria for $1.42 Billion - energynews.pro",
-          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQX3ZSR2RwQjNaY0dUMzdWUWlKb2JMUDFsYVZvRVFrVVRROWJWRkducVNyOWZTNE5JMTBhaS1TNzZmelgxVEFNUWh3Y3VxWWFsYnFTU19kQnJqNklTVDFNVjc2NlJCTmhkSEJTRENDYnI1Q01UZlFlS1VnSl9CMzdHZGRBZnNmZW9TZU05Nm9UdlhqSFVld0diSjdoZ3U?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T08:36:23Z",
-          "summary": "Raizen Divests Argentina Downstream Assets to Mercuria for $1.42 Billion&nbsp;&nbsp;energynews.pro",
-          "company": "Mercuria",
-          "commodity": null,
-          "flags": [
-            "ma"
-          ],
-          "score": 2.8475,
-          "title_norm": "argentina assets billion divests downstream energynews mercuria pro raizen"
         },
         {
           "title": "Mercuria signs deal to buy Raízen Argentina - LatinFinance",
@@ -1902,7 +1853,7 @@
           "flags": [
             "ma"
           ],
-          "score": 2.7096,
+          "score": 2.7076,
           "title_norm": "argentina buy deal latinfinance mercuria raizen signs"
         },
         {
@@ -1916,12 +1867,12 @@
           "flags": [
             "ma"
           ],
-          "score": 2.6377,
+          "score": 2.6364,
           "title_norm": "acquire aires argentina assets billion buenos deal fuel mercuria raizens times"
         },
         {
           "title": "Mercuria Energy acquires Raízen's refinery and service station network in Argentina for 1.221 million - Demócrata",
-          "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOR3FmdzQ1a1FybkVPSFlRdVNkcUZhRUZYd1FzY1haaG4tVXh3MDdSMFJ1S2YwQmwwMEJ2R2lEcVFTMDJ1aTRzdHFial8yb2thQzhHMzhwd084LUhza2kxLW5mZ0oybS0zbkxleE1EcVUxTkZQZngwZE5RWHB1NUY0bm02NzJ3NVFMOWlDc04tUjZ0ajdDT3dIMGEwcURGME5zM3ZVZUgySVpjcnJYYnlrMDRUT3RJc28wNXEwQU9xbW1BcS1sSzlLRUkxTVNkNjctVlNZRFJ6NFFIZ9IB2gFBVV95cUxOR3FmdzQ1a1FybkVPSFlRdVNkcUZhRUZYd1FzY1haaG4tVXh3MDdSMFJ1S2YwQmwwMEJ2R2lEcVFTMDJ1aTRzdHFial8yb2thQzhHMzhwd084LUhza2kxLW5mZ0oybS0zbkxleE1EcVUxTkZQZngwZE5RWHB1NUY0bm02NzJ3NVFMOWlDc04tUjZ0ajdDT3dIMGEwcURGME5zM3ZVZUgySVpjcnJYYnlrMDRUT3RJc28wNXEwQU9xbW1BcS1sSzlLRUkxTVNkNjctVlNZRFJ6NFFIZw?oc=5",
+          "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNNXNqTGxyb3duWTZIV2VkOTI0cUQ2SThJUFNLRndzSDRGYldMS0I2dzVPRzZkMjhsdWwyUzRDbmphbnMydkRTU0FBbXBueTIxU1djSlJOUGFyZS1pQlJhNDBPUnQ5YUFpblZyUno3aHBFWDdmdFlFZTk0bkVpVzFZSzFZeXhWOW40NGticzVaUHdyUVlvdU1QYWg1LTRfekltcVRBVmVTSWtHemdfbmVNaDZuUFF2S2x4YUZ0aTJtbm5SakF2VmRCRWZYTlJ0OEs4OGRKOdIB2gFBVV95cUxOR3FmdzQ1a1FybkVPSFlRdVNkcUZhRUZYd1FzY1haaG4tVXh3MDdSMFJ1S2YwQmwwMEJ2R2lEcVFTMDJ1aTRzdHFial8yb2thQzhHMzhwd084LUhza2kxLW5mZ0oybS0zbkxleE1EcVUxTkZQZngwZE5RWHB1NUY0bm02NzJ3NVFMOWlDc04tUjZ0ajdDT3dIMGEwcURGME5zM3ZVZUgySVpjcnJYYnlrMDRUT3RJc28wNXEwQU9xbW1BcS1sSzlLRUkxTVNkNjctVlNZRFJ6NFFIZw?oc=5",
           "source": "Google News",
           "published": "2026-06-04T16:22:49Z",
           "summary": "Mercuria Energy acquires Raízen's refinery and service station network in Argentina for 1.221 million&nbsp;&nbsp;Demócrata",
@@ -1930,7 +1881,7 @@
           "flags": [
             "regulatory"
           ],
-          "score": 2.6361,
+          "score": 2.6348,
           "title_norm": "221 acquires argentina democrata energy mercuria million network raizen refinery service station"
         },
         {
@@ -1944,7 +1895,7 @@
           "flags": [
             "ma"
           ],
-          "score": 2.6336,
+          "score": 2.6323,
           "title_norm": "alpha argentina business cosan deal downstream mercuria nyse raizen seeking sell shel shell"
         },
         {
@@ -1956,14 +1907,26 @@
           "company": "Mercuria",
           "commodity": null,
           "flags": [],
-          "score": 0.1885,
+          "score": 0.1867,
           "title_norm": "argentina billion com investing mercuria operations raizen sells"
+        },
+        {
+          "title": "Mercuria to acquire Raízen’s Shell fuel network in Argentina - Mobility Plaza",
+          "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1TODdEcnJWX01yZlVBLWh0b0cxMURabU9LeDRRVnlpc0hnLUVvLXYySnBwVVloUjluX2oyNG1pWXhyT1h1MzBfYklrYkdmMFJDQlE?oc=5",
+          "source": "Google News",
+          "published": "2026-06-04T21:39:27Z",
+          "summary": "Mercuria to acquire Raízen’s Shell fuel network in Argentina&nbsp;&nbsp;Mobility Plaza",
+          "company": "Mercuria",
+          "commodity": null,
+          "flags": [],
+          "score": 0.1828,
+          "title_norm": "acquire argentina fuel mercuria mobility network plaza raizens shell"
         }
       ],
       "flags": [
-        "esg",
+        "regulatory",
         "ma",
-        "regulatory"
+        "esg"
       ]
     },
     {
@@ -1982,7 +1945,7 @@
           "flags": [
             "regulatory"
           ],
-          "score": 2.7629,
+          "score": 2.7604,
           "title_norm": "affirms business certainty danantara dsi export indonesia mandate natural resource"
         },
         {
@@ -1994,7 +1957,7 @@
           "company": "Danantara",
           "commodity": null,
           "flags": [],
-          "score": 0.4841,
+          "score": 0.4794,
           "title_norm": "bonds buy danantara denies english indonesians obligation patriot tempo"
         },
         {
@@ -2006,7 +1969,7 @@
           "company": "Danantara",
           "commodity": null,
           "flags": [],
-          "score": 0.4024,
+          "score": 0.3986,
           "title_norm": "bonds buy danantara denies globe jakarta merah putih requiring rich"
         },
         {
@@ -2018,7 +1981,7 @@
           "company": "Danantara",
           "commodity": null,
           "flags": [],
-          "score": 0.3891,
+          "score": 0.3854,
           "title_norm": "bond business danantara indonesia investors low new plans shun times yield"
         },
         {
@@ -2030,7 +1993,7 @@
           "company": "Danantara",
           "commodity": null,
           "flags": [],
-          "score": 0.3809,
+          "score": 0.3772,
           "title_norm": "baa2 danantara english moody negative rating take tempo"
         },
         {
@@ -2042,7 +2005,7 @@
           "company": "Danantara",
           "commodity": null,
           "flags": [],
-          "score": 0.3655,
+          "score": 0.362,
           "title_norm": "bonds buy danantara english indonesians merah putih requiring rich tempo"
         },
         {
@@ -2054,7 +2017,7 @@
           "company": "Danantara",
           "commodity": null,
           "flags": [],
-          "score": 0.3464,
+          "score": 0.343,
           "title_norm": "bloomberg bond com danantara indonesia investors low plans shun yield"
         },
         {
@@ -2066,7 +2029,7 @@
           "company": "Danantara",
           "commodity": null,
           "flags": [],
-          "score": 0.3242,
+          "score": 0.3211,
           "title_norm": "cost danantara english fund how much railway sumatra tempo touted trans"
         },
         {
@@ -2078,7 +2041,7 @@
           "company": "Danantara",
           "commodity": null,
           "flags": [],
-          "score": 0.2388,
+          "score": 0.2365,
           "title_norm": "assess bonds danantara globe higher inches investors jakarta jci p2sk reform"
         }
       ],
@@ -2100,9 +2063,23 @@
         "prev_close": 95.4,
         "change_pct": -2.65,
         "source": "yfinance",
-        "as_of": "2026-06-06T02:53:11.013300Z"
+        "as_of": "2026-06-06T03:03:24.979859Z"
       },
       "items": [
+        {
+          "title": "Oil (USCrude) Price Forecast for Today, Tomorrow, Next Week, and Next 30 Days - LiteFinance",
+          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQcm51RHFTMGNQcnB2aFl5bjNQQzFXUVVHckh1eW1IVktpM0lfaXlCQ2p6RF9nYWxkajlxb2R2V0lkRi1FNnljalUwMlhaU2FFT2dCUDBwem9tVG14Y1FXZGVKbWJvSm0xNlVVZ1BwdTItWnJkOTF3TnFTU2FQLWZibmhXRXlnX2RJY25leTB2ekVVUHZMZS1zbjBhWkNJLWs?oc=5",
+          "source": "Google News",
+          "published": "2026-06-06T00:51:45Z",
+          "summary": "Oil (USCrude) Price Forecast for Today, Tomorrow, Next Week, and Next 30 Days&nbsp;&nbsp;LiteFinance",
+          "company": null,
+          "commodity": "crude_oil",
+          "flags": [
+            "earnings"
+          ],
+          "score": 3.38,
+          "title_norm": "days forecast litefinance next next oil price today tomorrow uscrude week"
+        },
         {
           "title": "Natural Gas, WTI Oil, Brent Oil Forecasts – Oil Retreats As Dollar Rallies After NFP Report - FXEmpire",
           "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQSTlnRkY4d0otTThzekw4OXVGSEN1Q1YxZ1Nod2dtbDJQcERSZ1paTmp6ME5zcjRRMzJ2YmYxYWJCMkhacUR2d0M5cjJ2b1U2VnZ0eGEzRjBYcUtGcWRJNkV5ZTk4bFk0SDBIVXl0NjVkRElzYmdsel9qZC1WQVduS18xNVNveHpWQ0prMk14clRtY3dBUmRha1dRRm00VkN2UWVvMEJ3SnVsck9zVjh2RE11ZjRHdnd1S2lYcU53a1IzWkJDbFd0eEF3VU16NnNEMEVOTg?oc=5",
@@ -2114,7 +2091,7 @@
           "flags": [
             "earnings"
           ],
-          "score": 3.1213,
+          "score": 3.1153,
           "title_norm": "after brent dollar forecasts fxempire gas natural nfp oil oil oil rallies report retreats wti"
         },
         {
@@ -2129,7 +2106,7 @@
             "trading_moves",
             "geopolitical"
           ],
-          "score": 3.0152,
+          "score": 3.0102,
           "title_norm": "brent crude cryptorank hold iran negotiations oil prices traders watch wti"
         },
         {
@@ -2143,7 +2120,7 @@
           "flags": [
             "geopolitical"
           ],
-          "score": 2.9365,
+          "score": 2.9323,
           "title_norm": "affect between brent com core crude differences energynow intermediate iran texas war west wti"
         },
         {
@@ -2157,7 +2134,7 @@
           "flags": [
             "earnings"
           ],
-          "score": 2.8751,
+          "score": 2.8715,
           "title_norm": "brent extend forecast fxempire gains gas natgas natural oil tests under while wti"
         },
         {
@@ -2171,22 +2148,8 @@
           "flags": [
             "geopolitical"
           ],
-          "score": 2.8678,
+          "score": 2.8642,
           "title_norm": "amid bell brent com crude declines extending fall futures iran marketscreener oil pre reluctant reports restart trump war wti"
-        },
-        {
-          "title": "WTI, Brent Crude Oil Futures Fall Pre-Bell, Extending Declines Amid Reports Trump Reluctant to Restart Iran War - Moomoo",
-          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOd3ZocWpuRHQxakJ3R0RGMjRpUkxwQ19yN0tYSnh3UUcwTVJ5OHhrRngxLTZuXzNhUmQ1cW1EWlNTaVlnUmNiUUxtTFVwenltU0phdHdMbm9pbHFTSWhWeHgyN3JCSHdMVENHUDhTQTVBX00xTlI1bUJIb1BGYmtPd05rZ0Z6WTBnZ3doWjRmdm5lZm9zdFd4YTJJZ2NaaXY2YUtPaA?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T09:24:25Z",
-          "summary": "WTI, Brent Crude Oil Futures Fall Pre-Bell, Extending Declines Amid Reports Trump Reluctant to Restart Iran War&nbsp;&nbsp;Moomoo",
-          "company": null,
-          "commodity": "crude_oil",
-          "flags": [
-            "geopolitical"
-          ],
-          "score": 2.8639,
-          "title_norm": "amid bell brent crude declines extending fall futures iran moomoo oil pre reluctant reports restart trump war wti"
         }
       ]
     },
@@ -2202,40 +2165,20 @@
         "prev_close": 3.351,
         "change_pct": -3.91,
         "source": "yfinance",
-        "as_of": "2026-06-06T02:53:14.444230Z"
+        "as_of": "2026-06-06T03:03:26.082263Z"
       },
       "items": []
     },
     {
       "commodity_id": "refined",
       "display": "Refined",
-      "price": {
-        "commodity_id": "sing_gasoil",
-        "display": "Singapore Gasoil/Diesel",
-        "unit": "USD/bbl",
-        "group": "refined",
-        "price": null,
-        "prev_close": null,
-        "change_pct": null,
-        "source": "unavailable",
-        "as_of": null
-      },
+      "price": null,
       "items": []
     },
     {
       "commodity_id": "coal",
       "display": "Coal",
-      "price": {
-        "commodity_id": "newcastle_coal",
-        "display": "Newcastle Thermal Coal",
-        "unit": "USD/t",
-        "group": "coal",
-        "price": null,
-        "prev_close": null,
-        "change_pct": null,
-        "source": "unavailable",
-        "as_of": null
-      },
+      "price": null,
       "items": []
     },
     {
@@ -2250,24 +2193,14 @@
         "prev_close": 14171.2973,
         "change_pct": -2.37,
         "source": "yfinance",
-        "as_of": "2026-06-06T02:53:17.513435Z"
+        "as_of": "2026-06-06T03:03:26.612512Z"
       },
       "items": []
     },
     {
       "commodity_id": "bulk",
       "display": "Bulk",
-      "price": {
-        "commodity_id": "iron_ore",
-        "display": "Iron Ore (62% Fe CFR)",
-        "unit": "USD/t",
-        "group": "bulk",
-        "price": null,
-        "prev_close": null,
-        "change_pct": null,
-        "source": "unavailable",
-        "as_of": null
-      },
+      "price": null,
       "items": []
     },
     {
@@ -2282,7 +2215,7 @@
         "prev_close": 1129.25,
         "change_pct": -0.62,
         "source": "yfinance",
-        "as_of": "2026-06-06T02:53:20.678778Z"
+        "as_of": "2026-06-06T03:03:27.176659Z"
       },
       "items": []
     }
@@ -2315,10 +2248,6 @@
     {
       "category": "event",
       "text": "TotalEnergies Trading Asia: material events flagged (earnings, esg, ma) — review headlines below."
-    },
-    {
-      "category": "data_gap",
-      "text": "Indicative/unavailable prices for: Dubai/Oman Crude, Tapis Crude, JKM LNG (Asian spot), Singapore Gasoil/Diesel. Verify with a live broker feed."
     }
   ],
   "prices": [
@@ -2331,7 +2260,7 @@
       "prev_close": 95.4,
       "change_pct": -2.65,
       "source": "yfinance",
-      "as_of": "2026-06-06T02:53:11.013300Z"
+      "as_of": "2026-06-06T03:03:24.979859Z"
     },
     {
       "commodity_id": "wti",
@@ -2342,29 +2271,7 @@
       "prev_close": 93.14,
       "change_pct": -3.1,
       "source": "yfinance",
-      "as_of": "2026-06-06T02:53:11.552138Z"
-    },
-    {
-      "commodity_id": "dubai_oman",
-      "display": "Dubai/Oman Crude",
-      "unit": "USD/bbl",
-      "group": "crude_oil",
-      "price": null,
-      "prev_close": null,
-      "change_pct": null,
-      "source": "unavailable",
-      "as_of": null
-    },
-    {
-      "commodity_id": "tapis",
-      "display": "Tapis Crude",
-      "unit": "USD/bbl",
-      "group": "crude_oil",
-      "price": null,
-      "prev_close": null,
-      "change_pct": null,
-      "source": "unavailable",
-      "as_of": null
+      "as_of": "2026-06-06T03:03:25.513483Z"
     },
     {
       "commodity_id": "henry_hub",
@@ -2375,62 +2282,7 @@
       "prev_close": 3.351,
       "change_pct": -3.91,
       "source": "yfinance",
-      "as_of": "2026-06-06T02:53:14.444230Z"
-    },
-    {
-      "commodity_id": "jkm",
-      "display": "JKM LNG (Asian spot)",
-      "unit": "USD/MMBtu",
-      "group": "natgas_lng",
-      "price": null,
-      "prev_close": null,
-      "change_pct": null,
-      "source": "unavailable",
-      "as_of": null
-    },
-    {
-      "commodity_id": "sing_gasoil",
-      "display": "Singapore Gasoil/Diesel",
-      "unit": "USD/bbl",
-      "group": "refined",
-      "price": null,
-      "prev_close": null,
-      "change_pct": null,
-      "source": "unavailable",
-      "as_of": null
-    },
-    {
-      "commodity_id": "sing_jet",
-      "display": "Singapore Jet Fuel",
-      "unit": "USD/bbl",
-      "group": "refined",
-      "price": null,
-      "prev_close": null,
-      "change_pct": null,
-      "source": "unavailable",
-      "as_of": null
-    },
-    {
-      "commodity_id": "sing_gasoline",
-      "display": "Singapore Gasoline 92R",
-      "unit": "USD/bbl",
-      "group": "refined",
-      "price": null,
-      "prev_close": null,
-      "change_pct": null,
-      "source": "unavailable",
-      "as_of": null
-    },
-    {
-      "commodity_id": "newcastle_coal",
-      "display": "Newcastle Thermal Coal",
-      "unit": "USD/t",
-      "group": "coal",
-      "price": null,
-      "prev_close": null,
-      "change_pct": null,
-      "source": "unavailable",
-      "as_of": null
+      "as_of": "2026-06-06T03:03:26.082263Z"
     },
     {
       "commodity_id": "copper",
@@ -2441,62 +2293,7 @@
       "prev_close": 14171.2973,
       "change_pct": -2.37,
       "source": "yfinance",
-      "as_of": "2026-06-06T02:53:17.513435Z"
-    },
-    {
-      "commodity_id": "nickel",
-      "display": "Nickel (LME)",
-      "unit": "USD/t",
-      "group": "base_metals",
-      "price": null,
-      "prev_close": null,
-      "change_pct": null,
-      "source": "unavailable",
-      "as_of": null
-    },
-    {
-      "commodity_id": "aluminium",
-      "display": "Aluminium (LME)",
-      "unit": "USD/t",
-      "group": "base_metals",
-      "price": null,
-      "prev_close": null,
-      "change_pct": null,
-      "source": "unavailable",
-      "as_of": null
-    },
-    {
-      "commodity_id": "iron_ore",
-      "display": "Iron Ore (62% Fe CFR)",
-      "unit": "USD/t",
-      "group": "bulk",
-      "price": null,
-      "prev_close": null,
-      "change_pct": null,
-      "source": "unavailable",
-      "as_of": null
-    },
-    {
-      "commodity_id": "tin",
-      "display": "Tin (LME)",
-      "unit": "USD/t",
-      "group": "base_metals",
-      "price": null,
-      "prev_close": null,
-      "change_pct": null,
-      "source": "unavailable",
-      "as_of": null
-    },
-    {
-      "commodity_id": "bauxite",
-      "display": "Bauxite (FOB)",
-      "unit": "USD/t",
-      "group": "bulk",
-      "price": null,
-      "prev_close": null,
-      "change_pct": null,
-      "source": "unavailable",
-      "as_of": null
+      "as_of": "2026-06-06T03:03:26.612512Z"
     },
     {
       "commodity_id": "soybeans",
@@ -2507,7 +2304,7 @@
       "prev_close": 1129.25,
       "change_pct": -0.62,
       "source": "yfinance",
-      "as_of": "2026-06-06T02:53:20.678778Z"
+      "as_of": "2026-06-06T03:03:27.176659Z"
     },
     {
       "commodity_id": "wheat",
@@ -2518,18 +2315,7 @@
       "prev_close": 581.0,
       "change_pct": -0.13,
       "source": "yfinance",
-      "as_of": "2026-06-06T02:53:21.212700Z"
-    },
-    {
-      "commodity_id": "palm_oil",
-      "display": "Palm Oil (BMD)",
-      "unit": "MYR/t",
-      "group": "agri",
-      "price": null,
-      "prev_close": null,
-      "change_pct": null,
-      "source": "unavailable",
-      "as_of": null
+      "as_of": "2026-06-06T03:03:27.763677Z"
     }
   ]
 }

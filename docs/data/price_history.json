@@ -12,74 +12,14 @@
         "source": "yfinance",
         "unit": "USD/bbl"
       },
-      "dubai_oman": {
-        "price": null,
-        "source": "unavailable",
-        "unit": "USD/bbl"
-      },
-      "tapis": {
-        "price": null,
-        "source": "unavailable",
-        "unit": "USD/bbl"
-      },
       "henry_hub": {
         "price": 3.22,
         "source": "yfinance",
         "unit": "USD/MMBtu"
       },
-      "jkm": {
-        "price": null,
-        "source": "unavailable",
-        "unit": "USD/MMBtu"
-      },
-      "sing_gasoil": {
-        "price": null,
-        "source": "unavailable",
-        "unit": "USD/bbl"
-      },
-      "sing_jet": {
-        "price": null,
-        "source": "unavailable",
-        "unit": "USD/bbl"
-      },
-      "sing_gasoline": {
-        "price": null,
-        "source": "unavailable",
-        "unit": "USD/bbl"
-      },
-      "newcastle_coal": {
-        "price": null,
-        "source": "unavailable",
-        "unit": "USD/t"
-      },
       "copper": {
         "price": 13835.0924,
         "source": "yfinance",
-        "unit": "USD/t"
-      },
-      "nickel": {
-        "price": null,
-        "source": "unavailable",
-        "unit": "USD/t"
-      },
-      "aluminium": {
-        "price": null,
-        "source": "unavailable",
-        "unit": "USD/t"
-      },
-      "iron_ore": {
-        "price": null,
-        "source": "unavailable",
-        "unit": "USD/t"
-      },
-      "tin": {
-        "price": null,
-        "source": "unavailable",
-        "unit": "USD/t"
-      },
-      "bauxite": {
-        "price": null,
-        "source": "unavailable",
         "unit": "USD/t"
       },
       "soybeans": {
@@ -91,11 +31,6 @@
         "price": 580.25,
         "source": "yfinance",
         "unit": "USc/bu"
-      },
-      "palm_oil": {
-        "price": null,
-        "source": "unavailable",
-        "unit": "MYR/t"
       }
     }
   }
