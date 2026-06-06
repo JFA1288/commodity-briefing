@@ -191,8 +191,6 @@ h1, h2, h3, h4 { font-weight: 600; line-height: 1.3; }
 }
 .tag.sl { background: var(--black); color: var(--accent); border-color: var(--black); }
 .tag.new { background: var(--accent); color: #fff; border-color: var(--accent); }
-.tag.client { color: #2563eb; border-color: #2563eb; background: transparent; }
-.tag.restricted-lbl { color: var(--restricted); border-color: var(--restricted); background: transparent; }
 
 /* ── Partner Brief ───────────────────────────────────────────────────── */
 #brief-card {
@@ -307,7 +305,6 @@ h1, h2, h3, h4 { font-weight: 600; line-height: 1.3; }
   transition: box-shadow .15s;
 }
 .opp-card:hover { box-shadow: 0 3px 10px rgba(0,0,0,.12); }
-.opp-card.restricted { border-left-color: var(--restricted); }
 .opp-hdr {
   display: flex;
   align-items: flex-start;
@@ -327,14 +324,11 @@ h1, h2, h3, h4 { font-weight: 600; line-height: 1.3; }
   white-space: nowrap;
   flex-shrink: 0;
 }
-.score-badge.restricted { background: var(--restricted); }
 .opp-headline { font-size: .83rem; color: var(--text); margin-bottom: 5px; }
 .opp-headline a { color: inherit; }
 .opp-headline a:hover { color: var(--accent-dark); }
-.opp-score-why { font-size: .7rem; color: var(--text-light); margin-bottom: 5px; }
 .opp-angle { font-size: .8rem; color: var(--accent-dark); font-weight: 500; margin-top: 5px; }
 .opp-angle::before { content: "→ "; }
-.opp-restricted-notice { font-size: .78rem; color: var(--restricted); font-weight: 500; margin-top: 5px; }
 
 /* ── Account Intel ───────────────────────────────────────────────────── */
 .account-grid { display: flex; flex-direction: column; gap: 8px; }
@@ -360,10 +354,6 @@ details.acc summary::-webkit-details-marker { display: none; }
 details.acc[open] .acc-chevron { transform: rotate(90deg); }
 .acc-name { font-weight: 700; font-size: .88rem; flex: 1; }
 .acc-meta { display: flex; align-items: center; gap: 5px; flex-wrap: wrap; }
-.priority-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
-.priority-dot.high { background: var(--accent); }
-.priority-dot.med  { background: #e67e22; }
-.priority-dot.low  { background: var(--text-light); }
 .acc-body { padding: 0 15px 14px; border-top: 1px solid var(--border); }
 .acc-one-liner { font-size: .78rem; color: var(--text-muted); padding: 10px 0 11px; border-bottom: 1px solid var(--border); margin-bottom: 11px; }
 .acc-sublabel { font-size: .65rem; text-transform: uppercase; letter-spacing: .07em; color: var(--text-light); font-weight: 700; margin-bottom: 6px; }
@@ -377,12 +367,6 @@ details.acc[open] .acc-chevron { transform: rotate(90deg); }
 .acc-hl-item { font-size: .76rem; padding: 4px 0; border-bottom: 1px dotted var(--border); }
 .acc-hl-item a { color: var(--text); }
 .acc-hl-item a:hover { color: var(--accent-dark); }
-.acc-restricted-box {
-  background: #fdf0ee; border: 1px solid #f5c6c0;
-  border-radius: var(--radius); padding: 8px 12px;
-  font-size: .76rem; color: var(--restricted); margin-top: 8px;
-}
-[data-theme="dark"] .acc-restricted-box { background: #2a1515; border-color: #5a2020; }
 .acc-no-news { font-size: .76rem; color: var(--text-light); font-style: italic; margin-top: 8px; }
 
 /* ── Sector Themes ───────────────────────────────────────────────────── */
@@ -530,7 +514,7 @@ footer { margin-top: 40px; padding-top: 18px; border-top: 1px solid var(--border
   .brief-grid, .themes-grid { grid-template-columns: 1fr; }
   .opp-company, .acc-name { font-size: 1.05rem; }
   .opp-headline, .hl-title { font-size: 1rem; }
-  .opp-angle, .opp-restricted-notice { font-size: .95rem; }
+  .opp-angle { font-size: .95rem; }
   .acc-list li, .acc-one-liner { font-size: .95rem; }
   .price-chip .pc-val { font-size: 1.1rem; }
   .score-badge { font-size: .85rem; padding: 3px 10px; }
@@ -613,11 +597,7 @@ footer { margin-top: 40px; padding-top: 18px; border-top: 1px solid var(--border
   <footer>
     <span>Commodity Trading — Sector Intelligence · SEA Advisory · Public news aggregation only</span>
     <div class="disclaimer">
-      <strong>Independence &amp; Conflicts notice:</strong>
       This tool aggregates publicly available news for internal awareness purposes only.
-      All pursuits are subject to client-acceptance, independence, and conflict checks in line with firm policy.
-      Confirm permissibility with Risk/Independence before any business development action on accounts marked
-      <strong style="color:var(--restricted)">AUDIT RESTRICTED</strong>.
       This is not investment advice.
     </div>
   </footer>
@@ -749,40 +729,19 @@ function renderOppCards(cards) {
   const grid = document.getElementById('opp-grid');
   if (!cards.length) { grid.innerHTML='<div class="empty-state">No opportunities match this filter.</div>'; return; }
   grid.innerHTML = cards.map(c => {
-    const bd = c.score_breakdown || {};
-    const whyParts = [];
-    if (bd.materiality) whyParts.push(`materiality ${bd.materiality}`);
-    if (bd.recency)     whyParts.push(`× recency ${bd.recency}`);
-    if (bd.source)      whyParts.push(`× source ${bd.source}`);
-    if (bd.priority_mult) whyParts.push(`× ${c.priority}-priority (${bd.priority_mult}×)`);
-    const scoreWhy = whyParts.join(' ');
-
-    const relTag = c.relationship === 'client'
-      ? `<span class="tag client">CLIENT</span>`
-      : c.relationship === 'audit_restricted'
-      ? `<span class="tag restricted-lbl">AUDIT RESTRICTED</span>`
-      : '';
-    const newTag = c.is_new ? `<span class="tag new">NEW</span>` : '';
-
-    return `<div class="opp-card${c.is_restricted?' restricted':''}">
+    return `<div class="opp-card">
       <div class="opp-hdr">
         <div>
           <div class="opp-company">${esc(c.company)}</div>
           <div class="opp-tags">
             <span class="tag sl">${esc(c.service_line)}</span>
-            ${relTag}${newTag}
             ${c.published ? `<span class="tag">${fmtDateShort(c.published)}</span>` : ''}
           </div>
         </div>
-        <span class="score-badge${c.is_restricted?' restricted':''}">Score ${Number(c.score).toFixed(2)}</span>
+        <span class="score-badge">Score ${Number(c.score).toFixed(2)}</span>
       </div>
       <div class="opp-headline"><a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(c.headline)}</a></div>
-      ${scoreWhy ? `<div class="opp-score-why">Score: ${esc(scoreWhy)}</div>` : ''}
-      ${c.is_restricted
-        ? `<div class="opp-restricted-notice">⚠ Independence note — confirm permissibility with Risk/Independence before any pursuit.</div>`
-        : c.suggested_angle
-        ? `<div class="opp-angle">${esc(c.suggested_angle)}</div>`
-        : ''}
+      ${c.suggested_angle ? `<div class="opp-angle">${esc(c.suggested_angle)}</div>` : ''}
     </div>`;
   }).join('');
 }
@@ -816,11 +775,6 @@ function renderAccCards(briefs) {
   const grid = document.getElementById('acc-grid');
   grid.innerHTML = briefs.map(b => {
     const flag = COUNTRY_FLAGS[b.country] || '';
-    const relTag = b.relationship === 'client'
-      ? `<span class="tag client">CLIENT</span>`
-      : b.relationship === 'audit_restricted'
-      ? `<span class="tag restricted-lbl">RESTRICTED</span>`
-      : `<span class="tag">${esc(b.relationship||'target')}</span>`;
 
     const trigTags = (b.active_triggers||[]).length
       ? (b.active_triggers||[]).map(t => `<span class="tag sl">${esc(t.service_line)}</span>`).join('')
@@ -838,9 +792,7 @@ function renderAccCards(briefs) {
         <span class="acc-chevron">▶</span>
         <span class="acc-name">${flag} ${esc(b.name)}</span>
         <div class="acc-meta">
-          <span class="priority-dot ${b.priority||'med'}"></span>
           <span class="tag">${esc(SECTOR_LABELS[b.sector]||b.sector)}</span>
-          ${relTag}
           ${b.ticker ? `<span class="tag">${esc(b.ticker)}</span>` : ''}
         </div>
       </summary>
@@ -848,7 +800,6 @@ function renderAccCards(briefs) {
         ${b.one_liner ? `<div class="acc-one-liner">${esc(b.one_liner)}</div>` : ''}
         <div class="acc-sublabel">This cycle's signals</div>
         <div class="acc-trigger-row">${trigTags}</div>
-        ${b.is_restricted ? `<div class="acc-restricted-box">⚠ <strong>Independence note</strong> — BD suggestions suppressed. Confirm permissibility with Risk/Independence before any pursuit.</div>` : ''}
         ${!b.has_news ? `<div class="acc-no-news">No material news this cycle.</div>` : ''}
         ${angles ? `<div class="acc-sublabel">Consulting angles</div><ul class="acc-list angles">${angles}</ul>` : ''}
         ${points ? `<div class="acc-sublabel">Talking points for a partner meeting</div><ol class="acc-list points">${points}</ol>` : ''}

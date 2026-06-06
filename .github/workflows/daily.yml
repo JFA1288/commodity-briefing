@@ -40,10 +40,6 @@ jobs:
         run: python -m src.main
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          # ACCOUNT_OVERRIDES: JSON mapping company names to relationship/priority.
-          # Set this as a GitHub Secret to keep client tags out of the public repo.
-          # Example value: {"PETRONAS":{"relationship":"client","priority":"high"},"Shell":{"priority":"high"}}
-          ACCOUNT_OVERRIDES: ${{ secrets.ACCOUNT_OVERRIDES }}
 
       - name: Commit and push updated dashboard
         run: |

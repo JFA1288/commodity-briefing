@@ -38,9 +38,6 @@ google_news_regions:
 
 # ── Companies ─────────────────────────────────────────────────────────────────
 # sector:       energy | metals_mining | power_utilities | trading
-# relationship: client | target | audit_restricted
-#               audit_restricted → BD next steps suppressed; independence notice shown
-# priority:     high | med | low  (multiplies opportunity score)
 # ticker:       listed ticker for reference (blank if private)
 # one_liner:    brief description shown in Account Intelligence
 companies:
@@ -48,8 +45,6 @@ companies:
     aliases: [Shell, "Shell plc", "Royal Dutch Shell"]
     country: NL
     sector: energy
-    relationship: target
-    priority: med
     ticker: SHEL.L
     one_liner: "Global supermajor; major LNG trader and downstream operator across Asia-Pacific."
     # Company name + trading/energy context to stay relevant without being too narrow
@@ -59,8 +54,6 @@ companies:
     aliases: [ExxonMobil, Exxon, "Exxon Mobil"]
     country: US
     sector: energy
-    relationship: target
-    priority: med
     ticker: XOM
     one_liner: "US supermajor with significant upstream and chemicals exposure across SEA."
     search_query: '"ExxonMobil" trading OR "ExxonMobil" Singapore OR "ExxonMobil" Asia OR "Exxon" LNG'
@@ -69,8 +62,6 @@ companies:
     aliases: [Chevron, "Chevron Corporation"]
     country: US
     sector: energy
-    relationship: target
-    priority: med
     ticker: CVX
     one_liner: "US supermajor; upstream production in Australia, Indonesia, and Thailand."
     search_query: '"Chevron" trading OR "Chevron" Singapore OR "Chevron" Asia OR "Chevron" LNG'
@@ -79,8 +70,6 @@ companies:
     aliases: [TotalEnergies, "Total Energies", "TotalEnergies Trading Asia"]
     country: FR
     sector: trading
-    relationship: target
-    priority: med
     ticker: TTE.PA
     one_liner: "Trading arm of TotalEnergies; significant LNG and crude trading hub in Singapore."
     search_query: '"TotalEnergies" Singapore OR "TotalEnergies" trading OR "TotalEnergies" LNG OR "TotalEnergies" Asia'
@@ -89,8 +78,6 @@ companies:
     aliases: ["Aramco Trading", "Saudi Aramco", "Aramco Trading Singapore"]
     country: SA
     sector: trading
-    relationship: target
-    priority: med
     ticker: ""
     one_liner: "Trading subsidiary of Saudi Aramco; crude and products marketing across Asia."
     search_query: '"Aramco Trading" OR "Saudi Aramco" trading OR "Saudi Aramco" Singapore OR "Saudi Aramco" Asia'
@@ -99,8 +86,6 @@ companies:
     aliases: ["Anglo American", "Anglo American plc"]
     country: GB
     sector: metals_mining
-    relationship: target
-    priority: med
     ticker: AAL.L
     one_liner: "Diversified global miner; platinum, copper, iron ore, and steelmaking coal."
     search_query: '"Anglo American" trading OR "Anglo American" Singapore OR "Anglo American" commodity OR "Anglo American" metals'
@@ -109,8 +94,6 @@ companies:
     aliases: ["Rio Tinto", "Rio Tinto Group"]
     country: GB
     sector: metals_mining
-    relationship: target
-    priority: med
     ticker: RIO.L
     one_liner: "Global miner; iron ore, copper, aluminium, and battery-materials strategy."
     search_query: '"Rio Tinto" trading OR "Rio Tinto" Singapore OR "Rio Tinto" commodity OR "Rio Tinto" metals'
@@ -119,8 +102,6 @@ companies:
     aliases: [BHP, "BHP Group", "BHP Billiton"]
     country: AU
     sector: metals_mining
-    relationship: target
-    priority: med
     ticker: BHP.AX
     one_liner: "Diversified global miner; iron ore, copper, coal, and nickel operations."
     search_query: '"BHP" trading OR "BHP" Singapore OR "BHP" commodity OR "BHP" metals'
@@ -129,8 +110,6 @@ companies:
     aliases: ["Woodside Energy", "Woodside Petroleum", Woodside]
     country: AU
     sector: energy
-    relationship: target
-    priority: med
     ticker: WDS.AX
     one_liner: "Australian LNG producer; Pluto, North West Shelf, and emerging hydrogen assets."
     search_query: '"Woodside" LNG OR "Woodside" trading OR "Woodside" Singapore OR "Woodside" Asia'
@@ -139,8 +118,6 @@ companies:
     aliases: [PETRONAS, "Petronas", "Petronas Trading", PFLB]
     country: MY
     sector: energy
-    relationship: target
-    priority: med
     ticker: ""
     one_liner: "Malaysian national oil company; major LNG exporter, upstream, and trading arm."
     search_query: '"PETRONAS" trading OR "Petronas" LNG OR "Petronas" Singapore OR "PTLSB"'
@@ -149,8 +126,6 @@ companies:
     aliases: [TNB, "Tenaga Nasional", "Tenaga Nasional Berhad"]
     country: MY
     sector: power_utilities
-    relationship: target
-    priority: med
     ticker: TENAGA.KL
     one_liner: "Malaysia's national electricity utility; generation, transmission, and distribution."
     search_query: '"Tenaga Nasional" OR "TNB" energy OR "TNB" fuel OR "TNB" power'
@@ -159,8 +134,6 @@ companies:
     aliases: [PTT, "PTT Public", "PTT Thailand", "PTT Group"]
     country: TH
     sector: energy
-    relationship: target
-    priority: med
     ticker: PTT.BK
     one_liner: "Thai national oil and gas company; upstream, downstream, LNG, and petrochemicals."
     search_query: '"PTT" trading OR "PTT" Singapore OR "PTT" LNG OR "PTT Group" commodity'
@@ -169,8 +142,6 @@ companies:
     aliases: [Pertamina, "PT Pertamina"]
     country: ID
     sector: energy
-    relationship: target
-    priority: med
     ticker: ""
     one_liner: "Indonesian national oil company; refining, upstream, and trading operations."
     search_query: '"Pertamina" trading OR "Pertamina" Singapore OR "Pertamina" LNG OR "Pertamina" commodity'
@@ -179,8 +150,6 @@ companies:
     aliases: ["MIND ID", ANTAM, "Aneka Tambang", "Bukit Asam", PTBA, Timah]
     country: ID
     sector: metals_mining
-    relationship: target
-    priority: med
     ticker: ""
     one_liner: "Indonesian state mining holding company; nickel, coal, aluminium, tin, and gold."
     search_query: '"MIND ID" OR "ANTAM" nickel OR "Bukit Asam" coal OR "Aneka Tambang" trading'
@@ -189,8 +158,6 @@ companies:
     aliases: [EGAT, "Electricity Generating Authority of Thailand"]
     country: TH
     sector: power_utilities
-    relationship: target
-    priority: med
     ticker: ""
     one_liner: "Thailand's state electricity authority; power generation, grid, and renewable projects."
     search_query: '"EGAT" LNG OR "EGAT" power OR "EGAT" trading OR "Electricity Generating Authority"'
@@ -199,8 +166,6 @@ companies:
     aliases: [Cargill, "Cargill Asia", "Cargill Singapore"]
     country: US
     sector: trading
-    relationship: target
-    priority: med
     ticker: ""
     one_liner: "Global agri-commodity trading and processing giant; large Asia-Pacific presence."
     search_query: '"Cargill" Singapore OR "Cargill" Asia OR "Cargill" commodity OR "Cargill" trading'
@@ -209,8 +174,6 @@ companies:
     aliases: [Mercuria, "Mercuria Energy"]
     country: CH
     sector: trading
-    relationship: target
-    priority: med
     ticker: ""
     one_liner: "Swiss-origin independent commodity trading house; energy and metals trading globally."
     search_query: '"Mercuria" OR "Mercuria Energy" trading OR "Mercuria" Singapore'
@@ -219,8 +182,6 @@ companies:
     aliases: [Danantara, "Danantara Indonesia", "BPI Danantara"]
     country: ID
     sector: trading
-    relationship: target
-    priority: med
     ticker: ""
     one_liner: "Indonesia's sovereign wealth and state-asset management vehicle, managing c.$900bn."
     search_query: '"Danantara" OR "BPI Danantara" OR "Danantara Indonesia"'
@@ -510,14 +471,9 @@ demand_drivers:
     suggested_angle: "Offer supply-chain resilience or procurement-optimisation advisory"
 
 # ── Opportunity scoring weights ────────────────────────────────────────────────
-# Final score = materiality_weight × recency_factor × source_weight × priority_multiplier
-# All component values are stored per card for dashboard transparency.
+# Final score = materiality_weight × recency_factor × source_weight
 opportunity_scoring:
   recency_halflife_hours: 18      # longer than news scoring — opportunities stay relevant longer
-  priority_multipliers:
-    high: 1.5
-    med:  1.0
-    low:  0.7
   max_opportunities: 12           # maximum cards shown in Opportunity Radar
 
 # ── Legacy material-event keyword lists (used by consulting signal flags) ─────
@@ -554,10 +510,3 @@ macro_watch_terms:
 # ── Price history cap ─────────────────────────────────────────────────────────
 price_history_days: 90
 
-# ── Independence & conflicts disclaimer ───────────────────────────────────────
-# Shown in footer and Partner Weekly Brief on every run.
-independence_disclaimer: >
-  This tool aggregates public news for awareness purposes only.
-  All pursuits are subject to client-acceptance, independence, and conflict checks
-  in line with firm policy. Confirm permissibility with Risk/Independence
-  before any business development action on accounts marked audit_restricted.

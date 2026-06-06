@@ -100,18 +100,13 @@ class OpportunityCard(BaseModel):
     company: str
     sector: str
     country: str
-    relationship: str            # client | target | audit_restricted
-    priority: str                # high | med | low
     headline: str
     url: str
     driver: str                  # demand_driver key
     service_line: str            # display label
     suggested_angle: str
     score: float = 0.0
-    score_breakdown: dict = Field(default_factory=dict)  # {materiality, recency, source, priority_mult}
     published: Optional[datetime] = None
-    is_restricted: bool = False
-    is_new: bool = True          # False if same company appeared in previous run
 
 
 class AccountBrief(BaseModel):
@@ -119,8 +114,6 @@ class AccountBrief(BaseModel):
     name: str
     sector: str
     country: str
-    relationship: str
-    priority: str
     ticker: str = ""
     one_liner: str = ""
     active_triggers: list[TriggerMatch] = Field(default_factory=list)
@@ -128,7 +121,6 @@ class AccountBrief(BaseModel):
     top_urls: list[str] = Field(default_factory=list)
     consulting_angles: list[str] = Field(default_factory=list)
     talking_points: list[str] = Field(default_factory=list)
-    is_restricted: bool = False
     has_news: bool = False
 
 
