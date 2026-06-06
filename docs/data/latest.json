@@ -1,19 +1,86 @@
 {
-  "generated_at": "2026-06-06T06:59:55.846663Z",
+  "generated_at": "2026-06-06T12:48:18.063164Z",
   "top_headlines": [
+    {
+      "title": "UK Sees Risk of $100 Oil Until 2028",
+      "url": "https://www.rigzone.com/news/wire/uk_sees_risk_of_100_oil_until_2028-06-jun-2026-183867-article/?rss=true",
+      "source": "Rigzone News",
+      "published": "2026-06-06T12:00:00Z",
+      "summary": "The UK government has revised its internal oil price forecasts upwards.",
+      "company": null,
+      "commodity": null,
+      "flags": [
+        "earnings",
+        "geopolitical"
+      ],
+      "score": 3.6455,
+      "title_norm": "100 2028 oil risk sees until",
+      "consulting_label": "Performance",
+      "why_it_matters": "Earnings or guidance release — CFO advisory, margin improvement, or FP&A opportunity."
+    },
+    {
+      "title": "Colorful Moon Shell Wind Chime - Hanging Ripple Shell Decor For Garden, Balcony, Porch, Or Bedroom (Boho Style) - umlconnector.com",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPNUs3UkloM2hLQ2RoS1RnTUN0Sm1DS1hXeENHNkxtaGZlUWVDT2FDQ25RdGloZXZQTnVDVmlWcFRMZUNIMlBGZnhsLWhDZk1kc2FSYjZyNV9pd0JIdjlHbTBNeFlENWMwUVl3cGd5QkZpbEp4M1J2bHpOSTJ5bXpnTGJzUDlqdVdzaGRWNHJLTDhtdUN0WUFTSQ?oc=5",
+      "source": "Google News",
+      "published": "2026-06-06T11:11:13Z",
+      "summary": "Colorful Moon Shell Wind Chime - Hanging Ripple Shell Decor For Garden, Balcony, Porch, Or Bedroom (Boho Style)&nbsp;&nbsp;umlconnector.com",
+      "company": "Shell",
+      "commodity": null,
+      "flags": [
+        "esg"
+      ],
+      "score": 3.4108,
+      "title_norm": "balcony bedroom boho chime colorful com decor garden hanging moon porch ripple shell shell style umlconnector wind",
+      "consulting_label": "Sustainability",
+      "why_it_matters": "ESG or decarbonisation signal — sustainability strategy or reporting mandate."
+    },
+    {
+      "title": "Brent Settles at $95, WTI at $93 as Middle East Tensions Ease | - Business Post Nigeria",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQRTlKU2lNNlcwd21SMXJGY0xqSkNnVUlYelBGYmVBcjdieGxCc1RxV1p6MFllVUNXUW54RlRVZGJaaUE2QlB5ME5xMXFyVHRwd2Zxa2hZMTRQQ0Z0eEVUcFBxUkFhYlBaekdURkhZQzVvcnZwRTg3cXNMM1BYbkVsaW5lT0xZSXNOV2lEMS1RQ19tLVBveHc?oc=5",
+      "source": "Google News",
+      "published": "2026-06-06T09:40:56Z",
+      "summary": "Brent Settles at $95, WTI at $93 as Middle East Tensions Ease |&nbsp;&nbsp;Business Post Nigeria",
+      "company": null,
+      "commodity": "crude_oil",
+      "flags": [
+        "geopolitical"
+      ],
+      "score": 3.335,
+      "title_norm": "brent business ease east middle nigeria post settles tensions wti",
+      "consulting_label": "Compliance Risk",
+      "why_it_matters": "Geopolitical exposure — sanctions risk or trade compliance advisory."
+    },
+    {
+      "title": "BI Asset Management Fondsmaeglerselskab A S Grows Stake in ExxonMobil Corporation $XOM - MarketBeat",
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPVG1qMXlKRk5OeG0tNUN2RmdWZU8wWU51QmVfZ0dBOWIwNGs4X24wTmlreUVaejZwd25JM1htWFNGejNEQmdWUzU2Y3J5MUdfc2xhZEs2a3NEUVFpQmlibk5NM0d3NFR6THhlamhfMDY3ekEtVE5yQTI1RjNuV0RrY0NwdUItUXhmS3NXWXdsbGlxSVlIQTFGSGtSV2t6SkNhNjFMcGtpekw2VVZkSU1qd2NXRFduakRtampFN045SG5wZnVGZjdrckdnQTBqb25uNmxSaFhkbzhxbEVQeGlF?oc=5",
+      "source": "Google News",
+      "published": "2026-06-06T07:25:06Z",
+      "summary": "BI Asset Management Fondsmaeglerselskab A S Grows Stake in ExxonMobil Corporation $XOM&nbsp;&nbsp;MarketBeat",
+      "company": "ExxonMobil",
+      "commodity": null,
+      "flags": [
+        "ma"
+      ],
+      "score": 3.2326,
+      "title_norm": "asset corporation exxonmobil fondsmaeglerselskab grows management marketbeat stake xom",
+      "consulting_label": "Integration",
+      "why_it_matters": "M&A or JV activity — potential integration, due diligence, or PMI mandate."
+    },
     {
       "title": "Rio Tinto Advances Automation And Low Carbon Aluminium In Growth Push - Yahoo Finance",
       "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOY2c1UGlBT213N281bmhkZ1J5SGZ3LU5oQ0VJU0hLd0VTNHVhQXhacFBzN3ItVC1sZWhMdUFxb1ktelVRVWprQWJ6WnFBSl9WV1hSdmJpanpNS1JXZUhKRHp4bld1bkR5RENoUkZDZW5XbmNuQ1RJSU1Ma3NQdV9ZR1lqdHZLSzZobzZwNWVtNTJha0NHM0FBejd6M0hzdGc?oc=5",
       "source": "Google News",
-      "published": "2026-06-06T06:11:00Z",
+      "published": "2026-06-06T06:11:28Z",
       "summary": "Rio Tinto Advances Automation And Low Carbon Aluminium In Growth Push&nbsp;&nbsp;Yahoo Finance",
       "company": "Rio Tinto",
       "commodity": null,
       "flags": [
         "esg"
       ],
-      "score": 3.454,
-      "title_norm": "advances aluminium automation carbon finance growth low push rio tinto yahoo"
+      "score": 3.1825,
+      "title_norm": "advances aluminium automation carbon finance growth low push rio tinto yahoo",
+      "consulting_label": "Sustainability",
+      "why_it_matters": "ESG or decarbonisation signal — sustainability strategy or reporting mandate."
     },
     {
       "title": "Assessing Canadian National Railway’s Valuation After New BHP Potash Deal And Record Grain And Propane Volumes - simplywall.st",
@@ -27,22 +94,26 @@
         "ma",
         "price_shock"
       ],
-      "score": 3.3205,
-      "title_norm": "after assessing bhp canadian deal grain national new potash propane railways record simplywall valuation volumes"
+      "score": 3.0867,
+      "title_norm": "after assessing bhp canadian deal grain national new potash propane railways record simplywall valuation volumes",
+      "consulting_label": "Integration",
+      "why_it_matters": "M&A or JV activity — potential integration, due diligence, or PMI mandate."
     },
     {
-      "title": "Absa under fire for TotalEnergies financing in Cabo Delgado - Business Day",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQM3lKdjlZZnFrdHp0RTVldmFFQ2NXRnNXNHVoMXhwYjAzdVFSWi05U1kxbUhLeEl0M3c1LXFneDAxM21LTnF2RVU1a3lXY0dZekRQN1c1cHpPQ0JpY0haV3FOYXhZUko4NE95Q1QtdlZ3bUlNUHl3R2s4QzVqVjgxRVRWV0FHQjVKU0V6NElmNzJ6eW1JeGZLVWdzYS0zcGttNy00bmo2ZWoyNFMyRV9salJhTGN4dWM?oc=5",
+      "title": "Fuel prices cut by up to 1 baht per litre at PTT, Bangchak stations - Thai PBS World",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNR05SdnJhTFdIcFR5Z3c1Y0RYVkxrcWZ6SVNOQmJ4VjYyRlUySXFGakVycFhLRHlJd2pMdzkxSFZERHA3NnBlZjlfdzM4NjVValVzc0xGZjhheEVPOWR5ZjBqdTVoeC1oS0FQa2lYcnlHcDJOVGF4RG9rblE4cHQ2R2piUzNWeE5CdFozd1pWMjhKRVl6RmNPMEp1RW13OHZJMmpyMkN1LTh0TEE?oc=5",
       "source": "Google News",
-      "published": "2026-06-06T03:00:00Z",
-      "summary": "Absa under fire for TotalEnergies financing in Cabo Delgado&nbsp;&nbsp;Business Day",
-      "company": "TotalEnergies Trading Asia",
+      "published": "2026-06-06T03:17:00Z",
+      "summary": "Fuel prices cut by up to 1 baht per litre at PTT, Bangchak stations&nbsp;&nbsp;Thai PBS World",
+      "company": "PTT",
       "commodity": null,
       "flags": [
-        "outage"
+        "regulatory"
       ],
-      "score": 3.2938,
-      "title_norm": "absa business cabo day delgado financing fire totalenergies under"
+      "score": 3.077,
+      "title_norm": "baht bangchak cut fuel litre pbs per prices ptt stations thai world",
+      "consulting_label": "Compliance Risk",
+      "why_it_matters": "Regulatory action — compliance advisory, remediation, or sanctions screening."
     },
     {
       "title": "PV Gas expands strategic partnerships with leading Southeast Asian energy firms - Theinvestor",
@@ -55,8 +126,10 @@
       "flags": [
         "ma"
       ],
-      "score": 3.2521,
-      "title_norm": "asian energy expands firms gas leading partnerships southeast strategic theinvestor"
+      "score": 3.0378,
+      "title_norm": "asian energy expands firms gas leading partnerships southeast strategic theinvestor",
+      "consulting_label": "Integration",
+      "why_it_matters": "M&A or JV activity — potential integration, due diligence, or PMI mandate."
     },
     {
       "title": "What C3.ai (AI)'s Wider Losses and Expanded Shell Partnership Means For Shareholders - Yahoo Finance",
@@ -70,22 +143,26 @@
         "earnings",
         "ma"
       ],
-      "score": 3.2106,
-      "title_norm": "expanded finance losses means partnership shareholders shell what wider yahoo"
+      "score": 3.0081,
+      "title_norm": "expanded finance losses means partnership shareholders shell what wider yahoo",
+      "consulting_label": "Integration",
+      "why_it_matters": "M&A or JV activity — potential integration, due diligence, or PMI mandate."
     },
     {
-      "title": "Chevron posts strong Q1 2026 with revenue growth, solid liquidity, and attractive valuation. - Pluang",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1YNE43RjlnLU9aQU1adm8tQ0IycFRJaE9yWUJiWUxZdjJXV1JxaWswNWlWdFd6bUhkQVBMRzVkenpSQmd5SnVxSDcyQUM4Nld4U25oc2xaNTlhZjdOU1NTWHhadkFHd2xaSktTZ1ZzanRqdlZ3NkJ4SDFXX2tHaTQ?oc=5",
+      "title": "Oil (USCrude) Price Forecast for Today, Tomorrow, Next Week, and Next 30 Days - LiteFinance",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQcm51RHFTMGNQcnB2aFl5bjNQQzFXUVVHckh1eW1IVktpM0lfaXlCQ2p6RF9nYWxkajlxb2R2V0lkRi1FNnljalUwMlhaU2FFT2dCUDBwem9tVG14Y1FXZGVKbWJvSm0xNlVVZ1BwdTItWnJkOTF3TnFTU2FQLWZibmhXRXlnX2RJY25leTB2ekVVUHZMZS1zbjBhWkNJLWs?oc=5",
       "source": "Google News",
-      "published": "2026-06-06T01:02:35Z",
-      "summary": "Chevron posts strong Q1 2026 with revenue growth, solid liquidity, and attractive valuation.&nbsp;&nbsp;Pluang",
-      "company": "Chevron",
-      "commodity": null,
+      "published": "2026-06-06T00:51:45Z",
+      "summary": "Oil (USCrude) Price Forecast for Today, Tomorrow, Next Week, and Next 30 Days&nbsp;&nbsp;LiteFinance",
+      "company": null,
+      "commodity": "crude_oil",
       "flags": [
         "earnings"
       ],
-      "score": 3.2089,
-      "title_norm": "2026 attractive chevron growth liquidity pluang posts revenue solid strong valuation"
+      "score": 3.0017,
+      "title_norm": "days forecast litefinance next next oil price today tomorrow uscrude week",
+      "consulting_label": "Performance",
+      "why_it_matters": "Earnings or guidance release — CFO advisory, margin improvement, or FP&A opportunity."
     },
     {
       "title": "ExxonMobil Baytown bids farewell to three - Baytown Sun",
@@ -98,8 +175,10 @@
       "flags": [
         "ma"
       ],
-      "score": 3.1746,
-      "title_norm": "baytown baytown bids exxonmobil farewell sun three"
+      "score": 2.9824,
+      "title_norm": "baytown baytown bids exxonmobil farewell sun three",
+      "consulting_label": "Integration",
+      "why_it_matters": "M&A or JV activity — potential integration, due diligence, or PMI mandate."
     },
     {
       "title": "Legal and reputational implications of Shell abandoning “Royal Dutch Shell plc” - Royal Dutch Shell Plc .com",
@@ -112,8 +191,26 @@
       "flags": [
         "regulatory"
       ],
-      "score": 3.1727,
-      "title_norm": "abandoning com dutch dutch implications legal plc plc reputational royal royal shell shell shell"
+      "score": 2.981,
+      "title_norm": "abandoning com dutch dutch implications legal plc plc reputational royal royal shell shell shell",
+      "consulting_label": "Compliance Risk",
+      "why_it_matters": "Regulatory action — compliance advisory, remediation, or sanctions screening."
+    },
+    {
+      "title": "How A Steady Analyst View Is Shaping The BHP Group (ASX:BHP) Investment Story - Yahoo Finance",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQYnpOTm5kRHBDMV9uaHl1cjBQQmZXMk04VTFCcG9XYjJ4cW1uTzlWU0VzQzhsLVZnVXlyOXZfUXNCRVNtcTVMc1lVUnRndmVIX21mckVuWjZSdnVyTkIzV09YNl9Xd0JINTVadk9QOEhJTWJhRXpyaVRCY05kQWxjSmNnSXNTeF9SRHdTOEpVbkg5aWp2ajZUVVdMeE8?oc=5",
+      "source": "Google News",
+      "published": "2026-06-05T23:11:01Z",
+      "summary": "How A Steady Analyst View Is Shaping The BHP Group (ASX:BHP) Investment Story&nbsp;&nbsp;Yahoo Finance",
+      "company": "BHP",
+      "commodity": null,
+      "flags": [
+        "growth_strategy"
+      ],
+      "score": 2.9553,
+      "title_norm": "analyst asx bhp bhp finance group how investment shaping steady story view yahoo",
+      "consulting_label": "Growth Strategy",
+      "why_it_matters": "Expansion or investment signal — market entry, feasibility, or strategy advisory."
     },
     {
       "title": "Survey Shows OPEC Output Plunges Further",
@@ -127,8 +224,10 @@
         "geopolitical",
         "price_shock"
       ],
-      "score": 3.1357,
-      "title_norm": "further opec output plunges shows survey"
+      "score": 2.9546,
+      "title_norm": "further opec output plunges shows survey",
+      "consulting_label": "Compliance Risk",
+      "why_it_matters": "Geopolitical exposure — sanctions risk or trade compliance advisory."
     },
     {
       "title": "Oil Retreats on Global Demand Fears",
@@ -142,399 +241,18 @@
         "trading_moves",
         "geopolitical"
       ],
-      "score": 3.1257,
-      "title_norm": "demand fears global oil retreats"
-    },
-    {
-      "title": "Don't Race Out To Buy PETRONAS Gas Berhad (KLSE:PETGAS) Just Because It's Going Ex-Dividend - simplywall.st",
-      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxObnc2LWQya3ZYRUtpUXBJX2xsdG5CemRPb3JDUE5kX2ttYU9kbHVBS01rMC1WRURHZmtlaFo3bGJ3VTNoWE1wdUZELTVZYzYxR2x5cUhkMkxCWDBZZzB6RVFhY3Z3TndVcEMwUmR0NTBLSTlKZGs2czROX3V4LVpKRHF1SFpiWWpOTVd6cmRVMTlKeFZ3Sk56VDhUa3VoUksyTlBJVmUzdEhWWTFLQ1J1blA3cEJtVjBXelM1MjRKanJqWFVMZHFPcVRDMG5raWFaeGJ6cnlZc3VJUXE5UTlz0gHkAUFVX3lxTE93MVU4cDdWckV6dnkyb1RsdU03SjV6OW41LTF6ZUxhSHpCcFdRbk1uU19ObnhGT3liUGw4Vk5FYkdEUVBEMFhOVV9WN0xTTzhPVXVQRGlFRjVEVU1PX25YSEI1eDBGWE8tbVd1ZXc2Rm5DTTBweUtSeTh0dkk3QUlpZEhUdDRHZXU5LXRoOVVXVkZnV1pkMURRUm1BVklXSWF4UHZhZEM2RGtKSHZfU1VrWTZRSTdON2lsV0VyRTBPYlhEdWRsNWFQZ1BvVi1vVEZhWGc0RnFRSFZpZ3NNUzBUUmFtUw?oc=5",
-      "source": "Google News",
-      "published": "2026-06-05T22:32:39Z",
-      "summary": "Don't Race Out To Buy PETRONAS Gas Berhad (KLSE:PETGAS) Just Because It's Going Ex-Dividend&nbsp;&nbsp;simplywall.st",
-      "company": "PETRONAS",
-      "commodity": null,
-      "flags": [
-        "earnings"
-      ],
-      "score": 3.1136,
-      "title_norm": "because berhad buy dividend don gas going just klse out petgas petronas race simplywall"
-    },
-    {
-      "title": "There May Be Some Bright Spots In PETRONAS Dagangan Berhad's (KLSE:PETDAG) Earnings - simplywall.st",
-      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQczBKcmZDcGVmc0RRMjdtU09RQWJwQmhDeWVXTU03X3hCVFdaVFVTdVdJNjRscmZPbnhNc01VSkhRWEFHcUE2MXpnTlJVaHZwMXlmV1pIaV81RWlaU2RpRnlTTXV1QjFGMUF6cW9iWjREUldnUFdNa3RTQjVsYmxyNjYxX190MkVrcDBoNm1nR3FSV3h3Wk16cjhqRGFJbktzQjdIaDBKTlUyOWJzWWEzQWU2MmZ5YjFvWkp6eHJveUkyV3p4clBNNURGYnFmeGFsQ2Mzb0wtZWF0ZU43LVBEMtIB5gFBVV95cUxNWUZqNnZvcjRmMm5GT1FlaXUxMVR0dHd1WURfWGNWYmZMTk9mNUk0U2t4OVBIa3RBb2R0WkFYNVBHODRHRTFNbndEREZNTVViOWlva2xreGZBMWVYV0NRT3RFeXROZWRpa0lUdml3aURpMkNNUEozMTJUdjh5N25LalV4azdlUzZMN0RiQS13QzRQR18xRTlYQW1aSHR2LUU4X3RxUzZvVW5NbWxGX0FOZDFlTURWTFFZOGJRd1pmV09UM19IZXlSVENsejdnT2RLMXJPcDVnWUFCMVRMTWZjNDk1Tmw5QQ?oc=5",
-      "source": "Google News",
-      "published": "2026-06-05T22:32:39Z",
-      "summary": "There May Be Some Bright Spots In PETRONAS Dagangan Berhad's (KLSE:PETDAG) Earnings&nbsp;&nbsp;simplywall.st",
-      "company": "PETRONAS",
-      "commodity": null,
-      "flags": [
-        "earnings"
-      ],
-      "score": 3.1136,
-      "title_norm": "berhad bright dagangan earnings klse may petdag petronas simplywall some spots there"
-    },
-    {
-      "title": "We Think You Can Look Beyond PETRONAS Dagangan Berhad's (KLSE:PETDAG) Lackluster Earnings - Yahoo Finance",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOQmVGbXlPRFRoSWttWlFTaGVZSlRtTWQ1Y0FxOUJLaE0xOVhBTTNCWUMtVF9Cei1iQ3FGQlVwYy1RQ3IxREktWkhvWUNBODUxSjdodjcxdU5oTElwZTFnaUZ3a25SQ1ctWGlsQm5YRnY3ZEtHUWdyMHBBUVpwc2Q1QWw1OXc5TEc2TV90MEJNODFWdTNobWpCdDg0eURmdlVGeVE?oc=5",
-      "source": "Google News",
-      "published": "2026-06-05T22:16:43Z",
-      "summary": "We Think You Can Look Beyond PETRONAS Dagangan Berhad's (KLSE:PETDAG) Lackluster Earnings&nbsp;&nbsp;Yahoo Finance",
-      "company": "PETRONAS",
-      "commodity": null,
-      "flags": [
-        "earnings"
-      ],
-      "score": 3.1043,
-      "title_norm": "berhad beyond can dagangan earnings finance klse lackluster look petdag petronas think yahoo you"
-    },
-    {
-      "title": "BHP inks rail deals to move potash from its new mine to the west coast - The Star Phoenix",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNblZVSVJZVGRYU0JnYzJYOEg0aWpadzI0YzlVbTVxVTB0Wld3NXhaOFFOX01tanJMQnp3VzlPNEVlOU4xVXlWbE8wUWZKRVZ0cHY5SVdVd1QwZ0doWldPTTdSWnVVY2MxcHpORzZLeE5fNHFaSGtDYjhVSHg4djFCbzA4SDVGQ0tPcTFJVDU5LTR2MnZWVGtIWElvUWczZVdQMXU1cXV3?oc=5",
-      "source": "Google News",
-      "published": "2026-06-05T22:16:14Z",
-      "summary": "BHP inks rail deals to move potash from its new mine to the west coast&nbsp;&nbsp;The Star Phoenix",
-      "company": "BHP",
-      "commodity": null,
-      "flags": [
-        "ma"
-      ],
-      "score": 3.104,
-      "title_norm": "bhp coast deals inks mine move new phoenix potash rail star west"
-    },
-    {
-      "title": "SPR Borrowers Owe Uncle Sam 40 Million Extra Barrels",
-      "url": "https://oilprice.com/Latest-Energy-News/World-News/SPR-Borrowers-Owe-Uncle-Sam-40-Million-Extra-Barrels.html",
-      "source": "OilPrice.com",
-      "published": "2026-06-05T17:30:00Z",
-      "summary": "The US Strategic Petroleum Reserve has taken a beating during the Iran war, but Energy Secretary Chris Wright says the government's emergency oil stash is headed for a surprisingly lucrative refill. Companies that borrowed crude from the SPR during the conflict will return those barrels with premiums attached, leaving the reserve about 40 million barrels larger than it would have been otherwise once the war ends, Wright said Friday. For an oil market accustomed to hearing about SPR drawdowns, em",
-      "company": null,
-      "commodity": null,
-      "flags": [
-        "esg",
-        "geopolitical"
-      ],
-      "score": 3.0961,
-      "title_norm": "barrels borrowers extra million owe sam spr uncle"
+      "score": 2.9474,
+      "title_norm": "demand fears global oil retreats",
+      "consulting_label": "Leadership Change",
+      "why_it_matters": "Senior leadership transition — change management or org design opportunity."
     }
   ],
   "companies": [
-    {
-      "name": "Shell",
-      "sector": "energy",
-      "country": "NL",
-      "items": [
-        {
-          "title": "What C3.ai (AI)'s Wider Losses and Expanded Shell Partnership Means For Shareholders - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPdmRUdUR2c3JnZnQ3dUZTMHo4RkpLNUZCRlN4V3hDbUQwNFoxYkVIemtxamxhbDE0bFBsX0hjc1FHb1JFRzUzTWFMRXhDUzRUZ0tUZW83LXh0TERpV1dOMnVnUWI5S2tmSlBObk8xeklUdzgyNHBkTjB5UWxGb0NzcWVKVDVmNVRvekk0dGc3OA?oc=5",
-          "source": "Google News",
-          "published": "2026-06-06T01:05:00Z",
-          "summary": "What C3.ai (AI)'s Wider Losses and Expanded Shell Partnership Means For Shareholders&nbsp;&nbsp;Yahoo Finance",
-          "company": "Shell",
-          "commodity": null,
-          "flags": [
-            "earnings",
-            "ma"
-          ],
-          "score": 3.2106,
-          "title_norm": "expanded finance losses means partnership shareholders shell what wider yahoo"
-        },
-        {
-          "title": "Legal and reputational implications of Shell abandoning “Royal Dutch Shell plc” - Royal Dutch Shell Plc .com",
-          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPRk9JNDVmd3ZpcjFRQWk4Um44MWtCS3prTDFaWlV2WHhNQlFLN091UVFzNFA1WEVPNVc5V3NGODRHRWFOMG9PdE9pZ2pnOHBQZjhiMy1KQThXcHpSZGhUdjZ3TGdjTjhvZXFQaS1FN2xxMmpFanJxTGlrTDdwclJaUjUzdmJBd21RN3FyY1ppOEtERGliZE1lTjJkYWFGMFA3Y0d3MnlKcWtpVk0teE1DbkJ6Vmlnck1kOFY2dg?oc=5",
-          "source": "Google News",
-          "published": "2026-06-06T00:08:06Z",
-          "summary": "Legal and reputational implications of Shell abandoning “Royal Dutch Shell plc”&nbsp;&nbsp;Royal Dutch Shell Plc .com",
-          "company": "Shell",
-          "commodity": null,
-          "flags": [
-            "regulatory"
-          ],
-          "score": 3.1727,
-          "title_norm": "abandoning com dutch dutch implications legal plc plc reputational royal royal shell shell shell"
-        },
-        {
-          "title": "Central Asia Soft-Gel Capsule Shell Gelatin - Market Analysis, Forecast, Size, Trends and Insights - IndexBox",
-          "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQMzctQTd4aEhGMnVoUmtxMlFnRXVGMlk1YmNMUXVRR2lDOUxPTlZRemRzNFJkeXpscDJVRnZkRmhDVDhGQnk3UlI0LXdFT3NCOGxrU29XRFRiX2ZkZ2NmZFpkRV84c3FwSmZ2SndFUE5PQS1ZTHNJZFlnUFZpdWlXeE1MdUxkMGE1MXRnaHVTY2ctQjFCc0hQaU10Q1ppM0toUEhERlBaRWstZUVCM1NuY1NWczRwemdrRmdwdjh2YmU0UQ?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T21:24:10Z",
-          "summary": "Central Asia Soft-Gel Capsule Shell Gelatin - Market Analysis, Forecast, Size, Trends and Insights&nbsp;&nbsp;IndexBox",
-          "company": "Shell",
-          "commodity": null,
-          "flags": [
-            "earnings"
-          ],
-          "score": 3.0745,
-          "title_norm": "analysis asia capsule central forecast gel gelatin indexbox insights market shell size soft trends"
-        },
-        {
-          "title": "Scotiabank Shell Rewards Tie Up Links Fuel Spending To BNS Valuation - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPbXQzX2U1UDlYRFlfek5qY1d1eko3TWwtcU5YQWZndWJCcHI1a1Mtc2lXRF9Vd1hGVk5YOEJnS01lbDRma2F2a0Z4bEVrdkJWOTE1NFJJUThoZFY2U1NVckNjaVY5eGsyM3h5aGF2OGFXMDJkLWp4ZXZBRUdUcmpScWVtNGhTbHY0ekRSMHdDMkVjYWZGQ2wwTXVBbGZVM2tN?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T16:09:25Z",
-          "summary": "Scotiabank Shell Rewards Tie Up Links Fuel Spending To BNS Valuation&nbsp;&nbsp;Yahoo Finance",
-          "company": "Shell",
-          "commodity": null,
-          "flags": [
-            "regulatory",
-            "geopolitical"
-          ],
-          "score": 2.9243,
-          "title_norm": "bns finance fuel links rewards scotiabank shell spending tie valuation yahoo"
-        },
-        {
-          "title": "Did Stronger Earnings and a Deeper Shell Partnership Just Shift Bank of Nova Scotia's (TSX:BNS) Investment Narrative? - simplywall.st",
-          "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQMDNmUTUtRkh1dV9UWmJCcXIyclQyNVBiYVZNLVVfVGJob0tzeE15MExvRHpROWszWEZxNFJXZjRJTVRCRkJJb1ZmLTR3QUgtakVvSlM3c24xOFhOMDF6aXZVZGVyNDdMeEx0SEM2VUhkaUZSSUdNUFVaU19LOVJTT1pSVjdLNzR3US1fVEZFWmNkWU1BZnE0Z3BOX1VGWmk1eTB1UWh5dUZFbmRyU0I2YV9GQS1yT2RQNTFuZ1N0Mk5ncll6djhNMFZCREE0OU1YMi1uRNIB2gFBVV95cUxQbEIyS19GbE4wMWlCLUhKMnNxWlhubldzOWlPb3BoV1RzYWN0cVpVWk5iZXJINnY5MFVVeHZnYlZtS1FTdGJKRWZsQzJZeTR1Q0tvR2JWM0lxRUNkbGRRTDlBYkxiYjFFR3BLb1VNWm9ydDZJRHN2c0xTSFpsYWs4Ri1RWDJPVkNPU2szNjJGSmlrV01UTnJnak16WmtTbEQxb19HQjNyLUpMSnhWclpNeEQ5eUhZY0ZXWWVuVkU1ZTZzS1JnNWpLT040ejJuRFZLV0tfZWlrTlNmdw?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T13:20:48Z",
-          "summary": "Did Stronger Earnings and a Deeper Shell Partnership Just Shift Bank of Nova Scotia's (TSX:BNS) Investment Narrative?&nbsp;&nbsp;simplywall.st",
-          "company": "Shell",
-          "commodity": null,
-          "flags": [
-            "earnings",
-            "ma",
-            "regulatory"
-          ],
-          "score": 2.8607,
-          "title_norm": "bank bns deeper did earnings investment just narrative nova partnership scotia shell shift simplywall stronger tsx"
-        },
-        {
-          "title": "How C3 AI agents will automate predictive maintenance for Shell - AI News",
-          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNaURTWjFOazlyZ2FZMk5BV0xKTm5OT0VyQjZvU1pNSDhlbmlTVTZqdGxFVmV2WUNlazZJZW5HRnl0MFloa2IwT2xYa2hJUVpDSUowdEhmMDdacHR6WmNpQmhLV3dIUnd4Z3FZaW5wR0hieHVXQTF2UXRlQlNCS1d2Nk15eUwzQjVxOGFhMUI5clVNRzYyanBKNmNPdDNBdnJ0QUg1LThwSjZwaVlDd05yT0JFTQ?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T11:36:13Z",
-          "summary": "How C3 AI agents will automate predictive maintenance for Shell&nbsp;&nbsp;AI News",
-          "company": "Shell",
-          "commodity": null,
-          "flags": [
-            "outage"
-          ],
-          "score": 2.8262,
-          "title_norm": "agents automate how maintenance news predictive shell"
-        },
-        {
-          "title": "Shell expands predictive maintenance with C3 AI - Let's Data Science",
-          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPNVlidk5NeGo1QlI3UTNianZCcDhFT0J2SVo1eG5IdzRJZkhYYVUtOE5ETldiUUJ5LTV0bzVZWG02ZkszNFNzZ0N4UXl4OXlZakNfYVlEN2tEdW9mQUJYc2wtZ3pPZXJfTl9kRGQ4WlB6cVlfRlRGWDFDUHlVWHdEeUplak02d2NHWEkzazlzRi1HQmM?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T11:34:09Z",
-          "summary": "Shell expands predictive maintenance with C3 AI&nbsp;&nbsp;Let's Data Science",
-          "company": "Shell",
-          "commodity": null,
-          "flags": [
-            "outage"
-          ],
-          "score": 2.8255,
-          "title_norm": "data expands let maintenance predictive science shell"
-        },
-        {
-          "title": "Mercuria snaps up Shell venture’s oil assets in $1.4bn deal - TradeWinds News",
-          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPa0tsb2JyWUVxNWZMeWRta2tqWDZ3UzFTN3ZlelFYY0NKQlN5aWdZQkZjTVdYRWxzWnZZd0ZaZFVpXzBCNFF3UDRraUdhY3J5THpfdG5jN1MzTEpNZXhKT29BbWtNaG9PZDFta1FYRktFN29lVmY5bm9zTHN4X0VfYVMzYVk0dzMxdkRqdnJMU1NmV3BvSV9nczMtdklqUXRXeU9hVzJGWUtKNUlsbEE?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T10:56:14Z",
-          "summary": "Mercuria snaps up Shell venture’s oil assets in $1.4bn deal&nbsp;&nbsp;TradeWinds News",
-          "company": "Shell",
-          "commodity": null,
-          "flags": [
-            "ma",
-            "esg"
-          ],
-          "score": 2.8139,
-          "title_norm": "4bn assets deal mercuria news oil shell snaps tradewinds ventures"
-        },
-        {
-          "title": "Shell expands predictive maintenance programme with C3 AI - IoT News",
-          "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBCNVFzS0JMeGJZMGlKaUJYbWlmRnU3RWJIdTIwZV9ES0NBTm5GbmJvc0ZLRGlDOXhKcHZYdGZXWEkxeFUtNWZnRk81VWtkWUQ1aUpEckpQcmd0a3EwNkhTTVhjWlVtOUZad0Vwd2FzOVF6UQ?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T09:01:09Z",
-          "summary": "Shell expands predictive maintenance programme with C3 AI&nbsp;&nbsp;IoT News",
-          "company": "Shell",
-          "commodity": null,
-          "flags": [
-            "outage"
-          ],
-          "score": 2.7809,
-          "title_norm": "expands iot maintenance news predictive programme shell"
-        },
-        {
-          "title": "Shell chartering arm Stasco’s earnings slide as costs rise - TradeWinds News",
-          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOeFpGYUlnbXFvdS1PVThRUTZnajFjemlHVW01VDFQZzJVajNGVDZodVNRSGxEV05tb1RMTXJYQnB1MzJPYW5YS2JHX2JTbTVybXpJY1NqdFFSbjM3WEJhanJpcnFkQlVpd3NxQlhxS2NEcFVtWEszUTktLXJhLU05QndGcW9oMm1zQVdZRkdaWFFtaGpwa29CTGZ0cmNoQXBSdktiWFFJQTZJaDk4SWc?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T08:33:16Z",
-          "summary": "Shell chartering arm Stasco’s earnings slide as costs rise&nbsp;&nbsp;TradeWinds News",
-          "company": "Shell",
-          "commodity": null,
-          "flags": [
-            "earnings",
-            "esg"
-          ],
-          "score": 2.7735,
-          "title_norm": "arm chartering costs earnings news rise shell slide stascos tradewinds"
-        }
-      ],
-      "flags": [
-        "outage",
-        "ma",
-        "geopolitical",
-        "esg",
-        "regulatory",
-        "earnings"
-      ]
-    },
-    {
-      "name": "ExxonMobil",
-      "sector": "energy",
-      "country": "US",
-      "items": [
-        {
-          "title": "ExxonMobil Baytown bids farewell to three - Baytown Sun",
-          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNa0lMTm5qSnFOVWpFbDFXX0NqUUU2S1VtVzBZQXBFeUo0a18zbU5tbnZpZWJGblJkZm83VG1OV3J6M3VjNVhzR0djRzhmUDN4dDV3eElZUzZQUU94bHVPcUpFSGJxLXAtNDVHQkN0WVhhUGtfQ25jcU5rdFRwelhUSklkRzFVMGpnUXR5X1hZbjVQWjQ1azhObjVpM25uTlo5YjRWTUtMUjI3cnFUTkduQ0RPbFRkbGliTDRWLQ?oc=5",
-          "source": "Google News",
-          "published": "2026-06-06T00:11:00Z",
-          "summary": "ExxonMobil Baytown bids farewell to three&nbsp;&nbsp;Baytown Sun",
-          "company": "ExxonMobil",
-          "commodity": null,
-          "flags": [
-            "ma"
-          ],
-          "score": 3.1746,
-          "title_norm": "baytown baytown bids exxonmobil farewell sun three"
-        },
-        {
-          "title": "Regency Capital Management Inc. DE Decreases Stake in ExxonMobil Corporation $XOM - MarketBeat",
-          "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNV1RPQUI4Vll6S3ZDbXBMTDNEM09oN25HWFlwWW9LSmlCcGoyb1AwN0hFZTl3ODZDQm14SEJqRkg2Z0l1cnZmTnV2aVNaVVZNZzdpQW1FV1U0eXJ6cXhoTnZvSlBwM2R3XzZHajNsLVNSZ1ZnaVVfU3lndUV2ekZ6VDZyRVRWanZiN1d5dHdvSDlPUjljQS00ems4MTBHUko1OWJXSEpVNmNFR1hZOFNLdXZlRDNQajFJVU13cmh1OW5HMS15QnNjODFNc1Rhckl3bmI1V0VoTQ?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T10:17:27Z",
-          "summary": "Regency Capital Management Inc. DE Decreases Stake in ExxonMobil Corporation $XOM&nbsp;&nbsp;MarketBeat",
-          "company": "ExxonMobil",
-          "commodity": null,
-          "flags": [
-            "ma"
-          ],
-          "score": 2.8024,
-          "title_norm": "capital corporation decreases exxonmobil inc management marketbeat regency stake xom"
-        },
-        {
-          "title": "Oil shock warning: Exxon sees Brent at $150–160 as US inventories hit 22-year low amid supply squeeze - Firstpost",
-          "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPZndwRXBXcEEwYnRYZmdfdUVwR0s5T25hLWt5blkyTkYwNFJDeWk2eDBNMU1JREh0dkQyS3JRdVhpaGF5VW03X2lmTzRwWDRvQlh1RXRZMjV3MEpjV1RSdXZweHZXaWFQcmgtZDdmOVZOR19fQU1OZkdKN285di10aGV2MWZ0SWNPODl3MnlmMzNJdnJRdWZ1MmFNX0VtNWdCemRLUFpINmZuX0ppRV9qMndSZl8wMWFiVlMtX3ZzQ2x3ejZ0T3ZtZ2c4RnppWVAzdUZXMTNna1Y4VXNvWlF1T0d30gHnAUFVX3lxTE5pazdIcThzRkVfYmE4V0dKTmQ1dDJUOElidlNTdHRFR2hONjM2QkF6Y2hiVmxfSG5wOHZTaG1QNjFfamRVa1MwUlN4d254bmhrLWtIY3lfOTRmdzM4Z2k0amNiWUFjYnM4MjRQZW5GUDRJNWFEOFdKZzh3OURZdkNFcmdTY0lSRGl3XzBGdC1LRkVFT3BzUFJaaUNabW4tekZzdllQdjBrQlllOVEtVnlNeEpQMnVFR1h0R2tvZVdqNjhvRnZnbXdCUGtGVGNFZ1F6V1JZVFRLeTN6WTJhZTVWSU0wUDNtbw?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T10:10:30Z",
-          "summary": "Oil shock warning: Exxon sees Brent at $150–160 as US inventories hit 22-year low amid supply squeeze&nbsp;&nbsp;Firstpost",
-          "company": "ExxonMobil",
-          "commodity": null,
-          "flags": [
-            "geopolitical"
-          ],
-          "score": 2.8003,
-          "title_norm": "150160 amid brent exxon firstpost hit inventories low oil sees shock squeeze supply warning year"
-        },
-        {
-          "title": "ExxonMobil (NYSE:XOM) Trading Down 1.2% - Should You Sell? - MarketBeat",
-          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPRzEwM1ZmTzNyTW9zVTY5WF9ORnducUtZc2hoU0xQcy1RSm5LRE5aUU1OaFBtOUlaajJ5SkhibDhGVXVpRXJXZXNHQVU4djg0djRBM0ZmZ2hqUTB4Sm5TSlh2V0FwSldxdmd1MzBIS3FlczBGMms1ZkpnVGJXMlRfTGVENk9ZcVZrTkVkRmNFVzRhOVNGcUF6SEZJVEdSOXczMVZfRUI0dw?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T21:17:02Z",
-          "summary": "ExxonMobil (NYSE:XOM) Trading Down 1.2% - Should You Sell?&nbsp;&nbsp;MarketBeat",
-          "company": "ExxonMobil",
-          "commodity": null,
-          "flags": [],
-          "score": 0.5705,
-          "title_norm": "down exxonmobil marketbeat nyse sell trading xom you"
-        },
-        {
-          "title": "Here's How ExxonMobil's Advantaged Assets Drive Growth and Resilience - TradingView",
-          "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNMlVaT2JrbExjVk9DcTZ1WU9QSzQ0S05qaVBaWERQTnQ3ZlRlaTRyV1RidDdsS292TW9SWUZ2NDhYUzNObk9vanp3YmhTNWZJSHJJQkJNOE56ZEJfZFFLWno2MEp1MXR5ZXpoSU94dUFlVlVYWVRaN250T3YtY3dWaU9JN3U5RDNQYTZXSE51QjVweHcteGRVY1FHaldady1OWHRUVUdTM1dmb0h3dWc1d0l4TG53TkN1ZEVweWh5dEdEQ0E?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T17:35:00Z",
-          "summary": "Here's How ExxonMobil's Advantaged Assets Drive Growth and Resilience&nbsp;&nbsp;TradingView",
-          "company": "ExxonMobil",
-          "commodity": null,
-          "flags": [],
-          "score": 0.4607,
-          "title_norm": "advantaged assets drive exxonmobil growth here how resilience tradingview"
-        },
-        {
-          "title": "ExxonMobil Corporation $XOM Shares Acquired by Vise Technologies Inc. - MarketBeat",
-          "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQUjFYMWl1TExXLVk5aHJ3Z1BFeVNuMUdZOTc5ekdfSHdwMjNPLXNZWWthRVpjcDdvSkY2TUVRRnIxa3VMWmxsdHRGNHh4RnVpaVFPRS1pZy1aeC1sTUVPcl9OaWlKd1RGYTVodm5mRDd4UWNYbnJtYWRyQ3FUWklCcGFjY1NlanlqSWVteDdWQVRYYmJobTRlbzRIUzFQVjNkWHlRd1dlTy1WUTVNaGRZd3VQTWV0cjZnUEMzVi0zUDhJdkNBdmNV?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T11:26:40Z",
-          "summary": "ExxonMobil Corporation $XOM Shares Acquired by Vise Technologies Inc.&nbsp;&nbsp;MarketBeat",
-          "company": "ExxonMobil",
-          "commodity": null,
-          "flags": [],
-          "score": 0.3232,
-          "title_norm": "acquired corporation exxonmobil inc marketbeat shares technologies vise xom"
-        },
-        {
-          "title": "Parallel Advisors LLC Has $9.32 Million Holdings in ExxonMobil Corporation $XOM - MarketBeat",
-          "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNaUdsM18wQnBXWUo1ZFl6RTlRMFRvSkVYMUJGNEpSYVNpQ2JOVEtINDI4aGwwb0dINTFTSXpTekJBWDJPOE9BLWpna3JfN01GWU9pekx0b1oya056TENMc3paY3RGNHRtNDkySHhNdFBjWE1NdjgyUnlPQ2liQVFxbVNzOHJXUTNLbk4zaWZRZGpMZ2tad0VfeUZLVEFFQWdsREdvS2JpbWNRMmVUdkkxTXc5TTg5ay0takxhdFhTRWpPREVJOHZnQU1nRGRHaEdMR3hF?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T11:16:33Z",
-          "summary": "Parallel Advisors LLC Has $9.32 Million Holdings in ExxonMobil Corporation $XOM&nbsp;&nbsp;MarketBeat",
-          "company": "ExxonMobil",
-          "commodity": null,
-          "flags": [],
-          "score": 0.3201,
-          "title_norm": "advisors corporation exxonmobil holdings llc marketbeat million parallel xom"
-        },
-        {
-          "title": "Randolph Co Inc Increases Position in ExxonMobil Corporation $XOM - MarketBeat",
-          "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNNmNUZWpPUWxFVWxEVExNQjl6SDJuTmwzWUw0VmFPZGJaZG5NOXlmMi1uNzBFWmprX2NtbEU0UThjeVNnQjBKRlh6MGtUbzlRODNtNkZxdEhhYWFYTmtNdTJWOW4weDJKYVRIZWRQOXlIcUpKMXdjaGxUbzFUd053M2FFV1lrS2lFOUh0d1dXMEF2a2ZmVFVQMmM5N1M1UWZfSF8ycVozMVQ4VmdCQlNVM1NQOHNLSFNvZ2JHQWRLYVV2VkE?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T10:53:39Z",
-          "summary": "Randolph Co Inc Increases Position in ExxonMobil Corporation $XOM&nbsp;&nbsp;MarketBeat",
-          "company": "ExxonMobil",
-          "commodity": null,
-          "flags": [],
-          "score": 0.3131,
-          "title_norm": "corporation exxonmobil inc increases marketbeat position randolph xom"
-        },
-        {
-          "title": "Total Wealth Planning & Management Inc. Makes New $1.73 Million Investment in ExxonMobil Corporation $XOM - MarketBeat",
-          "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQMlRkM2VFbjdkNzNQdHhKaEdqQ1p4Q2FvS0dIa29rWlhwSGUyZ05lYWZ6a21ybW0xTnBCSTZndVNxY3BnV0dWZUR1UzN0VFhjVnBrdll5V1BoZDFzd2tJbGZxdkZNVno3ZVNkX3oyYktqYjhKYVhUQUNDdm5tQVV6WVg1M0g2REpPSWk1Yk4xWWVKTVJhZG9PRU1sbmhKTExkaFVHSUI0ZWJxNzhxT2dNU2c2RTNpZjNXVzJ3aDBBWWU5a1pvRkZ2ZEtOTWRZSGhfLWFTWHRYWTZsNC1KV0d2UG5iNEdwOVA0bVVOOVhtMmRLQQ?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T10:53:39Z",
-          "summary": "Total Wealth Planning & Management Inc. Makes New $1.73 Million Investment in ExxonMobil Corporation $XOM&nbsp;&nbsp;MarketBeat",
-          "company": "ExxonMobil",
-          "commodity": null,
-          "flags": [],
-          "score": 0.3131,
-          "title_norm": "corporation exxonmobil inc investment makes management marketbeat million new planning total wealth xom"
-        },
-        {
-          "title": "8,438 Shares in ExxonMobil Corporation $XOM Purchased by Greenspring Advisors LLC - MarketBeat",
-          "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPYzhobFhSeE9mWnktWmhqSTg5YjhZQ1UtZmM0WFZoUzlJQmdydVY1aG1CZDdOcnRMUW9weWR2c1hGeXhCV1FfNXgyaGM2NjJ6U1lFRmYyTjYzT1FBS29rcHlrMEJRT2dtcjUzOTJ1ZnlTLTVKTjB3dFA5MTlvUVo1UHpXOWloRkRTek1SbnM4VkZqSXBPQk41cW9Celpka2lmNzNVTDg1M3hwTlRnVko4Tkp5d2ZkX2FlODZkYVQyOHFwOFdabmhELTkyYk9KdWJGV3JiamR3MA?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T09:50:26Z",
-          "summary": "8,438 Shares in ExxonMobil Corporation $XOM Purchased by Greenspring Advisors LLC&nbsp;&nbsp;MarketBeat",
-          "company": "ExxonMobil",
-          "commodity": null,
-          "flags": [],
-          "score": 0.2946,
-          "title_norm": "438 advisors corporation exxonmobil greenspring llc marketbeat purchased shares xom"
-        }
-      ],
-      "flags": [
-        "ma",
-        "geopolitical"
-      ]
-    },
     {
       "name": "Chevron",
       "sector": "energy",
       "country": "US",
       "items": [
-        {
-          "title": "Chevron posts strong Q1 2026 with revenue growth, solid liquidity, and attractive valuation. - Pluang",
-          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1YNE43RjlnLU9aQU1adm8tQ0IycFRJaE9yWUJiWUxZdjJXV1JxaWswNWlWdFd6bUhkQVBMRzVkenpSQmd5SnVxSDcyQUM4Nld4U25oc2xaNTlhZjdOU1NTWHhadkFHd2xaSktTZ1ZzanRqdlZ3NkJ4SDFXX2tHaTQ?oc=5",
-          "source": "Google News",
-          "published": "2026-06-06T01:02:35Z",
-          "summary": "Chevron posts strong Q1 2026 with revenue growth, solid liquidity, and attractive valuation.&nbsp;&nbsp;Pluang",
-          "company": "Chevron",
-          "commodity": null,
-          "flags": [
-            "earnings"
-          ],
-          "score": 3.2089,
-          "title_norm": "2026 attractive chevron growth liquidity pluang posts revenue solid strong valuation"
-        },
         {
           "title": "WED 2026: Chevron Nigeria and Mid-Africa Region’s Commitment to Environmental Stewardship - Energy Focus Report",
           "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNR3VpbmxGazU5bERuVHBucUVab3dRTXZpa0gyTXNzRXpmTHlmZmlEenBJUHlKRDNJb0hHQkdCUHEtRHFVSXJKQ1VWRTNuZGhObGJLSUhfYVI4OENYOVBuNzZNNTJMN2ZYZ3B0TTUzRmFaMXI4LTdRemw0NGx6OUdlbE90d1ZRTjdSd1g5eU9oUl9sRl9mSmlKc2pxb0VuTXFzUGpiWURBTS1DM0pKMmk0eHBoM2ZrVDREZDBFcnEzOA?oc=5",
@@ -546,8 +264,10 @@
           "flags": [
             "geopolitical"
           ],
-          "score": 3.0777,
-          "title_norm": "2026 africa chevron commitment energy environmental focus mid nigeria regions report stewardship wed"
+          "score": 2.9131,
+          "title_norm": "2026 africa chevron commitment energy environmental focus mid nigeria regions report stewardship wed",
+          "consulting_label": "Compliance Risk",
+          "why_it_matters": "Geopolitical exposure — sanctions risk or trade compliance advisory."
         },
         {
           "title": "Chevron's strong cash flow and steady dividends make it a top long-term stock choice for investors. - Pluang",
@@ -558,197 +278,57 @@
           "company": "Chevron",
           "commodity": null,
           "flags": [
-            "earnings"
+            "earnings",
+            "enterprise_risk"
           ],
-          "score": 2.929,
-          "title_norm": "cash chevron choice dividends flow investors long make pluang steady stock strong term top"
-        },
-        {
-          "title": "3rd Annual PBR Chevron Showdown Recap - Yourbasin",
-          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNeWJLVXN5SHE3LUFZa2t0ZVNLMlB0S3QzRV9FVEVxWEl3TTlHMElTZ1laQ1ZhUk10cC1Ham82RzlSa1pvTmJwZFF2c2dGWXp6RFFPdHNnNU1FbWs0Uzg1ZkNaSGNBVWtFQ0RLQW54emFfbzVFWUd5cE83Vi1QUmVfZ19xdV9tZw?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T15:42:28Z",
-          "summary": "3rd Annual PBR Chevron Showdown Recap&nbsp;&nbsp;Yourbasin",
-          "company": "Chevron",
-          "commodity": null,
-          "flags": [
-            "earnings"
-          ],
-          "score": 2.9134,
-          "title_norm": "3rd annual chevron pbr recap showdown yourbasin"
-        },
-        {
-          "title": "Price Prediction: How High Can Chevron Soar This Year? - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQalM2Y3NlbW53cjZRZFNNcGp2Q1hBZkFobjZ4bFY4OWNiN0xYbmg1WHh6SU5DbkFqc21ram5WRUVCSWJiTERkSHd4Y3dlUUV3dlZ5SEFZX0hoZ0d1NmxiUWVwMEx1ODZpS0hYNU1ERmo3ZDFzQ2N1cndDOWtSZ09KQVhWZnVRaXdGaTJGM1ZjcGg1YnpMX2ROQnFFc0FSdkst?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T15:26:12Z",
-          "summary": "Price Prediction: How High Can Chevron Soar This Year?&nbsp;&nbsp;Yahoo Finance",
-          "company": "Chevron",
-          "commodity": null,
-          "flags": [
-            "price_shock"
-          ],
-          "score": 2.907,
-          "title_norm": "can chevron finance high how prediction price soar yahoo year"
-        },
-        {
-          "title": "Chevron Looks Fully Valued As An Iran Deal Could Send Oil Lower (Rating Downgrade) (CVX) - Seeking Alpha",
-          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNM0cyOWxYWGpnZzA1LXZJZnZmdkt1cFpOUHRNVTBENGVmQS0yOUFiVVFkUlQ1ME9sdzljZ2MwQWxRaGhUUUp1MFlPQlNSc25oc3ZvdmoyRUlOeEZnUE9IelZXd2tJcy1JQmJjUWs3U0NocFpxSmVwanVKMlRfcERQWkZEeUI1WnVQQk4yandFNkNNTm81dE40UWdsUUpmeWFVOXlvV29XaTlNTnFiOVRaVkFiN2hLWHRKRG9HZE53?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T12:30:32Z",
-          "summary": "Chevron Looks Fully Valued As An Iran Deal Could Send Oil Lower (Rating Downgrade) (CVX)&nbsp;&nbsp;Seeking Alpha",
-          "company": "Chevron",
-          "commodity": null,
-          "flags": [
-            "ma",
-            "geopolitical"
-          ],
-          "score": 2.8437,
-          "title_norm": "alpha chevron cvx deal downgrade fully iran looks lower oil rating seeking send valued"
-        },
-        {
-          "title": "3 things to know this week — No Richmond BART service Sunday, smarter traffic signals, Chevron emissions project - Richmondside",
-          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPanFYemV6WDhGVVlCNmFESUgwS1FtRXRRWTlnU1VNX0JxQ1pZOHdJajItMlh3LVpwV3VKZTNubWYyd3hDamI5Q2luaXp2VkxtVEE3VDctQ1dTYUJyTkZ1Y3NQWEpKUnNvc2YzX3dOVDlOaTY5VWhSRnpEN21YRW1Db3NDUjFZMzJGSldtRjdKUXZWNEpIX3c?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T12:30:00Z",
-          "summary": "3 things to know this week — No Richmond BART service Sunday, smarter traffic signals, Chevron emissions project&nbsp;&nbsp;Richmondside",
-          "company": "Chevron",
-          "commodity": null,
-          "flags": [
-            "esg"
-          ],
-          "score": 2.8435,
-          "title_norm": "bart chevron emissions know project richmond richmondside service signals smarter sunday things traffic week"
-        },
-        {
-          "title": "WCG Wealth Advisors LLC Increases Stake in Chevron Corporation $CVX - MarketBeat",
-          "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPaXpLbzNkVG5FbEJHWWNrX0xPSUpSSm8xOUhQQlJhY2puQ0UyVVNsUmVZSG4wdHZ5MWZHYkJSZjl4b1F3SjBWemtpMVFoTG83ZUhrbjZjOHVYNmJycjF1ZjVYNGhPdW1kWXJIbENTaDl2ZjI5eHotcnNnV3pyaHRSa0p1RENnQWtUTW5NS0RjU1dyZVIxbTRTSHpIYTc2WGpwaGp2a2l5MVFpeUN3VzMzbEF4cVpXcnVNRFpaVkRERFdIWDVOQUE?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T11:11:32Z",
-          "summary": "WCG Wealth Advisors LLC Increases Stake in Chevron Corporation $CVX&nbsp;&nbsp;MarketBeat",
-          "company": "Chevron",
-          "commodity": null,
-          "flags": [
-            "ma"
-          ],
-          "score": 2.8185,
-          "title_norm": "advisors chevron corporation cvx increases llc marketbeat stake wcg wealth"
-        },
-        {
-          "title": "Professional Bull Riders flash 8-second magic in 3rd-annual Chevron Showdown - newswest9.com",
-          "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxQeEtNU2pidGw1clE2SDZSY2dYZ2t1aXVFRUcyNTZ2bG9VX0ZHbEhKbkhzWFcwemExdDVFVzlIRU5TSGV0N0hzQ1FWMHpXVWdhVXh3VlpWVEFwRjVpS3pZdEFoQ21UOHY5TlZaUnJ5bDZPYjVyXy16azdYMDl5RF81MGxScGd3QTRhSC01RHVYcTEwSkNQUjVwWVk3aG9aNjZXOTUyUWlTelNRZW9EUVhIRll0MW4yUm05YWFwVGdBWTJOS3NSTUNVZ20yTW05VmdIV3RldWZVQkZQemxKemhLV3RnNDhtYVRwTlU3QXZiaHVOdGJ5dWdwUlNOejJtdzNm?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T05:29:00Z",
-          "summary": "Professional Bull Riders flash 8-second magic in 3rd-annual Chevron Showdown&nbsp;&nbsp;newswest9.com",
-          "company": "Chevron",
-          "commodity": null,
-          "flags": [
-            "earnings"
-          ],
-          "score": 2.729,
-          "title_norm": "3rd annual bull chevron com flash magic newswest9 professional riders second showdown"
-        },
-        {
-          "title": "3rd-annual Chevron Showdown highlights 8-second glory for bull riders - newswest9.com",
-          "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxPNTl1bXd5amE5bVN5U1Z2cHNORGxDZlEtdUZVM1puR1ZwYjNvMm9vOVd4eFhXRnNTUUQzRjVjaGQzNXJmYXVKU2QwSHBRZ191UTJ6MHBRX0t1MmtrYzVOdkRWcjB6VzNvNHdMMW9sNXdVVkI2d3dZQmRtbEIxMHVpc1RTYnJlSU41RkRrbTc3a0FPSzFIY3hWTUlOMzVUdmhnTUVJckw0OGVhak5TU3hQSy1EU3dHNG1OX0RuZTdCN0NWTV9GNmFueWdzWWpDUkloU1pBRjdSb0ZhRG9zTXMzVnJXR2lVMXJMVE5hVC1iT3VvaWFL?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T05:17:00Z",
-          "summary": "3rd-annual Chevron Showdown highlights 8-second glory for bull riders&nbsp;&nbsp;newswest9.com",
-          "company": "Chevron",
-          "commodity": null,
-          "flags": [
-            "earnings"
-          ],
-          "score": 2.7264,
-          "title_norm": "3rd annual bull chevron com glory highlights newswest9 riders second showdown"
+          "score": 2.8067,
+          "title_norm": "cash chevron choice dividends flow investors long make pluang steady stock strong term top",
+          "consulting_label": "Enterprise Risk",
+          "why_it_matters": "Enterprise risk or governance signal — ERM framework or internal audit advisory."
         }
       ],
       "flags": [
-        "price_shock",
-        "ma",
+        "earnings",
         "geopolitical",
-        "esg",
-        "earnings"
+        "enterprise_risk"
       ]
     },
     {
-      "name": "Woodside Energy",
+      "name": "ExxonMobil",
       "sector": "energy",
-      "country": "AU",
+      "country": "US",
       "items": [
         {
-          "title": "Japanese player to take stake in Mexico-bound floater - Upstream Online",
-          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPRFlqOHo3NWRzcmY3WDJBd2pPc2J3aUlUWm9iVDRlQ1JGVkgxb3FGSzh6NVBoS2VrZlIzaXRaWGVhSUM2OGhVUWJXMXhnMEhVUWVlbFNCcUwtUmNkNC1NTDdzeVV6S0I3dWRBQVc0dXFCczU5cW16NTFCRHZFX3NGYWx4bmE3UkZGdWt1d2lzemtHaGZVTUVsMmJtdFdyLUdtRjh3d25nUV9pMDJnUnpvSTl6WQ?oc=5",
+          "title": "BI Asset Management Fondsmaeglerselskab A S Grows Stake in ExxonMobil Corporation $XOM - MarketBeat",
+          "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPVG1qMXlKRk5OeG0tNUN2RmdWZU8wWU51QmVfZ0dBOWIwNGs4X24wTmlreUVaejZwd25JM1htWFNGejNEQmdWUzU2Y3J5MUdfc2xhZEs2a3NEUVFpQmlibk5NM0d3NFR6THhlamhfMDY3ekEtVE5yQTI1RjNuV0RrY0NwdUItUXhmS3NXWXdsbGlxSVlIQTFGSGtSV2t6SkNhNjFMcGtpekw2VVZkSU1qd2NXRFduakRtampFN045SG5wZnVGZjdrckdnQTBqb25uNmxSaFhkbzhxbEVQeGlF?oc=5",
           "source": "Google News",
-          "published": "2026-06-05T05:36:11Z",
-          "summary": "Japanese player to take stake in Mexico-bound floater&nbsp;&nbsp;Upstream Online",
-          "company": "Woodside Energy",
+          "published": "2026-06-06T07:25:06Z",
+          "summary": "BI Asset Management Fondsmaeglerselskab A S Grows Stake in ExxonMobil Corporation $XOM&nbsp;&nbsp;MarketBeat",
+          "company": "ExxonMobil",
           "commodity": null,
           "flags": [
             "ma"
           ],
-          "score": 2.7306,
-          "title_norm": "bound floater japanese mexico online player stake take upstream"
+          "score": 3.2326,
+          "title_norm": "asset corporation exxonmobil fondsmaeglerselskab grows management marketbeat stake xom",
+          "consulting_label": "Integration",
+          "why_it_matters": "M&A or JV activity — potential integration, due diligence, or PMI mandate."
         },
         {
-          "title": "Class of 2026: First-generation Woodside athlete finds inspiration in his family’s journey - The Almanac",
-          "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOUDVMUGl3elUwN2d3VGtHTFJneHRZVTBhWXpLTUdkaTE1ZFhUVlZlUXZaV3lyWUs3Z2lKXzROS0pGX3JOdlFPZkxRN2hKeXNBczB5Mm01dGtPdGxnamZHOHpfRnJVSTBPSmdRXzNVYmpnVFVzMjlhZHNIVnk2bkduNHFSMEYyYmZUOHBQaFhET1NqcTNycUkyNFhsaWtTc09vbnA5SEZWaGdXSk9yeXdIQjc4NEo3MW93ZHBmSDJqT0E2YmRoS3ZjVzk1RF95LVVPc3VUTA?oc=5",
+          "title": "ExxonMobil Baytown bids farewell to three - Baytown Sun",
+          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNa0lMTm5qSnFOVWpFbDFXX0NqUUU2S1VtVzBZQXBFeUo0a18zbU5tbnZpZWJGblJkZm83VG1OV3J6M3VjNVhzR0djRzhmUDN4dDV3eElZUzZQUU94bHVPcUpFSGJxLXAtNDVHQkN0WVhhUGtfQ25jcU5rdFRwelhUSklkRzFVMGpnUXR5X1hZbjVQWjQ1azhObjVpM25uTlo5YjRWTUtMUjI3cnFUTkduQ0RPbFRkbGliTDRWLQ?oc=5",
           "source": "Google News",
-          "published": "2026-06-06T04:35:58Z",
-          "summary": "Class of 2026: First-generation Woodside athlete finds inspiration in his family’s journey&nbsp;&nbsp;The Almanac",
-          "company": "Woodside Energy",
+          "published": "2026-06-06T00:11:00Z",
+          "summary": "ExxonMobil Baytown bids farewell to three&nbsp;&nbsp;Baytown Sun",
+          "company": "ExxonMobil",
           "commodity": null,
-          "flags": [],
-          "score": 0.8706,
-          "title_norm": "2026 almanac athlete class familys finds first generation his inspiration journey woodside"
-        },
-        {
-          "title": "Woodside High School embraces new beginnings - The Almanac",
-          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxONzJrT0c3bmVwYVUyNzhRYXZxeTdNbjUtREs4Y3ZWcUdMUl9uNlFOVV8yRjEtVlpDMjB5WlVaR1lCcTk3d09NVVBqSjJ5emFLZjgtWUJTYTJabE1mRktSZWFnZVV6aDhmOXhlaFZJVVRBUkVaZ0NEcW8wa0FkalpzTDJ3eHNfQ0VpdEtpdDd5cVBmOEx1MGh0bXRB?oc=5",
-          "source": "Google News",
-          "published": "2026-06-06T03:52:14Z",
-          "summary": "Woodside High School embraces new beginnings&nbsp;&nbsp;The Almanac",
-          "company": "Woodside Energy",
-          "commodity": null,
-          "flags": [],
-          "score": 0.8347,
-          "title_norm": "almanac beginnings embraces high new school woodside"
-        },
-        {
-          "title": "Photos: French VC’s Woodside estate listed for $15 million - The Mercury News",
-          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOVGppczBoaURrcVF3bVBxSmtySXlyZHdtaS11VW1kQU95UHAxcFVWV3I0TnU0OWZMNGRsS3ZJYi1zb2NNdVNlV3R3NHROME5EWGJWb2RRNE14b0dYZmFWNGpuaUJGZGRJczh1eC1WZGtPVWZyXzI5YnJ0UVUxeEptV2VxVlkwRVNUdHNlbXZBMDhvWU01Qk4xZnZMc9IBoAFBVV95cUxOT1Y0VHFwY1R4aGRxV1hNNFJkLXRic0NPN2xXQWlMYV9WLVNJaFNmUmlWVGo2Mjd4c1BoUlJwTnJEc2VqYi03dGNDelVkVVQ1SjA0X2RZYmlvclRyR3R1bVVJdkpiUDNxV1I0TmZPNHBkZWRxTlc0QmF5T0g3d19DMnB6bV9ESWNnTVZ5NGtXNjBINkMzaUtyMVo5bUxnVFFR?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T20:18:32Z",
-          "summary": "Photos: French VC’s Woodside estate listed for $15 million&nbsp;&nbsp;The Mercury News",
-          "company": "Woodside Energy",
-          "commodity": null,
-          "flags": [],
-          "score": 0.5393,
-          "title_norm": "estate french listed mercury million news photos vcs woodside"
-        },
-        {
-          "title": "Queens officials press MTA to pay attention to poor conditions to transit in Woodside - Queens Daily Eagle",
-          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPdW5LYm93VFNBSUE0V2pEZW9lOWhLUTNya01XOFhMb19JRU5YQ3B3aW5GTFZILUIwT3F6cFh0M1R5OWVNREdrV005Z3ZlMmxIeE9ObTc0b0pKbmo0LUt3WEY1TXF4b0lveTduNzloSnN6c2lFU1h3REZxYXlOdDNOMmdmTFRXV21uWVFkOVBRMlBGTHBwSzE3RmJQbXVPdXJoTFptZnhhUVFkRTZyb2g0amIxZTRKTFM5MFUxR2MxMA?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T18:59:43Z",
-          "summary": "Queens officials press MTA to pay attention to poor conditions to transit in Woodside&nbsp;&nbsp;Queens Daily Eagle",
-          "company": "Woodside Energy",
-          "commodity": null,
-          "flags": [],
-          "score": 0.4999,
-          "title_norm": "attention conditions daily eagle mta officials pay poor press queens queens transit woodside"
-        },
-        {
-          "title": "Woodside LEAD Councils Support Senior Wellness and Domestic Violence Prevention in Southwest Louisiana - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOQTJscFJMWFVoc3NKblBua1VKYjBpN1FwWk4tV1d6eTVtNTFRZGpIcmxfS1NPUFBRV29RMXNzYjY1WmJWS24zSzRkUjlpMkZyN1FSak9iaE01UDczUWlBZkQzaFpsaF9BclJIRWM2eG1lYUdRT0c1OXd1LU1GVHFQS3QxS1E5enVITjdwS2plbHVYLVFxUmlxUHk4cTFHb0hvdnNQY091UUo0UQ?oc=5",
-          "source": "Google News",
-          "published": "2026-06-04T21:05:00Z",
-          "summary": "Woodside LEAD Councils Support Senior Wellness and Domestic Violence Prevention in Southwest Louisiana&nbsp;&nbsp;Yahoo Finance",
-          "company": "Woodside Energy",
-          "commodity": null,
-          "flags": [],
-          "score": 0.141,
-          "title_norm": "councils domestic finance lead louisiana prevention senior southwest support violence wellness woodside yahoo"
+          "flags": [
+            "ma"
+          ],
+          "score": 2.9824,
+          "title_norm": "baytown baytown bids exxonmobil farewell sun three",
+          "consulting_label": "Integration",
+          "why_it_matters": "M&A or JV activity — potential integration, due diligence, or PMI mandate."
         }
       ],
       "flags": [
@@ -771,8 +351,10 @@
           "flags": [
             "earnings"
           ],
-          "score": 3.1136,
-          "title_norm": "because berhad buy dividend don gas going just klse out petgas petronas race simplywall"
+          "score": 2.9388,
+          "title_norm": "because berhad buy dividend don gas going just klse out petgas petronas race simplywall",
+          "consulting_label": "Performance",
+          "why_it_matters": "Earnings or guidance release — CFO advisory, margin improvement, or FP&A opportunity."
         },
         {
           "title": "There May Be Some Bright Spots In PETRONAS Dagangan Berhad's (KLSE:PETDAG) Earnings - simplywall.st",
@@ -785,94 +367,13 @@
           "flags": [
             "earnings"
           ],
-          "score": 3.1136,
-          "title_norm": "berhad bright dagangan earnings klse may petdag petronas simplywall some spots there"
-        },
-        {
-          "title": "We Think You Can Look Beyond PETRONAS Dagangan Berhad's (KLSE:PETDAG) Lackluster Earnings - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOQmVGbXlPRFRoSWttWlFTaGVZSlRtTWQ1Y0FxOUJLaE0xOVhBTTNCWUMtVF9Cei1iQ3FGQlVwYy1RQ3IxREktWkhvWUNBODUxSjdodjcxdU5oTElwZTFnaUZ3a25SQ1ctWGlsQm5YRnY3ZEtHUWdyMHBBUVpwc2Q1QWw1OXc5TEc2TV90MEJNODFWdTNobWpCdDg0eURmdlVGeVE?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T22:16:43Z",
-          "summary": "We Think You Can Look Beyond PETRONAS Dagangan Berhad's (KLSE:PETDAG) Lackluster Earnings&nbsp;&nbsp;Yahoo Finance",
-          "company": "PETRONAS",
-          "commodity": null,
-          "flags": [
-            "earnings"
-          ],
-          "score": 3.1043,
-          "title_norm": "berhad beyond can dagangan earnings finance klse lackluster look petdag petronas think yahoo you"
-        },
-        {
-          "title": "Petronas Signs Offshore Oil Recovery Collaboration Deal - Offshore Engineer Magazine",
-          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQaEpxZUh4NXpXWHZqOG9GM29XUlJ0Q3N3bERmQ0VoNjRVVXY0dzRjQ0VicjVUY2VnRGlPWk11STNsZmNucUVyNnZUSzhOYUZkYWl4T2dZQVlCWHFWT3ZEN2JFak9ZbTMwcHo1T19pd3lXZ1VmdF9CYV9GaUZpQmxRNnFPcVplNzY0QlFITjZwOHhPWGdMNy1wXw?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T09:12:43Z",
-          "summary": "Petronas Signs Offshore Oil Recovery Collaboration Deal&nbsp;&nbsp;Offshore Engineer Magazine",
-          "company": "PETRONAS",
-          "commodity": null,
-          "flags": [
-            "ma"
-          ],
-          "score": 2.7841,
-          "title_norm": "collaboration deal engineer magazine offshore offshore oil petronas recovery signs"
-        },
-        {
-          "title": "Courtesy Call by PETRONAS Iraq - Home - Embassy of Malaysia, Kuwait - kln.gov.my",
-          "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPNG9QMnprRkR3TkN1b0d1SmdzcU5mVmhLM2F1WkVyemZ4cGxyX1F3YUZwbTZxSW5zT1pvMWVDRklueXRZdzY5a2dXamhkdnJxRXppUzdVOVgybEkxUGx6MmhnN1gyQlgzN2pmLV9CdW1DaDcySlRSMURXZjF6cmZVVGFxSXJjczdtZGRiSm9lUUw1UlZzckdTYktyZHE2d09OdGpUb1V0cFNuR3dDVk9NWkNQSHpCcThXdzYyZzVfOGk2NWl3TnFndDNB?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T06:42:39Z",
-          "summary": "Courtesy Call by PETRONAS Iraq - Home - Embassy of Malaysia, Kuwait&nbsp;&nbsp;kln.gov.my",
-          "company": "PETRONAS",
-          "commodity": null,
-          "flags": [
-            "regulatory"
-          ],
-          "score": 2.7459,
-          "title_norm": "call courtesy embassy gov home iraq kln kuwait malaysia petronas"
-        },
-        {
-          "title": "PepsiCo's Formula 1® and Mercedes AMG-PETRONAS Formula 1 team partnerships: How Kimi Antonelli and Formula 1’s momentum is building in 2026 - PepsiCo",
-          "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQNmt6R1V0dTNCOGNaeHp1dDY0UkZTaFFDVFo1SVc0ejllc0U0c2ZjMjdwYkRDcVpkM0Y1M1RhWDE2ZWVONXBLWWlZbWd5V0dIS3dLbFdfY3I4UXE0d1VDUzdQSDl0X1NfellOYzIycEdjRThqZjRqdkNzTVhDdHJiT2RjaDFlUU5MMWJkT2tOOC1LS09CV0R5NUgtNkhVNHJmNjdKc0VWRFJmOEhwR2NlXy12QXpXclNNWGJLYnVfanVyeVNhWmhjbnJPRk96eXhRUm5JQVRPS01oZWpB?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T00:00:00Z",
-          "summary": "PepsiCo's Formula 1® and Mercedes AMG-PETRONAS Formula 1 team partnerships: How Kimi Antonelli and Formula 1’s momentum is building in 2026&nbsp;&nbsp;PepsiCo",
-          "company": "PETRONAS",
-          "commodity": null,
-          "flags": [
-            "earnings",
-            "ma"
-          ],
-          "score": 2.6669,
-          "title_norm": "2026 amg antonelli building formula formula formula how kimi mercedes momentum partnerships pepsico pepsico petronas team"
-        },
-        {
-          "title": "Asean energy heavyweights team up on oil recovery initiative - Upstream Online",
-          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOb2tJLXVPNzdLelZMVzAxck9SQW01SXlGeVJPajl2aGdtaDRNR052LUtiLTVaS0Y3MDN0emVRd0J6WEt3R210R0V3anp0ei1ubXZCQTZrMUtNUTVqcEVCTGQ0cGQ0ZDdrSWI2NVBWOWNheGtZcEtsdVVvTGkzaVZ2WUxINkpfV0JVU2sxUEZPQS1MX1RfdW1IRlI0VV9MVFlmNU1JQm9mSF94OE81WDNxdVNfc2s?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T23:56:58Z",
-          "summary": "Asean energy heavyweights team up on oil recovery initiative&nbsp;&nbsp;Upstream Online",
-          "company": "PETRONAS",
-          "commodity": null,
-          "flags": [],
-          "score": 0.6655,
-          "title_norm": "asean energy heavyweights initiative oil online recovery team upstream"
-        },
-        {
-          "title": "Petronas, regional partners to advance offshore oil recovery - Borneo Post",
-          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQaFNDR1loa1loMkRzVS1vaDF6dkl4MV9GeTZFZHR5X1ozODRsUENsWnZqS04zUUQwcktlcGV6MGRoczliMVdnNWJQeExzX2JNMTRORy1SNUFxcjFhTHFURUg5ZWJGS2dTX1Y1THVxWjdPRGRsRG55T1BuNnlqbWpEeWxFZHRTVVd1eVhyQlR1OXIwdmpnSkRHZ2JIeDlBMHV3SjU0?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T08:35:28Z",
-          "summary": "Petronas, regional partners to advance offshore oil recovery&nbsp;&nbsp;Borneo Post",
-          "company": "PETRONAS",
-          "commodity": null,
-          "flags": [],
-          "score": 0.2741,
-          "title_norm": "advance borneo offshore oil partners petronas post recovery regional"
+          "score": 2.9388,
+          "title_norm": "berhad bright dagangan earnings klse may petdag petronas simplywall some spots there",
+          "consulting_label": "Performance",
+          "why_it_matters": "Earnings or guidance release — CFO advisory, margin improvement, or FP&A opportunity."
         }
       ],
       "flags": [
-        "ma",
-        "regulatory",
         "earnings"
       ]
     },
@@ -881,6 +382,22 @@
       "sector": "energy",
       "country": "TH",
       "items": [
+        {
+          "title": "Fuel prices cut by up to 1 baht per litre at PTT, Bangchak stations - Thai PBS World",
+          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNR05SdnJhTFdIcFR5Z3c1Y0RYVkxrcWZ6SVNOQmJ4VjYyRlUySXFGakVycFhLRHlJd2pMdzkxSFZERHA3NnBlZjlfdzM4NjVValVzc0xGZjhheEVPOWR5ZjBqdTVoeC1oS0FQa2lYcnlHcDJOVGF4RG9rblE4cHQ2R2piUzNWeE5CdFozd1pWMjhKRVl6RmNPMEp1RW13OHZJMmpyMkN1LTh0TEE?oc=5",
+          "source": "Google News",
+          "published": "2026-06-06T03:17:00Z",
+          "summary": "Fuel prices cut by up to 1 baht per litre at PTT, Bangchak stations&nbsp;&nbsp;Thai PBS World",
+          "company": "PTT",
+          "commodity": null,
+          "flags": [
+            "regulatory"
+          ],
+          "score": 3.077,
+          "title_norm": "baht bangchak cut fuel litre pbs per prices ptt stations thai world",
+          "consulting_label": "Compliance Risk",
+          "why_it_matters": "Regulatory action — compliance advisory, remediation, or sanctions screening."
+        },
         {
           "title": "PV Gas expands strategic partnerships with leading Southeast Asian energy firms - Theinvestor",
           "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPZ2YzRjlwcExxRGp3UnhCMGNXYmw1d3lEcEJiOGlMOTJKNzBPZUphZzdIRm43akwwX3NYTkZ0WG9KMnZlSlVvcDZjam0yaFBFaDNMc1dQNGkwX0tUT3RlWHM3ZmtEd1d3VDB3bWVzVUlxRF9ZOGVCdlQ1NHBpT2RuR0NnV2w0ckltZG5Sa0xucW4tTmZRdjBoeGdUUGRkcFJEVURjd25VSVJyZkM0dnVVRV9qQzI?oc=5",
@@ -892,45 +409,87 @@
           "flags": [
             "ma"
           ],
-          "score": 3.2521,
-          "title_norm": "asian energy expands firms gas leading partnerships southeast strategic theinvestor"
+          "score": 3.0378,
+          "title_norm": "asian energy expands firms gas leading partnerships southeast strategic theinvestor",
+          "consulting_label": "Integration",
+          "why_it_matters": "M&A or JV activity — potential integration, due diligence, or PMI mandate."
+        }
+      ],
+      "flags": [
+        "ma",
+        "regulatory"
+      ]
+    },
+    {
+      "name": "Shell",
+      "sector": "energy",
+      "country": "NL",
+      "items": [
+        {
+          "title": "Colorful Moon Shell Wind Chime - Hanging Ripple Shell Decor For Garden, Balcony, Porch, Or Bedroom (Boho Style) - umlconnector.com",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPNUs3UkloM2hLQ2RoS1RnTUN0Sm1DS1hXeENHNkxtaGZlUWVDT2FDQ25RdGloZXZQTnVDVmlWcFRMZUNIMlBGZnhsLWhDZk1kc2FSYjZyNV9pd0JIdjlHbTBNeFlENWMwUVl3cGd5QkZpbEp4M1J2bHpOSTJ5bXpnTGJzUDlqdVdzaGRWNHJLTDhtdUN0WUFTSQ?oc=5",
+          "source": "Google News",
+          "published": "2026-06-06T11:11:13Z",
+          "summary": "Colorful Moon Shell Wind Chime - Hanging Ripple Shell Decor For Garden, Balcony, Porch, Or Bedroom (Boho Style)&nbsp;&nbsp;umlconnector.com",
+          "company": "Shell",
+          "commodity": null,
+          "flags": [
+            "esg"
+          ],
+          "score": 3.4108,
+          "title_norm": "balcony bedroom boho chime colorful com decor garden hanging moon porch ripple shell shell style umlconnector wind",
+          "consulting_label": "Sustainability",
+          "why_it_matters": "ESG or decarbonisation signal — sustainability strategy or reporting mandate."
+        },
+        {
+          "title": "What C3.ai (AI)'s Wider Losses and Expanded Shell Partnership Means For Shareholders - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPdmRUdUR2c3JnZnQ3dUZTMHo4RkpLNUZCRlN4V3hDbUQwNFoxYkVIemtxamxhbDE0bFBsX0hjc1FHb1JFRzUzTWFMRXhDUzRUZ0tUZW83LXh0TERpV1dOMnVnUWI5S2tmSlBObk8xeklUdzgyNHBkTjB5UWxGb0NzcWVKVDVmNVRvekk0dGc3OA?oc=5",
+          "source": "Google News",
+          "published": "2026-06-06T01:05:00Z",
+          "summary": "What C3.ai (AI)'s Wider Losses and Expanded Shell Partnership Means For Shareholders&nbsp;&nbsp;Yahoo Finance",
+          "company": "Shell",
+          "commodity": null,
+          "flags": [
+            "earnings",
+            "ma"
+          ],
+          "score": 3.0081,
+          "title_norm": "expanded finance losses means partnership shareholders shell what wider yahoo",
+          "consulting_label": "Integration",
+          "why_it_matters": "M&A or JV activity — potential integration, due diligence, or PMI mandate."
+        }
+      ],
+      "flags": [
+        "earnings",
+        "esg",
+        "ma"
+      ]
+    },
+    {
+      "name": "Woodside Energy",
+      "sector": "energy",
+      "country": "AU",
+      "items": [
+        {
+          "title": "Japanese player to take stake in Mexico-bound floater - Upstream Online",
+          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPRFlqOHo3NWRzcmY3WDJBd2pPc2J3aUlUWm9iVDRlQ1JGVkgxb3FGSzh6NVBoS2VrZlIzaXRaWGVhSUM2OGhVUWJXMXhnMEhVUWVlbFNCcUwtUmNkNC1NTDdzeVV6S0I3dWRBQVc0dXFCczU5cW16NTFCRHZFX3NGYWx4bmE3UkZGdWt1d2lzemtHaGZVTUVsMmJtdFdyLUdtRjh3d25nUV9pMDJnUnpvSTl6WQ?oc=5",
+          "source": "Google News",
+          "published": "2026-06-05T05:36:11Z",
+          "summary": "Japanese player to take stake in Mexico-bound floater&nbsp;&nbsp;Upstream Online",
+          "company": "Woodside Energy",
+          "commodity": null,
+          "flags": [
+            "ma"
+          ],
+          "score": 2.6649,
+          "title_norm": "bound floater japanese mexico online player stake take upstream",
+          "consulting_label": "Integration",
+          "why_it_matters": "M&A or JV activity — potential integration, due diligence, or PMI mandate."
         }
       ],
       "flags": [
         "ma"
       ]
-    },
-    {
-      "name": "Pertamina",
-      "sector": "energy",
-      "country": "ID",
-      "items": [
-        {
-          "title": "Photo News: PLN, Pertamina highlight progress in energy transition - Petromindo",
-          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNcHpQN182Q0paNmloTy04Mlo5T0pIZ25zTGZQZjlNdXRCZ3EzZDY4ZHhwLThuMU1sSzJVMERCUlZEcXp0Tm5jeFRpUU04bUtBMS1oUG1VcmF2WHpNU25VaVBQUlo4Ty1ueW16M2V1R0FqQzJwNWtqSE44T3lOczRvZTJOSld3U3NPdlNkQ2VpY2FicFVtRTg2MU9JU2hMcmNRMzhpYTdnSQ?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T19:01:01Z",
-          "summary": "Photo News: PLN, Pertamina highlight progress in energy transition&nbsp;&nbsp;Petromindo",
-          "company": "Pertamina",
-          "commodity": null,
-          "flags": [],
-          "score": 0.5005,
-          "title_norm": "energy highlight news pertamina petromindo photo pln progress transition"
-        },
-        {
-          "title": "Conrad Asia Energy Signs Rig Contract with Pertamina Drilling for Mako Gas Field - News and Statistics - IndexBox",
-          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNQVJ0ODBFbE9ROG5YUTBObVhjT3NHWmkybnNIVGhBUkVFLWp6akVFSTB5cUlWb0MweU9JbFlhX1ZOUk1IWHkxLVh4bjRsYjROc3JSTGdweENaMDQ2SWF6UnQ3QzRfU3doLTB2UXZOU2Ixa2htbnh3U0UtMm9McExNLTA2d2ZSNlMxeVFsZDMxaWU2eThPYm5DSUJJb3dURTA?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T08:21:00Z",
-          "summary": "Conrad Asia Energy Signs Rig Contract with Pertamina Drilling for Mako Gas Field - News and Statistics&nbsp;&nbsp;IndexBox",
-          "company": "Pertamina",
-          "commodity": null,
-          "flags": [],
-          "score": 0.2703,
-          "title_norm": "asia conrad contract drilling energy field gas indexbox mako news pertamina rig signs statistics"
-        }
-      ],
-      "flags": []
     },
     {
       "name": "Anglo American",
@@ -948,8 +507,10 @@
           "flags": [
             "ma"
           ],
-          "score": 3.0249,
-          "title_norm": "american anglo coal exit focus gb00b1xzs820 hoc merger news plan plc shifts stock teck valuation"
+          "score": 2.8753,
+          "title_norm": "american anglo coal exit focus gb00b1xzs820 hoc merger news plan plc shifts stock teck valuation",
+          "consulting_label": "Integration",
+          "why_it_matters": "M&A or JV activity — potential integration, due diligence, or PMI mandate."
         },
         {
           "title": "Botswana In Talks With The UAE And Oman To Help Diamond-Rich Nation Acquire A \"Strategic\" Stake In De Beers From Anglo American - Bloomberg News - TradingView",
@@ -962,192 +523,14 @@
           "flags": [
             "ma"
           ],
-          "score": 2.8535,
-          "title_norm": "acquire american anglo beers bloomberg botswana diamond help nation news oman rich stake strategic talks tradingview uae"
-        },
-        {
-          "title": "Broker tips: Anglo American, DiscoverIE, B&M - London South East",
-          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQeEZQaUpqOTg5cTBxcGY3TFZscjQta3RYaExvLXVHbmFrSXVRVHktTGdpZ3pUaG5qV1BORjVJaFNRQ0JRSVE4QVYwZDlvX25aOXA5a1JkV2lxcUdpMTVMQ3RKVTN0ZHRVQW9KdmZ0Y1I0aFZyanJzdHVZaUttQnJYYl9GTDd1aFBXdjV3TXhfLVRNZw?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T12:47:00Z",
-          "summary": "Broker tips: Anglo American, DiscoverIE, B&amp;M&nbsp;&nbsp;London South East",
-          "company": "Anglo American",
-          "commodity": null,
-          "flags": [],
-          "score": 0.3492,
-          "title_norm": "american anglo broker discoverie east london south tips"
-        },
-        {
-          "title": "Anglo American plans to remove restrictions on polyhalite production get 'unanimous' support - Teesside Live",
-          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPMDRDMUNLWFFsS0dxLXdWaGdfMzF6NG8tYm92a1F4U3hSTDFCYTJaMTFtSkVGNW0xcmFkUG9KYUNVXzNSUENVYUN5Y3g4WFIyX0ZvUW42LU9ySlFQd1BVcWN2bUNqM0FiM2NLWTIxal82alQ3UTdlSUNwMndjb0NNVUhTMUFPY2xOV2kxcVlfU3F4bkYxYlFPRGoxLU8xZkXSAaQBQVVfeXFMTzA4al8xNDJ2ei0yY3hXcFlpNEF4RDdlck50Q0FvZ09neEhoMXBTWWNNT0VZX0JleGtzUmhWek5RX0ctYlllVkFnay1KaTNIM1hkbFZKZk40Zll6OFUxck5YaGYyNlJzenNmZXB6NkVWTS1VNDF1V214VjRIRDE0a3RwNV84MnZhMGFxT0pZeF9KNTNvRkQxQkdQUFk4UHN4Q19Tblc?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T08:55:00Z",
-          "summary": "Anglo American plans to remove restrictions on polyhalite production get 'unanimous' support&nbsp;&nbsp;Teesside Live",
-          "company": "Anglo American",
-          "commodity": null,
-          "flags": [],
-          "score": 0.2793,
-          "title_norm": "american anglo get live plans polyhalite production remove restrictions support teesside unanimous"
-        },
-        {
-          "title": "Why is Anglo American trending right now - Kalkine Media",
-          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNYlE1VE1sMFFyUUFzb0pfaUVNS2l2RzFtRFVjUEhUTkRRREhvb1FSeVVVVFBOTW43a3F5RVp3MXh4STBtQ0VXVXA2SHZoRlVkUEx0Z2lIQzg2VU45VjZHY0NieTR6SzI5dlJJX1dMSk9JZ3dqLWI1SnVRNFBiN29Gd3NfekZVbkNoRHVUYmhNeDJMT0JaX0MtNg?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T06:25:00Z",
-          "summary": "Why is Anglo American trending right now&nbsp;&nbsp;Kalkine Media",
-          "company": "Anglo American",
-          "commodity": null,
-          "flags": [],
-          "score": 0.2417,
-          "title_norm": "american anglo kalkine media now right trending why"
+          "score": 2.7528,
+          "title_norm": "acquire american anglo beers bloomberg botswana diamond help nation news oman rich stake strategic talks tradingview uae",
+          "consulting_label": "Integration",
+          "why_it_matters": "M&A or JV activity — potential integration, due diligence, or PMI mandate."
         }
       ],
       "flags": [
         "ma"
-      ]
-    },
-    {
-      "name": "Rio Tinto",
-      "sector": "metals_mining",
-      "country": "GB",
-      "items": [
-        {
-          "title": "Rio Tinto Advances Automation And Low Carbon Aluminium In Growth Push - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOY2c1UGlBT213N281bmhkZ1J5SGZ3LU5oQ0VJU0hLd0VTNHVhQXhacFBzN3ItVC1sZWhMdUFxb1ktelVRVWprQWJ6WnFBSl9WV1hSdmJpanpNS1JXZUhKRHp4bld1bkR5RENoUkZDZW5XbmNuQ1RJSU1Ma3NQdV9ZR1lqdHZLSzZobzZwNWVtNTJha0NHM0FBejd6M0hzdGc?oc=5",
-          "source": "Google News",
-          "published": "2026-06-06T06:11:00Z",
-          "summary": "Rio Tinto Advances Automation And Low Carbon Aluminium In Growth Push&nbsp;&nbsp;Yahoo Finance",
-          "company": "Rio Tinto",
-          "commodity": null,
-          "flags": [
-            "esg"
-          ],
-          "score": 3.454,
-          "title_norm": "advances aluminium automation carbon finance growth low push rio tinto yahoo"
-        },
-        {
-          "title": "Federal Court approves Rio Tinto unit's compulsory taking of remaining ERA shares - Australasian Lawyer",
-          "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOMTN3blBLdFEtU09Rd1FWYmFwalpGUVJCLUI0QnBTblYwT01OYXJsTmx1eUhQeEpOdlNsNlc5RXhtdXJZSlhGVUNoVWhGclVUMWoxTHNRdzZHUFd6cC1USDZ2alAtSnV1YzVaOVRlQXlRanFqbXdkcmtDZTZOVWZOV3RYVk5laFdnMjB2SGwtT0ctWTRNOG9zVWFkb0lvQ0h0UndKVVNwNGpTbFFOclhiclNtU3g2NXQ2U1FNV2xBb3k2SjNRRW9RSjFhWHVjT193MDRLTFcyU2xOUG1GdkJ0NzdwTjQ1Zw?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T14:47:30Z",
-          "summary": "Federal Court approves Rio Tinto unit's compulsory taking of remaining ERA shares&nbsp;&nbsp;Australasian Lawyer",
-          "company": "Rio Tinto",
-          "commodity": null,
-          "flags": [
-            "regulatory"
-          ],
-          "score": 2.8921,
-          "title_norm": "approves australasian compulsory court era federal lawyer remaining rio shares taking tinto unit"
-        },
-        {
-          "title": "Rio Tinto’s Automation and Low-Carbon Aluminium Production Strategy - Discovery Alert",
-          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOVGtaMlo2aDVlUmZoM2dtWHY4MzdhaEpTZVFMSkcxNnI5bVN3OWFKZlNaUEpvWTF5LU51RHJDejVyVWdGWVVweHUzaV9jdjdJQzVXT1dUMk5XUnlaVUM5bUtUWkZHUGRzc2VJeUdwUmljX1V3SExxeTVJcTZZcS02RXhTZ0w1UFJMMENFUFZCdTZadw?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T11:08:47Z",
-          "summary": "Rio Tinto’s Automation and Low-Carbon Aluminium Production Strategy&nbsp;&nbsp;Discovery Alert",
-          "company": "Rio Tinto",
-          "commodity": null,
-          "flags": [
-            "esg"
-          ],
-          "score": 2.8177,
-          "title_norm": "alert aluminium automation carbon discovery low production rio strategy tintos"
-        },
-        {
-          "title": "Rio Tinto emphasises on automation and low-carbon aluminium production amid valuation concerns - AL Circle",
-          "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOajNHdm9pRGp4ZjdMRW1vTGVOdGNlMGxFRU13cXFXWGktanpNX1VYLUNlaHNCTHF5ZE03V2JIVTNmWUduQjFqYmVpc2ppejhCejlUYzRlVEZ6N0x4US1ka1U0WmFYMi02Wk00UHdPbURWWW5ReGpld2JoTV9SQkdfNExHMHJOZXF4ZWhDWlZSWExMdWxiZjlUekxsSkJ3Mk1RN1NrOFZDOE5WWWxFVWxHUTJwclVUTWl0MWt1dGtsc3dTYU5Kd0NTVDRPUQ?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T09:57:52Z",
-          "summary": "Rio Tinto emphasises on automation and low-carbon aluminium production amid valuation concerns&nbsp;&nbsp;AL Circle",
-          "company": "Rio Tinto",
-          "commodity": null,
-          "flags": [
-            "esg"
-          ],
-          "score": 2.7967,
-          "title_norm": "aluminium amid automation carbon circle concerns emphasises low production rio tinto valuation"
-        },
-        {
-          "title": "From Turkana to the Boardroom: What Rio Tinto's Crisis Taught Me About Stakeholder Innovation - Yale School of Management",
-          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPUHdpNVdRcFZCb3NIdW5id3VYT0VOUjg4Ry1PVzZEcmZtSnMzdWx5Y3NmTkZCaTlpbHZfZDVBcjBUZnRka2hjUVI0NFVQUGx0YlJ3djZwRllaQkxyX3FyYUN4SDB5bW1EanhURWU2empNZzJlSTV4U09ORFlFYTlCY2tjaXZXN3Bhbl9tVnQxdFA3OHBDc2pNcWxmczRJSF9rOFVnajhlRElSVDY4QlMtLQ?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T07:36:39Z",
-          "summary": "From Turkana to the Boardroom: What Rio Tinto's Crisis Taught Me About Stakeholder Innovation&nbsp;&nbsp;Yale School of Management",
-          "company": "Rio Tinto",
-          "commodity": null,
-          "flags": [
-            "ma"
-          ],
-          "score": 2.759,
-          "title_norm": "about boardroom crisis innovation management rio school stakeholder taught tinto turkana what yale"
-        },
-        {
-          "title": "Rio Tinto cleared for ERA takeover - Australia's Mining Monthly",
-          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNNWc0bDRRYXVDTGNpMkFjMjFUaEp2RFY1U3U4aVctVmZjV25TSk5CeE83Q05INWt0NmtvNkxlSHk2V0FpWUZrTEZUdDQ5YW14TmFzYVUxSUlqRlVrS2l0NHJWUWNuaVhoVUZLWklaQmkzdHZsbHc3TFYtMlppbjVRMVZybm44VHNIdXN6THF2TElqa0J2ZG00?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T06:59:57Z",
-          "summary": "Rio Tinto cleared for ERA takeover&nbsp;&nbsp;Australia's Mining Monthly",
-          "company": "Rio Tinto",
-          "commodity": null,
-          "flags": [
-            "ma"
-          ],
-          "score": 2.75,
-          "title_norm": "australia cleared era mining monthly rio takeover tinto"
-        },
-        {
-          "title": "Rio Tinto looking to sell major mine in Boron - Bakersfield.com",
-          "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNNjdodzhBSGVKRktjUkE4b2lTNkp1bXRHVkJVZXl6eGRSaDFiYk5xakhjT3Rvc0xNRFBvMjdEaTZ2VlUyMGJvV3hEeURValFNYlRYMEdLNjRiOGpkRF85aWt5WEVkLUNhQUZjbDVhRjRxUmxIMnlCd05Fd19yVU11MWNNMzJlOElLZVFvZ1gyX3psTWlDZUVTSTZKRW0xdl9PTDRCcWc5Nkg2bk9sMWNOSUhRZW44ajQ2b3I1LUk2Y0tWdi1laTc4?oc=5",
-          "source": "Google News",
-          "published": "2026-06-06T01:15:00Z",
-          "summary": "Rio Tinto looking to sell major mine in Boron&nbsp;&nbsp;Bakersfield.com",
-          "company": "Rio Tinto",
-          "commodity": null,
-          "flags": [],
-          "score": 0.7174,
-          "title_norm": "bakersfield boron com looking major mine rio sell tinto"
-        },
-        {
-          "title": "Assessing Rio Tinto Group (LSE:RIO) Valuation After Recent Share Price Pullback And Strong One Year Return - simplywall.st",
-          "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOdzYtZFJhM0IxcVg1OFhFTDAwZGtfV296MkpIQzdySjRrVEVKNnRkV0EtcEFGZUZ3RFRydUZwdGJoLUtvSHI5Zjh5b3NPajNnMk9jRnMwZVRpNnBrWVNHNHBpbUdFZVYwNHZnbGdMM3N6YVN2TGIybktjaERGMG5GZlVhd0h4OXNMQklORWFVby0xdUpEU21nd25mTWtoeVgxdnZGM3F2elJQLUxqU1VWUHNUMWRkQWJBYW5iamhkc0FOTDdaRU8wa3dtM2paUi1fR2t5ZdIB2gFBVV95cUxQVDVPQmJXYjA1SDA3ZDJfT0VWczhBNXdtRldDVDRtcWhUOEQtMFZuSEZWT2JVcGlvb3pLLVpYRFEzRFM1d3FoejRpOG9fZ2pkOGtFYVhSWEk3WFZzekdpeEk0YnA0Qy00S3Y0eTVhNXM5TlNBdzB5TC1mZkNrek93cklSM2NHRUd3blgtdHhEa2NUYl9UY3hPczcyUUZXdlkzWE9FbXpjcFdoLU1laU02blN0MEpETGV4dGE1dXJINVVQMGJMZ0lLMWNRd2M4TlE3bjlWd0ljSTR6dw?oc=5",
-          "source": "Google News",
-          "published": "2026-06-06T00:36:54Z",
-          "summary": "Assessing Rio Tinto Group (LSE:RIO) Valuation After Recent Share Price Pullback And Strong One Year Return&nbsp;&nbsp;simplywall.st",
-          "company": "Rio Tinto",
-          "commodity": null,
-          "flags": [],
-          "score": 0.6916,
-          "title_norm": "after assessing group lse one price pullback recent return rio rio share simplywall strong tinto valuation year"
-        },
-        {
-          "title": "Canada targets mining labour shortages, Rio Tinto boosts aluminum capacity in Quebec and Troilus project gains grid access - Canadian Institute of Mining, Metallurgy and Petroleum (CIM)",
-          "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBYR05LOENGWG1nNHo4anpYckdRRTJxcE9JOV84eS1jWGV4ZVpfSUdGNVFXc3JYLWVnTjIyRTdVUUVOM1k4LWgwYzVXd01RcDc5dEFUY2VwcWpWVHAyZ0lYblN5b3libU84NURFb3NfMy05dXlWa1VVLUpB?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T17:35:39Z",
-          "summary": "Canada targets mining labour shortages, Rio Tinto boosts aluminum capacity in Quebec and Troilus project gains grid access&nbsp;&nbsp;Canadian Institute of Mining, Metallurgy and Petroleum (CIM)",
-          "company": "Rio Tinto",
-          "commodity": null,
-          "flags": [],
-          "score": 0.461,
-          "title_norm": "access aluminum boosts canada canadian capacity cim gains grid institute labour metallurgy mining mining petroleum project quebec rio shortages targets tinto troilus"
-        },
-        {
-          "title": "RIO TINTO : Goldman Sachs reiterates its Neutral rating - marketscreener.com",
-          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNaDNPRTR2MzZIVnVwVlZfU1Y2Nk5CajB5OEZXMnVCU2NyYW9VUGt4Z3RDWmFoYlpRZXpFdjBqSlVJMmRXTUVoRk1MYWZCeThCejJ6ZDRGeEZYOFh6Sm9sWUxBZmNDQVktNWtaeFktNG1HZWFKZURWUmlGbTBhMkozUVN0NDFxbmZmLVhObl9DRTloZTU4XzZjbDZGRmpSVVM5UFVVSHc4UC1XUQ?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T11:18:25Z",
-          "summary": "RIO TINTO : Goldman Sachs reiterates its Neutral rating&nbsp;&nbsp;marketscreener.com",
-          "company": "Rio Tinto",
-          "commodity": null,
-          "flags": [],
-          "score": 0.3206,
-          "title_norm": "com goldman marketscreener neutral rating reiterates rio sachs tinto"
-        }
-      ],
-      "flags": [
-        "ma",
-        "regulatory",
-        "esg"
       ]
     },
     {
@@ -1167,90 +550,10 @@
             "ma",
             "price_shock"
           ],
-          "score": 3.3205,
-          "title_norm": "after assessing bhp canadian deal grain national new potash propane railways record simplywall valuation volumes"
-        },
-        {
-          "title": "BHP inks rail deals to move potash from its new mine to the west coast - The Star Phoenix",
-          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNblZVSVJZVGRYU0JnYzJYOEg0aWpadzI0YzlVbTVxVTB0Wld3NXhaOFFOX01tanJMQnp3VzlPNEVlOU4xVXlWbE8wUWZKRVZ0cHY5SVdVd1QwZ0doWldPTTdSWnVVY2MxcHpORzZLeE5fNHFaSGtDYjhVSHg4djFCbzA4SDVGQ0tPcTFJVDU5LTR2MnZWVGtIWElvUWczZVdQMXU1cXV3?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T22:16:14Z",
-          "summary": "BHP inks rail deals to move potash from its new mine to the west coast&nbsp;&nbsp;The Star Phoenix",
-          "company": "BHP",
-          "commodity": null,
-          "flags": [
-            "ma"
-          ],
-          "score": 3.104,
-          "title_norm": "bhp coast deals inks mine move new phoenix potash rail star west"
-        },
-        {
-          "title": "Fired-up BHP boss blames PM for looming strike action - The Australian",
-          "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxOWEo5Qy1XY0hucGc5cjhhMlRVZEF6ZnVwTXhwWHpCcjZlWGlzZWNHOXJuQWhFRFY4ZGtPVzJMdDcyOEt3ZjF0YlVJZ21YaXozM2FrNFgxaEE3RFpMVGMxRVhESmtUQndGQ3IteGFUUzJ1YUFrd2FuUmNScXdna0lUellpcldFeVE3VnU2Q21OV1FJSlNYT0tuMVZVU3lXdDY2RzFhYUdwSkw5RHNFLW41enhwMlZiWmJtU2YyTWllWVdVQVp4QXZfMUMwWi0yeGZLeTB5VW5TS2M1anRybzNTc1Q0N3JoQnRYaTM4NzhvMjRpczB0a00tOE5EZ3VSNlA00gGGAkFVX3lxTE9oU3pOV0Fyazl0SXg2YzNxVlJ4b0pSenpiVjdNSzNaVXc5b0VPdkR6RFBXZ3ZqX21sTlM4QmlESHVxSTdmQzF2YzNubWVkWjJTZnJUVXdsbzdzeEN3clhVVE9oNkVReEVYQnVzU1ZxWnk3TlRUUTU4MG5hZkl6bjhqTXZpVWdhamk2MVFRdXJYY3J2RlN0SURNLW92YVVlS2FYaVRkemdWUnhMQ1YxdmpTYlpES1hGaU9OT3lNSmMwU3NCQmQ3d21fY3RLSVZxVEVDQ2dmNXUxd2t3TGxoSUFvcWpwN2dxbEg1ZUtwd050VmVfVHJNWFRBNVl0bnZCbVFWV3M2WFE?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T06:39:01Z",
-          "summary": "Fired-up BHP boss blames PM for looming strike action&nbsp;&nbsp;The Australian",
-          "company": "BHP",
-          "commodity": null,
-          "flags": [
-            "outage"
-          ],
-          "score": 2.745,
-          "title_norm": "action australian bhp blames boss fired looming strike"
-        },
-        {
-          "title": "Miners seek government intervention to counter China iron ore monopoly - AFR",
-          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNWkZhMDRNaGMtN0tIR2VIODM1UmN4azJTNm1ieGZyamkxZDhKeFk5ckFPWGRGQ0RQbnNrUmh4N1BkcWVIM29RYUlPUEFZc1RTeEVpUmNhV2RPTkFqRVVmX3lZa2JCU2JUWmhBUW10ZFgtTFNqdGNFMmh5NzllUk5JajZwOUdjNTBUUWQycWFmdE80cUpQZGRxTDNvektpcWhoaUhyeG9jUHRhemc5YVVJS3NHQ0N1M01mbjltLXBKY1o?oc=5",
-          "source": "Google News",
-          "published": "2026-06-04T22:42:00Z",
-          "summary": "Miners seek government intervention to counter China iron ore monopoly&nbsp;&nbsp;AFR",
-          "company": "BHP",
-          "commodity": null,
-          "flags": [
-            "geopolitical"
-          ],
-          "score": 2.6548,
-          "title_norm": "afr china counter government intervention iron miners monopoly ore seek"
-        },
-        {
-          "title": "BHP Weighs Biofuel Shipping Push And Canadian Rail Deals Against Valuation - simplywall.st",
-          "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQOHlyXzFrbi1tcVo3N3psQVlPenZ4TGo2LUF3a3lwRmJ1RW0yN2dacGwtVkJTN28zZEpyTXJLU3lpUkIzR25TX0E5ZnNjSGw1ZzlCVXlsVWozUEtSWXpoOEtiMWJTdEhPV2lrMENHeXE1RGhfY1ZXd3BZQ0FhZFRjRlJ3TndaVF85YnpMbENkQWVpLVJ5WHBFNTFoQUp5UjRBdXN1WUYwQW5ycjQ2T28tVVZlaUdhOWt6RjFYSFhZeDlqTjlqWW5IaUdZakzSAdIBQVVfeXFMT25kZGhyTVgza21SLW9SVHBqMUVEVVlWZUtHRGs4QXdVZnZJZGVheEx4MFNTcGRZUGpsYWtoWGF4NDV0UHFDd3BRaTNWYnU1UV83cDlQOHFFekkwNDlBNWs5RXJGUUJpRVpKRnpYT2xhcFFBLTRvcXk2QjJ0NXBaSi1hS09kZlpBdlZ5RDVaVDV0QS1WVDhwcDA1UWktdHdkYzEyWllKdV9uSFdHTTZLNkQ5dzJoaldJWll6RDBnblJXOHJzNUtsc3BfV2lDbDlJOHhB?oc=5",
-          "source": "Google News",
-          "published": "2026-06-04T20:36:19Z",
-          "summary": "BHP Weighs Biofuel Shipping Push And Canadian Rail Deals Against Valuation&nbsp;&nbsp;simplywall.st",
-          "company": "BHP",
-          "commodity": null,
-          "flags": [
-            "ma"
-          ],
-          "score": 2.6372,
-          "title_norm": "against bhp biofuel canadian deals push rail shipping simplywall valuation weighs"
-        },
-        {
-          "title": "BHP and GCMD test B100 blend to promote maritime decarbonization - Inspenet",
-          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9ZZlpxTG04bktQamd5YnFxV0xaUXpWdzZIYVp6R2ZucVVHMTFNT3ZKUEl5ZV93TmFtZGR1Tk43a0ZuN2htbVFuQ3U0SzlpbUd2b0ZuLTYzNjQ3MEtDTG41SVlrQ2M4aGFSbXg1UmRPcHlEakUxNzVR?oc=5",
-          "source": "Google News",
-          "published": "2026-06-04T19:37:23Z",
-          "summary": "BHP and GCMD test B100 blend to promote maritime decarbonization&nbsp;&nbsp;Inspenet",
-          "company": "BHP",
-          "commodity": null,
-          "flags": [
-            "esg"
-          ],
-          "score": 2.6296,
-          "title_norm": "b100 bhp blend decarbonization gcmd inspenet maritime promote test"
-        },
-        {
-          "title": "2026 Tata Tiago review: 7 pros and 7 cons - Team-BHP",
-          "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBDUjJqempMeGZCSDhCZXlTNkNoZV94MTJLSHA1RDBHcjI3a2hET3pZeHZJdHJVREVXaEFxVmRMQU5xQ0VFOE04amJnWE5MZXhQck5MWVh4MmFiUmtRVDFiSEFSajJzbnNyN2lhek5uTVNPZnVfUld4LXNB0gF_QVVfeXFMUC1KYWEzanRwUHAybm5oU1dKY3NteXRJUzJpd2xUTERFRXp0cEgxdkZZTlZmRXhodjNNVlg0WlgzTUdLeDNtUV9QTXIxWHVKdF9KZF90a0FtNU95UVdDbTFBMWpNcFJ0dWFrc2YxVnJoVnhDTXNHc0R4RVRVdXhWMA?oc=5",
-          "source": "Google News",
-          "published": "2026-06-06T05:45:00Z",
-          "summary": "2026 Tata Tiago review: 7 pros and 7 cons&nbsp;&nbsp;Team-BHP",
-          "company": "BHP",
-          "commodity": null,
-          "flags": [],
-          "score": 0.9304,
-          "title_norm": "2026 bhp cons pros review tata team tiago"
+          "score": 3.0867,
+          "title_norm": "after assessing bhp canadian deal grain national new potash propane railways record simplywall valuation volumes",
+          "consulting_label": "Integration",
+          "why_it_matters": "M&A or JV activity — potential integration, due diligence, or PMI mandate."
         },
         {
           "title": "How A Steady Analyst View Is Shaping The BHP Group (ASX:BHP) Investment Story - Yahoo Finance",
@@ -1260,41 +563,19 @@
           "summary": "How A Steady Analyst View Is Shaping The BHP Group (ASX:BHP) Investment Story&nbsp;&nbsp;Yahoo Finance",
           "company": "BHP",
           "commodity": null,
-          "flags": [],
-          "score": 0.6367,
-          "title_norm": "analyst asx bhp bhp finance group how investment shaping steady story view yahoo"
-        },
-        {
-          "title": "BHP Drops Case Against Michael West Media, Suppression Orders Remain | The West Report - Michael West Media",
-          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOX2phR0NzM01pWHB2VXNvX1hNNmY4YnZXYXF2Rmd3X3JKbG5NU1FlZVI2UW05aU9Da3J1N181c1UwY1A4MlhsYnJaeHdxdWswYlIyYnMzVUZ3RHl5b0lmNXljeXUxdm5feGRQT3FidkVROUFuOWxFT04xNTU4ZjUxalpCZzhvR3hhX2hGc1U1UnNweG5uTHBKNlBxQm9iVUFuSzBvNVpkTHpTRTdnWGg4aw?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T22:53:12Z",
-          "summary": "BHP Drops Case Against Michael West Media, Suppression Orders Remain | The West Report&nbsp;&nbsp;Michael West Media",
-          "company": "BHP",
-          "commodity": null,
-          "flags": [],
-          "score": 0.6259,
-          "title_norm": "against bhp case drops media media michael michael orders remain report suppression west west west"
-        },
-        {
-          "title": "CN partners with BHP to transport potash from Saskatchewan's Jansen Mine to global markets via rail. - Pluang",
-          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNcHR6TlhkNHVrT1FCUUFLSERaREIwSkR4VHBvS3ZmMk9KeEZmRzdsV1RKd2FIdl9nNE95OUJ0UzVRVWlObXk4X0E4X01CRHVUdnNkczFqazB4cE4tQnh5czZlVjN3SkJyN0hHYU5xMGl2YVFFMU41SlFsRER1cFVfMzByOVJNSzBZZktiNzlYS3VvOFE1?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T18:29:24Z",
-          "summary": "CN partners with BHP to transport potash from Saskatchewan's Jansen Mine to global markets via rail.&nbsp;&nbsp;Pluang",
-          "company": "BHP",
-          "commodity": null,
-          "flags": [],
-          "score": 0.4855,
-          "title_norm": "bhp global jansen markets mine partners pluang potash rail saskatchewan transport via"
+          "flags": [
+            "growth_strategy"
+          ],
+          "score": 2.9553,
+          "title_norm": "analyst asx bhp bhp finance group how investment shaping steady story view yahoo",
+          "consulting_label": "Growth Strategy",
+          "why_it_matters": "Expansion or investment signal — market entry, feasibility, or strategy advisory."
         }
       ],
       "flags": [
-        "outage",
         "price_shock",
-        "ma",
-        "geopolitical",
-        "esg"
+        "growth_strategy",
+        "ma"
       ]
     },
     {
@@ -1313,12 +594,57 @@
           "flags": [
             "earnings"
           ],
-          "score": 3.0005,
-          "title_norm": "first jump mind petromindo posts profit quarter reaches revenue rp50 trillion"
+          "score": 2.8579,
+          "title_norm": "first jump mind petromindo posts profit quarter reaches revenue rp50 trillion",
+          "consulting_label": "Performance",
+          "why_it_matters": "Earnings or guidance release — CFO advisory, margin improvement, or FP&A opportunity."
         }
       ],
       "flags": [
         "earnings"
+      ]
+    },
+    {
+      "name": "Rio Tinto",
+      "sector": "metals_mining",
+      "country": "GB",
+      "items": [
+        {
+          "title": "Rio Tinto Advances Automation And Low Carbon Aluminium In Growth Push - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOY2c1UGlBT213N281bmhkZ1J5SGZ3LU5oQ0VJU0hLd0VTNHVhQXhacFBzN3ItVC1sZWhMdUFxb1ktelVRVWprQWJ6WnFBSl9WV1hSdmJpanpNS1JXZUhKRHp4bld1bkR5RENoUkZDZW5XbmNuQ1RJSU1Ma3NQdV9ZR1lqdHZLSzZobzZwNWVtNTJha0NHM0FBejd6M0hzdGc?oc=5",
+          "source": "Google News",
+          "published": "2026-06-06T06:11:28Z",
+          "summary": "Rio Tinto Advances Automation And Low Carbon Aluminium In Growth Push&nbsp;&nbsp;Yahoo Finance",
+          "company": "Rio Tinto",
+          "commodity": null,
+          "flags": [
+            "esg"
+          ],
+          "score": 3.1825,
+          "title_norm": "advances aluminium automation carbon finance growth low push rio tinto yahoo",
+          "consulting_label": "Sustainability",
+          "why_it_matters": "ESG or decarbonisation signal — sustainability strategy or reporting mandate."
+        },
+        {
+          "title": "Federal Court approves Rio Tinto unit's compulsory taking of remaining ERA shares - Australasian Lawyer",
+          "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOMTN3blBLdFEtU09Rd1FWYmFwalpGUVJCLUI0QnBTblYwT01OYXJsTmx1eUhQeEpOdlNsNlc5RXhtdXJZSlhGVUNoVWhGclVUMWoxTHNRdzZHUFd6cC1USDZ2alAtSnV1YzVaOVRlQXlRanFqbXdkcmtDZTZOVWZOV3RYVk5laFdnMjB2SGwtT0ctWTRNOG9zVWFkb0lvQ0h0UndKVVNwNGpTbFFOclhiclNtU3g2NXQ2U1FNV2xBb3k2SjNRRW9RSjFhWHVjT193MDRLTFcyU2xOUG1GdkJ0NzdwTjQ1Zw?oc=5",
+          "source": "Google News",
+          "published": "2026-06-05T14:47:30Z",
+          "summary": "Federal Court approves Rio Tinto unit's compulsory taking of remaining ERA shares&nbsp;&nbsp;Australasian Lawyer",
+          "company": "Rio Tinto",
+          "commodity": null,
+          "flags": [
+            "regulatory"
+          ],
+          "score": 2.7804,
+          "title_norm": "approves australasian compulsory court era federal lawyer remaining rio shares taking tinto unit",
+          "consulting_label": "Compliance Risk",
+          "why_it_matters": "Regulatory action — compliance advisory, remediation, or sanctions screening."
+        }
+      ],
+      "flags": [
+        "esg",
+        "regulatory"
       ]
     },
     {
@@ -1337,8 +663,10 @@
           "flags": [
             "earnings"
           ],
-          "score": 3.0558,
-          "title_norm": "bhd earnings hoc investors look myl5347oo009 nasional news past recent shares steady stock tenaga"
+          "score": 2.8974,
+          "title_norm": "bhd earnings hoc investors look myl5347oo009 nasional news past recent shares steady stock tenaga",
+          "consulting_label": "Performance",
+          "why_it_matters": "Earnings or guidance release — CFO advisory, margin improvement, or FP&A opportunity."
         },
         {
           "title": "DayOne Secures Over 1GW Renewable Energy in Malaysia in Landmark TNB Partnership - Macau Business",
@@ -1352,251 +680,16 @@
             "ma",
             "esg"
           ],
-          "score": 3.0536,
-          "title_norm": "1gw business dayone energy landmark macau malaysia over partnership renewable secures tnb"
-        },
-        {
-          "title": "DayOne Secures Over 1GW Renewable Energy in Malaysia in Landmark TNB Partnership - ANI News",
-          "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPV1lqbXV2ZFdDaENURFRSVW1uaVk2RU9lODBsQ2ZrV3E3djJnY290Y0U1OTRIbUQ2MWZySHZVMUlxZms4bnBKSjBIYkxtdHczWEhkU29WMXRoSXozekZWX2tZQnlZdmYyMVlJNUpKUzJCYk16STBTLW50ekZHOGhxV1RzZnc5cUFMQk80WUtOQl9oQ045TFF4em1QVGxOcW03dUxTcjI5emdoZHRlcU1kRmNKMTZHS3RXU3pNaGF1MW5NS01BLWRIVTJzTQ?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T04:39:00Z",
-          "summary": "DayOne Secures Over 1GW Renewable Energy in Malaysia in Landmark TNB Partnership&nbsp;&nbsp;ANI News",
-          "company": "Tenaga Nasional Berhad",
-          "commodity": null,
-          "flags": [
-            "ma",
-            "esg"
-          ],
-          "score": 2.7183,
-          "title_norm": "1gw ani dayone energy landmark malaysia news over partnership renewable secures tnb"
-        },
-        {
-          "title": "DayOne Secures Over 1GW Renewable Energy in Malaysia in Landmark TNB Partnership - ThePrint",
-          "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNUXk1VFM2NUFlb0pONnJBZk5zQVZodXBKaTJKRU9JUzduN3lhWDdtRTZFbmlkMWU2Tlc3QmllY0laVGZueWZlb1VOb0VueUFFVzk4LXdvbWFPYl9wM3RSV3VjcGh1U1BYVTY0RWRVSW83UmNLbEJUYi1hbjhaRVh6Q2V5RmE2WFo3TFN0a2hJRTI1eDBGbDVqUDFfUU1tTThuRmxmSzFEOE42bGEyMHQ2czVWYjFtR2dyR3htanE2RmZzcjZvblhJ0gHMAUFVX3lxTE9VdktmV0tSaUE4czVPVTNGc1cwbWZyM081QngyTXhnZ0NTUGJtSi1RcmZ3TDBkc28yay1kQ1NwNnpKSjRzc0Z4Nk5SeEdtbjd1R3NZVTFhakwzYkR5TVpMSWx0WGlvTHh4RXMtdW9Gb0ZMRVNFeTNqd3ZSRkR1RjZsUEZrZXBtSzJwOUpadWl1OGtodERLU2xiTUJnOUFPRGo0V2ROSV9PXzRfTVRUU0pLel9peUd0b3BlTk5mamQtdUk4LVVKX0lhblFDZg?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T04:30:20Z",
-          "summary": "DayOne Secures Over 1GW Renewable Energy in Malaysia in Landmark TNB Partnership&nbsp;&nbsp;ThePrint",
-          "company": "Tenaga Nasional Berhad",
-          "commodity": null,
-          "flags": [
-            "ma",
-            "esg"
-          ],
-          "score": 2.7165,
-          "title_norm": "1gw dayone energy landmark malaysia over partnership renewable secures theprint tnb"
-        },
-        {
-          "title": "MTSSB and TNB REMACO formalise partnership to advance power plant reliability and technical competency - The Malaysian Reserve",
-          "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNYVNBaEo2MjVKYVhPRXBfcDhGRVRsanVUdDlqWkJEVFRrWk5KMkFlM0lDU3NJS1V2d0lVVlFZMGQ1ckNQSHhkbFpmekpaYUwwb0gxemRuTmxla29MZUN5RGFFNmZGMWd3YkFkRHUtNGtpVXRTQVVrVGU5SnRVRjAtOXNrWFg4QmY5Njg2Z3N2Z2FNREotNW0xWENiZmtiQXpNa1IyV2JXM0Y4VnRjdHVXRDVrelh6c1JYcXJhYVRQS3RVZnlwNWJYLWNtVUFTcXBuMXJ1Tm1tMWJOZ25YWWlz?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T01:48:31Z",
-          "summary": "MTSSB and TNB REMACO formalise partnership to advance power plant reliability and technical competency&nbsp;&nbsp;The Malaysian Reserve",
-          "company": "Tenaga Nasional Berhad",
-          "commodity": null,
-          "flags": [
-            "ma"
-          ],
-          "score": 2.6852,
-          "title_norm": "advance competency formalise malaysian mtssb partnership plant power reliability remaco reserve technical tnb"
-        },
-        {
-          "title": "TNB Delivers 4.3 GW Installed Renewable Energy Capacity To Support Energy Transition - Bernama",
-          "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5CTy1WdnA5bFUxcVZYemNDWHdXRkJvUjRwYUVSVENOTjVQXzdFUEpKNENhOU5Uc3lLZG5ocUUtZjcyN2Y5RHU5bEd4RjRGTERNWC13Sl90RQ?oc=5",
-          "source": "Google News",
-          "published": "2026-06-04T20:30:48Z",
-          "summary": "TNB Delivers 4.3 GW Installed Renewable Energy Capacity To Support Energy Transition&nbsp;&nbsp;Bernama",
-          "company": "Tenaga Nasional Berhad",
-          "commodity": null,
-          "flags": [
-            "esg"
-          ],
-          "score": 2.6364,
-          "title_norm": "bernama capacity delivers energy energy installed renewable support tnb transition"
-        },
-        {
-          "title": "ZTE Demonstrates Integrated AI, Connectivity and Digital Utility Technologies at TNB Energy Transition Conference - ZTE",
-          "url": "https://news.google.com/rss/articles/CBMimwJBVV95cUxQdl9qYzduSVNEU1I3dDR5dlRzWXVWc085Qzh5QkpfbWU1eTlfSHc1Yk03RVhjb2ZEdkZXUGdyU3dEMnJCQ01QNUU2NW9jVHZRWHpQZ1llOEQ5aFlPbHdVaUVMem9USmRQbTVjMkdqSGZWSWpXcFUwQXpsRllLNENBWFlyRXNJLTcyZm1MTTVwY3VseUxzRnZlYmNZREE4NHF6a19SazJJNHJYQzJ6clFEdXFFTE1CN2tzMGZ1XzIwUkNwNkdKblByRGw2Mm00dEtDSklWWEduM0xDNFZabC1VTUFVYU05UnplX2hFR3dPOFVPY0IwZDNhc1B1QW1aUnhuS2JUMklOaHZWVUltTEpyc2JYb0JHTDNOY0lv?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T03:35:42Z",
-          "summary": "ZTE Demonstrates Integrated AI, Connectivity and Digital Utility Technologies at TNB Energy Transition Conference&nbsp;&nbsp;ZTE",
-          "company": "Tenaga Nasional Berhad",
-          "commodity": null,
-          "flags": [],
-          "score": 0.2054,
-          "title_norm": "conference connectivity demonstrates digital energy integrated technologies tnb transition utility zte zte"
-        },
-        {
-          "title": "Malakoff, TNB REMACO team up to enhance MRO services for Malaysian power plants - thestar.com.my",
-          "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPNUU3ZGVxWklLSEJHLUlJMXFWakhyUGNEZjNyeVlYZERFdTZPZ2xJSjNCcF9OWk5BZVF6c1JaQjRUcEVweVlMcnhkekIwOTFBUFdCR3ZrRF9qMDFQLUE5aU9hME04NlU5UU1iS3M2bktUbHp2Q2lEck92Z1BSWjhoZGx1b0tQd1N1NkYxbVJQcEp3WU05RG1WWkI0ZjY5NGVvdFNNalFoa0YtNzJxWkhBRDRhSG9OV3l1ZFJtb0c1M1VrczJ3R1ppd1V6cXRSUWpFRWpZTDZn?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T03:14:00Z",
-          "summary": "Malakoff, TNB REMACO team up to enhance MRO services for Malaysian power plants&nbsp;&nbsp;thestar.com.my",
-          "company": "Tenaga Nasional Berhad",
-          "commodity": null,
-          "flags": [],
-          "score": 0.2011,
-          "title_norm": "com enhance malakoff malaysian mro plants power remaco services team thestar tnb"
+          "score": 2.8959,
+          "title_norm": "1gw business dayone energy landmark macau malaysia over partnership renewable secures tnb",
+          "consulting_label": "Integration",
+          "why_it_matters": "M&A or JV activity — potential integration, due diligence, or PMI mandate."
         }
       ],
       "flags": [
-        "ma",
         "esg",
-        "earnings"
-      ]
-    },
-    {
-      "name": "EGAT",
-      "sector": "power_utilities",
-      "country": "TH",
-      "items": [],
-      "flags": []
-    },
-    {
-      "name": "TotalEnergies Trading Asia",
-      "sector": "trading",
-      "country": "FR",
-      "items": [
-        {
-          "title": "Absa under fire for TotalEnergies financing in Cabo Delgado - Business Day",
-          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQM3lKdjlZZnFrdHp0RTVldmFFQ2NXRnNXNHVoMXhwYjAzdVFSWi05U1kxbUhLeEl0M3c1LXFneDAxM21LTnF2RVU1a3lXY0dZekRQN1c1cHpPQ0JpY0haV3FOYXhZUko4NE95Q1QtdlZ3bUlNUHl3R2s4QzVqVjgxRVRWV0FHQjVKU0V6NElmNzJ6eW1JeGZLVWdzYS0zcGttNy00bmo2ZWoyNFMyRV9salJhTGN4dWM?oc=5",
-          "source": "Google News",
-          "published": "2026-06-06T03:00:00Z",
-          "summary": "Absa under fire for TotalEnergies financing in Cabo Delgado&nbsp;&nbsp;Business Day",
-          "company": "TotalEnergies Trading Asia",
-          "commodity": null,
-          "flags": [
-            "outage"
-          ],
-          "score": 3.2938,
-          "title_norm": "absa business cabo day delgado financing fire totalenergies under"
-        },
-        {
-          "title": "Totalenergies Nigeria Sees Q3 Revenue 191.81 Bln Naira, PBT 2.62 Bln Naira - TradingView",
-          "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPWHdVLVhvSkpyeDBRNGpDUUlNOXVYMmZkczZEeEd1RzVVencxSHVieTdfVDA1YUJQbXQ5a3NUajNLZk1zUGNfSl9GNXI0ZTdEX2pHQlZJUk1tbTBDTldULVlDXzR3UHNtSHBNeWtoY3BweWFId05lZ1BaTVhsc3gtcmc1VFJQRENqcDQ3N0l2T0F3MnE0bk5zZG1ZR1h0SXhMbktyaV83LUdDUGczZFdCTVhtU2stTFpmUi1kcnBiRExGN2lZTUtKbTBOSFpUdDY5d0o0dmRZUTNLWVU?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T19:27:22Z",
-          "summary": "Totalenergies Nigeria Sees Q3 Revenue 191.81 Bln Naira, PBT 2.62 Bln Naira&nbsp;&nbsp;TradingView",
-          "company": "TotalEnergies Trading Asia",
-          "commodity": null,
-          "flags": [
-            "earnings"
-          ],
-          "score": 3.0134,
-          "title_norm": "191 bln bln naira naira nigeria pbt revenue sees totalenergies tradingview"
-        },
-        {
-          "title": "Trump admin’s cancellation of wind energy projects causes business turmoil - Al Jazeera",
-          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPSXdRVHdiS1pLSUFPY3A3ekgybTFFMk1QWmNVa1JPU0VYR2EyOEpSM01na0tPS2xUdXJyX1FENkd1LWhtUGJwcGNWc2ttTkJYT00zSi1GYmlaVGFBX21uNG1laURnb2kycHBja3JQeFExUGdLTGhGaGFDTFB1UE0yNU45SjYxVnpVbnZlS1FBNEd1b3o5Qk4tcFczVUtFOFF0X1FTeVJETEJKX2ZPVjVaaTdGSnJuT2fSAbwBQVVfeXFMTmxaenJzNVh5LWYxaWtKN0pNNXZVVWVOZ2VzbVFqVlJseGIyLTRYVE12RG15QXBfODlIM1ZEZUhVSEJFWVRkR0J0VWxBOFJ6TVZ3V1otb2xVaVZJdEFVX3pubjhnNjBMNW5YVXBKOUhzLUd2UVlZNHdEam1YT3ZyU3R4eExTd25WVVBTVEFyQlFoWTNfQWl0VjhyTkpmNFhpZVVlOE83SkIzMGU2dHJESjl3ejhZWGRDNGVkZzY?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T18:19:15Z",
-          "summary": "Trump admin’s cancellation of wind energy projects causes business turmoil&nbsp;&nbsp;Al Jazeera",
-          "company": "TotalEnergies Trading Asia",
-          "commodity": null,
-          "flags": [
-            "esg"
-          ],
-          "score": 2.9808,
-          "title_norm": "admins business cancellation causes energy jazeera projects trump turmoil wind"
-        },
-        {
-          "title": "TotalEnergies eyes higher gas production in Argentina to expand regional exports - marketscreener.com",
-          "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQQ2xEaElGMzBTZkQ3NGc3THFfc19TWjRvelE0SjJSVG43SDJLVTllZGtzVG1QS2FxTmdFaWRQcUNfVWdadGdndDAweV9xRmhETF9EMjJlczUwdDVMMlpJeXMxdFRZYVlLWjIxS0hHTXJyMnRMWGJTRWw3Rko1WF82c1BEanFmV1N1SkZ2STBpV2R5UmJGanZ0eG9ucFZCTEloNHVLSDhzbURMTGJ4VGRHaXAzWUJlS3Q3YlhKUVJiOXplc0paSEpQYzE4X1Zqdw?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T18:00:12Z",
-          "summary": "TotalEnergies eyes higher gas production in Argentina to expand regional exports&nbsp;&nbsp;marketscreener.com",
-          "company": "TotalEnergies Trading Asia",
-          "commodity": null,
-          "flags": [
-            "regulatory"
-          ],
-          "score": 2.9721,
-          "title_norm": "argentina com expand exports eyes gas higher marketscreener production regional totalenergies"
-        },
-        {
-          "title": "TotalEnergies Discloses Employee Director’s Acquisition in Savings Plan - The Globe and Mail",
-          "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQaGdQM3NHYVlLNWxFYzZxZ3N1SFVuZlM1VTlBUXg4VFlHVkw2N0hGZ19jaFRSUVd0bnRfUklDMGtrdUFGc1RJTFVXSWpIdmtZby1KNTV3Z2lFZk04MjJWeXczd0l3YzlEYUlzckR5bE1SRjdnRkxnTXdUTDBQY1dpdk1WZWItUGM0aHBMN1pPWmppMk83M0xLZnBTQWkwWC1LR09GOWhsNXpwc3VlTGdQaVQxZkd6LXFOSFhPeUUtbmptdXQ3eXVmMlFGaENoMldyY3NIVTFDUkdiRGVicXJrZlVSalpqOF9qbGc?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T15:36:54Z",
-          "summary": "TotalEnergies Discloses Employee Director’s Acquisition in Savings Plan&nbsp;&nbsp;The Globe and Mail",
-          "company": "TotalEnergies Trading Asia",
-          "commodity": null,
-          "flags": [
-            "ma"
-          ],
-          "score": 2.9112,
-          "title_norm": "acquisition directors discloses employee globe mail plan savings totalenergies"
-        },
-        {
-          "title": "TotalEnergies Discloses Executive Committee Member’s Employee Share Acquisition - The Globe and Mail",
-          "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQZmQ2VURUYUZsWmNOOWpRd080dldNN3VtaGVZekM4NzUtYk5GeTVILVNsaW5TeW9fUmxTdC1qMW45X01SYWxXQXBZM2FzSk05OTl6eTRwRFBnTFBCUTdOeFoyRlVxZW9LNWVMMDFEZTQ5aHdsdk43b0NzcWx2MEpBR1d1X3FUQzRZTTU1MW9td3lDWlVpRkpBQTVWLWFwdU9JZ1BUWG14bUtKbDhMU0dWWlR4ZjRleUVDUGpBZ19jTk43bmZXcy04VFJodHJpb3JMZWFUeXIydVg0c3BGc0hUbzlCbHBmaWVBN0hxX3I3S1FhZkJt?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T15:20:54Z",
-          "summary": "TotalEnergies Discloses Executive Committee Member’s Employee Share Acquisition&nbsp;&nbsp;The Globe and Mail",
-          "company": "TotalEnergies Trading Asia",
-          "commodity": null,
-          "flags": [
-            "ma"
-          ],
-          "score": 2.9049,
-          "title_norm": "acquisition committee discloses employee executive globe mail members share totalenergies"
-        },
-        {
-          "title": "New York leads legal challenge to offshore wind settlement with TotalEnergies - Splash247",
-          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNWXpIaXRKbjM1TE9aZHlCaDdudXM3NHdINjBVNzJEOGxRVGlUMTB4VVc5Y3NxR1JzT3p4Zmk4Wk9VVEZOajJrTW9UUDhnNVhTS01Pd3plNlJLZURUWjNfNFNZV2VtcGNtRmdZS2ZfT19ORHB3dFc1WWhnMUMtOTVONjZFZVNCTjVVVFZmOWR3U216aDlKdThjdy1SSm1PU1dOREE?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T07:12:16Z",
-          "summary": "New York leads legal challenge to offshore wind settlement with TotalEnergies&nbsp;&nbsp;Splash247",
-          "company": "TotalEnergies Trading Asia",
-          "commodity": null,
-          "flags": [
-            "esg"
-          ],
-          "score": 2.753,
-          "title_norm": "challenge leads legal new offshore settlement splash247 totalenergies wind york"
-        },
-        {
-          "title": "TotalEnergies SE (TTES:CA) Shareholder/Analyst Call - Slideshow (TSX:TTES:CA) 2026-06-05 - Seeking Alpha",
-          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNVWFQWGJxMUIzcWEta2REblNpTkl5REtMeFNaRTZIVnJXME1panlUbTZ4cDNuWjNKZTBzblZ0TGNnQjJ0eUJULUpxenI1WWc5aWJWcmlKb3ZoMHRCdHFOMkJ0SEo5TGJTX0RmQjcxdXBtV1c0M3ljcUc5azhabnQtR3BxWjNwcU9yT0tEVkNWcHRMeXVmX3laMmVGWE52anNaX2c?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T23:02:01Z",
-          "summary": "TotalEnergies SE (TTES:CA) Shareholder/Analyst Call - Slideshow (TSX:TTES:CA) 2026-06-05&nbsp;&nbsp;Seeking Alpha",
-          "company": "TotalEnergies Trading Asia",
-          "commodity": null,
-          "flags": [],
-          "score": 0.6312,
-          "title_norm": "2026 alpha analyst call seeking shareholder slideshow totalenergies tsx ttes ttes"
-        },
-        {
-          "title": "TotalEnergies Shares Stagnate Around €77 Seeking Direction - Idéal Investisseur",
-          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPU1A1TUJRVjJudWlHT1MzeFIwRDZrbnNEWlJ5MURlTXRwVm5CTmhfdk5wdkJ1c25fQTl0QWVoNWtBeThNdUZDSmVHaXFKVjhxRWhfb3dldTlaUHd2aVo0bC1LdzZ6cTFRZGUzYU1lb3QtOUc3OVdkMXhNR0NTenZyQWV5ZWhxLXR4WUVmdkxSUTNCeU1FSkNzT1p6aGh5aklFNTN0a0dmRFdwa1hFdDk4cGRoWXh2NlJNNDVr?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T15:48:00Z",
-          "summary": "TotalEnergies Shares Stagnate Around €77 Seeking Direction&nbsp;&nbsp;Idéal Investisseur",
-          "company": "TotalEnergies Trading Asia",
-          "commodity": null,
-          "flags": [],
-          "score": 0.4156,
-          "title_norm": "around direction ideal investisseur seeking shares stagnate totalenergies"
-        },
-        {
-          "title": "Sempra, TotalEnergies Produce First LNG at Mexico’s ECA LNG Project - Marine News Magazine",
-          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQZzBtelBNZU95QVNldGZGSTM3a25SZGtkU28wUjZ1UEd1bTZUaTQwMlRRSDJUQlpfUnlGSXV2Y29NVW9DUVRkYVo2eWV5UzZ6VHdZa3AycmlNeERQdzk0RFNKeXI0OG95TkpUdTZqNmpFY1NFdnB0MVBraTB0Q2YwdlJqWQ?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T09:56:57Z",
-          "summary": "Sempra, TotalEnergies Produce First LNG at Mexico’s ECA LNG Project&nbsp;&nbsp;Marine News Magazine",
-          "company": "TotalEnergies Trading Asia",
-          "commodity": null,
-          "flags": [],
-          "score": 0.2964,
-          "title_norm": "eca first lng lng magazine marine mexicos news produce project sempra totalenergies"
-        }
-      ],
-      "flags": [
-        "outage",
-        "ma",
-        "esg",
-        "regulatory",
-        "earnings"
+        "earnings",
+        "ma"
       ]
     },
     {
@@ -1613,37 +706,17 @@
           "company": "Aramco Trading Singapore",
           "commodity": null,
           "flags": [
-            "trading_moves"
+            "trading_moves",
+            "enterprise_risk"
           ],
-          "score": 2.7947,
-          "title_norm": "appoints aramco large manager mcdermott project projects saudi scale tradingview zawya"
-        },
-        {
-          "title": "Aramco Trading Limited to join EMEA Fuel Oil - Paper MOC - S&P Global",
-          "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPVW5pZ3FmSlhYYWtPelkzQnFBUUZ4VkVrNExvbTRvZjNVS0ZCYjg2NUdPVTEzR09zUDdiOC01MmU0Um8zOTJZUDNWMmpQWmtJa050TGhzQ3puRUY4cTNLZ1hyOG9aYm5nYUVRWWJKTHZvMmpuWWQ1T0hJZG44alhCTGJBOG9HWW5HSkZkN1ZTU1owVk0zc2ZiUC1qX1FwUmtLTTA0UDRKeWYtczRZTkNTVU5oemdaekNUYXJSV0NTTGtfcFRCOWtBMlpBallTSmNxd2lmZ3RRUE5uR1VXdGVIVnE3RWE?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T18:39:55Z",
-          "summary": "Aramco Trading Limited to join EMEA Fuel Oil - Paper MOC&nbsp;&nbsp;S&amp;P Global",
-          "company": "Aramco Trading Singapore",
-          "commodity": null,
-          "flags": [],
-          "score": 0.4905,
-          "title_norm": "aramco emea fuel global join limited moc oil paper trading"
-        },
-        {
-          "title": "Vice industry minister discusses energy security cooperation with Aramco exec - Yonhap News Agency",
-          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1VSzRLZWVjNGdTMkZjVXVjSmk5cW04S2VDVkVpS3lKTTFQc2QtYXNLU0NGc2Q5YXYxYmphMlY0bmhQSnhLQkxOVmc3Y2t3RlVhNUM0MEgwOXJiQQ?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T02:00:02Z",
-          "summary": "Vice industry minister discusses energy security cooperation with Aramco exec&nbsp;&nbsp;Yonhap News Agency",
-          "company": "Aramco Trading Singapore",
-          "commodity": null,
-          "flags": [],
-          "score": 0.1873,
-          "title_norm": "agency aramco cooperation discusses energy exec industry minister news security vice yonhap"
+          "score": 2.7107,
+          "title_norm": "appoints aramco large manager mcdermott project projects saudi scale tradingview zawya",
+          "consulting_label": "Enterprise Risk",
+          "why_it_matters": "Enterprise risk or governance signal — ERM framework or internal audit advisory."
         }
       ],
       "flags": [
+        "enterprise_risk",
         "trading_moves"
       ]
     },
@@ -1663,8 +736,10 @@
           "flags": [
             "trading_moves"
           ],
-          "score": 3.0072,
-          "title_norm": "appoints cargill erin human people president resources shepperd vice"
+          "score": 2.8627,
+          "title_norm": "appoints cargill erin human people president resources shepperd vice",
+          "consulting_label": "Leadership Change",
+          "why_it_matters": "Senior leadership transition — change management or org design opportunity."
         },
         {
           "title": "Ion Varouxakis-linked tanker venture fixes out first newbuilding to Cargill - TradeWinds News",
@@ -1675,111 +750,61 @@
           "company": "Cargill Asia",
           "commodity": null,
           "flags": [
-            "esg"
+            "esg",
+            "trading_risk"
           ],
-          "score": 2.8295,
-          "title_norm": "cargill first fixes ion linked newbuilding news out tanker tradewinds varouxakis venture"
-        },
-        {
-          "title": "Saving breath: Why Havah-Linn Cargill's name resonates with parents after near-death - Big Rapids Pioneer",
-          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQMXJ0eERTcml2SXFBMHdQYm1sZVJLaFdTTjVKMkxWdHhyaHZUcEtPdUFLNi1JZ1J1TktRakQxTE5iRm1ETFpFMlJBSjdCSl9tTEtCNTBaOFNTQnJ2SjducVhNOHVveGZveDBhOWtiaGZ4WjVHTVN6ODFURTY5czQ4ZkRaRVZtT1lFM3d3RHptb095U1E?oc=5",
-          "source": "Google News",
-          "published": "2026-06-06T01:49:10Z",
-          "summary": "Saving breath: Why Havah-Linn Cargill's name resonates with parents after near-death&nbsp;&nbsp;Big Rapids Pioneer",
-          "company": "Cargill Asia",
-          "commodity": null,
-          "flags": [],
-          "score": 0.7414,
-          "title_norm": "after big breath cargill death havah linn name near parents pioneer rapids resonates saving why"
-        },
-        {
-          "title": "Charlotte Flair & Tiffany Stratton vs. Jade Cargill & Michin: SmackDown highlights, June 5, 2026 - WWE",
-          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPcVhZcW1vOVQzc0FmQnJTVU1uRTRmNkJyUzZZNV80b1NOQUg5YlBQTjFhWjFwZHV5d0lpalptdW1nYTQ2bFBpT0xFOGl4c1Jyc3Y2dmFSeFRKOXc0OW1YbFhNaFFMWVZoMmlMQWxCV2pSU29uZlRja1pFVkV0cTFjQ0ZhWXh2cHhzLWpnZG5KSXljQjVYOWV6MU5zb0RTd2daa25uR0xtd0RTTzNKdkN5N0piZVdvZw?oc=5",
-          "source": "Google News",
-          "published": "2026-06-06T01:43:34Z",
-          "summary": "Charlotte Flair & Tiffany Stratton vs. Jade Cargill & Michin: SmackDown highlights, June 5, 2026&nbsp;&nbsp;WWE",
-          "company": "Cargill Asia",
-          "commodity": null,
-          "flags": [],
-          "score": 0.7374,
-          "title_norm": "2026 cargill charlotte flair highlights jade june michin smackdown stratton tiffany wwe"
-        },
-        {
-          "title": "Cargill Eyes Major Shake-Up as Metals Exit Signals New Ag Strategy - Agrolatam",
-          "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQejAxcWZxQ090bmZNWmlTVmcxV2ZtWG5LYVBEY1JMTzdiSFdyUmVZM0JoSlFaaFJENUVpUTh3bjBaM29CNGc2QXdQX2k0VWR2VU9jYWltWXJBMDVqQldwSUctRXI3cld6YTRWY1ktY19Tb0NONFRzMzRZdF9ScWpxRHZiNkZ2TnJwV2c?oc=5",
-          "source": "Google News",
-          "published": "2026-06-06T00:35:35Z",
-          "summary": "Cargill Eyes Major Shake-Up as Metals Exit Signals New Ag Strategy&nbsp;&nbsp;Agrolatam",
-          "company": "Cargill Asia",
-          "commodity": null,
-          "flags": [],
-          "score": 0.6907,
-          "title_norm": "agrolatam cargill exit eyes major metals new shake signals strategy"
-        },
-        {
-          "title": "Virginia Cargill Obituary (2026) - East Tawas, MI - Iosco County News-Herald - Post and Courier",
-          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQanBFWHMtTlA3UktnVm5OcG04eTh5b0VSVG5zYlIyU2hfN0Q0UkxjRlIzbWx4V0NmZE9nM01CaVlwSklaM2kwYnE3MXRmU21tUXF2dHlMWlZmazV4MzZxSTFsS0Y4MDdydDRzZ3UzRTNfeU4xU0FLc3o5c1c0S2NGZTUxa0dKa0FXVFpGVGZibVZ1d2YwUk9hTVRiTFNUVUU?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T19:04:49Z",
-          "summary": "Virginia Cargill Obituary (2026) - East Tawas, MI - Iosco County News-Herald&nbsp;&nbsp;Post and Courier",
-          "company": "Cargill Asia",
-          "commodity": null,
-          "flags": [],
-          "score": 0.5024,
-          "title_norm": "2026 cargill county courier east herald iosco news obituary post tawas virginia"
-        },
-        {
-          "title": "Cargill Weighs Selling Its Metals Unit To Macquarie - Finimize",
-          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNV3hkZUlFVlZQVUNROUVoNnBsX1lSYmE2dGh5LVd5UjVXaHRwdTN0dXRVc1lTOWtKa0s0THYzNV9mS2lwSS1LZUNZaVJ5OU8yZDNINWZtbDE4aFMwSzZlVkM4T0dNZHdsTEVneHpWRV9mekJDV1lBWTAyZkM3cUNRZS01VWU4Wkk?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T17:00:51Z",
-          "summary": "Cargill Weighs Selling Its Metals Unit To Macquarie&nbsp;&nbsp;Finimize",
-          "company": "Cargill Asia",
-          "commodity": null,
-          "flags": [],
-          "score": 0.4458,
-          "title_norm": "cargill finimize macquarie metals selling unit weighs"
-        },
-        {
-          "title": "Exclusive: Cargill in talks to sell metals unit to Macquarie, sources say - Reuters",
-          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNYlhma05wM0tQcURIWnVaLUpIbmZEMUprOWNXSVQxcW0tc0Qtem44OGRhWnBzM3FMQWpHM29mRXBNY1JtSlhsaEhZZHlCVVV6M3lJNjRKdmhMVWZ6ZDgyb2hVeHJJVjcwRkl0SjEzQ01zdDM0bE1nam5ZYUpENXZLSjJiM1lVTWZmenppem5ZZGt0RTBueVRLN2laa0RvQ3EtaUhEVEF5NA?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T16:48:36Z",
-          "summary": "Exclusive: Cargill in talks to sell metals unit to Macquarie, sources say&nbsp;&nbsp;Reuters",
-          "company": "Cargill Asia",
-          "commodity": null,
-          "flags": [],
-          "score": 0.4406,
-          "title_norm": "cargill exclusive macquarie metals reuters say sell sources talks unit"
-        },
-        {
-          "title": "Cargill in talks to sell metals unit to Macquarie, sources say - TradingView",
-          "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQYnFmVVV6Q0pjWmFzTko4WExGQi1kXzNueTA3ZHI4RmFFQ0NySDk4eFNyOWxsengtb3pvU3N5M0h4d2lBMVdsQ2FhbEhEbFY4ZHhlLXM2anBtSndRY1VkNjNGT2tkZmZCM21PcG5xWVBtT2xEaENvLUpkRVp2Rm5LVDFSTWpIVTJ4X3cyUWJBdE1tcTBuZVd3S3BqODRHQzBDbEh5NG1PNmdRcmhqOC1QMVZVZ3M4RHF6d0JINGtiWVphZUhWS244N3VDRQ?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T16:46:44Z",
-          "summary": "Cargill in talks to sell metals unit to Macquarie, sources say&nbsp;&nbsp;TradingView",
-          "company": "Cargill Asia",
-          "commodity": null,
-          "flags": [],
-          "score": 0.4398,
-          "title_norm": "cargill macquarie metals say sell sources talks tradingview unit"
-        },
-        {
-          "title": "Last chance agreement binds arbitrator in Cargill firing after worker left poultry station early - HR Law Canada",
-          "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOUzJKTEhPQkdadlktZ2tHSGdZQkNyQUhEYVUwd3NRdGpmbVMzZkFkZ05ZMmZRdXJiR1dNaUFsTlRaV1VfVWxEbHpKMTlfQ1VWaGVYaVVnZEV4NGs2cmxPUE5GVF8wQnVKWGdhRjMyUmRhLUlmdERYdFV1ZTZzbFlYVmZtdUEzX3dYSjA3NWNqcS1GSnl0VXlvRGZXR19yT09EUWRma0NPX1hTQUFqQlVsM1kzR3dMUTNVZlNUR3hnb1IwN2Z6a05vRw?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T15:11:19Z",
-          "summary": "Last chance agreement binds arbitrator in Cargill firing after worker left poultry station early&nbsp;&nbsp;HR Law Canada",
-          "company": "Cargill Asia",
-          "commodity": null,
-          "flags": [],
-          "score": 0.4012,
-          "title_norm": "after agreement arbitrator binds canada cargill chance early firing last law left poultry station worker"
+          "score": 2.7356,
+          "title_norm": "cargill first fixes ion linked newbuilding news out tanker tradewinds varouxakis venture",
+          "consulting_label": "Trading Risk",
+          "why_it_matters": "Trading or market risk exposure — hedging framework, VaR, or desk controls review."
         }
       ],
       "flags": [
-        "trading_moves",
-        "esg"
+        "esg",
+        "trading_risk",
+        "trading_moves"
+      ]
+    },
+    {
+      "name": "Danantara",
+      "sector": "trading",
+      "country": "ID",
+      "items": [
+        {
+          "title": "Indonesia releases details on export overhaul of palm, coal - The Business Times",
+          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQb19HOGhGU2I2S184Y1BWcTM5QTBxdmJVOFYzYUtjNG1femNjMjBweW1aeHo3TWpOQlFBc0E4T0FrcF9Lb2ttU2lQLTZqaWlLVEdBNkdxYlNvUWtvdHFiRFNHUGJMV05vcV9jcnNneUQ2TlAtWFVXcGhYWFE2RUJiMndESnRpdm5Sc0NENzBadGNIY3c1Rk9oWEhkYjdtbTZ0MXQ1eTVQS1Y?oc=5",
+          "source": "Google News",
+          "published": "2026-06-05T08:13:00Z",
+          "summary": "Indonesia releases details on export overhaul of palm, coal&nbsp;&nbsp;The Business Times",
+          "company": "Danantara",
+          "commodity": null,
+          "flags": [
+            "regulatory"
+          ],
+          "score": 2.6918,
+          "title_norm": "business coal details export indonesia overhaul palm releases times",
+          "consulting_label": "Compliance Risk",
+          "why_it_matters": "Regulatory action — compliance advisory, remediation, or sanctions screening."
+        },
+        {
+          "title": "Affirms Business Certainty in DSI's Natural Resource Export Mandate - Danantara Indonesia",
+          "url": "https://news.google.com/rss/articles/CBMi0gJBVV95cUxOR3Z5Ym1nbHZseXhPeXU5QmNGeWRyZkY4VEcwVEQtSG5pdGZ5R2Q3aWo0S0lyUFRKUVF3Si01TjBDQVBwaXZ2QXlESnl3djRRampCSHFkdWEzYkRVN3NxSzFqdGlkdVI1a3NBczVieGVJak5Jc0JCcjJtS2Vha3hyOThQSlZHODJXa24yWlo2aU9FRWpIQlAzY3ZoQVNZOUtzLVdDMmRpSkthVXZBV1J2MDNUSzBVc3lPWDdEX1YyYkVneGVhRVpFUFlUcS1SSjJkSE1VMVY3XzdLSDRULWhabmc1VkZPZGZzUTVDampHbmlJYkJ4QTRDajFYSVVnLWZ2N19uQlE0c0taSFZxekFqZmJFd0VEYmY1RUozbnc1RGl0cEwtdU5VaFJaeFc3MEhDWVAzTVFvUi1KbTJsakQtX2dNRTloRzVfb1RRNVVKNVRSZw?oc=5",
+          "source": "Google News",
+          "published": "2026-06-05T03:46:49Z",
+          "summary": "Affirms Business Certainty in DSI's Natural Resource Export Mandate&nbsp;&nbsp;Danantara Indonesia",
+          "company": "Danantara",
+          "commodity": null,
+          "flags": [
+            "regulatory"
+          ],
+          "score": 2.6484,
+          "title_norm": "affirms business certainty danantara dsi export indonesia mandate natural resource",
+          "consulting_label": "Compliance Risk",
+          "why_it_matters": "Regulatory action — compliance advisory, remediation, or sanctions screening."
+        }
+      ],
+      "flags": [
+        "regulatory"
       ]
     },
     {
@@ -1798,8 +823,10 @@
           "flags": [
             "ma"
           ],
-          "score": 2.9721,
-          "title_norm": "42bn acquisition argentina assets com completes marketscreener mercuria raizens"
+          "score": 2.8376,
+          "title_norm": "42bn acquisition argentina assets com completes marketscreener mercuria raizens",
+          "consulting_label": "Integration",
+          "why_it_matters": "M&A or JV activity — potential integration, due diligence, or PMI mandate."
         },
         {
           "title": "Mercuria Lawyers Say Government Deals Got Oil Through Hormuz - gCaptain",
@@ -1812,213 +839,56 @@
           "flags": [
             "ma"
           ],
-          "score": 2.9494,
-          "title_norm": "deals gcaptain got government hormuz lawyers mercuria oil say through"
-        },
-        {
-          "title": "Mercuria Lawyers Say Government Deals Got Oil Through Hormuz - Bloomberg.com",
-          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOdkhFQ0VpcmQtQWVndE9fWDZRSHFidThFMU5kcWQxOXN5VHZ1Ujc2c081amc1X1IweWZRODBVcDBldkt6LUc3WjdwdjBjRDlSSUtaeFhiR2dNZEFaTVliSGhCcEwyX2VqWURuZTZkLTNGQnpEVlF5aDRjQXFjMFVvWlMxcFdqMGhlcDZqaUNoR25HU1dWZDVzQkUwVnoyd3ZLTFpRSlY1akJCS3pEOE1QTQ?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T12:52:47Z",
-          "summary": "Mercuria Lawyers Say Government Deals Got Oil Through Hormuz&nbsp;&nbsp;Bloomberg.com",
-          "company": "Mercuria",
-          "commodity": null,
-          "flags": [
-            "ma"
-          ],
-          "score": 2.8511,
-          "title_norm": "bloomberg com deals got government hormuz lawyers mercuria oil say through"
-        },
-        {
-          "title": "Mercuria snaps up Shell venture’s oil assets in $1.4bn deal - TradeWinds News",
-          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPa0tsb2JyWUVxNWZMeWRta2tqWDZ3UzFTN3ZlelFYY0NKQlN5aWdZQkZjTVdYRWxzWnZZd0ZaZFVpXzBCNFF3UDRraUdhY3J5THpfdG5jN1MzTEpNZXhKT29BbWtNaG9PZDFta1FYRktFN29lVmY5bm9zTHN4X0VfYVMzYVk0dzMxdkRqdnJMU1NmV3BvSV9nczMtdklqUXRXeU9hVzJGWUtKNUlsbEE?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T10:56:14Z",
-          "summary": "Mercuria snaps up Shell venture’s oil assets in $1.4bn deal&nbsp;&nbsp;TradeWinds News",
-          "company": "Mercuria",
-          "commodity": null,
-          "flags": [
-            "ma",
-            "esg"
-          ],
-          "score": 2.8139,
-          "title_norm": "4bn assets deal mercuria news oil shell snaps tradewinds ventures"
-        },
-        {
-          "title": "Raizen Divests Argentina Downstream Assets to Mercuria for $1.42 Billion - energynews.pro",
-          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQX3ZSR2RwQjNaY0dUMzdWUWlKb2JMUDFsYVZvRVFrVVRROWJWRkducVNyOWZTNE5JMTBhaS1TNzZmelgxVEFNUWh3Y3VxWWFsYnFTU19kQnJqNklTVDFNVjc2NlJCTmhkSEJTRENDYnI1Q01UZlFlS1VnSl9CMzdHZGRBZnNmZW9TZU05Nm9UdlhqSFVld0diSjdoZ3U?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T08:36:23Z",
-          "summary": "Raizen Divests Argentina Downstream Assets to Mercuria for $1.42 Billion&nbsp;&nbsp;energynews.pro",
-          "company": "Mercuria",
-          "commodity": null,
-          "flags": [
-            "ma"
-          ],
-          "score": 2.7743,
-          "title_norm": "argentina assets billion divests downstream energynews mercuria pro raizen"
-        },
-        {
-          "title": "Mercuria signs deal to buy Raízen Argentina - LatinFinance",
-          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQamJhdkVGelFUT1A1WDZsaDlaWkV2T3l0ZUo3Rmo5el9UZVRrMEUyRzVGdnhvWVpUVUVXNGJPRTQ1RVJZUHUzamNvTG8wVGt4ZnUtVG5mc24wU1p2clUwZWM0UHpva0VGZlJNTkd0YVdCYWxNajQ5ZmFsOFc0QlEtVjJMX2Fvc2tUMjBSZlhTbWk5YTVoRWow?oc=5",
-          "source": "Google News",
-          "published": "2026-06-04T23:51:28Z",
-          "summary": "Mercuria signs deal to buy Raízen Argentina&nbsp;&nbsp;LatinFinance",
-          "company": "Mercuria",
-          "commodity": null,
-          "flags": [
-            "ma"
-          ],
-          "score": 2.6655,
-          "title_norm": "argentina buy deal latinfinance mercuria raizen signs"
-        },
-        {
-          "title": "Raizen sells Argentina operations to Mercuria for $1.42 billion - Investing.com",
-          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPVi1XdVk1cE5sOGd5T0NvNGNQQ3lDUmRZdTloQTVPbUhCdFd4ZVBKLTFNTjljcm9xNzBMWWZWa29vM3FOZGhnZGo5Wmd2a1dYQkVpYTRnN000aUZDdjVkb1FNNlZSVjdHYXhVTjVZLXJ5azdBVElTTlhrUy1zM0c5VjJEUXBveUFHaXp4YzBXeXpWdGI2VEppSUZoQm9fOTRlVy1GOFd4aHVoek40ZDhHYmRseTRIYVYzV1hIT2Z2R2E?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T09:31:21Z",
-          "summary": "Raizen sells Argentina operations to Mercuria for $1.42 billion&nbsp;&nbsp;Investing.com",
-          "company": "Mercuria",
-          "commodity": null,
-          "flags": [],
-          "score": 0.2892,
-          "title_norm": "argentina billion com investing mercuria operations raizen sells"
-        },
-        {
-          "title": "Mercuria to acquire Raízen’s Shell fuel network in Argentina - Mobility Plaza",
-          "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1TODdEcnJWX01yZlVBLWh0b0cxMURabU9LeDRRVnlpc0hnLUVvLXYySnBwVVloUjluX2oyNG1pWXhyT1h1MzBfYklrYkdmMFJDQlE?oc=5",
-          "source": "Google News",
-          "published": "2026-06-04T21:39:27Z",
-          "summary": "Mercuria to acquire Raízen’s Shell fuel network in Argentina&nbsp;&nbsp;Mobility Plaza",
-          "company": "Mercuria",
-          "commodity": null,
-          "flags": [],
-          "score": 0.1457,
-          "title_norm": "acquire argentina fuel mercuria mobility network plaza raizens shell"
+          "score": 2.8213,
+          "title_norm": "deals gcaptain got government hormuz lawyers mercuria oil say through",
+          "consulting_label": "Integration",
+          "why_it_matters": "M&A or JV activity — potential integration, due diligence, or PMI mandate."
         }
       ],
       "flags": [
-        "ma",
-        "esg"
+        "ma"
       ]
     },
     {
-      "name": "Danantara",
+      "name": "TotalEnergies Trading Asia",
       "sector": "trading",
-      "country": "ID",
+      "country": "FR",
       "items": [
         {
-          "title": "Affirms Business Certainty in DSI's Natural Resource Export Mandate - Danantara Indonesia",
-          "url": "https://news.google.com/rss/articles/CBMi0gJBVV95cUxOR3Z5Ym1nbHZseXhPeXU5QmNGeWRyZkY4VEcwVEQtSG5pdGZ5R2Q3aWo0S0lyUFRKUVF3Si01TjBDQVBwaXZ2QXlESnl3djRRampCSHFkdWEzYkRVN3NxSzFqdGlkdVI1a3NBczVieGVJak5Jc0JCcjJtS2Vha3hyOThQSlZHODJXa24yWlo2aU9FRWpIQlAzY3ZoQVNZOUtzLVdDMmRpSkthVXZBV1J2MDNUSzBVc3lPWDdEX1YyYkVneGVhRVpFUFlUcS1SSjJkSE1VMVY3XzdLSDRULWhabmc1VkZPZGZzUTVDampHbmlJYkJ4QTRDajFYSVVnLWZ2N19uQlE0c0taSFZxekFqZmJFd0VEYmY1RUozbnc1RGl0cEwtdU5VaFJaeFc3MEhDWVAzTVFvUi1KbTJsakQtX2dNRTloRzVfb1RRNVVKNVRSZw?oc=5",
+          "title": "Totalenergies Nigeria Sees Q3 Revenue 191.81 Bln Naira, PBT 2.62 Bln Naira - TradingView",
+          "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPWHdVLVhvSkpyeDBRNGpDUUlNOXVYMmZkczZEeEd1RzVVencxSHVieTdfVDA1YUJQbXQ5a3NUajNLZk1zUGNfSl9GNXI0ZTdEX2pHQlZJUk1tbTBDTldULVlDXzR3UHNtSHBNeWtoY3BweWFId05lZ1BaTVhsc3gtcmc1VFJQRENqcDQ3N0l2T0F3MnE0bk5zZG1ZR1h0SXhMbktyaV83LUdDUGczZFdCTVhtU2stTFpmUi1kcnBiRExGN2lZTUtKbTBOSFpUdDY5d0o0dmRZUTNLWVU?oc=5",
           "source": "Google News",
-          "published": "2026-06-05T03:46:49Z",
-          "summary": "Affirms Business Certainty in DSI's Natural Resource Export Mandate&nbsp;&nbsp;Danantara Indonesia",
-          "company": "Danantara",
+          "published": "2026-06-05T19:27:22Z",
+          "summary": "Totalenergies Nigeria Sees Q3 Revenue 191.81 Bln Naira, PBT 2.62 Bln Naira&nbsp;&nbsp;TradingView",
+          "company": "TotalEnergies Trading Asia",
+          "commodity": null,
+          "flags": [
+            "earnings"
+          ],
+          "score": 2.8671,
+          "title_norm": "191 bln bln naira naira nigeria pbt revenue sees totalenergies tradingview",
+          "consulting_label": "Performance",
+          "why_it_matters": "Earnings or guidance release — CFO advisory, margin improvement, or FP&A opportunity."
+        },
+        {
+          "title": "TotalEnergies eyes higher gas production in Argentina to expand regional exports - marketscreener.com",
+          "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQQ2xEaElGMzBTZkQ3NGc3THFfc19TWjRvelE0SjJSVG43SDJLVTllZGtzVG1QS2FxTmdFaWRQcUNfVWdadGdndDAweV9xRmhETF9EMjJlczUwdDVMMlpJeXMxdFRZYVlLWjIxS0hHTXJyMnRMWGJTRWw3Rko1WF82c1BEanFmV1N1SkZ2STBpV2R5UmJGanZ0eG9ucFZCTEloNHVLSDhzbURMTGJ4VGRHaXAzWUJlS3Q3YlhKUVJiOXplc0paSEpQYzE4X1Zqdw?oc=5",
+          "source": "Google News",
+          "published": "2026-06-05T18:00:12Z",
+          "summary": "TotalEnergies eyes higher gas production in Argentina to expand regional exports&nbsp;&nbsp;marketscreener.com",
+          "company": "TotalEnergies Trading Asia",
           "commodity": null,
           "flags": [
             "regulatory"
           ],
-          "score": 2.7076,
-          "title_norm": "affirms business certainty danantara dsi export indonesia mandate natural resource"
-        },
-        {
-          "title": "Danantara Denies Obligation for Indonesians to Buy Patriot Bonds - Tempo.co English",
-          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPalVCV01QZVl0d2NKNGVQYnZLNk9ERUhRUjJQbm5QUDlzSVdyOEhCaXV0bWRMSmpQSjJsU2tQVU8wQ3lXSGVoMXdycWRza3lpSlI4R21xMENlekFzQ0dENjkyeWNFdlBRaWdSbWxFaVQ0ZnE3cW96U0VjeEZjQWxuQUN3VW1SOGJFeTFrWmNYcXVyZFRSTVRCTGVCeGpzUQ?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T14:20:48Z",
-          "summary": "Danantara Denies Obligation for Indonesians to Buy Patriot Bonds&nbsp;&nbsp;Tempo.co English",
-          "company": "Danantara",
-          "commodity": null,
-          "flags": [],
-          "score": 0.3822,
-          "title_norm": "bonds buy danantara denies english indonesians obligation patriot tempo"
-        },
-        {
-          "title": "Danantara Denies Requiring The Rich to Buy Merah Putih Bonds - Jakarta Globe",
-          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPRGJwOWp3R0tvS1pVNXZPX2lqSGxvN2hNQnMxbGlSeUl3dmlJeF9Nb3doakxjcFg5eXNMZmY0R3NocC1RZFRzNm9hTTNrdl9kbXYwcDkwcFQ0WHFNalZXUExvLXhWZU45R2pvQkhiN01pUWJzemJpWl9MbUt6X0J1NDM5WVI4aXdMeVhTUXZLdlZxRl9YdE9BZw?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T11:09:00Z",
-          "summary": "Danantara Denies Requiring The Rich to Buy Merah Putih Bonds&nbsp;&nbsp;Jakarta Globe",
-          "company": "Danantara",
-          "commodity": null,
-          "flags": [],
-          "score": 0.3177,
-          "title_norm": "bonds buy danantara denies globe jakarta merah putih requiring rich"
-        },
-        {
-          "title": "Danantara plans new low-yield bond as investors shun Indonesia - The Business Times",
-          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOa21MUXctTm1YbmFtNVZ5Nm1GZTdPdURPNm9CSXk5aTVJN1RLazJYdVZmLUpFLWx2ZGk5UXpKT09kSEdWcGZPWjNCRmFya2wyamtnVm05bGFGMVozT1J5OTFVWHEtQThBNGlxUmc4LVpzMi1neE5EYl93dDhaTW9keklKb1U4TDBCZWpheXdpcnVFdUhhaloxT3FLcjlUOUlRWnE3cU05TXh3WEY3SHNZMklR?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T10:34:00Z",
-          "summary": "Danantara plans new low-yield bond as investors shun Indonesia&nbsp;&nbsp;The Business Times",
-          "company": "Danantara",
-          "commodity": null,
-          "flags": [],
-          "score": 0.3072,
-          "title_norm": "bond business danantara indonesia investors low new plans shun times yield"
-        },
-        {
-          "title": "Danantara's Take on Moody's Baa2 Negative Rating - Tempo.co English",
-          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNbVJ1bWs2MlI0elhPVEJKY194X1FyRGwyc1ZXcy1pUG95Rk5nRWVpVmN5bUU5eEJtQ1JOMUJPR19yMms0S25aUmNhcUpXSUEtTGZzZ1pZM3VwaHNPUXQ1ZDk1Vl8wN3Zvc3Zfal9wWkZWVU5DOUJTYjB4MGRRcUxwdzNoekp5UQ?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T10:11:44Z",
-          "summary": "Danantara's Take on Moody's Baa2 Negative Rating&nbsp;&nbsp;Tempo.co English",
-          "company": "Danantara",
-          "commodity": null,
-          "flags": [],
-          "score": 0.3007,
-          "title_norm": "baa2 danantara english moody negative rating take tempo"
-        },
-        {
-          "title": "Is Danantara Requiring Rich Indonesians to Buy Merah Putih Bonds? - Tempo.co English",
-          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNNDF3cWE3b1MtOHR5Rno3MC0zVWZ6dVZCN2VDUnBPU0dDYWRyQXJhQld3TlRkUUNRcUw5dDcwYkxTUVdFOUEydlU3LXZ3a2c4QURlYXoyLWt1VzVjRUJnc0tPNGVUamZKbENwN3BLcUo5N21TNnNWbUlMQlRNWFV4Y3lRWU5FaW5lUTZaWlp2RnNyaU56SjNxNFZrX0ZzUQ?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T09:28:58Z",
-          "summary": "Is Danantara Requiring Rich Indonesians to Buy Merah Putih Bonds?&nbsp;&nbsp;Tempo.co English",
-          "company": "Danantara",
-          "commodity": null,
-          "flags": [],
-          "score": 0.2886,
-          "title_norm": "bonds buy danantara english indonesians merah putih requiring rich tempo"
-        },
-        {
-          "title": "Danantara Plans Low-Yield Bond as Investors Shun Indonesia - Bloomberg.com",
-          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOc3NUUldfbFhRc2NKWEhzSU9za0J4MS1Ybk9hSmd6MXZQX0p1c2RzdTVsb1BxajNRT245T0lzSmV5Zzg0Q0JzTTV2OERLbzZqRWdWS1ZWM2dYMXdRSkgzdnNQb3BVcHdiV0JSaWd4ZkNEUVpZTTI3b3lscXRoVHdhbW5QOEg0bUhLc1ByZ0JsbzZtQlRpaXhtUU5tVkVqNU5ScmxnSzZud0tIR1lBeVBuNjlYWQ?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T08:33:09Z",
-          "summary": "Danantara Plans Low-Yield Bond as Investors Shun Indonesia&nbsp;&nbsp;Bloomberg.com",
-          "company": "Danantara",
-          "commodity": null,
-          "flags": [],
-          "score": 0.2735,
-          "title_norm": "bloomberg bond com danantara indonesia investors low plans shun yield"
-        },
-        {
-          "title": "Danantara Touted to Fund Trans-Sumatra Railway: How Much Will It Cost? - Tempo.co English",
-          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPOXNWdlBkN2EwZ0Jqa25vMkU1ZUZJZEtVaEtGTjlfWGZ3ZnFUMGZuVjdJVkM0TnNrV0NNb3hPRVF3eV91eWNJV0FPc01WaUlreW5ZdVlvWUtMak9TUFpDT3VseTBoMkdWXzRTYl94OTNqcHFWSkkzakwxeWZibkNPY3JlQ25rdDEzbW5ZWUxZTWQ2Y29uYmF4RzliNnI4b0tkcnVN?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T07:24:21Z",
-          "summary": "Danantara Touted to Fund Trans-Sumatra Railway: How Much Will It Cost?&nbsp;&nbsp;Tempo.co English",
-          "company": "Danantara",
-          "commodity": null,
-          "flags": [],
-          "score": 0.2559,
-          "title_norm": "cost danantara english fund how much railway sumatra tempo touted trans"
-        },
-        {
-          "title": "JCI Inches Higher as Investors Assess P2SK Reform, Danantara Bonds - Jakarta Globe",
-          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxORDdFMHhmQm1mTEZFN3ctekxHdDNjb3k4NjNDQ1JTMFhhSGF0WFI4WFMtOWpDRm1QT2NYMUR0aW1YeHI4bU1QVmZNeWJMTkthQ2FrbXZvMXZfd1JSeDkyT0dGdTJOcTQzTUVnWGU1N3duV2F0UTdXSkRFOU9Ec3YxdGFGeWViQVlLQno4dGVwSWRuUkUza0Q5NUtBcHpNQnc?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T02:07:00Z",
-          "summary": "JCI Inches Higher as Investors Assess P2SK Reform, Danantara Bonds&nbsp;&nbsp;Jakarta Globe",
-          "company": "Danantara",
-          "commodity": null,
-          "flags": [],
-          "score": 0.1886,
-          "title_norm": "assess bonds danantara globe higher inches investors jakarta jci p2sk reform"
+          "score": 2.8376,
+          "title_norm": "argentina com expand exports eyes gas higher marketscreener production regional totalenergies",
+          "consulting_label": "Compliance Risk",
+          "why_it_matters": "Regulatory action — compliance advisory, remediation, or sanctions screening."
         }
       ],
       "flags": [
+        "earnings",
         "regulatory"
       ]
     }
@@ -2036,9 +906,41 @@
         "prev_close": 95.4,
         "change_pct": -2.42,
         "source": "yfinance",
-        "as_of": "2026-06-06T06:58:48.482737Z"
+        "as_of": "2026-06-06T12:47:13.861472Z"
       },
       "items": [
+        {
+          "title": "Brent Settles at $95, WTI at $93 as Middle East Tensions Ease | - Business Post Nigeria",
+          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQRTlKU2lNNlcwd21SMXJGY0xqSkNnVUlYelBGYmVBcjdieGxCc1RxV1p6MFllVUNXUW54RlRVZGJaaUE2QlB5ME5xMXFyVHRwd2Zxa2hZMTRQQ0Z0eEVUcFBxUkFhYlBaekdURkhZQzVvcnZwRTg3cXNMM1BYbkVsaW5lT0xZSXNOV2lEMS1RQ19tLVBveHc?oc=5",
+          "source": "Google News",
+          "published": "2026-06-06T09:40:56Z",
+          "summary": "Brent Settles at $95, WTI at $93 as Middle East Tensions Ease |&nbsp;&nbsp;Business Post Nigeria",
+          "company": null,
+          "commodity": "crude_oil",
+          "flags": [
+            "geopolitical"
+          ],
+          "score": 3.335,
+          "title_norm": "brent business ease east middle nigeria post settles tensions wti",
+          "consulting_label": "Compliance Risk",
+          "why_it_matters": "Geopolitical exposure — sanctions risk or trade compliance advisory."
+        },
+        {
+          "title": "Oil (USCrude) Price Forecast for Today, Tomorrow, Next Week, and Next 30 Days - LiteFinance",
+          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQcm51RHFTMGNQcnB2aFl5bjNQQzFXUVVHckh1eW1IVktpM0lfaXlCQ2p6RF9nYWxkajlxb2R2V0lkRi1FNnljalUwMlhaU2FFT2dCUDBwem9tVG14Y1FXZGVKbWJvSm0xNlVVZ1BwdTItWnJkOTF3TnFTU2FQLWZibmhXRXlnX2RJY25leTB2ekVVUHZMZS1zbjBhWkNJLWs?oc=5",
+          "source": "Google News",
+          "published": "2026-06-06T00:51:45Z",
+          "summary": "Oil (USCrude) Price Forecast for Today, Tomorrow, Next Week, and Next 30 Days&nbsp;&nbsp;LiteFinance",
+          "company": null,
+          "commodity": "crude_oil",
+          "flags": [
+            "earnings"
+          ],
+          "score": 3.0017,
+          "title_norm": "days forecast litefinance next next oil price today tomorrow uscrude week",
+          "consulting_label": "Performance",
+          "why_it_matters": "Earnings or guidance release — CFO advisory, margin improvement, or FP&A opportunity."
+        },
         {
           "title": "Goldman Sachs Raises 2026 Brent Crude Average Price Forecast by $8 to $85 a Barrel, WTI to $79 a Barrel - EnergyNow.com",
           "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPRVg2X190YVA4cHR2S2JPek01bm1OV0NabE1jQUphdTFOZHk4R1FFUjlJS0dBdHgwb3B6b3FYN2trUFFRRUdfbUJPXzhORzl3dG8yZTNFOXc5cDFsY1B2V0FVbHFxNGRlSEc4NU1ONlhZT2JVS2hSalg2TUdOa3VfM3QzbDRRVHVwdWZLRWxadUpiOTFROERzNzFaZklCNGk5VHVtaWU3ZldTaFRxOGlpSQ?oc=5",
@@ -2050,8 +952,10 @@
           "flags": [
             "earnings"
           ],
-          "score": 3.012,
-          "title_norm": "2026 average barrel barrel brent com crude energynow forecast goldman price raises sachs wti"
+          "score": 2.8661,
+          "title_norm": "2026 average barrel barrel brent com crude energynow forecast goldman price raises sachs wti",
+          "consulting_label": "Performance",
+          "why_it_matters": "Earnings or guidance release — CFO advisory, margin improvement, or FP&A opportunity."
         },
         {
           "title": "Natural Gas, WTI Oil, Brent Oil Forecasts – Oil Retreats As Dollar Rallies After NFP Report - FXEmpire",
@@ -2064,8 +968,10 @@
           "flags": [
             "earnings"
           ],
-          "score": 2.9905,
-          "title_norm": "after brent dollar forecasts fxempire gas natural nfp oil oil oil rallies report retreats wti"
+          "score": 2.8507,
+          "title_norm": "after brent dollar forecasts fxempire gas natural nfp oil oil oil rallies report retreats wti",
+          "consulting_label": "Performance",
+          "why_it_matters": "Earnings or guidance release — CFO advisory, margin improvement, or FP&A opportunity."
         },
         {
           "title": "Crude Oil Prices: Brent, WTI Hold as Traders Watch US-Iran Negotiations - CryptoRank",
@@ -2079,8 +985,10 @@
             "trading_moves",
             "geopolitical"
           ],
-          "score": 2.9067,
-          "title_norm": "brent crude cryptorank hold iran negotiations oil prices traders watch wti"
+          "score": 2.7908,
+          "title_norm": "brent crude cryptorank hold iran negotiations oil prices traders watch wti",
+          "consulting_label": "Leadership Change",
+          "why_it_matters": "Senior leadership transition — change management or org design opportunity."
         },
         {
           "title": "Core Differences Between West Texas Intermediate (WTI) and Brent Crude and the Affect of the Iran War - EnergyNow.com",
@@ -2091,38 +999,13 @@
           "company": null,
           "commodity": "crude_oil",
           "flags": [
-            "geopolitical"
+            "geopolitical",
+            "enterprise_risk"
           ],
-          "score": 2.8446,
-          "title_norm": "affect between brent com core crude differences energynow intermediate iran texas war west wti"
-        },
-        {
-          "title": "Natural Gas and Oil Forecast: WTI Under $92 While Brent Tests $94 — Will NatGas Extend Gains? - FXEmpire",
-          "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPNWs3UnpSM1Y3X1VveEZlX2hhZFRpNHhNY0lEMUh2aWtQZzdMSnJ6WEJtMGJVbU1abnpyMUd2WVplbklhc3hCVDFadl9iOURMOEhFckQ2MVFrOTFpV2E2NGJEQnZLaGMwSnBnLUJlaXZiX05vbTRaSWR5aDAtYUFQRk01ZFFVdU9FUUJ4bzNyYUl5XzhmZUVtSFpZb3kwV0YzdWxaSEstMFNHNHVfai1OcHBhTEg5aHdxdXc2NGVRaU42b0lIc1hJREhZQTExMEU5SC1RTQ?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T09:56:00Z",
-          "summary": "Natural Gas and Oil Forecast: WTI Under $92 While Brent Tests $94 — Will NatGas Extend Gains?&nbsp;&nbsp;FXEmpire",
-          "company": null,
-          "commodity": "crude_oil",
-          "flags": [
-            "earnings"
-          ],
-          "score": 2.7962,
-          "title_norm": "brent extend forecast fxempire gains gas natgas natural oil tests under while wti"
-        },
-        {
-          "title": "WTI, Brent Crude Oil Futures Fall Pre-Bell, Extending Declines Amid Reports Trump Reluctant to Restart Iran War - marketscreener.com",
-          "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNeXBjZXpld3lENEo0bUVtTDA0VmtRWTdGOTFCRkhaQm5ibUxfTWo2Nnp2QjFtODBlTEJnT3plRHJlMFBxVXVBRUVYSkFlMW9CcFlTVHc5MUxmNXBQbTZMaDNKX3NxSUtxSG5tSUVlWFlPeGpqM3BTcFdBQXl0dEprUno3OUN2aHRaTG83WGZSRjlnTGJYNVFVbVZaX051U0JQYnpRR1hNMXNuSDlhZ01YNy12Mm55enUxb2RDZFhudVRHcnFIMUpzOTV0cEdGOURXUHg5RmhIYUs1MUdEYWl4Q2RIQjlLZw?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T09:35:27Z",
-          "summary": "WTI, Brent Crude Oil Futures Fall Pre-Bell, Extending Declines Amid Reports Trump Reluctant to Restart Iran War&nbsp;&nbsp;marketscreener.com",
-          "company": null,
-          "commodity": "crude_oil",
-          "flags": [
-            "geopolitical"
-          ],
-          "score": 2.7904,
-          "title_norm": "amid bell brent com crude declines extending fall futures iran marketscreener oil pre reluctant reports restart trump war wti"
+          "score": 2.7464,
+          "title_norm": "affect between brent com core crude differences energynow intermediate iran texas war west wti",
+          "consulting_label": "Enterprise Risk",
+          "why_it_matters": "Enterprise risk or governance signal — ERM framework or internal audit advisory."
         }
       ]
     },
@@ -2138,7 +1021,7 @@
         "prev_close": 3.351,
         "change_pct": -3.64,
         "source": "yfinance",
-        "as_of": "2026-06-06T06:58:49.828907Z"
+        "as_of": "2026-06-06T12:47:14.928386Z"
       },
       "items": []
     },
@@ -2146,7 +1029,22 @@
       "commodity_id": "refined",
       "display": "Refined",
       "price": null,
-      "items": []
+      "items": [
+        {
+          "title": "Fuel oil: HSFO paper weakens as July tightness eases - Quantum Commodity Intelligence",
+          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOUko5WHR5Nzh3a1RvZnkybjFncHE4T3p4MWlWZVJfd0ljREJhMlI5bHNqbGFEMGFVX0N1dUZlYlVual9QRmFKYnVLcjNnUGZWcnpCTFQtTVI1UUtfNUVRSWFQT2l6dmJXRDJ5UnBoVkJ5WXdfOTAtZmdyQm9vc0h6aXRKZktKRm82a0lhbUM3QkRjRThYUzI3OWln?oc=5",
+          "source": "Google News",
+          "published": "2026-06-05T14:47:06Z",
+          "summary": "Fuel oil: HSFO paper weakens as July tightness eases&nbsp;&nbsp;Quantum Commodity Intelligence",
+          "company": null,
+          "commodity": "refined",
+          "flags": [],
+          "score": 0.2803,
+          "title_norm": "commodity eases fuel hsfo intelligence july oil paper quantum tightness weakens",
+          "consulting_label": "",
+          "why_it_matters": ""
+        }
+      ]
     },
     {
       "commodity_id": "coal",
@@ -2161,9 +1059,13 @@
           "summary": "Yankuang says Yancoal Australia thermal coal prices linked to Newcastle, API5 indices&nbsp;&nbsp;煤炭资源网",
           "company": null,
           "commodity": "coal",
-          "flags": [],
-          "score": 0.2875,
-          "title_norm": "api5 australia coal indices linked newcastle prices says thermal yancoal yankuang"
+          "flags": [
+            "enterprise_risk"
+          ],
+          "score": 2.7056,
+          "title_norm": "api5 australia coal indices linked newcastle prices says thermal yancoal yankuang",
+          "consulting_label": "Enterprise Risk",
+          "why_it_matters": "Enterprise risk or governance signal — ERM framework or internal audit advisory."
         }
       ]
     },
@@ -2179,7 +1081,7 @@
         "prev_close": 14171.2973,
         "change_pct": -2.56,
         "source": "yfinance",
-        "as_of": "2026-06-06T06:58:50.474681Z"
+        "as_of": "2026-06-06T12:47:15.458316Z"
       },
       "items": []
     },
@@ -2201,7 +1103,7 @@
         "prev_close": 1129.25,
         "change_pct": -0.69,
         "source": "yfinance",
-        "as_of": "2026-06-06T06:58:51.116228Z"
+        "as_of": "2026-06-06T12:47:15.994644Z"
       },
       "items": []
     }
@@ -2221,19 +1123,19 @@
     },
     {
       "category": "event",
-      "text": "Shell: material events flagged (earnings, esg, geopolitical) — review headlines below."
+      "text": "Chevron: material events flagged (earnings, enterprise_risk, geopolitical) — review headlines below."
     },
     {
       "category": "event",
-      "text": "Chevron: material events flagged (earnings, esg, geopolitical) — review headlines below."
+      "text": "Shell: material events flagged (earnings, esg, ma) — review headlines below."
     },
     {
       "category": "event",
-      "text": "BHP: material events flagged (esg, geopolitical, ma) — review headlines below."
+      "text": "BHP: material events flagged (growth_strategy, ma, price_shock) — review headlines below."
     },
     {
       "category": "event",
-      "text": "TotalEnergies Trading Asia: material events flagged (earnings, esg, ma) — review headlines below."
+      "text": "Tenaga Nasional Berhad: material events flagged (earnings, esg, ma) — review headlines below."
     }
   ],
   "prices": [
@@ -2246,7 +1148,7 @@
       "prev_close": 95.4,
       "change_pct": -2.42,
       "source": "yfinance",
-      "as_of": "2026-06-06T06:58:48.482737Z"
+      "as_of": "2026-06-06T12:47:13.861472Z"
     },
     {
       "commodity_id": "wti",
@@ -2257,7 +1159,7 @@
       "prev_close": 93.14,
       "change_pct": -2.79,
       "source": "yfinance",
-      "as_of": "2026-06-06T06:58:49.125198Z"
+      "as_of": "2026-06-06T12:47:14.393217Z"
     },
     {
       "commodity_id": "henry_hub",
@@ -2268,7 +1170,7 @@
       "prev_close": 3.351,
       "change_pct": -3.64,
       "source": "yfinance",
-      "as_of": "2026-06-06T06:58:49.828907Z"
+      "as_of": "2026-06-06T12:47:14.928386Z"
     },
     {
       "commodity_id": "copper",
@@ -2279,7 +1181,7 @@
       "prev_close": 14171.2973,
       "change_pct": -2.56,
       "source": "yfinance",
-      "as_of": "2026-06-06T06:58:50.474681Z"
+      "as_of": "2026-06-06T12:47:15.458316Z"
     },
     {
       "commodity_id": "soybeans",
@@ -2290,7 +1192,7 @@
       "prev_close": 1129.25,
       "change_pct": -0.69,
       "source": "yfinance",
-      "as_of": "2026-06-06T06:58:51.116228Z"
+      "as_of": "2026-06-06T12:47:15.994644Z"
     },
     {
       "commodity_id": "wheat",
@@ -2301,7 +1203,89 @@
       "prev_close": 581.0,
       "change_pct": -0.17,
       "source": "yfinance",
-      "as_of": "2026-06-06T06:58:51.755872Z"
+      "as_of": "2026-06-06T12:47:16.555202Z"
+    }
+  ],
+  "opportunities": [
+    {
+      "company": "ExxonMobil",
+      "sector": "energy",
+      "signal": "Integration",
+      "headline": "BI Asset Management Fondsmaeglerselskab A S Grows Stake in ExxonMobil Corporation $XOM - MarketBeat",
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPVG1qMXlKRk5OeG0tNUN2RmdWZU8wWU51QmVfZ0dBOWIwNGs4X24wTmlreUVaejZwd25JM1htWFNGejNEQmdWUzU2Y3J5MUdfc2xhZEs2a3NEUVFpQmlibk5NM0d3NFR6THhlamhfMDY3ekEtVE5yQTI1RjNuV0RrY0NwdUItUXhmS3NXWXdsbGlxSVlIQTFGSGtSV2t6SkNhNjFMcGtpekw2VVZkSU1qd2NXRFduakRtampFN045SG5wZnVGZjdrckdnQTBqb25uNmxSaFhkbzhxbEVQeGlF?oc=5",
+      "why": "M&A or JV activity — potential integration, due diligence, or PMI mandate.",
+      "published": "2026-06-06T07:25:06Z",
+      "score": 3.2326
+    },
+    {
+      "company": "BHP",
+      "sector": "metals_mining",
+      "signal": "Integration",
+      "headline": "Assessing Canadian National Railway’s Valuation After New BHP Potash Deal And Record Grain And Propane Volumes - simplywall.st",
+      "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxObFlaemJuM2dLeHk2S3FSVHdRSlljcnM4bEg0U3lMLWpVUFUyNmI3VEJYVEdxcHlZSTloYWsxVW53bkNsSUw5SkVHZmxGQklSM0hmOWFKakttVm5mSkdqUHhPZ29Zc05kY2VjSml3UEktdC1zYlBLM3I3R3hmSkkxejVyT054RmFCeE9IMkZ4LXFra0ZXN0M0cGtnNmpmaFdHYXlSVElBcTJGeW0xSnlmTDMzN1pLRHJ3V3B2bldGWHh6ZHRKUzJIdWNoUmRlWXYzM0hCMlNXMHJ2RGRyZWFwYlR6SEFCZnFs0gHuAUFVX3lxTE1zclIyRWw2czhDYXZMU0hjZmFKXzB2a0E4SXpmdnYtN0hid0dwWFpkclJKS0dFejN6QnctVkRfQ0JxXzRZYk1zZE9jT2laWEN4TEtnOEQwaWdXaWNibHBZcnVkeVNIb1NndjRBU1J0RDlybFNkMDRjejB4MDkzdk5QVFc3czBXa1BuTGRPU3YxQk1kWkYzZ0JUbkw0ZWxxa0lpXzJ5NVBfWHhFaERwa09DR2dnak1vN3JsdnZ3bTEzLTZmUWZJWVJxakgtQVloRlZ1cWp2YXdlcmJUUEdfcmp2eU5IOEplUldYOFF5SXc?oc=5",
+      "why": "M&A or JV activity — potential integration, due diligence, or PMI mandate.",
+      "published": "2026-06-06T03:34:25Z",
+      "score": 3.0867
+    },
+    {
+      "company": "PTT",
+      "sector": "energy",
+      "signal": "Integration",
+      "headline": "PV Gas expands strategic partnerships with leading Southeast Asian energy firms - Theinvestor",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPZ2YzRjlwcExxRGp3UnhCMGNXYmw1d3lEcEJiOGlMOTJKNzBPZUphZzdIRm43akwwX3NYTkZ0WG9KMnZlSlVvcDZjam0yaFBFaDNMc1dQNGkwX0tUT3RlWHM3ZmtEd1d3VDB3bWVzVUlxRF9ZOGVCdlQ1NHBpT2RuR0NnV2w0ckltZG5Sa0xucW4tTmZRdjBoeGdUUGRkcFJEVURjd25VSVJyZkM0dnVVRV9qQzI?oc=5",
+      "why": "M&A or JV activity — potential integration, due diligence, or PMI mandate.",
+      "published": "2026-06-06T02:04:00Z",
+      "score": 3.0378
+    },
+    {
+      "company": "Shell",
+      "sector": "energy",
+      "signal": "Integration",
+      "headline": "What C3.ai (AI)'s Wider Losses and Expanded Shell Partnership Means For Shareholders - Yahoo Finance",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPdmRUdUR2c3JnZnQ3dUZTMHo4RkpLNUZCRlN4V3hDbUQwNFoxYkVIemtxamxhbDE0bFBsX0hjc1FHb1JFRzUzTWFMRXhDUzRUZ0tUZW83LXh0TERpV1dOMnVnUWI5S2tmSlBObk8xeklUdzgyNHBkTjB5UWxGb0NzcWVKVDVmNVRvekk0dGc3OA?oc=5",
+      "why": "M&A or JV activity — potential integration, due diligence, or PMI mandate.",
+      "published": "2026-06-06T01:05:00Z",
+      "score": 3.0081
+    },
+    {
+      "company": "Tenaga Nasional Berhad",
+      "sector": "power_utilities",
+      "signal": "Integration",
+      "headline": "DayOne Secures Over 1GW Renewable Energy in Malaysia in Landmark TNB Partnership - Macau Business",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOT3ZVVzdqYzNhNDVqZXBrRk15ZEg1dzVuLThBM19TSG5ST21POXlmenhDMGZaS2lLWUZtZU5ZaTE3MzVZN3Q1Zjg4SXVrX1ZQWUZ6d0dDMlJ3VllrLVFwTTZOTXFjLWU4WnVkRDFNMzkzTnYwYjliOE0zX3A3QUo2YXRWME00YW1hQ0tDZ3Q4amNzRWY0b2NHUzBtSDV1RmtuTUt2OFQ5ZXA1R2c?oc=5",
+      "why": "M&A or JV activity — potential integration, due diligence, or PMI mandate.",
+      "published": "2026-06-05T20:45:44Z",
+      "score": 2.8959
+    },
+    {
+      "company": "Anglo American",
+      "sector": "metals_mining",
+      "signal": "Integration",
+      "headline": "Anglo American plc stock (GB00B1XZS820): focus shifts to valuation as coal exit and Teck merger plan - AD HOC NEWS",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNcDVBUDlZNFN5RmNTQjVMTHppUXZ3UmYxN1RFeGs4d2x4VGFKQi11cWRTNTUweDJzbHF4X3RRRG5DbnhjY1gxRVBYdERLYW5aSHBfeVhmNnhZYWhsQnlXU0FKT0NtWU5XNVVpOGl5WExRXzJLRHIyWWZXUkRfbl9nYy1IVDZyR0w4aVgzU0pqbWJhTEJkMzFaR2V2dHVXUWRBSGU4eVBkdTI4ZGw3aHVzUlRwbGxTQzhmUXctR3d3dTJ2RUdjOTRfcmdR?oc=5",
+      "why": "M&A or JV activity — potential integration, due diligence, or PMI mandate.",
+      "published": "2026-06-05T19:50:24Z",
+      "score": 2.8753
+    },
+    {
+      "company": "Mercuria",
+      "sector": "trading",
+      "signal": "Integration",
+      "headline": "Mercuria completes $1.42bn acquisition of Raizen’s Argentina assets - marketscreener.com",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOMmVuQi1qbXgyZVlzUE9wZlE1MjdpTGJXN1NfR0t2bmNXaVNfM0RESHVDSVp3TWY5WnBYOWstOGM1VXNPWktBWW1kTkR5MDBiS1FPWTR5ZzdNV2ItZUxtSmhtR2s1c2VLSGQ5MzhLZ2JrU2NybHhIenBjZW1hZGdhbG5xLWRRZDFXRjlRb2N6ay1qR2k1RHN5aTJrMTQ3dkpnLU56QkdSelRLd0Y5M0RLOUlxVVVCVFdmZUNUNw?oc=5",
+      "why": "M&A or JV activity — potential integration, due diligence, or PMI mandate.",
+      "published": "2026-06-05T18:00:12Z",
+      "score": 2.8376
+    },
+    {
+      "company": "Woodside Energy",
+      "sector": "energy",
+      "signal": "Integration",
+      "headline": "Japanese player to take stake in Mexico-bound floater - Upstream Online",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPRFlqOHo3NWRzcmY3WDJBd2pPc2J3aUlUWm9iVDRlQ1JGVkgxb3FGSzh6NVBoS2VrZlIzaXRaWGVhSUM2OGhVUWJXMXhnMEhVUWVlbFNCcUwtUmNkNC1NTDdzeVV6S0I3dWRBQVc0dXFCczU5cW16NTFCRHZFX3NGYWx4bmE3UkZGdWt1d2lzemtHaGZVTUVsMmJtdFdyLUdtRjh3d25nUV9pMDJnUnpvSTl6WQ?oc=5",
+      "why": "M&A or JV activity — potential integration, due diligence, or PMI mandate.",
+      "published": "2026-06-05T05:36:11Z",
+      "score": 2.6649
     }
   ]
 }
