@@ -52,6 +52,8 @@ companies:
     priority: high
     ticker: SHEL.L
     one_liner: "Global supermajor; major LNG trader and downstream operator across Asia-Pacific."
+    # Search targets Shell's Singapore trading arm (Shell Eastern Trading, Shell Energy Trading)
+    search_query: '"Shell Eastern Trading" OR "Shell Energy Trading" OR "Shell Trading" Singapore'
 
   - name: ExxonMobil
     aliases: [ExxonMobil, Exxon, "Exxon Mobil"]
@@ -61,6 +63,8 @@ companies:
     priority: med
     ticker: XOM
     one_liner: "US supermajor with significant upstream and chemicals exposure across SEA."
+    # ExxonMobil's Asia-Pacific trading and marketing hub is in Singapore
+    search_query: '"ExxonMobil" Singapore trading OR "ExxonMobil Asia Pacific" OR "Esso" Singapore trading'
 
   - name: Chevron
     aliases: [Chevron, "Chevron Corporation"]
@@ -70,6 +74,8 @@ companies:
     priority: med
     ticker: CVX
     one_liner: "US supermajor; upstream production in Australia, Indonesia, and Thailand."
+    # Chevron Products Company is the Singapore-based trading/marketing entity
+    search_query: '"Chevron" Singapore trading OR "Chevron Products" Singapore OR "Chevron Asia" trading'
 
   - name: TotalEnergies Trading Asia
     aliases: [TotalEnergies, "Total Energies", "TotalEnergies Trading Asia"]
@@ -79,6 +85,7 @@ companies:
     priority: high
     ticker: TTE.PA
     one_liner: "Trading arm of TotalEnergies; significant LNG and crude trading hub in Singapore."
+    search_query: '"TotalEnergies Trading Asia" OR "TotalEnergies" Singapore LNG trading OR "Total Gas & Power Asia"'
 
   - name: Aramco Trading Singapore
     aliases: ["Aramco Trading", "Saudi Aramco", "Aramco Trading Singapore"]
@@ -88,6 +95,7 @@ companies:
     priority: high
     ticker: ""
     one_liner: "Trading subsidiary of Saudi Aramco; crude and products marketing across Asia."
+    search_query: '"Aramco Trading" Singapore OR "Aramco Trading Singapore" OR "Saudi Aramco" Asia trading'
 
   - name: Anglo American
     aliases: ["Anglo American", "Anglo American plc"]
@@ -97,6 +105,8 @@ companies:
     priority: med
     ticker: AAL.L
     one_liner: "Diversified global miner; platinum, copper, iron ore, and steelmaking coal."
+    # Anglo American Marketing Ltd is the Singapore-based trading entity
+    search_query: '"Anglo American" Singapore trading OR "Anglo American Marketing" OR "Anglo American" commodity trading Asia'
 
   - name: Rio Tinto
     aliases: ["Rio Tinto", "Rio Tinto Group"]
@@ -106,6 +116,8 @@ companies:
     priority: high
     ticker: RIO.L
     one_liner: "Global miner; iron ore, copper, aluminium, and battery-materials strategy."
+    # Rio Tinto's commercial/trading operations are run out of Singapore
+    search_query: '"Rio Tinto" Singapore trading OR "Rio Tinto Commercial" OR "Rio Tinto" commodity marketing Asia'
 
   - name: BHP
     aliases: [BHP, "BHP Group", "BHP Billiton"]
@@ -115,6 +127,8 @@ companies:
     priority: high
     ticker: BHP.AX
     one_liner: "Diversified global miner; iron ore, copper, coal, and nickel operations."
+    # BHP's marketing arm trades out of Singapore
+    search_query: '"BHP" Singapore trading OR "BHP Marketing" OR "BHP" commodity marketing Asia'
 
   - name: Woodside Energy
     aliases: ["Woodside Energy", "Woodside Petroleum", Woodside]
@@ -124,6 +138,8 @@ companies:
     priority: med
     ticker: WDS.AX
     one_liner: "Australian LNG producer; Pluto, North West Shelf, and emerging hydrogen assets."
+    # Woodside Marketing Singapore handles LNG offtake and trading
+    search_query: '"Woodside" Singapore LNG OR "Woodside Marketing" OR "Woodside Energy" Asia trading'
 
   - name: PETRONAS
     aliases: [PETRONAS, "Petronas", "Petronas Trading", PFLB]
@@ -133,6 +149,8 @@ companies:
     priority: high
     ticker: ""
     one_liner: "Malaysian national oil company; major LNG exporter, upstream, and trading arm."
+    # PTLSB (Petronas LNG Trading Sdn Bhd) and Petronas Trading are the commercial arms
+    search_query: '"PETRONAS" trading OR "PTLSB" OR "Petronas LNG" trading OR "Petronas Energy Trading"'
 
   - name: Tenaga Nasional Berhad
     aliases: [TNB, "Tenaga Nasional", "Tenaga Nasional Berhad"]
@@ -142,6 +160,8 @@ companies:
     priority: med
     ticker: TENAGA.KL
     one_liner: "Malaysia's national electricity utility; generation, transmission, and distribution."
+    # TNB Fuel Services and TNB Energy Trading handle fuel procurement and power trading
+    search_query: '"TNB" fuel procurement OR "TNB Energy Trading" OR "Tenaga Nasional" energy trading OR "TNB Fuel"'
 
   - name: PTT
     aliases: [PTT, "PTT Public", "PTT Thailand", "PTT Group"]
@@ -151,6 +171,8 @@ companies:
     priority: high
     ticker: PTT.BK
     one_liner: "Thai national oil and gas company; upstream, downstream, LNG, and petrochemicals."
+    # PTT International Trading (PTTT) is based in Singapore
+    search_query: '"PTT International Trading" OR "PTTT" Singapore OR "PTT" Singapore LNG trading OR "PTT" commodity trading'
 
   - name: Pertamina
     aliases: [Pertamina, "PT Pertamina"]
@@ -160,6 +182,8 @@ companies:
     priority: high
     ticker: ""
     one_liner: "Indonesian national oil company; refining, upstream, and trading operations."
+    # Pertamina International Shipping and Pertamina Energy Trading operate in Singapore
+    search_query: '"Pertamina International" Singapore OR "Pertamina Energy Trading" OR "Pertamina" Singapore trading OR "PT Pertamina" trading'
 
   - name: MIND ID
     aliases: ["MIND ID", ANTAM, "Aneka Tambang", "Bukit Asam", PTBA, Timah]
@@ -169,6 +193,8 @@ companies:
     priority: med
     ticker: ""
     one_liner: "Indonesian state mining holding company; nickel, coal, aluminium, tin, and gold."
+    # MIND ID group companies trade minerals and coal out of Singapore
+    search_query: '"MIND ID" Singapore OR "ANTAM" trading OR "Bukit Asam" coal trading OR "MIND ID" commodity'
 
   - name: EGAT
     aliases: [EGAT, "Electricity Generating Authority of Thailand"]
@@ -178,6 +204,8 @@ companies:
     priority: low
     ticker: ""
     one_liner: "Thailand's state electricity authority; power generation, grid, and renewable projects."
+    # EGAT International Co. Ltd. handles cross-border power trading and fuel procurement
+    search_query: '"EGAT International" OR "EGAT" Singapore OR "EGAT" LNG procurement OR "EGAT" power trading'
 
   - name: Cargill Asia
     aliases: [Cargill, "Cargill Asia", "Cargill Singapore"]
@@ -187,6 +215,7 @@ companies:
     priority: med
     ticker: ""
     one_liner: "Global agri-commodity trading and processing giant; large Asia-Pacific presence."
+    search_query: '"Cargill" Singapore trading OR "Cargill Asia" OR "Cargill" Asia commodity OR "Cargill" grains trading'
 
   - name: Mercuria
     aliases: [Mercuria, "Mercuria Energy"]
@@ -196,6 +225,7 @@ companies:
     priority: high
     ticker: ""
     one_liner: "Swiss-origin independent commodity trading house; energy and metals trading globally."
+    search_query: '"Mercuria" Singapore OR "Mercuria Energy" trading OR "Mercuria" Asia commodity'
 
   - name: Danantara
     aliases: [Danantara, "Danantara Indonesia", "BPI Danantara"]
@@ -205,6 +235,7 @@ companies:
     priority: high
     ticker: ""
     one_liner: "Indonesia's sovereign wealth and state-asset management vehicle, managing c.$900bn."
+    search_query: '"Danantara" Indonesia OR "BPI Danantara" OR "Danantara" investment trading'
 
 # ── Commodities ───────────────────────────────────────────────────────────────
 # Only tickers confirmed to return live data via yfinance (Yahoo Finance).

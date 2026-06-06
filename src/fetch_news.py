@@ -129,10 +129,13 @@ def fetch_company_news() -> dict[str, list[NewsItem]]:
     results: dict[str, list[NewsItem]] = {}
     for idx, company in enumerate(cfg.get("companies", [])):
         name = company["name"]
-        aliases = company.get("aliases", [name])
-        # build a search query: primary name + top aliases
-        query_parts = list(dict.fromkeys(aliases[:3]))  # dedup, preserve order
-        query = " OR ".join(f'"{p}"' for p in query_parts)
+        # Use explicit search_query if provided; otherwise fall back to aliases
+        if company.get("search_query"):
+            query = company["search_query"]
+        else:
+            aliases = company.get("aliases", [name])
+            query_parts = list(dict.fromkeys(aliases[:3]))
+            query = " OR ".join(f'"{p}"' for p in query_parts)
 
         region = _pick_region(idx)
         url = _gnews_url(query, region)
