@@ -3,13 +3,13 @@
     "date": "2026-06-06",
     "prices": {
       "brent": {
-        "price": null,
-        "source": "unavailable",
+        "price": 92.87,
+        "source": "yfinance",
         "unit": "USD/bbl"
       },
       "wti": {
-        "price": null,
-        "source": "unavailable",
+        "price": 90.25,
+        "source": "yfinance",
         "unit": "USD/bbl"
       },
       "dubai_oman": {
@@ -23,8 +23,8 @@
         "unit": "USD/bbl"
       },
       "henry_hub": {
-        "price": null,
-        "source": "unavailable",
+        "price": 3.22,
+        "source": "yfinance",
         "unit": "USD/MMBtu"
       },
       "jkm": {
@@ -53,8 +53,8 @@
         "unit": "USD/t"
       },
       "copper": {
-        "price": null,
-        "source": "unavailable",
+        "price": 13835.0924,
+        "source": "yfinance",
         "unit": "USD/t"
       },
       "nickel": {
@@ -83,13 +83,13 @@
         "unit": "USD/t"
       },
       "soybeans": {
-        "price": null,
-        "source": "unavailable",
+        "price": 1122.25,
+        "source": "yfinance",
         "unit": "USc/bu"
       },
       "wheat": {
-        "price": null,
-        "source": "unavailable",
+        "price": 580.25,
+        "source": "yfinance",
         "unit": "USc/bu"
       },
       "palm_oil": {
