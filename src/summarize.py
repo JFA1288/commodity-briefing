@@ -59,7 +59,7 @@ def summarize_sector(
         )
         quiet_str = ", ".join(quiet_companies) if quiet_companies else "None"
         prompt = (
-            f"You are a commodity markets analyst briefing a consulting team at Deloitte "
+            f"You are a commodity markets analyst briefing a consulting team"
             f"serving SEA commodity trading and energy companies.\n\n"
             f"Write a 2–3 sentence paragraph summarising today's news signals for the "
             f"{sector_label} sector. Focus on what these signals mean as potential "
@@ -99,7 +99,7 @@ def summarize_executive_brief(
             for o in opportunities[:6]
         )
         prompt = (
-            "You are a senior commodity markets analyst briefing partners at Deloitte "
+            "You are a senior commodity markets analyst briefing advisory partners"
             "who advise SEA commodity trading and energy companies.\n\n"
             "Based on today's sector intelligence, produce:\n"
             "1. A 4–5 sentence executive brief covering the most important cross-sector "
@@ -140,7 +140,7 @@ def enrich_opportunities(
         )
         prompt = (
             "For each consulting opportunity below, write ONE short line (max 12 words) "
-            "describing the typical Deloitte engagement. "
+            "describing the typical advisory engagement."
             'Format: "Typical scope: [team] · [duration] · [service]"\n\n'
             f"Opportunities:\n{lines}\n\n"
             "Return a JSON array of strings, one per opportunity in order."

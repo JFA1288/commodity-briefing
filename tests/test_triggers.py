@@ -144,18 +144,24 @@ class TestOpportunityScoring:
             assert not shell_card.is_restricted
 
     def test_high_priority_scores_higher(self):
-        # Same headline for two companies: one high-priority, one low
-        # We can verify high-priority multiplier > low by checking breakdown
-        news = {
-            "PETRONAS": [_item("PETRONAS announces major acquisition of LNG assets")],
-            "EGAT": [_item("EGAT announces major acquisition of LNG assets")],
-        }
-        cards = build_opportunity_radar(news, set())
-        petronas = next((c for c in cards if c.company == "PETRONAS"), None)
-        egat = next((c for c in cards if c.company == "EGAT"), None)
-        if petronas and egat:
-            # PETRONAS is high priority (mult 1.5), EGAT is low (mult 0.7)
-            assert petronas.score_breakdown["priority_mult"] > egat.score_breakdown["priority_mult"]
+        # Verify priority multiplier is applied: high (1.5) > low (0.7)
+        # Inject overrides via env so the test is independent of config.yaml values
+        import os, src.config as cfg_mod
+        os.environ["ACCOUNT_OVERRIDES"] = '{"PETRONAS":{"priority":"high"},"EGAT":{"priority":"low"}}'
+        cfg_mod.load.cache_clear()
+        try:
+            news = {
+                "PETRONAS": [_item("PETRONAS announces major acquisition of LNG assets")],
+                "EGAT": [_item("EGAT announces major acquisition of LNG assets")],
+            }
+            cards = build_opportunity_radar(news, set())
+            petronas = next((c for c in cards if c.company == "PETRONAS"), None)
+            egat = next((c for c in cards if c.company == "EGAT"), None)
+            if petronas and egat:
+                assert petronas.score_breakdown["priority_mult"] > egat.score_breakdown["priority_mult"]
+        finally:
+            del os.environ["ACCOUNT_OVERRIDES"]
+            cfg_mod.load.cache_clear()
 
 
 class TestSectorThemes:

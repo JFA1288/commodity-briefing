@@ -1,6 +1,6 @@
 # ─────────────────────────────────────────────────────────────────────────────
 # Energy & Resources — Sector Intelligence
-# Configuration for Deloitte E&R advisory team
+# Configuration for the E&R advisory team
 # Edit companies, drivers, and scoring weights here; no code changes needed.
 # ─────────────────────────────────────────────────────────────────────────────
 
@@ -16,7 +16,7 @@ ollama:
 # ── Dashboard identity ────────────────────────────────────────────────────────
 dashboard:
   site_title: "Commodity Trading — Sector Intelligence"
-  subtitle: "Deloitte Advisory | SEA Commodity Trading"
+  subtitle: "Advisory Intelligence | SEA Commodity Trading"
   timezone_display: "SGT (UTC+8)"
 
 # ── News fetch settings ───────────────────────────────────────────────────────
@@ -49,7 +49,7 @@ companies:
     country: NL
     sector: energy
     relationship: target
-    priority: high
+    priority: med
     ticker: SHEL.L
     one_liner: "Global supermajor; major LNG trader and downstream operator across Asia-Pacific."
     # Company name + trading/energy context to stay relevant without being too narrow
@@ -80,7 +80,7 @@ companies:
     country: FR
     sector: trading
     relationship: target
-    priority: high
+    priority: med
     ticker: TTE.PA
     one_liner: "Trading arm of TotalEnergies; significant LNG and crude trading hub in Singapore."
     search_query: '"TotalEnergies" Singapore OR "TotalEnergies" trading OR "TotalEnergies" LNG OR "TotalEnergies" Asia'
@@ -90,7 +90,7 @@ companies:
     country: SA
     sector: trading
     relationship: target
-    priority: high
+    priority: med
     ticker: ""
     one_liner: "Trading subsidiary of Saudi Aramco; crude and products marketing across Asia."
     search_query: '"Aramco Trading" OR "Saudi Aramco" trading OR "Saudi Aramco" Singapore OR "Saudi Aramco" Asia'
@@ -110,7 +110,7 @@ companies:
     country: GB
     sector: metals_mining
     relationship: target
-    priority: high
+    priority: med
     ticker: RIO.L
     one_liner: "Global miner; iron ore, copper, aluminium, and battery-materials strategy."
     search_query: '"Rio Tinto" trading OR "Rio Tinto" Singapore OR "Rio Tinto" commodity OR "Rio Tinto" metals'
@@ -120,7 +120,7 @@ companies:
     country: AU
     sector: metals_mining
     relationship: target
-    priority: high
+    priority: med
     ticker: BHP.AX
     one_liner: "Diversified global miner; iron ore, copper, coal, and nickel operations."
     search_query: '"BHP" trading OR "BHP" Singapore OR "BHP" commodity OR "BHP" metals'
@@ -139,8 +139,8 @@ companies:
     aliases: [PETRONAS, "Petronas", "Petronas Trading", PFLB]
     country: MY
     sector: energy
-    relationship: client
-    priority: high
+    relationship: target
+    priority: med
     ticker: ""
     one_liner: "Malaysian national oil company; major LNG exporter, upstream, and trading arm."
     search_query: '"PETRONAS" trading OR "Petronas" LNG OR "Petronas" Singapore OR "PTLSB"'
@@ -160,7 +160,7 @@ companies:
     country: TH
     sector: energy
     relationship: target
-    priority: high
+    priority: med
     ticker: PTT.BK
     one_liner: "Thai national oil and gas company; upstream, downstream, LNG, and petrochemicals."
     search_query: '"PTT" trading OR "PTT" Singapore OR "PTT" LNG OR "PTT Group" commodity'
@@ -170,7 +170,7 @@ companies:
     country: ID
     sector: energy
     relationship: target
-    priority: high
+    priority: med
     ticker: ""
     one_liner: "Indonesian national oil company; refining, upstream, and trading operations."
     search_query: '"Pertamina" trading OR "Pertamina" Singapore OR "Pertamina" LNG OR "Pertamina" commodity'
@@ -190,7 +190,7 @@ companies:
     country: TH
     sector: power_utilities
     relationship: target
-    priority: low
+    priority: med
     ticker: ""
     one_liner: "Thailand's state electricity authority; power generation, grid, and renewable projects."
     search_query: '"EGAT" LNG OR "EGAT" power OR "EGAT" trading OR "Electricity Generating Authority"'
@@ -210,7 +210,7 @@ companies:
     country: CH
     sector: trading
     relationship: target
-    priority: high
+    priority: med
     ticker: ""
     one_liner: "Swiss-origin independent commodity trading house; energy and metals trading globally."
     search_query: '"Mercuria" OR "Mercuria Energy" trading OR "Mercuria" Singapore'
@@ -220,7 +220,7 @@ companies:
     country: ID
     sector: trading
     relationship: target
-    priority: high
+    priority: med
     ticker: ""
     one_liner: "Indonesia's sovereign wealth and state-asset management vehicle, managing c.$900bn."
     search_query: '"Danantara" OR "BPI Danantara" OR "Danantara Indonesia"'
@@ -559,5 +559,5 @@ price_history_days: 90
 independence_disclaimer: >
   This tool aggregates public news for awareness purposes only.
   All pursuits are subject to client-acceptance, independence, and conflict checks
-  in line with Deloitte policy. Confirm permissibility with Risk/Independence
+  in line with firm policy. Confirm permissibility with Risk/Independence
   before any business development action on accounts marked audit_restricted.
