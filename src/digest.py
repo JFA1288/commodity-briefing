@@ -122,9 +122,9 @@ def build_company_digests(company_news: dict[str, list[NewsItem]]) -> list[Compa
         for item in items:
             _enrich(item)
 
-        # keep only consulting-relevant items, top 2 by score
+        # keep only consulting-relevant items, top 5 by score
         relevant = [i for i in items if _is_consulting_relevant(i)]
-        ranked = sorted(relevant, key=lambda x: x.score, reverse=True)[:2]
+        ranked = sorted(relevant, key=lambda x: x.score, reverse=True)[:5]
 
         if not ranked:
             continue

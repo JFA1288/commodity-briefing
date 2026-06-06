@@ -260,37 +260,33 @@ section{margin-bottom:2.5rem}
 }
 
 /* ── Company panels ──────────────────────────────────────────────────────── */
-.company-panels{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:.75rem}
-.company-card{
-  background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
-  box-shadow:var(--shadow);border-left:3px solid transparent;
-  padding:1rem 1.1rem;
-}
+.company-panels{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:.75rem}
+.company-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);border-left:3px solid transparent}
 .company-card[data-signal="Integration"]{border-left-color:var(--accent)}
 .company-card[data-signal="Compliance Risk"]{border-left-color:var(--warn)}
 .company-card[data-signal="Enterprise Risk"],.company-card[data-signal="Trading Risk"]{border-left-color:#7c3aed}
 .company-card[data-signal="Ops Resilience"]{border-left-color:var(--dn)}
-.co-header{display:flex;align-items:flex-start;justify-content:space-between;gap:.5rem;margin-bottom:.65rem}
-.co-info{flex:1;min-width:0}
-.co-name{font-size:.95rem;font-weight:700;display:block;margin-bottom:.15rem}
-.co-meta{font-size:.75rem;color:var(--muted)}
-.co-actions{display:flex;align-items:center;gap:.4rem;flex-shrink:0}
+.company-card summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:.5rem;padding:.85rem 1.1rem;user-select:none}
+.company-card summary::-webkit-details-marker{display:none}
+.company-card summary .arrow{font-size:.6rem;transition:transform .15s;color:var(--muted);flex-shrink:0}
+.company-card[open] summary .arrow{transform:rotate(90deg)}
+.company-card summary:hover{background:var(--surface2);border-radius:var(--radius)}
+.company-card[open] summary:hover{border-radius:var(--radius) var(--radius) 0 0}
+.co-summary-inner{display:flex;align-items:center;gap:.4rem;flex:1;min-width:0}
+.co-name{font-size:.9rem;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.co-meta{font-size:.73rem;color:var(--muted);white-space:nowrap}
 .co-signal{
   font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;
   padding:.1rem .38rem;border-radius:3px;background:var(--surface2);
-  color:var(--muted);border:1px solid var(--border);
+  color:var(--muted);border:1px solid var(--border);flex-shrink:0;
 }
-.co-lead{margin-bottom:.5rem}
-.co-lead-link{
-  display:block;font-size:.9rem;font-weight:600;color:var(--text);
-  line-height:1.45;margin-bottom:.2rem;
-}
-.co-lead-link:hover{color:var(--accent)}
-.co-why{font-size:.77rem;color:var(--muted);line-height:1.4}
-.co-also{font-size:.82rem;color:var(--muted);padding-top:.45rem;border-top:1px solid var(--border);margin-top:.1rem}
-.co-also-link{color:var(--muted);font-weight:500}
-.co-also-link:hover{color:var(--accent)}
-.no-news{font-size:.82rem;color:var(--muted)}
+.company-body{padding:.2rem 1.1rem .85rem}
+.company-item{padding:.5rem 0;border-bottom:1px solid var(--border);font-size:.86rem}
+.company-item:last-child{border-bottom:none}
+.company-item a{color:var(--text);font-weight:500;line-height:1.45;display:block}
+.company-item a:hover{color:var(--accent)}
+.item-meta{font-size:.73rem;color:var(--muted);margin-top:.15rem;display:flex;gap:.45rem;flex-wrap:wrap;align-items:center}
+.no-news{font-size:.82rem;color:var(--muted);padding:.35rem 0}
 
 /* ── Archive ─────────────────────────────────────────────────────────────── */
 .archive-list{display:flex;flex-wrap:wrap;gap:.5rem}
@@ -793,42 +789,37 @@ function renderCompanies(companies){
 
     el.innerHTML=list.map(co=>{
       const items=co.items||[];
-      const top=items[0];
-      const second=items[1];
       const flag=FLAGS[co.country]||'';
-      const secLabel=SECTOR_LABELS[co.sector]||co.sector;
-      const signal=top?.consulting_label||'';
+      const signal=items[0]?.consulting_label||'';
 
-      const topHtml=top?`
-        <div class="co-lead">
-          <a href="${esc(top.url)}" target="_blank" rel="noopener noreferrer" class="co-lead-link">${esc(top.title)}</a>
-          ${top.why_it_matters?`<div class="co-why">${esc(top.why_it_matters)}</div>`:''}
-        </div>`:
-        `<div class="no-news">No significant news today.</div>`;
-
-      const alsoHtml=second?`
-        <div class="co-also">
-          Also: <a href="${esc(second.url)}" target="_blank" rel="noopener noreferrer" class="co-also-link">${esc(second.title)}</a>
-        </div>`:'';
+      const itemsHtml=items.length
+        ?items.map(it=>`
+          <div class="company-item">
+            <a href="${esc(it.url)}" target="_blank" rel="noopener noreferrer">${esc(it.title)}</a>
+            <div class="item-meta">
+              <span>${esc(it.source)}</span>
+              ${it.published?`<span>${fmtDate(it.published)}</span>`:''}
+              ${it.consulting_label?`<span class="signal-tag">${esc(it.consulting_label)}</span>`:''}
+            </div>
+          </div>`).join('')
+        :`<div class="no-news">No significant news today.</div>`;
 
       return `
-      <div class="company-card"
+      <details class="company-card"
         data-company="${esc(co.name.toLowerCase())}"
         data-sector="${esc(co.sector)}"
         data-hasflags="${items.length?'1':'0'}"
         data-signal="${esc(signal)}">
-        <div class="co-header">
-          <div class="co-info">
+        <summary>
+          <span class="arrow" aria-hidden="true">▶</span>
+          <div class="co-summary-inner">
             <span class="co-name">${esc(co.name)}</span>
-            <span class="co-meta">${flag} ${esc(secLabel)}</span>
+            <span class="co-meta">${flag}</span>
           </div>
-          <div class="co-actions">
-            ${signal?`<span class="co-signal">${esc(signal)}</span>`:''}
-          </div>
-        </div>
-        ${topHtml}
-        ${alsoHtml}
-      </div>`;
+          ${signal?`<span class="co-signal">${esc(signal)}</span>`:''}
+        </summary>
+        <div class="company-body">${itemsHtml}</div>
+      </details>`;
     }).join('');
   });
 }
