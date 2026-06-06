@@ -1,6 +1,34 @@
 {
-  "generated_at": "2026-06-06T16:51:53.769396Z",
+  "generated_at": "2026-06-06T17:11:23.550206Z",
+  "executive_brief": {
+    "narrative": "Today's signals point to a concentrated wave of M&A integration and regulatory complexity across SEA's energy and trading landscape, creating immediate and high-value consulting entry points. Chevron and Shell's escalating Nigeria compliance exposure demands urgent environmental liability and regulatory strategy work, while ExxonMobil, PTT/PV Gas, and Woodside's integration activity signals live deal structuring and JV advisory mandates across Southeast Asia and Mexico. In metals, Anglo American's coal exit and Teck merger positioning—set against BHP's coal hedge fund signaling and Rio Tinto's leadership transition—indicates a sector in active strategic consolidation, where M&A due diligence and portfolio rebalancing engagements are immediately actionable. On the trading side, Mercuria's $1.42bn Argentina close and Danantara's palm and coal export compliance burden represent two distinct but urgent mandates: post-acquisition integration advisory for the former, and regulatory navigation plus supply chain restructuring for the latter. PETRONAS's dividend pressure and MIND ID's 63% profit surge together frame a regional bifurcation story—distressed portfolio optimization on one end, capital allocation strategy on the other—that partners should lead with on any SEA national oil company or state-linked mining client call today.",
+    "themes": [
+      "M&A integration pressure SEA",
+      "Energy transition capital reallocation",
+      "Regulatory compliance complexity rising",
+      "State-linked asset portfolio stress",
+      "Coal exit strategic repositioning"
+    ]
+  },
   "top_headlines": [
+    {
+      "title": "AI Boom or Political Play? Trump Channels Defense Funds Into Dying Coal Plants",
+      "url": "https://oilprice.com/Energy/Coal/AI-Boom-or-Political-Play-Trump-Channels-Defense-Funds-Into-Dying-Coal-Plants.html",
+      "source": "OilPrice.com",
+      "published": "2026-06-06T17:00:00Z",
+      "summary": "The Trump administration is set to channel nearly $700 million in federal funds into the U.S. coal industry Thursday, invoking a Korean War-era statute to prop up existing power plants, finance new construction, and push open a California export terminal that has been blocked for nearly two decades. The centerpiece is $425 million distributed under the Defense Production Act to 13 existing coal plants across West Virginia, Kentucky, North Carolina, Indiana, Tennessee, Arkansas, Arizona, Oklahoma",
+      "company": null,
+      "commodity": null,
+      "flags": [
+        "regulatory",
+        "geopolitical",
+        "enterprise_risk"
+      ],
+      "score": 3.7862,
+      "title_norm": "boom channels coal defense dying funds into plants play political trump",
+      "consulting_label": "Enterprise Risk",
+      "why_it_matters": "Enterprise risk or governance signal — ERM framework or internal audit advisory."
+    },
     {
       "title": "WED 2026: Chevron Nigeria and Mid-Africa Region’s Commitment to Environmental Stewardship - Majorwaves Energy Report",
       "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNQXB5aEJPd29zRkg2MjJnYjRGdWhCSGwzN2pONTJER3BBaXZxUF92LVRsZE1EMUhvVDlUc2xkM1I4ekVNbXR4STNidm5GeW9DMlJqeDFmUmVTTi1fTElYMWgzVlZLXzVKdUttV1N3OWZ2bl9odHFQS1N0V2JraExrNTJkdkRUSXUwS29ENnktQjBLeTVhaDBDX3lJM1otMjVHRWZXdEtiMUo3OUtrczZzbnVvS0QzWnJQdm5LaEUzQ3BScHpsN2c?oc=5",
@@ -12,24 +40,24 @@
       "flags": [
         "geopolitical"
       ],
-      "score": 3.4635,
+      "score": 3.4457,
       "title_norm": "2026 africa chevron commitment energy environmental majorwaves mid nigeria regions report stewardship wed",
       "consulting_label": "Compliance Risk",
       "why_it_matters": "Geopolitical exposure — sanctions risk or trade compliance advisory."
     },
     {
-      "title": "Holcim & TotalEnergies open 31 MW Belgium floating solar plant - Solarbytes",
+      "title": "Holcim & TotalEnergies open 31 MW Belgium floating solar plant - solarbytes.info",
       "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNd1h3SnpWMld6RXBmRklPWDFXTTczS2doLXVEdmpNYjB3VlB0N191MzRSNGRKMklXSjFLTnRFS2xQNVhvVXVreFliVUpHRk9Wb3JtMnJKNnJ3a01jYU15YU9TaUd6dTZBZmgzZGpsU2l6UzVaQlRuZ3pVaXpFQVNGVVUzTnVmd0gxSUtFS1FaU3F4eHNJbWdNaEI4VWtuYVQyaGt5aWZ4N3B3dFhKdU9qNW9udHJ2S0VCTkd0YzdaUTc?oc=5",
       "source": "Google News",
       "published": "2026-06-06T15:17:41Z",
-      "summary": "Holcim & TotalEnergies open 31 MW Belgium floating solar plant&nbsp;&nbsp;Solarbytes",
+      "summary": "Holcim & TotalEnergies open 31 MW Belgium floating solar plant&nbsp;&nbsp;solarbytes.info",
       "company": "TotalEnergies Trading Asia",
       "commodity": null,
       "flags": [
         "esg"
       ],
-      "score": 3.4135,
-      "title_norm": "belgium floating holcim open plant solar solarbytes totalenergies",
+      "score": 3.3966,
+      "title_norm": "belgium floating holcim info open plant solar solarbytes totalenergies",
       "consulting_label": "Sustainability",
       "why_it_matters": "ESG or decarbonisation signal — sustainability strategy or reporting mandate."
     },
@@ -45,7 +73,7 @@
         "earnings",
         "geopolitical"
       ],
-      "score": 3.4062,
+      "score": 3.3895,
       "title_norm": "100 2028 oil risk sees until",
       "consulting_label": "Performance",
       "why_it_matters": "Earnings or guidance release — CFO advisory, margin improvement, or FP&A opportunity."
@@ -61,7 +89,7 @@
       "flags": [
         "trading_moves"
       ],
-      "score": 3.3832,
+      "score": 3.3669,
       "title_norm": "bez eye kabli moves next rio shares slide tinto traders",
       "consulting_label": "Leadership Change",
       "why_it_matters": "Senior leadership transition — change management or org design opportunity."
@@ -77,7 +105,7 @@
       "flags": [
         "outage"
       ],
-      "score": 3.3722,
+      "score": 3.3561,
       "title_norm": "continued despite documents forests mangrove mongabay news nigerias oil operations shell show spills",
       "consulting_label": "Ops Resilience",
       "why_it_matters": "Operational disruption — business continuity or resilience advisory opportunity."
@@ -93,7 +121,7 @@
       "flags": [
         "outage"
       ],
-      "score": 3.3209,
+      "score": 3.3057,
       "title_norm": "delta emails liability magazine niger over questions raise realnews shell spills",
       "consulting_label": "Ops Resilience",
       "why_it_matters": "Operational disruption — business continuity or resilience advisory opportunity."
@@ -109,10 +137,26 @@
       "flags": [
         "trading_risk"
       ],
-      "score": 3.3184,
+      "score": 3.3033,
       "title_norm": "according best coal funds hedge insider invest monkey stocks",
       "consulting_label": "Trading Risk",
       "why_it_matters": "Trading or market risk exposure — hedging framework, VaR, or desk controls review."
+    },
+    {
+      "title": "BI Asset Management Fondsmaeglerselskab A S Grows Stake in ExxonMobil Corporation $XOM - MarketBeat",
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPVG1qMXlKRk5OeG0tNUN2RmdWZU8wWU51QmVfZ0dBOWIwNGs4X24wTmlreUVaejZwd25JM1htWFNGejNEQmdWUzU2Y3J5MUdfc2xhZEs2a3NEUVFpQmlibk5NM0d3NFR6THhlamhfMDY3ekEtVE5yQTI1RjNuV0RrY0NwdUItUXhmS3NXWXdsbGlxSVlIQTFGSGtSV2t6SkNhNjFMcGtpekw2VVZkSU1qd2NXRFduakRtampFN045SG5wZnVGZjdrckdnQTBqb25uNmxSaFhkbzhxbEVQeGlF?oc=5",
+      "source": "Google News",
+      "published": "2026-06-06T07:25:06Z",
+      "summary": "BI Asset Management Fondsmaeglerselskab A S Grows Stake in ExxonMobil Corporation $XOM&nbsp;&nbsp;MarketBeat",
+      "company": "ExxonMobil",
+      "commodity": null,
+      "flags": [
+        "ma"
+      ],
+      "score": 3.0689,
+      "title_norm": "asset corporation exxonmobil fondsmaeglerselskab grows management marketbeat stake xom",
+      "consulting_label": "Integration",
+      "why_it_matters": "M&A or JV activity — potential integration, due diligence, or PMI mandate."
     },
     {
       "title": "Rio Tinto Advances Automation And Low Carbon Aluminium In Growth Push - Yahoo Finance",
@@ -125,7 +169,7 @@
       "flags": [
         "esg"
       ],
-      "score": 3.0399,
+      "score": 3.0299,
       "title_norm": "advances aluminium automation carbon finance growth low push rio tinto yahoo",
       "consulting_label": "Sustainability",
       "why_it_matters": "ESG or decarbonisation signal — sustainability strategy or reporting mandate."
@@ -142,26 +186,10 @@
         "ma",
         "price_shock"
       ],
-      "score": 2.9642,
+      "score": 2.9556,
       "title_norm": "after assessing bhp canadian deal grain national new potash propane railways record simplywall valuation volumes",
       "consulting_label": "Integration",
       "why_it_matters": "M&A or JV activity — potential integration, due diligence, or PMI mandate."
-    },
-    {
-      "title": "Fuel prices cut by up to 1 baht per litre at PTT, Bangchak stations - Thai PBS World",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNR05SdnJhTFdIcFR5Z3c1Y0RYVkxrcWZ6SVNOQmJ4VjYyRlUySXFGakVycFhLRHlJd2pMdzkxSFZERHA3NnBlZjlfdzM4NjVValVzc0xGZjhheEVPOWR5ZjBqdTVoeC1oS0FQa2lYcnlHcDJOVGF4RG9rblE4cHQ2R2piUzNWeE5CdFozd1pWMjhKRVl6RmNPMEp1RW13OHZJMmpyMkN1LTh0TEE?oc=5",
-      "source": "Google News",
-      "published": "2026-06-06T03:17:00Z",
-      "summary": "Fuel prices cut by up to 1 baht per litre at PTT, Bangchak stations&nbsp;&nbsp;Thai PBS World",
-      "company": "PTT",
-      "commodity": null,
-      "flags": [
-        "regulatory"
-      ],
-      "score": 2.9564,
-      "title_norm": "baht bangchak cut fuel litre pbs per prices ptt stations thai world",
-      "consulting_label": "Compliance Risk",
-      "why_it_matters": "Regulatory action — compliance advisory, remediation, or sanctions screening."
     },
     {
       "title": "PV Gas expands strategic partnerships with leading Southeast Asian energy firms - Theinvestor",
@@ -174,7 +202,7 @@
       "flags": [
         "ma"
       ],
-      "score": 2.9255,
+      "score": 2.9176,
       "title_norm": "asian energy expands firms gas leading partnerships southeast strategic theinvestor",
       "consulting_label": "Integration",
       "why_it_matters": "M&A or JV activity — potential integration, due diligence, or PMI mandate."
@@ -191,8 +219,24 @@
         "earnings",
         "ma"
       ],
-      "score": 2.902,
+      "score": 2.8945,
       "title_norm": "expanded finance losses means partnership shareholders shell what wider yahoo",
+      "consulting_label": "Integration",
+      "why_it_matters": "M&A or JV activity — potential integration, due diligence, or PMI mandate."
+    },
+    {
+      "title": "ExxonMobil Baytown bids farewell to three - Baytown Sun",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNa0lMTm5qSnFOVWpFbDFXX0NqUUU2S1VtVzBZQXBFeUo0a18zbU5tbnZpZWJGblJkZm83VG1OV3J6M3VjNVhzR0djRzhmUDN4dDV3eElZUzZQUU94bHVPcUpFSGJxLXAtNDVHQkN0WVhhUGtfQ25jcU5rdFRwelhUSklkRzFVMGpnUXR5X1hZbjVQWjQ1azhObjVpM25uTlo5YjRWTUtMUjI3cnFUTkduQ0RPbFRkbGliTDRWLQ?oc=5",
+      "source": "Google News",
+      "published": "2026-06-06T00:11:00Z",
+      "summary": "ExxonMobil Baytown bids farewell to three&nbsp;&nbsp;Baytown Sun",
+      "company": "ExxonMobil",
+      "commodity": null,
+      "flags": [
+        "ma"
+      ],
+      "score": 2.8746,
+      "title_norm": "baytown baytown bids exxonmobil farewell sun three",
       "consulting_label": "Integration",
       "why_it_matters": "M&A or JV activity — potential integration, due diligence, or PMI mandate."
     },
@@ -207,43 +251,10 @@
       "flags": [
         "regulatory"
       ],
-      "score": 2.8805,
+      "score": 2.8735,
       "title_norm": "abandoning com dutch dutch implications legal plc plc reputational royal royal shell shell shell",
       "consulting_label": "Compliance Risk",
       "why_it_matters": "Regulatory action — compliance advisory, remediation, or sanctions screening."
-    },
-    {
-      "title": "How A Steady Analyst View Is Shaping The BHP Group (ASX:BHP) Investment Story - Yahoo Finance",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQYnpOTm5kRHBDMV9uaHl1cjBQQmZXMk04VTFCcG9XYjJ4cW1uTzlWU0VzQzhsLVZnVXlyOXZfUXNCRVNtcTVMc1lVUnRndmVIX21mckVuWjZSdnVyTkIzV09YNl9Xd0JINTVadk9QOEhJTWJhRXpyaVRCY05kQWxjSmNnSXNTeF9SRHdTOEpVbkg5aWp2ajZUVVdMeE8?oc=5",
-      "source": "Google News",
-      "published": "2026-06-05T23:11:01Z",
-      "summary": "How A Steady Analyst View Is Shaping The BHP Group (ASX:BHP) Investment Story&nbsp;&nbsp;Yahoo Finance",
-      "company": "BHP",
-      "commodity": null,
-      "flags": [
-        "growth_strategy"
-      ],
-      "score": 2.8602,
-      "title_norm": "analyst asx bhp bhp finance group how investment shaping steady story view yahoo",
-      "consulting_label": "Growth Strategy",
-      "why_it_matters": "Expansion or investment signal — market entry, feasibility, or strategy advisory."
-    },
-    {
-      "title": "Survey Shows OPEC Output Plunges Further",
-      "url": "https://www.rigzone.com/news/wire/survey_shows_opec_output_plunges_further-05-jun-2026-183866-article/?rss=true",
-      "source": "Rigzone News",
-      "published": "2026-06-05T20:00:00Z",
-      "summary": "War between a U.S.-Israeli alliance and Iran has taken a heavy toll on oil supplies from the Middle East.",
-      "company": null,
-      "commodity": null,
-      "flags": [
-        "geopolitical",
-        "price_shock"
-      ],
-      "score": 2.8596,
-      "title_norm": "further opec output plunges shows survey",
-      "consulting_label": "Compliance Risk",
-      "why_it_matters": "Geopolitical exposure — sanctions risk or trade compliance advisory."
     }
   ],
   "companies": [
@@ -263,7 +274,7 @@
           "flags": [
             "geopolitical"
           ],
-          "score": 3.4635,
+          "score": 3.4457,
           "title_norm": "2026 africa chevron commitment energy environmental majorwaves mid nigeria regions report stewardship wed",
           "consulting_label": "Compliance Risk",
           "why_it_matters": "Geopolitical exposure — sanctions risk or trade compliance advisory."
@@ -280,7 +291,7 @@
             "earnings",
             "enterprise_risk"
           ],
-          "score": 2.7427,
+          "score": 2.7382,
           "title_norm": "cash chevron choice dividends flow investors long make pluang steady stock strong term top",
           "consulting_label": "Enterprise Risk",
           "why_it_matters": "Enterprise risk or governance signal — ERM framework or internal audit advisory."
@@ -296,7 +307,7 @@
           "flags": [
             "enterprise_risk"
           ],
-          "score": 2.7398,
+          "score": 2.7354,
           "title_norm": "alpha chevron cvx long nyse prospects rosy seeking still term",
           "consulting_label": "Enterprise Risk",
           "why_it_matters": "Enterprise risk or governance signal — ERM framework or internal audit advisory."
@@ -312,7 +323,7 @@
           "flags": [
             "earnings"
           ],
-          "score": 2.7339,
+          "score": 2.7296,
           "title_norm": "3rd annual chevron pbr recap showdown yourbasin",
           "consulting_label": "Performance",
           "why_it_matters": "Earnings or guidance release — CFO advisory, margin improvement, or FP&A opportunity."
@@ -329,18 +340,112 @@
             "ma",
             "geopolitical"
           ],
-          "score": 2.6944,
+          "score": 2.6908,
           "title_norm": "alpha chevron cvx deal downgrade fully iran looks lower oil rating seeking send valued",
           "consulting_label": "Integration",
           "why_it_matters": "M&A or JV activity — potential integration, due diligence, or PMI mandate."
         }
       ],
       "flags": [
-        "ma",
-        "earnings",
         "enterprise_risk",
+        "earnings",
+        "ma",
         "geopolitical"
-      ]
+      ],
+      "highlight": ""
+    },
+    {
+      "name": "ExxonMobil",
+      "sector": "energy",
+      "country": "US",
+      "items": [
+        {
+          "title": "BI Asset Management Fondsmaeglerselskab A S Grows Stake in ExxonMobil Corporation $XOM - MarketBeat",
+          "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPVG1qMXlKRk5OeG0tNUN2RmdWZU8wWU51QmVfZ0dBOWIwNGs4X24wTmlreUVaejZwd25JM1htWFNGejNEQmdWUzU2Y3J5MUdfc2xhZEs2a3NEUVFpQmlibk5NM0d3NFR6THhlamhfMDY3ekEtVE5yQTI1RjNuV0RrY0NwdUItUXhmS3NXWXdsbGlxSVlIQTFGSGtSV2t6SkNhNjFMcGtpekw2VVZkSU1qd2NXRFduakRtampFN045SG5wZnVGZjdrckdnQTBqb25uNmxSaFhkbzhxbEVQeGlF?oc=5",
+          "source": "Google News",
+          "published": "2026-06-06T07:25:06Z",
+          "summary": "BI Asset Management Fondsmaeglerselskab A S Grows Stake in ExxonMobil Corporation $XOM&nbsp;&nbsp;MarketBeat",
+          "company": "ExxonMobil",
+          "commodity": null,
+          "flags": [
+            "ma"
+          ],
+          "score": 3.0689,
+          "title_norm": "asset corporation exxonmobil fondsmaeglerselskab grows management marketbeat stake xom",
+          "consulting_label": "Integration",
+          "why_it_matters": "M&A or JV activity — potential integration, due diligence, or PMI mandate."
+        },
+        {
+          "title": "ExxonMobil Baytown bids farewell to three - Baytown Sun",
+          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNa0lMTm5qSnFOVWpFbDFXX0NqUUU2S1VtVzBZQXBFeUo0a18zbU5tbnZpZWJGblJkZm83VG1OV3J6M3VjNVhzR0djRzhmUDN4dDV3eElZUzZQUU94bHVPcUpFSGJxLXAtNDVHQkN0WVhhUGtfQ25jcU5rdFRwelhUSklkRzFVMGpnUXR5X1hZbjVQWjQ1azhObjVpM25uTlo5YjRWTUtMUjI3cnFUTkduQ0RPbFRkbGliTDRWLQ?oc=5",
+          "source": "Google News",
+          "published": "2026-06-06T00:11:00Z",
+          "summary": "ExxonMobil Baytown bids farewell to three&nbsp;&nbsp;Baytown Sun",
+          "company": "ExxonMobil",
+          "commodity": null,
+          "flags": [
+            "ma"
+          ],
+          "score": 2.8746,
+          "title_norm": "baytown baytown bids exxonmobil farewell sun three",
+          "consulting_label": "Integration",
+          "why_it_matters": "M&A or JV activity — potential integration, due diligence, or PMI mandate."
+        },
+        {
+          "title": "Randolph Co Inc Increases Position in ExxonMobil Corporation $XOM - MarketBeat",
+          "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNNmNUZWpPUWxFVWxEVExNQjl6SDJuTmwzWUw0VmFPZGJaZG5NOXlmMi1uNzBFWmprX2NtbEU0UThjeVNnQjBKRlh6MGtUbzlRODNtNkZxdEhhYWFYTmtNdTJWOW4weDJKYVRIZWRQOXlIcUpKMXdjaGxUbzFUd053M2FFV1lrS2lFOUh0d1dXMEF2a2ZmVFVQMmM5N1M1UWZfSF8ycVozMVQ4VmdCQlNVM1NQOHNLSFNvZ2JHQWRLYVV2VkE?oc=5",
+          "source": "Google News",
+          "published": "2026-06-05T10:53:39Z",
+          "summary": "Randolph Co Inc Increases Position in ExxonMobil Corporation $XOM&nbsp;&nbsp;MarketBeat",
+          "company": "ExxonMobil",
+          "commodity": null,
+          "flags": [
+            "trading_risk"
+          ],
+          "score": 2.6738,
+          "title_norm": "corporation exxonmobil inc increases marketbeat position randolph xom",
+          "consulting_label": "Trading Risk",
+          "why_it_matters": "Trading or market risk exposure — hedging framework, VaR, or desk controls review."
+        },
+        {
+          "title": "Total Wealth Planning & Management Inc. Makes New $1.73 Million Investment in ExxonMobil Corporation $XOM - MarketBeat",
+          "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQMlRkM2VFbjdkNzNQdHhKaEdqQ1p4Q2FvS0dIa29rWlhwSGUyZ05lYWZ6a21ybW0xTnBCSTZndVNxY3BnV0dWZUR1UzN0VFhjVnBrdll5V1BoZDFzd2tJbGZxdkZNVno3ZVNkX3oyYktqYjhKYVhUQUNDdm5tQVV6WVg1M0g2REpPSWk1Yk4xWWVKTVJhZG9PRU1sbmhKTExkaFVHSUI0ZWJxNzhxT2dNU2c2RTNpZjNXVzJ3aDBBWWU5a1pvRkZ2ZEtOTWRZSGhfLWFTWHRYWTZsNC1KV0d2UG5iNEdwOVA0bVVOOVhtMmRLQQ?oc=5",
+          "source": "Google News",
+          "published": "2026-06-05T10:53:39Z",
+          "summary": "Total Wealth Planning & Management Inc. Makes New $1.73 Million Investment in ExxonMobil Corporation $XOM&nbsp;&nbsp;MarketBeat",
+          "company": "ExxonMobil",
+          "commodity": null,
+          "flags": [
+            "growth_strategy"
+          ],
+          "score": 2.6738,
+          "title_norm": "corporation exxonmobil inc investment makes management marketbeat million new planning total wealth xom",
+          "consulting_label": "Growth Strategy",
+          "why_it_matters": "Expansion or investment signal — market entry, feasibility, or strategy advisory."
+        },
+        {
+          "title": "Regency Capital Management Inc. DE Decreases Stake in ExxonMobil Corporation $XOM - MarketBeat",
+          "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNV1RPQUI4Vll6S3ZDbXBMTDNEM09oN25HWFlwWW9LSmlCcGoyb1AwN0hFZTl3ODZDQm14SEJqRkg2Z0l1cnZmTnV2aVNaVVZNZzdpQW1FV1U0eXJ6cXhoTnZvSlBwM2R3XzZHajNsLVNSZ1ZnaVVfU3lndUV2ekZ6VDZyRVRWanZiN1d5dHdvSDlPUjljQS00ems4MTBHUko1OWJXSEpVNmNFR1hZOFNLdXZlRDNQajFJVU13cmh1OW5HMS15QnNjODFNc1Rhckl3bmI1V0VoTQ?oc=5",
+          "source": "Google News",
+          "published": "2026-06-05T10:17:27Z",
+          "summary": "Regency Capital Management Inc. DE Decreases Stake in ExxonMobil Corporation $XOM&nbsp;&nbsp;MarketBeat",
+          "company": "ExxonMobil",
+          "commodity": null,
+          "flags": [
+            "ma"
+          ],
+          "score": 2.6679,
+          "title_norm": "capital corporation decreases exxonmobil inc management marketbeat regency stake xom",
+          "consulting_label": "Integration",
+          "why_it_matters": "M&A or JV activity — potential integration, due diligence, or PMI mandate."
+        }
+      ],
+      "flags": [
+        "growth_strategy",
+        "trading_risk",
+        "ma"
+      ],
+      "highlight": "ExxonMobil faces shareholder activism and portfolio restructuring (evidenced by stake increases and facility closures at Baytown) during a critical energy transition period; a consulting firm should advise on optimizing asset rationalization, stakeholder communication strategies, and long-term capital allocation to balance legacy operations with renewable energy investments."
     },
     {
       "name": "PETRONAS",
@@ -358,7 +463,7 @@
           "flags": [
             "earnings"
           ],
-          "score": 2.8471,
+          "score": 2.8407,
           "title_norm": "because berhad buy dividend don gas going just klse out petgas petronas race simplywall",
           "consulting_label": "Performance",
           "why_it_matters": "Earnings or guidance release — CFO advisory, margin improvement, or FP&A opportunity."
@@ -374,7 +479,7 @@
           "flags": [
             "earnings"
           ],
-          "score": 2.8471,
+          "score": 2.8407,
           "title_norm": "berhad bright dagangan earnings klse may petdag petronas simplywall some spots there",
           "consulting_label": "Performance",
           "why_it_matters": "Earnings or guidance release — CFO advisory, margin improvement, or FP&A opportunity."
@@ -390,7 +495,7 @@
           "flags": [
             "earnings"
           ],
-          "score": 2.8418,
+          "score": 2.8355,
           "title_norm": "berhad beyond can dagangan earnings finance klse lackluster look petdag petronas think yahoo you",
           "consulting_label": "Performance",
           "why_it_matters": "Earnings or guidance release — CFO advisory, margin improvement, or FP&A opportunity."
@@ -406,7 +511,7 @@
           "flags": [
             "ma"
           ],
-          "score": 2.6607,
+          "score": 2.6577,
           "title_norm": "collaboration deal engineer magazine offshore offshore oil petronas recovery signs",
           "consulting_label": "Integration",
           "why_it_matters": "M&A or JV activity — potential integration, due diligence, or PMI mandate."
@@ -422,39 +527,24 @@
           "flags": [
             "regulatory"
           ],
-          "score": 2.6391,
+          "score": 2.6365,
           "title_norm": "call courtesy embassy gov home iraq kln kuwait malaysia petronas",
           "consulting_label": "Compliance Risk",
           "why_it_matters": "Regulatory action — compliance advisory, remediation, or sanctions screening."
         }
       ],
       "flags": [
-        "ma",
         "regulatory",
+        "ma",
         "earnings"
-      ]
+      ],
+      "highlight": ""
     },
     {
       "name": "PTT",
       "sector": "energy",
       "country": "TH",
       "items": [
-        {
-          "title": "Fuel prices cut by up to 1 baht per litre at PTT, Bangchak stations - Thai PBS World",
-          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNR05SdnJhTFdIcFR5Z3c1Y0RYVkxrcWZ6SVNOQmJ4VjYyRlUySXFGakVycFhLRHlJd2pMdzkxSFZERHA3NnBlZjlfdzM4NjVValVzc0xGZjhheEVPOWR5ZjBqdTVoeC1oS0FQa2lYcnlHcDJOVGF4RG9rblE4cHQ2R2piUzNWeE5CdFozd1pWMjhKRVl6RmNPMEp1RW13OHZJMmpyMkN1LTh0TEE?oc=5",
-          "source": "Google News",
-          "published": "2026-06-06T03:17:00Z",
-          "summary": "Fuel prices cut by up to 1 baht per litre at PTT, Bangchak stations&nbsp;&nbsp;Thai PBS World",
-          "company": "PTT",
-          "commodity": null,
-          "flags": [
-            "regulatory"
-          ],
-          "score": 2.9564,
-          "title_norm": "baht bangchak cut fuel litre pbs per prices ptt stations thai world",
-          "consulting_label": "Compliance Risk",
-          "why_it_matters": "Regulatory action — compliance advisory, remediation, or sanctions screening."
-        },
         {
           "title": "PV Gas expands strategic partnerships with leading Southeast Asian energy firms - Theinvestor",
           "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPZ2YzRjlwcExxRGp3UnhCMGNXYmw1d3lEcEJiOGlMOTJKNzBPZUphZzdIRm43akwwX3NYTkZ0WG9KMnZlSlVvcDZjam0yaFBFaDNMc1dQNGkwX0tUT3RlWHM3ZmtEd1d3VDB3bWVzVUlxRF9ZOGVCdlQ1NHBpT2RuR0NnV2w0ckltZG5Sa0xucW4tTmZRdjBoeGdUUGRkcFJEVURjd25VSVJyZkM0dnVVRV9qQzI?oc=5",
@@ -466,16 +556,16 @@
           "flags": [
             "ma"
           ],
-          "score": 2.9255,
+          "score": 2.9176,
           "title_norm": "asian energy expands firms gas leading partnerships southeast strategic theinvestor",
           "consulting_label": "Integration",
           "why_it_matters": "M&A or JV activity — potential integration, due diligence, or PMI mandate."
         }
       ],
       "flags": [
-        "ma",
-        "regulatory"
-      ]
+        "ma"
+      ],
+      "highlight": "BHP's potash acquisition and exposure to volatile commodity markets (coal, grain, potash) create significant trading and portfolio risk amid analyst scrutiny; the firm needs urgent consulting on hedging strategies, supply chain optimization post-acquisition, and investor narrative management to stabilize valuations and justify capital deployment."
     },
     {
       "name": "Shell",
@@ -493,7 +583,7 @@
           "flags": [
             "outage"
           ],
-          "score": 3.3722,
+          "score": 3.3561,
           "title_norm": "continued despite documents forests mangrove mongabay news nigerias oil operations shell show spills",
           "consulting_label": "Ops Resilience",
           "why_it_matters": "Operational disruption — business continuity or resilience advisory opportunity."
@@ -509,7 +599,7 @@
           "flags": [
             "outage"
           ],
-          "score": 3.3209,
+          "score": 3.3057,
           "title_norm": "delta emails liability magazine niger over questions raise realnews shell spills",
           "consulting_label": "Ops Resilience",
           "why_it_matters": "Operational disruption — business continuity or resilience advisory opportunity."
@@ -526,7 +616,7 @@
             "earnings",
             "ma"
           ],
-          "score": 2.902,
+          "score": 2.8945,
           "title_norm": "expanded finance losses means partnership shareholders shell what wider yahoo",
           "consulting_label": "Integration",
           "why_it_matters": "M&A or JV activity — potential integration, due diligence, or PMI mandate."
@@ -542,7 +632,7 @@
           "flags": [
             "regulatory"
           ],
-          "score": 2.8805,
+          "score": 2.8735,
           "title_norm": "abandoning com dutch dutch implications legal plc plc reputational royal royal shell shell shell",
           "consulting_label": "Compliance Risk",
           "why_it_matters": "Regulatory action — compliance advisory, remediation, or sanctions screening."
@@ -558,18 +648,19 @@
           "flags": [
             "earnings"
           ],
-          "score": 2.825,
+          "score": 2.819,
           "title_norm": "analysis asia capsule central forecast gel gelatin indexbox insights market shell size soft trends",
           "consulting_label": "Performance",
           "why_it_matters": "Earnings or guidance release — CFO advisory, margin improvement, or FP&A opportunity."
         }
       ],
       "flags": [
-        "ma",
         "regulatory",
-        "outage",
-        "earnings"
-      ]
+        "earnings",
+        "ma",
+        "outage"
+      ],
+      "highlight": ""
     },
     {
       "name": "Woodside Energy",
@@ -587,7 +678,7 @@
           "flags": [
             "ma"
           ],
-          "score": 2.6305,
+          "score": 2.6281,
           "title_norm": "bound floater japanese mexico online player stake take upstream",
           "consulting_label": "Integration",
           "why_it_matters": "M&A or JV activity — potential integration, due diligence, or PMI mandate."
@@ -595,7 +686,8 @@
       ],
       "flags": [
         "ma"
-      ]
+      ],
+      "highlight": ""
     },
     {
       "name": "Anglo American",
@@ -613,7 +705,7 @@
           "flags": [
             "ma"
           ],
-          "score": 2.7969,
+          "score": 2.7914,
           "title_norm": "american anglo coal exit focus gb00b1xzs820 hoc merger news plan plc shifts stock teck valuation",
           "consulting_label": "Integration",
           "why_it_matters": "M&A or JV activity — potential integration, due diligence, or PMI mandate."
@@ -629,7 +721,7 @@
           "flags": [
             "ma"
           ],
-          "score": 2.7,
+          "score": 2.6963,
           "title_norm": "acquire american anglo beers bloomberg botswana diamond help nation news oman rich stake strategic talks tradingview uae",
           "consulting_label": "Integration",
           "why_it_matters": "M&A or JV activity — potential integration, due diligence, or PMI mandate."
@@ -637,7 +729,8 @@
       ],
       "flags": [
         "ma"
-      ]
+      ],
+      "highlight": ""
     },
     {
       "name": "BHP",
@@ -655,7 +748,7 @@
           "flags": [
             "trading_risk"
           ],
-          "score": 3.3184,
+          "score": 3.3033,
           "title_norm": "according best coal funds hedge insider invest monkey stocks",
           "consulting_label": "Trading Risk",
           "why_it_matters": "Trading or market risk exposure — hedging framework, VaR, or desk controls review."
@@ -672,7 +765,7 @@
             "ma",
             "price_shock"
           ],
-          "score": 2.9642,
+          "score": 2.9556,
           "title_norm": "after assessing bhp canadian deal grain national new potash propane railways record simplywall valuation volumes",
           "consulting_label": "Integration",
           "why_it_matters": "M&A or JV activity — potential integration, due diligence, or PMI mandate."
@@ -688,7 +781,7 @@
           "flags": [
             "growth_strategy"
           ],
-          "score": 2.8602,
+          "score": 2.8535,
           "title_norm": "analyst asx bhp bhp finance group how investment shaping steady story view yahoo",
           "consulting_label": "Growth Strategy",
           "why_it_matters": "Expansion or investment signal — market entry, feasibility, or strategy advisory."
@@ -704,7 +797,7 @@
           "flags": [
             "ma"
           ],
-          "score": 2.8417,
+          "score": 2.8354,
           "title_norm": "bhp coast deals inks mine move new phoenix potash rail star west",
           "consulting_label": "Integration",
           "why_it_matters": "M&A or JV activity — potential integration, due diligence, or PMI mandate."
@@ -720,18 +813,19 @@
           "flags": [
             "growth_strategy"
           ],
-          "score": 2.7605,
+          "score": 2.7557,
           "title_norm": "becoming benzinga bhp bigger business change copper investment iron ore story than",
           "consulting_label": "Growth Strategy",
           "why_it_matters": "Expansion or investment signal — market entry, feasibility, or strategy advisory."
         }
       ],
       "flags": [
-        "trading_risk",
-        "growth_strategy",
         "price_shock",
+        "growth_strategy",
+        "trading_risk",
         "ma"
-      ]
+      ],
+      "highlight": "PTT is expanding downstream and regional partnerships in Southeast Asia, signaling strategic ambitions beyond domestic markets; consultants should help define partnership selection criteria, integration playbooks, and competitive positioning to maximize synergies and market access in a fragmented regional energy landscape."
     },
     {
       "name": "MIND ID",
@@ -749,7 +843,7 @@
           "flags": [
             "earnings"
           ],
-          "score": 2.7831,
+          "score": 2.7779,
           "title_norm": "first jump mind petromindo posts profit quarter reaches revenue rp50 trillion",
           "consulting_label": "Performance",
           "why_it_matters": "Earnings or guidance release — CFO advisory, margin improvement, or FP&A opportunity."
@@ -757,7 +851,8 @@
       ],
       "flags": [
         "earnings"
-      ]
+      ],
+      "highlight": ""
     },
     {
       "name": "Rio Tinto",
@@ -775,7 +870,7 @@
           "flags": [
             "trading_moves"
           ],
-          "score": 3.3832,
+          "score": 3.3669,
           "title_norm": "bez eye kabli moves next rio shares slide tinto traders",
           "consulting_label": "Leadership Change",
           "why_it_matters": "Senior leadership transition — change management or org design opportunity."
@@ -791,7 +886,7 @@
           "flags": [
             "esg"
           ],
-          "score": 3.0399,
+          "score": 3.0299,
           "title_norm": "advances aluminium automation carbon finance growth low push rio tinto yahoo",
           "consulting_label": "Sustainability",
           "why_it_matters": "ESG or decarbonisation signal — sustainability strategy or reporting mandate."
@@ -807,7 +902,7 @@
           "flags": [
             "regulatory"
           ],
-          "score": 2.7218,
+          "score": 2.7177,
           "title_norm": "approves australasian compulsory court era federal lawyer remaining rio shares taking tinto unit",
           "consulting_label": "Compliance Risk",
           "why_it_matters": "Regulatory action — compliance advisory, remediation, or sanctions screening."
@@ -823,7 +918,7 @@
           "flags": [
             "esg"
           ],
-          "score": 2.6797,
+          "score": 2.6764,
           "title_norm": "alert aluminium automation carbon discovery low production rio strategy tintos",
           "consulting_label": "Sustainability",
           "why_it_matters": "ESG or decarbonisation signal — sustainability strategy or reporting mandate."
@@ -839,73 +934,18 @@
           "flags": [
             "esg"
           ],
-          "score": 2.6678,
+          "score": 2.6648,
           "title_norm": "aluminium amid automation carbon circle concerns emphasises low production rio tinto valuation",
           "consulting_label": "Sustainability",
           "why_it_matters": "ESG or decarbonisation signal — sustainability strategy or reporting mandate."
         }
       ],
       "flags": [
+        "trading_moves",
         "regulatory",
-        "esg",
-        "trading_moves"
-      ]
-    },
-    {
-      "name": "Tenaga Nasional Berhad",
-      "sector": "power_utilities",
-      "country": "MY",
-      "items": [
-        {
-          "title": "DayOne Secures Over 1GW Renewable Energy in Malaysia in Landmark TNB Partnership - Macau Business",
-          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOT3ZVVzdqYzNhNDVqZXBrRk15ZEg1dzVuLThBM19TSG5ST21POXlmenhDMGZaS2lLWUZtZU5ZaTE3MzVZN3Q1Zjg4SXVrX1ZQWUZ6d0dDMlJ3VllrLVFwTTZOTXFjLWU4WnVkRDFNMzkzTnYwYjliOE0zX3A3QUo2YXRWME00YW1hQ0tDZ3Q4amNzRWY0b2NHUzBtSDV1RmtuTUt2OFQ5ZXA1R2c?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T20:45:44Z",
-          "summary": "DayOne Secures Over 1GW Renewable Energy in Malaysia in Landmark TNB Partnership&nbsp;&nbsp;Macau Business",
-          "company": "Tenaga Nasional Berhad",
-          "commodity": null,
-          "flags": [
-            "ma",
-            "esg"
-          ],
-          "score": 2.8132,
-          "title_norm": "1gw business dayone energy landmark macau malaysia over partnership renewable secures tnb",
-          "consulting_label": "Integration",
-          "why_it_matters": "M&A or JV activity — potential integration, due diligence, or PMI mandate."
-        }
-      ],
-      "flags": [
-        "ma",
         "esg"
-      ]
-    },
-    {
-      "name": "Aramco Trading Singapore",
-      "sector": "trading",
-      "country": "SA",
-      "items": [
-        {
-          "title": "ZAWYA: Saudi Aramco appoints McDermott as project manager for large-scale projects - TradingView",
-          "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNNnY2ZDE1bGZoUnpzblQ3ZVo3bksxdXo0ZC1ZSU1RUmxmeHc3ZHRjaWdmbFNiRTNOYngyYUZ6ZU9zeGo0cmtUdVlGX2JPXzhUU0NpZl9JcUZmWnZuYzBYU3ZCU3BOMTNNSDNwbWNkQXUzSEVLeWFpNW52T1QwalZtTHZkZWl5cGRneWg1VHk1QUZFdVk5UE5pVEdKSzdNcEVsd1V0R3I0LU9NTER4SFV3NDdrNzcwQUp0NkxWMC1NczNnakl4MWl4bURfbDRVTnNqX25wTllNekFkamxrWEpQbzlsUzBFbnJhcDNONlZB?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T09:50:41Z",
-          "summary": "ZAWYA: Saudi Aramco appoints McDermott as project manager for large-scale projects&nbsp;&nbsp;TradingView",
-          "company": "Aramco Trading Singapore",
-          "commodity": null,
-          "flags": [
-            "trading_moves",
-            "enterprise_risk"
-          ],
-          "score": 2.6667,
-          "title_norm": "appoints aramco large manager mcdermott project projects saudi scale tradingview zawya",
-          "consulting_label": "Enterprise Risk",
-          "why_it_matters": "Enterprise risk or governance signal — ERM framework or internal audit advisory."
-        }
       ],
-      "flags": [
-        "enterprise_risk",
-        "trading_moves"
-      ]
+      "highlight": ""
     },
     {
       "name": "Cargill Asia",
@@ -923,7 +963,7 @@
           "flags": [
             "trading_moves"
           ],
-          "score": 2.7869,
+          "score": 2.7816,
           "title_norm": "appoints cargill erin human people president resources shepperd vice",
           "consulting_label": "Leadership Change",
           "why_it_matters": "Senior leadership transition — change management or org design opportunity."
@@ -940,17 +980,18 @@
             "esg",
             "trading_risk"
           ],
-          "score": 2.6864,
+          "score": 2.6829,
           "title_norm": "cargill first fixes ion linked newbuilding news out tanker tradewinds varouxakis venture",
           "consulting_label": "Trading Risk",
           "why_it_matters": "Trading or market risk exposure — hedging framework, VaR, or desk controls review."
         }
       ],
       "flags": [
+        "trading_moves",
         "trading_risk",
-        "esg",
-        "trading_moves"
-      ]
+        "esg"
+      ],
+      "highlight": ""
     },
     {
       "name": "Danantara",
@@ -968,7 +1009,7 @@
           "flags": [
             "regulatory"
           ],
-          "score": 2.6517,
+          "score": 2.6489,
           "title_norm": "business coal details export indonesia overhaul palm releases times",
           "consulting_label": "Compliance Risk",
           "why_it_matters": "Regulatory action — compliance advisory, remediation, or sanctions screening."
@@ -976,7 +1017,8 @@
       ],
       "flags": [
         "regulatory"
-      ]
+      ],
+      "highlight": ""
     },
     {
       "name": "Mercuria",
@@ -994,7 +1036,7 @@
           "flags": [
             "ma"
           ],
-          "score": 2.767,
+          "score": 2.7621,
           "title_norm": "42bn acquisition argentina assets com completes marketscreener mercuria raizens",
           "consulting_label": "Integration",
           "why_it_matters": "M&A or JV activity — potential integration, due diligence, or PMI mandate."
@@ -1010,7 +1052,7 @@
           "flags": [
             "ma"
           ],
-          "score": 2.7542,
+          "score": 2.7495,
           "title_norm": "deals gcaptain got government hormuz lawyers mercuria oil say through",
           "consulting_label": "Integration",
           "why_it_matters": "M&A or JV activity — potential integration, due diligence, or PMI mandate."
@@ -1026,7 +1068,7 @@
           "flags": [
             "ma"
           ],
-          "score": 2.6986,
+          "score": 2.695,
           "title_norm": "bloomberg com deals got government hormuz lawyers mercuria oil say through",
           "consulting_label": "Integration",
           "why_it_matters": "M&A or JV activity — potential integration, due diligence, or PMI mandate."
@@ -1043,7 +1085,7 @@
             "ma",
             "esg"
           ],
-          "score": 2.6776,
+          "score": 2.6743,
           "title_norm": "4bn assets deal mercuria news oil shell snaps tradewinds ventures",
           "consulting_label": "Integration",
           "why_it_matters": "M&A or JV activity — potential integration, due diligence, or PMI mandate."
@@ -1059,16 +1101,17 @@
           "flags": [
             "ma"
           ],
-          "score": 2.6552,
+          "score": 2.6523,
           "title_norm": "argentina assets billion divests downstream energynews mercuria pro raizen",
           "consulting_label": "Integration",
           "why_it_matters": "M&A or JV activity — potential integration, due diligence, or PMI mandate."
         }
       ],
       "flags": [
-        "ma",
-        "esg"
-      ]
+        "esg",
+        "ma"
+      ],
+      "highlight": ""
     },
     {
       "name": "TotalEnergies Trading Asia",
@@ -1076,18 +1119,18 @@
       "country": "FR",
       "items": [
         {
-          "title": "Holcim & TotalEnergies open 31 MW Belgium floating solar plant - Solarbytes",
+          "title": "Holcim & TotalEnergies open 31 MW Belgium floating solar plant - solarbytes.info",
           "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNd1h3SnpWMld6RXBmRklPWDFXTTczS2doLXVEdmpNYjB3VlB0N191MzRSNGRKMklXSjFLTnRFS2xQNVhvVXVreFliVUpHRk9Wb3JtMnJKNnJ3a01jYU15YU9TaUd6dTZBZmgzZGpsU2l6UzVaQlRuZ3pVaXpFQVNGVVUzTnVmd0gxSUtFS1FaU3F4eHNJbWdNaEI4VWtuYVQyaGt5aWZ4N3B3dFhKdU9qNW9udHJ2S0VCTkd0YzdaUTc?oc=5",
           "source": "Google News",
           "published": "2026-06-06T15:17:41Z",
-          "summary": "Holcim & TotalEnergies open 31 MW Belgium floating solar plant&nbsp;&nbsp;Solarbytes",
+          "summary": "Holcim & TotalEnergies open 31 MW Belgium floating solar plant&nbsp;&nbsp;solarbytes.info",
           "company": "TotalEnergies Trading Asia",
           "commodity": null,
           "flags": [
             "esg"
           ],
-          "score": 3.4135,
-          "title_norm": "belgium floating holcim open plant solar solarbytes totalenergies",
+          "score": 3.3966,
+          "title_norm": "belgium floating holcim info open plant solar solarbytes totalenergies",
           "consulting_label": "Sustainability",
           "why_it_matters": "ESG or decarbonisation signal — sustainability strategy or reporting mandate."
         },
@@ -1102,7 +1145,7 @@
           "flags": [
             "earnings"
           ],
-          "score": 2.7904,
+          "score": 2.7851,
           "title_norm": "191 bln bln naira naira nigeria pbt revenue sees totalenergies tradingview",
           "consulting_label": "Performance",
           "why_it_matters": "Earnings or guidance release — CFO advisory, margin improvement, or FP&A opportunity."
@@ -1118,7 +1161,7 @@
           "flags": [
             "regulatory"
           ],
-          "score": 2.767,
+          "score": 2.7621,
           "title_norm": "argentina com expand exports eyes gas higher marketscreener production regional totalenergies",
           "consulting_label": "Compliance Risk",
           "why_it_matters": "Regulatory action — compliance advisory, remediation, or sanctions screening."
@@ -1134,7 +1177,7 @@
           "flags": [
             "ma"
           ],
-          "score": 2.7326,
+          "score": 2.7283,
           "title_norm": "acquisition directors discloses employee globe mail plan savings totalenergies",
           "consulting_label": "Integration",
           "why_it_matters": "M&A or JV activity — potential integration, due diligence, or PMI mandate."
@@ -1150,18 +1193,19 @@
           "flags": [
             "ma"
           ],
-          "score": 2.7291,
+          "score": 2.7248,
           "title_norm": "acquisition committee discloses employee executive globe mail members share totalenergies",
           "consulting_label": "Integration",
           "why_it_matters": "M&A or JV activity — potential integration, due diligence, or PMI mandate."
         }
       ],
       "flags": [
+        "esg",
         "regulatory",
         "ma",
-        "esg",
         "earnings"
-      ]
+      ],
+      "highlight": ""
     }
   ],
   "commodities": [
@@ -1177,7 +1221,7 @@
         "prev_close": 95.4,
         "change_pct": -2.42,
         "source": "yfinance",
-        "as_of": "2026-06-06T16:50:38.201174Z"
+        "as_of": "2026-06-06T17:09:51.110113Z"
       },
       "items": [
         {
@@ -1191,7 +1235,7 @@
           "flags": [
             "earnings"
           ],
-          "score": 2.7775,
+          "score": 2.7724,
           "title_norm": "after brent dollar forecasts fxempire gas natural nfp oil oil oil rallies report retreats wti",
           "consulting_label": "Performance",
           "why_it_matters": "Earnings or guidance release — CFO advisory, margin improvement, or FP&A opportunity."
@@ -1208,7 +1252,7 @@
             "trading_moves",
             "geopolitical"
           ],
-          "score": 2.7301,
+          "score": 2.7258,
           "title_norm": "brent crude cryptorank hold iran negotiations oil prices traders watch wti",
           "consulting_label": "Leadership Change",
           "why_it_matters": "Senior leadership transition — change management or org design opportunity."
@@ -1225,7 +1269,7 @@
             "geopolitical",
             "enterprise_risk"
           ],
-          "score": 2.695,
+          "score": 2.6914,
           "title_norm": "affect between brent com core crude differences energynow intermediate iran texas war west wti",
           "consulting_label": "Enterprise Risk",
           "why_it_matters": "Enterprise risk or governance signal — ERM framework or internal audit advisory."
@@ -1241,7 +1285,7 @@
           "flags": [
             "earnings"
           ],
-          "score": 2.6675,
+          "score": 2.6645,
           "title_norm": "brent extend forecast fxempire gains gas natgas natural oil tests under while wti",
           "consulting_label": "Performance",
           "why_it_matters": "Earnings or guidance release — CFO advisory, margin improvement, or FP&A opportunity."
@@ -1257,7 +1301,7 @@
           "flags": [
             "geopolitical"
           ],
-          "score": 2.6643,
+          "score": 2.6612,
           "title_norm": "amid bell brent com crude declines extending fall futures iran marketscreener oil pre reluctant reports restart trump war wti",
           "consulting_label": "Compliance Risk",
           "why_it_matters": "Geopolitical exposure — sanctions risk or trade compliance advisory."
@@ -1273,7 +1317,7 @@
           "flags": [
             "geopolitical"
           ],
-          "score": 2.6625,
+          "score": 2.6595,
           "title_norm": "amid bell brent crude declines extending fall futures iran moomoo oil pre reluctant reports restart trump war wti",
           "consulting_label": "Compliance Risk",
           "why_it_matters": "Geopolitical exposure — sanctions risk or trade compliance advisory."
@@ -1292,7 +1336,7 @@
         "prev_close": 3.351,
         "change_pct": -3.64,
         "source": "yfinance",
-        "as_of": "2026-06-06T16:50:39.255149Z"
+        "as_of": "2026-06-06T17:09:52.603067Z"
       },
       "items": []
     },
@@ -1310,7 +1354,7 @@
           "company": null,
           "commodity": "refined",
           "flags": [],
-          "score": 0.2217,
+          "score": 0.2176,
           "title_norm": "commodity eases fuel hsfo intelligence july oil paper quantum tightness weakens",
           "consulting_label": "",
           "why_it_matters": ""
@@ -1321,7 +1365,24 @@
       "commodity_id": "coal",
       "display": "Coal",
       "price": null,
-      "items": []
+      "items": [
+        {
+          "title": "Yankuang says Yancoal Australia thermal coal prices linked to Newcastle, API5 indices - 煤炭资源网",
+          "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5wOW5ITnFJYWgwcTFqbXg2TmF6eWxwMEZDYXZWWnJNVFVDaklKcWNXS01pTTlJYVR3UnMtWnN1WEVnMWptUlFIRkVvbFJOUE5LSXZ0Q1RsTjhJRFZrRDBLaFY5SllKUnpi?oc=5",
+          "source": "Google News",
+          "published": "2026-06-05T09:24:57Z",
+          "summary": "Yankuang says Yancoal Australia thermal coal prices linked to Newcastle, API5 indices&nbsp;&nbsp;煤炭资源网",
+          "company": null,
+          "commodity": "coal",
+          "flags": [
+            "enterprise_risk"
+          ],
+          "score": 2.6596,
+          "title_norm": "api5 australia coal indices linked newcastle prices says thermal yancoal yankuang",
+          "consulting_label": "Enterprise Risk",
+          "why_it_matters": "Enterprise risk or governance signal — ERM framework or internal audit advisory."
+        }
+      ]
     },
     {
       "commodity_id": "base_metals",
@@ -1335,7 +1396,7 @@
         "prev_close": 14171.2973,
         "change_pct": -2.56,
         "source": "yfinance",
-        "as_of": "2026-06-06T16:50:39.801172Z"
+        "as_of": "2026-06-06T17:09:53.281914Z"
       },
       "items": []
     },
@@ -1357,7 +1418,7 @@
         "prev_close": 1129.25,
         "change_pct": -0.69,
         "source": "yfinance",
-        "as_of": "2026-06-06T16:50:40.421084Z"
+        "as_of": "2026-06-06T17:09:54.033940Z"
       },
       "items": []
     }
@@ -1402,7 +1463,7 @@
       "prev_close": 95.4,
       "change_pct": -2.42,
       "source": "yfinance",
-      "as_of": "2026-06-06T16:50:38.201174Z"
+      "as_of": "2026-06-06T17:09:51.110113Z"
     },
     {
       "commodity_id": "wti",
@@ -1413,7 +1474,7 @@
       "prev_close": 93.14,
       "change_pct": -2.79,
       "source": "yfinance",
-      "as_of": "2026-06-06T16:50:38.726705Z"
+      "as_of": "2026-06-06T17:09:51.778549Z"
     },
     {
       "commodity_id": "henry_hub",
@@ -1424,7 +1485,7 @@
       "prev_close": 3.351,
       "change_pct": -3.64,
       "source": "yfinance",
-      "as_of": "2026-06-06T16:50:39.255149Z"
+      "as_of": "2026-06-06T17:09:52.603067Z"
     },
     {
       "commodity_id": "copper",
@@ -1435,7 +1496,7 @@
       "prev_close": 14171.2973,
       "change_pct": -2.56,
       "source": "yfinance",
-      "as_of": "2026-06-06T16:50:39.801172Z"
+      "as_of": "2026-06-06T17:09:53.281914Z"
     },
     {
       "commodity_id": "soybeans",
@@ -1446,7 +1507,7 @@
       "prev_close": 1129.25,
       "change_pct": -0.69,
       "source": "yfinance",
-      "as_of": "2026-06-06T16:50:40.421084Z"
+      "as_of": "2026-06-06T17:09:54.033940Z"
     },
     {
       "commodity_id": "wheat",
@@ -1457,10 +1518,21 @@
       "prev_close": 581.0,
       "change_pct": -0.17,
       "source": "yfinance",
-      "as_of": "2026-06-06T16:50:40.956600Z"
+      "as_of": "2026-06-06T17:09:54.780014Z"
     }
   ],
   "opportunities": [
+    {
+      "company": "ExxonMobil",
+      "sector": "energy",
+      "signal": "Integration",
+      "headline": "BI Asset Management Fondsmaeglerselskab A S Grows Stake in ExxonMobil Corporation $XOM - MarketBeat",
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPVG1qMXlKRk5OeG0tNUN2RmdWZU8wWU51QmVfZ0dBOWIwNGs4X24wTmlreUVaejZwd25JM1htWFNGejNEQmdWUzU2Y3J5MUdfc2xhZEs2a3NEUVFpQmlibk5NM0d3NFR6THhlamhfMDY3ekEtVE5yQTI1RjNuV0RrY0NwdUItUXhmS3NXWXdsbGlxSVlIQTFGSGtSV2t6SkNhNjFMcGtpekw2VVZkSU1qd2NXRFduakRtampFN045SG5wZnVGZjdrckdnQTBqb25uNmxSaFhkbzhxbEVQeGlF?oc=5",
+      "why": "M&A or JV activity — potential integration, due diligence, or PMI mandate.",
+      "published": "2026-06-06T07:25:06Z",
+      "score": 3.0689,
+      "engagement_context": "Typical scope: M&A Advisory · 8-12 weeks · Portfolio optimization"
+    },
     {
       "company": "BHP",
       "sector": "metals_mining",
@@ -1469,7 +1541,8 @@
       "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxObFlaemJuM2dLeHk2S3FSVHdRSlljcnM4bEg0U3lMLWpVUFUyNmI3VEJYVEdxcHlZSTloYWsxVW53bkNsSUw5SkVHZmxGQklSM0hmOWFKakttVm5mSkdqUHhPZ29Zc05kY2VjSml3UEktdC1zYlBLM3I3R3hmSkkxejVyT054RmFCeE9IMkZ4LXFra0ZXN0M0cGtnNmpmaFdHYXlSVElBcTJGeW0xSnlmTDMzN1pLRHJ3V3B2bldGWHh6ZHRKUzJIdWNoUmRlWXYzM0hCMlNXMHJ2RGRyZWFwYlR6SEFCZnFs0gHuAUFVX3lxTE1zclIyRWw2czhDYXZMU0hjZmFKXzB2a0E4SXpmdnYtN0hid0dwWFpkclJKS0dFejN6QnctVkRfQ0JxXzRZYk1zZE9jT2laWEN4TEtnOEQwaWdXaWNibHBZcnVkeVNIb1NndjRBU1J0RDlybFNkMDRjejB4MDkzdk5QVFc3czBXa1BuTGRPU3YxQk1kWkYzZ0JUbkw0ZWxxa0lpXzJ5NVBfWHhFaERwa09DR2dnak1vN3JsdnZ3bTEzLTZmUWZJWVJxakgtQVloRlZ1cWp2YXdlcmJUUEdfcmp2eU5IOEplUldYOFF5SXc?oc=5",
       "why": "M&A or JV activity — potential integration, due diligence, or PMI mandate.",
       "published": "2026-06-06T03:34:25Z",
-      "score": 2.9642
+      "score": 2.9556,
+      "engagement_context": "Typical scope: Deal Strategy · 10-14 weeks · Valuation assessment"
     },
     {
       "company": "PTT",
@@ -1479,7 +1552,8 @@
       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPZ2YzRjlwcExxRGp3UnhCMGNXYmw1d3lEcEJiOGlMOTJKNzBPZUphZzdIRm43akwwX3NYTkZ0WG9KMnZlSlVvcDZjam0yaFBFaDNMc1dQNGkwX0tUT3RlWHM3ZmtEd1d3VDB3bWVzVUlxRF9ZOGVCdlQ1NHBpT2RuR0NnV2w0ckltZG5Sa0xucW4tTmZRdjBoeGdUUGRkcFJEVURjd25VSVJyZkM0dnVVRV9qQzI?oc=5",
       "why": "M&A or JV activity — potential integration, due diligence, or PMI mandate.",
       "published": "2026-06-06T02:04:00Z",
-      "score": 2.9255
+      "score": 2.9176,
+      "engagement_context": "Typical scope: Partnership Integration · 12-16 weeks · Strategic alignment"
     },
     {
       "company": "Shell",
@@ -1489,17 +1563,8 @@
       "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPdmRUdUR2c3JnZnQ3dUZTMHo4RkpLNUZCRlN4V3hDbUQwNFoxYkVIemtxamxhbDE0bFBsX0hjc1FHb1JFRzUzTWFMRXhDUzRUZ0tUZW83LXh0TERpV1dOMnVnUWI5S2tmSlBObk8xeklUdzgyNHBkTjB5UWxGb0NzcWVKVDVmNVRvekk0dGc3OA?oc=5",
       "why": "M&A or JV activity — potential integration, due diligence, or PMI mandate.",
       "published": "2026-06-06T01:05:00Z",
-      "score": 2.902
-    },
-    {
-      "company": "Tenaga Nasional Berhad",
-      "sector": "power_utilities",
-      "signal": "Integration",
-      "headline": "DayOne Secures Over 1GW Renewable Energy in Malaysia in Landmark TNB Partnership - Macau Business",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOT3ZVVzdqYzNhNDVqZXBrRk15ZEg1dzVuLThBM19TSG5ST21POXlmenhDMGZaS2lLWUZtZU5ZaTE3MzVZN3Q1Zjg4SXVrX1ZQWUZ6d0dDMlJ3VllrLVFwTTZOTXFjLWU4WnVkRDFNMzkzTnYwYjliOE0zX3A3QUo2YXRWME00YW1hQ0tDZ3Q4amNzRWY0b2NHUzBtSDV1RmtuTUt2OFQ5ZXA1R2c?oc=5",
-      "why": "M&A or JV activity — potential integration, due diligence, or PMI mandate.",
-      "published": "2026-06-05T20:45:44Z",
-      "score": 2.8132
+      "score": 2.8945,
+      "engagement_context": "Typical scope: Technology Integration · 8-10 weeks · AI partnership structuring"
     },
     {
       "company": "Anglo American",
@@ -1509,7 +1574,8 @@
       "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNcDVBUDlZNFN5RmNTQjVMTHppUXZ3UmYxN1RFeGs4d2x4VGFKQi11cWRTNTUweDJzbHF4X3RRRG5DbnhjY1gxRVBYdERLYW5aSHBfeVhmNnhZYWhsQnlXU0FKT0NtWU5XNVVpOGl5WExRXzJLRHIyWWZXUkRfbl9nYy1IVDZyR0w4aVgzU0pqbWJhTEJkMzFaR2V2dHVXUWRBSGU4eVBkdTI4ZGw3aHVzUlRwbGxTQzhmUXctR3d3dTJ2RUdjOTRfcmdR?oc=5",
       "why": "M&A or JV activity — potential integration, due diligence, or PMI mandate.",
       "published": "2026-06-05T19:50:24Z",
-      "score": 2.7969
+      "score": 2.7914,
+      "engagement_context": "Typical scope: M&A Advisory · 14-18 weeks · Divestiture & merger planning"
     },
     {
       "company": "Mercuria",
@@ -1519,7 +1585,8 @@
       "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOMmVuQi1qbXgyZVlzUE9wZlE1MjdpTGJXN1NfR0t2bmNXaVNfM0RESHVDSVp3TWY5WnBYOWstOGM1VXNPWktBWW1kTkR5MDBiS1FPWTR5ZzdNV2ItZUxtSmhtR2s1c2VLSGQ5MzhLZ2JrU2NybHhIenBjZW1hZGdhbG5xLWRRZDFXRjlRb2N6ay1qR2k1RHN5aTJrMTQ3dkpnLU56QkdSelRLd0Y5M0RLOUlxVVVCVFdmZUNUNw?oc=5",
       "why": "M&A or JV activity — potential integration, due diligence, or PMI mandate.",
       "published": "2026-06-05T18:00:12Z",
-      "score": 2.767
+      "score": 2.7621,
+      "engagement_context": "Typical scope: Post-Merger Integration · 16-20 weeks · Operations consolidation"
     },
     {
       "company": "TotalEnergies Trading Asia",
@@ -1529,7 +1596,8 @@
       "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQaGdQM3NHYVlLNWxFYzZxZ3N1SFVuZlM1VTlBUXg4VFlHVkw2N0hGZ19jaFRSUVd0bnRfUklDMGtrdUFGc1RJTFVXSWpIdmtZby1KNTV3Z2lFZk04MjJWeXczd0l3YzlEYUlzckR5bE1SRjdnRkxnTXdUTDBQY1dpdk1WZWItUGM0aHBMN1pPWmppMk83M0xLZnBTQWkwWC1LR09GOWhsNXpwc3VlTGdQaVQxZkd6LXFOSFhPeUUtbmptdXQ3eXVmMlFGaENoMldyY3NIVTFDUkdiRGVicXJrZlVSalpqOF9qbGc?oc=5",
       "why": "M&A or JV activity — potential integration, due diligence, or PMI mandate.",
       "published": "2026-06-05T15:36:54Z",
-      "score": 2.7326
+      "score": 2.7283,
+      "engagement_context": "Typical scope: Benefits Advisory · 6-8 weeks · Compensation plan review"
     },
     {
       "company": "Chevron",
@@ -1539,33 +1607,34 @@
       "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNM0cyOWxYWGpnZzA1LXZJZnZmdkt1cFpOUHRNVTBENGVmQS0yOUFiVVFkUlQ1ME9sdzljZ2MwQWxRaGhUUUp1MFlPQlNSc25oc3ZvdmoyRUlOeEZnUE9IelZXd2tJcy1JQmJjUWs3U0NocFpxSmVwanVKMlRfcERQWkZEeUI1WnVQQk4yandFNkNNTm81dE40UWdsUUpmeWFVOXlvV29XaTlNTnFiOVRaVkFiN2hLWHRKRG9HZE53?oc=5",
       "why": "M&A or JV activity — potential integration, due diligence, or PMI mandate.",
       "published": "2026-06-05T12:30:32Z",
-      "score": 2.6944
+      "score": 2.6908,
+      "engagement_context": "Typical scope: Valuation & Strategy · 10-12 weeks · Market positioning assessment"
     }
   ],
   "sector_summaries": [
     {
       "sector": "energy",
       "sector_label": "Energy",
-      "top_signal": "Compliance Risk",
+      "top_signal": "Integration",
       "signal_counts": {
-        "Compliance Risk": 2,
+        "Compliance Risk": 1,
+        "Integration": 3,
         "Performance": 1,
-        "Ops Resilience": 1,
-        "Integration": 1
+        "Ops Resilience": 1
       },
       "active_companies": [
         "Chevron",
+        "ExxonMobil",
         "PETRONAS",
         "PTT",
         "Shell",
         "Woodside Energy"
       ],
       "quiet_companies": [
-        "ExxonMobil",
         "Pertamina"
       ],
-      "pulse": "Energy: Compliance Risk and Performance signals across 5 active companies.",
-      "narrative": "Chevron and Shell face mounting compliance and operational resilience risks in Nigeria and Southeast Asia respectively—both present opportunities for environmental liability assessment and regulatory strategy work—while PETRONAS's dividend positioning and Woodside's Mexico project integration signal potential needs in shareholder communication and M&A due diligence; PTT's fuel price controls in Thailand highlight regulatory compliance and pricing strategy advisory gaps across the region."
+      "pulse": "Energy: Integration and Compliance Risk signals across 6 active companies.",
+      "narrative": "Chevron and Shell face escalating compliance and operational resilience risks in Nigeria—creating immediate opportunities for environmental liability assessments and regulatory strategy consulting—while integration signals from ExxonMobil, PTT/PV Gas, and Woodside point to downstream M&A and joint venture structuring work across Southeast Asia and Mexico. PETRONAS's dividend pressure and valuation concerns suggest potential for portfolio optimization and shareholder value recovery engagements. These signals indicate concentrated demand for risk remediation, regulatory navigation, and deal advisory across the region's majors."
     },
     {
       "sector": "metals_mining",
@@ -1585,45 +1654,42 @@
       ],
       "quiet_companies": [],
       "pulse": "Metals & Mining: Integration and Trading Risk signals across 4 active companies.",
-      "narrative": "Anglo American's coal exit and proposed Teck merger are creating material valuation uncertainty that demands M&A advisory and deal structuring expertise, while BHP's prominence in coal stock rankings and Rio Tinto's recent share volatility signal potential portfolio rebalancing and risk management consulting needs across the sector's energy transition. MIND ID's strong Q1 performance offers a counterpoint to Western majors' challenges, presenting opportunities to advise on growth capital allocation and regional market positioning in Southeast Asia. Together, these signals point to three distinct consulting angles: deal advisory (Anglo American), trading risk mitigation (BHP), and emerging market expansion strategy (MIND ID)."
+      "narrative": "Anglo American's coal exit and Teck merger strategy is creating valuation uncertainty that presents M&A advisory and portfolio optimization opportunities; simultaneously, BHP's hedge fund positioning in coal and Rio Tinto's leadership transition signal sector consolidation pressures, while MIND ID's 63% profit surge demonstrates strong operational performance in Indonesia—collectively indicating demand for strategic repositioning, due diligence, and capital allocation advisory across major regional players navigating energy transition and market consolidation."
     },
     {
       "sector": "power_utilities",
       "sector_label": "Power & Utilities",
-      "top_signal": "Integration",
-      "signal_counts": {
-        "Integration": 1
-      },
-      "active_companies": [
-        "Tenaga Nasional Berhad"
-      ],
+      "top_signal": "",
+      "signal_counts": {},
+      "active_companies": [],
       "quiet_companies": [
+        "Tenaga Nasional Berhad",
         "EGAT"
       ],
-      "pulse": "Power & Utilities: Integration signal detected — Tenaga Nasional Berhad.",
-      "narrative": "# Power & Utilities Market Brief\n\nTenaga Nasional Berhad's 1GW renewable partnership with DayOne signals Malaysia's accelerating energy transition and creates immediate opportunities for advisory on large-scale grid integration, PPP structuring, and renewable procurement frameworks. TNB's willingness to partner with independent developers suggests potential consulting demand around competitive procurement models, transmission capacity planning, and regulatory reform—areas where incumbents typically struggle. EGAT's silence contrasts sharply, indicating Thai utilities may lag regional renewable deployment and positioning cross-border knowledge transfer and energy policy redesign as high-value engagement areas."
+      "pulse": "Power & Utilities sector quiet today — no material signals detected.",
+      "narrative": "Power & Utilities sector quiet today — no material signals detected."
     },
     {
       "sector": "trading",
       "sector_label": "Trading",
-      "top_signal": "Enterprise Risk",
+      "top_signal": "Leadership Change",
       "signal_counts": {
-        "Enterprise Risk": 1,
         "Leadership Change": 1,
         "Compliance Risk": 1,
         "Integration": 1,
         "Sustainability": 1
       },
       "active_companies": [
-        "Aramco Trading Singapore",
         "Cargill Asia",
         "Danantara",
         "Mercuria",
         "TotalEnergies Trading Asia"
       ],
-      "quiet_companies": [],
-      "pulse": "Trading: Enterprise Risk and Leadership Change signals across 5 active companies.",
-      "narrative": "**Trading Sector Signals – Consulting Opportunities:**\n\nAramco Trading Singapore's appointment of McDermott signals potential enterprise risk management gaps in megaproject oversight that warrant operational resilience consulting; Mercuria's $1.42bn Argentina acquisition and Danantara's compliance exposure amid Indonesia's export reforms create immediate demand for post-M&A integration and regulatory strategy advisory; and TotalEnergies Trading Asia's renewable energy infrastructure play indicates a broader need for portfolio transition strategy consulting across trading desks pivoting toward energy transition assets."
+      "quiet_companies": [
+        "Aramco Trading Singapore"
+      ],
+      "pulse": "Trading: Leadership Change and Compliance Risk signals across 4 active companies.",
+      "narrative": "**Trading Sector News Summary – Consulting Opportunities**\n\nStructural changes are reshaping SEA trading fundamentals: Mercuria's $1.42bn Argentina acquisition signals accelerated portfolio consolidation requiring integration advisory, while Danantara faces immediate compliance complexity from Indonesia's palm and coal export overhaul—creating urgent need for regulatory navigation and supply chain restructuring support. Simultaneously, TotalEnergies Trading Asia's renewable energy ventures and Cargill Asia's HR restructuring under new VP Shepperd indicate the sector is reallocating capital and talent toward energy transition, presenting opportunities in organizational redesign, sustainability reporting, and low-carbon commodity positioning strategies."
     }
   ]
 }
