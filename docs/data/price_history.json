@@ -1,0 +1,102 @@
+[
+  {
+    "date": "2026-06-06",
+    "prices": {
+      "brent": {
+        "price": null,
+        "source": "unavailable",
+        "unit": "USD/bbl"
+      },
+      "wti": {
+        "price": null,
+        "source": "unavailable",
+        "unit": "USD/bbl"
+      },
+      "dubai_oman": {
+        "price": null,
+        "source": "unavailable",
+        "unit": "USD/bbl"
+      },
+      "tapis": {
+        "price": null,
+        "source": "unavailable",
+        "unit": "USD/bbl"
+      },
+      "henry_hub": {
+        "price": null,
+        "source": "unavailable",
+        "unit": "USD/MMBtu"
+      },
+      "jkm": {
+        "price": null,
+        "source": "unavailable",
+        "unit": "USD/MMBtu"
+      },
+      "sing_gasoil": {
+        "price": null,
+        "source": "unavailable",
+        "unit": "USD/bbl"
+      },
+      "sing_jet": {
+        "price": null,
+        "source": "unavailable",
+        "unit": "USD/bbl"
+      },
+      "sing_gasoline": {
+        "price": null,
+        "source": "unavailable",
+        "unit": "USD/bbl"
+      },
+      "newcastle_coal": {
+        "price": null,
+        "source": "unavailable",
+        "unit": "USD/t"
+      },
+      "copper": {
+        "price": null,
+        "source": "unavailable",
+        "unit": "USD/t"
+      },
+      "nickel": {
+        "price": null,
+        "source": "unavailable",
+        "unit": "USD/t"
+      },
+      "aluminium": {
+        "price": null,
+        "source": "unavailable",
+        "unit": "USD/t"
+      },
+      "iron_ore": {
+        "price": null,
+        "source": "unavailable",
+        "unit": "USD/t"
+      },
+      "tin": {
+        "price": null,
+        "source": "unavailable",
+        "unit": "USD/t"
+      },
+      "bauxite": {
+        "price": null,
+        "source": "unavailable",
+        "unit": "USD/t"
+      },
+      "soybeans": {
+        "price": null,
+        "source": "unavailable",
+        "unit": "USc/bu"
+      },
+      "wheat": {
+        "price": null,
+        "source": "unavailable",
+        "unit": "USc/bu"
+      },
+      "palm_oil": {
+        "price": null,
+        "source": "unavailable",
+        "unit": "MYR/t"
+      }
+    }
+  }
+]
