@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SEA Commodity Briefing</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+<style>
+/* ── Base ── */
+:root {
+  --bg:       #f4f5f7;
+  --surface:  #ffffff;
+  --surface2: #f8f9fb;
+  --border:   #e3e6ec;
+  --text:     #1a1d23;
+  --muted:    #6b7280;
+  --accent:   #1a56db;
+  --accent2:  #e8f0fe;
+  --up:       #0f7b4f;
+  --up-bg:    #ecfdf5;
+  --dn:       #c0392b;
+  --dn-bg:    #fef2f2;
+  --warn:     #d97706;
+  --warn-bg:  #fffbeb;
+  --radius:   10px;
+  --shadow:   0 1px 4px rgba(0,0,0,.06), 0 0 0 1px var(--border);
+}
+@media(prefers-color-scheme:dark){
+  :root{
+    --bg:#0d0f14; --surface:#151820; --surface2:#1c1f28;
+    --border:#252a35; --text:#dde1ea; --muted:#7c8499;
+    --accent:#4d8ef9; --accent2:#1a2444;
+    --up:#34d399; --up-bg:#0a2318; --dn:#f87171; --dn-bg:#2a0d0d;
+    --warn:#fbbf24; --warn-bg:#271d07;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,-apple-system,sans-serif;font-size:15px;line-height:1.6}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* ── Layout ── */
+.shell{display:grid;grid-template-columns:220px 1fr;min-height:100vh}
+@media(max-width:760px){.shell{grid-template-columns:1fr}}
+
+/* ── Sidebar ── */
+.sidebar{background:var(--surface);border-right:1px solid var(--border);padding:1.5rem 1.1rem;position:sticky;top:0;height:100vh;overflow-y:auto}
+@media(max-width:760px){.sidebar{display:none}}
+.logo{font-size:1rem;font-weight:800;letter-spacing:-.03em;color:var(--text);margin-bottom:1.75rem}
+.logo span{color:var(--accent)}
+nav ul{list-style:none}
+nav ul li a{display:block;padding:.38rem .55rem;border-radius:6px;font-size:.85rem;color:var(--muted);font-weight:500;transition:background .12s,color .12s}
+nav ul li a:hover,nav ul li a.active{background:var(--accent2);color:var(--accent);text-decoration:none}
+nav ul li .nav-section{font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700;color:var(--muted);margin:1.1rem 0 .4rem .55rem}
+
+/* ── Main ── */
+.main{padding:2rem 2.25rem;max-width:1100px}
+@media(max-width:760px){.main{padding:1.25rem 1rem}}
+
+/* ── Header ── */
+.page-header{margin-bottom:2rem;padding-bottom:1.25rem;border-bottom:1px solid var(--border)}
+.page-header h1{font-size:1.55rem;font-weight:800;letter-spacing:-.04em}
+.page-header .meta{font-size:.82rem;color:var(--muted);margin-top:.4rem;display:flex;gap:1rem;flex-wrap:wrap}
+.page-header .meta span{display:flex;align-items:center;gap:.3rem}
+#last-updated{font-weight:600;color:var(--text)}
+
+/* ── Sections ── */
+section{margin-bottom:2.5rem}
+.section-title{font-size:1rem;font-weight:700;letter-spacing:-.02em;margin-bottom:1rem;display:flex;align-items:center;gap:.5rem;border-left:3px solid var(--accent);padding-left:.65rem}
+.section-title .count{font-size:.75rem;font-weight:600;background:var(--accent2);color:var(--accent);padding:.1rem .45rem;border-radius:999px}
+
+/* ── Price grid ── */
+.price-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:.75rem}
+.price-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.1rem;box-shadow:var(--shadow);transition:box-shadow .15s}
+.price-card:hover{box-shadow:0 4px 16px rgba(0,0,0,.1),0 0 0 1px var(--border)}
+.price-card .label{font-size:.78rem;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.03em;margin-bottom:.35rem;display:flex;justify-content:space-between;align-items:center}
+.price-card .value{font-size:1.35rem;font-weight:700;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.price-card .unit{font-size:.75rem;color:var(--muted);font-weight:400;margin-left:.2rem}
+.price-card .change{font-size:.85rem;font-weight:600;margin-top:.25rem;font-variant-numeric:tabular-nums}
+.change.up{color:var(--up)} .change.dn{color:var(--dn)} .change.na{color:var(--muted)}
+.price-card .sparkline-wrap{margin-top:.65rem;height:40px}
+.price-card .src-badge{font-size:.65rem;font-weight:700;padding:.1rem .35rem;border-radius:3px;text-transform:uppercase;letter-spacing:.04em}
+.src-badge.yfinance{background:var(--up-bg);color:var(--up)}
+.src-badge.web{background:var(--warn-bg);color:var(--warn)}
+.src-badge.unavailable{background:var(--surface2);color:var(--muted)}
+
+/* ── Watch panel ── */
+.watch-panel{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem 1.3rem;box-shadow:var(--shadow)}
+.watch-item{display:flex;gap:.75rem;padding:.55rem 0;border-bottom:1px solid var(--border);align-items:flex-start;font-size:.9rem}
+.watch-item:last-child{border-bottom:none}
+.watch-cat{flex-shrink:0;width:90px;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);padding-top:.15rem}
+
+/* ── Headlines ── */
+.headline-list{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.headline-item{padding:.8rem 1.2rem;border-bottom:1px solid var(--border);transition:background .1s}
+.headline-item:last-child{border-bottom:none}
+.headline-item:hover{background:var(--surface2)}
+.headline-item a{font-size:.92rem;font-weight:500;color:var(--text);display:block;line-height:1.45}
+.headline-item a:hover{color:var(--accent)}
+.headline-meta{margin-top:.25rem;font-size:.77rem;color:var(--muted);display:flex;gap:.55rem;flex-wrap:wrap;align-items:center}
+.flag-tag{display:inline-block;font-size:.67rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:.12rem .4rem;border-radius:3px;background:var(--accent2);color:var(--accent)}
+.flag-tag.earnings{background:var(--up-bg);color:var(--up)}
+.flag-tag.outage,.flag-tag.price_shock{background:var(--dn-bg);color:var(--dn)}
+.flag-tag.ma{background:var(--warn-bg);color:var(--warn)}
+.flag-tag.regulatory,.flag-tag.geopolitical{background:#f3e8ff;color:#7c3aed}
+@media(prefers-color-scheme:dark){
+  .flag-tag.regulatory,.flag-tag.geopolitical{background:#2d1a4e;color:#c084fc}
+}
+
+/* ── Company panels ── */
+.company-group{margin-bottom:1.75rem}
+.company-panels{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:.75rem}
+.company-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow)}
+.company-card summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:.5rem;padding:.9rem 1.1rem;font-weight:600;font-size:.9rem;user-select:none}
+.company-card summary::-webkit-details-marker{display:none}
+.company-card summary::before{content:"▶";font-size:.6rem;transition:transform .15s;color:var(--muted);display:inline-block;flex-shrink:0}
+.company-card[open] summary::before{transform:rotate(90deg)}
+.company-card summary:hover{background:var(--surface2)}
+.company-body{padding:.25rem 1.1rem .8rem}
+.company-item{padding:.45rem 0;border-bottom:1px solid var(--border);font-size:.85rem}
+.company-item:last-child{border-bottom:none}
+.company-item a{color:var(--text);font-weight:500}
+.company-item a:hover{color:var(--accent)}
+.company-item .item-meta{font-size:.73rem;color:var(--muted);margin-top:.15rem}
+.company-flags{display:flex;gap:.3rem;flex-wrap:wrap;margin-left:auto}
+.no-news{font-size:.82rem;color:var(--muted);padding:.5rem 0}
+
+/* ── Archive ── */
+.archive-list{display:flex;flex-wrap:wrap;gap:.5rem}
+.archive-list a{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:.35rem .75rem;font-size:.82rem;font-weight:500}
+.archive-list a:hover{background:var(--accent2);color:var(--accent);border-color:var(--accent);text-decoration:none}
+
+/* ── Empty / error state ── */
+.empty{padding:2rem;text-align:center;color:var(--muted);font-size:.9rem}
+.error-banner{background:var(--dn-bg);border:1px solid var(--dn);color:var(--dn);border-radius:8px;padding:.8rem 1.1rem;font-size:.85rem;margin-bottom:1.5rem;display:none}
+</style>
+</head>
+<body>
+
+<div class="shell">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo">SEA<span>Commodity</span></div>
+    <nav>
+      <ul>
+        <li><a href="#prices" class="active">Prices</a></li>
+        <li><a href="#watch">What to Watch</a></li>
+        <li><a href="#headlines">Top Headlines</a></li>
+        <li class="nav-section">Companies</li>
+        <li><a href="#energy">Energy</a></li>
+        <li><a href="#metals_mining">Metals &amp; Mining</a></li>
+        <li><a href="#power_utilities">Power &amp; Utilities</a></li>
+        <li><a href="#trading">Trading</a></li>
+        <li class="nav-section">More</li>
+        <li><a href="#archive">Archive</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Main content -->
+  <main class="main">
+    <header class="page-header">
+      <h1>SEA Commodity Briefing</h1>
+      <div class="meta">
+        <span>Last updated: <span id="last-updated">loading…</span></span>
+        <span id="sgt-time"></span>
+        <span style="color:var(--muted)">Southeast Asia · Energy · Metals · Power</span>
+      </div>
+    </header>
+
+    <div id="error-banner" class="error-banner"></div>
+
+    <!-- Commodity Prices -->
+    <section id="prices">
+      <div class="section-title">Commodity Prices <span class="count" id="price-count"></span></div>
+      <div class="price-grid" id="price-grid">
+        <div class="empty">Loading prices…</div>
+      </div>
+    </section>
+
+    <!-- What to Watch -->
+    <section id="watch">
+      <div class="section-title">What to Watch</div>
+      <div class="watch-panel" id="watch-panel">
+        <div class="empty">Loading…</div>
+      </div>
+    </section>
+
+    <!-- Top Headlines -->
+    <section id="headlines">
+      <div class="section-title">Top Headlines <span class="count" id="hl-count"></span></div>
+      <div class="headline-list" id="headline-list">
+        <div class="empty">Loading…</div>
+      </div>
+    </section>
+
+    <!-- Company Sectors -->
+    <section id="energy">
+      <div class="section-title">Energy</div>
+      <div class="company-panels" id="sector-energy"></div>
+    </section>
+    <section id="metals_mining">
+      <div class="section-title">Metals &amp; Mining</div>
+      <div class="company-panels" id="sector-metals_mining"></div>
+    </section>
+    <section id="power_utilities">
+      <div class="section-title">Power &amp; Utilities</div>
+      <div class="company-panels" id="sector-power_utilities"></div>
+    </section>
+    <section id="trading">
+      <div class="section-title">Trading</div>
+      <div class="company-panels" id="sector-trading"></div>
+    </section>
+
+    <!-- Archive -->
+    <section id="archive">
+      <div class="section-title">Past Digests</div>
+      <div class="archive-list" id="archive-list"><span class="empty">Loading…</span></div>
+    </section>
+
+    <footer style="margin-top:3rem;padding-top:1.25rem;border-top:1px solid var(--border);font-size:.78rem;color:var(--muted)">
+      Rule-based extractive digest · Prices: yfinance (live) + web (indicative) · No LLM used · Auto-published daily
+    </footer>
+  </main>
+</div>
+
+<script>
+/* ── helpers ── */
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+const fmt = (n, d=2) => n == null ? '—' : Number(n).toFixed(d);
+const pct = n => n == null ? '' : (n >= 0 ? '+' : '') + n.toFixed(1) + '%';
+const pctClass = n => n == null ? 'na' : n >= 0 ? 'up' : 'dn';
+
+function fmtDate(iso) {
+  if (!iso) return '';
+  const d = new Date(iso);
+  return d.toLocaleString('en-SG', {timeZone:'Asia/Singapore', month:'short', day:'numeric', hour:'2-digit', minute:'2-digit'}) + ' SGT';
+}
+
+/* ── sparkline data from price history ── */
+let priceHistory = {};
+async function loadHistory() {
+  try {
+    const r = await fetch('data/price_history.json');
+    if (!r.ok) return;
+    const rows = await r.json();
+    rows.forEach(row => {
+      const date = row.date;
+      Object.entries(row.prices || {}).forEach(([id, rec]) => {
+        if (!priceHistory[id]) priceHistory[id] = [];
+        if (rec.price != null) priceHistory[id].push({date, price: rec.price});
+      });
+    });
+  } catch(e) { /* history optional */ }
+}
+
+function drawSparkline(canvas, data) {
+  if (!data || data.length < 2) { canvas.style.opacity = '.2'; return; }
+  const prices = data.slice(-30).map(d => d.price);
+  const ctx = canvas.getContext('2d');
+  const isDark = window.matchMedia('(prefers-color-scheme:dark)').matches;
+  const lineColor = isDark ? '#4d8ef9' : '#1a56db';
+  new Chart(ctx, {
+    type: 'line',
+    data: { labels: prices.map((_,i)=>i), datasets: [{ data: prices, borderColor: lineColor, borderWidth: 1.5, pointRadius: 0, tension: 0.3, fill: false }] },
+    options: { animation: false, plugins: { legend: { display: false }, tooltip: { enabled: false } }, scales: { x: { display: false }, y: { display: false } }, responsive: true, maintainAspectRatio: false }
+  });
+}
+
+/* ── render price grid ── */
+function renderPrices(prices) {
+  const grid = $('price-grid');
+  if (!prices?.length) { grid.innerHTML = '<div class="empty">No price data available.</div>'; return; }
+  $('price-count').textContent = prices.length;
+
+  const grouped = {};
+  prices.forEach(p => { (grouped[p.group] = grouped[p.group] || []).push(p); });
+
+  const groupOrder = ['crude_oil','natgas_lng','refined','coal','base_metals','bulk','agri'];
+  const fragments = [];
+  groupOrder.forEach(g => {
+    (grouped[g] || []).forEach(p => fragments.push(p));
+  });
+
+  grid.innerHTML = fragments.map(p => `
+    <div class="price-card" id="pc-${esc(p.commodity_id)}">
+      <div class="label">
+        <span>${esc(p.display)}</span>
+        <span class="src-badge ${esc(p.source)}">${esc(p.source)}</span>
+      </div>
+      <div class="value">${p.price != null ? fmt(p.price) : '<span style="color:var(--muted)">N/A</span>'}<span class="unit">${esc(p.unit)}</span></div>
+      <div class="change ${pctClass(p.change_pct)}">${p.change_pct != null ? pct(p.change_pct) + ' today' : 'No change data'}</div>
+      <div class="sparkline-wrap"><canvas id="spark-${esc(p.commodity_id)}"></canvas></div>
+    </div>`).join('');
+
+  // draw sparklines after DOM insert
+  requestAnimationFrame(() => {
+    fragments.forEach(p => {
+      const canvas = document.getElementById('spark-' + p.commodity_id);
+      if (canvas) drawSparkline(canvas, priceHistory[p.commodity_id] || []);
+    });
+  });
+}
+
+/* ── render watch panel ── */
+function renderWatch(bullets) {
+  const panel = $('watch-panel');
+  if (!bullets?.length) { panel.innerHTML = '<div class="empty">No watch items.</div>'; return; }
+  panel.innerHTML = bullets.map(b => `
+    <div class="watch-item">
+      <span class="watch-cat">${esc(b.category.replace(/_/g,' '))}</span>
+      <span>${esc(b.text)}</span>
+    </div>`).join('');
+}
+
+/* ── render headlines ── */
+function renderHeadlines(items) {
+  const list = $('headline-list');
+  if (!items?.length) { list.innerHTML = '<div class="empty">No headlines available.</div>'; return; }
+  $('hl-count').textContent = items.length;
+  list.innerHTML = items.map(item => `
+    <div class="headline-item">
+      <a href="${esc(item.url)}" target="_blank" rel="noopener">${esc(item.title)}</a>
+      <div class="headline-meta">
+        <span>${esc(item.source)}</span>
+        ${item.published ? '<span>' + fmtDate(item.published) + '</span>' : ''}
+        ${(item.flags||[]).map(f=>`<span class="flag-tag ${esc(f)}">${esc(f)}</span>`).join('')}
+      </div>
+    </div>`).join('');
+}
+
+/* ── render company panels ── */
+function renderCompanies(companies) {
+  const sectors = ['energy','metals_mining','power_utilities','trading'];
+  sectors.forEach(sector => {
+    const container = $('sector-' + sector);
+    const sectorCos = (companies||[]).filter(c => c.sector === sector);
+    if (!sectorCos.length) { container.innerHTML = '<div class="empty">No data.</div>'; return; }
+    container.innerHTML = sectorCos.map(co => {
+      const flags = (co.flags||[]).map(f => `<span class="flag-tag ${esc(f)}">${esc(f)}</span>`).join('');
+      const items = (co.items||[]).map(item => `
+        <div class="company-item">
+          <a href="${esc(item.url)}" target="_blank" rel="noopener">${esc(item.title)}</a>
+          <div class="item-meta">${esc(item.source)}${item.published ? ' · ' + fmtDate(item.published) : ''}
+            ${(item.flags||[]).map(f=>`<span class="flag-tag ${esc(f)}">${esc(f)}</span>`).join('')}
+          </div>
+        </div>`).join('') || '<div class="no-news">No recent news.</div>';
+      return `<details class="company-card">
+        <summary>${esc(co.name)} <span class="company-flags">${flags}</span></summary>
+        <div class="company-body">${items}</div>
+      </details>`;
+    }).join('');
+  });
+}
+
+/* ── render archive ── */
+async function renderArchive() {
+  const list = $('archive-list');
+  try {
+    const r = await fetch('data/archive.json');
+    if (!r.ok) throw new Error(r.status);
+    const entries = await r.json();
+    if (!entries.length) { list.innerHTML = '<span class="empty">No past digests yet.</span>'; return; }
+    list.innerHTML = entries.slice(0, 60).map(e => `<a href="${esc(e.path)}">${esc(e.date)}</a>`).join('');
+  } catch { list.innerHTML = '<span class="empty">Archive unavailable.</span>'; }
+}
+
+/* ── main load ── */
+async function loadDashboard() {
+  await loadHistory();
+  try {
+    const r = await fetch('data/latest.json');
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    const data = await r.json();
+
+    // header
+    const gen = data.generated_at;
+    $('last-updated').textContent = gen ? new Date(gen).toLocaleString('en-SG',{timeZone:'UTC',dateStyle:'medium',timeStyle:'short'}) + ' UTC' : 'unknown';
+    $('sgt-time').textContent = gen ? new Date(gen).toLocaleString('en-SG',{timeZone:'Asia/Singapore',timeStyle:'short'}) + ' SGT' : '';
+
+    renderPrices(data.prices);
+    renderWatch(data.what_to_watch);
+    renderHeadlines(data.top_headlines);
+    renderCompanies(data.companies);
+  } catch(e) {
+    const banner = $('error-banner');
+    banner.textContent = 'Could not load latest data. Run the agent first: python -m src.main. (' + e.message + ')';
+    banner.style.display = 'block';
+    $('price-grid').innerHTML = '<div class="empty">No data — run the agent to generate latest.json.</div>';
+    $('watch-panel').innerHTML = '';
+    $('headline-list').innerHTML = '';
+  }
+  renderArchive();
+}
+
+loadDashboard();
+
+/* ── active nav on scroll ── */
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('nav a');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id));
+    }
+  });
+}, {threshold:.2});
+sections.forEach(s => observer.observe(s));
+</script>
+</body>
+</html>

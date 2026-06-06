@@ -1,0 +1,339 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# Commodity Briefing — Configuration
+# Edit companies, commodities, feeds, and behavioural toggles here.
+# No code changes needed for routine maintenance.
+# ─────────────────────────────────────────────────────────────────────────────
+
+# ── Summarizer ────────────────────────────────────────────────────────────────
+# "heuristic" = fully rule-based, no external services (default, works in CI)
+# "ollama"    = narrative summaries via a locally running Ollama instance
+#               (only works on your own machine, NOT in GitHub Actions)
+summarizer: heuristic
+
+ollama:
+  base_url: http://localhost:11434
+  model: llama3.1
+
+# ── News fetch settings ───────────────────────────────────────────────────────
+news:
+  lookback_hours: 36          # how far back to keep articles
+  max_per_company: 10         # maximum headlines retained per company
+  max_per_commodity: 6        # maximum headlines retained per commodity
+  top_headlines_count: 15     # number of "top headlines" in digest
+  request_timeout_s: 15       # HTTP timeout per request
+  inter_request_delay_s: 1.2  # polite delay between RSS fetches
+  feed_cache_ttl_min: 60      # re-use on-disk cache within this window
+
+# ── Google News RSS region bias ───────────────────────────────────────────────
+# Rotated across runs to broaden coverage.  Choices: SG, MY, ID, TH, AU
+google_news_regions:
+  - { gl: SG, ceid: "SG:en", hl: en-SG }
+  - { gl: MY, ceid: "MY:en", hl: en-MY }
+  - { gl: ID, ceid: "ID:en", hl: en-ID }
+  - { gl: TH, ceid: "TH:en", hl: en-TH }
+
+# ── Companies ─────────────────────────────────────────────────────────────────
+# sector tags: energy | metals_mining | power_utilities | trading
+companies:
+  - name: Shell
+    aliases: [Shell, "Shell plc", "Royal Dutch Shell"]
+    country: NL
+    sector: energy
+
+  - name: ExxonMobil
+    aliases: [ExxonMobil, Exxon, "Exxon Mobil"]
+    country: US
+    sector: energy
+
+  - name: Chevron
+    aliases: [Chevron, "Chevron Corporation"]
+    country: US
+    sector: energy
+
+  - name: TotalEnergies Trading Asia
+    aliases: [TotalEnergies, "Total Energies", "TotalEnergies Trading Asia"]
+    country: FR
+    sector: trading
+
+  - name: Aramco Trading Singapore
+    aliases: ["Aramco Trading", "Saudi Aramco", "Aramco Trading Singapore"]
+    country: SA
+    sector: trading
+
+  - name: Anglo American
+    aliases: ["Anglo American", "Anglo American plc"]
+    country: GB
+    sector: metals_mining
+
+  - name: Rio Tinto
+    aliases: ["Rio Tinto", "Rio Tinto Group"]
+    country: GB
+    sector: metals_mining
+
+  - name: BHP
+    aliases: [BHP, "BHP Group", "BHP Billiton"]
+    country: AU
+    sector: metals_mining
+
+  - name: Woodside Energy
+    aliases: ["Woodside Energy", "Woodside Petroleum", Woodside]
+    country: AU
+    sector: energy
+
+  - name: PETRONAS
+    aliases: [PETRONAS, "Petronas", "Petronas Trading", PFLB]
+    country: MY
+    sector: energy
+
+  - name: Tenaga Nasional Berhad
+    aliases: [TNB, "Tenaga Nasional", "Tenaga Nasional Berhad"]
+    country: MY
+    sector: power_utilities
+
+  - name: PTT
+    aliases: [PTT, "PTT Public", "PTT Thailand", "PTT Group"]
+    country: TH
+    sector: energy
+
+  - name: Pertamina
+    aliases: [Pertamina, "PT Pertamina"]
+    country: ID
+    sector: energy
+
+  - name: MIND ID
+    aliases: ["MIND ID", ANTAM, "Aneka Tambang", "Bukit Asam", PTBA, Timah]
+    country: ID
+    sector: metals_mining
+
+  - name: EGAT
+    aliases: [EGAT, "Electricity Generating Authority of Thailand"]
+    country: TH
+    sector: power_utilities
+
+  - name: Cargill Asia
+    aliases: [Cargill, "Cargill Asia", "Cargill Singapore"]
+    country: US
+    sector: trading
+
+  - name: Mercuria
+    aliases: [Mercuria, "Mercuria Energy"]
+    country: CH
+    sector: trading
+
+  - name: Danantara
+    aliases: [Danantara, "Danantara Indonesia", "BPI Danantara"]
+    country: ID
+    sector: trading
+
+# ── Commodities ───────────────────────────────────────────────────────────────
+commodities:
+  # Crude oil
+  - id: brent
+    display: "Brent Crude"
+    unit: "USD/bbl"
+    group: crude_oil
+    yfinance_ticker: "BZ=F"
+
+  - id: wti
+    display: "WTI Crude"
+    unit: "USD/bbl"
+    group: crude_oil
+    yfinance_ticker: "CL=F"
+
+  - id: dubai_oman
+    display: "Dubai/Oman Crude"
+    unit: "USD/bbl"
+    group: crude_oil
+    yfinance_ticker: null           # web-sourced
+    web_search_query: "Dubai Oman crude oil price today"
+
+  - id: tapis
+    display: "Tapis Crude"
+    unit: "USD/bbl"
+    group: crude_oil
+    yfinance_ticker: null
+    web_search_query: "Tapis crude oil price today Singapore"
+
+  # Natural gas / LNG
+  - id: henry_hub
+    display: "Henry Hub Gas"
+    unit: "USD/MMBtu"
+    group: natgas_lng
+    yfinance_ticker: "NG=F"
+
+  - id: jkm
+    display: "JKM LNG (Asian spot)"
+    unit: "USD/MMBtu"
+    group: natgas_lng
+    yfinance_ticker: null
+    web_search_query: "JKM LNG spot price today Asia"
+
+  # Refined products
+  - id: sing_gasoil
+    display: "Singapore Gasoil/Diesel"
+    unit: "USD/bbl"
+    group: refined
+    yfinance_ticker: null
+    web_search_query: "Singapore gasoil diesel price today"
+
+  - id: sing_jet
+    display: "Singapore Jet Fuel"
+    unit: "USD/bbl"
+    group: refined
+    yfinance_ticker: null
+    web_search_query: "Singapore jet fuel kerosene price today"
+
+  - id: sing_gasoline
+    display: "Singapore Gasoline 92R"
+    unit: "USD/bbl"
+    group: refined
+    yfinance_ticker: null
+    web_search_query: "Singapore gasoline 92R price today"
+
+  # Coal
+  - id: newcastle_coal
+    display: "Newcastle Thermal Coal"
+    unit: "USD/t"
+    group: coal
+    yfinance_ticker: null
+    web_search_query: "Newcastle thermal coal price today API5"
+
+  # Metals
+  - id: copper
+    display: "Copper (LME)"
+    unit: "USD/t"
+    group: base_metals
+    yfinance_ticker: "HG=F"
+    yfinance_unit_multiplier: 2204.62   # HG=F is cents/lb → USD/t
+
+  - id: nickel
+    display: "Nickel (LME)"
+    unit: "USD/t"
+    group: base_metals
+    yfinance_ticker: "NI=F"
+
+  - id: aluminium
+    display: "Aluminium (LME)"
+    unit: "USD/t"
+    group: base_metals
+    yfinance_ticker: "ALI=F"
+
+  - id: iron_ore
+    display: "Iron Ore (62% Fe CFR)"
+    unit: "USD/t"
+    group: bulk
+    yfinance_ticker: null
+    web_search_query: "iron ore 62 Fe CFR China price today"
+
+  - id: tin
+    display: "Tin (LME)"
+    unit: "USD/t"
+    group: base_metals
+    yfinance_ticker: null
+    web_search_query: "LME tin metal price today"
+
+  - id: bauxite
+    display: "Bauxite (FOB)"
+    unit: "USD/t"
+    group: bulk
+    yfinance_ticker: null
+    web_search_query: "bauxite FOB price today Guinea"
+
+  # Agri (Cargill context)
+  - id: soybeans
+    display: "Soybeans (CBOT)"
+    unit: "USc/bu"
+    group: agri
+    yfinance_ticker: "ZS=F"
+
+  - id: wheat
+    display: "Wheat (CBOT)"
+    unit: "USc/bu"
+    group: agri
+    yfinance_ticker: "ZW=F"
+
+  - id: palm_oil
+    display: "Palm Oil (BMD)"
+    unit: "MYR/t"
+    group: agri
+    yfinance_ticker: "FCPO.MYR"
+
+# ── Supplementary RSS feeds ───────────────────────────────────────────────────
+# These are fetched in addition to the per-company Google News searches.
+supplementary_feeds:
+  - name: Reuters Commodities
+    url: "https://feeds.reuters.com/reuters/businessNews"
+    weight: 1.8
+
+  - name: OilPrice.com
+    url: "https://oilprice.com/rss/main"
+    weight: 1.3
+
+  - name: Rigzone News
+    url: "https://www.rigzone.com/news/rss/rigzone_latest.aspx"
+    weight: 1.2
+
+  - name: Mining.com
+    url: "https://www.mining.com/feed/"
+    weight: 1.2
+
+  - name: Hellenic Shipping News
+    url: "https://www.hellenicshippingnews.com/feed/"
+    weight: 1.0
+
+  - name: The Edge Malaysia
+    url: "https://www.theedgemarkets.com/rss.xml"
+    weight: 1.1
+
+  - name: Business Times SG
+    url: "https://www.businesstimes.com.sg/rss/all"
+    weight: 1.1
+
+  - name: Jakarta Post Business
+    url: "https://www.thejakartapost.com/feed/category/business"
+    weight: 1.0
+
+  - name: Bangkok Post Business
+    url: "https://www.bangkokpost.com/rss/data/business.xml"
+    weight: 1.0
+
+  - name: S&P Global Commodity
+    url: "https://www.spglobal.com/commodityinsights/en/rss-feed/oil"
+    weight: 1.5
+
+# ── Scoring & ranking ─────────────────────────────────────────────────────────
+scoring:
+  recency_halflife_hours: 12      # score halves every N hours
+  source_weight_default: 1.0
+  material_event_bonus: 2.5       # added to score if a material-event keyword fires
+
+# ── Material-event keyword lists ──────────────────────────────────────────────
+material_event_keywords:
+  earnings:       [earnings, profit, loss, revenue, EBITDA, "net income", quarterly, annual, results, EPS, dividend, guidance, outlook, forecast]
+  ma:             [merger, acquisition, takeover, "take-over", buyout, "take private", bid, deal, stake, divest, divestment, JV, "joint venture", partnership]
+  outage:         [outage, shutdown, "force majeure", disruption, offline, curtailment, maintenance, explosion, fire, accident, spill, leak]
+  regulatory:     [sanction, ban, embargo, tariff, export, import, licence, license, permit, regulation, investigation, fine, penalty, court, lawsuit, antitrust]
+  trading_moves:  [trader, "trading desk", hire, appoint, resign, restructure, layoff, headcount, "cost cut"]
+  esg:            [ESG, decarbonization, "net zero", carbon, emissions, renewable, solar, wind, hydrogen, CCS, CCUS, sustainability]
+  geopolitical:   [OPEC, OPEC+, Russia, Ukraine, Iran, China, "Red Sea", Strait, blockade, war, conflict, tension, sanctions]
+  price_shock:    [surge, plunge, crash, spike, record, "all-time high", "all-time low", collapse, rally, soar]
+
+# ── "What to watch" macro context terms ───────────────────────────────────────
+macro_watch_terms:
+  - "USD strength"
+  - "China demand"
+  - "OPEC+ production"
+  - "Fed rate"
+  - "USD/MYR"
+  - "USD/IDR"
+  - "USD/THB"
+  - "weather El Niño"
+  - "monsoon season"
+
+# ── Price history cap ─────────────────────────────────────────────────────────
+price_history_days: 90
+
+# ── Dashboard ─────────────────────────────────────────────────────────────────
+dashboard:
+  site_title: "SEA Commodity Briefing"
+  timezone_display: "SGT (UTC+8)"
