@@ -38,6 +38,8 @@ jobs:
 
       - name: Run the agent
         run: python -m src.main
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 
       - name: Commit and push updated dashboard
         run: |

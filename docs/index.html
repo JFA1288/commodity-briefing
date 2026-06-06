@@ -824,7 +824,7 @@ function renderCompanies(companies, sectorSummaries){
               ${quietCount?` · ${quietCount} quiet`:''}
             </div>
           </div>
-          <div class="ss-pulse">${esc(ss.pulse)}</div>
+          <div class="ss-pulse">${esc(ss.narrative||ss.pulse)}</div>
         </div>`;
     }
 

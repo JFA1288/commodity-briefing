@@ -74,6 +74,7 @@ class SectorSummary(BaseModel):
     active_companies: list[str] = Field(default_factory=list)
     quiet_companies: list[str] = Field(default_factory=list)
     pulse: str = ""
+    narrative: str = ""   # Claude-generated or rule-based narrative paragraph
 
 
 class DailyDigest(BaseModel):

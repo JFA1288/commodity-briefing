@@ -9,6 +9,4 @@ requests==2.32.3
 urllib3==2.2.2
 certifi==2024.6.2
 charset-normalizer==3.3.2
-# optional extractive summarizer (off by default; toggle via config)
-# sumy==0.11.0
-# nltk==3.8.1
+anthropic>=0.30.0         # Claude API for sector narrative summaries (set ANTHROPIC_API_KEY)

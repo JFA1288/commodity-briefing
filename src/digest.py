@@ -236,15 +236,15 @@ def _make_pulse(label: str, signal_counts: dict[str, int], company_signals: dict
 
 
 def build_sector_summaries(company_digests: list[CompanyDigest]) -> list[SectorSummary]:
+    from .summarize import summarize_sector
+
     cfg = config.load()
     cfg_companies = cfg.get("companies", [])
 
-    # all companies per sector from config
     all_by_sector: dict[str, list[str]] = {}
     for c in cfg_companies:
         all_by_sector.setdefault(c["sector"], []).append(c["name"])
 
-    # active digests per sector
     active_by_sector: dict[str, list[CompanyDigest]] = {}
     for d in company_digests:
         active_by_sector.setdefault(d.sector, []).append(d)
@@ -258,14 +258,24 @@ def build_sector_summaries(company_digests: list[CompanyDigest]) -> list[SectorS
 
         signal_counts: dict[str, int] = {}
         company_signals: dict[str, str] = {}
+        api_signals: list[dict] = []
         for d in active_digests:
             sig = d.items[0].consulting_label if d.items else ""
+            headline = d.items[0].title if d.items else ""
             if sig:
                 signal_counts[sig] = signal_counts.get(sig, 0) + 1
                 company_signals[d.name] = sig
+            if sig and headline:
+                api_signals.append({"company": d.name, "signal": sig, "headline": headline})
 
         top_signal = max(signal_counts, key=lambda k: signal_counts[k]) if signal_counts else ""
         pulse = _make_pulse(label, signal_counts, company_signals, active_names)
+
+        # Try Claude; fall back to rule-based pulse on failure or missing key
+        narrative = None
+        if api_signals:
+            narrative = summarize_sector(label, api_signals, quiet_names)
+        narrative = narrative or pulse
 
         summaries.append(SectorSummary(
             sector=sector,
@@ -275,6 +285,7 @@ def build_sector_summaries(company_digests: list[CompanyDigest]) -> list[SectorS
             active_companies=active_names,
             quiet_companies=quiet_names,
             pulse=pulse,
+            narrative=narrative,
         ))
 
     return summaries
