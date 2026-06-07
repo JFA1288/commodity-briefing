@@ -526,17 +526,25 @@ function renderMacro(macro){
   if(!macro){el.innerHTML='<div class="card card-sm" style="color:var(--text3);font-size:.82rem">Macro data unavailable.</div>';return}
   let html='';
   if(macro.tickers&&macro.tickers.length){
-    html+='<div class="macro-strip">';
+    html+='<h3 style="font-size:.8rem;color:var(--text2);margin:0 0 .5rem">Market Signals</h3>';
     macro.tickers.forEach(t=>{
       const cc=(t.change_pct||0)>0.05?'up':((t.change_pct||0)<-0.05?'dn':'flat');
       const cs=t.change_pct!=null?((t.change_pct>0?'+':'')+t.change_pct.toFixed(2)+'%'):'—';
       const vs=t.last!=null?t.last.toLocaleString('en-US',{maximumFractionDigits:2}):'—';
-      html+=`<div class="macro-item"><span class="macro-name">${esc(t.name)}</span><span class="macro-val">${vs}<span class="price-unit">${esc(t.unit||'')}</span></span><span class="macro-chg ${cc}">${cs}</span></div>`;
+      html+=`<div class="geo-item">
+        <div class="geo-text">
+          <div style="display:flex;align-items:baseline;gap:.5rem;margin-bottom:.2rem">
+            <span style="font-weight:600;font-size:.85rem">${esc(t.name)}</span>
+            <span style="font-size:.85rem;color:var(--text2)">${vs}<span style="font-size:.72rem;color:var(--text3);margin-left:.2rem">${esc(t.unit||'')}</span></span>
+            <span class="price-chg ${cc}" style="font-size:.78rem">${cs}</span>
+          </div>
+          ${t.narrative?`<div style="font-size:.78rem;color:var(--text2);line-height:1.5">${esc(t.narrative)}</div>`:''}
+        </div>
+      </div>`;
     });
-    html+='</div>';
   }
   if(macro.geopolitical&&macro.geopolitical.length){
-    html+='<h3 style="font-size:.8rem;color:var(--text2);margin:.75rem 0 .4rem">Geopolitical Watch</h3>';
+    html+='<h3 style="font-size:.8rem;color:var(--text2);margin:.9rem 0 .5rem">Geopolitical Watch</h3>';
     macro.geopolitical.forEach(g=>{
       html+=`<div class="geo-item"><div class="geo-text"><a href="${esc(g.url)}" target="_blank" rel="noopener">${esc(g.title)}</a><div class="geo-meta">${esc(g.source)} · ${fmtAge(g.age_h)}</div></div></div>`;
     });

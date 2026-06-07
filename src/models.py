@@ -47,6 +47,7 @@ class MacroTickerRecord(BaseModel):
     last: Optional[float] = None
     change_pct: Optional[float] = None
     as_of: Optional[datetime] = None
+    narrative: str = ""   # interpreted market signal
 
 
 class GeopoliticalItem(BaseModel):

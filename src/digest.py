@@ -809,27 +809,140 @@ def build_events(generated_at: datetime) -> list[EventItem]:
 # ── Cross-portfolio alert ─────────────────────────────────────────────────────
 
 def _build_cross_portfolio_alert(company_digests: list[CompanyDigest], prices: list[PriceRecord]) -> list[dict]:
-    """Identify shared exposures across 3+ portfolio companies."""
+    """Identify shared exposures across portfolio companies with actionable insights."""
     alerts = []
-    # Find companies sharing geopolitical exposure
-    geo_exposed = [d.name for d in company_digests if "geopolitical" in d.flags]
+
+    # Build commodity → companies map from news items
+    commodity_companies: dict[str, list[str]] = {}
+    for d in company_digests:
+        for item in d.items:
+            for key in [item.commodity, item.commodity and item.commodity.lower()]:
+                if key:
+                    commodity_companies.setdefault(key, [])
+                    if d.name not in commodity_companies[key]:
+                        commodity_companies[key].append(d.name)
+
+    # Price-driven alerts: significant movers with ≥2 exposed companies
+    for p in sorted(prices, key=lambda x: abs(x.change_pct or 0), reverse=True):
+        if not p.change_pct or abs(p.change_pct) < 1.0:
+            continue
+        exposed = (
+            commodity_companies.get(p.display, [])
+            + commodity_companies.get(p.display.lower(), [])
+            + commodity_companies.get(p.commodity_id, [])
+        )
+        exposed = list(dict.fromkeys(exposed))  # deduplicate, preserve order
+        if len(exposed) < 2:
+            continue
+        sev = "high" if abs(p.change_pct) >= 3.0 else "medium" if abs(p.change_pct) >= 1.5 else "low"
+        impact = (
+            "Price surge raises procurement costs and compresses margins for buyers."
+            if p.change_pct > 0 else
+            "Price decline weighs on revenue and hedge book valuations for producers."
+        )
+        alerts.append({
+            "title": f"{p.display} {p.change_pct:+.1f}% — {len(exposed)} portfolio companies affected",
+            "description": (
+                f"{p.display} moved {p.change_pct:+.1f}% today to {p.price:,.2f} {p.unit}. "
+                f"{impact} "
+                f"Coordinate exposure review across {', '.join(exposed[:3])}"
+                f"{' and others' if len(exposed) > 3 else ''}."
+            ),
+            "companies": exposed[:5],
+            "severity": sev,
+            "signal": "price",
+            "commodity": p.display,
+        })
+
+    # Geopolitical: shared risk across ≥3 companies
+    geo_exposed = [d for d in company_digests if "geopolitical" in d.flags and d.items]
     if len(geo_exposed) >= 3:
+        top_headline = geo_exposed[0].items[0].title if geo_exposed[0].items else ""
         alerts.append({
-            "type": "cross_portfolio",
-            "companies": geo_exposed[:5],
-            "text": f"{len(geo_exposed)} portfolio companies share geopolitical exposure — consider coordinated briefing.",
-            "signal": "geopolitical"
+            "title": f"Geopolitical risk flag across {len(geo_exposed)} portfolio accounts",
+            "description": (
+                f"{', '.join(d.name for d in geo_exposed[:4])} all carry geopolitical exposure today. "
+                f"Lead signal: {top_headline[:120]}{'…' if len(top_headline) > 120 else ''} "
+                f"Recommend coordinated risk positioning review."
+            ),
+            "companies": [d.name for d in geo_exposed[:5]],
+            "severity": "high",
+            "signal": "geopolitical",
         })
-    # Find companies sharing M&A signal
-    ma_exposed = [d.name for d in company_digests if "ma" in d.flags]
+
+    # M&A: shared signal across ≥2 companies — advisory pipeline opportunity
+    ma_exposed = [d for d in company_digests if "ma" in d.flags and d.items]
     if len(ma_exposed) >= 2:
+        lead = ma_exposed[0].items[0].title if ma_exposed[0].items else ""
         alerts.append({
-            "type": "cross_portfolio",
-            "companies": ma_exposed[:5],
-            "text": f"M&A activity across {len(ma_exposed)} accounts ({', '.join(ma_exposed[:3])}) — potential transaction advisory pipeline.",
-            "signal": "ma"
+            "title": f"M&A signals across {len(ma_exposed)} portfolio accounts",
+            "description": (
+                f"{', '.join(d.name for d in ma_exposed[:3])} show active deal signals. "
+                f"Lead: {lead[:100]}{'…' if len(lead) > 100 else ''} "
+                f"Review transaction advisory mandate opportunities and conflict checks."
+            ),
+            "companies": [d.name for d in ma_exposed[:5]],
+            "severity": "medium",
+            "signal": "ma",
         })
-    return alerts
+
+    # Regulatory: shared regulatory exposure across ≥2 companies
+    reg_exposed = [d for d in company_digests if "regulatory" in d.flags and d.items]
+    if len(reg_exposed) >= 2:
+        lead = reg_exposed[0].items[0].title if reg_exposed[0].items else ""
+        alerts.append({
+            "title": f"Regulatory exposure across {len(reg_exposed)} portfolio companies",
+            "description": (
+                f"{', '.join(d.name for d in reg_exposed[:3])} flagged for regulatory developments. "
+                f"Lead: {lead[:100]}{'…' if len(lead) > 100 else ''} "
+                f"Assess compliance and policy advisory opportunities."
+            ),
+            "companies": [d.name for d in reg_exposed[:5]],
+            "severity": "medium",
+            "signal": "regulatory",
+        })
+
+    return alerts[:5]
+
+
+def _macro_narrative(name: str, symbol: str, last: Optional[float], change_pct: Optional[float]) -> str:
+    """Generate a one-line interpreted signal for a macro ticker."""
+    if change_pct is None or last is None:
+        return ""
+    chg = f"{change_pct:+.2f}%"
+    n = name.upper()
+    if "DXY" in n or "DOLLAR" in n or "DX-Y" in n or symbol.upper() in ("DX-Y.NYB", "UUP", "FXY"):
+        # Note: FXY is the yen ETF, not DXY — handle separately
+        if "FXY" in symbol.upper() or "YEN" in n or "JPY" in n:
+            if change_pct > 0.5:
+                return f"Japanese Yen strengthened {chg} — watch for BOJ policy signals; yen strength can dampen Japan LNG import costs."
+            elif change_pct < -0.5:
+                return f"Japanese Yen weakened {chg} — higher import costs for Japan's energy buyers; pressure on LNG procurement budgets."
+            return f"Yen relatively stable ({chg}) — neutral near-term impact on Japan energy import costs."
+        if change_pct > 0.3:
+            return f"USD strengthened {chg} — headwind for USD-denominated commodity prices; watch for weaker metal and energy demand from EM buyers."
+        elif change_pct < -0.3:
+            return f"USD weakened {chg} — tailwind for commodity prices broadly; SEA importers benefit from lower effective costs."
+        return f"USD stable ({chg}) — neutral commodity price impact today."
+    elif "10Y" in n or "TREASURY" in n or "TNX" in symbol.upper() or "TY" in symbol.upper():
+        level = f"{last:.2f}%"
+        if last > 4.5:
+            return f"US 10Y yield at {level} ({chg}) — elevated rates weigh on capital flows to SEA and raise commodity project financing costs."
+        elif change_pct > 0.05:
+            return f"US 10Y yield rising to {level} ({chg}) — tightening financial conditions; monitor credit spreads for commodity sector debt."
+        elif change_pct < -0.05:
+            return f"US 10Y yield easing to {level} ({chg}) — relief for EM debt servicing; supportive for commodity investment flows."
+        return f"US 10Y at {level} ({chg}) — stable rates; limited near-term impact on commodity financing."
+    elif "HANG" in n or "HSI" in n or "HK" in n or "^HSI" in symbol.upper():
+        if change_pct < -1.5:
+            return f"Hang Seng {chg} — China equity weakness signals softer industrial demand outlook; negative for base metals and thermal coal."
+        elif change_pct > 1.5:
+            return f"Hang Seng {chg} — China equity strength supports commodity demand optimism; positive signal for iron ore, copper, and LNG."
+        elif change_pct < -0.5:
+            return f"Hang Seng {chg} — mild China risk-off; monitor for downstream demand signals in metals and energy."
+        return f"Hang Seng {chg} — China markets range-bound; no clear demand signal today."
+    # Generic fallback
+    return f"{name} {chg} — monitor for commodity market implications."
 
 
 # ── Conversation starter ──────────────────────────────────────────────────────
@@ -1179,6 +1292,12 @@ def build_digest(
         from .process import extract_geopolitical
         geo = extract_geopolitical(all_news_items)
         macro.geopolitical = geo
+
+    # Add interpreted narratives to macro tickers
+    if macro:
+        for t in macro.tickers:
+            if not t.narrative:
+                t.narrative = _macro_narrative(t.name, t.symbol, t.last, t.change_pct)
 
     # Demand-driver intel
     opportunity_radar = build_opportunity_radar(company_news)
