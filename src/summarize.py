@@ -406,18 +406,19 @@ def summarize_executive_brief(
         "You are a senior commodity markets analyst briefing advisory partners "
         "who advise SEA commodity trading and energy companies.\n\n"
         "Based on today's sector intelligence, produce:\n"
-        "1. A 4–5 sentence executive brief covering the most important cross-sector "
-        "signals. Be specific — name companies and signal types.\n"
+        "1. Five to six concise executive bullets. Each bullet covers one distinct "
+        "cross-sector signal or theme — name companies, commodities, and numbers. "
+        "Max 25 words per bullet. No filler.\n"
         "2. Three to five short cross-sector theme tags (2–5 words each).\n\n"
         f"Sector intelligence today:\n{sector_lines}\n\n"
         f"Top signals:\n{opp_lines}\n\n"
-        'Return JSON only: {"narrative": "...", "themes": ["...", "..."]}'
+        'Return JSON only: {"bullets": ["...", "..."], "themes": ["...", "..."]}'
     )
-    text = _cached_call(prompt, sonnet, 450)
+    text = _cached_call(prompt, sonnet, 500)
     if text:
         result = _extract_json(text)
-        if result and "narrative" in result:
-            return result["narrative"], result.get("themes", [])
+        if result and "bullets" in result:
+            return result["bullets"], result.get("themes", [])
     return None
 
 

@@ -175,7 +175,8 @@ class SectorSummary(BaseModel):
 
 
 class ExecutiveBrief(BaseModel):
-    narrative: str
+    narrative: str = ""   # kept for backward compat
+    bullets: list[str] = Field(default_factory=list)
     themes: list[str] = Field(default_factory=list)
 
 

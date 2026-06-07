@@ -500,8 +500,19 @@ function renderExecSummary(bullets,brief,convStarter){
     bullets.forEach(b=>{html+=`<li>${esc(b)}</li>`});
     html+='</ul></div>';
   }
-  if(brief&&brief.narrative){
-    html+=`<div class="card card-sm" style="font-size:.82rem;color:var(--text2);line-height:1.6">${esc(brief.narrative)}`;
+  if(brief&&(brief.bullets&&brief.bullets.length||brief.narrative)){
+    html+='<div class="card"><div style="font-size:.78rem;color:var(--text3);font-weight:600;letter-spacing:.05em;margin-bottom:.5rem">CROSS-SECTOR INTELLIGENCE</div>';
+    if(brief.bullets&&brief.bullets.length){
+      html+='<ul class="exec-bullets">';
+      brief.bullets.forEach(b=>{html+=`<li>${esc(b)}</li>`});
+      html+='</ul>';
+    }else if(brief.narrative){
+      // legacy fallback: split narrative into sentences for readability
+      const sentences=brief.narrative.split(/(?<=[.!?])\s+/).filter(s=>s.trim());
+      html+='<ul class="exec-bullets">';
+      sentences.forEach(s=>{html+=`<li>${esc(s)}</li>`});
+      html+='</ul>';
+    }
     if(brief.themes&&brief.themes.length){html+='<div style="margin-top:.6rem">';brief.themes.forEach(t=>{html+=`<span class="tag driver">${esc(t)}</span>`});html+='</div>'}
     html+='</div>';
   }

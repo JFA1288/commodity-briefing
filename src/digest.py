@@ -834,21 +834,48 @@ def _build_cross_portfolio_alert(company_digests: list[CompanyDigest], prices: l
 
 # ── Conversation starter ──────────────────────────────────────────────────────
 
-def build_conversation_starter(headlines: list[NewsItem], company_digests: list[CompanyDigest], prices: list[PriceRecord]) -> str:
+def build_conversation_starter(
+    headlines: list[NewsItem],
+    company_digests: list[CompanyDigest],
+    prices: list[PriceRecord],
+    themes: Optional[list] = None,
+    exec_bullets: Optional[list[str]] = None,
+) -> str:
     """Generate one high-value opening question for a client call."""
     from .summarize import summarize_conversation_starter
-    # Find the most significant single development
-    top_ma = next((d for d in company_digests if "ma" in d.flags and d.items), None)
-    top_geo = next((d for d in company_digests if "geopolitical" in d.flags and d.items), None)
-    biggest_mover = max((p for p in prices if p.change_pct), key=lambda p: abs(p.change_pct), default=None)
-
     context = []
+
+    # High-value corporate events first
+    top_ma = next((d for d in company_digests if "ma" in d.flags and d.items), None)
+    top_reg = next((d for d in company_digests if "regulatory" in d.flags and d.items), None)
+    top_geo = next((d for d in company_digests if "geopolitical" in d.flags and d.items), None)
     if top_ma and top_ma.items:
         context.append(f"M&A: {top_ma.name} — {top_ma.items[0].title}")
+    if top_reg and top_reg.items:
+        context.append(f"Regulatory: {top_reg.name} — {top_reg.items[0].title}")
     if top_geo and top_geo.items:
         context.append(f"Geopolitical: {top_geo.name} — {top_geo.items[0].title}")
-    if biggest_mover and biggest_mover.change_pct:
-        context.append(f"Price: {biggest_mover.display} {biggest_mover.change_pct:+.1f}%")
+
+    # Top price mover (prefer energy/metals over precious metals when others exist)
+    energy_metals = [p for p in prices if p.change_pct and p.group in ("energy", "metals", "agriculture")]
+    precious = [p for p in prices if p.change_pct and p.group == "precious"]
+    pool = energy_metals or precious
+    if pool:
+        biggest = max(pool, key=lambda p: abs(p.change_pct))
+        if abs(biggest.change_pct) >= 0.5:
+            context.append(f"Price move: {biggest.display} {biggest.change_pct:+.1f}% today")
+
+    # Active themes
+    if themes:
+        theme_names = [t.name for t in themes[:2]]
+        if theme_names:
+            context.append(f"Market themes: {', '.join(theme_names)}")
+
+    # Fallback: top exec bullets
+    if len(context) < 2 and exec_bullets:
+        for b in exec_bullets[:2]:
+            if b not in context:
+                context.append(b)
 
     if not context:
         return ""
@@ -1133,8 +1160,8 @@ def build_digest(
     if sector_dicts and opp_dicts:
         result = summarize_executive_brief(sector_dicts, opp_dicts)
         if result:
-            narrative, themes_list = result
-            brief = ExecutiveBrief(narrative=narrative, themes=themes_list)
+            bullets_list, themes_list = result
+            brief = ExecutiveBrief(bullets=bullets_list, themes=themes_list)
 
     # New MI sections
     market_themes = build_market_themes(all_news_items, company_news)
@@ -1163,7 +1190,11 @@ def build_digest(
     cross_portfolio_alerts = _build_cross_portfolio_alert(company_digests, prices)
 
     # Conversation starter
-    conversation_starter = build_conversation_starter(headlines, company_digests, prices)
+    conversation_starter = build_conversation_starter(
+        headlines, company_digests, prices,
+        themes=market_themes,
+        exec_bullets=exec_summary,
+    )
 
     # Regulatory spotlight
     regulatory_spotlight = _build_regulatory_spotlight(regulatory)
