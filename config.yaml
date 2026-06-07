@@ -333,8 +333,9 @@ macro_tickers:
 
 # ── Supplementary RSS feeds ───────────────────────────────────────────────────
 supplementary_feeds:
-  - name: Reuters Business
-    url: "https://feeds.reuters.com/reuters/businessNews"
+  # Reuters: feeds.reuters.com shut down; route via Google News aggregator instead
+  - name: Google News - Reuters Business
+    url: "https://news.google.com/rss/search?q=site:reuters.com+commodity+OR+energy+OR+LNG+OR+metals&hl=en-US&gl=US&ceid=US:en"
     weight: 1.8
 
   - name: OilPrice.com
@@ -345,32 +346,36 @@ supplementary_feeds:
     url: "https://www.rigzone.com/news/rss/rigzone_latest.aspx"
     weight: 1.2
 
-  - name: Mining.com
-    url: "https://www.mining.com/feed/"
+  # Mining.com blocks bots; replaced with Kitco metals news (publicly accessible)
+  - name: Kitco Metals News
+    url: "https://www.kitco.com/rss/latest-news"
     weight: 1.2
 
   - name: Hellenic Shipping News
     url: "https://www.hellenicshippingnews.com/feed/"
     weight: 1.0
 
+  # The Edge Malaysia migrated domain: theedgemarkets.com → theedgemalaysia.com
   - name: The Edge Malaysia
-    url: "https://www.theedgemarkets.com/rss.xml"
+    url: "https://theedgemalaysia.com/rss.xml"
     weight: 1.1
 
   - name: Business Times SG
     url: "https://www.businesstimes.com.sg/rss/all"
     weight: 1.1
 
+  # Jakarta Post moved RSS to dedicated subdomain
   - name: Jakarta Post Business
-    url: "https://www.thejakartapost.com/feed/category/business"
+    url: "https://rss.thejakartapost.com/home"
     weight: 1.0
 
   - name: Bangkok Post Business
     url: "https://www.bangkokpost.com/rss/data/business.xml"
     weight: 1.0
 
-  - name: S&P Global Commodity
-    url: "https://www.spglobal.com/commodityinsights/en/rss-feed/oil"
+  # S&P Global blocks all bots; replaced with Argus Media (free public RSS)
+  - name: Argus Media Energy
+    url: "https://www.argusmedia.com/en/news/rss"
     weight: 1.5
 
   - name: EIA Today in Energy
@@ -385,12 +390,14 @@ supplementary_feeds:
     url: "https://news.google.com/rss/search?q=crude+oil+OR+LNG+OR+Brent+site:reuters.com&hl=en-US&gl=US&ceid=US:en"
     weight: 1.3
 
-  - name: IEA News
-    url: "https://www.iea.org/news.xml"
+  # IEA has no public RSS endpoint; route via Google News to capture press releases
+  - name: Google News - IEA
+    url: "https://news.google.com/rss/search?q=IEA+%22oil+market%22+OR+IEA+%22energy+report%22+OR+%22International+Energy+Agency%22&hl=en-US&gl=US&ceid=US:en"
     weight: 1.4
 
-  - name: Nikkei Asia Business
-    url: "https://asia.nikkei.com/rss/feed/section/business"
+  # Nikkei Asia restructured RSS paths
+  - name: Nikkei Asia
+    url: "https://asia.nikkei.com/rss/feed/nar"
     weight: 1.2
 
   - name: Channel NewsAsia Business
@@ -400,13 +407,13 @@ supplementary_feeds:
 # ── Source trust weights (for headline scoring) ───────────────────────────────
 source_weights:
   Reuters: 1.0
-  "S&P Global": 1.0
+  "Argus Media": 1.0
   "Business Times": 0.85
   "The Edge Malaysia": 0.85
   "Hellenic Shipping News": 0.8
   OilPrice.com: 0.75
   "Rigzone": 0.75
-  "Mining.com": 0.75
+  "Kitco": 0.75
   "Jakarta Post": 0.7
   "Bangkok Post": 0.7
   default: 0.6
