@@ -346,18 +346,18 @@ supplementary_feeds:
     url: "https://www.rigzone.com/news/rss/rigzone_latest.aspx"
     weight: 1.2
 
-  # Mining.com blocks bots; replaced with Kitco metals news (publicly accessible)
+  # Mining.com blocks bots; replaced with Kitco metals news
   - name: Kitco Metals News
-    url: "https://www.kitco.com/rss/latest-news"
+    url: "https://www.kitco.com/rss/news"
     weight: 1.2
 
   - name: Hellenic Shipping News
     url: "https://www.hellenicshippingnews.com/feed/"
     weight: 1.0
 
-  # The Edge Malaysia migrated domain: theedgemarkets.com → theedgemalaysia.com
-  - name: The Edge Malaysia
-    url: "https://theedgemalaysia.com/rss.xml"
+  # The Edge Malaysia — use Google News to pull their articles reliably
+  - name: Google News - The Edge Malaysia
+    url: "https://news.google.com/rss/search?q=site:theedgemalaysia.com+commodity+OR+energy+OR+oil+OR+metals&hl=en-MY&gl=MY&ceid=MY:en"
     weight: 1.1
 
   - name: Business Times SG
@@ -373,9 +373,9 @@ supplementary_feeds:
     url: "https://www.bangkokpost.com/rss/data/business.xml"
     weight: 1.0
 
-  # S&P Global blocks all bots; replaced with Argus Media (free public RSS)
-  - name: Argus Media Energy
-    url: "https://www.argusmedia.com/en/news/rss"
+  # S&P Global blocks all bots; replaced with Google News for commodity price intelligence
+  - name: Google News - Commodity Markets
+    url: "https://news.google.com/rss/search?q=commodity+prices+OR+%22oil+market%22+OR+%22LNG+prices%22+OR+%22iron+ore%22+OR+%22copper+prices%22&hl=en-US&gl=US&ceid=US:en"
     weight: 1.5
 
   - name: EIA Today in Energy
@@ -409,7 +409,7 @@ source_weights:
   Reuters: 1.0
   "Argus Media": 1.0
   "Business Times": 0.85
-  "The Edge Malaysia": 0.85
+  "Google News - The Edge Malaysia": 0.85
   "Hellenic Shipping News": 0.8
   OilPrice.com: 0.75
   "Rigzone": 0.75
