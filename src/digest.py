@@ -661,19 +661,7 @@ def build_outlook(
             elif f.source == "EIA" and not eia_text:
                 eia_text = f.balance_read
 
-        # Find relevant news headlines — T-7 only
-        from datetime import datetime, timedelta, timezone as _tz
-        _cutoff = datetime.now(_tz.utc) - timedelta(days=7)
-        headlines: list[dict] = []
         aliases = _COMMODITY_ALIASES.get(comm_name, [comm_name.lower().split()[0]])
-        for group_id, items in commodity_news.items():
-            for item in items:
-                if item.published is not None and item.published < _cutoff:
-                    continue
-                text = (item.title + " " + item.summary).lower()
-                if any(alias in text for alias in aliases):
-                    headlines.append({"title": item.title, "source": item.source, "url": item.url})
-        headlines = headlines[:3]
 
         # Find live price for this commodity
         price_context = ""
@@ -685,23 +673,25 @@ def build_outlook(
                     price_context = f"Live price: {p.display} at {p.price:,.2f} {p.unit}{change_str}"
                     break
 
-        headline_texts = [h["title"] for h in headlines]
-        # Pass wb_text as primary source; eia_text is supplementary
-        narrative = summarize_outlook(comm_name, eia_text, wb_text, headline_texts, price_context=price_context) or ""
+        # Outlook narrative: World Bank benchmark + live price only — no news headlines
+        narrative = summarize_outlook(comm_name, eia_text, wb_text, [], price_context=price_context) or ""
 
-        # Determine consensus direction from news sentiment
+        # Determine direction from World Bank trend; fall back to price change
         direction = "neutral"
-        if headlines:
-            all_text = " ".join(h["title"].lower() for h in headlines)
-            bullish_words = ["surge", "rally", "rise", "gain", "tight", "deficit", "strong demand"]
-            bearish_words = ["plunge", "fall", "drop", "surplus", "weak", "oversupply", "cut"]
-            b = sum(1 for w in bullish_words if w in all_text)
-            be = sum(1 for w in bearish_words if w in all_text)
-            if b > be + 1:
+        if wb_text:
+            wb_lower = wb_text.lower()
+            if any(w in wb_lower for w in ["rising", "up", "increase"]):
                 direction = "bullish"
-            elif be > b + 1:
+            elif any(w in wb_lower for w in ["falling", "down", "decline", "declin"]):
+                direction = "bearish"
+        if direction == "neutral" and price_context:
+            pc_lower = price_context.lower()
+            if "+" in pc_lower:
+                direction = "bullish"
+            elif any(c in price_context for c in ["-0", "-1", "-2", "-3", "-4", "-5"]):
                 direction = "bearish"
 
+        headlines: list[dict] = []  # not used in narrative; kept for OutlookItem schema
         results.append(OutlookItem(
             commodity=comm_name,
             eia_forecast=eia_text,

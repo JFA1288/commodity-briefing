@@ -197,35 +197,43 @@ def summarize_company(name: str, sector: str, headlines: list[str]) -> Optional[
 # ── Per-commodity outlook narrative (Haiku) ───────────────────────────────────
 
 def summarize_outlook(commodity: str, eia_text: str, wb_text: str, headlines: list[str], price_context: str = "") -> Optional[str]:
-    """2-sentence outlook narrative from available data. Falls back to heuristic if LLM refuses."""
+    """2-sentence outlook narrative.
+
+    Source priority:
+    1. World Bank benchmark price (primary — always used when available)
+    2. Live price context (secondary)
+    3. EIA inventory data (supplementary for energy only)
+    Headlines are intentionally excluded — they introduce unvetted third-party
+    sources (e.g. regional trade sites) that should not appear in the forecast.
+    """
     sources = []
+    if wb_text:
+        sources.append(f"World Bank benchmark: {wb_text}")
     if price_context:
         sources.append(price_context)
     if eia_text:
-        sources.append(f"EIA data: {eia_text}")
-    if wb_text:
-        sources.append(f"World Bank data: {wb_text}")
-    if headlines:
-        sources.append("Recent headlines: " + "; ".join(headlines[:3]))
+        sources.append(f"EIA supply data: {eia_text}")
+    # Headlines deliberately NOT included in outlook sources
+
     if not sources:
-        return _heuristic_outlook(commodity, eia_text, wb_text, headlines, price_context)
+        return _heuristic_outlook(commodity, wb_text, price_context)
 
     if _mode() == "heuristic" or not _client_available():
-        return _heuristic_outlook(commodity, eia_text, wb_text, headlines, price_context)
+        return _heuristic_outlook(commodity, wb_text, price_context)
 
     haiku, _ = _models()
     has_wb = bool(wb_text)
-    has_forecasts = bool(eia_text or wb_text)
     if has_wb:
         instruction = (
-            "Lead with the World Bank benchmark price trend as the primary source. "
-            "Supplement with live price movement and any relevant news sentiment. "
-            "Cite the World Bank figure explicitly."
+            "Lead with the World Bank benchmark figure — cite the price level, "
+            "percentage change, and period (e.g. QoQ). Add the live price direction "
+            "as context. Do not cite any news sources."
         )
-    elif has_forecasts:
-        instruction = "Cite the data figure and its source. Supplement with news sentiment where available."
     else:
-        instruction = "No benchmark data available. Summarise the directional market sentiment from headlines and live price data."
+        instruction = (
+            "No World Bank benchmark available. Summarise direction from the live "
+            "price and EIA data provided. Do not cite news sources."
+        )
 
     prompt = (
         f"Write 2 concise sentences summarising the current market outlook for {commodity}. "
@@ -234,26 +242,21 @@ def summarize_outlook(commodity: str, eia_text: str, wb_text: str, headlines: li
         + "\n\nWrite only the 2-sentence outlook. Do not start with 'I'."
     )
     result = _cached_call(prompt, haiku, 180)
-    # Detect refusal responses and fall back to heuristic
     if not result or result.lower().startswith(("i appreciate", "i'm unable", "i cannot", "i apologize", "i don't")):
-        return _heuristic_outlook(commodity, eia_text, wb_text, headlines, price_context)
+        return _heuristic_outlook(commodity, wb_text, price_context)
     return result
 
 
-def _heuristic_outlook(commodity: str, eia_text: str, wb_text: str, headlines: list[str], price_context: str) -> Optional[str]:
-    """Rule-based outlook narrative when LLM is unavailable or refuses."""
+def _heuristic_outlook(commodity: str, wb_text: str, price_context: str) -> Optional[str]:
+    """Rule-based outlook narrative using World Bank and live price only."""
     parts: list[str] = []
-    if price_context:
-        parts.append(price_context + ".")
     if wb_text:
-        parts.append(wb_text + ".")
-    if eia_text:
-        parts.append(eia_text + ".")
-    if headlines:
-        parts.append(f"Recent market headlines: {headlines[0]}.")
+        parts.append(wb_text)
+    if price_context:
+        parts.append(price_context)
     if not parts:
         return None
-    return " ".join(parts[:2])
+    return " | ".join(parts)
 
 
 # ── Conversation starter (Sonnet) ─────────────────────────────────────────────
