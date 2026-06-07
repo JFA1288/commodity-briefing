@@ -1,6 +1,6 @@
 # SEA Commodity Briefing
 
-A daily automated digest of commodity market news and prices for Southeast Asia — covering energy, metals, mining, and power sectors. Fully static dashboard published to GitHub Pages. **No paid APIs. No LLM required.**
+A daily automated digest of commodity market news and prices for Southeast Asia — covering energy, metals, mining, and power sectors. Fully static dashboard published to GitHub Pages.
 
 ## Live Dashboard
 
