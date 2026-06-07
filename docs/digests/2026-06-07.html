@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Commodity Trading — Sector Intelligence — 2026-06-07</title>
+<style>
+:root {
+  --bg: #f8f9fa; --surface: #fff; --border: #e2e6ea;
+  --text: #212529; --muted: #6c757d; --accent: #0d6efd;
+  --up: #198754; --dn: #dc3545; --warn: #fd7e14;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+@media(prefers-color-scheme:dark){
+  :root{--bg:#0f1117;--surface:#1a1d24;--border:#2d3139;--text:#e8eaf0;--muted:#9098a9;--accent:#4d8ef9;}
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);line-height:1.6;font-size:15px}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:900px;margin:0 auto;padding:2rem 1.25rem}
+header{margin-bottom:2.5rem;border-bottom:1px solid var(--border);padding-bottom:1.5rem}
+header h1{font-size:1.5rem;font-weight:700;letter-spacing:-.02em}
+header .meta{color:var(--muted);font-size:.85rem;margin-top:.35rem}
+h2{font-size:1.1rem;font-weight:700;margin:2rem 0 .9rem;letter-spacing:-.01em;border-left:3px solid var(--accent);padding-left:.65rem}
+h3{font-size:.95rem;font-weight:600;margin:.75rem 0 .4rem}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:1.1rem 1.25rem;margin-bottom:.75rem}
+.tag{display:inline-block;font-size:.72rem;font-weight:600;letter-spacing:.03em;text-transform:uppercase;padding:.18rem .5rem;border-radius:4px;margin-right:.35rem;background:rgba(13,110,253,.1);color:var(--accent)}
+.tag.earnings{background:rgba(25,135,84,.12);color:#198754}
+.tag.ma{background:rgba(13,202,240,.12);color:#0dcaf0}
+.tag.outage{background:rgba(220,53,69,.12);color:#dc3545}
+.tag.regulatory{background:rgba(253,126,20,.12);color:#fd7e14}
+.tag.geopolitical{background:rgba(111,66,193,.12);color:#6f42c1}
+.tag.price_shock{background:rgba(220,53,69,.12);color:#dc3545}
+.headline{padding:.65rem 0;border-bottom:1px solid var(--border)}
+.headline:last-child{border-bottom:none}
+.headline .src{font-size:.78rem;color:var(--muted);margin-top:.2rem}
+.up{color:var(--up)} .dn{color:var(--dn)} .na{color:var(--muted)}
+.badge{display:inline-block;font-size:.72rem;padding:.15rem .45rem;border-radius:3px;font-weight:600}
+.badge.yfinance{background:rgba(25,135,84,.12);color:#198754}
+.badge.web{background:rgba(253,126,20,.15);color:#fd7e14}
+.badge.unavailable{background:rgba(108,117,125,.12);color:var(--muted)}
+.watch-list{list-style:none}
+.watch-list li{padding:.55rem 0;border-bottom:1px solid var(--border)}
+.watch-list li:last-child{border-bottom:none}
+.watch-list .cat{display:inline-block;width:100px;font-size:.72rem;text-transform:uppercase;font-weight:700;color:var(--muted)}
+details summary{cursor:pointer;user-select:none;font-weight:600;list-style:none;display:flex;align-items:center;gap:.4rem}
+details summary::-webkit-details-marker{display:none}
+details summary::before{content:"▶";font-size:.65rem;transition:transform .15s;display:inline-block}
+details[open] summary::before{transform:rotate(90deg)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Commodity Trading — Sector Intelligence</h1>
+  <div class="meta">Daily digest — 2026-06-07 04:00 UTC / 2026-06-07 12:00 SGT</div>
+  <div class="meta" style="margin-top:.5rem"><a href="../index.html">← Live Dashboard</a></div>
+</header>
+
+<!-- What to Watch -->
+
+<h2>What to Watch</h2>
+<div class="card">
+  <ul class="watch-list">
+    
+    <li><span class="cat">price mover</span> Aluminium up 7.2% to 3950.25 USD/t.</li>
+    
+    <li><span class="cat">price mover</span> Silver down 5.4% to 68.94 USD/oz.</li>
+    
+    <li><span class="cat">price mover</span> Henry Hub Gas down 3.6% to 3.23 USD/MMBtu.</li>
+    
+    <li><span class="cat">event</span> Rio Tinto: material events flagged (esg, geopolitical, ma).</li>
+    
+    <li><span class="cat">event</span> Tenaga Nasional Berhad: material events flagged (geopolitical, outage).</li>
+    
+    <li><span class="cat">event</span> BHP: material events flagged (growth_strategy).</li>
+    
+    <li><span class="cat">event</span> Danantara: material events flagged (regulatory).</li>
+    
+    <li><span class="cat">data gap</span> Indicative/unavailable prices for: JKM LNG, Newcastle Coal, Iron Ore (62% Fe), Nickel (LME).</li>
+    
+  </ul>
+</div>
+
+
+<!-- Top Headlines -->
+<h2>Top Headlines</h2>
+<div class="card">
+  
+  <div class="headline">
+    <a href="https://oilprice.com/Energy/Energy-General/Oil-Market-Flying-Blind-as-Dark-Tanker-Traffic-Surges-in-Hormuz.html" target="_blank" rel="noopener">Oil Market Flying Blind as Dark Tanker Traffic Surges in Hormuz</a>
+    <span class="tag geopolitical">geopolitical</span><span class="tag price_shock">price_shock</span>
+    <div class="src">OilPrice.com · Jun 06 23:00 UTC</div>
+  </div>
+  
+  <div class="headline">
+    <a href="https://oilprice.com/Alternative-Energy/Solar-Energy/Why-Solar-Power-Is-Booming-Under-Trump.html" target="_blank" rel="noopener">Why Solar Power Is Booming Under Trump</a>
+    <span class="tag ma">ma</span><span class="tag esg">esg</span>
+    <div class="src">OilPrice.com · Jun 06 21:00 UTC</div>
+  </div>
+  
+  <div class="headline">
+    <a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTE1xOG1kWTUzb1ZLV0lpczBMYXZsTHYtcjdMSTFEcmpZaExDZkZRTGpDc1J6MVl4Q1h2RGlaazlaUWVRMy0ta0RVSTBibldnNGdlUm90cjJScUg1enc?oc=5" target="_blank" rel="noopener">TNB’s green gamble - Aliran</a>
+    <span class="tag geopolitical">geopolitical</span>
+    <div class="src">Google News · Jun 06 22:49 UTC</div>
+  </div>
+  
+  <div class="headline">
+    <a href="https://oilprice.com/Energy/Coal/AI-Boom-or-Political-Play-Trump-Channels-Defense-Funds-Into-Dying-Coal-Plants.html" target="_blank" rel="noopener">AI Boom or Political Play? Trump Channels Defense Funds Into Dying Coal Plants</a>
+    <span class="tag regulatory">regulatory</span><span class="tag geopolitical">geopolitical</span><span class="tag enterprise_risk">enterprise_risk</span>
+    <div class="src">OilPrice.com · Jun 06 17:00 UTC</div>
+  </div>
+  
+  <div class="headline">
+    <a href="https://news.google.com/rss/articles/CBMifEFVX3lxTFBITnpYQzFVRE9McC1hWHp4Rl9PdHNMUmFzYkZjY2hsS3Y0ajNOTHRfMnoxZ1hXcTZvc09RVnRTSFpicDNFbHRqNXZBb0U0NHVKR2p0TkNpOEJzVnhiNXJZNk1sbkdwcGlJSU0waW9RZTNYQXdrN2hqanBJbDE?oc=5" target="_blank" rel="noopener">Indonesia centralizes strategic commodity exports under Danantara Sumberdaya Indonesia control from June 1 - Crypto Briefing</a>
+    <span class="tag regulatory">regulatory</span>
+    <div class="src">Google News · Jun 06 19:00 UTC</div>
+  </div>
+  
+  <div class="headline">
+    <a href="https://www.rigzone.com/news/wire/uk_sees_risk_of_100_oil_until_2028-06-jun-2026-183867-article/?rss=true" target="_blank" rel="noopener">UK Sees Risk of $100 Oil Until 2028</a>
+    <span class="tag earnings">earnings</span><span class="tag geopolitical">geopolitical</span>
+    <div class="src">Rigzone News · Jun 06 12:00 UTC</div>
+  </div>
+  
+  <div class="headline">
+    <a href="https://news.google.com/rss/articles/CBMinAFBVV95cUxPRU5OM2V6OGlTMnNlODVsRVBRRnp5d0hRcG15elkwNV9tNnZ4NWVqbXIzNmE1ODdxRHFrck9SMnNMYkVKYjQ5TU5pVEZpZ2VzQ2pRUlF2eEhsdjJwTXhLOXgxM3RRNmxVZlFrTDU2OG5Lb3hDZEVEMlFCVUkwcEJ4WThBV2lINUtpdzZHU2JHR1p2TXlkRDd2ZkJxZ2U?oc=5" target="_blank" rel="noopener">Brent Crude Heads for Record Monthly Gain With WTI Not Far Behind - EnergyNow.com</a>
+    <span class="tag price_shock">price_shock</span>
+    <div class="src">Google News · Jun 06 07:06 UTC</div>
+  </div>
+  
+  <div class="headline">
+    <a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxOY2c1UGlBT213N281bmhkZ1J5SGZ3LU5oQ0VJU0hLd0VTNHVhQXhacFBzN3ItVC1sZWhMdUFxb1ktelVRVWprQWJ6WnFBSl9WV1hSdmJpanpNS1JXZUhKRHp4bld1bkR5RENoUkZDZW5XbmNuQ1RJSU1Ma3NQdV9ZR1lqdHZLSzZobzZwNWVtNTJha0NHM0FBejd6M0hzdGc?oc=5" target="_blank" rel="noopener">Rio Tinto Advances Automation And Low Carbon Aluminium In Growth Push - Yahoo Finance</a>
+    <span class="tag esg">esg</span>
+    <div class="src">Google News · Jun 06 06:11 UTC</div>
+  </div>
+  
+  <div class="headline">
+    <a href="https://www.bangkokpost.com/business/general/3266825/gold-prices-down-b1450-to-b67500" target="_blank" rel="noopener">Gold prices down B1,450 to B67,500</a>
+    <span class="tag trading_moves">trading_moves</span>
+    <div class="src">Bangkok Post Business · Jun 06 02:20 UTC</div>
+  </div>
+  
+  <div class="headline">
+    <a href="https://www.hellenicshippingnews.com/dry-bulk-market-indonesian-coal-exports-retreating/" target="_blank" rel="noopener">Dry Bulk Market: Indonesian Coal Exports Retreating</a>
+    <span class="tag regulatory">regulatory</span>
+    <div class="src">Hellenic Shipping News · Jun 05 21:00 UTC</div>
+  </div>
+  
+  <div class="headline">
+    <a href="https://www.hellenicshippingnews.com/posidonia-2026-closes-on-a-high-over-35000-visitors-and-2200-exhibitors-set-new-exhibition-records/" target="_blank" rel="noopener">Posidonia 2026 Closes on a High: Over 35,000 Visitors and 2,200 Exhibitors Set New Exhibition Records</a>
+    <span class="tag price_shock">price_shock</span><span class="tag trading_risk">trading_risk</span>
+    <div class="src">Hellenic Shipping News · Jun 05 21:00 UTC</div>
+  </div>
+  
+  <div class="headline">
+    <a href="https://www.hellenicshippingnews.com/the-bahamas-transport-minister-leads-delegation-to-posidonia-2026/" target="_blank" rel="noopener">The Bahamas Transport Minister Leads Delegation to Posidonia 2026</a>
+    <span class="tag regulatory">regulatory</span>
+    <div class="src">Hellenic Shipping News · Jun 05 21:00 UTC</div>
+  </div>
+  
+  <div class="headline">
+    <a href="https://www.hellenicshippingnews.com/indias-bunker-fuel-demand-rises-in-may-amid-improved-supply-competitive-prices/" target="_blank" rel="noopener">India’s bunker fuel demand rises in May amid improved supply, competitive prices</a>
+    <span class="tag trading_moves">trading_moves</span>
+    <div class="src">Hellenic Shipping News · Jun 05 21:00 UTC</div>
+  </div>
+  
+  <div class="headline">
+    <a href="https://www.hellenicshippingnews.com/turkstream-gas-flows-to-europe-halted-for-maintenance/" target="_blank" rel="noopener">TurkStream gas flows to Europe halted for maintenance</a>
+    <span class="tag outage">outage</span><span class="tag geopolitical">geopolitical</span><span class="tag enterprise_risk">enterprise_risk</span>
+    <div class="src">Hellenic Shipping News · Jun 05 21:00 UTC</div>
+  </div>
+  
+  <div class="headline">
+    <a href="https://www.hellenicshippingnews.com/gibson-tanker-report-resilient-vlccs/" target="_blank" rel="noopener">Gibson tanker report – Resilient VLCCs</a>
+    <span class="tag esg">esg</span>
+    <div class="src">Hellenic Shipping News · Jun 05 21:00 UTC</div>
+  </div>
+  
+</div>
+
+<!-- Prices -->
+<h2>Commodity Prices</h2>
+<div class="card">
+  <table style="width:100%;border-collapse:collapse;font-size:.9rem">
+    <thead>
+      <tr style="border-bottom:2px solid var(--border);color:var(--muted);font-size:.78rem;text-transform:uppercase">
+        <th style="text-align:left;padding:.4rem .5rem">Commodity</th>
+        <th style="text-align:right;padding:.4rem .5rem">Price</th>
+        <th style="text-align:right;padding:.4rem .5rem">Change</th>
+        <th style="text-align:right;padding:.4rem .5rem">Source</th>
+      </tr>
+    </thead>
+    <tbody>
+    
+    <tr style="border-bottom:1px solid var(--border)">
+      <td style="padding:.45rem .5rem">Brent Crude</td>
+      <td style="text-align:right;padding:.45rem .5rem;font-variant-numeric:tabular-nums">
+        93.09 <small style="color:var(--muted)">USD/bbl</small>
+      </td>
+      <td style="text-align:right;padding:.45rem .5rem;font-variant-numeric:tabular-nums">
+        
+          <span class="dn">-2.4%</span>
+        
+      </td>
+      <td style="text-align:right;padding:.45rem .5rem">
+        <span class="badge yfinance">yfinance</span>
+      </td>
+    </tr>
+    
+    <tr style="border-bottom:1px solid var(--border)">
+      <td style="padding:.45rem .5rem">WTI Crude</td>
+      <td style="text-align:right;padding:.45rem .5rem;font-variant-numeric:tabular-nums">
+        90.54 <small style="color:var(--muted)">USD/bbl</small>
+      </td>
+      <td style="text-align:right;padding:.45rem .5rem;font-variant-numeric:tabular-nums">
+        
+          <span class="dn">-2.8%</span>
+        
+      </td>
+      <td style="text-align:right;padding:.45rem .5rem">
+        <span class="badge yfinance">yfinance</span>
+      </td>
+    </tr>
+    
+    <tr style="border-bottom:1px solid var(--border)">
+      <td style="padding:.45rem .5rem">Henry Hub Gas</td>
+      <td style="text-align:right;padding:.45rem .5rem;font-variant-numeric:tabular-nums">
+        3.23 <small style="color:var(--muted)">USD/MMBtu</small>
+      </td>
+      <td style="text-align:right;padding:.45rem .5rem;font-variant-numeric:tabular-nums">
+        
+          <span class="dn">-3.6%</span>
+        
+      </td>
+      <td style="text-align:right;padding:.45rem .5rem">
+        <span class="badge yfinance">yfinance</span>
+      </td>
+    </tr>
+    
+    <tr style="border-bottom:1px solid var(--border)">
+      <td style="padding:.45rem .5rem">Copper (COMEX)</td>
+      <td style="text-align:right;padding:.45rem .5rem;font-variant-numeric:tabular-nums">
+        13808.64 <small style="color:var(--muted)">USD/t</small>
+      </td>
+      <td style="text-align:right;padding:.45rem .5rem;font-variant-numeric:tabular-nums">
+        
+          <span class="dn">-2.6%</span>
+        
+      </td>
+      <td style="text-align:right;padding:.45rem .5rem">
+        <span class="badge yfinance">yfinance</span>
+      </td>
+    </tr>
+    
+    <tr style="border-bottom:1px solid var(--border)">
+      <td style="padding:.45rem .5rem">Gold</td>
+      <td style="text-align:right;padding:.45rem .5rem;font-variant-numeric:tabular-nums">
+        4337.10 <small style="color:var(--muted)">USD/oz</small>
+      </td>
+      <td style="text-align:right;padding:.45rem .5rem;font-variant-numeric:tabular-nums">
+        
+          <span class="dn">-2.9%</span>
+        
+      </td>
+      <td style="text-align:right;padding:.45rem .5rem">
+        <span class="badge yfinance">yfinance</span>
+      </td>
+    </tr>
+    
+    <tr style="border-bottom:1px solid var(--border)">
+      <td style="padding:.45rem .5rem">Silver</td>
+      <td style="text-align:right;padding:.45rem .5rem;font-variant-numeric:tabular-nums">
+        68.94 <small style="color:var(--muted)">USD/oz</small>
+      </td>
+      <td style="text-align:right;padding:.45rem .5rem;font-variant-numeric:tabular-nums">
+        
+          <span class="dn">-5.4%</span>
+        
+      </td>
+      <td style="text-align:right;padding:.45rem .5rem">
+        <span class="badge yfinance">yfinance</span>
+      </td>
+    </tr>
+    
+    <tr style="border-bottom:1px solid var(--border)">
+      <td style="padding:.45rem .5rem">Aluminium</td>
+      <td style="text-align:right;padding:.45rem .5rem;font-variant-numeric:tabular-nums">
+        3950.25 <small style="color:var(--muted)">USD/t</small>
+      </td>
+      <td style="text-align:right;padding:.45rem .5rem;font-variant-numeric:tabular-nums">
+        
+          <span class="up">+7.2%</span>
+        
+      </td>
+      <td style="text-align:right;padding:.45rem .5rem">
+        <span class="badge yfinance">yfinance</span>
+      </td>
+    </tr>
+    
+    <tr style="border-bottom:1px solid var(--border)">
+      <td style="padding:.45rem .5rem">Soybeans (CBOT)</td>
+      <td style="text-align:right;padding:.45rem .5rem;font-variant-numeric:tabular-nums">
+        1121.50 <small style="color:var(--muted)">USc/bu</small>
+      </td>
+      <td style="text-align:right;padding:.45rem .5rem;font-variant-numeric:tabular-nums">
+        
+          <span class="dn">-0.7%</span>
+        
+      </td>
+      <td style="text-align:right;padding:.45rem .5rem">
+        <span class="badge yfinance">yfinance</span>
+      </td>
+    </tr>
+    
+    <tr style="border-bottom:1px solid var(--border)">
+      <td style="padding:.45rem .5rem">Wheat (CBOT)</td>
+      <td style="text-align:right;padding:.45rem .5rem;font-variant-numeric:tabular-nums">
+        580.00 <small style="color:var(--muted)">USc/bu</small>
+      </td>
+      <td style="text-align:right;padding:.45rem .5rem;font-variant-numeric:tabular-nums">
+        
+          <span class="dn">-0.2%</span>
+        
+      </td>
+      <td style="text-align:right;padding:.45rem .5rem">
+        <span class="badge yfinance">yfinance</span>
+      </td>
+    </tr>
+    
+    <tr style="border-bottom:1px solid var(--border)">
+      <td style="padding:.45rem .5rem">JKM LNG</td>
+      <td style="text-align:right;padding:.45rem .5rem;font-variant-numeric:tabular-nums">
+        <span class="na">—</span>
+      </td>
+      <td style="text-align:right;padding:.45rem .5rem;font-variant-numeric:tabular-nums">
+        <span class="na">—</span>
+      </td>
+      <td style="text-align:right;padding:.45rem .5rem">
+        <span class="badge unavailable">unavailable</span>
+      </td>
+    </tr>
+    
+    <tr style="border-bottom:1px solid var(--border)">
+      <td style="padding:.45rem .5rem">Newcastle Coal</td>
+      <td style="text-align:right;padding:.45rem .5rem;font-variant-numeric:tabular-nums">
+        <span class="na">—</span>
+      </td>
+      <td style="text-align:right;padding:.45rem .5rem;font-variant-numeric:tabular-nums">
+        <span class="na">—</span>
+      </td>
+      <td style="text-align:right;padding:.45rem .5rem">
+        <span class="badge unavailable">unavailable</span>
+      </td>
+    </tr>
+    
+    <tr style="border-bottom:1px solid var(--border)">
+      <td style="padding:.45rem .5rem">Iron Ore (62% Fe)</td>
+      <td style="text-align:right;padding:.45rem .5rem;font-variant-numeric:tabular-nums">
+        <span class="na">—</span>
+      </td>
+      <td style="text-align:right;padding:.45rem .5rem;font-variant-numeric:tabular-nums">
+        <span class="na">—</span>
+      </td>
+      <td style="text-align:right;padding:.45rem .5rem">
+        <span class="badge unavailable">unavailable</span>
+      </td>
+    </tr>
+    
+    <tr style="border-bottom:1px solid var(--border)">
+      <td style="padding:.45rem .5rem">Nickel (LME)</td>
+      <td style="text-align:right;padding:.45rem .5rem;font-variant-numeric:tabular-nums">
+        <span class="na">—</span>
+      </td>
+      <td style="text-align:right;padding:.45rem .5rem;font-variant-numeric:tabular-nums">
+        <span class="na">—</span>
+      </td>
+      <td style="text-align:right;padding:.45rem .5rem">
+        <span class="badge unavailable">unavailable</span>
+      </td>
+    </tr>
+    
+    <tr style="border-bottom:1px solid var(--border)">
+      <td style="padding:.45rem .5rem">Palm Oil (BMD)</td>
+      <td style="text-align:right;padding:.45rem .5rem;font-variant-numeric:tabular-nums">
+        <span class="na">—</span>
+      </td>
+      <td style="text-align:right;padding:.45rem .5rem;font-variant-numeric:tabular-nums">
+        <span class="na">—</span>
+      </td>
+      <td style="text-align:right;padding:.45rem .5rem">
+        <span class="badge unavailable">unavailable</span>
+      </td>
+    </tr>
+    
+    </tbody>
+  </table>
+</div>
+
+<!-- Company News -->
+
+
+
+
+
+
+
+<h2>Metals &amp; Mining</h2>
+
+<div class="card">
+  <details>
+    <summary>
+      BHP
+      <span class="tag growth_strategy">growth_strategy</span>
+    </summary>
+    <div style="margin-top:.75rem">
+    
+    <div class="headline">
+      <a href="https://news.google.com/rss/articles/CBMi3AFBVV95cUxQcVc0UmdBT1lYdHBrZWZ6c1dLQm9QOEZnVjN4WDNnWmFYakZUUlpncGlFajVJMDBEdVI4Z2JkWE5tcmYwVFZ5cnQ0eEpVYnpzam4zeU9HRHJyOWNCVmFOcmN0TWtvUEVfVTVfcUYwckcta0pOWkVSYzNka1hRRy1iREdYTllzTUVqV2g2bmU0VW1lVExtY0lEd0duVzBhVk1WdTNNTW5mR29pU0ZPNTgxQXlONFNmWERIYXFEZGg3a3EtMXhpYlhqMHVjYVpNMEJvOHlQblV5RDVRa1FS?oc=5" target="_blank" rel="noopener">BHP&#39;s Copper Business Is Becoming Bigger Than Iron Ore, And That Could Change The Investment Story - Benzinga</a>
+      <span class="tag growth_strategy">growth_strategy</span>
+      <div class="src">Google News · Jun 05 17:34 UTC</div>
+    </div>
+    
+    </div>
+  </details>
+</div>
+
+<div class="card">
+  <details>
+    <summary>
+      Rio Tinto
+      <span class="tag ma">ma</span><span class="tag esg">esg</span><span class="tag geopolitical">geopolitical</span>
+    </summary>
+    <div style="margin-top:.75rem">
+    
+    <div class="headline">
+      <a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxOY2c1UGlBT213N281bmhkZ1J5SGZ3LU5oQ0VJU0hLd0VTNHVhQXhacFBzN3ItVC1sZWhMdUFxb1ktelVRVWprQWJ6WnFBSl9WV1hSdmJpanpNS1JXZUhKRHp4bld1bkR5RENoUkZDZW5XbmNuQ1RJSU1Ma3NQdV9ZR1lqdHZLSzZobzZwNWVtNTJha0NHM0FBejd6M0hzdGc?oc=5" target="_blank" rel="noopener">Rio Tinto Advances Automation And Low Carbon Aluminium In Growth Push - Yahoo Finance</a>
+      <span class="tag esg">esg</span>
+      <div class="src">Google News · Jun 06 06:11 UTC</div>
+    </div>
+    
+    <div class="headline">
+      <a href="https://news.google.com/rss/articles/CBMiswFBVV95cUxNbHozWDRsQlZDdHVnOEduZVFfMHY1eTctZHQ3cVVTbFpuT0F1eWpHME9SRC1fbVcycjB5Z3drWnBEN1czSjlhN2RJUERFXzlMUVNEN2ZGeXNGS19OdGlYYlAzXzZVS1lzOVJsNVdRaDJGRTJGXzNLUHFTZEtzZlNHaUQ1SDBQYTN4X1dSWTh4U3dGWmVGM3E2UndZYmpWN05EeUJhZDM1cnBVLWFZTDBrRl9FYw?oc=5" target="_blank" rel="noopener">Rio Tinto, IBD Stock Of The Day, Breaks Out As Iran Deal Hopes Lift Metals Prices - Investor&#39;s Business Daily</a>
+      <span class="tag ma">ma</span><span class="tag geopolitical">geopolitical</span>
+      <div class="src">Google News · Jun 05 17:13 UTC</div>
+    </div>
+    
+    </div>
+  </details>
+</div>
+
+
+
+
+
+<h2>Power &amp; Utilities</h2>
+
+<div class="card">
+  <details>
+    <summary>
+      Tenaga Nasional Berhad
+      <span class="tag outage">outage</span><span class="tag geopolitical">geopolitical</span>
+    </summary>
+    <div style="margin-top:.75rem">
+    
+    <div class="headline">
+      <a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTE1xOG1kWTUzb1ZLV0lpczBMYXZsTHYtcjdMSTFEcmpZaExDZkZRTGpDc1J6MVl4Q1h2RGlaazlaUWVRMy0ta0RVSTBibldnNGdlUm90cjJScUg1enc?oc=5" target="_blank" rel="noopener">TNB’s green gamble - Aliran</a>
+      <span class="tag geopolitical">geopolitical</span>
+      <div class="src">Google News · Jun 06 22:49 UTC</div>
+    </div>
+    
+    <div class="headline">
+      <a href="https://news.google.com/rss/articles/CBMidkFVX3lxTE1xQXliY1Z0UFZwMGJ0cDFnWHdNMjVQdk1oVW1uNXh3aDV6OTRLdjNIVTUyZk5BR1pxWGgtZWZaZy11RjlmLTdPOHczMm03dDBtVWVFY3NRTV9RWUVXWkhUZkxOUE9tN29maFlEdVc3R01oZHp4a3c?oc=5" target="_blank" rel="noopener">TNB POWER OUTAGE | Saturday, 8 June 2024 (dc60D4GBMN) - Fathom Journal</a>
+      <span class="tag outage">outage</span>
+      <div class="src">Google News · Jun 06 01:06 UTC</div>
+    </div>
+    
+    </div>
+  </details>
+</div>
+
+
+
+
+
+<h2>Trading</h2>
+
+<div class="card">
+  <details>
+    <summary>
+      Danantara
+      <span class="tag regulatory">regulatory</span>
+    </summary>
+    <div style="margin-top:.75rem">
+    
+    <div class="headline">
+      <a href="https://news.google.com/rss/articles/CBMifEFVX3lxTFBITnpYQzFVRE9McC1hWHp4Rl9PdHNMUmFzYkZjY2hsS3Y0ajNOTHRfMnoxZ1hXcTZvc09RVnRTSFpicDNFbHRqNXZBb0U0NHVKR2p0TkNpOEJzVnhiNXJZNk1sbkdwcGlJSU0waW9RZTNYQXdrN2hqanBJbDE?oc=5" target="_blank" rel="noopener">Indonesia centralizes strategic commodity exports under Danantara Sumberdaya Indonesia control from June 1 - Crypto Briefing</a>
+      <span class="tag regulatory">regulatory</span>
+      <div class="src">Google News · Jun 06 19:00 UTC</div>
+    </div>
+    
+    </div>
+  </details>
+</div>
+
+
+
+
+<!-- Commodity News -->
+
+
+<h2>Crude Oil</h2>
+<div class="card">
+  
+  <div class="headline">
+    <a href="https://news.google.com/rss/articles/CBMinAFBVV95cUxPRU5OM2V6OGlTMnNlODVsRVBRRnp5d0hRcG15elkwNV9tNnZ4NWVqbXIzNmE1ODdxRHFrck9SMnNMYkVKYjQ5TU5pVEZpZ2VzQ2pRUlF2eEhsdjJwTXhLOXgxM3RRNmxVZlFrTDU2OG5Lb3hDZEVEMlFCVUkwcEJ4WThBV2lINUtpdzZHU2JHR1p2TXlkRDd2ZkJxZ2U?oc=5" target="_blank" rel="noopener">Brent Crude Heads for Record Monthly Gain With WTI Not Far Behind - EnergyNow.com</a>
+    <span class="tag price_shock">price_shock</span>
+    <div class="src">Google News · Jun 06 07:06 UTC</div>
+  </div>
+  
+  <div class="headline">
+    <a href="https://news.google.com/rss/articles/CBMisAFBVV95cUxPRVg2X190YVA4cHR2S2JPek01bm1OV0NabE1jQUphdTFOZHk4R1FFUjlJS0dBdHgwb3B6b3FYN2trUFFRRUdfbUJPXzhORzl3dG8yZTNFOXc5cDFsY1B2V0FVbHFxNGRlSEc4NU1ONlhZT2JVS2hSalg2TUdOa3VfM3QzbDRRVHVwdWZLRWxadUpiOTFROERzNzFaZklCNGk5VHVtaWU3ZldTaFRxOGlpSQ?oc=5" target="_blank" rel="noopener">Goldman Sachs Raises 2026 Brent Crude Average Price Forecast by $8 to $85 a Barrel, WTI to $79 a Barrel - EnergyNow.com</a>
+    <span class="tag earnings">earnings</span>
+    <div class="src">Google News · Jun 05 19:24 UTC</div>
+  </div>
+  
+  <div class="headline">
+    <a href="https://news.google.com/rss/articles/CBMi1AFBVV95cUxQSTlnRkY4d0otTThzekw4OXVGSEN1Q1YxZ1Nod2dtbDJQcERSZ1paTmp6ME5zcjRRMzJ2YmYxYWJCMkhacUR2d0M5cjJ2b1U2VnZ0eGEzRjBYcUtGcWRJNkV5ZTk4bFk0SDBIVXl0NjVkRElzYmdsel9qZC1WQVduS18xNVNveHpWQ0prMk14clRtY3dBUmRha1dRRm00VkN2UWVvMEJ3SnVsck9zVjh2RE11ZjRHdnd1S2lYcU53a1IzWkJDbFd0eEF3VU16NnNEMEVOTg?oc=5" target="_blank" rel="noopener">Natural Gas, WTI Oil, Brent Oil Forecasts – Oil Retreats As Dollar Rallies After NFP Report - FXEmpire</a>
+    <span class="tag earnings">earnings</span>
+    <div class="src">Google News · Jun 05 18:40 UTC</div>
+  </div>
+  
+  <div class="headline">
+    <a href="https://news.google.com/rss/articles/CBMijwFBVV95cUxNcHY4M1lvLWZtV0s0clVXTExGQ1NRZXJQRUY5aU9IRFU1Vy1ZUlZCdFQ4TTJETkY4N2xOazBXZTQxM1VBN3RpRjZhRHl1amJJdkdNdkZaSzhGMmRQb3RYeGJrY1RWUXQ4aGRaVzhhZ09SUF9PazdXUEZSNVFQZ1Y0YTJjeV94Tnp6MTNGNERhWQ?oc=5" target="_blank" rel="noopener">Crude oil prices rise; brent at $67.73, WTI at $63.68 per Barrel - News On AIR</a>
+    
+    <div class="src">Google News · Jun 06 23:55 UTC</div>
+  </div>
+  
+</div>
+
+
+
+
+
+<h2>Refined</h2>
+<div class="card">
+  
+  <div class="headline">
+    <a href="https://news.google.com/rss/articles/CBMioAFBVV95cUxQRUZBaVFZN3ZUUkdMZmV5YTNWMHpaRURNdUJHMmV3VXhjdFNOSlhHT0dzMU1welM1Z21zZmZaQ05KR21Ea01Ib1NhdF9hZ2hYOXFQOHdRUkJpUk9nQTRYb25xZm03bk5HN1B0UTM4UzFjWU02TENDaDZVeGxJWmdVTlFmb1A4MmtkeWtCa3IyS0JUYkk4c0UyZURHTTMwYWlQ?oc=5" target="_blank" rel="noopener">Singapore oil stocks fall as fuel oil, light ends decline - Quantum Commodity Intelligence</a>
+    
+    <div class="src">Google News · Jun 06 12:39 UTC</div>
+  </div>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<footer style="margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);color:var(--muted);font-size:.8rem">
+  Generated 2026-06-07 04:00 UTC · Rule-based extractive digest · Prices from yfinance (live) and web (indicative) · No LLM used
+</footer>
+</div>
+</body>
+</html>
