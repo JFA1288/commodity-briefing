@@ -1,413 +1,745 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>SEA Commodity Briefing</title>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Commodity Trading — Sector Intelligence</title>
 <style>
-/* ── Base ── */
-:root {
-  --bg:       #f4f5f7;
-  --surface:  #ffffff;
-  --surface2: #f8f9fb;
-  --border:   #e3e6ec;
-  --text:     #1a1d23;
-  --muted:    #6b7280;
-  --accent:   #1a56db;
-  --accent2:  #e8f0fe;
-  --up:       #0f7b4f;
-  --up-bg:    #ecfdf5;
-  --dn:       #c0392b;
-  --dn-bg:    #fef2f2;
-  --warn:     #d97706;
-  --warn-bg:  #fffbeb;
-  --radius:   10px;
-  --shadow:   0 1px 4px rgba(0,0,0,.06), 0 0 0 1px var(--border);
+/* ── Reset & variables ────────────────────────────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --accent:#86BC25;--accent-dark:#a0d933;
+  --bg:#0f0f0f;--surface:#1c1c1c;--surface2:#252525;--surface3:#2e2e2e;
+  --border:#333;--border2:#444;
+  --text:#e8e8e8;--text2:#aaa;--text3:#777;
+  --up:#4caf50;--dn:#ef5350;--up-bg:rgba(76,175,80,.15);--dn-bg:rgba(239,83,80,.15);
+  --neutral:#f5a623;--neutral-bg:rgba(245,166,35,.12);
+  --font:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+  --mono:"Fira Code","Cascadia Code","SF Mono",monospace;
+  --sidebar-w:240px;--radius:8px;
 }
-@media(prefers-color-scheme:dark){
-  :root{
-    --bg:#0d0f14; --surface:#151820; --surface2:#1c1f28;
-    --border:#252a35; --text:#dde1ea; --muted:#7c8499;
-    --accent:#4d8ef9; --accent2:#1a2444;
-    --up:#34d399; --up-bg:#0a2318; --dn:#f87171; --dn-bg:#2a0d0d;
-    --warn:#fbbf24; --warn-bg:#271d07;
-  }
+[data-theme="light"]{
+  --bg:#f5f5f5;--surface:#fff;--surface2:#f0f0f0;--surface3:#e8e8e8;
+  --border:#ddd;--border2:#ccc;
+  --text:#111;--text2:#555;--text3:#888;
+  --accent:#5a8a00;--accent-dark:#4a7500;
+  --up:#2e7d32;--dn:#c62828;--up-bg:rgba(46,125,50,.1);--dn-bg:rgba(198,40,40,.1);
 }
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,-apple-system,sans-serif;font-size:15px;line-height:1.6}
-a{color:var(--accent);text-decoration:none}
+html{font-size:16px;scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.55;display:flex;min-height:100vh}
+a{color:var(--accent-dark);text-decoration:none}
 a:hover{text-decoration:underline}
+h2{font-size:1.15rem;font-weight:600;margin-bottom:1rem;color:var(--text)}
+h3{font-size:1rem;font-weight:600;color:var(--text)}
+h4{font-size:.9rem;font-weight:600;color:var(--text2)}
 
-/* ── Layout ── */
-.shell{display:grid;grid-template-columns:220px 1fr;min-height:100vh}
-@media(max-width:760px){.shell{grid-template-columns:1fr}}
+/* ── Sidebar ─────────────────────────────────────────────────────────────── */
+#sidebar{
+  width:var(--sidebar-w);min-height:100vh;background:var(--surface);
+  border-right:1px solid var(--border);position:sticky;top:0;height:100vh;
+  overflow-y:auto;display:flex;flex-direction:column;z-index:200;flex-shrink:0;
+  scrollbar-width:thin;scrollbar-color:var(--border) transparent;
+}
+.sidebar-header{padding:1rem 1.2rem;border-bottom:1px solid var(--border)}
+.sidebar-title{font-size:.85rem;font-weight:700;color:var(--accent);letter-spacing:.04em;text-transform:uppercase;line-height:1.3}
+.sidebar-sub{font-size:.72rem;color:var(--text3);margin-top:.25rem}
+.sidebar-nav{padding:.5rem 0;flex:1}
+.nav-section{font-size:.65rem;font-weight:700;color:var(--text3);letter-spacing:.08em;text-transform:uppercase;padding:.75rem 1.2rem .3rem}
+.nav-link{display:block;padding:.4rem 1.2rem;font-size:.8rem;color:var(--text2);border-left:2px solid transparent;transition:all .15s}
+.nav-link:hover,.nav-link.active{color:var(--accent-dark);border-left-color:var(--accent);background:rgba(134,188,37,.07);text-decoration:none}
+.sidebar-footer{padding:.75rem 1.2rem;border-top:1px solid var(--border);font-size:.7rem;color:var(--text3)}
+.theme-btn{background:none;border:1px solid var(--border2);color:var(--text2);padding:.25rem .6rem;border-radius:4px;cursor:pointer;font-size:.75rem;margin-bottom:.5rem;width:100%}
+.theme-btn:hover{border-color:var(--accent);color:var(--accent)}
 
-/* ── Sidebar ── */
-.sidebar{background:var(--surface);border-right:1px solid var(--border);padding:1.5rem 1.1rem;position:sticky;top:0;height:100vh;overflow-y:auto}
-@media(max-width:760px){.sidebar{display:none}}
-.logo{font-size:1rem;font-weight:800;letter-spacing:-.03em;color:var(--text);margin-bottom:1.75rem}
-.logo span{color:var(--accent)}
-nav ul{list-style:none}
-nav ul li a{display:block;padding:.38rem .55rem;border-radius:6px;font-size:.85rem;color:var(--muted);font-weight:500;transition:background .12s,color .12s}
-nav ul li a:hover,nav ul li a.active{background:var(--accent2);color:var(--accent);text-decoration:none}
-nav ul li .nav-section{font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700;color:var(--muted);margin:1.1rem 0 .4rem .55rem}
+/* ── Main ────────────────────────────────────────────────────────────────── */
+#main{flex:1;min-width:0;padding:1.5rem 2rem;max-width:1100px}
+.section{margin-bottom:2.5rem;scroll-margin-top:1rem}
+.section-header{display:flex;align-items:center;gap:.75rem;margin-bottom:1.25rem;padding-bottom:.5rem;border-bottom:1px solid var(--border)}
+.section-icon{font-size:1rem;color:var(--accent)}
+.section-title{font-size:1.1rem;font-weight:600;color:var(--text)}
+.section-meta{font-size:.72rem;color:var(--text3);margin-left:auto}
 
-/* ── Main ── */
-.main{padding:2rem 2.25rem;max-width:1100px}
-@media(max-width:760px){.main{padding:1.25rem 1rem}}
+/* ── Cards ───────────────────────────────────────────────────────────────── */
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.1rem;margin-bottom:.75rem}
+.card-sm{padding:.75rem 1rem}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:.75rem}
 
-/* ── Header ── */
-.page-header{margin-bottom:2rem;padding-bottom:1.25rem;border-bottom:1px solid var(--border)}
-.page-header h1{font-size:1.55rem;font-weight:800;letter-spacing:-.04em}
-.page-header .meta{font-size:.82rem;color:var(--muted);margin-top:.4rem;display:flex;gap:1rem;flex-wrap:wrap}
-.page-header .meta span{display:flex;align-items:center;gap:.3rem}
-#last-updated{font-weight:600;color:var(--text)}
+/* ── Tags ────────────────────────────────────────────────────────────────── */
+.tag{display:inline-block;font-size:.67rem;font-weight:600;padding:.15rem .45rem;border-radius:3px;text-transform:uppercase;letter-spacing:.04em;margin-right:.25rem;margin-bottom:.2rem}
+.tag.sector-energy{background:rgba(255,152,0,.18);color:#ffb74d}
+.tag.sector-metals{background:rgba(158,158,158,.18);color:#bdbdbd}
+.tag.sector-power{background:rgba(33,150,243,.18);color:#64b5f6}
+.tag.sector-trading{background:rgba(134,188,37,.18);color:var(--accent)}
+.tag.flag{background:var(--surface2);color:var(--text2)}
+.tag.driver{background:rgba(134,188,37,.12);color:var(--accent-dark);border:1px solid rgba(134,188,37,.25)}
+.tag.up{background:var(--up-bg);color:var(--up)}
+.tag.dn{background:var(--dn-bg);color:var(--dn)}
+.tag.quality-market{background:rgba(76,175,80,.1);color:#66bb6a;border:1px solid rgba(76,175,80,.2)}
+.tag.quality-indicative{background:rgba(245,166,35,.1);color:#ffb74d;border:1px solid rgba(245,166,35,.2)}
+.tag.quality-web{background:rgba(245,166,35,.1);color:#ffb74d}
+.tag.upcoming{background:rgba(134,188,37,.2);color:var(--accent);border:1px solid var(--accent)}
 
-/* ── Sections ── */
-section{margin-bottom:2.5rem}
-.section-title{font-size:1rem;font-weight:700;letter-spacing:-.02em;margin-bottom:1rem;display:flex;align-items:center;gap:.5rem;border-left:3px solid var(--accent);padding-left:.65rem}
-.section-title .count{font-size:.75rem;font-weight:600;background:var(--accent2);color:var(--accent);padding:.1rem .45rem;border-radius:999px}
+/* ── Macro strip ─────────────────────────────────────────────────────────── */
+.macro-strip{display:flex;flex-wrap:wrap;gap:.5rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:.75rem 1rem;margin-bottom:1rem}
+.macro-item{display:flex;flex-direction:column;align-items:flex-start;min-width:90px}
+.macro-name{font-size:.67rem;color:var(--text3);text-transform:uppercase;letter-spacing:.05em}
+.macro-val{font-size:.95rem;font-weight:600;color:var(--text)}
+.macro-chg{font-size:.72rem;font-weight:600}
+.macro-chg.up{color:var(--up)}
+.macro-chg.dn{color:var(--dn)}
+.macro-chg.flat{color:var(--text3)}
 
-/* ── Price grid ── */
-.price-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:.75rem}
-.price-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.1rem;box-shadow:var(--shadow);transition:box-shadow .15s}
-.price-card:hover{box-shadow:0 4px 16px rgba(0,0,0,.1),0 0 0 1px var(--border)}
-.price-card .label{font-size:.78rem;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.03em;margin-bottom:.35rem;display:flex;justify-content:space-between;align-items:center}
-.price-card .value{font-size:1.35rem;font-weight:700;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
-.price-card .unit{font-size:.75rem;color:var(--muted);font-weight:400;margin-left:.2rem}
-.price-card .change{font-size:.85rem;font-weight:600;margin-top:.25rem;font-variant-numeric:tabular-nums}
-.change.up{color:var(--up)} .change.dn{color:var(--dn)} .change.na{color:var(--muted)}
-.price-card .sparkline-wrap{margin-top:.65rem;height:40px}
-.price-card .src-badge{font-size:.65rem;font-weight:700;padding:.1rem .35rem;border-radius:3px;text-transform:uppercase;letter-spacing:.04em}
-.src-badge.yfinance{background:var(--up-bg);color:var(--up)}
-.src-badge.web{background:var(--warn-bg);color:var(--warn)}
-.src-badge.unavailable{background:var(--surface2);color:var(--muted)}
+/* ── Price grid ──────────────────────────────────────────────────────────── */
+.price-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:.5rem}
+.price-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:.7rem .9rem}
+.price-name{font-size:.72rem;color:var(--text2);margin-bottom:.2rem}
+.price-val{font-size:1.1rem;font-weight:700;color:var(--text)}
+.price-unit{font-size:.65rem;color:var(--text3);margin-left:.2rem}
+.price-chg{font-size:.78rem;font-weight:600;margin-top:.15rem}
+.price-chg.up{color:var(--up)}.price-chg.dn{color:var(--dn)}.price-chg.flat{color:var(--text3)}
+.price-source{font-size:.62rem;color:var(--text3);margin-top:.2rem}
 
-/* ── Watch panel ── */
-.watch-panel{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem 1.3rem;box-shadow:var(--shadow)}
-.watch-item{display:flex;gap:.75rem;padding:.55rem 0;border-bottom:1px solid var(--border);align-items:flex-start;font-size:.9rem}
-.watch-item:last-child{border-bottom:none}
-.watch-cat{flex-shrink:0;width:90px;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);padding-top:.15rem}
+/* ── Heatmap ─────────────────────────────────────────────────────────────── */
+.heatmap-wrap{overflow-x:auto;margin-top:.75rem}
+.heatmap-table{border-collapse:collapse;width:100%;font-size:.78rem}
+.heatmap-table th{text-align:left;padding:.4rem .7rem;color:var(--text3);font-weight:600;border-bottom:1px solid var(--border);white-space:nowrap}
+.heatmap-table td{padding:.35rem .7rem;white-space:nowrap;text-align:center}
+.heatmap-table td.name{text-align:left;color:var(--text2);font-weight:500}
+.hm-strong-up{background:rgba(76,175,80,.35);color:#81c784;font-weight:600}
+.hm-up{background:rgba(76,175,80,.2);color:#a5d6a7}
+.hm-flat{color:var(--text3)}
+.hm-dn{background:rgba(239,83,80,.2);color:#ef9a9a}
+.hm-strong-dn{background:rgba(239,83,80,.35);color:#e57373;font-weight:600}
+.hm-na{color:var(--text3);font-size:.7rem}
 
-/* ── Headlines ── */
-.headline-list{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
-.headline-item{padding:.8rem 1.2rem;border-bottom:1px solid var(--border);transition:background .1s}
+/* ── Correlation ─────────────────────────────────────────────────────────── */
+.corr-wrap{overflow-x:auto;margin-top:.75rem}
+.corr-table{border-collapse:collapse;font-size:.72rem}
+.corr-table th,.corr-table td{padding:.3rem .5rem;border:1px solid var(--border);text-align:center;white-space:nowrap;min-width:58px}
+.corr-table th{color:var(--text3);font-weight:600;background:var(--surface2)}
+.corr-table td.label{text-align:left;color:var(--text2);font-weight:500;background:var(--surface2)}
+.corr-hi{background:rgba(76,175,80,.3);color:#81c784}
+.corr-lo{background:rgba(239,83,80,.3);color:#ef9a9a}
+.corr-self{background:var(--surface3);color:var(--text3)}
+
+/* ── Outlook ─────────────────────────────────────────────────────────────── */
+.outlook-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:.75rem}
+.outlook-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:.9rem 1rem}
+.outlook-commodity{font-size:.78rem;font-weight:700;color:var(--text);margin-bottom:.3rem}
+.outlook-direction{font-size:.7rem;font-weight:700;text-transform:uppercase;padding:.1rem .4rem;border-radius:3px;display:inline-block;margin-bottom:.4rem}
+.outlook-direction.bullish{background:var(--up-bg);color:var(--up)}
+.outlook-direction.bearish{background:var(--dn-bg);color:var(--dn)}
+.outlook-direction.neutral{background:var(--neutral-bg);color:var(--neutral)}
+.outlook-narrative{font-size:.8rem;color:var(--text2);margin-bottom:.5rem;line-height:1.5}
+.outlook-source{font-size:.7rem;color:var(--text3)}
+
+/* ── Fundamentals ────────────────────────────────────────────────────────── */
+.fund-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:.9rem 1rem;margin-bottom:.6rem;display:flex;align-items:flex-start;gap:1rem}
+.fund-commodity{font-size:.85rem;font-weight:700;color:var(--text);min-width:110px;padding-top:.1rem}
+.fund-body{flex:1}
+.fund-balance{font-size:.82rem;color:var(--text2);margin-bottom:.4rem;line-height:1.5}
+.fund-signals{display:flex;gap:.5rem;flex-wrap:wrap}
+.fund-signal{font-size:.67rem;padding:.1rem .4rem;border-radius:3px}
+.fund-signal.supply{background:rgba(239,83,80,.12);color:#ef9a9a}
+.fund-signal.demand{background:rgba(33,150,243,.12);color:#64b5f6}
+.fund-arrow.up{color:var(--up)}.fund-arrow.dn{color:var(--dn)}.fund-arrow.flat{color:var(--text3)}
+
+/* ── Themes ──────────────────────────────────────────────────────────────── */
+.theme-card{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:var(--radius);padding:.9rem 1rem;margin-bottom:.75rem}
+.theme-name{font-size:.9rem;font-weight:700;color:var(--text);margin-bottom:.4rem}
+.theme-narrative{font-size:.82rem;color:var(--text2);line-height:1.55;margin-bottom:.6rem}
+.theme-meta{font-size:.72rem;color:var(--text3)}
+
+/* ── Risks ───────────────────────────────────────────────────────────────── */
+.risk-list{display:flex;flex-direction:column;gap:.4rem}
+.risk-item{display:flex;align-items:flex-start;gap:.7rem;padding:.6rem .8rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);font-size:.82rem}
+.risk-dir{font-size:.65rem;font-weight:700;text-transform:uppercase;padding:.15rem .4rem;border-radius:3px;white-space:nowrap;flex-shrink:0;margin-top:.05rem}
+.risk-dir.upside{background:var(--up-bg);color:var(--up)}
+.risk-dir.downside{background:var(--dn-bg);color:var(--dn)}
+.risk-text{color:var(--text2);line-height:1.45}
+
+/* ── Events ──────────────────────────────────────────────────────────────── */
+.events-list{display:flex;flex-direction:column;gap:.4rem}
+.event-item{display:flex;align-items:flex-start;gap:1rem;padding:.6rem .8rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius)}
+.event-date{font-size:.72rem;font-weight:600;color:var(--text3);min-width:70px;white-space:nowrap;padding-top:.1rem;font-family:var(--mono)}
+.event-item.upcoming{border-color:rgba(134,188,37,.4);background:rgba(134,188,37,.04)}
+.event-item.upcoming .event-date{color:var(--accent)}
+.event-title{font-size:.83rem;color:var(--text2);line-height:1.4}
+.event-related{font-size:.7rem;color:var(--text3);margin-top:.2rem}
+
+/* ── Headlines ───────────────────────────────────────────────────────────── */
+.headline-item{padding:.6rem 0;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:.75rem}
 .headline-item:last-child{border-bottom:none}
-.headline-item:hover{background:var(--surface2)}
-.headline-item a{font-size:.92rem;font-weight:500;color:var(--text);display:block;line-height:1.45}
-.headline-item a:hover{color:var(--accent)}
-.headline-meta{margin-top:.25rem;font-size:.77rem;color:var(--muted);display:flex;gap:.55rem;flex-wrap:wrap;align-items:center}
-.flag-tag{display:inline-block;font-size:.67rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:.12rem .4rem;border-radius:3px;background:var(--accent2);color:var(--accent)}
-.flag-tag.earnings{background:var(--up-bg);color:var(--up)}
-.flag-tag.outage,.flag-tag.price_shock{background:var(--dn-bg);color:var(--dn)}
-.flag-tag.ma{background:var(--warn-bg);color:var(--warn)}
-.flag-tag.regulatory,.flag-tag.geopolitical{background:#f3e8ff;color:#7c3aed}
-@media(prefers-color-scheme:dark){
-  .flag-tag.regulatory,.flag-tag.geopolitical{background:#2d1a4e;color:#c084fc}
+.headline-text{flex:1;font-size:.84rem;line-height:1.45}
+.headline-text a{color:var(--text);font-weight:500}
+.headline-text a:hover{color:var(--accent-dark)}
+.headline-meta{font-size:.7rem;color:var(--text3);margin-top:.2rem;display:flex;gap:.5rem;flex-wrap:wrap}
+.headline-score{font-size:.65rem;font-family:var(--mono);color:var(--text3);padding:.1rem .3rem;background:var(--surface2);border-radius:3px;white-space:nowrap}
+
+/* ── Company panels ──────────────────────────────────────────────────────── */
+.company-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:.75rem}
+.company-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.1rem}
+.company-name{font-size:.9rem;font-weight:700;color:var(--text);margin-bottom:.15rem}
+.company-meta{font-size:.68rem;color:var(--text3);margin-bottom:.3rem}
+.company-ticker{font-family:var(--mono);font-size:.68rem;color:var(--text3)}
+.company-summary{font-size:.78rem;color:var(--text2);font-style:italic;margin-bottom:.6rem;line-height:1.5;border-left:2px solid var(--accent);padding-left:.6rem}
+.company-no-news{font-size:.78rem;color:var(--text3);font-style:italic;padding:.3rem 0}
+.company-item{padding:.4rem 0;border-bottom:1px solid var(--border);font-size:.78rem;line-height:1.45}
+.company-item:last-child{border-bottom:none}
+.company-item a{color:var(--text2)}
+.company-item a:hover{color:var(--accent-dark)}
+.company-item-meta{font-size:.68rem;color:var(--text3);margin-top:.15rem;display:flex;gap:.4rem;flex-wrap:wrap}
+
+/* ── Regulatory ──────────────────────────────────────────────────────────── */
+.reg-jurisdiction{font-size:.8rem;font-weight:700;color:var(--accent);margin:.75rem 0 .3rem}
+.reg-item{padding:.55rem .75rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:.4rem;font-size:.8rem}
+.reg-title{color:var(--text);margin-bottom:.3rem;line-height:1.4}
+.reg-meta{font-size:.7rem;color:var(--text3);display:flex;gap:.5rem;flex-wrap:wrap}
+
+/* ── Exec summary ────────────────────────────────────────────────────────── */
+.exec-bullets{list-style:none;display:flex;flex-direction:column;gap:.5rem}
+.exec-bullets li{display:flex;align-items:flex-start;gap:.7rem;font-size:.88rem;color:var(--text2);line-height:1.5}
+.exec-bullets li::before{content:"▸";color:var(--accent);flex-shrink:0;margin-top:.15rem;font-size:.8rem}
+
+/* ── Geopolitical ────────────────────────────────────────────────────────── */
+.geo-item{padding:.5rem .75rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:.4rem;display:flex;align-items:flex-start;gap:.75rem}
+.geo-text{flex:1;font-size:.8rem;color:var(--text2);line-height:1.4}
+.geo-text a{color:var(--text2)}
+.geo-meta{font-size:.68rem;color:var(--text3);margin-top:.15rem}
+.geo-age{font-size:.68rem;color:var(--text3);white-space:nowrap;padding-top:.1rem}
+
+/* ── Archive ─────────────────────────────────────────────────────────────── */
+.archive-list{display:flex;flex-wrap:wrap;gap:.4rem}
+.archive-link{font-size:.75rem;padding:.3rem .65rem;background:var(--surface);border:1px solid var(--border);border-radius:4px;color:var(--text2)}
+.archive-link:hover{border-color:var(--accent);color:var(--accent-dark);text-decoration:none}
+
+/* ── Timestamp bar ───────────────────────────────────────────────────────── */
+.generated-bar{font-size:.72rem;color:var(--text3);padding:.4rem 0;margin-bottom:1.5rem;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.75rem;flex-wrap:wrap}
+.generated-dot{width:7px;height:7px;border-radius:50%;background:var(--accent);display:inline-block;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+
+/* ── Buttons ─────────────────────────────────────────────────────────────── */
+.print-btn{background:none;border:1px solid var(--border2);color:var(--text2);padding:.3rem .7rem;border-radius:4px;cursor:pointer;font-size:.75rem;margin-left:auto}
+.print-btn:hover{border-color:var(--accent);color:var(--accent)}
+.collapse-btn{background:none;border:none;color:var(--text3);cursor:pointer;font-size:.75rem;padding:.15rem .3rem;border-radius:3px;float:right}
+.collapse-btn:hover{color:var(--text);background:var(--surface2)}
+.collapsible-body.hidden{display:none}
+
+/* ── Mobile sidebar toggle ───────────────────────────────────────────────── */
+#sidebar-toggle{display:none;position:fixed;bottom:1.5rem;right:1.5rem;width:48px;height:48px;background:var(--accent);color:#000;border:none;border-radius:50%;font-size:1.3rem;cursor:pointer;z-index:300;box-shadow:0 3px 12px rgba(0,0,0,.4);align-items:center;justify-content:center}
+#sidebar-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:190}
+
+/* ── Data footer ─────────────────────────────────────────────────────────── */
+.data-footer{margin-top:3rem;padding:1rem 1.2rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);font-size:.72rem;color:var(--text3);line-height:1.6}
+
+/* ── Responsive ──────────────────────────────────────────────────────────── */
+@media(max-width:768px){
+  html{font-size:17px}
+  #sidebar{position:fixed;left:0;top:0;transform:translateX(-100%);transition:transform .25s ease;z-index:200}
+  #sidebar.open{transform:translateX(0)}
+  #sidebar-toggle{display:flex}
+  #sidebar-overlay.show{display:block}
+  #main{padding:1rem;width:100%}
+  .price-grid{grid-template-columns:repeat(auto-fill,minmax(130px,1fr))}
+  .company-grid,.card-grid,.outlook-grid{grid-template-columns:1fr}
 }
 
-/* ── Company panels ── */
-.company-group{margin-bottom:1.75rem}
-.company-panels{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:.75rem}
-.company-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow)}
-.company-card summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:.5rem;padding:.9rem 1.1rem;font-weight:600;font-size:.9rem;user-select:none}
-.company-card summary::-webkit-details-marker{display:none}
-.company-card summary::before{content:"▶";font-size:.6rem;transition:transform .15s;color:var(--muted);display:inline-block;flex-shrink:0}
-.company-card[open] summary::before{transform:rotate(90deg)}
-.company-card summary:hover{background:var(--surface2)}
-.company-body{padding:.25rem 1.1rem .8rem}
-.company-item{padding:.45rem 0;border-bottom:1px solid var(--border);font-size:.85rem}
-.company-item:last-child{border-bottom:none}
-.company-item a{color:var(--text);font-weight:500}
-.company-item a:hover{color:var(--accent)}
-.company-item .item-meta{font-size:.73rem;color:var(--muted);margin-top:.15rem}
-.company-flags{display:flex;gap:.3rem;flex-wrap:wrap;margin-left:auto}
-.no-news{font-size:.82rem;color:var(--muted);padding:.5rem 0}
-
-/* ── Archive ── */
-.archive-list{display:flex;flex-wrap:wrap;gap:.5rem}
-.archive-list a{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:.35rem .75rem;font-size:.82rem;font-weight:500}
-.archive-list a:hover{background:var(--accent2);color:var(--accent);border-color:var(--accent);text-decoration:none}
-
-/* ── Empty / error state ── */
-.empty{padding:2rem;text-align:center;color:var(--muted);font-size:.9rem}
-.error-banner{background:var(--dn-bg);border:1px solid var(--dn);color:var(--dn);border-radius:8px;padding:.8rem 1.1rem;font-size:.85rem;margin-bottom:1.5rem;display:none}
+/* ── Print ───────────────────────────────────────────────────────────────── */
+@media print{
+  #sidebar,#sidebar-toggle,#sidebar-overlay,.print-btn,.theme-btn,.collapse-btn{display:none!important}
+  #main{padding:0;max-width:100%}
+  body{background:#fff;color:#000;font-size:11pt}
+  .card,.company-card,.price-card,.theme-card,.risk-item,.event-item{border:1px solid #ccc;break-inside:avoid}
+  .collapsible-body.hidden{display:block!important}
+  a{color:#000}
+  a[href]::after{content:" (" attr(href) ")";font-size:.7em;color:#555}
+  body::before{content:"COMMODITY TRADING — SECTOR INTELLIGENCE";display:block;font-size:9pt;color:#555;margin-bottom:1rem;border-bottom:1px solid #ccc;padding-bottom:.5rem}
+}
 </style>
 </head>
 <body>
+<div id="sidebar-overlay" onclick="closeSidebar()"></div>
 
-<div class="shell">
-  <!-- Sidebar -->
-  <aside class="sidebar">
-    <div class="logo">SEA<span>Commodity</span></div>
-    <nav>
-      <ul>
-        <li><a href="#prices" class="active">Prices</a></li>
-        <li><a href="#watch">What to Watch</a></li>
-        <li><a href="#headlines">Top Headlines</a></li>
-        <li class="nav-section">Companies</li>
-        <li><a href="#energy">Energy</a></li>
-        <li><a href="#metals_mining">Metals &amp; Mining</a></li>
-        <li><a href="#power_utilities">Power &amp; Utilities</a></li>
-        <li><a href="#trading">Trading</a></li>
-        <li class="nav-section">More</li>
-        <li><a href="#archive">Archive</a></li>
-      </ul>
-    </nav>
-  </aside>
+<nav id="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-title">Commodity Trading</div>
+    <div class="sidebar-sub">SEA Sector Intelligence</div>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section">Intelligence</div>
+    <a class="nav-link" href="#exec-summary">Executive Summary</a>
+    <a class="nav-link" href="#macro">Macro &amp; Geopolitical</a>
+    <a class="nav-link" href="#prices">Commodity Prices</a>
+    <a class="nav-link" href="#outlook">Forecasts &amp; Outlook</a>
+    <a class="nav-link" href="#fundamentals">Fundamentals</a>
+    <a class="nav-link" href="#themes">Themes &amp; Drivers</a>
+    <a class="nav-link" href="#risks-events">Risks &amp; Events</a>
+    <div class="nav-section">News</div>
+    <a class="nav-link" href="#headlines">Top Headlines</a>
+    <a class="nav-link" href="#energy">Energy</a>
+    <a class="nav-link" href="#metals-mining">Metals &amp; Mining</a>
+    <a class="nav-link" href="#power-utilities">Power &amp; Utilities</a>
+    <a class="nav-link" href="#trading">Trading</a>
+    <div class="nav-section">More</div>
+    <a class="nav-link" href="#regulatory">Regulatory &amp; Policy</a>
+    <a class="nav-link" href="#archive">Archive</a>
+  </div>
+  <div class="sidebar-footer">
+    <button class="theme-btn" onclick="toggleTheme()">Toggle Light / Dark</button>
+    <div id="sidebar-ts" style="font-size:.67rem"></div>
+  </div>
+</nav>
 
-  <!-- Main content -->
-  <main class="main">
-    <header class="page-header">
-      <h1>SEA Commodity Briefing</h1>
-      <div class="meta">
-        <span>Last updated: <span id="last-updated">loading…</span></span>
-        <span id="sgt-time"></span>
-        <span style="color:var(--muted)">Southeast Asia · Energy · Metals · Power</span>
-      </div>
-    </header>
+<button id="sidebar-toggle" onclick="toggleSidebar()" aria-label="Menu">☰</button>
 
-    <div id="error-banner" class="error-banner"></div>
+<main id="main">
+  <div class="generated-bar" id="gen-bar">
+    <span class="generated-dot"></span>
+    <span id="gen-ts">Loading…</span>
+    <button class="print-btn" onclick="window.print()">Print / Save PDF</button>
+  </div>
 
-    <!-- Commodity Prices -->
-    <section id="prices">
-      <div class="section-title">Commodity Prices <span class="count" id="price-count"></span></div>
-      <div class="price-grid" id="price-grid">
-        <div class="empty">Loading prices…</div>
-      </div>
-    </section>
+  <section class="section" id="exec-summary">
+    <div class="section-header">
+      <span class="section-icon">★</span>
+      <span class="section-title">Executive Summary</span>
+      <span class="section-meta">Today's key signals</span>
+    </div>
+    <div id="exec-body"><div class="card card-sm" style="color:var(--text3);font-size:.82rem">Loading…</div></div>
+  </section>
 
-    <!-- What to Watch -->
-    <section id="watch">
-      <div class="section-title">What to Watch</div>
-      <div class="watch-panel" id="watch-panel">
-        <div class="empty">Loading…</div>
-      </div>
-    </section>
+  <section class="section" id="macro">
+    <div class="section-header">
+      <span class="section-icon">◎</span>
+      <span class="section-title">Macro &amp; Geopolitical</span>
+      <span class="section-meta">DXY · US 10Y · Hang Seng</span>
+    </div>
+    <div id="macro-body"></div>
+  </section>
 
-    <!-- Top Headlines -->
-    <section id="headlines">
-      <div class="section-title">Top Headlines <span class="count" id="hl-count"></span></div>
-      <div class="headline-list" id="headline-list">
-        <div class="empty">Loading…</div>
-      </div>
-    </section>
+  <section class="section" id="prices">
+    <div class="section-header">
+      <span class="section-icon">$</span>
+      <span class="section-title">Commodity Prices</span>
+      <span class="section-meta">Market data</span>
+    </div>
+    <div id="prices-body"></div>
+    <div id="analytics-body"></div>
+  </section>
 
-    <!-- Company Sectors -->
-    <section id="energy">
-      <div class="section-title">Energy</div>
-      <div class="company-panels" id="sector-energy"></div>
-    </section>
-    <section id="metals_mining">
-      <div class="section-title">Metals &amp; Mining</div>
-      <div class="company-panels" id="sector-metals_mining"></div>
-    </section>
-    <section id="power_utilities">
-      <div class="section-title">Power &amp; Utilities</div>
-      <div class="company-panels" id="sector-power_utilities"></div>
-    </section>
-    <section id="trading">
-      <div class="section-title">Trading</div>
-      <div class="company-panels" id="sector-trading"></div>
-    </section>
+  <section class="section" id="outlook">
+    <div class="section-header">
+      <span class="section-icon">→</span>
+      <span class="section-title">Forecasts &amp; Outlook</span>
+      <span class="section-meta">EIA · World Bank · Consensus</span>
+    </div>
+    <div id="outlook-body"></div>
+  </section>
 
-    <!-- Archive -->
-    <section id="archive">
-      <div class="section-title">Past Digests</div>
-      <div class="archive-list" id="archive-list"><span class="empty">Loading…</span></div>
-    </section>
+  <section class="section" id="fundamentals">
+    <div class="section-header">
+      <span class="section-icon">≡</span>
+      <span class="section-title">Fundamentals</span>
+      <span class="section-meta">Supply / demand signals</span>
+    </div>
+    <div id="fund-body"></div>
+  </section>
 
-    <footer style="margin-top:3rem;padding-top:1.25rem;border-top:1px solid var(--border);font-size:.78rem;color:var(--muted)">
-      Rule-based extractive digest · Prices: yfinance (live) + web (indicative) · No LLM used · Auto-published daily
-    </footer>
-  </main>
-</div>
+  <section class="section" id="themes">
+    <div class="section-header">
+      <span class="section-icon">◇</span>
+      <span class="section-title">Themes &amp; Drivers</span>
+      <span class="section-meta">Structural patterns</span>
+    </div>
+    <div id="themes-body"></div>
+  </section>
+
+  <section class="section" id="risks-events">
+    <div class="section-header">
+      <span class="section-icon">!</span>
+      <span class="section-title">Risks &amp; Events to Watch</span>
+    </div>
+    <div id="risks-body"></div>
+    <div id="events-body"></div>
+  </section>
+
+  <section class="section" id="headlines">
+    <div class="section-header">
+      <span class="section-icon">≫</span>
+      <span class="section-title">Top Headlines</span>
+      <button class="collapse-btn" onclick="toggleSection('hl-body',this)">collapse</button>
+    </div>
+    <div id="hl-body"></div>
+  </section>
+
+  <section class="section" id="energy">
+    <div class="section-header">
+      <span class="section-icon" style="color:#ffb74d">●</span>
+      <span class="section-title">Company News — Energy</span>
+      <button class="collapse-btn" onclick="toggleSection('energy-body',this)">collapse</button>
+    </div>
+    <div id="energy-body"></div>
+  </section>
+
+  <section class="section" id="metals-mining">
+    <div class="section-header">
+      <span class="section-icon" style="color:#bdbdbd">●</span>
+      <span class="section-title">Company News — Metals &amp; Mining</span>
+      <button class="collapse-btn" onclick="toggleSection('metals-body',this)">collapse</button>
+    </div>
+    <div id="metals-body"></div>
+  </section>
+
+  <section class="section" id="power-utilities">
+    <div class="section-header">
+      <span class="section-icon" style="color:#64b5f6">●</span>
+      <span class="section-title">Company News — Power &amp; Utilities</span>
+      <button class="collapse-btn" onclick="toggleSection('power-body',this)">collapse</button>
+    </div>
+    <div id="power-body"></div>
+  </section>
+
+  <section class="section" id="trading">
+    <div class="section-header">
+      <span class="section-icon" style="color:var(--accent)">●</span>
+      <span class="section-title">Company News — Trading</span>
+      <button class="collapse-btn" onclick="toggleSection('trading-body',this)">collapse</button>
+    </div>
+    <div id="trading-body"></div>
+  </section>
+
+  <section class="section" id="regulatory">
+    <div class="section-header">
+      <span class="section-icon">⚖</span>
+      <span class="section-title">Regulatory &amp; Policy</span>
+      <button class="collapse-btn" onclick="toggleSection('reg-body',this)">collapse</button>
+    </div>
+    <div id="reg-body"></div>
+  </section>
+
+  <section class="section" id="archive">
+    <div class="section-header">
+      <span class="section-icon">▤</span>
+      <span class="section-title">Archive</span>
+    </div>
+    <div id="archive-body"></div>
+  </section>
+
+  <div class="data-footer">
+    <strong>Data quality notes:</strong>
+    EIA data is US-specific and used as a global benchmark indicator.
+    JKM / Tapis / Newcastle Coal prices are indicative / web-sourced — verify before trading.
+    World Bank forecasts are published third-party figures.
+    LLM summaries are synthesised from fetched inputs — verify claims before use.
+    Macro data via Yahoo Finance (yfinance). Free-tier data may lag 15–20 min.
+    Source badges: <span class="tag quality-market">market</span> = exchange data · <span class="tag quality-indicative">indicative</span> = web-sourced estimate.
+  </div>
+</main>
 
 <script>
-/* ── helpers ── */
-const $ = id => document.getElementById(id);
-const esc = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-const fmt = (n, d=2) => n == null ? '—' : Number(n).toFixed(d);
-const pct = n => n == null ? '' : (n >= 0 ? '+' : '') + n.toFixed(1) + '%';
-const pctClass = n => n == null ? 'na' : n >= 0 ? 'up' : 'dn';
+// ── Theme ────────────────────────────────────────────────────────────────────
+(function(){const s=localStorage.getItem('er-theme');if(s)document.documentElement.setAttribute('data-theme',s)})();
+function toggleTheme(){const c=document.documentElement.getAttribute('data-theme');const n=c==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',n);localStorage.setItem('er-theme',n)}
 
-function fmtDate(iso) {
-  if (!iso) return '';
-  const d = new Date(iso);
-  return d.toLocaleString('en-SG', {timeZone:'Asia/Singapore', month:'short', day:'numeric', hour:'2-digit', minute:'2-digit'}) + ' SGT';
-}
+// ── Sidebar ──────────────────────────────────────────────────────────────────
+function toggleSidebar(){document.getElementById('sidebar').classList.toggle('open');document.getElementById('sidebar-overlay').classList.toggle('show')}
+function closeSidebar(){document.getElementById('sidebar').classList.remove('open');document.getElementById('sidebar-overlay').classList.remove('show')}
+document.querySelectorAll('.nav-link').forEach(a=>a.addEventListener('click',closeSidebar));
+function toggleSection(id,btn){const el=document.getElementById(id);const h=el.classList.toggle('hidden');btn.textContent=h?'expand':'collapse'}
 
-/* ── sparkline data from price history ── */
-let priceHistory = {};
-async function loadHistory() {
-  try {
-    const r = await fetch('data/price_history.json');
-    if (!r.ok) return;
-    const rows = await r.json();
-    rows.forEach(row => {
-      const date = row.date;
-      Object.entries(row.prices || {}).forEach(([id, rec]) => {
-        if (!priceHistory[id]) priceHistory[id] = [];
-        if (rec.price != null) priceHistory[id].push({date, price: rec.price});
-      });
-    });
-  } catch(e) { /* history optional */ }
-}
+// ── Utils ────────────────────────────────────────────────────────────────────
+function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
+function fmtAge(h){if(h==null)return '';if(h<1)return Math.round(h*60)+'m ago';if(h<24)return h.toFixed(0)+'h ago';return (h/24).toFixed(0)+'d ago'}
+function flagTags(flags){if(!flags||!flags.length)return '';return flags.slice(0,4).map(f=>`<span class="tag flag">${esc(f.replace(/_/g,' '))}</span>`).join('')}
+function driverTags(drivers){if(!drivers||!drivers.length)return '';return drivers.slice(0,3).map(d=>`<span class="tag driver">${esc(d.replace(/_/g,' '))}</span>`).join('')}
+function sectorClass(s){return{energy:'sector-energy',metals_mining:'sector-metals',power_utilities:'sector-power',trading:'sector-trading'}[s]||'flag'}
 
-function drawSparkline(canvas, data) {
-  if (!data || data.length < 2) { canvas.style.opacity = '.2'; return; }
-  const prices = data.slice(-30).map(d => d.price);
-  const ctx = canvas.getContext('2d');
-  const isDark = window.matchMedia('(prefers-color-scheme:dark)').matches;
-  const lineColor = isDark ? '#4d8ef9' : '#1a56db';
-  new Chart(ctx, {
-    type: 'line',
-    data: { labels: prices.map((_,i)=>i), datasets: [{ data: prices, borderColor: lineColor, borderWidth: 1.5, pointRadius: 0, tension: 0.3, fill: false }] },
-    options: { animation: false, plugins: { legend: { display: false }, tooltip: { enabled: false } }, scales: { x: { display: false }, y: { display: false } }, responsive: true, maintainAspectRatio: false }
-  });
-}
-
-/* ── render price grid ── */
-function renderPrices(prices) {
-  const grid = $('price-grid');
-  if (!prices?.length) { grid.innerHTML = '<div class="empty">No price data available.</div>'; return; }
-  $('price-count').textContent = prices.length;
-
-  const grouped = {};
-  prices.forEach(p => { (grouped[p.group] = grouped[p.group] || []).push(p); });
-
-  const groupOrder = ['crude_oil','natgas_lng','refined','coal','base_metals','bulk','agri'];
-  const fragments = [];
-  groupOrder.forEach(g => {
-    (grouped[g] || []).forEach(p => fragments.push(p));
-  });
-
-  grid.innerHTML = fragments.map(p => `
-    <div class="price-card" id="pc-${esc(p.commodity_id)}">
-      <div class="label">
-        <span>${esc(p.display)}</span>
-        <span class="src-badge ${esc(p.source)}">${esc(p.source)}</span>
-      </div>
-      <div class="value">${p.price != null ? fmt(p.price) : '<span style="color:var(--muted)">N/A</span>'}<span class="unit">${esc(p.unit)}</span></div>
-      <div class="change ${pctClass(p.change_pct)}">${p.change_pct != null ? pct(p.change_pct) + ' today' : 'No change data'}</div>
-      <div class="sparkline-wrap"><canvas id="spark-${esc(p.commodity_id)}"></canvas></div>
-    </div>`).join('');
-
-  // draw sparklines after DOM insert
-  requestAnimationFrame(() => {
-    fragments.forEach(p => {
-      const canvas = document.getElementById('spark-' + p.commodity_id);
-      if (canvas) drawSparkline(canvas, priceHistory[p.commodity_id] || []);
-    });
-  });
-}
-
-/* ── render watch panel ── */
-function renderWatch(bullets) {
-  const panel = $('watch-panel');
-  if (!bullets?.length) { panel.innerHTML = '<div class="empty">No watch items.</div>'; return; }
-  panel.innerHTML = bullets.map(b => `
-    <div class="watch-item">
-      <span class="watch-cat">${esc(b.category.replace(/_/g,' '))}</span>
-      <span>${esc(b.text)}</span>
-    </div>`).join('');
-}
-
-/* ── render headlines ── */
-function renderHeadlines(items) {
-  const list = $('headline-list');
-  if (!items?.length) { list.innerHTML = '<div class="empty">No headlines available.</div>'; return; }
-  $('hl-count').textContent = items.length;
-  list.innerHTML = items.map(item => `
-    <div class="headline-item">
-      <a href="${esc(item.url)}" target="_blank" rel="noopener">${esc(item.title)}</a>
-      <div class="headline-meta">
-        <span>${esc(item.source)}</span>
-        ${item.published ? '<span>' + fmtDate(item.published) + '</span>' : ''}
-        ${(item.flags||[]).map(f=>`<span class="flag-tag ${esc(f)}">${esc(f)}</span>`).join('')}
-      </div>
-    </div>`).join('');
-}
-
-/* ── render company panels ── */
-function renderCompanies(companies) {
-  const sectors = ['energy','metals_mining','power_utilities','trading'];
-  sectors.forEach(sector => {
-    const container = $('sector-' + sector);
-    const sectorCos = (companies||[]).filter(c => c.sector === sector);
-    if (!sectorCos.length) { container.innerHTML = '<div class="empty">No data.</div>'; return; }
-    container.innerHTML = sectorCos.map(co => {
-      const flags = (co.flags||[]).map(f => `<span class="flag-tag ${esc(f)}">${esc(f)}</span>`).join('');
-      const items = (co.items||[]).map(item => `
-        <div class="company-item">
-          <a href="${esc(item.url)}" target="_blank" rel="noopener">${esc(item.title)}</a>
-          <div class="item-meta">${esc(item.source)}${item.published ? ' · ' + fmtDate(item.published) : ''}
-            ${(item.flags||[]).map(f=>`<span class="flag-tag ${esc(f)}">${esc(f)}</span>`).join('')}
-          </div>
-        </div>`).join('') || '<div class="no-news">No recent news.</div>';
-      return `<details class="company-card">
-        <summary>${esc(co.name)} <span class="company-flags">${flags}</span></summary>
-        <div class="company-body">${items}</div>
-      </details>`;
-    }).join('');
-  });
-}
-
-/* ── render archive ── */
-async function renderArchive() {
-  const list = $('archive-list');
-  try {
-    const r = await fetch('data/archive.json');
-    if (!r.ok) throw new Error(r.status);
-    const entries = await r.json();
-    if (!entries.length) { list.innerHTML = '<span class="empty">No past digests yet.</span>'; return; }
-    list.innerHTML = entries.slice(0, 60).map(e => `<a href="${esc(e.path)}">${esc(e.date)}</a>`).join('');
-  } catch { list.innerHTML = '<span class="empty">Archive unavailable.</span>'; }
-}
-
-/* ── main load ── */
-async function loadDashboard() {
-  await loadHistory();
-  try {
-    const r = await fetch('data/latest.json');
-    if (!r.ok) throw new Error('HTTP ' + r.status);
-    const data = await r.json();
-
-    // header
-    const gen = data.generated_at;
-    $('last-updated').textContent = gen ? new Date(gen).toLocaleString('en-SG',{timeZone:'UTC',dateStyle:'medium',timeStyle:'short'}) + ' UTC' : 'unknown';
-    $('sgt-time').textContent = gen ? new Date(gen).toLocaleString('en-SG',{timeZone:'Asia/Singapore',timeStyle:'short'}) + ' SGT' : '';
-
-    renderPrices(data.prices);
-    renderWatch(data.what_to_watch);
-    renderHeadlines(data.top_headlines);
-    renderCompanies(data.companies);
-  } catch(e) {
-    const banner = $('error-banner');
-    banner.textContent = 'Could not load latest data. Run the agent first: python -m src.main. (' + e.message + ')';
-    banner.style.display = 'block';
-    $('price-grid').innerHTML = '<div class="empty">No data — run the agent to generate latest.json.</div>';
-    $('watch-panel').innerHTML = '';
-    $('headline-list').innerHTML = '';
+// ── 1. Executive Summary ──────────────────────────────────────────────────────
+function renderExecSummary(bullets,brief){
+  const el=document.getElementById('exec-body');
+  let html='';
+  if(bullets&&bullets.length){
+    html+='<div class="card"><ul class="exec-bullets">';
+    bullets.forEach(b=>{html+=`<li>${esc(b)}</li>`});
+    html+='</ul></div>';
   }
-  renderArchive();
+  if(brief&&brief.narrative){
+    html+=`<div class="card card-sm" style="font-size:.82rem;color:var(--text2);line-height:1.6">${esc(brief.narrative)}`;
+    if(brief.themes&&brief.themes.length){html+='<div style="margin-top:.6rem">';brief.themes.forEach(t=>{html+=`<span class="tag driver">${esc(t)}</span>`});html+='</div>'}
+    html+='</div>';
+  }
+  if(!html)html='<div class="card card-sm" style="color:var(--text3);font-size:.82rem">No executive summary — run agent to populate.</div>';
+  el.innerHTML=html;
 }
 
-loadDashboard();
+// ── 2. Macro & Geopolitical ───────────────────────────────────────────────────
+function renderMacro(macro){
+  const el=document.getElementById('macro-body');
+  if(!macro){el.innerHTML='<div class="card card-sm" style="color:var(--text3);font-size:.82rem">Macro data unavailable.</div>';return}
+  let html='';
+  if(macro.tickers&&macro.tickers.length){
+    html+='<div class="macro-strip">';
+    macro.tickers.forEach(t=>{
+      const cc=(t.change_pct||0)>0.05?'up':((t.change_pct||0)<-0.05?'dn':'flat');
+      const cs=t.change_pct!=null?((t.change_pct>0?'+':'')+t.change_pct.toFixed(2)+'%'):'—';
+      const vs=t.last!=null?t.last.toLocaleString('en-US',{maximumFractionDigits:2}):'—';
+      html+=`<div class="macro-item"><span class="macro-name">${esc(t.name)}</span><span class="macro-val">${vs}<span class="price-unit">${esc(t.unit||'')}</span></span><span class="macro-chg ${cc}">${cs}</span></div>`;
+    });
+    html+='</div>';
+  }
+  if(macro.geopolitical&&macro.geopolitical.length){
+    html+='<h3 style="font-size:.8rem;color:var(--text2);margin:.75rem 0 .4rem">Geopolitical Watch</h3>';
+    macro.geopolitical.forEach(g=>{
+      html+=`<div class="geo-item"><div class="geo-text"><a href="${esc(g.url)}" target="_blank" rel="noopener">${esc(g.title)}</a><div class="geo-meta">${esc(g.source)} · ${fmtAge(g.age_h)}</div></div></div>`;
+    });
+  }else{
+    html+='<div style="font-size:.78rem;color:var(--text3);padding:.4rem 0">No geopolitical signals flagged today.</div>';
+  }
+  el.innerHTML=html;
+}
 
-/* ── active nav on scroll ── */
-const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('nav a');
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id));
-    }
+// ── 3. Prices + Analytics ────────────────────────────────────────────────────
+function renderPrices(prices,heatmap,correlations){
+  const el=document.getElementById('prices-body');
+  const ae=document.getElementById('analytics-body');
+  if(!prices||!prices.length){el.innerHTML='<div class="card card-sm" style="color:var(--text3)">Price data unavailable.</div>';return}
+  const groups={};prices.forEach(p=>{(groups[p.group]=groups[p.group]||[]).push(p)});
+  const order=['crude_oil','natgas_lng','coal','base_metals','precious_metals','agri'];
+  const labels={crude_oil:'Crude Oil',natgas_lng:'Natural Gas / LNG',coal:'Coal',base_metals:'Base Metals',precious_metals:'Precious Metals',agri:'Agricultural'};
+  let html='';
+  (order.concat(Object.keys(groups).filter(g=>!order.includes(g)))).forEach(gid=>{
+    const items=groups[gid];if(!items)return;
+    html+=`<h4 style="font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;color:var(--text3);margin:.75rem 0 .4rem">${labels[gid]||gid.replace(/_/g,' ')}</h4><div class="price-grid">`;
+    items.forEach(p=>{
+      const cc=(p.change_pct||0)>0.05?'up':((p.change_pct||0)<-0.05?'dn':'flat');
+      const sign=p.change_pct!=null&&p.change_pct>0?'+':'';
+      const pv=p.price!=null?p.price.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}):'—';
+      const qb=p.quality&&p.quality!=='market'?`<span class="tag quality-${p.quality}" style="font-size:.6rem">${p.quality}</span>`:'';
+      html+=`<div class="price-card"><div class="price-name">${esc(p.display)}</div><div class="price-val">${pv}<span class="price-unit">${esc(p.unit)}</span></div><div class="price-chg ${cc}">${p.change_pct!=null?sign+p.change_pct.toFixed(2)+'%':'—'}</div><div class="price-source">${esc(p.source)} ${qb}</div></div>`;
+    });
+    html+='</div>';
   });
-}, {threshold:.2});
-sections.forEach(s => observer.observe(s));
+  el.innerHTML=html;
+
+  let ah='';
+  if(heatmap&&heatmap.commodities&&heatmap.commodities.length){
+    ah+=`<div style="margin-top:1.25rem"><h3 style="font-size:.85rem;margin-bottom:.1rem">Price Performance Heatmap</h3><p style="font-size:.72rem;color:var(--text3);margin-bottom:.4rem">1D / 1W / 1M returns (%). Green = positive, red = negative.</p><div class="heatmap-wrap"><table class="heatmap-table"><thead><tr><th>Commodity</th><th>1D</th><th>1W</th><th>1M</th></tr></thead><tbody>`;
+    heatmap.commodities.forEach((n,i)=>{
+      const r1=heatmap.returns['1d']?heatmap.returns['1d'][i]:null;
+      const r7=heatmap.returns['1w']?heatmap.returns['1w'][i]:null;
+      const r30=heatmap.returns['1m']?heatmap.returns['1m'][i]:null;
+      ah+=`<tr><td class="name">${esc(n)}</td>${[r1,r7,r30].map(hmCell).join('')}</tr>`;
+    });
+    ah+='</tbody></table></div></div>';
+  }
+  if(correlations&&correlations.commodities&&correlations.commodities.length>=2){
+    ah+=`<div style="margin-top:1.5rem"><h3 style="font-size:.85rem;margin-bottom:.1rem">90-Day Return Correlation</h3><p style="font-size:.72rem;color:var(--text3);margin-bottom:.4rem">Pairwise daily-return correlation. Min 15 days of data required.</p><div class="corr-wrap"><table class="corr-table"><thead><tr><th></th>`;
+    correlations.commodities.forEach(c=>{ah+=`<th>${esc(c.split(' ')[0])}</th>`});
+    ah+='</tr></thead><tbody>';
+    correlations.matrix.forEach((row,i)=>{
+      ah+=`<tr><td class="label">${esc(correlations.commodities[i])}</td>`;
+      row.forEach((v,j)=>{ah+=corrCell(v,i===j)});
+      ah+='</tr>';
+    });
+    ah+='</tbody></table></div></div>';
+  }
+  ae.innerHTML=ah;
+}
+
+function hmCell(v){
+  if(v==null)return '<td class="hm-na">—</td>';
+  const c=v>2?'hm-strong-up':v>0.2?'hm-up':v>-0.2?'hm-flat':v>-2?'hm-dn':'hm-strong-dn';
+  return `<td class="${c}">${v>0?'+':''}${v.toFixed(1)}%</td>`;
+}
+function corrCell(v,self){
+  if(self)return `<td class="corr-self">1.00</td>`;
+  if(v==null)return `<td style="color:var(--text3)">—</td>`;
+  const c=v>0.6?'corr-hi':v<-0.3?'corr-lo':'';
+  return `<td class="${c}" title="${v.toFixed(2)}">${v.toFixed(2)}</td>`;
+}
+
+// ── 4. Outlook ────────────────────────────────────────────────────────────────
+function renderOutlook(outlook){
+  const el=document.getElementById('outlook-body');
+  if(!outlook||!outlook.length){el.innerHTML='<div class="card card-sm" style="color:var(--text3);font-size:.82rem">Outlook data unavailable. Will appear after next scheduled run with World Bank and news-derived signals.</div>';return}
+  let html='<div class="outlook-grid">';
+  outlook.forEach(o=>{
+    const dc=o.direction||'neutral';
+    html+=`<div class="outlook-card"><div class="outlook-commodity">${esc(o.commodity)}</div><span class="outlook-direction ${dc}">${esc(o.direction||'neutral')}</span>`;
+    if(o.narrative)html+=`<div class="outlook-narrative">${esc(o.narrative)}</div>`;
+    if(o.eia_forecast)html+=`<div class="outlook-source">EIA: ${esc(o.eia_forecast)}</div>`;
+    if(o.wb_forecast)html+=`<div class="outlook-source">World Bank: ${esc(o.wb_forecast)}</div>`;
+    if(o.headlines&&o.headlines.length){
+      html+='<div style="margin-top:.5rem">';
+      o.headlines.slice(0,2).forEach(h=>{html+=`<div style="font-size:.72rem;color:var(--text3);margin-bottom:.2rem"><a href="${esc(h.url||'#')}" target="_blank" rel="noopener" style="color:var(--text3)">${esc(h.title||'')}</a></div>`});
+      html+='</div>';
+    }
+    html+='</div>';
+  });
+  html+='</div>';
+  el.innerHTML=html;
+}
+
+// ── 5. Fundamentals ───────────────────────────────────────────────────────────
+function renderFundamentals(fundamentals){
+  const el=document.getElementById('fund-body');
+  if(!fundamentals||!fundamentals.length){el.innerHTML='<div class="card card-sm" style="color:var(--text3);font-size:.82rem">Fundamentals unavailable. Will appear after next run with World Bank price data, FRED trends, and news-derived supply/demand signals.</div>';return}
+  let html='';
+  fundamentals.forEach(f=>{
+    const a=f.inventory_direction==='up'?'↑':f.inventory_direction==='down'?'↓':'→';
+    const ac=f.inventory_direction==='up'?'up':f.inventory_direction==='down'?'dn':'flat';
+    html+=`<div class="fund-card"><div class="fund-commodity">${esc(f.commodity)} <span class="fund-arrow ${ac}" style="font-size:1rem">${f.inventory_direction?a:''}</span></div><div class="fund-body">`;
+    if(f.balance_read)html+=`<div class="fund-balance">${esc(f.balance_read)}</div>`;
+    html+='<div class="fund-signals">';
+    (f.supply_signals||[]).forEach(s=>{html+=`<span class="fund-signal supply">${esc(s)}</span>`});
+    (f.demand_signals||[]).forEach(s=>{html+=`<span class="fund-signal demand">${esc(s)}</span>`});
+    html+='</div>';
+    if(f.source)html+=`<div style="font-size:.68rem;color:var(--text3);margin-top:.3rem">Source: ${esc(f.source)}</div>`;
+    html+='</div></div>';
+  });
+  el.innerHTML=html;
+}
+
+// ── 6. Themes & Drivers ───────────────────────────────────────────────────────
+function renderThemes(themes){
+  const el=document.getElementById('themes-body');
+  if(!themes||!themes.length){el.innerHTML='<div class="card card-sm" style="color:var(--text3);font-size:.82rem">No structural themes detected today.</div>';return}
+  let html='';
+  themes.forEach(t=>{
+    html+=`<div class="theme-card"><div class="theme-name">${esc(t.name)}</div>`;
+    if(t.narrative)html+=`<div class="theme-narrative">${esc(t.narrative)}</div>`;
+    html+='<div class="theme-meta">';
+    if(t.companies&&t.companies.length)html+=`Companies: ${t.companies.slice(0,5).map(esc).join(', ')}`;
+    if(t.commodities&&t.commodities.length)html+=` · Commodities: ${t.commodities.slice(0,4).map(esc).join(', ')}`;
+    html+='</div>';
+    if(t.headlines&&t.headlines.length){
+      html+='<div style="margin-top:.5rem">';
+      t.headlines.slice(0,3).forEach(h=>{html+=`<div style="font-size:.72rem;color:var(--text3);margin-bottom:.2rem;padding-left:.6rem;border-left:2px solid var(--border2)"><a href="${esc(h.url||'#')}" target="_blank" rel="noopener" style="color:var(--text3)">${esc(h.title||'')}</a>${h.source?` <span style="margin-left:.3rem">${esc(h.source)}</span>`:''}</div>`});
+      html+='</div>';
+    }
+    html+='</div>';
+  });
+  el.innerHTML=html;
+}
+
+// ── 7. Risks & Events ─────────────────────────────────────────────────────────
+function renderRisksEvents(risks,events){
+  const re=document.getElementById('risks-body');
+  const ee=document.getElementById('events-body');
+  if(risks&&risks.length){
+    let h='<h3 style="font-size:.85rem;margin-bottom:.6rem">Risks to Watch</h3><div class="risk-list">';
+    risks.forEach(r=>{h+=`<div class="risk-item"><span class="risk-dir ${r.direction||'downside'}">${esc(r.direction||'downside')}</span><span class="risk-text">${esc(r.text)}</span></div>`});
+    re.innerHTML=h+'</div>';
+  }else{
+    re.innerHTML='<div class="card card-sm" style="color:var(--text3);font-size:.82rem">No risk signals detected today. Standing risks apply — see next run.</div>';
+  }
+  if(events&&events.length){
+    let h='<h3 style="font-size:.85rem;margin:1rem 0 .6rem">Events Calendar</h3><div class="events-list">';
+    events.forEach(e=>{
+      const uc=e.upcoming?' upcoming':'';
+      const rel=(e.related&&e.related.length)?e.related.slice(0,3).map(esc).join(', '):'';
+      h+=`<div class="event-item${uc}"><span class="event-date">${esc(e.date)}</span><div><div class="event-title">${esc(e.title)}${e.upcoming?' <span class="tag upcoming">this week</span>':''}</div>${rel?`<div class="event-related">${rel}</div>`:''}</div></div>`;
+    });
+    ee.innerHTML=h+'</div>';
+  }else{
+    ee.innerHTML='<div class="card card-sm" style="color:var(--text3);font-size:.82rem">No calendar events in the next 30 days.</div>';
+  }
+}
+
+// ── 8. Headlines ─────────────────────────────────────────────────────────────
+function renderHeadlines(headlines){
+  const el=document.getElementById('hl-body');
+  if(!headlines||!headlines.length){el.innerHTML='<div style="color:var(--text3);font-size:.82rem">No headlines.</div>';return}
+  let html='<div class="card">';
+  headlines.forEach(h=>{
+    html+=`<div class="headline-item"><div class="headline-text"><a href="${esc(h.url)}" target="_blank" rel="noopener">${esc(h.title)}</a><div class="headline-meta"><span>${esc(h.source)}</span><span>${fmtAge(h.age_h)}</span>${flagTags(h.flags)}${driverTags(h.drivers)}</div></div><span class="headline-score">${(h.score||0).toFixed(2)}</span></div>`;
+  });
+  el.innerHTML=html+'</div>';
+}
+
+// ── 9-12. Company panels ─────────────────────────────────────────────────────
+function renderCompanies(companies,sector,bodyId){
+  const el=document.getElementById(bodyId);
+  const filtered=(companies||[]).filter(c=>c.sector===sector);
+  if(!filtered.length){el.innerHTML='<div style="color:var(--text3);font-size:.82rem;padding:.5rem 0">No companies with flagged news in this sector today.</div>';return}
+  filtered.sort((a,b)=>(b.items||[]).length-(a.items||[]).length);
+  let html='<div class="company-grid">';
+  filtered.forEach(co=>{
+    const st=`<span class="tag ${sectorClass(co.sector)}">${esc(co.sector.replace(/_/g,' '))}</span>`;
+    html+=`<div class="company-card"><div class="company-name">${esc(co.name)}</div><div class="company-meta">${esc(co.country||'')} ${co.ticker?`<span class="company-ticker">${esc(co.ticker)}</span>`:''} ${st}</div>`;
+    if(co.summary)html+=`<div class="company-summary">${esc(co.summary)}</div>`;
+    const items=co.items||[];
+    if(!items.length){html+='<div class="company-no-news">No flagged news in last 36h.</div>'}
+    else{
+      html+='<div>';
+      items.forEach(item=>{html+=`<div class="company-item"><a href="${esc(item.url)}" target="_blank" rel="noopener">${esc(item.title)}</a><div class="company-item-meta"><span>${esc(item.source)}</span><span>${fmtAge(item.age_h)}</span>${flagTags(item.flags)}${driverTags(item.drivers)}</div></div>`});
+      html+='</div>';
+    }
+    html+='</div>';
+  });
+  el.innerHTML=html+'</div>';
+}
+
+// ── 13. Regulatory ───────────────────────────────────────────────────────────
+function renderRegulatory(regulatory){
+  const el=document.getElementById('reg-body');
+  if(!regulatory||!regulatory.length){el.innerHTML='<div style="color:var(--text3);font-size:.82rem;padding:.5rem 0">No regulatory items detected today.</div>';return}
+  const byJur={};
+  regulatory.forEach(r=>{const j=r.jurisdiction||'Other';(byJur[j]=byJur[j]||[]).push(r)});
+  const order=['Singapore','Malaysia','Indonesia','Thailand','Regional / Global','Other'];
+  let html='';
+  (order.concat(Object.keys(byJur).filter(j=>!order.includes(j)))).forEach(jur=>{
+    const items=byJur[jur];if(!items)return;
+    html+=`<div class="reg-jurisdiction">${esc(jur)}</div>`;
+    items.forEach(r=>{
+      html+=`<div class="reg-item"><div class="reg-title"><a href="${esc(r.url||'#')}" target="_blank" rel="noopener">${esc(r.title)}</a></div><div class="reg-meta">${r.source?`<span>${esc(r.source)}</span>`:''}${(r.commodities||[]).length?`<span>Commodities: ${r.commodities.map(esc).join(', ')}</span>`:''}${(r.companies||[]).length?`<span>Companies: ${r.companies.map(esc).join(', ')}</span>`:''}${r.effective_date?`<span>Effective: ${esc(r.effective_date)}</span>`:''}</div></div>`;
+    });
+  });
+  el.innerHTML=html;
+}
+
+// ── 14. Archive ───────────────────────────────────────────────────────────────
+function renderArchive(entries){
+  const el=document.getElementById('archive-body');
+  if(!entries||!entries.length){el.innerHTML='<div style="color:var(--text3);font-size:.82rem">No archive entries yet.</div>';return}
+  let html='<div class="archive-list">';
+  entries.forEach(e=>{html+=`<a class="archive-link" href="${esc(e.path)}">${esc(e.date)}</a>`});
+  el.innerHTML=html+'</div>';
+}
+
+// ── Main load ─────────────────────────────────────────────────────────────────
+async function load(){
+  let data=null,archive=[];
+  try{data=await fetch('data/latest.json').then(r=>{if(!r.ok)throw r;return r.json()})}
+  catch(e){document.getElementById('gen-ts').textContent='Could not load data/latest.json — run agent first.';return}
+  try{archive=await fetch('data/archive.json').then(r=>r.ok?r.json():[])}catch(e){archive=[]}
+
+  const ts=data.generated_at?new Date(data.generated_at):null;
+  const sgt=ts?new Date(ts.getTime()+8*3600000):null;
+  document.getElementById('gen-ts').textContent=ts?`Generated ${ts.toUTCString()} · ${sgt?sgt.toUTCString().replace(' GMT',''):''} SGT`:'No timestamp';
+  document.getElementById('sidebar-ts').textContent=ts?ts.toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'}):'';
+  document.title=`Commodity Trading — Sector Intelligence${ts?' | '+ts.toLocaleDateString('en-GB',{day:'2-digit',month:'short'}):''}`;
+
+  renderExecSummary(data.exec_summary,data.executive_brief);
+  renderMacro(data.macro);
+  renderPrices(data.prices,data.heatmap,data.correlations);
+  renderOutlook(data.outlook);
+  renderFundamentals(data.fundamentals);
+  renderThemes(data.themes);
+  renderRisksEvents(data.risks,data.events);
+  renderHeadlines(data.top_headlines);
+  renderCompanies(data.companies,'energy','energy-body');
+  renderCompanies(data.companies,'metals_mining','metals-body');
+  renderCompanies(data.companies,'power_utilities','power-body');
+  renderCompanies(data.companies,'trading','trading-body');
+  renderRegulatory(data.regulatory);
+  renderArchive(archive);
+
+  // Active nav
+  const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){document.querySelectorAll('.nav-link').forEach(a=>a.classList.remove('active'));const l=document.querySelector(`.nav-link[href="#${e.target.id}"]`);if(l)l.classList.add('active')}})},{threshold:.2});
+  document.querySelectorAll('.section').forEach(s=>obs.observe(s));
+}
+load();
 </script>
 </body>
 </html>
