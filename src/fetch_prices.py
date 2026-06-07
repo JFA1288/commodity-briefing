@@ -141,56 +141,66 @@ def _web_fallback(commodity: dict) -> tuple[Optional[float], str]:
 
 
 def fetch_all() -> list[PriceRecord]:
+    """Fetch commodity prices. Source priority: TradingView → yfinance → Investing.com → web."""
     cfg = config.load()
     commodities = cfg.get("commodities", [])
     records: list[PriceRecord] = []
 
     for c in commodities:
         cid = c["id"]
-        ticker = c.get("yfinance_ticker")
-        multiplier = c.get("yfinance_unit_multiplier", 1.0)
         quality = c.get("quality", "market")
-
-        price, prev_close, as_of = None, None, None
+        price: Optional[float] = None
+        prev_close: Optional[float] = None
+        as_of: Optional[datetime] = None
         source = "unavailable"
 
-        if ticker:
-            price, prev_close, as_of = _yf_price(ticker, multiplier)
-            if price is not None:
-                source = "yfinance"
-            else:
-                print(f"  [prices] yfinance no data for {ticker} ({cid}), trying web fallback")
+        # 1. TradingView (primary)
+        tv_symbol = c.get("tradingview_symbol", "")
+        if tv_symbol:
+            tv_price = _tradingview_price(tv_symbol)
+            if tv_price is not None:
+                multiplier = c.get("tradingview_unit_multiplier", 1.0)
+                price = tv_price * multiplier
+                source = "TradingView"
+                as_of = datetime.now(timezone.utc)
+                print(f"  [prices] {cid}: {price:.2f} (TradingView {tv_symbol})")
 
+        # 2. yfinance (fallback)
         if price is None:
-            tv_symbol = c.get("tradingview_symbol", "")
-            if tv_symbol:
-                tv_price = _tradingview_price(tv_symbol)
-                if tv_price is not None:
-                    price = tv_price
-                    source = "tradingview"
-                    as_of = datetime.now(timezone.utc)
-                    quality = "indicative"
-                    print(f"  [prices] {cid}: indicative price {price} (TradingView)")
+            ticker = c.get("yfinance_ticker", "")
+            if ticker:
+                multiplier = c.get("yfinance_unit_multiplier", 1.0)
+                yf_price, yf_prev, yf_as_of = _yf_price(ticker, multiplier)
+                if yf_price is not None:
+                    price = yf_price
+                    prev_close = yf_prev
+                    as_of = yf_as_of
+                    source = "yfinance"
+                    print(f"  [prices] {cid}: {price:.2f} (yfinance fallback {ticker})")
+                else:
+                    print(f"  [prices] {cid}: yfinance failed for {ticker}")
 
+        # 3. Investing.com (fallback)
         if price is None:
             inv_url = c.get("investing_url", "")
             if inv_url:
                 inv_price = _investing_com_price(inv_url)
                 if inv_price is not None:
                     price = inv_price
-                    source = "investing.com"
+                    source = "Investing.com"
                     as_of = datetime.now(timezone.utc)
                     quality = "indicative"
-                    print(f"  [prices] {cid}: indicative price {price} (Investing.com)")
+                    print(f"  [prices] {cid}: {price:.2f} (Investing.com)")
 
+        # 4. DuckDuckGo web search (last resort)
         if price is None:
             price, source = _web_fallback(c)
             if price is not None:
                 as_of = datetime.now(timezone.utc)
                 quality = "indicative"
-                print(f"  [prices] {cid}: indicative price {price} (web-sourced)")
+                print(f"  [prices] {cid}: {price:.2f} (web fallback)")
             else:
-                print(f"  [prices] {cid}: no price available")
+                print(f"  [prices] {cid}: no price available from any source")
 
         change_pct = None
         if price is not None and prev_close and prev_close != 0:
@@ -209,7 +219,7 @@ def fetch_all() -> list[PriceRecord]:
             as_of=as_of,
         ))
 
-        time.sleep(0.4)
+        time.sleep(0.3)
 
     return records
 

@@ -219,6 +219,7 @@ commodities:
     display: "Brent Crude"
     unit: "USD/bbl"
     group: crude_oil
+    tradingview_symbol: "TVC:UKOIL"
     yfinance_ticker: "BZ=F"
     quality: market
 
@@ -226,6 +227,7 @@ commodities:
     display: "WTI Crude"
     unit: "USD/bbl"
     group: crude_oil
+    tradingview_symbol: "TVC:USOIL"
     yfinance_ticker: "CL=F"
     quality: market
 
@@ -233,6 +235,7 @@ commodities:
     display: "Henry Hub Gas"
     unit: "USD/MMBtu"
     group: natgas_lng
+    tradingview_symbol: "NYMEX:NG1!"
     yfinance_ticker: "NG=F"
     quality: market
 
@@ -240,6 +243,8 @@ commodities:
     display: "Copper (COMEX)"
     unit: "USD/t"
     group: base_metals
+    tradingview_symbol: "COMEX:HG1!"
+    tradingview_unit_multiplier: 2204.62
     yfinance_ticker: "HG=F"
     yfinance_unit_multiplier: 2204.62
     quality: market
@@ -248,6 +253,7 @@ commodities:
     display: "Gold"
     unit: "USD/oz"
     group: precious_metals
+    tradingview_symbol: "TVC:GOLD"
     yfinance_ticker: "GC=F"
     quality: market
 
@@ -255,6 +261,7 @@ commodities:
     display: "Silver"
     unit: "USD/oz"
     group: precious_metals
+    tradingview_symbol: "TVC:SILVER"
     yfinance_ticker: "SI=F"
     quality: market
 
@@ -262,6 +269,7 @@ commodities:
     display: "Aluminium"
     unit: "USD/t"
     group: base_metals
+    tradingview_symbol: "LME:AA1!"
     yfinance_ticker: "ALI=F"
     quality: market
 
@@ -269,6 +277,7 @@ commodities:
     display: "Soybeans (CBOT)"
     unit: "USc/bu"
     group: agri
+    tradingview_symbol: "CBOT:ZS1!"
     yfinance_ticker: "ZS=F"
     quality: market
 
@@ -276,6 +285,7 @@ commodities:
     display: "Wheat (CBOT)"
     unit: "USc/bu"
     group: agri
+    tradingview_symbol: "CBOT:ZW1!"
     yfinance_ticker: "ZW=F"
     quality: market
 
