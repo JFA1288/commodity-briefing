@@ -474,5 +474,65 @@
   "9ee2d9c656173ef2": {
     "text": "India's sustained LNG purchasing despite high prices signals robust demand fundamentals and suggests confidence in long-term energy security needs outweighing near-term cost pressures. This buying pattern indicates market sentiment remains constructive on LNG demand trajectory, even as pricing remains elevated.",
     "ts": "2026-06-07T13:11:32.350014+00:00"
+  },
+  "7d9661a05324b2b3": {
+    "text": "BHP is strategically pivoting toward copper as its core business, with the commodity now rivaling iron ore in significance—a shift that could reshape investor positioning in the diversified miner. The company is also advancing decarbonization efforts through biofuel trials for bulk carriers, while contract awards to suppliers signal operational continuity in a strengthening base metals market.",
+    "ts": "2026-06-07T13:22:59.956774+00:00"
+  },
+  "fa497c59767090db": {
+    "text": "Anglo American's coal exit and pending Teck merger are reshaping valuation dynamics for the diversified miner, while BHP's copper expansion is overtaking iron ore as a strategic growth lever—both shifts require operational reorientation toward higher-margin, lower-volume production profiles. Rio Tinto's automation and low-carbon aluminium investments signal competitive positioning around ESG-driven premiums, whereas MIND ID faces near-term headwinds as Jakarta gold prices soften, potentially pressuring cash generation from Indonesia's largest listed miner. For SEA trading operations, these moves suggest tightening supply of seaborne thermal coal, strengthening copper demand narratives, and differentiated pricing for low-carbon-certified metals.",
+    "ts": "2026-06-07T13:23:02.803422+00:00"
+  },
+  "7cdc4e01812c0e19": {
+    "text": "```json\n{\n  \"narrative\": \"Cross-sector signals this week point to accelerating portfolio rebalancing by major suppliers and consolidators, with direct implications for SEA trading houses on contract terms, compliance timelines, and margin structures. In energy, TotalEnergies' Arctic LNG 2 exit to Novatek and Woodside's dilution via GS Energy's Browse entry signal that large LNG players are actively shedding concentration risk, likely tightening available spot and mid-term contract windows for SEA buyers even as Pertamina's Mako gas development—anchored by Conrad's rig award—improves Indonesia's medium-term domestic supply outlook. PETRONAS's absorption of Aramco's Malaysian downstream stake is a structurally significant consolidation move that narrows independent traders' margin space in regional refining and potentially reshapes crude feedstock routing across the Malacca corridor. In metals, Anglo American's coal exit and BHP's copper pivot are compressing seaborne thermal coal availability while reinforcing a copper demand narrative that will pressure input costs for power and industrial offtakers, and Rio Tinto's low-carbon aluminium positioning previews a bifurcated pricing environment where ESG certification commands measurable premiums. Operationally, Danantara's June 1 export centralization in Indonesia creates the most immediate compliance urgency—trading counterparties with existing Indonesian commodity supply agreements must prioritize renegotiation timelines now to avoid contractual disruption across coal, minerals, and energy flows.\",\n  \"themes\": [\n    \"LNG supply risk rebalancing\",\n    \"Indonesia compliance urgency\",\n    \"Copper over coal pivot\",\n    \"Downstream consolidation margin squeeze\",\n    \"ESG premium bifurcation\"\n  ]\n}\n```",
+    "ts": "2026-06-07T13:23:12.598782+00:00"
+  },
+  "07361323613b76f9": {
+    "text": "Rio Tinto is leveraging automation and low-carbon aluminium production as strategic growth pillars to address valuation pressures in SEA commodity markets, despite recent analyst downgrades citing iron ore concerns. The company's digital and AI-driven automation initiatives represent a broader shift toward operational efficiency and sustainability in mining, positioning it to manage commodity price volatility while offsetting valuation headwinds. Meanwhile, PETRONAS and integrated energy players across the region—including PETRONAS Gas, MISC, and Velesto Energy—are similarly navigating digital transformation within the broader commodity and energy ecosystem, though specific automation or AI strategies remain less prominently featured in headline coverage compared to Rio Tinto's explicit technology push.",
+    "ts": "2026-06-07T13:23:16.057873+00:00"
+  },
+  "f9eb9b82846d7960": {
+    "text": "```json\n{\n  \"risks\": [\n    {\n      \"direction\": \"downside\",\n      \"text\": \"OPEC+ accelerated output unwind continues to add supply overhang, pressuring Brent and WTI benchmarks and weighing on SEA energy import costs — though downstream refiners in Singapore and Thailand may benefit from softer crude feedstock prices.\"\n    },\n    {\n      \"direction\": \"upside\",\n      \"text\": \"Shell's public signalling of sustained LNG demand growth, even amid Iran war volatility, reinforces a structurally tight LNG market outlook; SEA importers (Japan, South Korea, Philippines) face elevated spot LNG exposure if Middle East disruptions crimp Hormuz transit flows.\"\n    },\n    {\n      \"direction\": \"downside\",\n      \"text\": \"China's ongoing industrial slowdown and property-sector contraction continue to suppress base metals demand; the BHP contract award to Macro Metals (ASX: M4M) may reflect selective offtake rather than broad demand recovery, limiting near-term upside for copper and iron ore prices relevant to SEA steel and manufacturing sectors.\"\n    },\n    {\n      \"direction\": \"downside\",\n      \"text\": \"USD strength persists as a broad headwind across USD-denominated commodities, compressing margins for",
+    "ts": "2026-06-07T13:23:23.588333+00:00"
+  },
+  "64e34de23a99e6a6": {
+    "text": "The World Bank's May 2026 benchmark places crude oil at 1,130.0 USD/mt with flat momentum (+0.8% QoQ), suggesting underlying price stability despite today's 2.4% decline in Brent Crude to 93.09 USD/bbl. Market sentiment remains mixed, with geopolitical tensions around Iran and shifting U.S. policy creating volatility, though recent headlines indicate some stabilization as war escalation concerns ease.",
+    "ts": "2026-06-07T13:23:25.289020+00:00"
+  },
+  "83683a79654fdef7": {
+    "text": "The World Bank benchmark price for natural gas stands at 2.9 USD/MMBtu as of May 1, 2026, with a declining trend of -3.3% quarter-over-quarter, reflecting broader downward pressure in the energy market. Current live trading at Henry Hub shows continued weakness at 3.23 USD/MMBtu (-3.6% today), while geopolitical tensions in the Middle East and dollar strength are creating mixed directional signals for near-term price movement.",
+    "ts": "2026-06-07T13:23:27.015439+00:00"
+  },
+  "35f6518bef73a9d5": {
+    "text": "The World Bank benchmark price for copper stands at $13,483.8/mt with a +7.6% quarterly gain, signaling strengthening fundamentals despite today's 2.2% pullback in COMEX futures to $13,854.93/mt. This divergence suggests underlying demand resilience, though near-term sentiment remains cautious given intraday selling pressure.",
+    "ts": "2026-06-07T13:23:28.537396+00:00"
+  },
+  "52d55cb44d4dbb19": {
+    "text": "# Iron Ore Market Outlook\n\nThe World Bank's latest benchmark indicates iron ore prices at 111.6 USD/dmtu, up 3.8% quarter-over-quarter, reflecting strengthening demand fundamentals and supply constraints. This upward momentum is supported by continued infrastructure investment in China and recovering steel production globally, suggesting the bullish trend may persist in the near term.",
+    "ts": "2026-06-07T13:23:29.933512+00:00"
+  },
+  "c2a340bcf497b8a9": {
+    "text": "# LNG Market Outlook\n\nMarket sentiment reflects sustained demand resilience in Asia, particularly from India, which continues robust LNG purchases despite elevated pricing in 2026. The Japan/Korea marker futures show traders positioning for ongoing strength in regional LNG consumption, suggesting expectations for a structurally tight market environment.",
+    "ts": "2026-06-07T13:23:31.426965+00:00"
+  },
+  "ed0778d85108f7c4": {
+    "text": "Coal markets are showing continued focus on Australian thermal coal pricing benchmarks, with major producers like Yankuang actively referencing Newcastle and API5 indices as key pricing mechanisms. This suggests sustained global demand signals and standardized price discovery mechanisms remaining central to the thermal coal market's current operations.",
+    "ts": "2026-06-07T13:23:33.528846+00:00"
+  },
+  "b7a5f2b4ebc2a965": {
+    "text": "The World Bank benchmark price for aluminium stands at 3,654.0 USD/mt with a strong +8.3% quarter-over-quarter increase, signalling bullish fundamental momentum. Current live trading at 3,663.25 USD/t shows minimal daily weakness (-0.5%), reflecting resilient support near World Bank levels despite modest intraday profit-taking.",
+    "ts": "2026-06-07T13:23:35.375058+00:00"
+  },
+  "70219157a3e562b2": {
+    "text": "# Nickel Market Outlook\n\nThe World Bank reports nickel prices at $18,879.2 USD/mt as of May 1, 2026, up 10.6% quarter-over-quarter, signaling strengthening market fundamentals driven by rising EV battery demand and supply constraints. Current trading momentum reflects positive sentiment around decarbonization initiatives and tightening inventories, supporting the bullish price trajectory established by the World Bank benchmark.",
+    "ts": "2026-06-07T13:23:37.221751+00:00"
+  },
+  "e23642cd9f4eb979": {
+    "text": "# Palm Oil Market Outlook\n\nThe World Bank benchmark price stands at 1,130.0 USD/mt as of May 1, 2026, with a modest quarterly gain of 0.8% indicating stable market conditions amid flat broader sentiment. Price momentum remains subdued with limited directional catalysts, suggesting a consolidation phase in the near term absent significant supply disruptions or demand shifts.",
+    "ts": "2026-06-07T13:23:39.196851+00:00"
+  },
+  "f946b74620ddce2c": {
+    "text": "With silver dropping 5.2% today, how exposed is your hedging strategy to a prolonged precious metals correction, and does your current book position this as a risk or an opportunity?",
+    "ts": "2026-06-07T13:23:44.837087+00:00"
   }
 }
