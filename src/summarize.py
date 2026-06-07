@@ -196,12 +196,14 @@ def summarize_company(name: str, sector: str, headlines: list[str]) -> Optional[
 
 # ── Per-commodity outlook narrative (Haiku) ───────────────────────────────────
 
-def summarize_outlook(commodity: str, eia_text: str, wb_text: str, headlines: list[str]) -> Optional[str]:
+def summarize_outlook(commodity: str, eia_text: str, wb_text: str, headlines: list[str], price_context: str = "") -> Optional[str]:
     """2-sentence outlook narrative restating fetched forecasts. Never invents figures."""
     if _mode() == "heuristic" or not _client_available():
         return None
     haiku, _ = _models()
     sources = []
+    if price_context:
+        sources.insert(0, price_context)
     if eia_text:
         sources.append(f"EIA forecast: {eia_text}")
     if wb_text:
@@ -218,6 +220,39 @@ def summarize_outlook(commodity: str, eia_text: str, wb_text: str, headlines: li
         + "\n\nWrite only the 2-sentence narrative."
     )
     return _cached_call(prompt, haiku, 180)
+
+
+# ── Conversation starter (Sonnet) ─────────────────────────────────────────────
+
+def summarize_conversation_starter(context_items: list[str]) -> str:
+    """Generate one high-value opening question for a client call."""
+    if _mode() == "heuristic" or not _client_available():
+        return _heuristic_conversation_starter(context_items)
+    haiku, sonnet = _models()
+    context_str = "\n".join(f"- {c}" for c in context_items[:3])
+    prompt = (
+        "You are a Deloitte partner advising a commodity trading company. "
+        "Based on today's most significant market development below, write ONE sharp "
+        "opening question you would ask a client to start a strategic conversation. "
+        "The question should be specific, provoke strategic thinking, and reference "
+        "the actual event. Max 30 words.\n\n"
+        f"Today's key developments:\n{context_str}\n\n"
+        "Write only the question, no preamble."
+    )
+    result = _cached_call(prompt, sonnet, 80)
+    return result or _heuristic_conversation_starter(context_items)
+
+
+def _heuristic_conversation_starter(context_items: list[str]) -> str:
+    if not context_items:
+        return ""
+    top = context_items[0]
+    if "M&A" in top:
+        company = top.split("—")[0].replace("M&A:", "").strip()
+        return f"With the recent M&A activity at {company}, how is your integration risk framework positioned?"
+    if "Price" in top:
+        return f"Given today's price moves ({top.replace('Price: ', '')}), how are your hedge book assumptions holding up?"
+    return f"With {top.split('—')[0].strip()} in focus today, what's your current exposure and how are you positioned?"
 
 
 # ── Fundamentals balance read (Haiku) ─────────────────────────────────────────

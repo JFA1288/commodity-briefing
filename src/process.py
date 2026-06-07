@@ -117,6 +117,21 @@ def filter_relevant(items: list[NewsItem]) -> list[NewsItem]:
     return [i for i in items if is_relevant(i)]
 
 
+_COMMODITY_CORE_TERMS = frozenset([
+    "crude", "oil", "brent", "wti", "lng", "gas", "coal", "copper", "nickel",
+    "iron ore", "aluminium", "aluminum", "palm oil", "commodity", "commodities",
+    "energy", "price", "market", "trading", "refinery", "cargo", "shipment",
+    "opec", "supply", "demand", "production", "inventory", "futures", "barrel",
+    "tanker", "pipeline", "upstream", "downstream", "petrochemical",
+])
+
+
+def is_commodity_relevant(item: NewsItem) -> bool:
+    """Stricter check — requires a core commodity/market term, not just geo match."""
+    text = (item.title + " " + item.summary).lower()
+    return any(term in text for term in _COMMODITY_CORE_TERMS)
+
+
 # ── Recency filter ────────────────────────────────────────────────────────────
 
 def filter_recent(items: list[NewsItem], hours: Optional[int] = None) -> list[NewsItem]:
@@ -175,6 +190,13 @@ def classify_supply_demand(item: NewsItem) -> tuple[list[str], list[str]]:
 
 # ── Regulatory extraction ─────────────────────────────────────────────────────
 
+_POLICY_TERMS = frozenset([
+    "regulation", "policy", "ban", "export", "import", "tariff", "tax", "licence",
+    "license", "ministry", "government", "decree", "mandate", "compliance",
+    "sanction", "penalty", "fine", "law", "legislation", "approval", "permit",
+    "restriction", "quota", "subsidy", "reform", "announcement",
+])
+
 _JURISDICTION_TERMS = {
     "Indonesia": ["indonesia", "indonesian", "jakarta", "ojk", "esdm"],
     "Malaysia": ["malaysia", "malaysian", "kuala lumpur", "sc malaysia", "petronas"],
@@ -193,6 +215,10 @@ def extract_regulatory(items: list[NewsItem]) -> list[RegulatoryItem]:
     for item in items:
         text = (item.title + " " + item.summary).lower()
         if not any(kw.lower() in text for kw in reg_keywords):
+            continue
+
+        # Secondary check: must have at least one policy/legal keyword
+        if not any(t in text for t in _POLICY_TERMS):
             continue
 
         # Determine jurisdiction

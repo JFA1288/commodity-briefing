@@ -90,7 +90,10 @@ def _fetch_wb_indicator(indicator: str, mrv: int = 4) -> list[dict]:
         resp.raise_for_status()
         data = resp.json()
         if isinstance(data, list) and len(data) == 2:
-            return [d for d in (data[1] or []) if d.get("value") is not None]
+            rows = [d for d in (data[1] or []) if d.get("value") is not None]
+            if not rows:
+                print(f"  [fundamentals] World Bank {indicator}: no data rows returned")
+            return rows
         return []
     except Exception as exc:
         print(f"  [fundamentals] World Bank {indicator} error: {exc}")
@@ -135,8 +138,20 @@ def fetch_fred_fundamentals() -> list[FundamentalsItem]:
     results: list[FundamentalsItem] = []
     for commodity_name, series_id in _FRED_SERIES.items():
         try:
-            resp = httpx.get(_FRED_CSV, params={"id": series_id}, timeout=15, follow_redirects=True)
-            resp.raise_for_status()
+            resp = None
+            for attempt in range(2):
+                try:
+                    resp = httpx.get(_FRED_CSV, params={"id": series_id}, timeout=30, follow_redirects=True)
+                    resp.raise_for_status()
+                    break
+                except Exception as exc:
+                    if attempt == 1:
+                        print(f"  [fundamentals] FRED {series_id} error: {exc}")
+                        resp = None
+                    else:
+                        import time; time.sleep(3)
+            if resp is None:
+                continue
             reader = csv.reader(io.StringIO(resp.text))
             rows = [(r[0], r[1]) for r in reader if len(r) == 2 and r[1] not in (".", "VALUE", "")]
             if len(rows) < 2:

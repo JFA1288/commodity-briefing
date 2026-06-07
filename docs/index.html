@@ -208,6 +208,19 @@ h4{font-size:.9rem;font-weight:600;color:var(--text2)}
 .geo-meta{font-size:.68rem;color:var(--text3);margin-top:.15rem}
 .geo-age{font-size:.68rem;color:var(--text3);white-space:nowrap;padding-top:.1rem}
 
+/* ── Conversation starter ─────────────────────────────────────────────────── */
+.conv-starter{background:rgba(134,188,37,.08);border:1px solid rgba(134,188,37,.3);border-radius:var(--radius);padding:.9rem 1.1rem;margin-bottom:1rem;display:flex;align-items:flex-start;gap:.75rem}
+.conv-starter-icon{font-size:1.1rem;flex-shrink:0;margin-top:.05rem}
+.conv-starter-text{font-size:.87rem;color:var(--text);line-height:1.55;font-style:italic}
+
+/* ── Cross-portfolio alerts ───────────────────────────────────────────────── */
+.alert-card{background:var(--surface);border:1px solid rgba(239,83,80,.35);border-left:3px solid var(--dn);border-radius:var(--radius);padding:.85rem 1rem;margin-bottom:.6rem}
+.alert-card.medium{border-color:rgba(245,166,35,.35);border-left-color:var(--neutral)}
+.alert-card.low{border-color:var(--border);border-left-color:var(--text3)}
+.alert-title{font-size:.87rem;font-weight:600;color:var(--text);margin-bottom:.3rem}
+.alert-body{font-size:.8rem;color:var(--text2);line-height:1.5;margin-bottom:.4rem}
+.alert-companies{font-size:.72rem;color:var(--text3)}
+
 /* ── Archive ─────────────────────────────────────────────────────────────── */
 .archive-list{display:flex;flex-wrap:wrap;gap:.4rem}
 .archive-link{font-size:.75rem;padding:.3rem .65rem;background:var(--surface);border:1px solid var(--border);border-radius:4px;color:var(--text2)}
@@ -268,6 +281,7 @@ h4{font-size:.9rem;font-weight:600;color:var(--text2)}
   <div class="sidebar-nav">
     <div class="nav-section">Intelligence</div>
     <a class="nav-link" href="#exec-summary">Executive Summary</a>
+    <a class="nav-link" href="#cross-portfolio">Portfolio Alerts</a>
     <a class="nav-link" href="#macro">Macro &amp; Geopolitical</a>
     <a class="nav-link" href="#prices">Commodity Prices</a>
     <a class="nav-link" href="#outlook">Forecasts &amp; Outlook</a>
@@ -282,6 +296,7 @@ h4{font-size:.9rem;font-weight:600;color:var(--text2)}
     <a class="nav-link" href="#trading">Trading</a>
     <div class="nav-section">More</div>
     <a class="nav-link" href="#regulatory">Regulatory &amp; Policy</a>
+    <a class="nav-link" href="#reg-spotlight">Reg Spotlight</a>
     <a class="nav-link" href="#archive">Archive</a>
   </div>
   <div class="sidebar-footer">
@@ -306,6 +321,15 @@ h4{font-size:.9rem;font-weight:600;color:var(--text2)}
       <span class="section-meta">Today's key signals</span>
     </div>
     <div id="exec-body"><div class="card card-sm" style="color:var(--text3);font-size:.82rem">Loading…</div></div>
+  </section>
+
+  <section class="section" id="cross-portfolio">
+    <div class="section-header">
+      <span class="section-icon">⚡</span>
+      <span class="section-title">Cross-Portfolio Alerts</span>
+      <span class="section-meta">Shared exposures</span>
+    </div>
+    <div id="cross-portfolio-body"></div>
   </section>
 
   <section class="section" id="macro">
@@ -417,6 +441,16 @@ h4{font-size:.9rem;font-weight:600;color:var(--text2)}
     <div id="reg-body"></div>
   </section>
 
+  <section class="section" id="reg-spotlight">
+    <div class="section-header">
+      <span class="section-icon">📋</span>
+      <span class="section-title">Regulatory Spotlight</span>
+      <span class="section-meta">High-impact policy</span>
+      <button class="collapse-btn" onclick="toggleSection('reg-spotlight-body',this)">collapse</button>
+    </div>
+    <div id="reg-spotlight-body"></div>
+  </section>
+
   <section class="section" id="archive">
     <div class="section-header">
       <span class="section-icon">▤</span>
@@ -455,9 +489,12 @@ function driverTags(drivers){if(!drivers||!drivers.length)return '';return drive
 function sectorClass(s){return{energy:'sector-energy',metals_mining:'sector-metals',power_utilities:'sector-power',trading:'sector-trading'}[s]||'flag'}
 
 // ── 1. Executive Summary ──────────────────────────────────────────────────────
-function renderExecSummary(bullets,brief){
+function renderExecSummary(bullets,brief,convStarter){
   const el=document.getElementById('exec-body');
   let html='';
+  if(convStarter){
+    html+=`<div class="conv-starter"><span class="conv-starter-icon">💬</span><span class="conv-starter-text">${esc(convStarter)}</span></div>`;
+  }
   if(bullets&&bullets.length){
     html+='<div class="card"><ul class="exec-bullets">';
     bullets.forEach(b=>{html+=`<li>${esc(b)}</li>`});
@@ -515,7 +552,8 @@ function renderPrices(prices,heatmap,correlations){
       const sign=p.change_pct!=null&&p.change_pct>0?'+':'';
       const pv=p.price!=null?p.price.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}):'—';
       const qb=p.quality&&p.quality!=='market'?`<span class="tag quality-${p.quality}" style="font-size:.6rem">${p.quality}</span>`:'';
-      html+=`<div class="price-card"><div class="price-name">${esc(p.display)}</div><div class="price-val">${pv}<span class="price-unit">${esc(p.unit)}</span></div><div class="price-chg ${cc}">${p.change_pct!=null?sign+p.change_pct.toFixed(2)+'%':'—'}</div><div class="price-source">${esc(p.source)} ${qb}</div></div>`;
+      const chg30=p.change_pct_30d!=null?`<span style="font-size:.65rem;color:var(--text3);margin-left:.4rem">${p.change_pct_30d>0?'+':''}${p.change_pct_30d.toFixed(1)}% 30d</span>`:''
+      html+=`<div class="price-card"><div class="price-name">${esc(p.display)}</div><div class="price-val">${pv}<span class="price-unit">${esc(p.unit)}</span></div><div class="price-chg ${cc}">${p.change_pct!=null?sign+p.change_pct.toFixed(2)+'%':'—'}${chg30}</div><div class="price-source">${esc(p.source)} ${qb}</div></div>`;
     });
     html+='</div>';
   });
@@ -627,18 +665,33 @@ function renderRisksEvents(risks,events){
   const re=document.getElementById('risks-body');
   const ee=document.getElementById('events-body');
   if(risks&&risks.length){
-    let h='<h3 style="font-size:.85rem;margin-bottom:.6rem">Risks to Watch</h3><div class="risk-list">';
-    risks.forEach(r=>{h+=`<div class="risk-item"><span class="risk-dir ${r.direction||'downside'}">${esc(r.direction||'downside')}</span><span class="risk-text">${esc(r.text)}</span></div>`});
-    re.innerHTML=h+'</div>';
+    const triggered=risks.filter(r=>r.triggered!==false);
+    const standing=risks.filter(r=>r.triggered===false);
+    let h='';
+    if(triggered.length){
+      h+='<h3 style="font-size:.85rem;margin-bottom:.5rem">Triggered Risk Signals</h3><div class="risk-list">';
+      triggered.forEach(r=>{h+=`<div class="risk-item"><span class="risk-dir ${r.direction||'downside'}">${esc(r.direction||'downside')}</span><span class="risk-text">${esc(r.text)}</span></div>`});
+      h+='</div>';
+    }
+    if(standing.length){
+      h+=`<h3 style="font-size:.85rem;margin:${triggered.length?'1rem':'0'} 0 .5rem;color:var(--text3)">Standing Risks</h3><div class="risk-list">`;
+      standing.forEach(r=>{h+=`<div class="risk-item" style="opacity:.7"><span class="risk-dir ${r.direction||'downside'}">${esc(r.direction||'downside')}</span><span class="risk-text">${esc(r.text)}</span></div>`});
+      h+='</div>';
+    }
+    if(!triggered.length&&!standing.length)h='<div style="color:var(--text3);font-size:.82rem;padding:.4rem 0">No risk signals today.</div>';
+    re.innerHTML=h;
   }else{
     re.innerHTML='<div style="color:var(--text3);font-size:.82rem;padding:.4rem 0">No triggered risk signals today. Standing risks apply.</div>';
   }
+  const eventIcons={fomc:'🏦',iea:'📊',earnings:'📈',lme:'⚙',opec:'🛢',regulatory:'⚖',default:'📅'};
+  function eventIcon(type){return eventIcons[type]||eventIcons.default}
   if(events&&events.length){
     let h='<h3 style="font-size:.85rem;margin:1rem 0 .6rem">Events Calendar</h3><div class="events-list">';
     events.forEach(e=>{
       const uc=e.upcoming?' upcoming':'';
       const rel=(e.related&&e.related.length)?e.related.slice(0,3).map(esc).join(', '):'';
-      h+=`<div class="event-item${uc}"><span class="event-date">${esc(e.date)}</span><div><div class="event-title">${esc(e.title)}${e.upcoming?' <span class="tag upcoming">this week</span>':''}</div>${rel?`<div class="event-related">${rel}</div>`:''}</div></div>`;
+      const icon=eventIcon(e.type);
+      h+=`<div class="event-item${uc}"><span class="event-date">${esc(e.date)}</span><div><div class="event-title"><span style="margin-right:.35rem">${icon}</span>${esc(e.title)}${e.upcoming?' <span class="tag upcoming">this week</span>':''}</div>${rel?`<div class="event-related">${rel}</div>`:''}</div></div>`;
     });
     ee.innerHTML=h+'</div>';
   }else{
@@ -669,7 +722,11 @@ function renderCompanies(companies,sector,bodyId){
     html+=`<div class="company-card"><div class="company-name">${esc(co.name)}</div><div class="company-meta">${esc(co.country||'')} ${co.ticker?`<span class="company-ticker">${esc(co.ticker)}</span>`:''} ${st}</div>`;
     if(co.summary)html+=`<div class="company-summary">${esc(co.summary)}</div>`;
     const items=co.items||[];
-    if(!items.length){html+='<div class="company-no-news">No flagged news in last 36h.</div>'}
+    if(!items.length){
+      const liner=co.one_liner||'';
+      html+=`<div class="company-no-news">No flagged news in last 7 days.</div>`;
+      if(liner)html+=`<div style="font-size:.75rem;color:var(--text3);margin-top:.4rem;line-height:1.5">${esc(liner)}</div>`;
+    }
     else{
       html+='<div>';
       items.forEach(item=>{html+=`<div class="company-item"><a href="${esc(item.url)}" target="_blank" rel="noopener">${esc(item.title)}</a><div class="company-item-meta"><span>${esc(item.source)}</span><span>${fmtAge(item.age_h)}</span>${flagTags(item.flags)}${driverTags(item.drivers)}</div></div>`});
@@ -698,7 +755,33 @@ function renderRegulatory(regulatory){
   el.innerHTML=html;
 }
 
-// ── 14. Archive ───────────────────────────────────────────────────────────────
+// ── 14. Cross-portfolio alerts ────────────────────────────────────────────────
+function renderCrossPortfolio(alerts){
+  const el=document.getElementById('cross-portfolio-body');
+  if(!alerts||!alerts.length){el.innerHTML='<div style="color:var(--text3);font-size:.82rem;padding:.4rem 0">No cross-portfolio exposures detected today.</div>';return}
+  let html='';
+  alerts.forEach(a=>{
+    const sev=a.severity||'low';
+    html+=`<div class="alert-card ${sev}"><div class="alert-title">${esc(a.title||'Shared Exposure')}</div>`;
+    if(a.description)html+=`<div class="alert-body">${esc(a.description)}</div>`;
+    if(a.companies&&a.companies.length)html+=`<div class="alert-companies">Affected: ${a.companies.map(esc).join(' · ')}</div>`;
+    html+='</div>';
+  });
+  el.innerHTML=html;
+}
+
+// ── 15. Regulatory Spotlight ──────────────────────────────────────────────────
+function renderRegSpotlight(spotlight){
+  const el=document.getElementById('reg-spotlight-body');
+  if(!spotlight||!spotlight.length){el.innerHTML='<div style="color:var(--text3);font-size:.82rem;padding:.5rem 0">No high-impact regulatory items today.</div>';return}
+  let html='';
+  spotlight.forEach(r=>{
+    html+=`<div class="reg-item" style="border-left:3px solid var(--accent);margin-bottom:.6rem"><div class="reg-title"><a href="${esc(r.url||'#')}" target="_blank" rel="noopener">${esc(r.title)}</a></div><div class="reg-meta"><span class="tag flag">${esc(r.jurisdiction||'')}</span>${r.source?`<span>${esc(r.source)}</span>`:''}${(r.commodities||[]).length?`<span>Commodities: ${r.commodities.map(esc).join(', ')}</span>`:''}</div></div>`;
+  });
+  el.innerHTML=html;
+}
+
+// ── 16. Archive ───────────────────────────────────────────────────────────────
 function renderArchive(entries){
   const el=document.getElementById('archive-body');
   if(!entries||!entries.length){el.innerHTML='<div style="color:var(--text3);font-size:.82rem">No archive entries yet.</div>';return}
@@ -720,7 +803,8 @@ async function load(){
   document.getElementById('sidebar-ts').textContent=ts?ts.toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'}):'';
   document.title=`Commodity Trading — Sector Intelligence${ts?' | '+ts.toLocaleDateString('en-GB',{day:'2-digit',month:'short'}):''}`;
 
-  renderExecSummary(data.exec_summary,data.executive_brief);
+  renderExecSummary(data.exec_summary,data.executive_brief,data.conversation_starter);
+  renderCrossPortfolio(data.cross_portfolio_alerts);
   renderMacro(data.macro);
   renderPrices(data.prices,data.heatmap,data.correlations);
   renderOutlook(data.outlook);
@@ -733,6 +817,7 @@ async function load(){
   renderCompanies(data.companies,'power_utilities','power-body');
   renderCompanies(data.companies,'trading','trading-body');
   renderRegulatory(data.regulatory);
+  renderRegSpotlight(data.regulatory_spotlight);
   renderArchive(archive);
 
   // Active nav

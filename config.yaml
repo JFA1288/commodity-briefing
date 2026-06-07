@@ -80,7 +80,7 @@ companies:
     sector: energy
     ticker: XOM
     one_liner: "US supermajor with significant upstream and chemicals exposure across SEA."
-    search_query: '"ExxonMobil" trading OR "ExxonMobil" Singapore OR "ExxonMobil" Asia OR "Exxon" LNG'
+    search_query: '"ExxonMobil" trading OR "ExxonMobil" Asia OR "Exxon" LNG OR "ExxonMobil" refinery OR "ExxonMobil" Singapore'
 
   - name: Chevron
     aliases: [Chevron, "Chevron Corporation"]
@@ -112,7 +112,7 @@ companies:
     sector: energy
     ticker: ""
     one_liner: "Trading subsidiary of Saudi Aramco; crude and products marketing across Asia."
-    search_query: '"Aramco Trading" OR "Saudi Aramco" trading OR "Saudi Aramco" Singapore OR "Saudi Aramco" Asia'
+    search_query: '"Aramco Trading" OR "Saudi Aramco" Asia OR "Saudi Aramco" crude OR "Saudi Aramco" LNG OR "Aramco" Singapore'
 
   - name: BHP
     aliases: [BHP, "BHP Group", "BHP Billiton"]
@@ -136,7 +136,7 @@ companies:
     sector: metals_mining
     ticker: AAL.L
     one_liner: "Diversified global miner; platinum, copper, iron ore, and steelmaking coal."
-    search_query: '"Anglo American" trading OR "Anglo American" Singapore OR "Anglo American" commodity OR "Anglo American" metals'
+    search_query: '"Anglo American" mining OR "Anglo American" copper OR "Anglo American" iron OR "Anglo American" commodity'
 
   - name: MIND ID
     aliases: ["MIND ID", ANTAM, "Aneka Tambang", "Bukit Asam", PTBA, Timah]
@@ -160,7 +160,7 @@ companies:
     sector: power_utilities
     ticker: PTT.BK
     one_liner: "Thai national oil and gas company; upstream, downstream, LNG, and petrochemicals."
-    search_query: '"PTT" trading OR "PTT" Singapore OR "PTT" LNG OR "PTT Group" commodity'
+    search_query: '"PTT Group" OR "PTT Thailand" OR "PTT Public" LNG OR "PTT" energy OR "PTT" commodity'
 
   - name: Pertamina
     aliases: [Pertamina, "PT Pertamina"]
@@ -168,7 +168,7 @@ companies:
     sector: power_utilities
     ticker: ""
     one_liner: "Indonesian national oil company; refining, upstream, and trading operations."
-    search_query: '"Pertamina" trading OR "Pertamina" Singapore OR "Pertamina" LNG OR "Pertamina" commodity'
+    search_query: '"Pertamina" oil OR "Pertamina" gas OR "Pertamina" refinery OR "Pertamina" LNG OR "Pertamina" Indonesia'
 
   - name: EGAT
     aliases: [EGAT, "Electricity Generating Authority of Thailand"]
@@ -176,7 +176,7 @@ companies:
     sector: power_utilities
     ticker: ""
     one_liner: "Thailand's state electricity authority; power generation, grid, and renewable projects."
-    search_query: '"EGAT" LNG OR "EGAT" power OR "EGAT" trading OR "Electricity Generating Authority"'
+    search_query: '"EGAT" power OR "EGAT" Thailand OR "Electricity Generating Authority" OR "EGAT" energy OR "EGAT" coal'
 
   - name: Mercuria
     aliases: [Mercuria, "Mercuria Energy"]
@@ -184,7 +184,7 @@ companies:
     sector: trading
     ticker: ""
     one_liner: "Swiss-origin independent commodity trading house; energy and metals trading globally."
-    search_query: '"Mercuria" OR "Mercuria Energy" trading OR "Mercuria" Singapore'
+    search_query: '"Mercuria" commodity OR "Mercuria" trading OR "Mercuria" oil OR "Mercuria" energy OR "Mercuria" metals'
 
   - name: Cargill Asia
     aliases: [Cargill, "Cargill Asia", "Cargill Singapore"]
@@ -200,7 +200,7 @@ companies:
     sector: trading
     ticker: ""
     one_liner: "Malaysian national oil company; major LNG exporter, upstream, and trading arm."
-    search_query: '"PETRONAS" trading OR "Petronas" LNG OR "Petronas" Singapore OR "PTLSB"'
+    search_query: '"PETRONAS" LNG OR "PETRONAS" crude OR "PETRONAS" Malaysia OR "PETRONAS" gas OR "PETRONAS" energy'
 
   - name: Danantara
     aliases: [Danantara, "Danantara Indonesia", "BPI Danantara"]
@@ -285,7 +285,9 @@ commodities:
     group: natgas_lng
     yfinance_ticker: ""
     quality: indicative
-    note: "Asian LNG spot marker — no free real-time ticker; web-sourced"
+    tradingview_symbol: "NYMEX:NG1!"
+    investing_url: "https://www.investing.com/commodities/natural-gas"
+    note: "Asian LNG spot marker — no free real-time ticker; Henry Hub proxy via TradingView"
 
   - id: newcastle_coal
     display: "Newcastle Coal"
@@ -293,6 +295,8 @@ commodities:
     group: coal
     yfinance_ticker: ""
     quality: indicative
+    tradingview_symbol: "ICEEUR:MTF1!"
+    investing_url: "https://www.investing.com/commodities/coal"
     note: "Thermal coal benchmark — web-sourced"
 
   - id: iron_ore
@@ -301,7 +305,9 @@ commodities:
     group: base_metals
     yfinance_ticker: ""
     quality: indicative
-    note: "No free real-time ticker — web-sourced"
+    tradingview_symbol: "SGX:FEF1!"
+    investing_url: "https://www.investing.com/indices/iron-ore-62-fe-cfr-futures"
+    note: "No free real-time ticker — SGX futures via TradingView"
 
   - id: nickel
     display: "Nickel (LME)"
@@ -309,6 +315,8 @@ commodities:
     group: base_metals
     yfinance_ticker: "NI=F"
     quality: market
+    tradingview_symbol: "LME:NI1!"
+    investing_url: "https://www.investing.com/commodities/nickel"
 
   - id: palm_oil
     display: "Palm Oil (BMD)"
@@ -316,6 +324,8 @@ commodities:
     group: agri
     yfinance_ticker: "FCPO.KL"
     quality: indicative
+    tradingview_symbol: "MYX:FCPO1!"
+    investing_url: "https://www.investing.com/commodities/palm-oil"
     note: "BMD crude palm oil futures — may have data gaps"
 
 # ── Macro tickers ─────────────────────────────────────────────────────────────
@@ -611,6 +621,62 @@ events:
     recurrence: monthly
     type: report
     related: [Brent Crude, WTI Crude, Henry Hub Gas]
+
+  # IEA Oil Market Report (monthly, typically 2nd week)
+  - title: "IEA Oil Market Report"
+    type: iea
+    date: "2026-06-11"
+    related: [Crude Oil, Natural Gas, LNG]
+
+  # FOMC meetings
+  - title: "FOMC Rate Decision"
+    type: fomc
+    date: "2026-06-18"
+    related: [USD, Crude Oil, Metals]
+
+  - title: "FOMC Rate Decision"
+    type: fomc
+    date: "2026-07-30"
+    related: [USD, Crude Oil, Metals]
+
+  # World Bank Commodity Markets Outlook (quarterly)
+  - title: "World Bank Commodity Markets Outlook"
+    type: world_bank
+    date: "2026-07-01"
+    related: [Crude Oil, Copper, Iron Ore, Coal]
+
+  # LME Week
+  - title: "LME Week London"
+    type: conference
+    date: "2026-10-12"
+    related: [Copper, Nickel, Aluminium, Iron Ore]
+
+  # Key earnings (approximate Q2 2026)
+  - title: "BHP Q4 FY2026 Results"
+    type: earnings
+    date: "2026-08-19"
+    related: [BHP, Iron Ore, Copper, Coal]
+
+  - title: "Rio Tinto Q2 2026 Production Report"
+    type: earnings
+    date: "2026-07-15"
+    related: [Rio Tinto, Iron Ore, Copper, Aluminium]
+
+  - title: "Shell Q2 2026 Results"
+    type: earnings
+    date: "2026-07-31"
+    related: [Shell, Crude Oil, LNG, Natural Gas]
+
+  - title: "TotalEnergies Q2 2026 Results"
+    type: earnings
+    date: "2026-07-24"
+    related: [TotalEnergies Trading Asia, Crude Oil, LNG]
+
+  # Indonesia Danantara DSI export regime
+  - title: "Indonesia DSI Commodity Export Centralisation — Phase 2 Review"
+    type: regulatory
+    date: "2026-07-01"
+    related: [Danantara, MIND ID, Coal, Palm Oil, Nickel]
 
 # ── Service lines ─────────────────────────────────────────────────────────────
 service_lines:

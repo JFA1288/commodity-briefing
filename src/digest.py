@@ -32,7 +32,7 @@ from .models import (
     WatchBullet,
     WeeklyBrief,
 )
-from .process import detect_triggers
+from .process import detect_triggers, is_commodity_relevant
 
 # ── Consulting signal labels ──────────────────────────────────────────────────
 
@@ -148,6 +148,7 @@ def build_company_digests(company_news: dict[str, list[NewsItem]]) -> list[Compa
 
         headlines = [i.title for i in ranked]
         summary = summarize_company(name, meta.get("sector", ""), headlines) or "" if ranked else ""
+        last_news_date = ranked[0].published.strftime("%Y-%m-%d") if ranked and ranked[0].published else None
 
         digests_by_name[name] = CompanyDigest(
             name=name,
@@ -157,6 +158,8 @@ def build_company_digests(company_news: dict[str, list[NewsItem]]) -> list[Compa
             items=ranked,
             flags=all_flags,
             summary=summary,
+            last_news_date=last_news_date,
+            one_liner=meta.get("one_liner", ""),
         )
 
     # Include ALL configured companies even those with no news
@@ -170,7 +173,8 @@ def build_company_digests(company_news: dict[str, list[NewsItem]]) -> list[Compa
                 ticker=c.get("ticker", ""),
                 items=[],
                 flags=[],
-                summary="",
+                summary=c.get("one_liner", ""),  # use one_liner as standing context
+                one_liner=c.get("one_liner", ""),
             )
 
     return sorted(digests_by_name.values(), key=lambda d: (d.sector, d.name))
@@ -336,6 +340,9 @@ def top_headlines(
         if key not in seen:
             seen.add(key)
             unique.append(item)
+
+    # Second relevance pass — require a core commodity/market term
+    unique = [item for item in unique if is_commodity_relevant(item)]
 
     n = config.get("news", {}).get("top_headlines_count", 15)
     return sorted(unique, key=lambda x: x.score, reverse=True)[:n]
@@ -611,9 +618,19 @@ def build_market_themes(
 
 # ── Outlook items ─────────────────────────────────────────────────────────────
 
+_COMMODITY_ALIASES = {
+    "Crude Oil":   ["crude", "wti", "brent", "oil price", "barrel"],
+    "Natural Gas": ["natural gas", "natgas", "henry hub", "gas price", "lng"],
+    "Copper":      ["copper", "base metals", "lme copper", "comex copper"],
+    "Iron Ore":    ["iron ore", "iron", "ferrous", "62% fe", "steel"],
+    "LNG":         ["lng", "liquefied natural gas", "jkm", "lng price", "gas cargo"],
+}
+
+
 def build_outlook(
     commodity_news: dict[str, list[NewsItem]],
     fundamentals: list[FundamentalsItem],
+    prices: list = None,
 ) -> list[OutlookItem]:
     from .summarize import summarize_outlook
 
@@ -639,17 +656,27 @@ def build_outlook(
         from datetime import datetime, timedelta, timezone as _tz
         _cutoff = datetime.now(_tz.utc) - timedelta(days=7)
         headlines: list[dict] = []
+        aliases = _COMMODITY_ALIASES.get(comm_name, [comm_name.lower().split()[0]])
         for group_id, items in commodity_news.items():
             for item in items:
                 if item.published is not None and item.published < _cutoff:
                     continue
                 text = (item.title + " " + item.summary).lower()
-                if comm_name.lower().split()[0] in text:
+                if any(alias in text for alias in aliases):
                     headlines.append({"title": item.title, "source": item.source, "url": item.url})
         headlines = headlines[:3]
 
+        # Find live price for this commodity
+        price_context = ""
+        for p in (prices or []):
+            if any(alias in p.display.lower() for alias in aliases):
+                if p.price:
+                    change_str = f" ({p.change_pct:+.1f}% today)" if p.change_pct else ""
+                    price_context = f"Live price: {p.display} at {p.price:.2f} {p.unit}{change_str}"
+                    break
+
         headline_texts = [h["title"] for h in headlines]
-        narrative = summarize_outlook(comm_name, eia_text, wb_text, headline_texts) or ""
+        narrative = summarize_outlook(comm_name, eia_text, wb_text, headline_texts, price_context=price_context) or ""
 
         # Determine consensus direction from news sentiment
         direction = "neutral"
@@ -714,8 +741,12 @@ def build_risks(
 
     # Heuristic fallback: standing risks + triggered
     risks: list[RiskItem] = [RiskItem(direction=r["direction"], text=r["text"]) for r in standing]
-    for t in triggered:
-        risks.append(RiskItem(direction="downside", text=t))
+    # Convert news signals to risk statements (strip "Geopolitical signal: " prefix)
+    for t in triggered[:3]:
+        text = t.replace("Geopolitical signal: ", "").replace(" - ", " — ")
+        # Only include if it's a proper statement, not just a headline
+        if len(text) > 20:
+            risks.append(RiskItem(direction="downside", text=text[:150]))
 
     return risks[:8]
 
@@ -772,6 +803,64 @@ def build_events(generated_at: datetime) -> list[EventItem]:
 
     results.sort(key=lambda e: e.date)
     return results[:15]
+
+
+# ── Cross-portfolio alert ─────────────────────────────────────────────────────
+
+def _build_cross_portfolio_alert(company_digests: list[CompanyDigest], prices: list[PriceRecord]) -> list[dict]:
+    """Identify shared exposures across 3+ portfolio companies."""
+    alerts = []
+    # Find companies sharing geopolitical exposure
+    geo_exposed = [d.name for d in company_digests if "geopolitical" in d.flags]
+    if len(geo_exposed) >= 3:
+        alerts.append({
+            "type": "cross_portfolio",
+            "companies": geo_exposed[:5],
+            "text": f"{len(geo_exposed)} portfolio companies share geopolitical exposure — consider coordinated briefing.",
+            "signal": "geopolitical"
+        })
+    # Find companies sharing M&A signal
+    ma_exposed = [d.name for d in company_digests if "ma" in d.flags]
+    if len(ma_exposed) >= 2:
+        alerts.append({
+            "type": "cross_portfolio",
+            "companies": ma_exposed[:5],
+            "text": f"M&A activity across {len(ma_exposed)} accounts ({', '.join(ma_exposed[:3])}) — potential transaction advisory pipeline.",
+            "signal": "ma"
+        })
+    return alerts
+
+
+# ── Conversation starter ──────────────────────────────────────────────────────
+
+def build_conversation_starter(headlines: list[NewsItem], company_digests: list[CompanyDigest], prices: list[PriceRecord]) -> str:
+    """Generate one high-value opening question for a client call."""
+    from .summarize import summarize_conversation_starter
+    # Find the most significant single development
+    top_ma = next((d for d in company_digests if "ma" in d.flags and d.items), None)
+    top_geo = next((d for d in company_digests if "geopolitical" in d.flags and d.items), None)
+    biggest_mover = max((p for p in prices if p.change_pct), key=lambda p: abs(p.change_pct), default=None)
+
+    context = []
+    if top_ma and top_ma.items:
+        context.append(f"M&A: {top_ma.name} — {top_ma.items[0].title}")
+    if top_geo and top_geo.items:
+        context.append(f"Geopolitical: {top_geo.name} — {top_geo.items[0].title}")
+    if biggest_mover and biggest_mover.change_pct:
+        context.append(f"Price: {biggest_mover.display} {biggest_mover.change_pct:+.1f}%")
+
+    if not context:
+        return ""
+    return summarize_conversation_starter(context)
+
+
+# ── Regulatory spotlight ──────────────────────────────────────────────────────
+
+def _build_regulatory_spotlight(regulatory: list[RegulatoryItem]) -> list[RegulatoryItem]:
+    """Return only genuine policy/law events, prioritising Indonesia/Malaysia/SEA."""
+    priority_jurisdictions = {"Indonesia", "Malaysia", "Thailand", "Singapore", "Regional / Global"}
+    spotlight = [r for r in regulatory if r.jurisdiction in priority_jurisdictions]
+    return spotlight[:5]
 
 
 # ── Exec summary ──────────────────────────────────────────────────────────────
@@ -1041,7 +1130,7 @@ def build_digest(
     market_themes = build_market_themes(all_news_items, company_news)
     risks = build_risks(company_news, prices)
     events = build_events(now)
-    outlook = build_outlook(commodity_news, eia_fundamentals)
+    outlook = build_outlook(commodity_news, eia_fundamentals, prices=prices)
     exec_summary = build_exec_summary(prices, headlines, market_themes, risks)
 
     # Heatmap & correlation
@@ -1059,6 +1148,15 @@ def build_digest(
     account_briefs = build_account_briefs(company_news, opportunity_radar)
     sector_themes = build_sector_themes(opportunity_radar)
     weekly_brief = build_weekly_brief(opportunity_radar, account_briefs, sector_themes, now)
+
+    # Cross-portfolio alerts
+    cross_portfolio_alerts = _build_cross_portfolio_alert(company_digests, prices)
+
+    # Conversation starter
+    conversation_starter = build_conversation_starter(headlines, company_digests, prices)
+
+    # Regulatory spotlight
+    regulatory_spotlight = _build_regulatory_spotlight(regulatory)
 
     return DailyDigest(
         generated_at=now,
@@ -1084,4 +1182,7 @@ def build_digest(
         regulatory=regulatory,
         heatmap=heatmap,
         correlations=correlations,
+        cross_portfolio_alerts=cross_portfolio_alerts,
+        conversation_starter=conversation_starter,
+        regulatory_spotlight=regulatory_spotlight,
     )

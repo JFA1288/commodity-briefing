@@ -58,8 +58,63 @@ def _extract_price_from_text(text: str) -> Optional[float]:
     return None
 
 
+def _investing_com_price(url: str) -> Optional[float]:
+    """Scrape last price from an Investing.com instrument page."""
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
+        "Accept": "text/html,application/xhtml+xml",
+        "Accept-Language": "en-US,en;q=0.9",
+        "Referer": "https://www.google.com/",
+    }
+    try:
+        resp = httpx.get(url, headers=headers, timeout=20, follow_redirects=True)
+        if resp.status_code != 200:
+            return None
+        # Pattern 1: data-test attribute
+        m = re.search(r'data-test="instrument-price-last"[^>]*>([0-9,]+\.?[0-9]*)', resp.text)
+        if m:
+            return float(m.group(1).replace(",", ""))
+        # Pattern 2: json-ld or meta price
+        m = re.search(r'"price"\s*:\s*"?([0-9]+\.?[0-9]*)"?', resp.text[:10000])
+        if m:
+            val = float(m.group(1))
+            if val > 0:
+                return val
+        # Pattern 3: og:description
+        m = re.search(r'<meta[^>]+property="og:description"[^>]+content="([^"]*)"', resp.text)
+        if m:
+            price = _extract_price_from_text(m.group(1))
+            if price:
+                return price
+    except Exception as exc:
+        print(f"    [prices] investing.com error for {url}: {exc}")
+    return None
+
+
+def _tradingview_price(symbol: str) -> Optional[float]:
+    """Fetch last price from TradingView's public symbol-overview endpoint."""
+    try:
+        resp = httpx.get(
+            "https://symbol-overview.tradingview.com/symbol_overview",
+            params={"symbols": symbol, "fields": "close,lp,last_close"},
+            headers={"User-Agent": "Mozilla/5.0", "Origin": "https://www.tradingview.com"},
+            timeout=15,
+            follow_redirects=True,
+        )
+        if resp.status_code == 200:
+            data = resp.json()
+            if isinstance(data, list) and data:
+                item = data[0]
+                price = item.get("lp") or item.get("close") or item.get("last_close")
+                if price:
+                    return float(price)
+    except Exception as exc:
+        print(f"    [prices] TradingView error for {symbol}: {exc}")
+    return None
+
+
 def _web_fallback(commodity: dict) -> tuple[Optional[float], str]:
-    """DuckDuckGo HTML search for an indicative price."""
+    """DuckDuckGo HTML search for an indicative price (last resort)."""
     query = commodity.get("web_search_query", "")
     if not query:
         return None, "unavailable"
@@ -105,6 +160,28 @@ def fetch_all() -> list[PriceRecord]:
                 source = "yfinance"
             else:
                 print(f"  [prices] yfinance no data for {ticker} ({cid}), trying web fallback")
+
+        if price is None:
+            tv_symbol = c.get("tradingview_symbol", "")
+            if tv_symbol:
+                tv_price = _tradingview_price(tv_symbol)
+                if tv_price is not None:
+                    price = tv_price
+                    source = "tradingview"
+                    as_of = datetime.now(timezone.utc)
+                    quality = "indicative"
+                    print(f"  [prices] {cid}: indicative price {price} (TradingView)")
+
+        if price is None:
+            inv_url = c.get("investing_url", "")
+            if inv_url:
+                inv_price = _investing_com_price(inv_url)
+                if inv_price is not None:
+                    price = inv_price
+                    source = "investing.com"
+                    as_of = datetime.now(timezone.utc)
+                    quality = "indicative"
+                    print(f"  [prices] {cid}: indicative price {price} (Investing.com)")
 
         if price is None:
             price, source = _web_fallback(c)

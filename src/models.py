@@ -34,6 +34,7 @@ class PriceRecord(BaseModel):
     price: Optional[float] = None
     prev_close: Optional[float] = None
     change_pct: Optional[float] = None
+    change_pct_30d: Optional[float] = None   # 30-day price change %
     source: str = "yfinance"
     quality: str = "market"   # "market" | "indicative" | "web"
     as_of: Optional[datetime] = None
@@ -134,6 +135,8 @@ class CompanyDigest(BaseModel):
     flags: list[str] = Field(default_factory=list)
     highlight: str = ""
     summary: str = ""   # Claude-written 1-2 sentence synthesis
+    last_news_date: Optional[str] = None   # ISO date of most recent news item
+    one_liner: str = ""                    # standing context from config
 
 
 class CommodityDigest(BaseModel):
@@ -263,3 +266,6 @@ class DailyDigest(BaseModel):
     regulatory: list[RegulatoryItem] = Field(default_factory=list)
     heatmap: Optional[HeatmapData] = None
     correlations: Optional[CorrelationData] = None
+    cross_portfolio_alerts: list[dict] = Field(default_factory=list)
+    conversation_starter: str = ""
+    regulatory_spotlight: list[RegulatoryItem] = Field(default_factory=list)
