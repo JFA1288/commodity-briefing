@@ -373,6 +373,22 @@ supplementary_feeds:
     url: "https://www.spglobal.com/commodityinsights/en/rss-feed/oil"
     weight: 1.5
 
+  - name: EIA Today in Energy
+    url: "https://www.eia.gov/rss/todayinenergy.xml"
+    weight: 1.4
+
+  - name: IEA News
+    url: "https://www.iea.org/news.xml"
+    weight: 1.4
+
+  - name: Nikkei Asia Business
+    url: "https://asia.nikkei.com/rss/feed/section/business"
+    weight: 1.2
+
+  - name: Channel NewsAsia Business
+    url: "https://www.channelnewsasia.com/api/v1/rss-outbound-feed?_format=xml&category=6511"
+    weight: 1.1
+
 # ── Source trust weights (for headline scoring) ───────────────────────────────
 source_weights:
   Reuters: 1.0

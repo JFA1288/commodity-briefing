@@ -561,7 +561,7 @@ function corrCell(v,self){
 // ── 4. Outlook ────────────────────────────────────────────────────────────────
 function renderOutlook(outlook){
   const el=document.getElementById('outlook-body');
-  if(!outlook||!outlook.length){el.innerHTML='<div class="card card-sm" style="color:var(--text3);font-size:.82rem">Outlook data not available. EIA_API_KEY required for inventory forecasts.</div>';return}
+  if(!outlook||!outlook.length){el.innerHTML='<div class="card card-sm" style="color:var(--text3);font-size:.82rem">Outlook data unavailable — will populate after next run with World Bank and news-derived signals.</div>';return}
   let html='<div class="outlook-grid">';
   outlook.forEach(o=>{
     const dc=o.direction||'neutral';
@@ -583,7 +583,7 @@ function renderOutlook(outlook){
 // ── 5. Fundamentals ───────────────────────────────────────────────────────────
 function renderFundamentals(fundamentals){
   const el=document.getElementById('fund-body');
-  if(!fundamentals||!fundamentals.length){el.innerHTML='<div class="card card-sm" style="color:var(--text3);font-size:.82rem">Fundamentals data unavailable. Set EIA_API_KEY to enable US inventory data.</div>';return}
+  if(!fundamentals||!fundamentals.length){el.innerHTML='<div class="card card-sm" style="color:var(--text3);font-size:.82rem">Fundamentals unavailable — will populate with World Bank, FRED, and news-derived signals on next run.</div>';return}
   let html='';
   fundamentals.forEach(f=>{
     const a=f.inventory_direction==='up'?'↑':f.inventory_direction==='down'?'↓':'→';
@@ -630,6 +630,8 @@ function renderRisksEvents(risks,events){
     let h='<h3 style="font-size:.85rem;margin-bottom:.6rem">Risks to Watch</h3><div class="risk-list">';
     risks.forEach(r=>{h+=`<div class="risk-item"><span class="risk-dir ${r.direction||'downside'}">${esc(r.direction||'downside')}</span><span class="risk-text">${esc(r.text)}</span></div>`});
     re.innerHTML=h+'</div>';
+  }else{
+    re.innerHTML='<div style="color:var(--text3);font-size:.82rem;padding:.4rem 0">No triggered risk signals today. Standing risks apply.</div>';
   }
   if(events&&events.length){
     let h='<h3 style="font-size:.85rem;margin:1rem 0 .6rem">Events Calendar</h3><div class="events-list">';
@@ -639,6 +641,8 @@ function renderRisksEvents(risks,events){
       h+=`<div class="event-item${uc}"><span class="event-date">${esc(e.date)}</span><div><div class="event-title">${esc(e.title)}${e.upcoming?' <span class="tag upcoming">this week</span>':''}</div>${rel?`<div class="event-related">${rel}</div>`:''}</div></div>`;
     });
     ee.innerHTML=h+'</div>';
+  }else{
+    ee.innerHTML='<div style="color:var(--text3);font-size:.82rem;padding:.4rem 0">No calendar events in the next 30 days.</div>';
   }
 }
 

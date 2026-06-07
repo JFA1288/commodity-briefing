@@ -134,7 +134,7 @@ def build_company_digests(company_news: dict[str, list[NewsItem]]) -> list[Compa
 
     cfg = config.load()
     company_meta = {c["name"]: c for c in cfg.get("companies", [])}
-    digests = []
+    digests_by_name: dict[str, CompanyDigest] = {}
 
     for name, items in company_news.items():
         for item in items:
@@ -143,17 +143,13 @@ def build_company_digests(company_news: dict[str, list[NewsItem]]) -> list[Compa
         relevant = [i for i in items if _is_consulting_relevant(i)]
         ranked = sorted(relevant, key=lambda x: x.score, reverse=True)[:5]
 
-        if not ranked:
-            continue
-
         all_flags = list({f for item in ranked for f in item.flags})
         meta = company_meta.get(name, {})
 
-        # Try Claude summary
         headlines = [i.title for i in ranked]
-        summary = summarize_company(name, meta.get("sector", ""), headlines) or ""
+        summary = summarize_company(name, meta.get("sector", ""), headlines) or "" if ranked else ""
 
-        digests.append(CompanyDigest(
+        digests_by_name[name] = CompanyDigest(
             name=name,
             sector=meta.get("sector", "other"),
             country=meta.get("country", ""),
@@ -161,9 +157,23 @@ def build_company_digests(company_news: dict[str, list[NewsItem]]) -> list[Compa
             items=ranked,
             flags=all_flags,
             summary=summary,
-        ))
+        )
 
-    return sorted(digests, key=lambda d: (d.sector, d.name))
+    # Include ALL configured companies even those with no news
+    for c in cfg.get("companies", []):
+        name = c["name"]
+        if name not in digests_by_name:
+            digests_by_name[name] = CompanyDigest(
+                name=name,
+                sector=c.get("sector", "other"),
+                country=c.get("country", ""),
+                ticker=c.get("ticker", ""),
+                items=[],
+                flags=[],
+                summary="",
+            )
+
+    return sorted(digests_by_name.values(), key=lambda d: (d.sector, d.name))
 
 
 # ── Commodity digests ─────────────────────────────────────────────────────────
@@ -615,8 +625,15 @@ def build_outlook(
 
     for comm_name in key_commodities:
         fund = fundamentals_by_commodity.get(comm_name)
-        eia_text = fund.balance_read if fund else ""
-        wb_text = ""  # World Bank XLSX parsing out of scope; shown as placeholder
+        eia_text = fund.balance_read if fund and fund.source == "EIA" else ""
+        wb_text = ""
+        if fund and fund.source in ("World Bank", "FRED"):
+            wb_text = fund.balance_read
+        elif not fund:
+            for f in fundamentals:
+                if comm_name.lower().split()[0] in f.commodity.lower() and f.source in ("World Bank", "FRED"):
+                    wb_text = f.balance_read
+                    break
 
         # Find relevant news headlines
         headlines: list[dict] = []
