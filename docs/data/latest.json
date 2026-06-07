@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-07T07:57:31.735061Z",
+  "generated_at": "2026-06-07T08:16:53.857142Z",
   "executive_brief": {
     "narrative": "Three distinct structural signals are converging to reshape SEA commodity trading conditions this week. Rio Tinto's accelerating push into automation and low-carbon aluminium will segment global supply between ESG-compliant and conventional grades, compressing margins for regional smelters and forcing SEA buyers to actively negotiate offtake access to certified volumes before pricing premiums widen. Simultaneously, Danantara Sumberdaya Indonesia's assumption of centralized control over Indonesia's strategic commodity exports from June 1 introduces immediate counterparty and sovereign risk variables — SEA traders with Indonesian commodity exposure must urgently audit force majeure clauses and map revised approval workflows, as settlement timelines and contract terms face near-certain renegotiation. Tenaga Nasional Berhad's compliance risk exposure around its renewable energy transition adds a third layer of uncertainty, signalling potential delays or cost escalations in Malaysian green capacity additions that could affect power offtake partners and energy project timelines across the region. With energy markets quiet, these three signals — supply segmentation in aluminium, regulatory centralization in Indonesia, and green compliance friction in Malaysia — collectively tighten the operational and commercial environment for SEA trading and energy companies heading into Q3.",
     "themes": [
@@ -49,7 +49,7 @@
       "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1xOG1kWTUzb1ZLV0lpczBMYXZsTHYtcjdMSTFEcmpZaExDZkZRTGpDc1J6MVl4Q1h2RGlaazlaUWVRMy0ta0RVSTBibldnNGdlUm90cjJScUg1enc?oc=5",
       "why": "Geopolitical exposure — sanctions risk or trade compliance advisory.",
       "published": "2026-06-06T22:49:39Z",
-      "score": 2.8541,
+      "score": 2.8475,
       "engagement_context": "Typical scope: Compliance team · 3-6 months · Regulatory risk assessment"
     },
     {
@@ -60,7 +60,7 @@
       "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBITnpYQzFVRE9McC1hWHp4Rl9PdHNMUmFzYkZjY2hsS3Y0ajNOTHRfMnoxZ1hXcTZvc09RVnRTSFpicDNFbHRqNXZBb0U0NHVKR2p0TkNpOEJzVnhiNXJZNk1sbkdwcGlJSU0waW9RZTNYQXdrN2hqanBJbDE?oc=5",
       "why": "Regulatory action — compliance advisory, remediation, or sanctions screening.",
       "published": "2026-06-06T19:00:53Z",
-      "score": 2.7841,
+      "score": 2.7788,
       "engagement_context": "Typical scope: Legal team · 2-4 months · Export compliance advisory"
     },
     {
@@ -71,7 +71,7 @@
       "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOY2c1UGlBT213N281bmhkZ1J5SGZ3LU5oQ0VJU0hLd0VTNHVhQXhacFBzN3ItVC1sZWhMdUFxb1ktelVRVWprQWJ6WnFBSl9WV1hSdmJpanpNS1JXZUhKRHp4bld1bkR5RENoUkZDZW5XbmNuQ1RJSU1Ma3NQdV9ZR1lqdHZLSzZobzZwNWVtNTJha0NHM0FBejd6M0hzdGc?oc=5",
       "why": "ESG or decarbonisation signal — sustainability strategy or reporting mandate.",
       "published": "2026-06-06T06:11:00Z",
-      "score": 2.6354,
+      "score": 2.6329,
       "engagement_context": "Typical scope: Sustainability team · 4-8 months · Carbon reduction strategy"
     }
   ],
@@ -150,13 +150,13 @@
       "company": "Rio Tinto",
       "sector": "metals_mining",
       "country": "GB",
-      "headline": "Rio Tinto (RIO) Downgraded by RBC to Underperform Amid Iron Ore Concerns - GuruFocus",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOd2JOaTlYeWVQVkZLbXk5Vk9tU250Q0RCZHJ6X191Qzd0ME9IZzNGSDlNTHBndHhEWXhBZm1vRVRqVnNRODBFZnRVOGNMN1h1Mzgtc0RQc1FHTERQWEd1VXpGSHQ2UmlzQ0lnSDFHZVY3UDZvLUpYNkdXY3h2SUVSVWJmTTVUWE1PTXRCbFE2akx2azlLbzI1OC04VEYxbng5dUs3a2xaeXJyZ2o2bHVFY2lXb0NYc2dwdlNjSlFB?oc=5",
+      "headline": "Rio Tinto Advances Automation And Low Carbon Aluminium In Growth Push - Yahoo Finance",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOY2c1UGlBT213N281bmhkZ1J5SGZ3LU5oQ0VJU0hLd0VTNHVhQXhacFBzN3ItVC1sZWhMdUFxb1ktelVRVWprQWJ6WnFBSl9WV1hSdmJpanpNS1JXZUhKRHp4bld1bkR5RENoUkZDZW5XbmNuQ1RJSU1Ma3NQdV9ZR1lqdHZLSzZobzZwNWVtNTJha0NHM0FBejd6M0hzdGc?oc=5",
       "driver": "digital_tech",
       "service_line": "Digital & Technology",
       "suggested_angle": "Propose digital or technology-transformation advisory — strong team capability fit",
-      "score": 0.926,
-      "published": "2026-06-06T16:30:00Z"
+      "score": 0.615,
+      "published": "2026-06-06T06:11:00Z"
     }
   ],
   "account_briefs": [
@@ -189,16 +189,14 @@
       "one_liner": "US supermajor; upstream production in Australia, Indonesia, and Thailand.",
       "active_triggers": [],
       "top_headlines": [
-        "Australia Is Struggling to Meet Asia’s Rising LNG Needs, Chevron Says - EnergyNow.com",
         "Chevron Corporation’s Energy Story Gets Sharper - Kalkine Media"
       ],
       "top_urls": [
-        "https://news.google.com/rss/articles/CBMinwFBVV95cUxPLVFqWmYwRlpST1d4N3IxNkQ1WklKeF9WWVVhX2pOSEdrendfbm5iajlaNG83eTRnRmtUM1R5Rklza1NjN3lfNXFfZ3lGSXF6UERsejluTHRmbkZqQnF2a2t6X1FjTVZXUk1WelJ2cXNwZ0p5VHNOa1Y3QWtraDlGcXoxZkNpREFhdk52NGlKWTk2czdxVjZnV0gzTFBsTjg?oc=5",
         "https://news.google.com/rss/articles/CBMikwFBVV95cUxNRkd6b0JnVXFqd05xTkhpMHRFMTdJMzFsUDJUXzVFeENSdVRiSm9jXzNnd2RoRlFLS3RWME1XSWNtekZrcGF2WHNGODhSLUlVYmdmbzdwN3gwN3FsakxDTm5NRk9DN3NmaEJ6c0VDV25OYXZHbkt6OUk5VGtKLThZcDBxWWlFeTJFZ3R2RTRzem1Xakk?oc=5"
       ],
       "consulting_angles": [],
       "talking_points": [
-        "Key development: \"Australia Is Struggling to Meet Asia’s Rising LNG Needs, Chevron Says - EnergyNow.com\""
+        "Key development: \"Chevron Corporation’s Energy Story Gets Sharper - Kalkine Media\""
       ],
       "has_news": true
     },
@@ -249,12 +247,10 @@
       ],
       "top_headlines": [
         "Rio Tinto Advances Automation And Low Carbon Aluminium In Growth Push - Yahoo Finance",
-        "Rio Tinto (RIO) Downgraded by RBC to Underperform Amid Iron Ore Concerns - GuruFocus",
         "Assessing Rio Tinto Group (LSE:RIO) Valuation After Recent Share Price Pullback And Strong One Year Return - simplywall.st"
       ],
       "top_urls": [
         "https://news.google.com/rss/articles/CBMinwFBVV95cUxOY2c1UGlBT213N281bmhkZ1J5SGZ3LU5oQ0VJU0hLd0VTNHVhQXhacFBzN3ItVC1sZWhMdUFxb1ktelVRVWprQWJ6WnFBSl9WV1hSdmJpanpNS1JXZUhKRHp4bld1bkR5RENoUkZDZW5XbmNuQ1RJSU1Ma3NQdV9ZR1lqdHZLSzZobzZwNWVtNTJha0NHM0FBejd6M0hzdGc?oc=5",
-        "https://news.google.com/rss/articles/CBMivgFBVV95cUxOd2JOaTlYeWVQVkZLbXk5Vk9tU250Q0RCZHJ6X191Qzd0ME9IZzNGSDlNTHBndHhEWXhBZm1vRVRqVnNRODBFZnRVOGNMN1h1Mzgtc0RQc1FHTERQWEd1VXpGSHQ2UmlzQ0lnSDFHZVY3UDZvLUpYNkdXY3h2SUVSVWJmTTVUWE1PTXRCbFE2akx2azlLbzI1OC04VEYxbng5dUs3a2xaeXJyZ2o2bHVFY2lXb0NYc2dwdlNjSlFB?oc=5",
         "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOdzYtZFJhM0IxcVg1OFhFTDAwZGtfV296MkpIQzdySjRrVEVKNnRkV0EtcEFGZUZ3RFRydUZwdGJoLUtvSHI5Zjh5b3NPajNnMk9jRnMwZVRpNnBrWVNHNHBpbUdFZVYwNHZnbGdMM3N6YVN2TGIybktjaERGMG5GZlVhd0h4OXNMQklORWFVby0xdUpEU21nd25mTWtoeVgxdnZGM3F2elJQLUxqU1VWUHNUMWRkQWJBYW5iamhkc0FOTDdaRU8wa3dtM2paUi1fR2t5ZdIB2gFBVV95cUxQVDVPQmJXYjA1SDA3ZDJfT0VWczhBNXdtRldDVDRtcWhUOEQtMFZuSEZWT2JVcGlvb3pLLVpYRFEzRFM1d3FoejRpOG9fZ2pkOGtFYVhSWEk3WFZzekdpeEk0YnA0Qy00S3Y0eTVhNXM5TlNBdzB5TC1mZkNrek93cklSM2NHRUd3blgtdHhEa2NUYl9UY3hPczcyUUZXdlkzWE9FbXpjcFdoLU1laU02blN0MEpETGV4dGE1dXJINVVQMGJMZ0lLMWNRd2M4TlE3bjlWd0ljSTR6dw?oc=5"
       ],
       "consulting_angles": [
@@ -476,20 +472,41 @@
     "active_account_count": 5
   },
   "exec_summary": [
-    "WTI -2.8%, Brent -2.4%: OPEC+ accelerated output unwind driving supply overhang; Rigzone flags $100 oil tail-risk persisting to 2028.",
-    "Silver -5.2%, Gold -2.3%: China industrial slowdown and property weakness crushing metals demand; watch downstream exposure across SEA trading books.",
-    "Dark tanker traffic surging near Hormuz per OilPrice.com; compliance and freight risk elevated for any client with Gulf crude liftings or STS exposure.",
-    "Indonesia's Danantara Sumberdaya Indonesia assumes control of strategic commodity exports from June 1; immediate counterparty and compliance review required for coal, nickel, palm flows.",
-    "TNB flagged on compliance risk around green energy commitments; partners advising Malaysian utilities should probe offtake and capex covenant exposure.",
-    "Henry Hub -3.6% on mild demand; yet Trump redirecting defense funds into coal per OilPrice.com — monitor US LNG export policy signaling for SEA LNG contract positioning."
+    "OPEC+ eyeing fourth consecutive quota hike; combined with WTI -2.8% and Brent -2.4%, accelerated supply unwind is structurally pressuring crude — flag for any long crude exposure.",
+    "Dark tanker traffic surging in Hormuz as market flies blind on flows; compliance risk acute for SEA traders with Middle East crude or LNG liftings — verify counterparty vessel screening now.",
+    "Silver -5.2%, Gold -2.3% overnight; China industrial demand weakness driving metals selloff — SEA commodity houses with silver or precious metals inventory face mark-to-market pressure today.",
+    "Henry Hub gas -3.6%; watch LNG cargo economics for SEA buyers — spot purchase windows may open if US supply overhang persists into next week.",
+    "Indonesia centralizes strategic commodity exports under Danantara Sumberdaya Indonesia from June 1; immediate compliance and counterparty review required for any Indonesian coal, nickel, or palm oil contracts.",
+    "TNB's green strategy under scrutiny via Aliran critique; partners advising Malaysian utilities should note reputational and regulatory overhang on TNB's renewable capex narrative."
   ],
   "top_headlines": [
+    {
+      "title": "OPEC+ set for fourth oil quota hike since Hormuz closure, sources say - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPaWZrV2dPZ2xjY0NWT0lIUFVNeUlJZ1I5V3BsdkU0X01tWFVHLWZWTVBQN0pHeHNGZF9fS01BY2RrbWtLWFcyazR0bVNOWERwQVFBYjhHMFNZYW5XWHNRM2VWZUU2aFpTd3IzRGhiVUZHNUJsbWlCb19CX19SUG5DOXozd1cyak1RdUFhS0FtaUYxMG5xNGtfYW9idFhNWGRUd25PeUFYTWJJWVhqeS1lNUJHS3pCUQ?oc=5",
+      "source": "Google News - Reuters Crude/LNG/Brent",
+      "published": "2026-06-07T07:09:43Z",
+      "summary": "OPEC+ set for fourth oil quota hike since Hormuz closure, sources say Reuters",
+      "company": null,
+      "commodity": null,
+      "flags": [
+        "geopolitical"
+      ],
+      "drivers": [
+        "opec_supply"
+      ],
+      "score": 3.4374,
+      "title_norm": "closure fourth hike hormuz oil opec quota reuters say set since sources",
+      "consulting_label": "Compliance Risk",
+      "why_it_matters": "Geopolitical exposure — sanctions risk or trade compliance advisory.",
+      "age_h": 1.1,
+      "snippet": ""
+    },
     {
       "title": "Oil Market Flying Blind as Dark Tanker Traffic Surges in Hormuz",
       "url": "https://oilprice.com/Energy/Energy-General/Oil-Market-Flying-Blind-as-Dark-Tanker-Traffic-Surges-in-Hormuz.html",
       "source": "OilPrice.com",
       "published": "2026-06-06T23:00:00Z",
-      "summary": "Tanker traffic through the Strait of Hormuz has collapsed by 90% to 95% compared to pre-war levels, analysts concur. Some oil cargoes continue to trickle through the critical chokepoint, but under increasingly opaque operating conditions, complicating the tracking of oil and gas flows and obscuring the visibility of how much energy supply actually reaches buyers these days. Traffic appears to have ramped up in recent weeks, according to an analysis of shipping data by Reuters energy columnist Ro",
+      "summary": "Tanker traffic through the Strait of Hormuz has collapsed by 90% to 95% compared to pre-war levels, analysts concur. Some oil cargoes continue to trickle through the critical chokepoint, but under increasingly opaque operating conditions, complicating the tracking of oil and gas flows and obscuring the visibility of how much energy supply actually reaches buyers these days.",
       "company": null,
       "commodity": null,
       "flags": [
@@ -500,11 +517,11 @@
         "ai_metals",
         "geopolitical_driver"
       ],
-      "score": 2.947,
+      "score": 2.9388,
       "title_norm": "blind dark flying hormuz market oil surges tanker traffic",
       "consulting_label": "Compliance Risk",
       "why_it_matters": "Geopolitical exposure — sanctions risk or trade compliance advisory.",
-      "age_h": 9.0,
+      "age_h": 9.3,
       "snippet": ""
     },
     {
@@ -512,22 +529,20 @@
       "url": "https://oilprice.com/Alternative-Energy/Solar-Energy/Why-Solar-Power-Is-Booming-Under-Trump.html",
       "source": "OilPrice.com",
       "published": "2026-06-06T21:00:00Z",
-      "summary": "Despite the Trump administration’s pivot away from renewable energies, solar continues to dominate new energy additions in the United States. Newly released data from the Federal Energy Regulatory Commission (FERC) shows that at the close of last year, solar energy additions were the single largest form of new energy capacity installations for the 28th straight month, starting in September of 2023. In fact, in spite of a broad rollback of Biden-era clean energy incentives since Trump resumed off",
+      "summary": "Despite the Trump administration’s pivot away from renewable energies, solar continues to dominate new energy additions in the United States. Newly released data from the Federal Energy Regulatory Commission (FERC) shows that at the close of last year, solar energy additions were the single largest form of new energy capacity installations for the 28th straight month, starting in September of 2023.",
       "company": null,
       "commodity": null,
       "flags": [
-        "ma",
         "esg"
       ],
       "drivers": [
-        "ai_metals",
-        "energy_transition"
+        "ai_metals"
       ],
-      "score": 2.8982,
+      "score": 2.8909,
       "title_norm": "booming power solar trump under why",
-      "consulting_label": "Integration",
-      "why_it_matters": "M&A or JV activity — potential integration, due diligence, or PMI mandate.",
-      "age_h": 11.0,
+      "consulting_label": "Sustainability",
+      "why_it_matters": "ESG or decarbonisation signal — sustainability strategy or reporting mandate.",
+      "age_h": 11.3,
       "snippet": ""
     },
     {
@@ -535,18 +550,18 @@
       "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1xOG1kWTUzb1ZLV0lpczBMYXZsTHYtcjdMSTFEcmpZaExDZkZRTGpDc1J6MVl4Q1h2RGlaazlaUWVRMy0ta0RVSTBibldnNGdlUm90cjJScUg1enc?oc=5",
       "source": "Google News",
       "published": "2026-06-06T22:49:39Z",
-      "summary": "TNB’s green gamble&nbsp;&nbsp;Aliran",
+      "summary": "TNB’s green gamble Aliran",
       "company": "Tenaga Nasional Berhad",
       "commodity": null,
       "flags": [
         "geopolitical"
       ],
       "drivers": [],
-      "score": 2.8541,
+      "score": 2.8475,
       "title_norm": "aliran gamble green tnbs",
       "consulting_label": "Compliance Risk",
       "why_it_matters": "Geopolitical exposure — sanctions risk or trade compliance advisory.",
-      "age_h": 9.1,
+      "age_h": 9.5,
       "snippet": ""
     },
     {
@@ -554,7 +569,7 @@
       "url": "https://oilprice.com/Energy/Coal/AI-Boom-or-Political-Play-Trump-Channels-Defense-Funds-Into-Dying-Coal-Plants.html",
       "source": "OilPrice.com",
       "published": "2026-06-06T17:00:00Z",
-      "summary": "The Trump administration is set to channel nearly $700 million in federal funds into the U.S. coal industry Thursday, invoking a Korean War-era statute to prop up existing power plants, finance new construction, and push open a California export terminal that has been blocked for nearly two decades. The centerpiece is $425 million distributed under the Defense Production Act to 13 existing coal plants across West Virginia, Kentucky, North Carolina, Indiana, Tennessee, Arkansas, Arizona, Oklahoma",
+      "summary": "The Trump administration is set to channel nearly $700 million in federal funds into the U.S. coal industry Thursday, invoking a Korean War-era statute to prop up existing power plants, finance new construction, and push open a California export terminal that has been blocked for nearly two decades.",
       "company": null,
       "commodity": null,
       "flags": [
@@ -564,14 +579,13 @@
       ],
       "drivers": [
         "ai_metals",
-        "digital_tech_driver",
         "geopolitical_driver"
       ],
-      "score": 2.8161,
+      "score": 2.8102,
       "title_norm": "boom channels coal defense dying funds into plants play political trump",
       "consulting_label": "Enterprise Risk",
       "why_it_matters": "Enterprise risk or governance signal — ERM framework or internal audit advisory.",
-      "age_h": 15.0,
+      "age_h": 15.3,
       "snippet": ""
     },
     {
@@ -579,18 +593,18 @@
       "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBITnpYQzFVRE9McC1hWHp4Rl9PdHNMUmFzYkZjY2hsS3Y0ajNOTHRfMnoxZ1hXcTZvc09RVnRTSFpicDNFbHRqNXZBb0U0NHVKR2p0TkNpOEJzVnhiNXJZNk1sbkdwcGlJSU0waW9RZTNYQXdrN2hqanBJbDE?oc=5",
       "source": "Google News",
       "published": "2026-06-06T19:00:53Z",
-      "summary": "Indonesia centralizes strategic commodity exports under Danantara Sumberdaya Indonesia control from June 1&nbsp;&nbsp;Crypto Briefing",
+      "summary": "Indonesia centralizes strategic commodity exports under Danantara Sumberdaya Indonesia control from June 1 Crypto Briefing",
       "company": "Danantara",
       "commodity": null,
       "flags": [
         "regulatory"
       ],
       "drivers": [],
-      "score": 2.7841,
+      "score": 2.7788,
       "title_norm": "briefing centralizes commodity control crypto danantara exports indonesia indonesia june strategic sumberdaya under",
       "consulting_label": "Compliance Risk",
       "why_it_matters": "Regulatory action — compliance advisory, remediation, or sanctions screening.",
-      "age_h": 12.9,
+      "age_h": 13.3,
       "snippet": ""
     },
     {
@@ -609,32 +623,11 @@
         "ai_metals",
         "geopolitical_driver"
       ],
-      "score": 2.7368,
+      "score": 2.7324,
       "title_norm": "100 2028 oil risk sees until",
       "consulting_label": "Performance",
       "why_it_matters": "Earnings or guidance release — CFO advisory, margin improvement, or FP&A opportunity.",
-      "age_h": 20.0,
-      "snippet": ""
-    },
-    {
-      "title": "Brent Crude Heads for Record Monthly Gain With WTI Not Far Behind - EnergyNow.com",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPRU5OM2V6OGlTMnNlODVsRVBRRnp5d0hRcG15elkwNV9tNnZ4NWVqbXIzNmE1ODdxRHFrck9SMnNMYkVKYjQ5TU5pVEZpZ2VzQ2pRUlF2eEhsdjJwTXhLOXgxM3RRNmxVZlFrTDU2OG5Lb3hDZEVEMlFCVUkwcEJ4WThBV2lINUtpdzZHU2JHR1p2TXlkRDd2ZkJxZ2U?oc=5",
-      "source": "Google News",
-      "published": "2026-06-06T07:06:59Z",
-      "summary": "Brent Crude Heads for Record Monthly Gain With WTI Not Far Behind&nbsp;&nbsp;EnergyNow.com",
-      "company": null,
-      "commodity": "crude_oil",
-      "flags": [
-        "price_shock"
-      ],
-      "drivers": [
-        "ai_metals"
-      ],
-      "score": 2.6429,
-      "title_norm": "behind brent com crude energynow far gain heads monthly not record wti",
-      "consulting_label": "",
-      "why_it_matters": "",
-      "age_h": 24.8,
+      "age_h": 20.3,
       "snippet": ""
     },
     {
@@ -642,7 +635,7 @@
       "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQN1ZOVFVuUnFFYUstVktuczhxdzBYN1lUbUlqbTIwZEVnX2lCclN2dDZyeVJxUnFPLXdLLWhHcTd1MUUyM0kxTFBUZWJZSVlfN2RCZkRlRXhqT3ZfdUJTQkFjSkR1dDFsQ2Rmc19VTERhc1hsV2Nka2RDVEFvZ0FUcFdJQ0dCR21lcm5mZU12UzJZZHlyOFh3WGEzVWpCVDlUeHc?oc=5",
       "source": "Google News",
       "published": "2026-06-06T06:51:30Z",
-      "summary": "Core Differences Between West Texas Intermediate (WTI) and Brent Crude and the Affect of the Iran War&nbsp;&nbsp;EnergyNow.com",
+      "summary": "Core Differences Between West Texas Intermediate (WTI) and Brent Crude and the Affect of the Iran War EnergyNow.com",
       "company": null,
       "commodity": "crude_oil",
       "flags": [
@@ -652,11 +645,30 @@
       "drivers": [
         "geopolitical_driver"
       ],
-      "score": 2.6408,
+      "score": 2.6382,
       "title_norm": "affect between brent com core crude differences energynow intermediate iran texas war west wti",
       "consulting_label": "Enterprise Risk",
       "why_it_matters": "Enterprise risk or governance signal — ERM framework or internal audit advisory.",
-      "age_h": 25.1,
+      "age_h": 25.4,
+      "snippet": ""
+    },
+    {
+      "title": "Goldman Sachs says global oil demand takes big hit, sees risks to price forecast - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQV0toMGFvcW1NeUg0a2M2cFdtTVdLd19jV0ZhaHBLa2xyZllKTXdLY3JadXlNekNUeFJURUJNdHVZWVBISjVNcVNnOVc1aF9fNnNvMloyRVpITlZsWFJEM1FnMGJ2SGVoR1llQWpFQ1dMdklXNEdfUDlhamdBd3lWQ0RjZzZjaFhELU4tNVdidWtFNTdYaWUzdWJuLS1BY0hGTWt0V2wtY0kzNnRZWmtlNWNTNEhaaDNEREZ6ai03QTU3ZlNyd1hr?oc=5",
+      "source": "Google News - Reuters Crude/LNG/Brent",
+      "published": "2026-06-05T21:29:43Z",
+      "summary": "Goldman Sachs says global oil demand takes big hit, sees risks to price forecast Reuters",
+      "company": null,
+      "commodity": null,
+      "flags": [
+        "earnings"
+      ],
+      "drivers": [],
+      "score": 2.6341,
+      "title_norm": "big demand forecast global goldman hit oil price reuters risks sachs says sees takes",
+      "consulting_label": "Performance",
+      "why_it_matters": "Earnings or guidance release — CFO advisory, margin improvement, or FP&A opportunity.",
+      "age_h": 34.8,
       "snippet": ""
     },
     {
@@ -664,7 +676,7 @@
       "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOY2c1UGlBT213N281bmhkZ1J5SGZ3LU5oQ0VJU0hLd0VTNHVhQXhacFBzN3ItVC1sZWhMdUFxb1ktelVRVWprQWJ6WnFBSl9WV1hSdmJpanpNS1JXZUhKRHp4bld1bkR5RENoUkZDZW5XbmNuQ1RJSU1Ma3NQdV9ZR1lqdHZLSzZobzZwNWVtNTJha0NHM0FBejd6M0hzdGc?oc=5",
       "source": "Google News",
       "published": "2026-06-06T06:11:00Z",
-      "summary": "Rio Tinto Advances Automation And Low Carbon Aluminium In Growth Push&nbsp;&nbsp;Yahoo Finance",
+      "summary": "Rio Tinto Advances Automation And Low Carbon Aluminium In Growth Push Yahoo Finance",
       "company": "Rio Tinto",
       "commodity": null,
       "flags": [
@@ -674,11 +686,11 @@
         "energy_transition",
         "digital_tech_driver"
       ],
-      "score": 2.6354,
+      "score": 2.6329,
       "title_norm": "advances aluminium automation carbon finance growth low push rio tinto yahoo",
       "consulting_label": "Sustainability",
       "why_it_matters": "ESG or decarbonisation signal — sustainability strategy or reporting mandate.",
-      "age_h": 25.8,
+      "age_h": 26.1,
       "snippet": ""
     },
     {
@@ -693,120 +705,88 @@
         "trading_moves"
       ],
       "drivers": [],
-      "score": 2.6264,
+      "score": 2.6241,
       "title_norm": "450 500 b67 down gold prices",
       "consulting_label": "Leadership Change",
       "why_it_matters": "Senior leadership transition — change management or org design opportunity.",
-      "age_h": 29.6,
+      "age_h": 29.9,
       "snippet": ""
     },
     {
-      "title": "Dry Bulk Market: Indonesian Coal Exports Retreating",
-      "url": "https://www.hellenicshippingnews.com/dry-bulk-market-indonesian-coal-exports-retreating/",
-      "source": "Hellenic Shipping News",
-      "published": "2026-06-05T21:00:59Z",
-      "summary": "Seaborne coal exports from Indonesia have been falling so far in 2026. In its latest weekly report, shipbroker Banchero Costa said that “in Jan-Apr 2026, global seaborne coal loadings declined by -0.1% y-o-y to 410.7 mln t (excluding cabotage), based on vessel tracking data from AXS Marine. In Jan-Apr 2026, exports from Indonesia declined by ...",
-      "company": null,
+      "title": "TNB POWER OUTAGE | Saturday, 8 June 2024 (dc60D4GBMN) - Fathom Journal",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1xQXliY1Z0UFZwMGJ0cDFnWHdNMjVQdk1oVW1uNXh3aDV6OTRLdjNIVTUyZk5BR1pxWGgtZWZaZy11RjlmLTdPOHczMm03dDBtVWVFY3NRTV9RWUVXWkhUZkxOUE9tN29maFlEdVc3R01oZHp4a3c?oc=5",
+      "source": "Google News",
+      "published": "2026-06-06T01:06:02Z",
+      "summary": "TNB POWER OUTAGE | Saturday, 8 June 2024 (dc60D4GBMN) Fathom Journal",
+      "company": "Tenaga Nasional Berhad",
       "commodity": null,
       "flags": [
-        "regulatory"
+        "outage"
       ],
       "drivers": [
-        "ai_metals"
+        "mine_disruption"
       ],
-      "score": 2.6063,
-      "title_norm": "bulk coal dry exports indonesian market retreating",
-      "consulting_label": "Compliance Risk",
-      "why_it_matters": "Regulatory action — compliance advisory, remediation, or sanctions screening.",
-      "age_h": 34.9,
+      "score": 2.5991,
+      "title_norm": "2024 dc60d4gbmn fathom journal june outage power saturday tnb",
+      "consulting_label": "Ops Resilience",
+      "why_it_matters": "Operational disruption — business continuity or resilience advisory opportunity.",
+      "age_h": 31.2,
       "snippet": ""
     },
     {
-      "title": "Posidonia 2026 Closes on a High: Over 35,000 Visitors and 2,200 Exhibitors Set New Exhibition Records",
-      "url": "https://www.hellenicshippingnews.com/posidonia-2026-closes-on-a-high-over-35000-visitors-and-2200-exhibitors-set-new-exhibition-records/",
-      "source": "Hellenic Shipping News",
-      "published": "2026-06-05T21:00:57Z",
-      "summary": "The 29th edition of the biennial Posidonia Exhibition closed today at the Athens Metropolitan Expo, cementing its position as the world&#8217;s premier maritime business platform and the essential forum for setting the policy agenda of an industry that moves 87% of global trade. Against a backdrop of unprecedented geopolitical and regulatory pressure &#8211; from the ...",
+      "title": "Thailand inches towards negative income tax",
+      "url": "https://www.bangkokpost.com/business/general/3266634/thailand-inches-towards-negative-income-tax",
+      "source": "Bangkok Post Business",
+      "published": "2026-06-05T21:36:00Z",
+      "summary": "The Finance Ministry is preparing a comprehensive overhaul of the government's welfare system, laying the groundwork to implement a negative income tax (NIT) system in Thailand.",
       "company": null,
       "commodity": null,
       "flags": [
-        "price_shock",
-        "trading_risk"
+        "geopolitical"
       ],
       "drivers": [
         "ai_metals",
-        "regulatory_driver"
+        "geopolitical_driver"
       ],
-      "score": 2.6063,
-      "title_norm": "000 200 2026 closes exhibition exhibitors high new over posidonia records set visitors",
-      "consulting_label": "Trading Risk",
-      "why_it_matters": "Trading or market risk exposure — hedging framework, VaR, or desk controls review.",
-      "age_h": 34.9,
-      "snippet": ""
-    },
-    {
-      "title": "The Bahamas Transport Minister Leads Delegation to Posidonia 2026",
-      "url": "https://www.hellenicshippingnews.com/the-bahamas-transport-minister-leads-delegation-to-posidonia-2026/",
-      "source": "Hellenic Shipping News",
-      "published": "2026-06-05T21:00:55Z",
-      "summary": "The Hon. Leon Lundy, The Bahamas Minister of Transport, led a high-level delegation to Posidonia 2026 in Greece, just weeks after taking office, underscoring the Government&#8217;s commitment to supporting The Bahamas Ship Registry and strengthening relationships with one of its most important maritime markets. As one of the world&#8217;s leading ship registries, The Bahamas maintains ...",
-      "company": null,
-      "commodity": null,
-      "flags": [
-        "regulatory"
-      ],
-      "drivers": [
-        "ai_metals"
-      ],
-      "score": 2.6063,
-      "title_norm": "2026 bahamas delegation leads minister posidonia transport",
+      "score": 2.5944,
+      "title_norm": "inches income negative tax thailand towards",
       "consulting_label": "Compliance Risk",
-      "why_it_matters": "Regulatory action — compliance advisory, remediation, or sanctions screening.",
-      "age_h": 34.9,
+      "why_it_matters": "Geopolitical exposure — sanctions risk or trade compliance advisory.",
+      "age_h": 34.7,
       "snippet": ""
     },
     {
-      "title": "India’s bunker fuel demand rises in May amid improved supply, competitive prices",
-      "url": "https://www.hellenicshippingnews.com/indias-bunker-fuel-demand-rises-in-may-amid-improved-supply-competitive-prices/",
-      "source": "Hellenic Shipping News",
-      "published": "2026-06-05T21:00:51Z",
-      "summary": "India&#8217;s bunker fuel demand strengthened in May, supported by improved product availability and competitive pricing that stimulated buying interest, market participants told Platts, part of S&#38;P Global Energy, on June 3. Traders and suppliers said demand increased after May 15 at West Coast ports such as Kochi, Kandla, and Mumbai. Demand firmed in Kochi and ...",
+      "title": "Rescuers halt search for two last men lost in Laos cave",
+      "url": "https://www.channelnewsasia.com/asia/laos-cave-rescue-halted-risks-two-men-missing-6166221",
+      "source": "Channel NewsAsia Business",
+      "published": "2026-06-06T08:05:28Z",
+      "summary": "After more than two weeks, rescuers say the risks of continuing the operation outweigh the slim chance of saving the men.",
       "company": null,
       "commodity": null,
-      "flags": [
-        "trading_moves"
-      ],
-      "drivers": [
-        "ai_metals"
-      ],
-      "score": 2.6063,
-      "title_norm": "amid bunker competitive demand fuel improved indias may prices rises supply",
-      "consulting_label": "Leadership Change",
-      "why_it_matters": "Senior leadership transition — change management or org design opportunity.",
-      "age_h": 34.9,
+      "flags": [],
+      "drivers": [],
+      "score": 0.272,
+      "title_norm": "cave halt laos last lost men rescuers search two",
+      "consulting_label": "",
+      "why_it_matters": "",
+      "age_h": 24.2,
       "snippet": ""
     },
     {
-      "title": "TurkStream gas flows to Europe halted for maintenance",
-      "url": "https://www.hellenicshippingnews.com/turkstream-gas-flows-to-europe-halted-for-maintenance/",
-      "source": "Hellenic Shipping News",
-      "published": "2026-06-05T21:00:50Z",
-      "summary": "Russian gas deliveries to Europe through the TurkStream pipeline have stopped due to planned maintenance activities, according to data from European gas transmission group ENTSOG and Bulgarian gas network operator Bulgartransgaz. The maintenance work at the Russkaya pumping station and receiving terminals in Turkey began on June 2 and is scheduled to continue through June ...",
+      "title": "Singapore oil stocks fall as fuel oil, light ends decline - Quantum Commodity Intelligence",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQRUZBaVFZN3ZUUkdMZmV5YTNWMHpaRURNdUJHMmV3VXhjdFNOSlhHT0dzMU1welM1Z21zZmZaQ05KR21Ea01Ib1NhdF9hZ2hYOXFQOHdRUkJpUk9nQTRYb25xZm03bk5HN1B0UTM4UzFjWU02TENDaDZVeGxJWmdVTlFmb1A4MmtkeWtCa3IyS0JUYkk4c0UyZURHTTMwYWlQ?oc=5",
+      "source": "Google News",
+      "published": "2026-06-06T12:39:02Z",
+      "summary": "Singapore oil stocks fall as fuel oil, light ends decline Quantum Commodity Intelligence",
       "company": null,
-      "commodity": null,
-      "flags": [
-        "outage",
-        "geopolitical",
-        "enterprise_risk"
-      ],
-      "drivers": [
-        "ai_metals"
-      ],
-      "score": 2.6063,
-      "title_norm": "europe flows gas halted maintenance turkstream",
-      "consulting_label": "Enterprise Risk",
-      "why_it_matters": "Enterprise risk or governance signal — ERM framework or internal audit advisory.",
-      "age_h": 34.9,
+      "commodity": "refined",
+      "flags": [],
+      "drivers": [],
+      "score": 0.1931,
+      "title_norm": "commodity decline ends fall fuel intelligence light oil oil quantum singapore stocks",
+      "consulting_label": "",
+      "why_it_matters": "",
+      "age_h": 19.6,
       "snippet": ""
     }
   ],
@@ -912,7 +892,7 @@
           "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOY2c1UGlBT213N281bmhkZ1J5SGZ3LU5oQ0VJU0hLd0VTNHVhQXhacFBzN3ItVC1sZWhMdUFxb1ktelVRVWprQWJ6WnFBSl9WV1hSdmJpanpNS1JXZUhKRHp4bld1bkR5RENoUkZDZW5XbmNuQ1RJSU1Ma3NQdV9ZR1lqdHZLSzZobzZwNWVtNTJha0NHM0FBejd6M0hzdGc?oc=5",
           "source": "Google News",
           "published": "2026-06-06T06:11:00Z",
-          "summary": "Rio Tinto Advances Automation And Low Carbon Aluminium In Growth Push&nbsp;&nbsp;Yahoo Finance",
+          "summary": "Rio Tinto Advances Automation And Low Carbon Aluminium In Growth Push Yahoo Finance",
           "company": "Rio Tinto",
           "commodity": null,
           "flags": [
@@ -922,11 +902,11 @@
             "energy_transition",
             "digital_tech_driver"
           ],
-          "score": 2.6354,
+          "score": 2.6329,
           "title_norm": "advances aluminium automation carbon finance growth low push rio tinto yahoo",
           "consulting_label": "Sustainability",
           "why_it_matters": "ESG or decarbonisation signal — sustainability strategy or reporting mandate.",
-          "age_h": 25.8,
+          "age_h": 26.1,
           "snippet": ""
         }
       ],
@@ -977,18 +957,18 @@
           "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1xOG1kWTUzb1ZLV0lpczBMYXZsTHYtcjdMSTFEcmpZaExDZkZRTGpDc1J6MVl4Q1h2RGlaazlaUWVRMy0ta0RVSTBibldnNGdlUm90cjJScUg1enc?oc=5",
           "source": "Google News",
           "published": "2026-06-06T22:49:39Z",
-          "summary": "TNB’s green gamble&nbsp;&nbsp;Aliran",
+          "summary": "TNB’s green gamble Aliran",
           "company": "Tenaga Nasional Berhad",
           "commodity": null,
           "flags": [
             "geopolitical"
           ],
           "drivers": [],
-          "score": 2.8541,
+          "score": 2.8475,
           "title_norm": "aliran gamble green tnbs",
           "consulting_label": "Compliance Risk",
           "why_it_matters": "Geopolitical exposure — sanctions risk or trade compliance advisory.",
-          "age_h": 9.1,
+          "age_h": 9.5,
           "snippet": ""
         },
         {
@@ -996,7 +976,7 @@
           "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1xQXliY1Z0UFZwMGJ0cDFnWHdNMjVQdk1oVW1uNXh3aDV6OTRLdjNIVTUyZk5BR1pxWGgtZWZaZy11RjlmLTdPOHczMm03dDBtVWVFY3NRTV9RWUVXWkhUZkxOUE9tN29maFlEdVc3R01oZHp4a3c?oc=5",
           "source": "Google News",
           "published": "2026-06-06T01:06:02Z",
-          "summary": "TNB POWER OUTAGE | Saturday, 8 June 2024 (dc60D4GBMN)&nbsp;&nbsp;Fathom Journal",
+          "summary": "TNB POWER OUTAGE | Saturday, 8 June 2024 (dc60D4GBMN) Fathom Journal",
           "company": "Tenaga Nasional Berhad",
           "commodity": null,
           "flags": [
@@ -1005,11 +985,11 @@
           "drivers": [
             "mine_disruption"
           ],
-          "score": 2.6009,
+          "score": 2.5991,
           "title_norm": "2024 dc60d4gbmn fathom journal june outage power saturday tnb",
           "consulting_label": "Ops Resilience",
           "why_it_matters": "Operational disruption — business continuity or resilience advisory opportunity.",
-          "age_h": 30.9,
+          "age_h": 31.2,
           "snippet": ""
         }
       ],
@@ -1041,18 +1021,18 @@
           "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBITnpYQzFVRE9McC1hWHp4Rl9PdHNMUmFzYkZjY2hsS3Y0ajNOTHRfMnoxZ1hXcTZvc09RVnRTSFpicDNFbHRqNXZBb0U0NHVKR2p0TkNpOEJzVnhiNXJZNk1sbkdwcGlJSU0waW9RZTNYQXdrN2hqanBJbDE?oc=5",
           "source": "Google News",
           "published": "2026-06-06T19:00:53Z",
-          "summary": "Indonesia centralizes strategic commodity exports under Danantara Sumberdaya Indonesia control from June 1&nbsp;&nbsp;Crypto Briefing",
+          "summary": "Indonesia centralizes strategic commodity exports under Danantara Sumberdaya Indonesia control from June 1 Crypto Briefing",
           "company": "Danantara",
           "commodity": null,
           "flags": [
             "regulatory"
           ],
           "drivers": [],
-          "score": 2.7841,
+          "score": 2.7788,
           "title_norm": "briefing centralizes commodity control crypto danantara exports indonesia indonesia june strategic sumberdaya under",
           "consulting_label": "Compliance Risk",
           "why_it_matters": "Regulatory action — compliance advisory, remediation, or sanctions screening.",
-          "age_h": 12.9,
+          "age_h": 13.3,
           "snippet": ""
         }
       ],
@@ -1097,36 +1077,15 @@
         "change_pct": -2.42,
         "source": "yfinance",
         "quality": "market",
-        "as_of": "2026-06-07T07:55:33.134571Z"
+        "as_of": "2026-06-07T08:14:55.061368Z"
       },
       "items": [
-        {
-          "title": "Brent Crude Heads for Record Monthly Gain With WTI Not Far Behind - EnergyNow.com",
-          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPRU5OM2V6OGlTMnNlODVsRVBRRnp5d0hRcG15elkwNV9tNnZ4NWVqbXIzNmE1ODdxRHFrck9SMnNMYkVKYjQ5TU5pVEZpZ2VzQ2pRUlF2eEhsdjJwTXhLOXgxM3RRNmxVZlFrTDU2OG5Lb3hDZEVEMlFCVUkwcEJ4WThBV2lINUtpdzZHU2JHR1p2TXlkRDd2ZkJxZ2U?oc=5",
-          "source": "Google News",
-          "published": "2026-06-06T07:06:59Z",
-          "summary": "Brent Crude Heads for Record Monthly Gain With WTI Not Far Behind&nbsp;&nbsp;EnergyNow.com",
-          "company": null,
-          "commodity": "crude_oil",
-          "flags": [
-            "price_shock"
-          ],
-          "drivers": [
-            "ai_metals"
-          ],
-          "score": 2.6429,
-          "title_norm": "behind brent com crude energynow far gain heads monthly not record wti",
-          "consulting_label": "",
-          "why_it_matters": "",
-          "age_h": 24.8,
-          "snippet": ""
-        },
         {
           "title": "Core Differences Between West Texas Intermediate (WTI) and Brent Crude and the Affect of the Iran War - EnergyNow.com",
           "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQN1ZOVFVuUnFFYUstVktuczhxdzBYN1lUbUlqbTIwZEVnX2lCclN2dDZyeVJxUnFPLXdLLWhHcTd1MUUyM0kxTFBUZWJZSVlfN2RCZkRlRXhqT3ZfdUJTQkFjSkR1dDFsQ2Rmc19VTERhc1hsV2Nka2RDVEFvZ0FUcFdJQ0dCR21lcm5mZU12UzJZZHlyOFh3WGEzVWpCVDlUeHc?oc=5",
           "source": "Google News",
           "published": "2026-06-06T06:51:30Z",
-          "summary": "Core Differences Between West Texas Intermediate (WTI) and Brent Crude and the Affect of the Iran War&nbsp;&nbsp;EnergyNow.com",
+          "summary": "Core Differences Between West Texas Intermediate (WTI) and Brent Crude and the Affect of the Iran War EnergyNow.com",
           "company": null,
           "commodity": "crude_oil",
           "flags": [
@@ -1136,30 +1095,11 @@
           "drivers": [
             "geopolitical_driver"
           ],
-          "score": 2.6408,
+          "score": 2.6382,
           "title_norm": "affect between brent com core crude differences energynow intermediate iran texas war west wti",
           "consulting_label": "Enterprise Risk",
           "why_it_matters": "Enterprise risk or governance signal — ERM framework or internal audit advisory.",
-          "age_h": 25.1,
-          "snippet": ""
-        },
-        {
-          "title": "Crude oil prices rise; brent at $67.73, WTI at $63.68 per Barrel - News On AIR",
-          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNcHY4M1lvLWZtV0s0clVXTExGQ1NRZXJQRUY5aU9IRFU1Vy1ZUlZCdFQ4TTJETkY4N2xOazBXZTQxM1VBN3RpRjZhRHl1amJJdkdNdkZaSzhGMmRQb3RYeGJrY1RWUXQ4aGRaVzhhZ09SUF9PazdXUEZSNVFQZ1Y0YTJjeV94Tnp6MTNGNERhWQ?oc=5",
-          "source": "Google News",
-          "published": "2026-06-06T23:55:20Z",
-          "summary": "Crude oil prices rise; brent at $67.73, WTI at $63.68 per Barrel&nbsp;&nbsp;News On AIR",
-          "company": null,
-          "commodity": "crude_oil",
-          "flags": [],
-          "drivers": [
-            "ai_metals"
-          ],
-          "score": 0.3772,
-          "title_norm": "air barrel brent crude news oil per prices rise wti",
-          "consulting_label": "",
-          "why_it_matters": "",
-          "age_h": 8.0,
+          "age_h": 25.4,
           "snippet": ""
         }
       ]
@@ -1177,7 +1117,7 @@
         "change_pct": -3.64,
         "source": "yfinance",
         "quality": "market",
-        "as_of": "2026-06-07T07:55:34.415424Z"
+        "as_of": "2026-06-07T08:14:56.102139Z"
       },
       "items": []
     },
@@ -1191,16 +1131,16 @@
           "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQRUZBaVFZN3ZUUkdMZmV5YTNWMHpaRURNdUJHMmV3VXhjdFNOSlhHT0dzMU1welM1Z21zZmZaQ05KR21Ea01Ib1NhdF9hZ2hYOXFQOHdRUkJpUk9nQTRYb25xZm03bk5HN1B0UTM4UzFjWU02TENDaDZVeGxJWmdVTlFmb1A4MmtkeWtCa3IyS0JUYkk4c0UyZURHTTMwYWlQ?oc=5",
           "source": "Google News",
           "published": "2026-06-06T12:39:02Z",
-          "summary": "Singapore oil stocks fall as fuel oil, light ends decline&nbsp;&nbsp;Quantum Commodity Intelligence",
+          "summary": "Singapore oil stocks fall as fuel oil, light ends decline Quantum Commodity Intelligence",
           "company": null,
           "commodity": "refined",
           "flags": [],
           "drivers": [],
-          "score": 0.1967,
+          "score": 0.1931,
           "title_norm": "commodity decline ends fall fuel intelligence light oil oil quantum singapore stocks",
           "consulting_label": "",
           "why_it_matters": "",
-          "age_h": 19.3,
+          "age_h": 19.6,
           "snippet": ""
         }
       ]
@@ -1235,7 +1175,7 @@
         "change_pct": -2.23,
         "source": "yfinance",
         "quality": "market",
-        "as_of": "2026-06-07T07:55:35.114433Z"
+        "as_of": "2026-06-07T08:14:56.624878Z"
       },
       "items": []
     },
@@ -1258,7 +1198,7 @@
         "change_pct": -0.69,
         "source": "yfinance",
         "quality": "market",
-        "as_of": "2026-06-07T07:55:37.718104Z"
+        "as_of": "2026-06-07T08:14:58.713822Z"
       },
       "items": []
     }
@@ -1274,7 +1214,7 @@
       "change_pct": -2.42,
       "source": "yfinance",
       "quality": "market",
-      "as_of": "2026-06-07T07:55:33.134571Z"
+      "as_of": "2026-06-07T08:14:55.061368Z"
     },
     {
       "commodity_id": "wti",
@@ -1286,7 +1226,7 @@
       "change_pct": -2.79,
       "source": "yfinance",
       "quality": "market",
-      "as_of": "2026-06-07T07:55:33.778328Z"
+      "as_of": "2026-06-07T08:14:55.583372Z"
     },
     {
       "commodity_id": "henry_hub",
@@ -1298,7 +1238,7 @@
       "change_pct": -3.64,
       "source": "yfinance",
       "quality": "market",
-      "as_of": "2026-06-07T07:55:34.415424Z"
+      "as_of": "2026-06-07T08:14:56.102139Z"
     },
     {
       "commodity_id": "copper",
@@ -1310,7 +1250,7 @@
       "change_pct": -2.23,
       "source": "yfinance",
       "quality": "market",
-      "as_of": "2026-06-07T07:55:35.114433Z"
+      "as_of": "2026-06-07T08:14:56.624878Z"
     },
     {
       "commodity_id": "gold",
@@ -1322,7 +1262,7 @@
       "change_pct": -2.31,
       "source": "yfinance",
       "quality": "market",
-      "as_of": "2026-06-07T07:55:35.748694Z"
+      "as_of": "2026-06-07T08:14:57.147881Z"
     },
     {
       "commodity_id": "silver",
@@ -1334,7 +1274,7 @@
       "change_pct": -5.2,
       "source": "yfinance",
       "quality": "market",
-      "as_of": "2026-06-07T07:55:36.383772Z"
+      "as_of": "2026-06-07T08:14:57.669490Z"
     },
     {
       "commodity_id": "aluminium",
@@ -1346,7 +1286,7 @@
       "change_pct": -0.54,
       "source": "yfinance",
       "quality": "market",
-      "as_of": "2026-06-07T07:55:37.020504Z"
+      "as_of": "2026-06-07T08:14:58.190250Z"
     },
     {
       "commodity_id": "soybeans",
@@ -1358,7 +1298,7 @@
       "change_pct": -0.69,
       "source": "yfinance",
       "quality": "market",
-      "as_of": "2026-06-07T07:55:37.718104Z"
+      "as_of": "2026-06-07T08:14:58.713822Z"
     },
     {
       "commodity_id": "wheat",
@@ -1370,7 +1310,7 @@
       "change_pct": -0.17,
       "source": "yfinance",
       "quality": "market",
-      "as_of": "2026-06-07T07:55:38.348797Z"
+      "as_of": "2026-06-07T08:14:59.241433Z"
     },
     {
       "commodity_id": "jkm",
@@ -1441,7 +1381,7 @@
         "unit": "Index",
         "last": 100.071,
         "change_pct": 0.66,
-        "as_of": "2026-06-07T07:55:42.897526Z"
+        "as_of": "2026-06-07T08:15:02.877928Z"
       },
       {
         "name": "US 10Y Yield",
@@ -1449,7 +1389,7 @@
         "unit": "%",
         "last": 4.536,
         "change_pct": 1.32,
-        "as_of": "2026-06-07T07:55:43.505650Z"
+        "as_of": "2026-06-07T08:15:03.306129Z"
       },
       {
         "name": "Hang Seng",
@@ -1457,7 +1397,7 @@
         "unit": "Index",
         "last": 24961.949,
         "change_pct": -1.15,
-        "as_of": "2026-06-07T07:55:44.052554Z"
+        "as_of": "2026-06-07T08:15:03.738133Z"
       }
     ],
     "geopolitical": [
@@ -1465,43 +1405,37 @@
         "title": "Core Differences Between West Texas Intermediate (WTI) and Brent Crude and the Affect of the Iran War - EnergyNow.com",
         "source": "Google News",
         "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQN1ZOVFVuUnFFYUstVktuczhxdzBYN1lUbUlqbTIwZEVnX2lCclN2dDZyeVJxUnFPLXdLLWhHcTd1MUUyM0kxTFBUZWJZSVlfN2RCZkRlRXhqT3ZfdUJTQkFjSkR1dDFsQ2Rmc19VTERhc1hsV2Nka2RDVEFvZ0FUcFdJQ0dCR21lcm5mZU12UzJZZHlyOFh3WGEzVWpCVDlUeHc?oc=5",
-        "age_h": 25.1
+        "age_h": 25.4
       },
       {
         "title": "Oil Market Flying Blind as Dark Tanker Traffic Surges in Hormuz",
         "source": "OilPrice.com",
         "url": "https://oilprice.com/Energy/Energy-General/Oil-Market-Flying-Blind-as-Dark-Tanker-Traffic-Surges-in-Hormuz.html",
-        "age_h": 9.0
+        "age_h": 9.3
       },
       {
         "title": "AI Boom or Political Play? Trump Channels Defense Funds Into Dying Coal Plants",
         "source": "OilPrice.com",
         "url": "https://oilprice.com/Energy/Coal/AI-Boom-or-Political-Play-Trump-Channels-Defense-Funds-Into-Dying-Coal-Plants.html",
-        "age_h": 15.0
+        "age_h": 15.3
       },
       {
         "title": "UK Sees Risk of $100 Oil Until 2028",
         "source": "Rigzone News",
         "url": "https://www.rigzone.com/news/wire/uk_sees_risk_of_100_oil_until_2028-06-jun-2026-183867-article/?rss=true",
-        "age_h": 20.0
-      },
-      {
-        "title": "Survey Shows OPEC Output Plunges Further",
-        "source": "Rigzone News",
-        "url": "https://www.rigzone.com/news/wire/survey_shows_opec_output_plunges_further-05-jun-2026-183866-article/?rss=true",
-        "age_h": 36.0
-      },
-      {
-        "title": "ECA LNG Phase 1 Achieves First LNG Production",
-        "source": "Hellenic Shipping News",
-        "url": "https://www.hellenicshippingnews.com/eca-lng-phase-1-achieves-first-lng-production/",
-        "age_h": 35.0
+        "age_h": 20.3
       },
       {
         "title": "Thailand inches towards negative income tax",
         "source": "Bangkok Post Business",
         "url": "https://www.bangkokpost.com/business/general/3266634/thailand-inches-towards-negative-income-tax",
-        "age_h": 34.4
+        "age_h": 34.7
+      },
+      {
+        "title": "OPEC+ set for fourth oil quota hike since Hormuz closure, sources say - Reuters",
+        "source": "Google News - Reuters Crude/LNG/Brent",
+        "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPaWZrV2dPZ2xjY0NWT0lIUFVNeUlJZ1I5V3BsdkU0X01tWFVHLWZWTVBQN0pHeHNGZF9fS01BY2RrbWtLWFcyazR0bVNOWERwQVFBYjhHMFNZYW5XWHNRM2VWZUU2aFpTd3IzRGhiVUZHNUJsbWlCb19CX19SUG5DOXozd1cyak1RdUFhS0FtaUYxMG5xNGtfYW9idFhNWGRUd25PeUFYTWJJWVhqeS1lNUJHS3pCUQ?oc=5",
+        "age_h": 1.1
       }
     ]
   },
@@ -1511,23 +1445,13 @@
       "eia_forecast": "",
       "wb_forecast": "",
       "horizon": "Near-term",
-      "direction": "bullish",
-      "narrative": "I cannot write the summary as requested because the provided headlines do not contain any forecasts for crude oil's outlook—they only report current prices and price movements. To comply with your instruction to \"only restate the provided forecasts,\" I would need source material that includes forward-looking predictions or projections.",
+      "direction": "neutral",
+      "narrative": "I cannot write the requested summary because the headline provided does not contain any specific forecasts or figures for crude oil outlook. The headline only mentions a comparison between WTI and Brent Crude and references geopolitical factors, without stating any forward-looking predictions or data to attribute to sources.",
       "headlines": [
         {
           "title": "Core Differences Between West Texas Intermediate (WTI) and Brent Crude and the Affect of the Iran War - EnergyNow.com",
           "source": "Google News",
           "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQN1ZOVFVuUnFFYUstVktuczhxdzBYN1lUbUlqbTIwZEVnX2lCclN2dDZyeVJxUnFPLXdLLWhHcTd1MUUyM0kxTFBUZWJZSVlfN2RCZkRlRXhqT3ZfdUJTQkFjSkR1dDFsQ2Rmc19VTERhc1hsV2Nka2RDVEFvZ0FUcFdJQ0dCR21lcm5mZU12UzJZZHlyOFh3WGEzVWpCVDlUeHc?oc=5"
-        },
-        {
-          "title": "Crude oil prices rise; brent at $67.73, WTI at $63.68 per Barrel - News On AIR",
-          "source": "Google News",
-          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNcHY4M1lvLWZtV0s0clVXTExGQ1NRZXJQRUY5aU9IRFU1Vy1ZUlZCdFQ4TTJETkY4N2xOazBXZTQxM1VBN3RpRjZhRHl1amJJdkdNdkZaSzhGMmRQb3RYeGJrY1RWUXQ4aGRaVzhhZ09SUF9PazdXUEZSNVFQZ1Y0YTJjeV94Tnp6MTNGNERhWQ?oc=5"
-        },
-        {
-          "title": "Brent Crude Heads for Record Monthly Gain With WTI Not Far Behind - EnergyNow.com",
-          "source": "Google News",
-          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPRU5OM2V6OGlTMnNlODVsRVBRRnp5d0hRcG15elkwNV9tNnZ4NWVqbXIzNmE1ODdxRHFrck9SMnNMYkVKYjQ5TU5pVEZpZ2VzQ2pRUlF2eEhsdjJwTXhLOXgxM3RRNmxVZlFrTDU2OG5Lb3hDZEVEMlFCVUkwcEJ4WThBV2lINUtpdzZHU2JHR1p2TXlkRDd2ZkJxZ2U?oc=5"
         }
       ]
     },
@@ -1579,104 +1503,10 @@
       "demand_signals": [],
       "balance_read": "FRED (2026-05-01): $2.94 (+47.7% over 30 days) — rising trend",
       "source": "FRED",
-      "as_of": "2026-06-07T07:56:21.295332Z"
+      "as_of": "2026-06-07T08:15:41.972814Z"
     }
   ],
-  "themes": [
-    {
-      "name": "Energy Transition & Decarbonisation",
-      "commodities": [],
-      "companies": [
-        "Rio Tinto"
-      ],
-      "headlines": [
-        {
-          "title": "Why Solar Power Is Booming Under Trump",
-          "source": "OilPrice.com",
-          "url": "https://oilprice.com/Alternative-Energy/Solar-Energy/Why-Solar-Power-Is-Booming-Under-Trump.html",
-          "age_h": 11.0
-        },
-        {
-          "title": "Rio Tinto Advances Automation And Low Carbon Aluminium In Growth Push - Yahoo Finance",
-          "source": "Google News",
-          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOY2c1UGlBT213N281bmhkZ1J5SGZ3LU5oQ0VJU0hLd0VTNHVhQXhacFBzN3ItVC1sZWhMdUFxb1ktelVRVWprQWJ6WnFBSl9WV1hSdmJpanpNS1JXZUhKRHp4bld1bkR5RENoUkZDZW5XbmNuQ1RJSU1Ma3NQdV9ZR1lqdHZLSzZobzZwNWVtNTJha0NHM0FBejd6M0hzdGc?oc=5",
-          "age_h": 25.8
-        },
-        {
-          "title": "Gibson tanker report – Resilient VLCCs",
-          "source": "Hellenic Shipping News",
-          "url": "https://www.hellenicshippingnews.com/gibson-tanker-report-resilient-vlccs/",
-          "age_h": 34.9
-        }
-      ],
-      "narrative": "Rio Tinto is positioning itself as a key player in Southeast Asia's energy transition by advancing low-carbon aluminium production and automation technologies, addressing growing demand for decarbonised commodities in global supply chains. While solar power expansion continues to accelerate in the region, driven by favourable policy conditions, the resilience of VLCC tanker demand reflects ongoing requirements for transporting energy commodities during this transitional period. Together, these developments signal a mixed energy landscape in SEA where decarbonisation initiatives coexist with sustained fossil fuel logistics, though major producers like Rio Tinto are increasingly investing in cleaner production methods to align with decarbonisation objectives.",
-      "driver_tags": [
-        "energy_transition"
-      ]
-    },
-    {
-      "name": "Digital & AI in Trading / Treasury",
-      "commodities": [],
-      "companies": [
-        "Rio Tinto"
-      ],
-      "headlines": [
-        {
-          "title": "AI Boom or Political Play? Trump Channels Defense Funds Into Dying Coal Plants",
-          "source": "OilPrice.com",
-          "url": "https://oilprice.com/Energy/Coal/AI-Boom-or-Political-Play-Trump-Channels-Defense-Funds-Into-Dying-Coal-Plants.html",
-          "age_h": 15.0
-        },
-        {
-          "title": "Rio Tinto Advances Automation And Low Carbon Aluminium In Growth Push - Yahoo Finance",
-          "source": "Google News",
-          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOY2c1UGlBT213N281bmhkZ1J5SGZ3LU5oQ0VJU0hLd0VTNHVhQXhacFBzN3ItVC1sZWhMdUFxb1ktelVRVWprQWJ6WnFBSl9WV1hSdmJpanpNS1JXZUhKRHp4bld1bkR5RENoUkZDZW5XbmNuQ1RJSU1Ma3NQdV9ZR1lqdHZLSzZobzZwNWVtNTJha0NHM0FBejd6M0hzdGc?oc=5",
-          "age_h": 25.8
-        },
-        {
-          "title": "Rio Tinto (RIO) Downgraded by RBC to Underperform Amid Iron Ore Concerns - GuruFocus",
-          "source": "Google News",
-          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOd2JOaTlYeWVQVkZLbXk5Vk9tU250Q0RCZHJ6X191Qzd0ME9IZzNGSDlNTHBndHhEWXhBZm1vRVRqVnNRODBFZnRVOGNMN1h1Mzgtc0RQc1FHTERQWEd1VXpGSHQ2UmlzQ0lnSDFHZVY3UDZvLUpYNkdXY3h2SUVSVWJmTTVUWE1PTXRCbFE2akx2azlLbzI1OC04VEYxbng5dUs3a2xaeXJyZ2o2bHVFY2lXb0NYc2dwdlNjSlFB?oc=5",
-          "age_h": 15.5
-        }
-      ],
-      "narrative": "Rio Tinto's strategic push toward automation and low-carbon aluminium production reflects the sector's broader shift toward digital and AI-driven efficiencies in SEA commodity markets, positioning the company to capture premium valuations as environmental standards tighten. However, this modernization agenda faces headwinds from commodity price volatility, as evidenced by RBC's recent downgrade citing iron ore concerns, highlighting how AI and automation investments must compete with near-term market pressures. Meanwhile, geopolitical factors—such as government support for traditional coal infrastructure—underscore the tension between long-term digital transformation in commodity trading and short-term political priorities that could reshape regional supply dynamics. For treasury and trading operations, this environment demands sophisticated AI-powered risk management tools to navigate both the efficiency gains from automation and the unpredictable policy shifts affecting major commodities across Southeast Asia.",
-      "driver_tags": [
-        "digital_tech_driver"
-      ]
-    },
-    {
-      "name": "Indonesia Policy & Downstreaming",
-      "commodities": [],
-      "companies": [
-        "Danantara"
-      ],
-      "headlines": [
-        {
-          "title": "Indonesia centralizes strategic commodity exports under Danantara Sumberdaya Indonesia control from June 1 - Crypto Briefing",
-          "source": "Google News",
-          "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBITnpYQzFVRE9McC1hWHp4Rl9PdHNMUmFzYkZjY2hsS3Y0ajNOTHRfMnoxZ1hXcTZvc09RVnRTSFpicDNFbHRqNXZBb0U0NHVKR2p0TkNpOEJzVnhiNXJZNk1sbkdwcGlJSU0waW9RZTNYQXdrN2hqanBJbDE?oc=5",
-          "age_h": 12.9
-        },
-        {
-          "title": "Posidonia 2026 Closes on a High: Over 35,000 Visitors and 2,200 Exhibitors Set New Exhibition Records",
-          "source": "Hellenic Shipping News",
-          "url": "https://www.hellenicshippingnews.com/posidonia-2026-closes-on-a-high-over-35000-visitors-and-2200-exhibitors-set-new-exhibition-records/",
-          "age_h": 34.9
-        },
-        {
-          "title": "Dry Bulk Market: Indonesian Coal Exports Retreating",
-          "source": "Hellenic Shipping News",
-          "url": "https://www.hellenicshippingnews.com/dry-bulk-market-indonesian-coal-exports-retreating/",
-          "age_h": 34.9
-        }
-      ],
-      "narrative": "Indonesia's shift toward centralizing commodity export control through Danantara Sumberdaya Indonesia, effective June 1, represents a significant policy realignment in Southeast Asian commodity markets that affects key exports like coal, which have recently shown retreating export volumes in the dry bulk sector. This downstreaming strategy consolidates Indonesia's strategic commodity trade under state management, potentially reshaping supply chains and market dynamics across SEA. The timing coincides with renewed industry engagement, as evidenced by major maritime trade events like Posidonia 2026—which attracted over 35,000 visitors and 2,200 exhibitors—suggesting ongoing stakeholder interest in navigating Indonesia's evolving regulatory environment. The centralization of commodity exports through Danantara signals Jakarta's intent to capture greater value from resource extraction while managing the strategic commodities essential to regional commerce.",
-      "driver_tags": [
-        "regulatory_driver"
-      ]
-    }
-  ],
+  "themes": [],
   "risks": [
     {
       "direction": "downside",
@@ -1783,26 +1613,6 @@
       "effective_date": "",
       "source": "OilPrice.com",
       "url": "https://oilprice.com/Energy/Coal/AI-Boom-or-Political-Play-Trump-Channels-Defense-Funds-Into-Dying-Coal-Plants.html"
-    },
-    {
-      "title": "Dry Bulk Market: Indonesian Coal Exports Retreating",
-      "jurisdiction": "Indonesia",
-      "commodities": [],
-      "companies": [],
-      "effective_date": "",
-      "source": "Hellenic Shipping News",
-      "url": "https://www.hellenicshippingnews.com/dry-bulk-market-indonesian-coal-exports-retreating/"
-    },
-    {
-      "title": "The Bahamas Transport Minister Leads Delegation to Posidonia 2026",
-      "jurisdiction": "Thailand",
-      "commodities": [],
-      "companies": [
-        "EGAT"
-      ],
-      "effective_date": "",
-      "source": "Hellenic Shipping News",
-      "url": "https://www.hellenicshippingnews.com/the-bahamas-transport-minister-leads-delegation-to-posidonia-2026/"
     }
   ],
   "heatmap": {
