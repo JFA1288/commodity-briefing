@@ -197,29 +197,56 @@ def summarize_company(name: str, sector: str, headlines: list[str]) -> Optional[
 # ── Per-commodity outlook narrative (Haiku) ───────────────────────────────────
 
 def summarize_outlook(commodity: str, eia_text: str, wb_text: str, headlines: list[str], price_context: str = "") -> Optional[str]:
-    """2-sentence outlook narrative restating fetched forecasts. Never invents figures."""
-    if _mode() == "heuristic" or not _client_available():
-        return None
-    haiku, _ = _models()
+    """2-sentence outlook narrative from available data. Falls back to heuristic if LLM refuses."""
     sources = []
     if price_context:
-        sources.insert(0, price_context)
+        sources.append(price_context)
     if eia_text:
-        sources.append(f"EIA forecast: {eia_text}")
+        sources.append(f"EIA data: {eia_text}")
     if wb_text:
-        sources.append(f"World Bank forecast: {wb_text}")
+        sources.append(f"World Bank data: {wb_text}")
     if headlines:
         sources.append("Recent headlines: " + "; ".join(headlines[:3]))
     if not sources:
-        return None
+        return _heuristic_outlook(commodity, eia_text, wb_text, headlines, price_context)
+
+    if _mode() == "heuristic" or not _client_available():
+        return _heuristic_outlook(commodity, eia_text, wb_text, headlines, price_context)
+
+    haiku, _ = _models()
+    has_forecasts = bool(eia_text or wb_text)
+    if has_forecasts:
+        instruction = "Where quantitative forecasts are provided, cite the figure and source. Where only headlines are available, summarise the directional sentiment."
+    else:
+        instruction = "No quantitative forecasts are available. Summarise the directional market sentiment from the headlines and price data provided."
+
     prompt = (
-        f"Write 2 sentences summarising the outlook for {commodity}. "
-        f"Only restate the provided forecasts — do not invent figures. "
-        f"Attribute each figure to its source by name. Be concise.\n\n"
+        f"Write 2 concise sentences summarising the current market outlook for {commodity}. "
+        f"{instruction} Do not refuse — use whatever data is provided.\n\n"
         + "\n".join(sources)
-        + "\n\nWrite only the 2-sentence narrative."
+        + "\n\nWrite only the 2-sentence outlook."
     )
-    return _cached_call(prompt, haiku, 180)
+    result = _cached_call(prompt, haiku, 180)
+    # Detect refusal responses and fall back to heuristic
+    if not result or result.lower().startswith(("i appreciate", "i'm unable", "i cannot", "i apologize", "i don't")):
+        return _heuristic_outlook(commodity, eia_text, wb_text, headlines, price_context)
+    return result
+
+
+def _heuristic_outlook(commodity: str, eia_text: str, wb_text: str, headlines: list[str], price_context: str) -> Optional[str]:
+    """Rule-based outlook narrative when LLM is unavailable or refuses."""
+    parts: list[str] = []
+    if price_context:
+        parts.append(price_context + ".")
+    if wb_text:
+        parts.append(wb_text + ".")
+    if eia_text:
+        parts.append(eia_text + ".")
+    if headlines:
+        parts.append(f"Recent market headlines: {headlines[0]}.")
+    if not parts:
+        return None
+    return " ".join(parts[:2])
 
 
 # ── Conversation starter (Sonnet) ─────────────────────────────────────────────

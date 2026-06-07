@@ -646,9 +646,11 @@ def build_outlook(
         wb_text = ""
         if fund and fund.source in ("World Bank", "FRED"):
             wb_text = fund.balance_read
-        elif not fund:
+        if not wb_text:
+            # broader search: match any word from commodity name
+            name_words = [w for w in comm_name.lower().split() if len(w) > 2]
             for f in fundamentals:
-                if comm_name.lower().split()[0] in f.commodity.lower() and f.source in ("World Bank", "FRED"):
+                if f.source in ("World Bank", "FRED") and any(w in f.commodity.lower() for w in name_words):
                     wb_text = f.balance_read
                     break
 
