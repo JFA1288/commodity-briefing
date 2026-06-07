@@ -274,5 +274,81 @@
   "1fc1da22efc017e6": {
     "text": "```json\n{\n  \"bullets\": [\n    \"OPEC+ preparing fourth consecutive quota hike post-Hormuz closure; WTI -2.8% and Brent -2.4% reflect accelerating supply unwind — bearish crude bias into Q3.\",\n    \"Dark tanker traffic surging through Hormuz per OilPrice.com; compliance and sanctions exposure elevated for SEA traders sourcing discounted Middle East barrels.\",\n    \"Silver -5.2%, Gold -2.3% signal broad risk-off and China demand weakness — metals-exposed SEA traders should review near-term hedges and margin requirements.\",\n    \"Henry Hub -3.6% adds pressure on LNG netbacks; SEA buyers renegotiating spot LNG cargoes have short-term leverage but watch Hormuz disruption tail risk.\",\n    \"DayOne secures 1GW+ renewable energy for Malaysian data centers via Tenaga Nasional; signals accelerating clean power offtake demand in SEA — opportunity for energy traders.\"\n  ]\n}\n```",
     "ts": "2026-06-07T11:14:11.429345+00:00"
+  },
+  "b8b7211e3fa1b43c": {
+    "text": "Shell's CEO warned that current energy blockades could extend supply shortages into 2027, while the company divested $1.4bn in oil assets to Mercuria and is implementing AI-driven predictive maintenance to optimize operations. These moves suggest Shell is navigating near-term supply constraints while positioning for efficiency gains and strategic asset reallocation.",
+    "ts": "2026-06-07T11:20:33.358131+00:00"
+  },
+  "5856a61365c12e40": {
+    "text": "The U.S. is planning significant energy investments in Azerbaijan with $8 billion in deals signed, potentially expanding American energy sector presence in the region and diversifying energy sources away from Russian supplies. This represents a strategic shift in U.S. energy diplomacy that could create opportunities for major oil and gas companies like Chevron to develop assets in the Caspian region.",
+    "ts": "2026-06-07T11:20:34.789896+00:00"
+  },
+  "c671f5a5e2e811ea": {
+    "text": "TotalEnergies has divested its Arctic LNG 2 stake to Russia's Novatek following Kremlin approval, marking a significant exit from the project amid geopolitical tensions. Concurrently, the company is expanding its renewable energy portfolio in response to oil market volatility and strategic repositioning.",
+    "ts": "2026-06-07T11:20:35.926715+00:00"
+  },
+  "90035bf46f593216": {
+    "text": "BHP's share price contributed to ASX 200 gains amid broader base metals strength, while the company launched a biofuel pilot partnership with the Global Centre for Maritime Decarbonisation to reduce shipping emissions from its operations.",
+    "ts": "2026-06-07T11:20:37.036052+00:00"
+  },
+  "d7d4748883a6d825": {
+    "text": "Ion Varouxakis's tanker venture has secured its first newbuilding fixture with Cargill, marking a significant early contract win for the new venture. The deal demonstrates Cargill's continued investment in owned or dedicated shipping capacity in the Asia trading sector.",
+    "ts": "2026-06-07T11:20:38.144167+00:00"
+  },
+  "962c220bbe613d45": {
+    "text": "Chevron's $8 billion Azerbaijan investment signals deepened US geopolitical positioning in the Caspian, operationally requiring SEA traders to reassess non-Russian LNG supply chains; simultaneously, Shell's warning that energy blockades could extend shortages to 2027 and TotalEnergies' divestment of Arctic LNG 2 to Novatek underscore accelerating sanctions-driven supply fragmentation that will fragment pricing regionally. Woodside's Browse LNG partnership with GS Energy introduces competitive capacity dynamics in Southeast Asian LNG markets, pressuring margins for existing suppliers while opening new offtake pathways that SEA buyers should monitor for contract renegotiation opportunities.",
+    "ts": "2026-06-07T11:20:40.549241+00:00"
+  },
+  "915a41a8f05251ae": {
+    "text": "BHP's strength is driving ASX sentiment as base metals demand signals remain constructive, while Rio Tinto's automation and low-carbon aluminium initiatives suggest operational cost pressures are pushing majors toward capital-intensive modernization—a shift that could strain smaller regional producers like PT Aneka Tambang, which faces margin compression as gold prices ease and compliance scrutiny mounts in Jakarta-listed equities.",
+    "ts": "2026-06-07T11:20:42.335761+00:00"
+  },
+  "6f857cc3bed114f7": {
+    "text": "```json\n[\n  \"Typical scope: M&A · 8-12 weeks · post-merger integration\",\n  \"Typical scope: M&A · 6-10 weeks · asset acquisition integration\",\n  \"Typical scope: Operations · 12-16 weeks · partnership integration\",\n  \"Typical scope: M&A · 8-12 weeks · stake transaction integration\",\n  \"Typical scope: Government relations · 10-14 weeks · deal structuring\",\n  \"Typical scope: M&A · 12-16 weeks · joint venture restructuring\",\n  \"Typical scope: Compliance · 8-12 weeks · regulatory risk assessment\",\n  \"Typical scope: Compliance · 6-10 weeks · mining sector compliance\"\n]\n```",
+    "ts": "2026-06-07T11:20:44.135980+00:00"
+  },
+  "d63901cbf4faf752": {
+    "text": "```json\n[\n  \"Shell faces a **Compliance Risk** signal as geopolitical supply chain disruptions (potential blockades) threaten energy availability through 2027, while simultaneously pursuing AI-driven automation for maintenance—indicating tension between near-term regulatory/operational pressures and long-term efficiency investments.\",\n  \"Rio Tinto shows a **Sustainability** signal through its strategic pivot toward automation and low-carbon aluminium production as a growth differentiator, with rising metals prices from geopolitical optimism (Iran deal hopes) creating a favorable window to advance ESG-aligned capex despite valuation headwinds.\",\n  \"Tenaga Nasional Berhad demonstrates a **Sustainability** signal via aggressive renewable energy procurement (1+ GW for data center clients) to capture the emerging green energy market, yet this contrasts sharply with recent power outages that expose infrastructure reliability gaps undermining the credibility of its energy transition narrative.\"\n]\n```",
+    "ts": "2026-06-07T11:20:47.214223+00:00"
+  },
+  "38459eb4b6b3ba41": {
+    "text": "```json\n{\n  \"narrative\": \"Sanctions-driven supply fragmentation is the dominant cross-sector signal today: TotalEnergies' divestment of its Arctic LNG 2 stake to Novatek and Shell's warning of energy blockades extending shortages to 2027 are accelerating regional LNG pricing divergence, forcing SEA traders to urgently reconfigure non-Russian supply exposure. Chevron's $8 billion Azerbaijan commitment deepens US geopolitical anchoring in the Caspian, adding a strategic layer to supply chain reassessment, while Woodside's Browse LNG partnership with GS Energy reshapes competitive dynamics in SEA LNG markets and creates near-term contract renegotiation leverage for regional buyers. On the power side, DayOne's 1 GW renewable offtake mandate for Malaysian data centers is accelerating corporate PPA demand that will pressure Tenaga Nasional Berhad to simultaneously expand its renewable portfolio and manage complex grid integration—a capital deployment challenge with direct implications for TNB's balance sheet and procurement timelines. In metals, Rio Tinto's automation-led cost modernization is widening the competitive gap with regional producers such as PT Aneka Tambang, which faces compounding headwinds from easing gold prices and Jakarta-listed compliance scrutiny. Critically, Danantara Sumberdaya Indonesia's June 1 centralized control assumption over strategic commodity exports creates immediate compliance reconfiguration requirements across licensing, pricing, and government coordination protocols for all SEA trading counterparties.\",\n  \"themes\": [\n    \"Sanctions-driven LNG fragmentation\",\n    \"SEA renewable PPA acceleration\",\n    \"Indonesia state export control\",\n    \"Majors vs. regional producer divergence\",\n    \"Caspian geopolitical repositioning\"\n  ]\n}\n```",
+    "ts": "2026-06-07T11:20:56.459782+00:00"
+  },
+  "0e77a255e9abce74": {
+    "text": "Southeast Asian commodity markets are experiencing accelerated energy transition momentum, with major players advancing decarbonisation initiatives across multiple sectors. TotalEnergies is expanding its renewables portfolio amid oil market disruptions, while BHP is piloting biofuels through a partnership with the Global Centre for Maritime Decarbonisation to address shipping emissions. Rio Tinto is pushing low-carbon aluminium production alongside automation investments as part of its growth strategy. Malaysia's Tenaga Nasional Berhad (TNB) is positioned as a central driver of the nation's energy transition, with government backing evidenced by high-level political support and key agreements forged at ETCon26, underscoring the region's commitment to decarbonised energy infrastructure.",
+    "ts": "2026-06-07T11:20:58.673754+00:00"
+  },
+  "4a02c08f47b5915a": {
+    "text": "Rio Tinto is leveraging automation and low-carbon aluminium production technologies to drive growth and address valuation pressures in the commodities sector, reflecting broader industry trends toward digitalization and sustainable practices. Meanwhile, energy markets across Southeast Asia—including oil, natural gas, and related sectors represented by companies like PETRONAS Gas, MISC, and Velesto Energy—remain volatile, with geopolitical tensions (US-Iran clashes) and macroeconomic factors (Bank of England rate concerns) creating uncertainty that likely necessitates more sophisticated digital risk management and AI-powered trading tools for regional treasury operations. These parallel developments underscore how SEA commodity players are increasingly integrating advanced technologies to manage operational efficiency, carbon transition, and complex market volatility simultaneously.",
+    "ts": "2026-06-07T11:21:01.486201+00:00"
+  },
+  "16dd603ea29d6a0c": {
+    "text": "Southeast Asian commodity markets demonstrate the critical importance of supply diversification as regional players navigate geopolitical disruptions and infrastructure vulnerabilities. TotalEnergies Trading Asia's expansion into renewables reflects the sector's response to oil market instability, while Tenaga Nasional Berhad's power outage in June 2024 underscores infrastructure risks that disrupt energy supply chains across the region. These challenges are compounded by global supply shocks—including Russia's elevated oil exports amid refining constraints and escalating geopolitical tensions that undermine traditional price narratives—forcing SEA commodity traders to balance exposure across multiple energy sources and suppliers to mitigate both physical and market-based risks.",
+    "ts": "2026-06-07T11:21:03.692171+00:00"
+  },
+  "f02bee0af105b7a7": {
+    "text": "China's weakening demand for commodities is reshaping Southeast Asian markets, with imports hitting decade lows for oil while iron ore prices face pressure from reduced Chinese consumption despite supply constraints. This demand pullback contrasts sharply with China's strategic pivot toward energy transition, evidenced by CATL's projection that energy storage will comprise half its global sales by 2030 and China's near-doubling of nuclear capacity since 2016—signaling a structural shift away from traditional fossil fuels. The mismatch is most acute in oil markets, where Iranian crude has slipped to discounts despite tighter global supply, reflecting Chinese buyers' reluctance to purchase at current price levels and their reliance on strategic stockpiles. For SEA commodity exporters, this dynamic underscores the challenge of China's simultaneous demand weakness and energy transition, pressuring both traditional commodities and creating new opportunities in battery and storage-related supply chains.",
+    "ts": "2026-06-07T11:21:06.949434+00:00"
+  },
+  "2b0300431b83d97d": {
+    "text": "Indonesia's push to centralise strategic commodity exports through new regulations has intensified investor scrutiny of governance frameworks, with Danantara emerging as a focal point for market participants seeking clarity on the export centralisation policy, as reflected in Danantara ratings signals tracked by Hubbis and reporting by IDNFinancials. The policy shift represents a significant downstreaming strategy within Southeast Asian commodity markets, positioning Indonesia to capture greater value from its strategic resources. While attention to Indonesia's regulatory direction grows, regional developments like Nigeria's Dangote refinery ramping up to 700,000 barrels daily highlight competing global capacity pressures in commodity processing, with MIND ID and other state-backed entities central to executing Indonesia's centralised commodity agenda.",
+    "ts": "2026-06-07T11:21:09.629229+00:00"
+  },
+  "ef9ab0ac05dcfcf4": {
+    "text": "```json\n{\n  \"risks\": [\n    {\n      \"direction\": \"upside\",\n      \"text\": \"Shell CEO warnings that a potential Strait of Hormuz blockade could extend energy shortages into 2027 sharply elevate LNG and crude supply disruption risk for SEA importers — Malaysia, Thailand, and Singapore face spot cargo tightness and sustained price premiums if Iranian tensions escalate into shipping lane interference.\"\n    },\n    {\n      \"direction\": \"upside\",\n      \"text\": \"Shell's bullish LNG demand outlook, reinforced by structural decoupling from pipeline gas dependence post-Ukraine, supports elevated LNG contract and spot prices; SEA regasification-heavy economies (Singapore, Philippines, Vietnam) may face persistently higher import bills, while LNG exporters such as Australia and Malaysia's Petronas capture upside margin.\"\n    },\n    {\n      \"direction\": \"downside\",\n      \"text\": \"OPEC+ accelerated output unwind continues to inject incremental crude supply into an already softening demand environment — with China's industrial slowdown and property-sector weakness suppressing refinery run rates, Brent price support remains fragile and SEA crude differentials risk widening to the downside.\"\n    },\n    {\n      \"direction\": \"downside\",\n      \"text\": \"",
+    "ts": "2026-06-07T11:21:17.674328+00:00"
+  },
+  "cd98263a8f9e72f3": {
+    "text": "I appreciate your request, but I'm unable to write the summary as requested because the provided headlines don't include specific forecast figures or outlook statements—they only describe article titles without access to their actual content. To accurately restate forecasts and attribute them by source name as you've requested, I would need the substantive details from these articles.",
+    "ts": "2026-06-07T11:21:19.211137+00:00"
+  },
+  "30aedeea189f731f": {
+    "text": "I appreciate your request, but I'm unable to write the summary as asked because the specific forecasts and figures from these articles are not provided in your message. To accurately attribute forecasts by name and avoid inventing figures, I would need the actual content or data from the OilPrice.com articles you referenced.\n\nCould you share the relevant forecasts and sources from these articles so I can create an accurate 2-sentence summary?",
+    "ts": "2026-06-07T11:21:20.945501+00:00"
+  },
+  "a1d5b0489d998993": {
+    "text": "```json\n{\n  \"bullets\": [\n    \"OPEC+ poised for fourth consecutive quota hike post-Hormuz closure; combined with WTI -2.8% and Brent -2.4%, oversupply narrative is hardening — watch downstream margin compression.\",\n    \"Dark tanker traffic surging through Hormuz per OilPrice.com; compliance exposure rising for SEA traders with opaque crude procurement chains — verify counterparty vessel lists now.\",\n    \"Silver -5.2%, Gold -2.3% signal broad risk-off and China industrial demand weakness; metals-linked SEA exporters face near-term pricing headwinds.\",\n    \"Henry Hub -3.6% adds pressure on LNG spot pricing; SEA buyers on short-term contracts may see relief, but sellers hedging Q3 cargoes should reassess floor assumptions.\",\n    \"Tenaga Nasional/DayOne: 1GW+ renewables secured for Malaysian data centers — clearest SEA signal yet that hyperscaler energy demand is becoming a structural offtake driver for clean power.\"\n  ]\n}\n```",
+    "ts": "2026-06-07T11:21:28.055957+00:00"
   }
 }
