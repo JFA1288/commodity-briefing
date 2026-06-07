@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
 import time
 from datetime import datetime, timezone
 from pathlib import Path
@@ -50,6 +51,17 @@ def _cache_save(url: str, entries: list[dict]) -> None:
     }))
 
 
+def _first_two_sentences(text: str) -> str:
+    if not text:
+        return ""
+    import html as _html
+    clean = re.sub(r"<[^>]+>", " ", text)
+    clean = _html.unescape(clean)
+    clean = re.sub(r"\s+", " ", clean).strip()
+    parts = re.split(r"(?<=[.!?])\s+", clean)
+    return " ".join(parts[:2])
+
+
 def _parse_dt(entry: feedparser.FeedParserDict) -> Optional[datetime]:
     for attr in ("published_parsed", "updated_parsed"):
         t = getattr(entry, attr, None)
@@ -65,9 +77,7 @@ def _entry_to_item(entry: feedparser.FeedParserDict, source: str) -> NewsItem:
     title = getattr(entry, "title", "") or ""
     link = getattr(entry, "link", "") or ""
     summary = getattr(entry, "summary", "") or ""
-    # strip HTML tags from summary
-    import re
-    summary = re.sub(r"<[^>]+>", "", summary).strip()[:500]
+    summary = _first_two_sentences(summary)
     return NewsItem(
         title=title.strip(),
         url=link.strip(),
@@ -96,6 +106,8 @@ def _fetch_feed(url: str, source_name: str, ttl_min: int, delay_s: float) -> lis
                          follow_redirects=True)
         resp.raise_for_status()
         feed = feedparser.parse(resp.content)
+        if feed.bozo and not feed.entries:
+            feed = feedparser.parse(resp.text)
     except Exception as exc:
         print(f"  [news] WARN: failed to fetch {source_name} ({url[:60]}…): {exc}")
         return []

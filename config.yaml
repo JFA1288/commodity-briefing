@@ -377,6 +377,14 @@ supplementary_feeds:
     url: "https://www.eia.gov/rss/todayinenergy.xml"
     weight: 1.4
 
+  - name: Reuters Commodities & Energy
+    url: "https://reutersbest.com/topic/commodities-energy/feed/"
+    weight: 1.5
+
+  - name: Google News - Reuters Crude/LNG/Brent
+    url: "https://news.google.com/rss/search?q=crude+oil+OR+LNG+OR+Brent+site:reuters.com&hl=en-US&gl=US&ceid=US:en"
+    weight: 1.3
+
   - name: IEA News
     url: "https://www.iea.org/news.xml"
     weight: 1.4
