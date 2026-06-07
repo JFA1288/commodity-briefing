@@ -214,17 +214,24 @@ def summarize_outlook(commodity: str, eia_text: str, wb_text: str, headlines: li
         return _heuristic_outlook(commodity, eia_text, wb_text, headlines, price_context)
 
     haiku, _ = _models()
+    has_wb = bool(wb_text)
     has_forecasts = bool(eia_text or wb_text)
-    if has_forecasts:
-        instruction = "Where quantitative forecasts are provided, cite the figure and source. Where only headlines are available, summarise the directional sentiment."
+    if has_wb:
+        instruction = (
+            "Lead with the World Bank benchmark price trend as the primary source. "
+            "Supplement with live price movement and any relevant news sentiment. "
+            "Cite the World Bank figure explicitly."
+        )
+    elif has_forecasts:
+        instruction = "Cite the data figure and its source. Supplement with news sentiment where available."
     else:
-        instruction = "No quantitative forecasts are available. Summarise the directional market sentiment from the headlines and price data provided."
+        instruction = "No benchmark data available. Summarise the directional market sentiment from headlines and live price data."
 
     prompt = (
         f"Write 2 concise sentences summarising the current market outlook for {commodity}. "
         f"{instruction} Do not refuse — use whatever data is provided.\n\n"
         + "\n".join(sources)
-        + "\n\nWrite only the 2-sentence outlook."
+        + "\n\nWrite only the 2-sentence outlook. Do not start with 'I'."
     )
     result = _cached_call(prompt, haiku, 180)
     # Detect refusal responses and fall back to heuristic

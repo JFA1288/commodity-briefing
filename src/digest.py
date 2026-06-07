@@ -638,21 +638,28 @@ def build_outlook(
     fundamentals_by_commodity = {f.commodity: f for f in fundamentals}
 
     results: list[OutlookItem] = []
-    key_commodities = ["Crude Oil", "Natural Gas", "Copper", "Iron Ore", "LNG"]
+    key_commodities = ["Crude Oil", "Natural Gas", "Copper", "Iron Ore", "LNG",
+                       "Coal", "Aluminium", "Nickel", "Palm Oil"]
 
     for comm_name in key_commodities:
-        fund = fundamentals_by_commodity.get(comm_name)
-        eia_text = fund.balance_read if fund and fund.source == "EIA" else ""
+        # World Bank benchmark is the primary forecast source; EIA provides supplementary inventory data
         wb_text = ""
-        if fund and fund.source in ("World Bank", "FRED"):
-            wb_text = fund.balance_read
-        if not wb_text:
-            # broader search: match any word from commodity name
-            name_words = [w for w in comm_name.lower().split() if len(w) > 2]
-            for f in fundamentals:
-                if f.source in ("World Bank", "FRED") and any(w in f.commodity.lower() for w in name_words):
-                    wb_text = f.balance_read
-                    break
+        eia_text = ""
+        name_words = [w for w in comm_name.lower().split() if len(w) > 2]
+
+        for f in fundamentals:
+            f_lower = f.commodity.lower()
+            name_match = (f.commodity == comm_name or
+                          any(w in f_lower for w in name_words) or
+                          f_lower in comm_name.lower())
+            if not name_match:
+                continue
+            if f.source == "World Bank" and not wb_text:
+                wb_text = f.balance_read
+            elif f.source == "FRED" and not wb_text:
+                wb_text = f.balance_read  # FRED hosts World Bank series — treat equally
+            elif f.source == "EIA" and not eia_text:
+                eia_text = f.balance_read
 
         # Find relevant news headlines — T-7 only
         from datetime import datetime, timedelta, timezone as _tz
@@ -671,13 +678,15 @@ def build_outlook(
         # Find live price for this commodity
         price_context = ""
         for p in (prices or []):
-            if any(alias in p.display.lower() for alias in aliases):
+            p_lower = p.display.lower()
+            if any(alias in p_lower for alias in aliases) or any(w in p_lower for w in name_words):
                 if p.price:
                     change_str = f" ({p.change_pct:+.1f}% today)" if p.change_pct else ""
-                    price_context = f"Live price: {p.display} at {p.price:.2f} {p.unit}{change_str}"
+                    price_context = f"Live price: {p.display} at {p.price:,.2f} {p.unit}{change_str}"
                     break
 
         headline_texts = [h["title"] for h in headlines]
+        # Pass wb_text as primary source; eia_text is supplementary
         narrative = summarize_outlook(comm_name, eia_text, wb_text, headline_texts, price_context=price_context) or ""
 
         # Determine consensus direction from news sentiment

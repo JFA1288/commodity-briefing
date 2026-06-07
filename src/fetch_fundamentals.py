@@ -15,7 +15,7 @@ from .models import FundamentalsItem
 
 
 _EIA_BASE = "https://api.eia.gov/v2"
-_WB_BASE = "https://api.worldbank.org/v2/country/WLD/indicator"
+_WB_BASE = "https://api.worldbank.org/v2/country/all/indicator"
 _FRED_CSV = "https://fred.stlouisfed.org/graph/fredgraph.csv"
 
 _WB_INDICATORS = {
@@ -26,10 +26,20 @@ _WB_INDICATORS = {
     "Coal":        "PCOAL_AUS",
 }
 
+# FRED series — includes World Bank commodity benchmark prices (monthly) and
+# daily energy prices. World Bank series via FRED are labelled "World Bank (FRED)".
 _FRED_SERIES = {
-    "Crude Oil":   "DCOILWTICO",
-    "Brent Crude": "DCOILBRENTEU",
-    "Natural Gas": "MHHNGSP",
+    # Energy — daily prices
+    "Crude Oil":    ("DCOILWTICO",    "daily",   "USD/bbl"),
+    "Brent Crude":  ("DCOILBRENTEU",  "daily",   "USD/bbl"),
+    "Natural Gas":  ("MHHNGSP",       "monthly", "USD/MMBtu"),
+    # World Bank commodity benchmark prices — monthly
+    "Copper":       ("PCOPPUSDM",     "monthly", "USD/mt"),
+    "Aluminium":    ("PALUMUSDM",     "monthly", "USD/mt"),
+    "Iron Ore":     ("PIORECRUSDM",   "monthly", "USD/dmtu"),
+    "Coal":         ("PCOALUSDM",     "monthly", "USD/mt"),
+    "Palm Oil":     ("PPOILUSDM",     "monthly", "USD/mt"),
+    "Nickel":       ("PNICKUSDM",     "monthly", "USD/mt"),
 }
 
 
@@ -134,9 +144,14 @@ def fetch_world_bank_fundamentals() -> list[FundamentalsItem]:
 # ── FRED helpers ──────────────────────────────────────────────────────────────
 
 def fetch_fred_fundamentals() -> list[FundamentalsItem]:
-    """30-day price trends from FRED CSV endpoint. Free, no key needed."""
+    """Commodity price trends from FRED. World Bank benchmark series + energy daily prices."""
     results: list[FundamentalsItem] = []
-    for commodity_name, series_id in _FRED_SERIES.items():
+    for commodity_name, series_meta in _FRED_SERIES.items():
+        series_id, freq, unit = series_meta
+        # World Bank monthly series: compare latest vs ~3 months prior (QoQ)
+        # Daily energy series: compare latest vs ~22 trading days prior (30d)
+        lookback_n = 3 if freq == "monthly" else 22
+        is_wb = freq == "monthly" and commodity_name not in ("Natural Gas",)
         try:
             resp = None
             for attempt in range(2):
@@ -157,25 +172,31 @@ def fetch_fred_fundamentals() -> list[FundamentalsItem]:
             if len(rows) < 2:
                 continue
             latest_date, latest_val = rows[-1]
-            lookback_idx = max(0, len(rows) - 22)
+            lookback_idx = max(0, len(rows) - lookback_n)
             _, past_val = rows[lookback_idx]
             latest = float(latest_val)
             past = float(past_val)
             pct = (latest - past) / past * 100 if past else 0
             direction = "up" if pct > 2 else ("down" if pct < -2 else "flat")
             word = "rising" if direction == "up" else ("falling" if direction == "down" else "flat")
-            balance = f"FRED ({latest_date}): ${latest:.2f} ({pct:+.1f}% over 30 days) — {word} trend"
+            period_label = "QoQ" if freq == "monthly" else "30d"
+            source_label = "World Bank" if is_wb else "FRED"
+            balance = (
+                f"{source_label} ({latest_date}): {latest:,.1f} {unit} "
+                f"({pct:+.1f}% {period_label}) — {word}"
+            )
             results.append(FundamentalsItem(
                 commodity=commodity_name,
                 inventory_direction=direction,
                 balance_read=balance,
-                source="FRED",
+                source=source_label,
                 as_of=datetime.now(timezone.utc),
             ))
         except Exception as exc:
             print(f"  [fundamentals] FRED {series_id} error: {exc}")
-    if results:
-        print(f"  [fundamentals] FRED: {len(results)} price trends")
+    wb_count = sum(1 for r in results if r.source == "World Bank")
+    fred_count = sum(1 for r in results if r.source == "FRED")
+    print(f"  [fundamentals] FRED fetch: {wb_count} World Bank benchmarks + {fred_count} FRED energy series")
     return results
 
 
