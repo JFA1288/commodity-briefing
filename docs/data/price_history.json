@@ -38,8 +38,8 @@
     "date": "2026-06-07",
     "prices": {
       "brent": {
-        "price": 93.09,
-        "source": "yfinance",
+        "price": null,
+        "source": "unavailable",
         "unit": "USD/bbl"
       },
       "wti": {
