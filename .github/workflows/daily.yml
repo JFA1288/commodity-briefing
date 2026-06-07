@@ -19,12 +19,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.2.2
         with:
-          fetch-depth: 0
+          fetch-depth: 1
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v5.4.0
         with:
           python-version: "3.11"
           cache: "pip"
@@ -49,6 +49,8 @@ jobs:
             echo "No changes to commit."
           else
             git commit -m "chore: daily commodity intelligence $(date -u +'%Y-%m-%d')"
-            git pull --rebase origin main
+            # Pull with rebase; -X theirs resolves any conflicts by keeping our
+            # freshly generated docs/ output rather than the stale remote version.
+            git pull --rebase -X theirs origin main
             git push
           fi
