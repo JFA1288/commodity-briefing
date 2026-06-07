@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-06-07T13:34:10.712152Z",
+  "generated_at": "2026-06-07T13:44:28.587116Z",
   "executive_brief": {
-    "narrative": "Major IOCs and diversified miners are accelerating portfolio rebalancing this week, with TotalEnergies divesting its Arctic LNG 2 stake to Novatek and Anglo American exiting coal ahead of its Teck merger—both signaling structural de-risking that will tighten seaborne LNG and thermal coal supply available to SEA buyers. On the operational side, Shell's C3 AI-driven predictive maintenance push and Pertamina's Mako gas development rig award to Conrad indicate that upstream reliability and cost discipline are becoming competitive differentiators, with direct implications for contract reliability and margin protection across regional energy supply chains. PETRONAS's absorption of Aramco's Malaysian downstream stake consolidates refining and trading leverage in the hands of the national champion, squeezing margin space for independent traders and reshaping spot market dynamics in the Strait of Malacca corridor. Danantara's June 1 centralization of Indonesia's strategic commodity exports creates an immediate compliance and renegotiation imperative for any trading house with active offtake agreements touching Indonesian state assets, compounding exposure already building around Chevron's regulatory scrutiny. Taken together, these signals point to a tightening supply environment across LNG, copper, and low-carbon metals, rising state-directed control of commodity flows in Southeast Asia, and growing premiums for counterparties who can demonstrate ESG certification, operational resilience, and regulatory agility.",
+    "narrative": "Cross-sector signals this week converge on a clear theme of strategic de-risking and supply chain rebalancing across SEA-linked commodity flows. TotalEnergies' divestment of its Arctic LNG 2 stake to Novatek and Woodside's dilution of Browse LNG equity to GS Energy both signal major upstream players shedding exposure to capital-intensive or sanctions-proximate assets, tightening the LNG supply landscape for SEA trading counterparties ahead of contract renegotiations. On the downstream and trading side, PETRONAS absorbing Aramco's Malaysian refining stake consolidates regional margin capture and may squeeze independent traders' market access, while Danantara's June 1 centralization of Indonesia's strategic commodity exports creates immediate contracting urgency—particularly for houses like Cargill Asia navigating simultaneous logistics cost pressures from new tanker capacity deployment. Pertamina's Mako gas development advancing with Conrad's rig contract and Tenaga Nasional's 1+ GW renewable offtake commitment to data centers jointly point to accelerating domestic energy infrastructure build-out in Indonesia and Malaysia, reinforcing medium-term regional supply reliability but also increasing state-linked counterparty dominance. SEA trading advisors should flag compounding compliance and renegotiation risk across Indonesian and Malaysian exposure, while monitoring how Shell's C3 AI-driven maintenance automation and BHP's copper pivot reshape supplier operational resilience and capital allocation signals into H2.",
     "themes": [
-      "IOC portfolio de-risking",
-      "State consolidation SEA trade",
-      "Upstream reliability premium",
-      "Low-carbon metals repricing",
-      "LNG supply tightening"
+      "LNG portfolio de-risking",
+      "State consolidation trading disruption",
+      "Upstream SEA acceleration",
+      "Renewables offtake monetization",
+      "Compliance and contract urgency"
     ]
   },
   "what_to_watch": [
@@ -25,7 +25,11 @@
     },
     {
       "category": "event",
-      "text": "Shell: material events flagged (earnings, esg, geopolitical)."
+      "text": "Shell: material events flagged (esg, geopolitical, ma)."
+    },
+    {
+      "category": "event",
+      "text": "Rio Tinto: material events flagged (esg, geopolitical, growth_strategy)."
     },
     {
       "category": "event",
@@ -34,10 +38,6 @@
     {
       "category": "event",
       "text": "BHP: material events flagged (esg, geopolitical, growth_strategy)."
-    },
-    {
-      "category": "event",
-      "text": "Tenaga Nasional Berhad: material events flagged (esg, geopolitical, ma)."
     },
     {
       "category": "data_gap",
@@ -53,19 +53,19 @@
       "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPMW9oOXV5bk8tZ2hNaEw0c0VhdlpDLWtpNzV1cGp1RHM0RG9DbUdqejl1YVlrUThScm4yeHV1YlFBUjZyOFFJUVNoM0Z5Q01PNUluampPSzJ2cGsxWWFISDE1cjRfMENIZkJRdVVxMl9nTVIyQ1JOM1NhbkFIbFY1T2VRQUhLV20zaU84UEpKaXZKZzgzZ3NWc283NjRzSjNacEdXVGtUSVhXajJIMlZtUkFUekUyQzZYa0NObENUcG4xOG8?oc=5",
       "why": "M&A or JV activity — potential integration, due diligence, or PMI mandate.",
       "published": "2026-06-05T23:51:32Z",
-      "score": 2.5679,
-      "engagement_context": "Typical scope: Technical team · 3-6 months · Asset integration planning"
+      "score": 2.5673,
+      "engagement_context": "Typical scope: Energy advisory · 6-9 months · M&A integration"
     },
     {
-      "company": "Anglo American",
+      "company": "Rio Tinto",
       "sector": "metals_mining",
       "signal": "Integration",
-      "headline": "Anglo American plc stock (GB00B1XZS820): focus shifts to valuation as coal exit and Teck merger plan - AD HOC NEWS",
-      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNcDVBUDlZNFN5RmNTQjVMTHppUXZ3UmYxN1RFeGs4d2x4VGFKQi11cWRTNTUweDJzbHF4X3RRRG5DbnhjY1gxRVBYdERLYW5aSHBfeVhmNnhZYWhsQnlXU0FKT0NtWU5XNVVpOGl5WExRXzJLRHIyWWZXUkRfbl9nYy1IVDZyR0w4aVgzU0pqbWJhTEJkMzFaR2V2dHVXUWRBSGU4eVBkdTI4ZGw3aHVzUlRwbGxTQzhmUXctR3d3dTJ2RUdjOTRfcmdR?oc=5",
+      "headline": "Rio Tinto, IBD Stock Of The Day, Breaks Out As Iran Deal Hopes Lift Metals Prices - Investor's Business Daily",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNbHozWDRsQlZDdHVnOEduZVFfMHY1eTctZHQ3cVVTbFpuT0F1eWpHME9SRC1fbVcycjB5Z3drWnBEN1czSjlhN2RJUERFXzlMUVNEN2ZGeXNGS19OdGlYYlAzXzZVS1lzOVJsNVdRaDJGRTJGXzNLUHFTZEtzZlNHaUQ1SDBQYTN4X1dSWTh4U3dGWmVGM3E2UndZYmpWN05EeUJhZDM1cnBVLWFZTDBrRl9FYw?oc=5",
       "why": "M&A or JV activity — potential integration, due diligence, or PMI mandate.",
-      "published": "2026-06-05T19:50:24Z",
-      "score": 2.5539,
-      "engagement_context": "Typical scope: Corporate team · 6-9 months · Merger valuation advisory"
+      "published": "2026-06-05T17:13:00Z",
+      "score": 2.5458,
+      "engagement_context": "Typical scope: Mining team · 3-6 months · Deal structuring"
     },
     {
       "company": "Shell",
@@ -75,8 +75,8 @@
       "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPa0tsb2JyWUVxNWZMeWRta2tqWDZ3UzFTN3ZlelFYY0NKQlN5aWdZQkZjTVdYRWxzWnZZd0ZaZFVpXzBCNFF3UDRraUdhY3J5THpfdG5jN1MzTEpNZXhKT29BbWtNaG9PZDFta1FYRktFN29lVmY5bm9zTHN4X0VfYVMzYVk0dzMxdkRqdnJMU1NmV3BvSV9nczMtdklqUXRXeU9hVzJGWUtKNUlsbEE?oc=5",
       "why": "M&A or JV activity — potential integration, due diligence, or PMI mandate.",
       "published": "2026-06-05T10:56:14Z",
-      "score": 2.5322,
-      "engagement_context": "Typical scope: Transaction team · 2-4 months · Asset divestiture support"
+      "score": 2.5319,
+      "engagement_context": "Typical scope: Energy advisory · 4-8 months · Asset acquisition"
     },
     {
       "company": "PETRONAS",
@@ -86,8 +86,8 @@
       "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPT01LcDZTaUNpc1A2aGxsY25kdW96aHc0V29LSFBIa0FQV2gtYkhreS1sb3dTSS1NNkRmOGY5LTlJUUxmbzhOa0FublVjZXFKRGdCWTdLRmpNTW9qRjVma3FpUGFaZ3lVV0U0Y2hZZ1FTSW5lWUtvbndPeVRTS1hmTmkwdU92V1FnaFJNcTdMMA?oc=5",
       "why": "M&A or JV activity — potential integration, due diligence, or PMI mandate.",
       "published": "2026-06-05T08:01:31Z",
-      "score": 2.5272,
-      "engagement_context": "Typical scope: Downstream team · 4-6 months · Stake transfer integration"
+      "score": 2.527,
+      "engagement_context": "Typical scope: Downstream team · 6-12 months · Stake transfer"
     },
     {
       "company": "Tenaga Nasional Berhad",
@@ -97,8 +97,8 @@
       "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNYVNBaEo2MjVKYVhPRXBfcDhGRVRsanVUdDlqWkJEVFRrWk5KMkFlM0lDU3NJS1V2d0lVVlFZMGQ1ckNQSHhkbFpmekpaYUwwb0gxemRuTmxla29MZUN5RGFFNmZGMWd3YkFkRHUtNGtpVXRTQVVrVGU5SnRVRjAtOXNrWFg4QmY5Njg2Z3N2Z2FNREotNW0xWENiZmtiQXpNa1IyV2JXM0Y4VnRjdHVXRDVrelh6c1JYcXJhYVRQS3RVZnlwNWJYLWNtVUFTcXBuMXJ1Tm1tMWJOZ25YWWlz?oc=5",
       "why": "M&A or JV activity — potential integration, due diligence, or PMI mandate.",
       "published": "2026-06-05T02:00:50Z",
-      "score": 2.5192,
-      "engagement_context": "Typical scope: Operations team · 3-5 months · Partnership technical alignment"
+      "score": 2.519,
+      "engagement_context": "Typical scope: Power advisory · 3-6 months · Partnership formalization"
     },
     {
       "company": "TotalEnergies Trading Asia",
@@ -108,8 +108,8 @@
       "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNNmgyY24wWENBYURqdUVHQThCN0pvZmVYZjhRVURVNmJNLVhKWGtyYXpRbDVHNldCYk5VeHdweDJyOHVxZlQycFh3cEZzVE1uNENrbHBCY1BVN2lNcnB2QmJ4VGNmSzl6NTN2Q0ZwdXM1cUZ1SmVGbXlIWEdSX3RnLXkyd0hJVEdncGxKNVJ5NFRLOGUtZmFKOEx3?oc=5",
       "why": "M&A or JV activity — potential integration, due diligence, or PMI mandate.",
       "published": "2026-06-04T11:26:15Z",
-      "score": 2.5083,
-      "engagement_context": "Typical scope: Trading team · 2-3 months · LNG stake transaction"
+      "score": 2.5082,
+      "engagement_context": "Typical scope: LNG team · 6-9 months · Ownership restructuring"
     },
     {
       "company": "Chevron",
@@ -120,7 +120,7 @@
       "why": "M&A or JV activity — potential integration, due diligence, or PMI mandate.",
       "published": "2026-06-02T15:43:43Z",
       "score": 2.5007,
-      "engagement_context": "Typical scope: Project team · 6-12 months · Investment due diligence"
+      "engagement_context": "Typical scope: Energy advisory · 9-12 months · Investment strategy"
     },
     {
       "company": "Woodside Energy",
@@ -131,7 +131,7 @@
       "why": "M&A or JV activity — potential integration, due diligence, or PMI mandate.",
       "published": "2026-06-01T05:50:00Z",
       "score": 2.5001,
-      "engagement_context": "Typical scope: Project team · 9-12 months · LNG stake restructuring"
+      "engagement_context": "Typical scope: Gas team · 12-18 months · Major project restructure"
     }
   ],
   "sector_summaries": [
@@ -160,9 +160,8 @@
     {
       "sector": "metals_mining",
       "sector_label": "Metals & Mining",
-      "top_signal": "Integration",
+      "top_signal": "Growth Strategy",
       "signal_counts": {
-        "Integration": 1,
         "Growth Strategy": 1,
         "Compliance Risk": 1,
         "Sustainability": 1
@@ -174,8 +173,8 @@
         "Rio Tinto"
       ],
       "quiet_companies": [],
-      "pulse": "Metals & Mining: Integration and Growth Strategy signals across 4 active companies.",
-      "narrative": "Anglo American's coal exit and pending Teck merger are reshaping valuation dynamics for the diversified miner, while BHP's copper expansion is overtaking iron ore as a strategic growth lever—both shifts require operational reorientation toward higher-margin, lower-volume production profiles. Rio Tinto's automation and low-carbon aluminium investments signal competitive positioning around ESG-driven premiums, whereas MIND ID faces near-term headwinds as Jakarta gold prices soften, potentially pressuring cash generation from Indonesia's largest listed miner. For SEA trading operations, these moves suggest tightening supply of seaborne thermal coal, strengthening copper demand narratives, and differentiated pricing for low-carbon-certified metals."
+      "pulse": "Metals & Mining: Growth Strategy and Compliance Risk signals across 4 active companies.",
+      "narrative": "**Metals & Mining Sector Summary**\n\nBHP's copper business expanding beyond iron ore signals a strategic pivot requiring supply-chain realignment and increased capital allocation to copper projects, while Rio Tinto's automation and low-carbon aluminium investments suggest sector-wide pressure to de-risk operations and meet ESG compliance. PT Aneka Tambang's steady gold trading amid easing prices indicates Indonesia's mining sector remains resilient to near-term commodity volatility, though compliance oversight remains material for SEA operators navigating regulatory tightening."
     },
     {
       "sector": "power_utilities",
@@ -225,32 +224,20 @@
       "driver": "cost_performance",
       "service_line": "Cost & Performance",
       "suggested_angle": "Offer performance-improvement or turnaround diagnostic",
-      "score": 1.087,
+      "score": 1.08,
       "published": "2026-06-07T07:23:36Z"
     },
     {
       "company": "Rio Tinto",
       "sector": "metals_mining",
       "country": "GB",
-      "headline": "Rio Tinto Advances Automation And Low Carbon Aluminium In Growth Push - Yahoo Finance",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOY2c1UGlBT213N281bmhkZ1J5SGZ3LU5oQ0VJU0hLd0VTNHVhQXhacFBzN3ItVC1sZWhMdUFxb1ktelVRVWprQWJ6WnFBSl9WV1hSdmJpanpNS1JXZUhKRHp4bld1bkR5RENoUkZDZW5XbmNuQ1RJSU1Ma3NQdV9ZR1lqdHZLSzZobzZwNWVtNTJha0NHM0FBejd6M0hzdGc?oc=5",
+      "headline": "Rio Tinto (RIO) Downgraded by RBC to Underperform Amid Iron Ore Concerns - GuruFocus",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOd2JOaTlYeWVQVkZLbXk5Vk9tU250Q0RCZHJ6X191Qzd0ME9IZzNGSDlNTHBndHhEWXhBZm1vRVRqVnNRODBFZnRVOGNMN1h1Mzgtc0RQc1FHTERQWEd1VXpGSHQ2UmlzQ0lnSDFHZVY3UDZvLUpYNkdXY3h2SUVSVWJmTTVUWE1PTXRCbFE2akx2azlLbzI1OC04VEYxbng5dUs3a2xaeXJyZ2o2bHVFY2lXb0NYc2dwdlNjSlFB?oc=5",
       "driver": "digital_tech",
       "service_line": "Digital & Technology",
       "suggested_angle": "Propose digital or technology-transformation advisory — strong team capability fit",
-      "score": 0.501,
-      "published": "2026-06-06T06:11:00Z"
-    },
-    {
-      "company": "Anglo American",
-      "sector": "metals_mining",
-      "country": "GB",
-      "headline": "Anglo American plc stock (GB00B1XZS820): focus shifts to valuation as coal exit and Teck merger plan - AD HOC NEWS",
-      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNcDVBUDlZNFN5RmNTQjVMTHppUXZ3UmYxN1RFeGs4d2x4VGFKQi11cWRTNTUweDJzbHF4X3RRRG5DbnhjY1gxRVBYdERLYW5aSHBfeVhmNnhZYWhsQnlXU0FKT0NtWU5XNVVpOGl5WExRXzJLRHIyWWZXUkRfbl9nYy1IVDZyR0w4aVgzU0pqbWJhTEJkMzFaR2V2dHVXUWRBSGU4eVBkdTI4ZGw3aHVzUlRwbGxTQzhmUXctR3d3dTJ2RUdjOTRfcmdR?oc=5",
-      "driver": "ma",
-      "service_line": "Strategy & Transactions",
-      "suggested_angle": "BD outreach — offer integration-readiness assessment or transaction due-diligence support",
-      "score": 0.361,
-      "published": "2026-06-05T19:50:24Z"
+      "score": 0.741,
+      "published": "2026-06-06T16:30:00Z"
     },
     {
       "company": "PETRONAS",
@@ -261,7 +248,7 @@
       "driver": "ma",
       "service_line": "Strategy & Transactions",
       "suggested_angle": "BD outreach — offer integration-readiness assessment or transaction due-diligence support",
-      "score": 0.229,
+      "score": 0.227,
       "published": "2026-06-05T08:01:31Z"
     },
     {
@@ -273,7 +260,7 @@
       "driver": "sustainability",
       "service_line": "Sustainability & Climate",
       "suggested_angle": "Engage on ESG reporting, transition roadmap, or carbon-accounting advisory",
-      "score": 0.148,
+      "score": 0.147,
       "published": "2026-06-05T07:15:31Z"
     },
     {
@@ -285,7 +272,7 @@
       "driver": "ma",
       "service_line": "Strategy & Transactions",
       "suggested_angle": "BD outreach — offer integration-readiness assessment or transaction due-diligence support",
-      "score": 0.104,
+      "score": 0.103,
       "published": "2026-06-04T11:26:15Z"
     },
     {
@@ -309,7 +296,7 @@
       "driver": "ma",
       "service_line": "Strategy & Transactions",
       "suggested_angle": "BD outreach — offer integration-readiness assessment or transaction due-diligence support",
-      "score": 0.032,
+      "score": 0.031,
       "published": "2026-06-03T04:40:00Z"
     },
     {
@@ -344,35 +331,16 @@
       "country": "GB",
       "ticker": "AAL.L",
       "one_liner": "Diversified global miner; platinum, copper, iron ore, and steelmaking coal.",
-      "active_triggers": [
-        {
-          "driver": "ma",
-          "service_line": "Strategy & Transactions",
-          "suggested_angle": "BD outreach — offer integration-readiness assessment or transaction due-diligence support",
-          "keywords_matched": [
-            "merger"
-          ],
-          "materiality_weight": 3.0
-        }
-      ],
+      "active_triggers": [],
       "top_headlines": [
-        "How The Anglo American (LSE:AAL) Story Is Shifting As Analysts Rework Valuation Targets - Yahoo Finance",
-        "Anglo American plc stock (GB00B1XZS820): focus shifts to valuation as coal exit and Teck merger plan - AD HOC NEWS",
-        "Why is Anglo American trending right now - Kalkine Media",
-        "Anglo American plc stock (GB00B1XZS820): Shares trade lower while investors weigh coal exit and Teck - AD HOC NEWS"
+        "Why is Anglo American trending right now - Kalkine Media"
       ],
       "top_urls": [
-        "https://news.google.com/rss/articles/CBMimAFBVV95cUxPYW81Ym01SXB3TlV0YjdsM3dFZlFGejJWY1NWV2xKU2JrWjh6QjlseXN5MlBSQU9wZnBVQUhzU21SQXM2LWpkUC0xZGp5aEd6aXJhcWhMNTNnMklNVDlJQ2FuZzItYmc5RG12bzNIWE1QT093ZGcxLVVaRHdmbTdoTWZTanB1R2VzRWlsNlpFbS1JWjFoYkJuVw?oc=5",
-        "https://news.google.com/rss/articles/CBMiygFBVV95cUxNcDVBUDlZNFN5RmNTQjVMTHppUXZ3UmYxN1RFeGs4d2x4VGFKQi11cWRTNTUweDJzbHF4X3RRRG5DbnhjY1gxRVBYdERLYW5aSHBfeVhmNnhZYWhsQnlXU0FKT0NtWU5XNVVpOGl5WExRXzJLRHIyWWZXUkRfbl9nYy1IVDZyR0w4aVgzU0pqbWJhTEJkMzFaR2V2dHVXUWRBSGU4eVBkdTI4ZGw3aHVzUlRwbGxTQzhmUXctR3d3dTJ2RUdjOTRfcmdR?oc=5",
-        "https://news.google.com/rss/articles/CBMimAFBVV95cUxNYlE1VE1sMFFyUUFzb0pfaUVNS2l2RzFtRFVjUEhUTkRRREhvb1FSeVVVVFBOTW43a3F5RVp3MXh4STBtQ0VXVXA2SHZoRlVkUEx0Z2lIQzg2VU45VjZHY0NieTR6SzI5dlJJX1dMSk9JZ3dqLWI1SnVRNFBiN29Gd3NfekZVbkNoRHVUYmhNeDJMT0JaX0MtNg?oc=5",
-        "https://news.google.com/rss/articles/CBMivgFBVV95cUxNeklXWEJlM3hlZVc3RDJxaXdIWDZYYWJkanhieFNDSkpyRlRBclVCUzdNRGc3cWxEZ2ViWUlVMXFDNzhwWWlaNkd3X2wzMTU5aGhRaXRjcmhWLWpacWlyVzdqeHdVZmxTb3BTdzJsdVdaa2pTMnNnbmVmTUhXTjQwVkdaQ21mN09qbzdUS1FtV3ZkT21pVWd3LWFPZmxDazFZVk80ZGxUTTJWQV8yUkhyTmZ4dFg4M2h5VWlZVUJ3?oc=5"
+        "https://news.google.com/rss/articles/CBMimAFBVV95cUxNYlE1VE1sMFFyUUFzb0pfaUVNS2l2RzFtRFVjUEhUTkRRREhvb1FSeVVVVFBOTW43a3F5RVp3MXh4STBtQ0VXVXA2SHZoRlVkUEx0Z2lIQzg2VU45VjZHY0NieTR6SzI5dlJJX1dMSk9JZ3dqLWI1SnVRNFBiN29Gd3NfekZVbkNoRHVUYmhNeDJMT0JaX0MtNg?oc=5"
       ],
-      "consulting_angles": [
-        "Strategy & Transactions: BD outreach — offer integration-readiness assessment or transaction due-diligence support"
-      ],
+      "consulting_angles": [],
       "talking_points": [
-        "Strategy & Transactions signal — bd outreach — offer integration-readiness assessment or transaction due-diligence support.",
-        "Key development: \"How The Anglo American (LSE:AAL) Story Is Shifting As Analysts Rework Valuation Targets - Yahoo Finance\""
+        "Key development: \"Why is Anglo American trending right now - Kalkine Media\""
       ],
       "has_news": true
     },
@@ -396,15 +364,15 @@
       "top_headlines": [
         "Boton’s ongoing conveyor innovation journey with BHP & Hancock Iron Ore - International Mining",
         "BHP Group Ltd Stock (BHP) Moved Down by 5.53% on Jun 5: A Full Analysis - TradingKey",
+        "BHP shares stall as iron ore drop weighs on copper gains - Bez Kabli",
         "Evening Wrap: ASX 200 climbs on BHP, RIO base metals bonanza, uranium stocks surge on US nuclear energy expansion - Market Index",
-        "Investing Essentials | BHP at record highs: It's a copper story now - Moomoo",
         "BHP's Copper Business Is Becoming Bigger Than Iron Ore, And That Could Change The Investment Story - Benzinga"
       ],
       "top_urls": [
         "https://news.google.com/rss/articles/CBMipAFBVV95cUxOdm5GenBhSTNKM3JtaEI4SFlRUk1nTXFmUzRWOGNpVndlWGE0V2lWR2RtMEJJNjcyaFEtNzhzV0NGSldDX0pOUk1teUdQbTNvWGlKUlVLWWVTbXI5aERSSy1kWkpuZUIyZThkeWg2T3Nsdnp1N2s0OWdRZGd2eEFXMUxVc19rN0dTaWtnMVlRanBUd3djbFl4S0p1TUlNR1ExVk1hRA?oc=5",
         "https://news.google.com/rss/articles/CBMiigFBVV95cUxNcWotRDBnYXN0U2o4eXBsRExJYlduV0kwU0trTGFRTHBMU3VxV292SzhkSV9aSFNCYlRqdHA3NXNLSE1vZF9ncFl0ajNfc3JxYnQ0ZDM1NkgzVVh1ZWI2WU5KU0xDeEJBVFp6cy1laGx5Y2c5aHc2cTJiMmp0SGN0elhpZnNVekZDLXc?oc=5",
+        "https://news.google.com/rss/articles/CBMiigFBVV95cUxPMXBYazJTaC1xMmZXbzRzb05nRHJIbGIydWQtZ1hfdEdXS2xGWmlUYjlLcXJ3OXFubnF6LUZuNnh4MmpRZUpYc0xYUVZuV3FsMjNUblMwTHo1VHdoZHk0Q1RwekRBb2s5eW9BRW1OM3V5Z2RLNmVjSzlhRXh0OEJQR3M5RngwSm94cHc?oc=5",
         "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNRzhTZVlVQTNtWElpMVJRZm1GX2VZRHdNQXptWDNLRVhFaC1zY3E4NlA5WDZqQ0pDLXVud2FHQmVXUVM0Vmt4VUJDb0Z5RmVkS0VjR1VUdWdLVjRRUVBDbFVrYy16M0FyTFAtX1JnNWNVZFlXUFBnMkx3WHkzM09SN2RtREt2ZjhvVlNHUXVVNldBQ05LVW9sRTBrY01hUXlESU9FaThzZHl3eXpRZmlVS1VTV1lZSklobVdBZldMdk1mTGlWdEU1UllqeGd6eDR3NkVDU3pnNlB1MjNRTHZV?oc=5",
-        "https://news.google.com/rss/articles/CBMirAFBVV95cUxONGhGRlFmTlB4ckpwV19NZXNsN1ZBYmZyaXdUbl8yOGFnb0RTRkRxbGpsODhLeUpQc3FUWGQ5VXF2NnhtNERZRTJaQi03VFhkbjRGYk5oc08xLWt0MTFiZDNicnM4cTA4WWhleGwzMVdENXV4Qzh2WlotamFkZm9uMjNwTXkxdFVEa3lUeVN1X21HTUZocUZzenZlTGtmZnYwN2RmaGxsdGFiZWpp?oc=5",
         "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQcVc0UmdBT1lYdHBrZWZ6c1dLQm9QOEZnVjN4WDNnWmFYakZUUlpncGlFajVJMDBEdVI4Z2JkWE5tcmYwVFZ5cnQ0eEpVYnpzam4zeU9HRHJyOWNCVmFOcmN0TWtvUEVfVTVfcUYwckcta0pOWkVSYzNka1hRRy1iREdYTllzTUVqV2g2bmU0VW1lVExtY0lEd0duVzBhVk1WdTNNTW5mR29pU0ZPNTgxQXlONFNmWERIYXFEZGg3a3EtMXhpYlhqMHVjYVpNMEJvOHlQblV5RDVRa1FS?oc=5"
       ],
       "consulting_angles": [
@@ -426,15 +394,15 @@
       "top_headlines": [
         "Exclusive: Cargill in talks to sell metals unit to Macquarie, sources say - Reuters",
         "Saving breath: Why Havah-Linn Cargill's name resonates with parents after near-death - Big Rapids Pioneer",
-        "Cargill Eyes Major Shake-Up as Metals Exit Signals New Ag Strategy - Agrolatam",
         "Cargill Strengthens Belgium as Strategic European Food Innovation and Manufacturing Hub - Business Wire",
+        "Cargill Eyes Major Shake-Up as Metals Exit Signals New Ag Strategy - Agrolatam",
         "Cargill Weighs Selling Its Metals Unit To Macquarie - Finimize"
       ],
       "top_urls": [
         "https://news.google.com/rss/articles/CBMipwFBVV95cUxNYlhma05wM0tQcURIWnVaLUpIbmZEMUprOWNXSVQxcW0tc0Qtem44OGRhWnBzM3FMQWpHM29mRXBNY1JtSlhsaEhZZHlCVVV6M3lJNjRKdmhMVWZ6ZDgyb2hVeHJJVjcwRkl0SjEzQ01zdDM0bE1nam5ZYUpENXZLSjJiM1lVTWZmenppem5ZZGt0RTBueVRLN2laa0RvQ3EtaUhEVEF5NA?oc=5",
         "https://news.google.com/rss/articles/CBMikwFBVV95cUxQMXJ0eERTcml2SXFBMHdQYm1sZVJLaFdTTjVKMkxWdHhyaHZUcEtPdUFLNi1JZ1J1TktRakQxTE5iRm1ETFpFMlJBSjdCSl9tTEtCNTBaOFNTQnJ2SjducVhNOHVveGZveDBhOWtiaGZ4WjVHTVN6ODFURTY5czQ4ZkRaRVZtT1lFM3d3RHptb095U1E?oc=5",
-        "https://news.google.com/rss/articles/CBMiigFBVV95cUxQejAxcWZxQ090bmZNWmlTVmcxV2ZtWG5LYVBEY1JMTzdiSFdyUmVZM0JoSlFaaFJENUVpUTh3bjBaM29CNGc2QXdQX2k0VWR2VU9jYWltWXJBMDVqQldwSUctRXI3cld6YTRWY1ktY19Tb0NONFRzMzRZdF9ScWpxRHZiNkZ2TnJwV2c?oc=5",
         "https://news.google.com/rss/articles/CBMi3AFBVV95cUxONURXY1B0cFBJbkhsQnB3ZUN0X0xSU0VXQmpGdV9sQ0VLTnhaRzk0b0M3SXhyV1NUd1VNaGpTdHE5U0tFUVVpWHF0QWtlbWVGUkF5WkdQUUtuQmxqaFV2a0lERFJYT3YyTlA5Zk5BeFdhUDMybHVGVEVFLXBCb3dqNlhfZVp3UTZmX29QT3UtWW0xeTBBZFJQbWV4bW11bERIVVpBZWk5V0p4dXZVZ1UzWXVTQWtadVkwRWxvSmdQRU1oUDBSMlVUWW1BMXJWZDJVSDdsM1B0ZEdQTlFF?oc=5",
+        "https://news.google.com/rss/articles/CBMiigFBVV95cUxQejAxcWZxQ090bmZNWmlTVmcxV2ZtWG5LYVBEY1JMTzdiSFdyUmVZM0JoSlFaaFJENUVpUTh3bjBaM29CNGc2QXdQX2k0VWR2VU9jYWltWXJBMDVqQldwSUctRXI3cld6YTRWY1ktY19Tb0NONFRzMzRZdF9ScWpxRHZiNkZ2TnJwV2c?oc=5",
         "https://news.google.com/rss/articles/CBMihwFBVV95cUxNV3hkZUlFVlZQVUNROUVoNnBsX1lSYmE2dGh5LVd5UjVXaHRwdTN0dXRVc1lTOWtKa0s0THYzNV9mS2lwSS1LZUNZaVJ5OU8yZDNINWZtbDE4aFMwSzZlVkM4T0dNZHdsTEVneHpWRV9mekJDV1lBWTAyZkM3cUNRZS01VWU4Wkk?oc=5"
       ],
       "consulting_angles": [],
@@ -490,16 +458,16 @@
       "top_headlines": [
         "Affirms Business Certainty in DSI's Natural Resource Export Mandate - Danantara Indonesia",
         "Indonesia issues presidential decree for Danantara development fund - thestar.com.my",
+        "Indonesia wealth fund Danantara plans dollar bond offering - The Edge Malaysia",
         "Indonesia plans to set up development investment arm under wealth fund Danantara - Asia Asset Management",
-        "Indonesia wealth fund Danantara taps lenders including DBS for potential US dollar bond sale - The Business Times",
-        "Moody's assigns Baa2 rating to Danantara Investment, negative outlook - IDNFinancials"
+        "Indonesia wealth fund Danantara taps lenders including DBS for potential US dollar bond sale - The Business Times"
       ],
       "top_urls": [
         "https://news.google.com/rss/articles/CBMi0gJBVV95cUxOR3Z5Ym1nbHZseXhPeXU5QmNGeWRyZkY4VEcwVEQtSG5pdGZ5R2Q3aWo0S0lyUFRKUVF3Si01TjBDQVBwaXZ2QXlESnl3djRRampCSHFkdWEzYkRVN3NxSzFqdGlkdVI1a3NBczVieGVJak5Jc0JCcjJtS2Vha3hyOThQSlZHODJXa24yWlo2aU9FRWpIQlAzY3ZoQVNZOUtzLVdDMmRpSkthVXZBV1J2MDNUSzBVc3lPWDdEX1YyYkVneGVhRVpFUFlUcS1SSjJkSE1VMVY3XzdLSDRULWhabmc1VkZPZGZzUTVDampHbmlJYkJ4QTRDajFYSVVnLWZ2N19uQlE0c0taSFZxekFqZmJFd0VEYmY1RUozbnc1RGl0cEwtdU5VaFJaeFc3MEhDWVAzTVFvUi1KbTJsakQtX2dNRTloRzVfb1RRNVVKNVRSZw?oc=5",
         "https://news.google.com/rss/articles/CBMixwFBVV95cUxQRmpuWnZ1bTlOYlZkcVIzMHZwOW9TQk5HYVNvWE9WY0xoZ1J1aHpMSTY3TkdOQlc3ZjZkWGNiZzVsa2RWTWdxdDZzT3pmQ3hqdHFXWGFVYW1yNF8xclBPN1k4QnYxbk93alJpNHdfcjQ0M3J6SDB4RVhMS2RuUXQ1dzN3QWlFWWRVV2RJZUNGR2JBQ3V6VWhQTllQTjJ3MDR0ZV96ajlLQ1N2NkF0QnFVOGoxWEJjY25MZGItTmJwaThZQVVuSTRB?oc=5",
+        "https://news.google.com/rss/articles/CBMiUEFVX3lxTFB4VXRDc0NSTlVxSXJ4SWZ1NlR1c1ZaTnBjcm5Pem1xZFlsVFZzWV9wZVBMUlkwQkhzSWh0TXNVaFJicjRBaHlveFNsd2Y5UlJ6?oc=5",
         "https://news.google.com/rss/articles/CBMiygFBVV95cUxPX2pvTUhxT2VvdEJXMXBaLXVTZm1FMHVlWjZXbUlMampKMTlVbDRsdU12cVh3Qi0tSk5PNzRJM0RVWVc0aU1nb01OX09LOUFLRXVZUFMzWVljWC1GamFBTXRnemYyT1EyZHNGS1dVUnZsWU8xei1uVHo1X2l4LXl2bjBmN1Jtb25aYnp2OFkzUWZuYkZ3VmFpYlFhNUxNdmV5ejZ4dUFsajY3T2V5eXpxVmZoTFVVaFkzWVZ3VkRQMWp0cEllLVphZlFR?oc=5",
-        "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNU3RTeEZvUElOQ3VfSXBaeWJfMVM0TXdILXFDcnBzWm9aWjhtbldYcFQyNl9sXzJYRXdGTEcwS00wQnpRSnU2alpPS2c0ZFdhUTNQOXJEa2JGb2szNEE4OFJSR3l4aVVBY01XenktbGE5Z1lDRGo3RkJ5WlRJN01aZWpZelc0QVV6eml0MG5rZWpmbU02LUNoZ0xpZUNPUGpYUXRDc3VtSHI2aWlYOTEwRFdmOUFZcE1SR2ZzaUlYa2V6aUwzNElEcXZGVkFxa3VGdm9peS1FbDU?oc=5",
-        "https://news.google.com/rss/articles/CBMirAFBVV95cUxNRXF6Q0RBLW8zQWJBZXRfSjlxbGRMZld1QUY3X001LXpvbDdkNEhPSkxra2JLaExuNEl2Y2Fub2pUb3E1alp0OExUX1I5N2tNeXNoWUlocVJncmZNYUtzMmRTd2RrdkE3b0dwN2JxbW43WkEwMjBXY3ltNUEwb3VHdkt0WVZqODZEMlNQbHlQVlBvY3VkWHZxNUVKZW9tZ1FVRXhoTjFCZWF5WUUw?oc=5"
+        "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNU3RTeEZvUElOQ3VfSXBaeWJfMVM0TXdILXFDcnBzWm9aWjhtbldYcFQyNl9sXzJYRXdGTEcwS00wQnpRSnU2alpPS2c0ZFdhUTNQOXJEa2JGb2szNEE4OFJSR3l4aVVBY01XenktbGE5Z1lDRGo3RkJ5WlRJN01aZWpZelc0QVV6eml0MG5rZWpmbU02LUNoZ0xpZUNPUGpYUXRDc3VtSHI2aWlYOTEwRFdmOUFZcE1SR2ZzaUlYa2V6aUwzNElEcXZGVkFxa3VGdm9peS1FbDU?oc=5"
       ],
       "consulting_angles": [
         "Strategy & Transactions: BD outreach — offer integration-readiness assessment or transaction due-diligence support"
@@ -583,14 +551,14 @@
         "PETRONAS Gas, TNB team up for Lumut LNG regas terminal, confirms The Edge report - The Edge Malaysia",
         "Malaysia Poised To Tap World's Largest Gas Reserves Through Petronas-Turkminestan Talks, PM - BusinessToday Malaysia",
         "Aramco transfers Malaysian downstream stake to Petronas - MEED",
-        "PM: Malaysia could gain access to major gas field through Turkmenistan talks - The Edge Malaysia"
+        "PETRONAS Gas, TNB formalise collaboration on RGT-3 - thestar.com.my"
       ],
       "top_urls": [
         "https://news.google.com/rss/articles/CBMitAFBVV95cUxOb2tJLXVPNzdLelZMVzAxck9SQW01SXlGeVJPajl2aGdtaDRNR052LUtiLTVaS0Y3MDN0emVRd0J6WEt3R210R0V3anp0ei1ubXZCQTZrMUtNUTVqcEVCTGQ0cGQ0ZDdrSWI2NVBWOWNheGtZcEtsdVVvTGkzaVZ2WUxINkpfV0JVU2sxUEZPQS1MX1RfdW1IRlI0VV9MVFlmNU1JQm9mSF94OE81WDNxdVNfc2s?oc=5",
         "https://news.google.com/rss/articles/CBMiUEFVX3lxTE4teFowTm1VNldhV2tiVE8zNDRBY1REWElVbzZRd0l3ZVJJaXpRMHZGQ0dRRnNpRzlGN1JSaHZBM19ic19Da0ZlX1U2MjhQcVU5?oc=5",
         "https://news.google.com/rss/articles/CBMizwFBVV95cUxPeVVsSkg4SkxDdE1jbjViNUYtNHJFX3M4dGZnc0JzZk85Qm9mNzRNVVhCWF9WVE9YQjA2X19JWnF2RUpWZGRQVTJqaW44S0xteWx2YmRwZVpQRTAtYVFva3ZiQWw1a0lUeWtNWXlYVkdWY01JN19mY25IZTNNVnk4QzllbVJpRU1pakxJS19JWG5aRU9kVHQ3OFB0V3pMUU5feERSSGZlT25qWEVjMGFnckxzS3NfTnJFN0lkNERIZ2J3NzhyZFlSVVhySkxQUTg?oc=5",
         "https://news.google.com/rss/articles/CBMijwFBVV95cUxPT01LcDZTaUNpc1A2aGxsY25kdW96aHc0V29LSFBIa0FQV2gtYkhreS1sb3dTSS1NNkRmOGY5LTlJUUxmbzhOa0FublVjZXFKRGdCWTdLRmpNTW9qRjVma3FpUGFaZ3lVV0U0Y2hZZ1FTSW5lWUtvbndPeVRTS1hmTmkwdU92V1FnaFJNcTdMMA?oc=5",
-        "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9EUjJpUlAyQ0NoQUpFN3lSY2p1dDdXeVFhWlFlMl9lT2xDVnBSMkt2NFROcUhCcmZvaGxmVml6NFAxQzJRNm1DSkRYclk3NzF6?oc=5"
+        "https://news.google.com/rss/articles/CBMitgFBVV95cUxNMmNOcXdJUHBNR1dkRVRiLXljZVgyYkctVWtKejVhX0hlTDFiN0JydWRHNkVDSlNlY2Vrd3N6c056a0E5ak8wVGVTcS1tYy1RdzltOTQtaGJiVXZjQ3haN0ktcWd2dnFreFBwU28xYmNfbDFQUVlHVWRJU2FRQll2S2ozendCVGlkSjlEWGV6UWNVM05xRDdHb0ZXRkN6c29jcjZ1Q2lKanNpVVJva0x6dzlzS2JrZw?oc=5"
       ],
       "consulting_angles": [
         "Strategy & Transactions: BD outreach — offer integration-readiness assessment or transaction due-diligence support",
@@ -680,17 +648,17 @@
       ],
       "top_headlines": [
         "Rio Tinto Advances Automation And Low Carbon Aluminium In Growth Push - Yahoo Finance",
+        "Rio Tinto, IBD Stock Of The Day, Breaks Out As Iran Deal Hopes Lift Metals Prices - Investor's Business Daily",
+        "Rio Tinto (RIO) Downgraded by RBC to Underperform Amid Iron Ore Concerns - GuruFocus",
         "Rio Tinto Commissions $1.5 Billion Low Carbon Aluminum Project in Canada - ESG Today",
-        "Rio Tinto Bets On Automation And Low Carbon Aluminium As Valuation Stretches - simplywall.st",
-        "Rio Tinto emphasises on automation and low-carbon aluminium production amid valuation concerns - AL Circle",
-        "Rio Tinto Begins Commissioning $1.5 Billion Low-Carbon Aluminum Expansion in Quebec - News and Statistics - IndexBox"
+        "Is Rio Tinto Group (LSE:RIO) Overvalued After Recent Share Price Strength - Yahoo Finance"
       ],
       "top_urls": [
         "https://news.google.com/rss/articles/CBMinwFBVV95cUxOY2c1UGlBT213N281bmhkZ1J5SGZ3LU5oQ0VJU0hLd0VTNHVhQXhacFBzN3ItVC1sZWhMdUFxb1ktelVRVWprQWJ6WnFBSl9WV1hSdmJpanpNS1JXZUhKRHp4bld1bkR5RENoUkZDZW5XbmNuQ1RJSU1Ma3NQdV9ZR1lqdHZLSzZobzZwNWVtNTJha0NHM0FBejd6M0hzdGc?oc=5",
+        "https://news.google.com/rss/articles/CBMiswFBVV95cUxNbHozWDRsQlZDdHVnOEduZVFfMHY1eTctZHQ3cVVTbFpuT0F1eWpHME9SRC1fbVcycjB5Z3drWnBEN1czSjlhN2RJUERFXzlMUVNEN2ZGeXNGS19OdGlYYlAzXzZVS1lzOVJsNVdRaDJGRTJGXzNLUHFTZEtzZlNHaUQ1SDBQYTN4X1dSWTh4U3dGWmVGM3E2UndZYmpWN05EeUJhZDM1cnBVLWFZTDBrRl9FYw?oc=5",
+        "https://news.google.com/rss/articles/CBMivgFBVV95cUxOd2JOaTlYeWVQVkZLbXk5Vk9tU250Q0RCZHJ6X191Qzd0ME9IZzNGSDlNTHBndHhEWXhBZm1vRVRqVnNRODBFZnRVOGNMN1h1Mzgtc0RQc1FHTERQWEd1VXpGSHQ2UmlzQ0lnSDFHZVY3UDZvLUpYNkdXY3h2SUVSVWJmTTVUWE1PTXRCbFE2akx2azlLbzI1OC04VEYxbng5dUs3a2xaeXJyZ2o2bHVFY2lXb0NYc2dwdlNjSlFB?oc=5",
         "https://news.google.com/rss/articles/CBMingFBVV95cUxOdU5RNTZTc1Y0NHNLNjBmNnZXdEZlWnVUS1lzTUxJODN3UElTSnoxTy1VMFhaZmFBNlRsckUxcDFOVWVmTGNPMTRnb0JXcTJIZkJ5SE4tZl8wSGxNVm1SRzlXeTlsX2xYc0RKZUF6d09PNXphRkkwSkVBd1Q1X0NwamRnX1BhNlBxa213SkpOQ1R1bG9ZajJrdS1iY05FUQ?oc=5",
-        "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPRW1YVEpZa21lQU02LU1oSG1KT0pmc0dwNkwycHdmNTBDS1E2QkJIYVJZWlFRTG9tMm9ZVFpVSERXMDNpeERXSFZkRF9GLTA5NXNxd2hTZ1F3YW1CYUx5QlhPYm4tWWJmN2xMenItbEJhVkF5Y2FNYThMVkZmS0lld0QtY0NuSU1iUTl6dnBzM2NndkY0TG95QWNCNVpDUnJXYXF5RC05SVZES1VlbmVuZHhBTFpobWxraERFNWtDcDVrMEFPSTNYYklkWmc1YTRIQVRNeNIB2gFBVV95cUxPV0JQYmlHSlhDZ3I1T1A3TTZqWmtfQ0E0aDBSSjVTN3lCaU1WaUp4eVhPalNGNzZaYTZoVERNU1RDSGhIMUxQMHRlUmYwSmZTQ01HRTdGWE8waVlZbEJVTUt2Tmllcnk0elQ2ZHpTa0RhX3d5RGE0bzdZOTlqaGlPR2t3dVVvY1BpLXBiLVBpXzllOHpQbjNfV3BlNWZCWVd4a0E1RWhVcmctYlBUZHloLVRtbDRfYmNyTEMxZVBGVm1CcFNHYzNnaDZTZ3dGZk44MmNVLTNlQnNFQQ?oc=5",
-        "https://news.google.com/rss/articles/CBMiywFBVV95cUxOajNHdm9pRGp4ZjdMRW1vTGVOdGNlMGxFRU13cXFXWGktanpNX1VYLUNlaHNCTHF5ZE03V2JIVTNmWUduQjFqYmVpc2ppejhCejlUYzRlVEZ6N0x4US1ka1U0WmFYMi02Wk00UHdPbURWWW5ReGpld2JoTV9SQkdfNExHMHJOZXF4ZWhDWlZSWExMdWxiZjlUekxsSkJ3Mk1RN1NrOFZDOE5WWWxFVWxHUTJwclVUTWl0MWt1dGtsc3dTYU5Kd0NTVDRPUQ?oc=5",
-        "https://news.google.com/rss/articles/CBMipwFBVV95cUxNWVNsOTVLZEpJUjVFSFJJVTJ3YVNCNHZHSDdJV0FCNnRIbU8zZzFyZ2p3dGMtaHk1UTFnNFlKN0V0NDFkSUNFQ0xKLXI3U0FmQi1DNDZKUzBCblZZaGlZMlVYdlpYLWJtUjJOeTFTLW5CQjRRS0JQRU10UEVibUVFS0xZaTNWeHBOb2JKUGJCNWs1aGVXNzNUcWZZZkw4YWtGa1RfVmhZTQ?oc=5"
+        "https://news.google.com/rss/articles/CBMikgFBVV95cUxNdDFVWjk3cTB1RUpTRng3d3kwb21wVUFfdlgzZk5UM0RLZUFwbmp6ajlKelNwYzlxay0yN2NCNDBoMzdnanF5VG5BVXBNQVpnMUVDZjZqbnBIS2ZMZzNjLV92bTRMdHpVejhJbDVmbjg1SzdrV1VMTmR4ZnpQbmZrakdVRGVURXZ1eWExX3RWcVFOZw?oc=5"
       ],
       "consulting_angles": [
         "Digital & Technology: Propose digital or technology-transformation advisory — strong team capability fit",
@@ -741,17 +709,17 @@
       ],
       "top_headlines": [
         "Shell’s LNG Canada gives preliminary green light for phase two expansion - Upstream Online",
-        "Shell chartering arm Stasco’s earnings slide as costs rise - TradeWinds News",
-        "Sparta: unlocking energy once thought out of reach - Shell Global",
-        "Jiangnan Shipyard Signs $951 Million Contract with Shell for Four 175,000 m³ LNG Carriers - imarinenews.com",
-        "Shell Sees LNG Demand Growing Despite Iran War Volatility - EnergyNow"
+        "Mercuria snaps up Shell venture’s oil assets in $1.4bn deal - TradeWinds News",
+        "Shell Sees LNG Demand Growing Despite Iran War Volatility - EnergyNow",
+        "Shell’s ARC Deal And Methane Grades Reshape Gas Exposure And Valuation - Yahoo Finance",
+        "Sparta: unlocking energy once thought out of reach - Shell Global"
       ],
       "top_urls": [
         "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNRHVLbkdJUW5HNll5LXZTT0Z0UVVlMzRBdFZ6UWFlQm50aW83ZjdUcmlNcGh2cGZpc1JYMHN3eHhnbVQ1V185NnJIbXFWWS1UMzJPLWpndUxnMHVoQ01RNVllY21SSkZ3TWROYk5ZWTBKUjFQRTBMY3JwRFlJQ09hWDBtbmp1ZHptMTVxNVRNSmF2ak9URXBXLWluMkc4dVM4eHdhR1NpQjBzNFU5dDFITGZ2SjVoUk9ZSjFJ?oc=5",
-        "https://news.google.com/rss/articles/CBMirgFBVV95cUxOeFpGYUlnbXFvdS1PVThRUTZnajFjemlHVW01VDFQZzJVajNGVDZodVNRSGxEV05tb1RMTXJYQnB1MzJPYW5YS2JHX2JTbTVybXpJY1NqdFFSbjM3WEJhanJpcnFkQlVpd3NxQlhxS2NEcFVtWEszUTktLXJhLU05QndGcW9oMm1zQVdZRkdaWFFtaGpwa29CTGZ0cmNoQXBSdktiWFFJQTZJaDk4SWc?oc=5",
-        "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPMHplMmE1VEcwZmxjbk15aDZ0SU5rcVVGZk5tdzBBTC1kTGpBVlRXSmUwWF9CNWRmYTRtQ3pjNk5VWU9DSVRoMmZ0cXpDMS1RSDgyaF90aFY0cDFyZTM5X3hsdVBCX2dfVkdDdU1NVFNOUEVoYjctR3ZlOWUwbktvS0Z2TXBRdFN5c3NvNU92SXAxdWVIaktkaFNiTWdRbEZNNDhLcjE4NzItZw?oc=5",
-        "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBCZDBZdk93SV9GQW5ZWkhOWWx5MUNWWTcxNHFOdkhQSnNzaERSMDA5VnRUcGI4cEFQVHh5ZGJmamNVTnRrdmdoSDhaR25jd1k?oc=5",
-        "https://news.google.com/rss/articles/CBMikAFBVV95cUxOZUZoWHVXZmxVNFdIa3B0cXNyLUJ0X0ZDV0FEOWllaU1iUUQ0S0hSWVliUTRPTzRtR3JJUW02NGZSNVh5dTF0X0lnQVk1VHdjU200RnllMlU3ZUtDbE14VHRvUktwSkNHdk1UQ2h0dHR0ZUFzTkFXTWdpYU8xa0xpRXlWOUJtb2l6SUpaY1FnSk0?oc=5"
+        "https://news.google.com/rss/articles/CBMirgFBVV95cUxPa0tsb2JyWUVxNWZMeWRta2tqWDZ3UzFTN3ZlelFYY0NKQlN5aWdZQkZjTVdYRWxzWnZZd0ZaZFVpXzBCNFF3UDRraUdhY3J5THpfdG5jN1MzTEpNZXhKT29BbWtNaG9PZDFta1FYRktFN29lVmY5bm9zTHN4X0VfYVMzYVk0dzMxdkRqdnJMU1NmV3BvSV9nczMtdklqUXRXeU9hVzJGWUtKNUlsbEE?oc=5",
+        "https://news.google.com/rss/articles/CBMikAFBVV95cUxOZUZoWHVXZmxVNFdIa3B0cXNyLUJ0X0ZDV0FEOWllaU1iUUQ0S0hSWVliUTRPTzRtR3JJUW02NGZSNVh5dTF0X0lnQVk1VHdjU200RnllMlU3ZUtDbE14VHRvUktwSkNHdk1UQ2h0dHR0ZUFzTkFXTWdpYU8xa0xpRXlWOUJtb2l6SUpaY1FnSk0?oc=5",
+        "https://news.google.com/rss/articles/CBMimgFBVV95cUxQTEJzWVR4bTJ0Q1kxQXJWdHBoVXlEVlhNQmlnMTAzQ0UzWDcxYVduVmdjNUZCTlVTYmtHOTJONTJkbjRkei05cGVheDVCSmZFMmVfVjhXUDNUdnlUdzItT1lwaGpPdFdZRUJ6RjhrbUpHQTFDLWtEdzYzM3JYcE9wLXhGTGpDM3NXcmp3ZmstNzRvN3BMaElieHJR?oc=5",
+        "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPMHplMmE1VEcwZmxjbk15aDZ0SU5rcVVGZk5tdzBBTC1kTGpBVlRXSmUwWF9CNWRmYTRtQ3pjNk5VWU9DSVRoMmZ0cXpDMS1RSDgyaF90aFY0cDFyZTM5X3hsdVBCX2dfVkdDdU1NVFNOUEVoYjctR3ZlOWUwbktvS0Z2TXBRdFN5c3NvNU92SXAxdWVIaktkaFNiTWdRbEZNNDhLcjE4NzItZw?oc=5"
       ],
       "consulting_angles": [
         "Strategy & Transactions: BD outreach — offer integration-readiness assessment or transaction due-diligence support",
@@ -792,18 +760,18 @@
         }
       ],
       "top_headlines": [
-        "DayOne Secures Over 1GW Renewable Energy in Malaysia in Landmark TNB Partnership - Tirto.id",
         "TNB’s green gamble - Aliran",
         "DayOne Secures Over 1 GW of Renewable Energy for Data Centers in Malaysia - Inspenet",
         "PETRONAS Gas, TNB formalise collaboration on RGT-3 - thestar.com.my",
-        "PM has full confidence in TNB driving nation’s energy transition efforts - The Edge Malaysia"
+        "PM has full confidence in TNB driving nation’s energy transition efforts - The Edge Malaysia",
+        "DPM Fadillah Opens TNB’s ETCon26, Witnesses Key Agreements Advancing Energy Transition Agenda - Bernama"
       ],
       "top_urls": [
-        "https://news.google.com/rss/articles/CBMipAFBVV95cUxPVXUta196bkE3d2hidmJkQVNaTXQ3ZUZDejRyWG5GVmduUjVwMDdkSTNRUjNPNWVZWDVIMnR2MGJ6TnB3Y2Jmb2xnclZ2N0tXcUw1RWdVN2pmUGlEX0ctcGwzcEIyWURUcjFaUVh2RkpqOTlpMWQ4SjlYVGlGUHBsMlhNaEFyc3JXdlZZck1VeU1PRGVkd0wwaVNxQlVNNm54MUNiWg?oc=5",
         "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1xOG1kWTUzb1ZLV0lpczBMYXZsTHYtcjdMSTFEcmpZaExDZkZRTGpDc1J6MVl4Q1h2RGlaazlaUWVRMy0ta0RVSTBibldnNGdlUm90cjJScUg1enc?oc=5",
         "https://news.google.com/rss/articles/CBMipgFBVV95cUxQSkVTM2ZmdGItSmlsbU9qbTcwODk1T3l6VW0ydHMxLTlEemcwel9SdUlzQ0hnZTFXa1hoYzRuVDNUV1JuUEpISy0weE51VnVrSFlabE9IWUJhUS1IcXRsS2JmRGROQVRMLVROVHU0S0lOdk9SY1dtYlhLaXd3TE1wNUxHR3B3N1NtY3ZKVXFXbkFUbUhQVGpiSHVnM1NnZUNlTVhldTBn?oc=5",
         "https://news.google.com/rss/articles/CBMitgFBVV95cUxNMmNOcXdJUHBNR1dkRVRiLXljZVgyYkctVWtKejVhX0hlTDFiN0JydWRHNkVDSlNlY2Vrd3N6c056a0E5ak8wVGVTcS1tYy1RdzltOTQtaGJiVXZjQ3haN0ktcWd2dnFreFBwU28xYmNfbDFQUVlHVWRJU2FRQll2S2ozendCVGlkSjlEWGV6UWNVM05xRDdHb0ZXRkN6c29jcjZ1Q2lKanNpVVJva0x6dzlzS2JrZw?oc=5",
-        "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9LOXV1cWNSeEctdGRqX2tET2xoTlZ4ZVZ5R2ozdUNES3pSLTZYZVFqN3Y4elQtQ0JVaHFGNnB5RFpIY3MtTkQ5M0JSZWUwR1pm?oc=5"
+        "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9LOXV1cWNSeEctdGRqX2tET2xoTlZ4ZVZ5R2ozdUNES3pSLTZYZVFqN3Y4elQtQ0JVaHFGNnB5RFpIY3MtTkQ5M0JSZWUwR1pm?oc=5",
+        "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBxZlpiTGo2VEZXUE5DbGlVc3NITGJDVmJsaTNyVXpBMk9kWjdFeWxqbFkxaWxiOVF6cmQ0SmRXR2JzbWxvUFVsUFZZY2pmTk1ENGRhU2w0enpyUFlB?oc=5"
       ],
       "consulting_angles": [
         "Capital Projects: Propose major-programme advisory or owner's-engineer support for capital delivery",
@@ -812,7 +780,7 @@
       "talking_points": [
         "Capital Projects signal — propose major-programme advisory or owner's-engineer support for capital delivery.",
         "Additional signals: Sustainability & Climate.",
-        "Key development: \"DayOne Secures Over 1GW Renewable Energy in Malaysia in Landmark TNB Partnership - Tirto.id\""
+        "Key development: \"TNB’s green gamble - Aliran\""
       ],
       "has_news": true
     },
@@ -846,15 +814,15 @@
         "Sempra, TotalEnergies Produce First LNG at Mexico’s ECA LNG Project - Marine News Magazine",
         "Putin approves TotalEnergies exit from Arctic LNG 2 project - World Oil",
         "TotalEnergies Expands Renewables Portfolio As Oil Market Faces New Disruptions - Yahoo Finance",
-        "Russia’s Novatek to buy Arctic LNG 2 stake from TotalEnergies - LNG Prime",
-        "TotalEnergies Arctic LNG 2: Putin authorizes exit in 2026 - Inspenet"
+        "TotalEnergies Pursues Major Renewables Growth While Valuation Signals Possible Upside - simplywall.st",
+        "Russia’s Novatek to buy Arctic LNG 2 stake from TotalEnergies - LNG Prime"
       ],
       "top_urls": [
         "https://news.google.com/rss/articles/CBMigwFBVV95cUxQZzBtelBNZU95QVNldGZGSTM3a25SZGtkU28wUjZ1UEd1bTZUaTQwMlRRSDJUQlpfUnlGSXV2Y29NVW9DUVRkYVo2eWV5UzZ6VHdZa3AycmlNeERQdzk0RFNKeXI0OG95TkpUdTZqNmpFY1NFdnB0MVBraTB0Q2YwdlJqWQ?oc=5",
         "https://news.google.com/rss/articles/CBMioAFBVV95cUxQa0Q2RTQyS3hlYWNQWUpya3R2YWhoNVA2R256aUE5cUI2TzQ3QUNrdXpZY3l1T1F3Q2cyS0dQOVhiQ2JpcVR4YTFSY1ZwRUJ6dHZvMmd1dmI5aTd6N05PSmZfdjR6dmpoZ0lFa291SVlJbjBmZW44ZXBxQ25KZ1hWakJVY3FZaEZmWlFiNlBNc0pCR1k4NUE5YnBLRkJhSHhU?oc=5",
         "https://news.google.com/rss/articles/CBMisAFBVV95cUxPZHJEaGl4NFA2WmR2aWotZHBFOU1NdDFfbmJEU1ZucHZod2FCWWhndU1FN0Q4Yk9fT0ZaMUVUWXVaeU03U19uYkRXR0dBMUE0MjJiTEVYcEZ6VDFLMHFXd2NkdUlTcHl2a1EwWVAxOElZbFpEQWI4OTU1WUdNTkoyS09ZVkNkS1M5Rk5vTDNpQXVCeEE0aGEzNkJzbVFsbWJlcFI1aEJVckR6dUhkVFRHZg?oc=5",
-        "https://news.google.com/rss/articles/CBMimgFBVV95cUxNNmgyY24wWENBYURqdUVHQThCN0pvZmVYZjhRVURVNmJNLVhKWGtyYXpRbDVHNldCYk5VeHdweDJyOHVxZlQycFh3cEZzVE1uNENrbHBCY1BVN2lNcnB2QmJ4VGNmSzl6NTN2Q0ZwdXM1cUZ1SmVGbXlIWEdSX3RnLXkyd0hJVEdncGxKNVJ5NFRLOGUtZmFKOEx3?oc=5",
-        "https://news.google.com/rss/articles/CBMikwFBVV95cUxNUnQxZlRkWkFyamg2OUdueEFXOWNYeHBDeURMS3oxeUdoal9OZlZjWTlSUlRRUGpRck51Qkl3dFRRWm13X0p0aGRxMWU2VVhSbE9YS29ZSk5qaWVCYV9mQ2ZRTFR6SThxbUR0N1BneUxsUzJkb3ZXV3VLWUIxX2NCQmFvakZ1bmFqZENhNG1kZDZiRWM?oc=5"
+        "https://news.google.com/rss/articles/CBMizgFBVV95cUxQODJUQlREU0ZSdVB6b0MxZmMtMDZQTWpCS2p6ZFpzZ1NneXZwRFpsRkdNM1Foc1BROEFhSllpUGhrc01FNU02SDd1enhuNjB4UDltWVc0T0pPbkFPblpMVUdhZ0tsU0hrNXBLZU1kN0stVDFFT0MtRUlxaTBnLXF1aDBHQmc0TUNxM0FNZm84LWowY0tpcDJPNVZ4aDN4UUp6bHR2RU1FZXVWSndSUGMwWDNhYV92V09YOXRfTVFxR2ZfeFRFZzdicmlQZ25fd9IB0wFBVV95cUxOdThDcVp1azJURVg1aDg4WmstZ2s5NkdTaUNXcmRnaTRWWUVndnBLeHVEcWlkQm9jNS10Nk9ILWZLUEJySHVza1RwaTJMNWR1clNPamNwaTJFNHQ4cFpGbWs4Q3RGcmFsaWdsMFpzUmozeDB4VDgtaFhXY01adHdXalFKa3NHelJJLThKbk1fYVEzdVpxbDlzQ0NvQ2FyU0F6LUNtdktkQTRVSDBrdUJkQmVMVlFKWnZfOW5QQkRyX2xGTEZlRklXRHBoQmp2OGpuanNv?oc=5",
+        "https://news.google.com/rss/articles/CBMimgFBVV95cUxNNmgyY24wWENBYURqdUVHQThCN0pvZmVYZjhRVURVNmJNLVhKWGtyYXpRbDVHNldCYk5VeHdweDJyOHVxZlQycFh3cEZzVE1uNENrbHBCY1BVN2lNcnB2QmJ4VGNmSzl6NTN2Q0ZwdXM1cUZ1SmVGbXlIWEdSX3RnLXkyd0hJVEdncGxKNVJ5NFRLOGUtZmFKOEx3?oc=5"
       ],
       "consulting_angles": [
         "Strategy & Transactions: BD outreach — offer integration-readiness assessment or transaction due-diligence support",
@@ -886,13 +854,11 @@
       ],
       "top_headlines": [
         "GS Energy Entry Into Browse LNG Reframes Woodside Long Term Upside - Yahoo Finance",
-        "$30bn Browse gas project shake-up as BP sells stake - The Australian",
-        "Woodside Energy Group Ltd stock (AU000000WDS3): shares edge higher as oil price strength supports AS - AD HOC NEWS"
+        "$30bn Browse gas project shake-up as BP sells stake - The Australian"
       ],
       "top_urls": [
         "https://news.google.com/rss/articles/CBMilgFBVV95cUxOWS14SGFKdEplLXRTQmREc29CRzhtMG1CNE1KTVlMZVBDSTZ0Ql9ZdERvRVpScF9WUm9OWUZfYUZNRjk4c3NwVW4wNGpxc3p5NUw4RXptWFRvMVNsbkgwQ0pKZ1IwRF9BQ0JuR283bWctbnBmS0xieFVLV1loZWhBdnp0R2p3U196VHhzUlJHdWd1SmEyZWc?oc=5",
-        "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOck10QmtDcEs0S0tDUUFudlA0R0RIZzk3SzU4NG1yN0plc3FKMVJkUTg0c2J4cndOWnJqY3Y1dG1OYkNXVVJjSkFpTy1UR0VzOHdhbmF6LUNHSk1pa2ZtQ0NjVXRtMlM3b1dsY1dIVGVmenE2ZUNKWW1rYXZEd3BzejEyc1dWZC02SThCNzlZWXlXMWxpSlkwZG1CMzdEMHY1N3F5dTVKX0QzVEVCaTE4aEg1X2NqN1VoU0x0ckZaYW5ZT090SXNVQW45N1pBZmx4M3fSAdcBQVVfeXFMUFh6NjZRMWU1aGN2SWdUckJfMzNYVVpvbXZaVXJ6OHZUUGtOOXREcldNbXpSWDRGbzF4bXEwQUZiU2NEaG8wTzl4TGw1UTN4ZUNwT2FsazJCTHA3bW5IMU1FMTZtM2ZnQnd6dTQzUnFBeG5tU2U0S0dnREhLRE5XcDNJR2VEd1llVUZ2UXhzaVFBcUdQckVkVlVXNE0tSlRLVmM2ekNiUnVzbVNLeGFhcFhKb01WeG42WWhMNS1HSWViNGwxcUdOY19zR3ZoNHJUVzk2YnltQ3M?oc=5",
-        "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQNnhMaHF0ZVFFbTd2a2RtXzBfem9NNmNNS3JZUldPcTkyQ3FKNk1tQ3hrd1JzN0piWWlfZUhXSGptWFZPckE5T255R1VKbWdoQ29UWVlHbVpBZU13dEU5dFVLdWhPaGZXMkpGeURRQjhHOFNKdU02SHF6N3BrMGU1WmRveEo2aXJfN00xZl93bHlOcFpfajNoSnNqNlcwSmpDUGNmMjY4Nk1kOU9tMTNlRlRWSE5mNjZvdzc5amxfazgtbU9hOGVlZA?oc=5"
+        "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOck10QmtDcEs0S0tDUUFudlA0R0RIZzk3SzU4NG1yN0plc3FKMVJkUTg0c2J4cndOWnJqY3Y1dG1OYkNXVVJjSkFpTy1UR0VzOHdhbmF6LUNHSk1pa2ZtQ0NjVXRtMlM3b1dsY1dIVGVmenE2ZUNKWW1rYXZEd3BzejEyc1dWZC02SThCNzlZWXlXMWxpSlkwZG1CMzdEMHY1N3F5dTVKX0QzVEVCaTE4aEg1X2NqN1VoU0x0ckZaYW5ZT090SXNVQW45N1pBZmx4M3fSAdcBQVVfeXFMUFh6NjZRMWU1aGN2SWdUckJfMzNYVVpvbXZaVXJ6OHZUUGtOOXREcldNbXpSWDRGbzF4bXEwQUZiU2NEaG8wTzl4TGw1UTN4ZUNwT2FsazJCTHA3bW5IMU1FMTZtM2ZnQnd6dTQzUnFBeG5tU2U0S0dnREhLRE5XcDNJR2VEd1llVUZ2UXhzaVFBcUdQckVkVlVXNE0tSlRLVmM2ekNiUnVzbVNLeGFhcFhKb01WeG42WWhMNS1HSWViNGwxcUdOY19zR3ZoNHJUVzk2YnltQ3M?oc=5"
       ],
       "consulting_angles": [
         "Strategy & Transactions: BD outreach — offer integration-readiness assessment or transaction due-diligence support"
@@ -964,13 +930,12 @@
         "Strategy & Transactions"
       ],
       "accounts": [
-        "Anglo American",
         "PETRONAS",
         "TotalEnergies Trading Asia",
         "Danantara",
         "Woodside Energy"
       ],
-      "description": "5 accounts show M&A / Transaction Activity signals across Metals & Mining, Trading, Energy — potential cross-sector engagement opportunity."
+      "description": "4 accounts show M&A / Transaction Activity signals across Trading, Energy — potential cross-sector engagement opportunity."
     },
     {
       "theme": "Cost & Margin Pressure",
@@ -990,25 +955,25 @@
     "top_opportunities": [
       "Shell [Cost & Performance] — Offer performance-improvement or turnaround diagnostic",
       "Rio Tinto [Digital & Technology] — strong team capability fit",
-      "Anglo American [Strategy & Transactions] — offer integration-readiness assessment or transaction due-diligence support",
       "PETRONAS [Strategy & Transactions] — offer integration-readiness assessment or transaction due-diligence support",
-      "BHP [Sustainability & Climate] — Engage on ESG reporting, transition roadmap, or carbon-accounting advisory"
+      "BHP [Sustainability & Climate] — Engage on ESG reporting, transition roadmap, or carbon-accounting advisory",
+      "TotalEnergies Trading Asia [Strategy & Transactions] — offer integration-readiness assessment or transaction due-diligence support"
     ],
     "hottest_accounts": [
       "Shell",
       "Rio Tinto",
-      "Anglo American",
       "PETRONAS",
-      "BHP"
+      "BHP",
+      "TotalEnergies Trading Asia"
     ],
     "key_themes": [
       "M&A / Transaction Activity",
       "Cost & Margin Pressure"
     ],
     "what_changed": [
-      "Top signals: Shell, Rio Tinto, Anglo American, PETRONAS."
+      "Top signals: Shell, Rio Tinto, PETRONAS, BHP."
     ],
-    "opportunity_count": 10,
+    "opportunity_count": 9,
     "active_account_count": 14
   },
   "exec_summary": [
@@ -1032,11 +997,11 @@
         "price_shock"
       ],
       "drivers": [],
-      "score": 3.6531,
+      "score": 3.6417,
       "title_norm": "demand destruction new oil prices sets spike talk times york",
       "consulting_label": "",
       "why_it_matters": "",
-      "age_h": 4.6,
+      "age_h": 4.7,
       "snippet": ""
     },
     {
@@ -1053,11 +1018,11 @@
       "drivers": [
         "opec_supply"
       ],
-      "score": 3.4051,
+      "score": 3.3962,
       "title_norm": "closure fourth hike hormuz oil opec quota reuters say set since sources",
       "consulting_label": "Compliance Risk",
       "why_it_matters": "Geopolitical exposure — sanctions risk or trade compliance advisory.",
-      "age_h": 1.7,
+      "age_h": 1.9,
       "snippet": ""
     },
     {
@@ -1074,11 +1039,11 @@
       "drivers": [
         "ai_metals"
       ],
-      "score": 3.1858,
+      "score": 3.179,
       "title_norm": "australian debts faces historic iron mine ore over shutdown unpaid west",
       "consulting_label": "Ops Resilience",
       "why_it_matters": "Operational disruption — business continuity or resilience advisory opportunity.",
-      "age_h": 9.7,
+      "age_h": 9.9,
       "snippet": ""
     },
     {
@@ -1093,11 +1058,11 @@
         "esg"
       ],
       "drivers": [],
-      "score": 3.1465,
+      "score": 3.1401,
       "title_norm": "agree fuels gas gfl landfill opal projects",
       "consulting_label": "Sustainability",
       "why_it_matters": "ESG or decarbonisation signal — sustainability strategy or reporting mandate.",
-      "age_h": 2.6,
+      "age_h": 2.7,
       "snippet": ""
     },
     {
@@ -1114,11 +1079,11 @@
       "drivers": [
         "opec_supply"
       ],
-      "score": 3.0968,
+      "score": 3.0909,
       "title_norm": "closure edge fourth hike hormuz malaysia oil opec quota reuters set since",
       "consulting_label": "Compliance Risk",
       "why_it_matters": "Geopolitical exposure — sanctions risk or trade compliance advisory.",
-      "age_h": 6.1,
+      "age_h": 6.3,
       "snippet": ""
     },
     {
@@ -1135,11 +1100,11 @@
       "drivers": [
         "ai_metals"
       ],
-      "score": 2.9004,
+      "score": 2.8964,
       "title_norm": "centers data dayone energy inspenet malaysia over renewable secures",
       "consulting_label": "Sustainability",
       "why_it_matters": "ESG or decarbonisation signal — sustainability strategy or reporting mandate.",
-      "age_h": 7.0,
+      "age_h": 7.2,
       "snippet": ""
     },
     {
@@ -1158,11 +1123,11 @@
         "ai_metals",
         "geopolitical_driver"
       ],
-      "score": 2.8233,
+      "score": 2.8201,
       "title_norm": "blind dark flying hormuz market oil surges tanker traffic",
       "consulting_label": "Compliance Risk",
       "why_it_matters": "Geopolitical exposure — sanctions risk or trade compliance advisory.",
-      "age_h": 14.6,
+      "age_h": 14.7,
       "snippet": ""
     },
     {
@@ -1179,11 +1144,11 @@
       "drivers": [
         "ai_metals"
       ],
-      "score": 2.788,
+      "score": 2.7852,
       "title_norm": "booming power solar trump under why",
       "consulting_label": "Sustainability",
       "why_it_matters": "ESG or decarbonisation signal — sustainability strategy or reporting mandate.",
-      "age_h": 16.6,
+      "age_h": 16.7,
       "snippet": ""
     },
     {
@@ -1203,11 +1168,11 @@
         "ai_metals",
         "geopolitical_driver"
       ],
-      "score": 2.7286,
+      "score": 2.7263,
       "title_norm": "boom channels coal defense dying funds into plants play political trump",
       "consulting_label": "Enterprise Risk",
       "why_it_matters": "Enterprise risk or governance signal — ERM framework or internal audit advisory.",
-      "age_h": 20.6,
+      "age_h": 20.7,
       "snippet": ""
     },
     {
@@ -1222,11 +1187,11 @@
         "regulatory"
       ],
       "drivers": [],
-      "score": 2.7054,
+      "score": 2.7034,
       "title_norm": "briefing centralizes commodity control crypto danantara exports indonesia indonesia june strategic sumberdaya under",
       "consulting_label": "Compliance Risk",
       "why_it_matters": "Regulatory action — compliance advisory, remediation, or sanctions screening.",
-      "age_h": 18.6,
+      "age_h": 18.7,
       "snippet": ""
     },
     {
@@ -1243,11 +1208,11 @@
       "drivers": [
         "ai_metals"
       ],
-      "score": 2.6882,
+      "score": 2.6864,
       "title_norm": "centers data depth drive energy gas high iea investment lng natural year",
       "consulting_label": "Growth Strategy",
       "why_it_matters": "Expansion or investment signal — market entry, feasibility, or strategy advisory.",
-      "age_h": 34.7,
+      "age_h": 34.9,
       "snippet": ""
     },
     {
@@ -1266,11 +1231,11 @@
         "ai_metals",
         "geopolitical_driver"
       ],
-      "score": 2.6712,
+      "score": 2.6696,
       "title_norm": "100 2028 oil risk sees until",
       "consulting_label": "Performance",
       "why_it_matters": "Earnings or guidance release — CFO advisory, margin improvement, or FP&A opportunity.",
-      "age_h": 25.6,
+      "age_h": 25.7,
       "snippet": ""
     },
     {
@@ -1289,30 +1254,11 @@
         "ai_metals",
         "geopolitical_driver"
       ],
-      "score": 2.6242,
+      "score": 2.6229,
       "title_norm": "business commodity digit double funds gains hedge international iran markets oil reshapes ride times volatility war",
       "consulting_label": "Trading Risk",
       "why_it_matters": "Trading or market risk exposure — hedging framework, VaR, or desk controls review.",
-      "age_h": 43.1,
-      "snippet": ""
-    },
-    {
-      "title": "Brent Settles at $95, WTI at $93 as Middle East Tensions Ease | - Business Post Nigeria",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQRTlKU2lNNlcwd21SMXJGY0xqSkNnVUlYelBGYmVBcjdieGxCc1RxV1p6MFllVUNXUW54RlRVZGJaaUE2QlB5ME5xMXFyVHRwd2Zxa2hZMTRQQ0Z0eEVUcFBxUkFhYlBaekdURkhZQzVvcnZwRTg3cXNMM1BYbkVsaW5lT0xZSXNOV2lEMS1RQ19tLVBveHc?oc=5",
-      "source": "Google News",
-      "published": "2026-06-06T09:40:56Z",
-      "summary": "Brent Settles at $95, WTI at $93 as Middle East Tensions Ease | Business Post Nigeria",
-      "company": null,
-      "commodity": "crude_oil",
-      "flags": [
-        "geopolitical"
-      ],
-      "drivers": [],
-      "score": 2.6198,
-      "title_norm": "brent business ease east middle nigeria post settles tensions wti",
-      "consulting_label": "Compliance Risk",
-      "why_it_matters": "Geopolitical exposure — sanctions risk or trade compliance advisory.",
-      "age_h": 27.9,
+      "age_h": 43.3,
       "snippet": ""
     },
     {
@@ -1327,11 +1273,33 @@
         "geopolitical"
       ],
       "drivers": [],
-      "score": 2.6133,
+      "score": 2.6122,
       "title_norm": "energy gas iran lower prices resolution reuters says secretary take ultimately",
       "consulting_label": "Compliance Risk",
       "why_it_matters": "Geopolitical exposure — sanctions risk or trade compliance advisory.",
-      "age_h": 37.7,
+      "age_h": 37.9,
+      "snippet": ""
+    },
+    {
+      "title": "15% Gold Tariffs & Export Controls Shift Commodity Profits, Threatening Producer Margins - Crux Investor",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNc3RtNlpZeVNFRFJSMFh6OFFsWXlxUFRadFZPTjZmUklZeTU1TnJoUGVWVFNORHJVVVhwMmlmdUM1bzV6TWpiRGRGNGJfMENWdHAxdTR1M3dBenY5TU81dF9Bb09nTUFackNTQy1RVlkzQ0tXY3dPSldvVVMyWmRCeUFXSzZiY1NBRTF4X1MycVBROWZ0WGRJbHhjQVZXNkc2dWVNZTUwbTV5VnNyZ3pnc0NnNTk5VEpyUF9F?oc=5",
+      "source": "Google News - Commodity Markets",
+      "published": "2026-06-05T15:10:10Z",
+      "summary": "15% Gold Tariffs & Export Controls Shift Commodity Profits, Threatening Producer Margins Crux Investor",
+      "company": null,
+      "commodity": null,
+      "flags": [
+        "earnings",
+        "regulatory"
+      ],
+      "drivers": [
+        "geopolitical_driver"
+      ],
+      "score": 2.6018,
+      "title_norm": "commodity controls crux export gold investor margins producer profits shift tariffs threatening",
+      "consulting_label": "Compliance Risk",
+      "why_it_matters": "Regulatory action — compliance advisory, remediation, or sanctions screening.",
+      "age_h": 46.6,
       "snippet": ""
     }
   ],
@@ -1369,11 +1337,11 @@
             "ai_metals",
             "geopolitical_driver"
           ],
-          "score": 2.504,
+          "score": 2.5039,
           "title_norm": "chevron conflicting hoc news signals stock tale",
           "consulting_label": "Compliance Risk",
           "why_it_matters": "Geopolitical exposure — sanctions risk or trade compliance advisory.",
-          "age_h": 86.9,
+          "age_h": 87.1,
           "snippet": ""
         },
         {
@@ -1395,14 +1363,14 @@
           "title_norm": "azerbaijan billion deals energy investments plans reuters says signed",
           "consulting_label": "Integration",
           "why_it_matters": "M&A or JV activity — potential integration, due diligence, or PMI mandate.",
-          "age_h": 117.8,
+          "age_h": 118.0,
           "snippet": ""
         }
       ],
       "flags": [
+        "growth_strategy",
         "ma",
-        "geopolitical",
-        "growth_strategy"
+        "geopolitical"
       ],
       "highlight": "",
       "summary": "Chevron's stock is showing mixed technical signals amid broader market uncertainty. The US has announced $8 billion in energy deals with Azerbaijan, potentially affecting Chevron's strategic positioning in the Caspian region and global energy investments.",
@@ -1441,11 +1409,11 @@
           "drivers": [
             "ai_metals"
           ],
-          "score": 2.5335,
+          "score": 2.5331,
           "title_norm": "agents automate how maintenance news predictive shell",
           "consulting_label": "Ops Resilience",
           "why_it_matters": "Operational disruption — business continuity or resilience advisory opportunity.",
-          "age_h": 50.0,
+          "age_h": 50.1,
           "snippet": ""
         },
         {
@@ -1461,31 +1429,11 @@
             "esg"
           ],
           "drivers": [],
-          "score": 2.5322,
+          "score": 2.5319,
           "title_norm": "4bn assets deal mercuria news oil shell snaps tradewinds ventures",
           "consulting_label": "Integration",
           "why_it_matters": "M&A or JV activity — potential integration, due diligence, or PMI mandate.",
-          "age_h": 50.6,
-          "snippet": ""
-        },
-        {
-          "title": "Shell chartering arm Stasco’s earnings slide as costs rise - TradeWinds News",
-          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOeFpGYUlnbXFvdS1PVThRUTZnajFjemlHVW01VDFQZzJVajNGVDZodVNRSGxEV05tb1RMTXJYQnB1MzJPYW5YS2JHX2JTbTVybXpJY1NqdFFSbjM3WEJhanJpcnFkQlVpd3NxQlhxS2NEcFVtWEszUTktLXJhLU05QndGcW9oMm1zQVdZRkdaWFFtaGpwa29CTGZ0cmNoQXBSdktiWFFJQTZJaDk4SWc?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T08:33:16Z",
-          "summary": "Shell chartering arm Stasco’s earnings slide as costs rise TradeWinds News",
-          "company": "Shell",
-          "commodity": null,
-          "flags": [
-            "earnings",
-            "esg"
-          ],
-          "drivers": [],
-          "score": 2.5281,
-          "title_norm": "arm chartering costs earnings news rise shell slide stascos tradewinds",
-          "consulting_label": "Performance",
-          "why_it_matters": "Earnings or guidance release — CFO advisory, margin improvement, or FP&A opportunity.",
-          "age_h": 53.0,
+          "age_h": 50.8,
           "snippet": ""
         },
         {
@@ -1500,11 +1448,11 @@
             "outage"
           ],
           "drivers": [],
-          "score": 2.509,
+          "score": 2.5089,
           "title_norm": "alarm bell com dutch giant heard kept oil pipeline plc pumping royal shell shell spills spooks",
           "consulting_label": "Ops Resilience",
           "why_it_matters": "Operational disruption — business continuity or resilience advisory opportunity.",
-          "age_h": 72.8,
+          "age_h": 73.0,
           "snippet": ""
         },
         {
@@ -1526,20 +1474,41 @@
           "title_norm": "demand despite energynow growing iran lng sees shell volatility war",
           "consulting_label": "Trading Risk",
           "why_it_matters": "Trading or market risk exposure — hedging framework, VaR, or desk controls review.",
-          "age_h": 86.3,
+          "age_h": 86.5,
+          "snippet": ""
+        },
+        {
+          "title": "Shell potentially selling off stake in Australian carbon credits developer - Upstream Online",
+          "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQRlJCbDItWmphbnBabjJyeVBqSlMyRFQ5cENXdnM5SUF1bDdXdEFDZkdsUm4yS3FrS2Q2cW51SE9yQktDcXNfYkdWYkJFRUdvWnlYNVgySDJucmhVN1Z1cWcxZDhQdF9YV2FfREFEZHlsRl9BRWJXUW8zZXZ5dHMxRTF4MHM4UkZnQkhkMjJpclV0UE5qRXhhZXYzQXliLVlJYk5lY0tsRXByQk9yX0RySDhfSHRJZDZkQW4yaXNPdWRpemF0dndWWA?oc=5",
+          "source": "Google News",
+          "published": "2026-06-03T23:07:31Z",
+          "summary": "Shell potentially selling off stake in Australian carbon credits developer Upstream Online",
+          "company": "Shell",
+          "commodity": null,
+          "flags": [
+            "ma",
+            "esg"
+          ],
+          "drivers": [
+            "ai_metals"
+          ],
+          "score": 2.504,
+          "title_norm": "australian carbon credits developer off online potentially selling shell stake upstream",
+          "consulting_label": "Integration",
+          "why_it_matters": "M&A or JV activity — potential integration, due diligence, or PMI mandate.",
+          "age_h": 86.6,
           "snippet": ""
         }
       ],
       "flags": [
-        "trading_risk",
         "outage",
         "geopolitical",
         "esg",
-        "earnings",
+        "trading_risk",
         "ma"
       ],
-      "highlight": "Pertamina is advancing its gas development capabilities through the Mako offshore project, demonstrating commitment to expanding production infrastructure in Indonesia's competitive energy sector. Signal type: Integration",
-      "summary": "Shell sold its oil trading venture's assets to Mercuria for $1.4 billion, signaling a strategic retreat from that business segment, while the company is deploying C3 AI agents for predictive maintenance automation to offset rising operational costs evident in its chartering arm Stasco's declining earnings.",
+      "highlight": "Pertamina is expanding upstream gas development offshore Indonesia through the Mako project rig deal, consolidating its integrated energy portfolio and securing long-term commodity exposure in a strategic growth basin. Signal type: Integration.",
+      "summary": "Shell is deploying C3 AI agents for predictive maintenance automation while divesting oil assets to Mercuria for $1.4bn, signaling a portfolio shift. The company maintains optimism on LNG demand growth despite geopolitical volatility in the Middle East.",
       "last_news_date": "2026-06-05",
       "one_liner": "Global supermajor; major LNG trader and downstream operator across Asia-Pacific."
     },
@@ -1562,11 +1531,11 @@
             "geopolitical"
           ],
           "drivers": [],
-          "score": 2.5083,
+          "score": 2.5082,
           "title_norm": "arctic buy lng lng novatek prime russias stake totalenergies",
           "consulting_label": "Integration",
           "why_it_matters": "M&A or JV activity — potential integration, due diligence, or PMI mandate.",
-          "age_h": 74.1,
+          "age_h": 74.3,
           "snippet": ""
         },
         {
@@ -1581,11 +1550,52 @@
             "ma"
           ],
           "drivers": [],
-          "score": 2.5046,
+          "score": 2.5045,
           "title_norm": "approves arctic exits indexbox kremlin lng news novatek sale stake statistics totalenergies",
           "consulting_label": "Integration",
           "why_it_matters": "M&A or JV activity — potential integration, due diligence, or PMI mandate.",
-          "age_h": 84.4,
+          "age_h": 84.6,
+          "snippet": ""
+        },
+        {
+          "title": "TotalEnergies Pursues Major Renewables Growth While Valuation Signals Possible Upside - simplywall.st",
+          "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQODJUQlREU0ZSdVB6b0MxZmMtMDZQTWpCS2p6ZFpzZ1NneXZwRFpsRkdNM1Foc1BROEFhSllpUGhrc01FNU02SDd1enhuNjB4UDltWVc0T0pPbkFPblpMVUdhZ0tsU0hrNXBLZU1kN0stVDFFT0MtRUlxaTBnLXF1aDBHQmc0TUNxM0FNZm84LWowY0tpcDJPNVZ4aDN4UUp6bHR2RU1FZXVWSndSUGMwWDNhYV92V09YOXRfTVFxR2ZfeFRFZzdicmlQZ25fd9IB0wFBVV95cUxOdThDcVp1azJURVg1aDg4WmstZ2s5NkdTaUNXcmRnaTRWWUVndnBLeHVEcWlkQm9jNS10Nk9ILWZLUEJySHVza1RwaTJMNWR1clNPamNwaTJFNHQ4cFpGbWs4Q3RGcmFsaWdsMFpzUmozeDB4VDgtaFhXY01adHdXalFKa3NHelJJLThKbk1fYVEzdVpxbDlzQ0NvQ2FyU0F6LUNtdktkQTRVSDBrdUJkQmVMVlFKWnZfOW5QQkRyX2xGTEZlRklXRHBoQmp2OGpuanNv?oc=5",
+          "source": "Google News",
+          "published": "2026-06-03T05:42:19Z",
+          "summary": "TotalEnergies Pursues Major Renewables Growth While Valuation Signals Possible Upside simplywall.st",
+          "company": "TotalEnergies Trading Asia",
+          "commodity": null,
+          "flags": [
+            "esg"
+          ],
+          "drivers": [
+            "energy_transition"
+          ],
+          "score": 2.5015,
+          "title_norm": "growth major possible pursues renewables signals simplywall totalenergies upside valuation while",
+          "consulting_label": "Sustainability",
+          "why_it_matters": "ESG or decarbonisation signal — sustainability strategy or reporting mandate.",
+          "age_h": 104.0,
+          "snippet": ""
+        },
+        {
+          "title": "New York sues Trump government over 'sham' offshore wind deal with TotalEnergies - Recharge News",
+          "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPdjdVNmRHT3l6VC1ENnFJUDBRTWtUUnNBTTZwRThhblZEei1OWWhQM1lMUDVRa3l3WDdpOEVjOTBMSnl2QVpDWEQ5RlU5OFdtbERudFNDUGgzSjBXXzdKM2ppc2UyeEpSbDc2MU5oMml4STgwcERxSUlsbEZpZ3dRc3NBQm82cGU1dm5TUzlJRDM1OXBsWTJBcDJsWGJGTTdxVU12UXZ4MUtzVWxhSlNkbDR6UzR1eXNQdkpTUlhLcy02ak0?oc=5",
+          "source": "Google News",
+          "published": "2026-06-02T19:41:40Z",
+          "summary": "New York sues Trump government over 'sham' offshore wind deal with TotalEnergies Recharge News",
+          "company": "TotalEnergies Trading Asia",
+          "commodity": null,
+          "flags": [
+            "ma",
+            "esg"
+          ],
+          "drivers": [],
+          "score": 2.5008,
+          "title_norm": "deal government new news offshore over recharge sham sues totalenergies trump wind york",
+          "consulting_label": "Integration",
+          "why_it_matters": "M&A or JV activity — potential integration, due diligence, or PMI mandate.",
+          "age_h": 114.0,
           "snippet": ""
         },
         {
@@ -1608,18 +1618,18 @@
           "title_norm": "disruptions expands faces finance market new oil portfolio renewables totalenergies yahoo",
           "consulting_label": "Ops Resilience",
           "why_it_matters": "Operational disruption — business continuity or resilience advisory opportunity.",
-          "age_h": 128.5,
+          "age_h": 128.6,
           "snippet": ""
         }
       ],
       "flags": [
         "ma",
-        "esg",
+        "geopolitical",
         "outage",
-        "geopolitical"
+        "esg"
       ],
       "highlight": "",
-      "summary": "TotalEnergies has divested its Arctic LNG 2 stake to Russia's Novatek following Kremlin approval, marking a significant exit from the project amid geopolitical tensions. Concurrently, the company is expanding its renewable energy portfolio in response to oil market volatility and strategic repositioning.",
+      "summary": "TotalEnergies has divested its Arctic LNG 2 stake to Russia's Novatek following Kremlin approval, marking a strategic exit from Russian operations amid geopolitical pressures. Concurrently, the company is accelerating renewables expansion, though faces regulatory headwinds in the US with New York challenging an offshore wind deal.",
       "last_news_date": "2026-06-04",
       "one_liner": "Trading arm of TotalEnergies; significant LNG and crude trading hub in Singapore."
     },
@@ -1645,7 +1655,7 @@
           "title_norm": "browse energy entry finance into lng long reframes term upside woodside yahoo",
           "consulting_label": "Enterprise Risk",
           "why_it_matters": "Enterprise risk or governance signal — ERM framework or internal audit advisory.",
-          "age_h": 126.4,
+          "age_h": 126.6,
           "snippet": ""
         },
         {
@@ -1664,7 +1674,7 @@
           "title_norm": "30bn australian browse gas project sells shake stake",
           "consulting_label": "Integration",
           "why_it_matters": "M&A or JV activity — potential integration, due diligence, or PMI mandate.",
-          "age_h": 151.7,
+          "age_h": 151.9,
           "snippet": ""
         }
       ],
@@ -1682,33 +1692,11 @@
       "sector": "metals_mining",
       "country": "GB",
       "ticker": "AAL.L",
-      "items": [
-        {
-          "title": "Anglo American plc stock (GB00B1XZS820): focus shifts to valuation as coal exit and Teck merger plan - AD HOC NEWS",
-          "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNcDVBUDlZNFN5RmNTQjVMTHppUXZ3UmYxN1RFeGs4d2x4VGFKQi11cWRTNTUweDJzbHF4X3RRRG5DbnhjY1gxRVBYdERLYW5aSHBfeVhmNnhZYWhsQnlXU0FKT0NtWU5XNVVpOGl5WExRXzJLRHIyWWZXUkRfbl9nYy1IVDZyR0w4aVgzU0pqbWJhTEJkMzFaR2V2dHVXUWRBSGU4eVBkdTI4ZGw3aHVzUlRwbGxTQzhmUXctR3d3dTJ2RUdjOTRfcmdR?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T19:50:24Z",
-          "summary": "Anglo American plc stock (GB00B1XZS820): focus shifts to valuation as coal exit and Teck merger plan AD HOC NEWS",
-          "company": "Anglo American",
-          "commodity": null,
-          "flags": [
-            "ma"
-          ],
-          "drivers": [],
-          "score": 2.5539,
-          "title_norm": "american anglo coal exit focus gb00b1xzs820 hoc merger news plan plc shifts stock teck valuation",
-          "consulting_label": "Integration",
-          "why_it_matters": "M&A or JV activity — potential integration, due diligence, or PMI mandate.",
-          "age_h": 41.7,
-          "snippet": ""
-        }
-      ],
-      "flags": [
-        "ma"
-      ],
-      "highlight": "Anglo American's valuation inflection point hinges on executing its coal exit and proposed Teck merger, which would fundamentally reshape its asset base and risk profile for investors reassessing the company's long-term positioning. Signal type: Integration",
-      "summary": "Anglo American's strategic focus is shifting toward valuation metrics following its coal divestiture and planned merger with Teck Resources, signaling a major portfolio restructuring in the company's transition away from thermal coal toward diversified metals production.",
-      "last_news_date": "2026-06-05",
+      "items": [],
+      "flags": [],
+      "highlight": "",
+      "summary": "",
+      "last_news_date": null,
       "one_liner": "Diversified global miner; platinum, copper, iron ore, and steelmaking coal."
     },
     {
@@ -1729,11 +1717,11 @@
             "growth_strategy"
           ],
           "drivers": [],
-          "score": 2.5473,
+          "score": 2.5468,
           "title_norm": "becoming benzinga bhp bigger business change copper investment iron ore story than",
           "consulting_label": "Growth Strategy",
           "why_it_matters": "Expansion or investment signal — market entry, feasibility, or strategy advisory.",
-          "age_h": 44.0,
+          "age_h": 44.2,
           "snippet": ""
         },
         {
@@ -1748,11 +1736,11 @@
             "esg"
           ],
           "drivers": [],
-          "score": 2.526,
+          "score": 2.5258,
           "title_norm": "australia bhp biofuel bulk carriers emissions gcmd lower mining monthly trialling",
           "consulting_label": "Sustainability",
           "why_it_matters": "ESG or decarbonisation signal — sustainability strategy or reporting mandate.",
-          "age_h": 54.3,
+          "age_h": 54.5,
           "snippet": ""
         },
         {
@@ -1769,11 +1757,11 @@
           "drivers": [
             "geopolitical_driver"
           ],
-          "score": 2.5066,
+          "score": 2.5065,
           "title_norm": "after asx award bhp contract focus kalkine landmark m4m macro metals performance share",
           "consulting_label": "Compliance Risk",
           "why_it_matters": "Geopolitical exposure — sanctions risk or trade compliance advisory.",
-          "age_h": 78.1,
+          "age_h": 78.3,
           "snippet": ""
         },
         {
@@ -1795,15 +1783,15 @@
           "title_norm": "200 asx base bhp bonanza climbs energy evening expansion index market metals nuclear rio stocks surge uranium wrap",
           "consulting_label": "Growth Strategy",
           "why_it_matters": "Expansion or investment signal — market entry, feasibility, or strategy advisory.",
-          "age_h": 101.8,
+          "age_h": 102.0,
           "snippet": ""
         }
       ],
       "flags": [
-        "esg",
-        "price_shock",
+        "growth_strategy",
         "geopolitical",
-        "growth_strategy"
+        "esg",
+        "price_shock"
       ],
       "highlight": "",
       "summary": "BHP is strategically pivoting toward copper as its core business, with the commodity now rivaling iron ore in significance—a shift that could reshape investor positioning in the diversified miner. The company is also advancing decarbonization efforts through biofuel trials for bulk carriers, while contract awards to suppliers signal operational continuity in a strengthening base metals market.",
@@ -1832,7 +1820,7 @@
           "title_norm": "aneka bar ease gold hoc id1000136203 jakarta listed miner news prices stead stock tambang tbk trades",
           "consulting_label": "Compliance Risk",
           "why_it_matters": "Regulatory action — compliance advisory, remediation, or sanctions screening.",
-          "age_h": 125.9,
+          "age_h": 126.1,
           "snippet": ""
         },
         {
@@ -1851,7 +1839,7 @@
           "title_norm": "aneka antam bar bullion eases gold hoc id1000106602 indonesian market news price stock tambang tbk",
           "consulting_label": "Compliance Risk",
           "why_it_matters": "Regulatory action — compliance advisory, remediation, or sanctions screening.",
-          "age_h": 131.4,
+          "age_h": 131.6,
           "snippet": ""
         }
       ],
@@ -1884,32 +1872,33 @@
             "energy_transition",
             "digital_tech_driver"
           ],
-          "score": 2.5979,
+          "score": 2.5969,
           "title_norm": "advances aluminium automation carbon finance growth low push rio tinto yahoo",
           "consulting_label": "Sustainability",
           "why_it_matters": "ESG or decarbonisation signal — sustainability strategy or reporting mandate.",
-          "age_h": 31.4,
+          "age_h": 31.6,
           "snippet": ""
         },
         {
-          "title": "Rio Tinto’s Automation and Low-Carbon Aluminium Production Strategy - Discovery Alert",
-          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOVGtaMlo2aDVlUmZoM2dtWHY4MzdhaEpTZVFMSkcxNnI5bVN3OWFKZlNaUEpvWTF5LU51RHJDejVyVWdGWVVweHUzaV9jdjdJQzVXT1dUMk5XUnlaVUM5bUtUWkZHUGRzc2VJeUdwUmljX1V3SExxeTVJcTZZcS02RXhTZ0w1UFJMMENFUFZCdTZadw?oc=5",
+          "title": "Rio Tinto, IBD Stock Of The Day, Breaks Out As Iran Deal Hopes Lift Metals Prices - Investor's Business Daily",
+          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNbHozWDRsQlZDdHVnOEduZVFfMHY1eTctZHQ3cVVTbFpuT0F1eWpHME9SRC1fbVcycjB5Z3drWnBEN1czSjlhN2RJUERFXzlMUVNEN2ZGeXNGS19OdGlYYlAzXzZVS1lzOVJsNVdRaDJGRTJGXzNLUHFTZEtzZlNHaUQ1SDBQYTN4X1dSWTh4U3dGWmVGM3E2UndZYmpWN05EeUJhZDM1cnBVLWFZTDBrRl9FYw?oc=5",
           "source": "Google News",
-          "published": "2026-06-05T11:08:47Z",
-          "summary": "Rio Tinto’s Automation and Low-Carbon Aluminium Production Strategy Discovery Alert",
+          "published": "2026-06-05T17:13:00Z",
+          "summary": "Rio Tinto, IBD Stock Of The Day, Breaks Out As Iran Deal Hopes Lift Metals Prices Investor's Business Daily",
           "company": "Rio Tinto",
           "commodity": null,
           "flags": [
-            "esg"
+            "ma",
+            "geopolitical"
           ],
           "drivers": [
-            "digital_tech_driver"
+            "ai_metals"
           ],
-          "score": 2.5326,
-          "title_norm": "alert aluminium automation carbon discovery low production rio strategy tintos",
-          "consulting_label": "Sustainability",
-          "why_it_matters": "ESG or decarbonisation signal — sustainability strategy or reporting mandate.",
-          "age_h": 50.4,
+          "score": 2.5458,
+          "title_norm": "breaks business daily day deal hopes ibd investor iran lift metals out prices rio stock tinto",
+          "consulting_label": "Integration",
+          "why_it_matters": "M&A or JV activity — potential integration, due diligence, or PMI mandate.",
+          "age_h": 44.5,
           "snippet": ""
         },
         {
@@ -1926,11 +1915,11 @@
           "drivers": [
             "digital_tech_driver"
           ],
-          "score": 2.5305,
+          "score": 2.5301,
           "title_norm": "aluminium amid automation carbon circle concerns emphasises low production rio tinto valuation",
           "consulting_label": "Sustainability",
           "why_it_matters": "ESG or decarbonisation signal — sustainability strategy or reporting mandate.",
-          "age_h": 51.6,
+          "age_h": 51.8,
           "snippet": ""
         },
         {
@@ -1952,35 +1941,41 @@
           "title_norm": "aluminium automation bets carbon low rio simplywall stretches tinto valuation",
           "consulting_label": "Sustainability",
           "why_it_matters": "ESG or decarbonisation signal — sustainability strategy or reporting mandate.",
-          "age_h": 77.0,
+          "age_h": 77.1,
           "snippet": ""
         },
         {
-          "title": "Rio Tinto cut to Sell equivalent at RBC, forecasting continued decline in iron ore price (RIO:NYSE) - Seeking Alpha",
-          "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOb25fam5peGlPdzVGcW1sU21VT25wdzhDemY0MHFKZE1iRS13MkVGbF9IN01MZ0NVcEN2NGVwNWIxV2cxN1Jia0RUUllaVlRpWUo1SGR0dWtxX2E5d1VJbHNwZE0xcmFUMl9keW53ZC1uQ1R3Qm5rZjdzYzJfUjc3cEFvZGRTLTNKaUV4Zk9FQlV2RGRiZ01hUzRaVnBmMllRNVBuRVFJak1SNkxlallJbXFJWXdoZUdmQzZlRUlyZFVWNEE?oc=5",
+          "title": "Evening Wrap: ASX 200 climbs on BHP, RIO base metals bonanza, uranium stocks surge on US nuclear energy expansion - Market Index",
+          "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNRzhTZVlVQTNtWElpMVJRZm1GX2VZRHdNQXptWDNLRVhFaC1zY3E4NlA5WDZqQ0pDLXVud2FHQmVXUVM0Vmt4VUJDb0Z5RmVkS0VjR1VUdWdLVjRRUVBDbFVrYy16M0FyTFAtX1JnNWNVZFlXUFBnMkx3WHkzM09SN2RtREt2ZjhvVlNHUXVVNldBQ05LVW9sRTBrY01hUXlESU9FaThzZHl3eXpRZmlVS1VTV1lZSklobVdBZldMdk1mTGlWdEU1UllqeGd6eDR3NkVDU3pnNlB1MjNRTHZV?oc=5",
           "source": "Google News",
-          "published": "2026-06-03T18:27:24Z",
-          "summary": "Rio Tinto cut to Sell equivalent at RBC, forecasting continued decline in iron ore price (RIO:NYSE) Seeking Alpha",
+          "published": "2026-06-03T07:44:40Z",
+          "summary": "Evening Wrap: ASX 200 climbs on BHP, RIO base metals bonanza, uranium stocks surge on US nuclear energy expansion Market Index",
           "company": "Rio Tinto",
           "commodity": null,
           "flags": [
-            "earnings"
+            "price_shock",
+            "growth_strategy"
           ],
-          "drivers": [],
-          "score": 2.5031,
-          "title_norm": "alpha continued cut decline equivalent forecasting iron nyse ore price rbc rio rio seeking sell tinto",
-          "consulting_label": "Performance",
-          "why_it_matters": "Earnings or guidance release — CFO advisory, margin improvement, or FP&A opportunity.",
-          "age_h": 91.1,
+          "drivers": [
+            "ai_metals"
+          ],
+          "score": 2.5017,
+          "title_norm": "200 asx base bhp bonanza climbs energy evening expansion index market metals nuclear rio stocks surge uranium wrap",
+          "consulting_label": "Growth Strategy",
+          "why_it_matters": "Expansion or investment signal — market entry, feasibility, or strategy advisory.",
+          "age_h": 102.0,
           "snippet": ""
         }
       ],
       "flags": [
-        "earnings",
-        "esg"
+        "geopolitical",
+        "growth_strategy",
+        "price_shock",
+        "esg",
+        "ma"
       ],
-      "highlight": "",
-      "summary": "Rio Tinto is advancing automation and low-carbon aluminium production as part of a growth strategy, amid concerns about the company's current valuation stretches. The shift signals a strategic pivot toward higher-margin, lower-emission products to offset valuation pressures.",
+      "highlight": "Rio Tinto is accelerating automation and low-carbon aluminium production as a growth differentiator, capitalizing on rising metals prices amid geopolitical optimism while addressing investor valuation concerns through tangible ESG-linked operational improvements. Signal type: Sustainability.",
+      "summary": "Rio Tinto is advancing automation and low-carbon aluminium production as core growth initiatives while benefiting from rising metals prices driven by Iran deal optimism. The strategic shift toward sustainability and operational efficiency addresses valuation concerns amid improving market conditions.",
       "last_news_date": "2026-06-06",
       "one_liner": "Global miner; iron ore, copper, aluminium, and battery-materials strategy."
     },
@@ -2028,18 +2023,18 @@
           "drivers": [
             "ai_metals"
           ],
-          "score": 2.5679,
+          "score": 2.5673,
           "title_norm": "conrad deal development gas indonesia mako offshore online rig seals upstream",
           "consulting_label": "Integration",
           "why_it_matters": "M&A or JV activity — potential integration, due diligence, or PMI mandate.",
-          "age_h": 37.7,
+          "age_h": 37.9,
           "snippet": ""
         }
       ],
       "flags": [
         "ma"
       ],
-      "highlight": "Shell is strengthening operational resilience through AI-driven predictive maintenance automation via C3 AI agents, while simultaneously divesting non-core oil assets (Mercuria deal) and facing margin pressure in its chartering operations—signaling a strategic pivot toward efficiency and portfolio optimization. Signal type: Ops Resilience",
+      "highlight": "Shell is leveraging AI-agent automation for predictive maintenance while simultaneously divesting non-core assets (Mercuria's $1.4bn acquisition), signaling a strategic pivot toward operational efficiency and portfolio rationalization in a volatile energy market. Signal type: Operational Resilience.",
       "summary": "Conrad has secured a rig contract for the Mako gas development project offshore Indonesia, supporting Pertamina's upstream expansion in the region. The deal advances Pertamina's gas production capacity as it seeks to boost hydrocarbon output and energy supply domestically.",
       "last_news_date": "2026-06-05",
       "one_liner": "Indonesian national oil company; refining, upstream, and trading operations."
@@ -2064,11 +2059,11 @@
           "drivers": [
             "ai_metals"
           ],
-          "score": 2.9004,
+          "score": 2.8964,
           "title_norm": "centers data dayone energy inspenet malaysia over renewable secures",
           "consulting_label": "Sustainability",
           "why_it_matters": "ESG or decarbonisation signal — sustainability strategy or reporting mandate.",
-          "age_h": 7.0,
+          "age_h": 7.2,
           "snippet": ""
         },
         {
@@ -2083,53 +2078,11 @@
             "geopolitical"
           ],
           "drivers": [],
-          "score": 2.756,
+          "score": 2.7535,
           "title_norm": "aliran gamble green tnbs",
           "consulting_label": "Compliance Risk",
           "why_it_matters": "Geopolitical exposure — sanctions risk or trade compliance advisory.",
-          "age_h": 14.7,
-          "snippet": ""
-        },
-        {
-          "title": "TNB POWER OUTAGE | Saturday, 8 June 2024 (dc60D4GBMN) - Fathom Journal",
-          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1xQXliY1Z0UFZwMGJ0cDFnWHdNMjVQdk1oVW1uNXh3aDV6OTRLdjNIVTUyZk5BR1pxWGgtZWZaZy11RjlmLTdPOHczMm03dDBtVWVFY3NRTV9RWUVXWkhUZkxOUE9tN29maFlEdVc3R01oZHp4a3c?oc=5",
-          "source": "Google News",
-          "published": "2026-06-06T01:06:02Z",
-          "summary": "TNB POWER OUTAGE | Saturday, 8 June 2024 (dc60D4GBMN) Fathom Journal",
-          "company": "Tenaga Nasional Berhad",
-          "commodity": null,
-          "flags": [
-            "outage"
-          ],
-          "drivers": [
-            "mine_disruption"
-          ],
-          "score": 2.573,
-          "title_norm": "2024 dc60d4gbmn fathom journal june outage power saturday tnb",
-          "consulting_label": "Ops Resilience",
-          "why_it_matters": "Operational disruption — business continuity or resilience advisory opportunity.",
-          "age_h": 36.5,
-          "snippet": ""
-        },
-        {
-          "title": "DayOne Secures Major Renewable Energy Agreements with TNB to Fuel Malaysia's Digital Infrastructure - Devdiscourse",
-          "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxOcFVYWnBYSTk5X05nemNhWW9zZzgxc0dFSVBVb0xsMHdHLXB4X0x2RVZoVmE0emhXTHpldmxhTXZZVzFmWjRZT2FBLTF0ZUJ2a3JKYWpYVzBXVTVSakV6ampnUGVPSEs4Z1hkVGJibGRXaVdnbGVFOHQ5TFNqSVI1TlRCeUYtcC16Y0pkTG54aHpVTGh3MXc1VXZRaUJFOUdPcllpMVRWdktQQmg2dERVeDk5alc4R2x2Skd5ejNpUGVWTGR4ZkxNZlRhU09UNGx6LXd5TTMtdFlCMzFuSkUyVmE0MElsOW5ENDR5T9IB7AFBVV95cUxOcFVYWnBYSTk5X05nemNhWW9zZzgxc0dFSVBVb0xsMHdHLXB4X0x2RVZoVmE0emhXTHpldmxhTXZZVzFmWjRZT2FBLTF0ZUJ2a3JKYWpYVzBXVTVSakV6ampnUGVPSEs4Z1hkVGJibGRXaVdnbGVFOHQ5TFNqSVI1TlRCeUYtcC16Y0pkTG54aHpVTGh3MXc1VXZRaUJFOUdPcllpMVRWdktQQmg2dERVeDk5alc4R2x2Skd5ejNpUGVWTGR4ZkxNZlRhU09UNGx6LXd5TTMtdFlCMzFuSkUyVmE0MElsOW5ENDR5Tw?oc=5",
-          "source": "Google News",
-          "published": "2026-06-05T04:51:29Z",
-          "summary": "DayOne Secures Major Renewable Energy Agreements with TNB to Fuel Malaysia's Digital Infrastructure Devdiscourse",
-          "company": "Tenaga Nasional Berhad",
-          "commodity": null,
-          "flags": [
-            "esg"
-          ],
-          "drivers": [
-            "ai_metals"
-          ],
-          "score": 2.5227,
-          "title_norm": "agreements dayone devdiscourse digital energy fuel infrastructure major malaysia renewable secures tnb",
-          "consulting_label": "Sustainability",
-          "why_it_matters": "ESG or decarbonisation signal — sustainability strategy or reporting mandate.",
-          "age_h": 56.7,
+          "age_h": 14.9,
           "snippet": ""
         },
         {
@@ -2144,22 +2097,61 @@
             "ma"
           ],
           "drivers": [],
-          "score": 2.5192,
+          "score": 2.519,
           "title_norm": "advance competency formalise malaysian mtssb partnership plant power reliability remaco reserve technical tnb",
           "consulting_label": "Integration",
           "why_it_matters": "M&A or JV activity — potential integration, due diligence, or PMI mandate.",
-          "age_h": 59.6,
+          "age_h": 59.7,
+          "snippet": ""
+        },
+        {
+          "title": "DayOne Secures Over 1GW Renewable Energy in Malaysia in Landmark TNB Partnership - TNGlobal",
+          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPX19XcFViTmJYR1l0UEs0MXlWSVhQcFVRbWNYaXpnanF4LXhhcDhZUm1nQzJhWDJEZll0N0t6LUJtWmJZb3NFUDZmU2pKWWR5OHZlV2ZnaWZRaXZZRW50WXNYSTMwVUpNSmVHR0g1X21oX19ld1luNFdod0FMR295Wk0wRnlra0ZEN2tWYWZxRFhDMlhmMDl4TndCdVdFUDl0WjFaMW5XZFJTSmhreE1xMHV4WQ?oc=5",
+          "source": "Google News",
+          "published": "2026-06-04T17:54:38Z",
+          "summary": "DayOne Secures Over 1GW Renewable Energy in Malaysia in Landmark TNB Partnership TNGlobal",
+          "company": "Tenaga Nasional Berhad",
+          "commodity": null,
+          "flags": [
+            "ma",
+            "esg"
+          ],
+          "drivers": [],
+          "score": 2.5119,
+          "title_norm": "1gw dayone energy landmark malaysia over partnership renewable secures tnb tnglobal",
+          "consulting_label": "Integration",
+          "why_it_matters": "M&A or JV activity — potential integration, due diligence, or PMI mandate.",
+          "age_h": 67.8,
+          "snippet": ""
+        },
+        {
+          "title": "PETRONAS Gas, TNB team up for Lumut LNG regas terminal, confirms The Edge report - The Edge Malaysia",
+          "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE4teFowTm1VNldhV2tiVE8zNDRBY1REWElVbzZRd0l3ZVJJaXpRMHZGQ0dRRnNpRzlGN1JSaHZBM19ic19Da0ZlX1U2MjhQcVU5?oc=5",
+          "source": "Google News",
+          "published": "2026-06-04T07:11:41Z",
+          "summary": "PETRONAS Gas, TNB team up for Lumut LNG regas terminal, confirms The Edge report The Edge Malaysia",
+          "company": "Tenaga Nasional Berhad",
+          "commodity": null,
+          "flags": [
+            "enterprise_risk"
+          ],
+          "drivers": [],
+          "score": 2.5064,
+          "title_norm": "confirms edge edge gas lng lumut malaysia petronas regas report team terminal tnb",
+          "consulting_label": "Enterprise Risk",
+          "why_it_matters": "Enterprise risk or governance signal — ERM framework or internal audit advisory.",
+          "age_h": 78.5,
           "snippet": ""
         }
       ],
       "flags": [
-        "ma",
+        "geopolitical",
         "esg",
-        "outage",
-        "geopolitical"
+        "enterprise_risk",
+        "ma"
       ],
       "highlight": "",
-      "summary": "DayOne has secured over 1 GW of renewable energy agreements with TNB to power data centers in Malaysia, signaling TNB's strategic shift toward supporting the country's digital infrastructure through green energy. A significant power outage occurred on June 8, 2024, highlighting potential operational risks amid TNB's renewable energy expansion.",
+      "summary": "TNB has formalized a strategic partnership with MTSSB to enhance power plant reliability and technical competency, while simultaneously advancing its renewable energy portfolio through a landmark agreement to secure over 1 GW of renewable capacity for data centers in Malaysia. These moves reflect TNB's strategic shift toward green energy expansion and infrastructure modernization to support growing demand from the data center sector.",
       "last_news_date": "2026-06-07",
       "one_liner": "Malaysia's national electricity utility; generation, transmission, and distribution."
     },
@@ -2182,11 +2174,11 @@
             "trading_risk"
           ],
           "drivers": [],
-          "score": 2.5338,
+          "score": 2.5335,
           "title_norm": "cargill first fixes ion linked newbuilding news out tanker tradewinds varouxakis venture",
           "consulting_label": "Trading Risk",
           "why_it_matters": "Trading or market risk exposure — hedging framework, VaR, or desk controls review.",
-          "age_h": 49.8,
+          "age_h": 50.0,
           "snippet": ""
         },
         {
@@ -2207,13 +2199,13 @@
           "title_norm": "array australia cargill com crush grain helps plant power solar world",
           "consulting_label": "Sustainability",
           "why_it_matters": "ESG or decarbonisation signal — sustainability strategy or reporting mandate.",
-          "age_h": 126.6,
+          "age_h": 126.7,
           "snippet": ""
         }
       ],
       "flags": [
-        "trading_risk",
-        "esg"
+        "esg",
+        "trading_risk"
       ],
       "highlight": "",
       "summary": "Cargill secured its first newbuilding tanker through a venture linked to Ion Varouxakis, expanding its shipping capacity for Asia trading operations. The company also installed a solar array at its Australian crush plant, reducing operational costs and aligning with sustainability objectives.",
@@ -2238,11 +2230,11 @@
             "regulatory"
           ],
           "drivers": [],
-          "score": 2.7054,
+          "score": 2.7034,
           "title_norm": "briefing centralizes commodity control crypto danantara exports indonesia indonesia june strategic sumberdaya under",
           "consulting_label": "Compliance Risk",
           "why_it_matters": "Regulatory action — compliance advisory, remediation, or sanctions screening.",
-          "age_h": 18.6,
+          "age_h": 18.7,
           "snippet": ""
         },
         {
@@ -2259,11 +2251,11 @@
           "drivers": [
             "ai_metals"
           ],
-          "score": 2.5275,
+          "score": 2.5273,
           "title_norm": "business coal details export indonesia overhaul palm releases times",
           "consulting_label": "Compliance Risk",
           "why_it_matters": "Regulatory action — compliance advisory, remediation, or sanctions screening.",
-          "age_h": 53.4,
+          "age_h": 53.5,
           "snippet": ""
         },
         {
@@ -2280,11 +2272,11 @@
           "drivers": [
             "ai_metals"
           ],
-          "score": 2.5213,
+          "score": 2.5211,
           "title_norm": "affirms business certainty danantara dsi export indonesia mandate natural resource",
           "consulting_label": "Compliance Risk",
           "why_it_matters": "Regulatory action — compliance advisory, remediation, or sanctions screening.",
-          "age_h": 57.8,
+          "age_h": 58.0,
           "snippet": ""
         },
         {
@@ -2299,11 +2291,11 @@
             "earnings"
           ],
           "drivers": [],
-          "score": 2.5074,
+          "score": 2.5073,
           "title_norm": "casts danantara expert globe jakarta moody negative outlook says shadow",
           "consulting_label": "Performance",
           "why_it_matters": "Earnings or guidance release — CFO advisory, margin improvement, or FP&A opportunity.",
-          "age_h": 76.2,
+          "age_h": 76.3,
           "snippet": ""
         },
         {
@@ -2320,18 +2312,18 @@
           "drivers": [
             "regulatory_driver"
           ],
-          "score": 2.5056,
+          "score": 2.5055,
           "title_norm": "danantara direction focus governance hubbis indonesias investor policy ratings signal",
           "consulting_label": "Enterprise Risk",
           "why_it_matters": "Enterprise risk or governance signal — ERM framework or internal audit advisory.",
-          "age_h": 81.1,
+          "age_h": 81.2,
           "snippet": ""
         }
       ],
       "flags": [
+        "enterprise_risk",
         "earnings",
-        "regulatory",
-        "enterprise_risk"
+        "regulatory"
       ],
       "highlight": "",
       "summary": "Indonesia has centralized strategic commodity exports (palm, coal, and other natural resources) under state-owned Danantara Sumberdaya Indonesia (DSI) starting June 1, consolidating control over key sectors. However, Moody's negative outlook on Danantara raises concerns about execution risks and the company's ability to manage this expanded mandate effectively.",
@@ -2368,11 +2360,11 @@
             "ma"
           ],
           "drivers": [],
-          "score": 2.5272,
+          "score": 2.527,
           "title_norm": "aramco downstream malaysian meed petronas stake transfers",
           "consulting_label": "Integration",
           "why_it_matters": "M&A or JV activity — potential integration, due diligence, or PMI mandate.",
-          "age_h": 53.5,
+          "age_h": 53.7,
           "snippet": ""
         },
         {
@@ -2388,11 +2380,11 @@
             "ma"
           ],
           "drivers": [],
-          "score": 2.5171,
+          "score": 2.517,
           "title_norm": "2026 amg antonelli building formula formula formula how kimi mercedes momentum partnerships pepsico pepsico petronas team",
           "consulting_label": "Integration",
           "why_it_matters": "M&A or JV activity — potential integration, due diligence, or PMI mandate.",
-          "age_h": 61.6,
+          "age_h": 61.7,
           "snippet": ""
         },
         {
@@ -2407,11 +2399,11 @@
             "ma"
           ],
           "drivers": [],
-          "score": 2.5083,
+          "score": 2.5082,
           "title_norm": "dayabumi deal edge lease malaysia menara mil misc petronas renews rm433 year",
           "consulting_label": "Integration",
           "why_it_matters": "M&A or JV activity — potential integration, due diligence, or PMI mandate.",
-          "age_h": 74.1,
+          "age_h": 74.2,
           "snippet": ""
         },
         {
@@ -2426,18 +2418,18 @@
             "enterprise_risk"
           ],
           "drivers": [],
-          "score": 2.5065,
+          "score": 2.5064,
           "title_norm": "confirms edge edge gas lng lumut malaysia petronas regas report team terminal tnb",
           "consulting_label": "Enterprise Risk",
           "why_it_matters": "Enterprise risk or governance signal — ERM framework or internal audit advisory.",
-          "age_h": 78.4,
+          "age_h": 78.5,
           "snippet": ""
         }
       ],
       "flags": [
         "ma",
-        "earnings",
-        "enterprise_risk"
+        "enterprise_risk",
+        "earnings"
       ],
       "highlight": "",
       "summary": "Saudi Aramco has transferred its Malaysian downstream operations stake to PETRONAS, consolidating the national oil company's downstream portfolio. PETRONAS Gas and TNB have partnered on a liquefied natural gas regasification terminal in Lumut, signaling expansion in Malaysia's gas infrastructure.",
@@ -2460,49 +2452,9 @@
         "change_pct_30d": null,
         "source": "yfinance",
         "quality": "market",
-        "as_of": "2026-06-07T13:29:52.711117Z"
+        "as_of": "2026-06-07T13:40:11.696559Z"
       },
       "items": [
-        {
-          "title": "Brent Settles at $95, WTI at $93 as Middle East Tensions Ease | - Business Post Nigeria",
-          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQRTlKU2lNNlcwd21SMXJGY0xqSkNnVUlYelBGYmVBcjdieGxCc1RxV1p6MFllVUNXUW54RlRVZGJaaUE2QlB5ME5xMXFyVHRwd2Zxa2hZMTRQQ0Z0eEVUcFBxUkFhYlBaekdURkhZQzVvcnZwRTg3cXNMM1BYbkVsaW5lT0xZSXNOV2lEMS1RQ19tLVBveHc?oc=5",
-          "source": "Google News",
-          "published": "2026-06-06T09:40:56Z",
-          "summary": "Brent Settles at $95, WTI at $93 as Middle East Tensions Ease | Business Post Nigeria",
-          "company": null,
-          "commodity": "crude_oil",
-          "flags": [
-            "geopolitical"
-          ],
-          "drivers": [],
-          "score": 2.6198,
-          "title_norm": "brent business ease east middle nigeria post settles tensions wti",
-          "consulting_label": "Compliance Risk",
-          "why_it_matters": "Geopolitical exposure — sanctions risk or trade compliance advisory.",
-          "age_h": 27.9,
-          "snippet": ""
-        },
-        {
-          "title": "Brent Crude Heads for Record Monthly Gain With WTI Not Far Behind - EnergyNow.com",
-          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPRU5OM2V6OGlTMnNlODVsRVBRRnp5d0hRcG15elkwNV9tNnZ4NWVqbXIzNmE1ODdxRHFrck9SMnNMYkVKYjQ5TU5pVEZpZ2VzQ2pRUlF2eEhsdjJwTXhLOXgxM3RRNmxVZlFrTDU2OG5Lb3hDZEVEMlFCVUkwcEJ4WThBV2lINUtpdzZHU2JHR1p2TXlkRDd2ZkJxZ2U?oc=5",
-          "source": "Google News",
-          "published": "2026-06-06T07:06:59Z",
-          "summary": "Brent Crude Heads for Record Monthly Gain With WTI Not Far Behind EnergyNow.com",
-          "company": null,
-          "commodity": "crude_oil",
-          "flags": [
-            "price_shock"
-          ],
-          "drivers": [
-            "ai_metals"
-          ],
-          "score": 2.6033,
-          "title_norm": "behind brent com crude energynow far gain heads monthly not record wti",
-          "consulting_label": "",
-          "why_it_matters": "",
-          "age_h": 30.5,
-          "snippet": ""
-        },
         {
           "title": "Core Differences Between West Texas Intermediate (WTI) and Brent Crude and the Affect of the Iran War - EnergyNow.com",
           "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQN1ZOVFVuUnFFYUstVktuczhxdzBYN1lUbUlqbTIwZEVnX2lCclN2dDZyeVJxUnFPLXdLLWhHcTd1MUUyM0kxTFBUZWJZSVlfN2RCZkRlRXhqT3ZfdUJTQkFjSkR1dDFsQ2Rmc19VTERhc1hsV2Nka2RDVEFvZ0FUcFdJQ0dCR21lcm5mZU12UzJZZHlyOFh3WGEzVWpCVDlUeHc?oc=5",
@@ -2518,11 +2470,11 @@
           "drivers": [
             "geopolitical_driver"
           ],
-          "score": 2.6018,
+          "score": 2.6008,
           "title_norm": "affect between brent com core crude differences energynow intermediate iran texas war west wti",
           "consulting_label": "Enterprise Risk",
           "why_it_matters": "Enterprise risk or governance signal — ERM framework or internal audit advisory.",
-          "age_h": 30.7,
+          "age_h": 30.9,
           "snippet": ""
         },
         {
@@ -2537,11 +2489,11 @@
             "earnings"
           ],
           "drivers": [],
-          "score": 2.5503,
+          "score": 2.5498,
           "title_norm": "after brent dollar forecasts fxempire gas natural nfp oil oil oil rallies report retreats wti",
           "consulting_label": "Performance",
           "why_it_matters": "Earnings or guidance release — CFO advisory, margin improvement, or FP&A opportunity.",
-          "age_h": 42.9,
+          "age_h": 43.1,
           "snippet": ""
         },
         {
@@ -2557,11 +2509,11 @@
             "geopolitical"
           ],
           "drivers": [],
-          "score": 2.5417,
+          "score": 2.5413,
           "title_norm": "brent crude cryptorank hold iran negotiations oil prices traders watch wti",
           "consulting_label": "Leadership Change",
           "why_it_matters": "Senior leadership transition — change management or org design opportunity.",
-          "age_h": 46.1,
+          "age_h": 46.3,
           "snippet": ""
         },
         {
@@ -2576,11 +2528,53 @@
             "earnings"
           ],
           "drivers": [],
-          "score": 2.5341,
+          "score": 2.5337,
           "title_norm": "2612 analysis crude elliott forecast litefinance oil wave wti",
           "consulting_label": "Performance",
           "why_it_matters": "Earnings or guidance release — CFO advisory, margin improvement, or FP&A opportunity.",
-          "age_h": 49.7,
+          "age_h": 49.8,
+          "snippet": ""
+        },
+        {
+          "title": "Natural Gas and Oil Forecast: WTI Under $92 While Brent Tests $94 — Will NatGas Extend Gains? - FXEmpire",
+          "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPNWs3UnpSM1Y3X1VveEZlX2hhZFRpNHhNY0lEMUh2aWtQZzdMSnJ6WEJtMGJVbU1abnpyMUd2WVplbklhc3hCVDFadl9iOURMOEhFckQ2MVFrOTFpV2E2NGJEQnZLaGMwSnBnLUJlaXZiX05vbTRaSWR5aDAtYUFQRk01ZFFVdU9FUUJ4bzNyYUl5XzhmZUVtSFpZb3kwV0YzdWxaSEstMFNHNHVfai1OcHBhTEg5aHdxdXc2NGVRaU42b0lIc1hJREhZQTExMEU5SC1RTQ?oc=5",
+          "source": "Google News",
+          "published": "2026-06-05T09:56:00Z",
+          "summary": "Natural Gas and Oil Forecast: WTI Under $92 While Brent Tests $94 — Will NatGas Extend Gains? FXEmpire",
+          "company": null,
+          "commodity": "crude_oil",
+          "flags": [
+            "earnings"
+          ],
+          "drivers": [
+            "ai_metals"
+          ],
+          "score": 2.5301,
+          "title_norm": "brent extend forecast fxempire gains gas natgas natural oil tests under while wti",
+          "consulting_label": "Performance",
+          "why_it_matters": "Earnings or guidance release — CFO advisory, margin improvement, or FP&A opportunity.",
+          "age_h": 51.8,
+          "snippet": ""
+        },
+        {
+          "title": "WTI, Brent Crude Oil Futures Fall Pre-Bell, Extending Declines Amid Reports Trump Reluctant to Restart Iran War - Moomoo",
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOd3ZocWpuRHQxakJ3R0RGMjRpUkxwQ19yN0tYSnh3UUcwTVJ5OHhrRngxLTZuXzNhUmQ1cW1EWlNTaVlnUmNiUUxtTFVwenltU0phdHdMbm9pbHFTSWhWeHgyN3JCSHdMVENHUDhTQTVBX00xTlI1bUJIb1BGYmtPd05rZ0Z6WTBnZ3doWjRmdm5lZm9zdFd4YTJJZ2NaaXY2YUtPaA?oc=5",
+          "source": "Google News",
+          "published": "2026-06-05T09:24:25Z",
+          "summary": "WTI, Brent Crude Oil Futures Fall Pre-Bell, Extending Declines Amid Reports Trump Reluctant to Restart Iran War Moomoo",
+          "company": null,
+          "commodity": "crude_oil",
+          "flags": [
+            "geopolitical"
+          ],
+          "drivers": [
+            "geopolitical_driver"
+          ],
+          "score": 2.5292,
+          "title_norm": "amid bell brent crude declines extending fall futures iran moomoo oil pre reluctant reports restart trump war wti",
+          "consulting_label": "Compliance Risk",
+          "why_it_matters": "Geopolitical exposure — sanctions risk or trade compliance advisory.",
+          "age_h": 52.3,
           "snippet": ""
         }
       ]
@@ -2599,7 +2593,7 @@
         "change_pct_30d": null,
         "source": "yfinance",
         "quality": "market",
-        "as_of": "2026-06-07T13:29:53.819248Z"
+        "as_of": "2026-06-07T13:40:13.121698Z"
       },
       "items": [
         {
@@ -2618,7 +2612,7 @@
           "title_norm": "2026 alert buying costly despite discovery gas indias lng surge",
           "consulting_label": "",
           "why_it_matters": "",
-          "age_h": 111.8,
+          "age_h": 111.9,
           "snippet": ""
         },
         {
@@ -2637,26 +2631,7 @@
           "title_norm": "buying com costly crude despite gas india lng oil oilprice prices surges today why",
           "consulting_label": "",
           "why_it_matters": "",
-          "age_h": 113.6,
-          "snippet": ""
-        },
-        {
-          "title": "Ichthys LNG Strikes 2026: Impact on Asian Energy Markets - Discovery Alert",
-          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQWlJKM1ZmbGFYekZkRnJXM3VrV0taXzlwUG11QzN3RkNza016VXdUcGREWDVjSWdzRmtsTWhnNEI3bzdvclFLbnpMY285QUpBbGRWcmdsWnc5WVotd0lsWkw4WW5XaVJ4YVJqQkVCYVdBZGNhbmVyaXMybjdJQ3h5Z1QxUnBaVUNVZjdHMW1R?oc=5",
-          "source": "Google News",
-          "published": "2026-06-02T05:17:44Z",
-          "summary": "Ichthys LNG Strikes 2026: Impact on Asian Energy Markets Discovery Alert",
-          "company": null,
-          "commodity": "natgas_lng",
-          "flags": [],
-          "drivers": [
-            "mine_disruption"
-          ],
-          "score": 0.0004,
-          "title_norm": "2026 alert asian discovery energy ichthys impact lng markets strikes",
-          "consulting_label": "",
-          "why_it_matters": "",
-          "age_h": 128.3,
+          "age_h": 113.7,
           "snippet": ""
         }
       ]
@@ -2676,11 +2651,11 @@
           "commodity": "refined",
           "flags": [],
           "drivers": [],
-          "score": 0.1422,
+          "score": 0.1408,
           "title_norm": "commodity decline ends fall fuel intelligence light oil oil quantum singapore stocks",
           "consulting_label": "",
           "why_it_matters": "",
-          "age_h": 24.9,
+          "age_h": 25.1,
           "snippet": ""
         },
         {
@@ -2693,11 +2668,11 @@
           "commodity": "refined",
           "flags": [],
           "drivers": [],
-          "score": 0.0402,
+          "score": 0.0398,
           "title_norm": "commodity eases fuel hsfo intelligence july oil paper quantum tightness weakens",
           "consulting_label": "",
           "why_it_matters": "",
-          "age_h": 46.8,
+          "age_h": 47.0,
           "snippet": ""
         },
         {
@@ -2710,11 +2685,11 @@
           "commodity": "refined",
           "flags": [],
           "drivers": [],
-          "score": 0.0083,
+          "score": 0.0082,
           "title_norm": "commodity intelligence low month oil product quantum singapore sink stocks",
           "consulting_label": "",
           "why_it_matters": "",
-          "age_h": 74.1,
+          "age_h": 74.3,
           "snippet": ""
         },
         {
@@ -2731,7 +2706,7 @@
           "title_norm": "august commodity cracks crude diesel east firmer higher intelligence quantum suez",
           "consulting_label": "",
           "why_it_matters": "",
-          "age_h": 122.7,
+          "age_h": 122.9,
           "snippet": ""
         }
       ]
@@ -2765,11 +2740,11 @@
             "enterprise_risk"
           ],
           "drivers": [],
-          "score": 2.5295,
+          "score": 2.5292,
           "title_norm": "api5 australia coal indices linked newcastle prices says thermal yancoal yankuang",
           "consulting_label": "Enterprise Risk",
           "why_it_matters": "Enterprise risk or governance signal — ERM framework or internal audit advisory.",
-          "age_h": 52.2,
+          "age_h": 52.3,
           "snippet": ""
         }
       ]
@@ -2788,7 +2763,7 @@
         "change_pct_30d": null,
         "source": "yfinance",
         "quality": "market",
-        "as_of": "2026-06-07T13:29:54.372992Z"
+        "as_of": "2026-06-07T13:40:13.864203Z"
       },
       "items": []
     },
@@ -2812,7 +2787,7 @@
         "change_pct_30d": null,
         "source": "yfinance",
         "quality": "market",
-        "as_of": "2026-06-07T13:29:56.636435Z"
+        "as_of": "2026-06-07T13:40:16.907986Z"
       },
       "items": [
         {
@@ -2827,11 +2802,11 @@
           "drivers": [
             "ai_metals"
           ],
-          "score": 0.0092,
+          "score": 0.0091,
           "title_norm": "300 bitget caixin capital contract daily egg fat futures high hits limit maintains meal millions month near net oil outflow sector short soybean strategy yuan",
           "consulting_label": "",
           "why_it_matters": "",
-          "age_h": 72.3,
+          "age_h": 72.5,
           "snippet": ""
         }
       ]
@@ -2849,7 +2824,7 @@
       "change_pct_30d": null,
       "source": "yfinance",
       "quality": "market",
-      "as_of": "2026-06-07T13:29:52.711117Z"
+      "as_of": "2026-06-07T13:40:11.696559Z"
     },
     {
       "commodity_id": "wti",
@@ -2862,7 +2837,7 @@
       "change_pct_30d": null,
       "source": "yfinance",
       "quality": "market",
-      "as_of": "2026-06-07T13:29:53.267093Z"
+      "as_of": "2026-06-07T13:40:12.410349Z"
     },
     {
       "commodity_id": "henry_hub",
@@ -2875,7 +2850,7 @@
       "change_pct_30d": null,
       "source": "yfinance",
       "quality": "market",
-      "as_of": "2026-06-07T13:29:53.819248Z"
+      "as_of": "2026-06-07T13:40:13.121698Z"
     },
     {
       "commodity_id": "copper",
@@ -2888,7 +2863,7 @@
       "change_pct_30d": null,
       "source": "yfinance",
       "quality": "market",
-      "as_of": "2026-06-07T13:29:54.372992Z"
+      "as_of": "2026-06-07T13:40:13.864203Z"
     },
     {
       "commodity_id": "gold",
@@ -2901,7 +2876,7 @@
       "change_pct_30d": null,
       "source": "yfinance",
       "quality": "market",
-      "as_of": "2026-06-07T13:29:54.930835Z"
+      "as_of": "2026-06-07T13:40:14.603505Z"
     },
     {
       "commodity_id": "silver",
@@ -2914,7 +2889,7 @@
       "change_pct_30d": null,
       "source": "yfinance",
       "quality": "market",
-      "as_of": "2026-06-07T13:29:55.529645Z"
+      "as_of": "2026-06-07T13:40:15.408309Z"
     },
     {
       "commodity_id": "aluminium",
@@ -2927,7 +2902,7 @@
       "change_pct_30d": null,
       "source": "yfinance",
       "quality": "market",
-      "as_of": "2026-06-07T13:29:56.085981Z"
+      "as_of": "2026-06-07T13:40:16.164155Z"
     },
     {
       "commodity_id": "soybeans",
@@ -2940,7 +2915,7 @@
       "change_pct_30d": null,
       "source": "yfinance",
       "quality": "market",
-      "as_of": "2026-06-07T13:29:56.636435Z"
+      "as_of": "2026-06-07T13:40:16.907986Z"
     },
     {
       "commodity_id": "wheat",
@@ -2953,7 +2928,7 @@
       "change_pct_30d": null,
       "source": "yfinance",
       "quality": "market",
-      "as_of": "2026-06-07T13:29:57.189967Z"
+      "as_of": "2026-06-07T13:40:17.669894Z"
     },
     {
       "commodity_id": "jkm",
@@ -3029,7 +3004,7 @@
         "unit": "Index",
         "last": 100.071,
         "change_pct": 0.66,
-        "as_of": "2026-06-07T13:30:01.485028Z"
+        "as_of": "2026-06-07T13:40:23.420629Z"
       },
       {
         "name": "US 10Y Yield",
@@ -3037,7 +3012,7 @@
         "unit": "%",
         "last": 4.536,
         "change_pct": 1.32,
-        "as_of": "2026-06-07T13:30:01.942398Z"
+        "as_of": "2026-06-07T13:40:24.215440Z"
       },
       {
         "name": "Hang Seng",
@@ -3045,7 +3020,7 @@
         "unit": "Index",
         "last": 24961.949,
         "change_pct": -1.15,
-        "as_of": "2026-06-07T13:30:02.406180Z"
+        "as_of": "2026-06-07T13:40:24.927419Z"
       }
     ],
     "geopolitical": [
@@ -3053,61 +3028,61 @@
         "title": "Shell Sees LNG Demand Growing Despite Iran War Volatility - EnergyNow",
         "source": "Google News",
         "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOZUZoWHVXZmxVNFdIa3B0cXNyLUJ0X0ZDV0FEOWllaU1iUUQ0S0hSWVliUTRPTzRtR3JJUW02NGZSNVh5dTF0X0lnQVk1VHdjU200RnllMlU3ZUtDbE14VHRvUktwSkNHdk1UQ2h0dHR0ZUFzTkFXTWdpYU8xa0xpRXlWOUJtb2l6SUpaY1FnSk0?oc=5",
-        "age_h": 86.4
+        "age_h": 86.5
       },
       {
         "title": "Shell executive ‘warned of risk of oil spills in Nigeria’ - The Times",
         "source": "Google News",
         "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPZjc4WkFJcFk3Y0ZYV3JfVWw5QnRVamFXeElJcXNzUTNHUDE1M1RmR2VMVlZualozV2NnalFlY3BIWTB2UTEwWWtQMnc1eWZoLUlucHUwaUJqR2lZUmhETTZrU3lPaWRBbEZCTnBEanZDN3Zqc1U1WkRjSkhwd3gtRVlDWWxGX1ZPMUV6TkhBTUhpN1JFSVRmaGFRMVd5U3NGZWxWSHVIT1dLSFNDam5UQWRwSWo?oc=5",
-        "age_h": 94.8
+        "age_h": 95.0
       },
       {
         "title": "Chevron's Stock: A Tale of Conflicting Signals - AD HOC NEWS",
         "source": "Google News",
         "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPOXhQaXdoQ0lzdEt6T0FJTk5jZldJcXJUR1ctT08ySmJDY3l3N3g1M2Vjc2xFdHVfb1NhY3pLdDhKV0NHLWhXQWhRX1B1c0Z6dXRQZEpLdU1seU5IVUxhb2RuTkV1Z0d3MXJMU0cxaTcxNzl5QXQ2aEctNmFPOE5kOFlRMEtrQnUtb2J1LWVTRXZfWS1CMWVodEVMOGZfdXFKRTRqdWdnaw?oc=5",
-        "age_h": 86.9
+        "age_h": 87.1
       },
       {
         "title": "Macro Metals (ASX:M4M) Share Performance in Focus After Landmark BHP Contract Award - Kalkine",
         "source": "Google News",
         "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNSkF3QVY3SmN1NjhRSlBmbmNBT2NKMGJsY0Fhay1WWmZkTjNuQ1l5T1J2Wk1HQVpsaWhPOVM2UkZYVHdHeDNudU9YMDZ2LW85Y1UzWTctM3V3MWV0MVIzN3ZMQ0hFWDJpM0dNLTA4SUxXWFhMUVJnQUF4YThUSHltQWR1QWdhaWFpZmR1Um5mMXVlbkxGOGRoc3V3M0l1ei16bVdaNURHZXhkc0pKY2RaY2RQS2tiQQ?oc=5",
-        "age_h": 78.1
+        "age_h": 78.3
       },
       {
         "title": "PM Anwar Officiates TNB’s ETConN26, Reinforces Malaysia’s Commitment Towards A Sustainable And AI-ready Energy Future - Bernama",
         "source": "Google News",
         "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9hcVN4VTltMWRzM0t1bTE3cU85MWdIOHhIakFKSnRXYUVSZmtaRG9STk9CVHl5TUVxLXJrcnhrdUVxWkp5Q3dzRDhMcFA0Rmk2N1htNw?oc=5",
-        "age_h": 78.4
+        "age_h": 78.5
       },
       {
         "title": "Core Differences Between West Texas Intermediate (WTI) and Brent Crude and the Affect of the Iran War - EnergyNow.com",
         "source": "Google News",
         "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQN1ZOVFVuUnFFYUstVktuczhxdzBYN1lUbUlqbTIwZEVnX2lCclN2dDZyeVJxUnFPLXdLLWhHcTd1MUUyM0kxTFBUZWJZSVlfN2RCZkRlRXhqT3ZfdUJTQkFjSkR1dDFsQ2Rmc19VTERhc1hsV2Nka2RDVEFvZ0FUcFdJQ0dCR21lcm5mZU12UzJZZHlyOFh3WGEzVWpCVDlUeHc?oc=5",
-        "age_h": 30.7
+        "age_h": 30.9
       },
       {
         "title": "WTI, Brent Crude Oil Futures Fall Pre-Bell, Extending Declines Amid Reports Trump Reluctant to Restart Iran War - Moomoo",
         "source": "Google News",
         "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOd3ZocWpuRHQxakJ3R0RGMjRpUkxwQ19yN0tYSnh3UUcwTVJ5OHhrRngxLTZuXzNhUmQ1cW1EWlNTaVlnUmNiUUxtTFVwenltU0phdHdMbm9pbHFTSWhWeHgyN3JCSHdMVENHUDhTQTVBX00xTlI1bUJIb1BGYmtPd05rZ0Z6WTBnZ3doWjRmdm5lZm9zdFd4YTJJZ2NaaXY2YUtPaA?oc=5",
-        "age_h": 52.2
+        "age_h": 52.3
       },
       {
         "title": "Crude Oil Prices Today: Brent, WTI Surge Above $95 as US-Iran Conflict Escalates - CryptoRank",
         "source": "Google News",
         "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNTnNBV2g4ai1BRzZ0dnNrVm5LLV9FN0FaSkRpSnRFYUlUMVU2RzR6a2hVZjR2dXFoc1FyemNNd2tvazJJb1hTX3lpZGVjNUNtOVJ1dkxmV1ZiRnZmUzlRMC1lZ2F5anpHRlhfTHdEcWNxdWFObEF0LUQybXQxbW94dEViOXFxeFByYjdGb2dHbjVWRmV5RGgtMHlEcXpjZ2pGVk1UUUpmc1JzSUJvbjZaaDA2elVCdw?oc=5",
-        "age_h": 88.6
+        "age_h": 88.8
       },
       {
         "title": "WTI Crude Oil Futures Fall 4%. Reports Say Trump Unwilling to Restart Full-Scale War With Iran. - TradingKey",
         "source": "Google News",
         "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPZktMQ2JwY1hTRFZHZVN0Rno4ZVQwc3Blb19nSlFZQTVoU1RxSHk4QURXY0tsRk55MDRPTlp0YXNTWUk5aTJIWExzTnFDWWp5V01PYWE4Sl9HTGFVVVJhdTdOYmhtbWM3aHk0V2RGUDN6ak5ZSjhjQURWM1pLS09xbEcxNW5Eb1R4YVdxS04tRzBtNWJsdDc2dTVRaVpzY3Q4TEU0bzRFTlNGU2xqWkliNjRocHY?oc=5",
-        "age_h": 67.5
+        "age_h": 67.7
       },
       {
         "title": "US oil exports surge, draining domestic crude inventories toward rock bottom - Reuters",
         "source": "Google News - Reuters Business",
         "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOWmlCaDJtdjdmMkJLa1BQR3FVM0NyZ1d4ZGVid3lzLWpzZFM1ZWRmcGVHc2phcm11ZGZIM1VpNEVBc3AxWkVKVGdoWjZfMXlsbmREc2k3NmtaV1RrWnFnb0EyMWRhWGdvbWJ3Mzl1ZEhhSW1HNHQ0d3ljWGZYTzR1UXpyWGFZUlJfa3g0SzNYTVJKTDBuN2trVWtUdTZ3YV9HcmtSTnM0cTNDUm5rTVoyUUhQNl80ejE4TFNYaXpMdEFqUEtGNVE?oc=5",
-        "age_h": 50.5
+        "age_h": 50.6
       }
     ]
   },
@@ -3205,7 +3180,7 @@
       "demand_signals": [],
       "balance_read": "FRED (2026-05-01): 2.9 USD/MMBtu (-3.3% QoQ) — falling",
       "source": "FRED",
-      "as_of": "2026-06-07T13:32:15.840872Z"
+      "as_of": "2026-06-07T13:42:38.660169Z"
     },
     {
       "commodity": "Copper",
@@ -3217,7 +3192,7 @@
       "demand_signals": [],
       "balance_read": "World Bank (2026-05-01): 13,483.8 USD/mt (+7.6% QoQ) — rising",
       "source": "World Bank",
-      "as_of": "2026-06-07T13:32:23.415160Z"
+      "as_of": "2026-06-07T13:42:44.243451Z"
     },
     {
       "commodity": "Aluminium",
@@ -3229,7 +3204,7 @@
       "demand_signals": [],
       "balance_read": "World Bank (2026-05-01): 3,654.0 USD/mt (+8.3% QoQ) — rising",
       "source": "World Bank",
-      "as_of": "2026-06-07T13:32:31.022570Z"
+      "as_of": "2026-06-07T13:42:50.254257Z"
     },
     {
       "commodity": "Iron Ore",
@@ -3241,7 +3216,7 @@
       "demand_signals": [],
       "balance_read": "World Bank (2026-05-01): 111.6 USD/dmtu (+3.8% QoQ) — rising",
       "source": "World Bank",
-      "as_of": "2026-06-07T13:32:39.545631Z"
+      "as_of": "2026-06-07T13:42:56.036490Z"
     },
     {
       "commodity": "Palm Oil",
@@ -3253,7 +3228,7 @@
       "demand_signals": [],
       "balance_read": "World Bank (2026-05-01): 1,130.0 USD/mt (+0.8% QoQ) — flat",
       "source": "World Bank",
-      "as_of": "2026-06-07T13:32:50.037013Z"
+      "as_of": "2026-06-07T13:43:05.766472Z"
     },
     {
       "commodity": "Nickel",
@@ -3265,7 +3240,7 @@
       "demand_signals": [],
       "balance_read": "World Bank (2026-05-01): 18,879.2 USD/mt (+10.6% QoQ) — rising",
       "source": "World Bank",
-      "as_of": "2026-06-07T13:32:56.425729Z"
+      "as_of": "2026-06-07T13:43:12.003272Z"
     },
     {
       "commodity": "natgas_lng",
@@ -3279,7 +3254,7 @@
       ],
       "balance_read": "Demand signals: buying surge",
       "source": "News-derived",
-      "as_of": "2026-06-07T13:34:10.708247Z"
+      "as_of": "2026-06-07T13:44:28.583595Z"
     }
   ],
   "themes": [
@@ -3287,31 +3262,31 @@
       "name": "Energy Transition & Decarbonisation",
       "commodities": [],
       "companies": [
+        "Tenaga Nasional Berhad",
         "TotalEnergies Trading Asia",
-        "Rio Tinto",
-        "Tenaga Nasional Berhad"
+        "Rio Tinto"
       ],
       "headlines": [
         {
           "title": "Rio Tinto Advances Automation And Low Carbon Aluminium In Growth Push - Yahoo Finance",
           "source": "Google News",
           "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOY2c1UGlBT213N281bmhkZ1J5SGZ3LU5oQ0VJU0hLd0VTNHVhQXhacFBzN3ItVC1sZWhMdUFxb1ktelVRVWprQWJ6WnFBSl9WV1hSdmJpanpNS1JXZUhKRHp4bld1bkR5RENoUkZDZW5XbmNuQ1RJSU1Ma3NQdV9ZR1lqdHZLSzZobzZwNWVtNTJha0NHM0FBejd6M0hzdGc?oc=5",
-          "age_h": 31.4
+          "age_h": 31.6
         },
         {
           "title": "TNB delivers 4.3 GW installed renewable energy capacity to support energy transition - The Edge Malaysia",
           "source": "Google News - The Edge Malaysia",
           "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5ES3U1SEo1WG81SXNkZHM3Z0VTb0lqMUNPR0VHSVVLRWhDbFlxRUF0bk56SklmTlNXUUxhanRhZGdoaXlOa3JyZTBsLVZuRHM5?oc=5",
-          "age_h": 78.6
+          "age_h": 78.8
         },
         {
           "title": "Rio Tinto Bets On Automation And Low Carbon Aluminium As Valuation Stretches - simplywall.st",
           "source": "Google News",
           "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPRW1YVEpZa21lQU02LU1oSG1KT0pmc0dwNkwycHdmNTBDS1E2QkJIYVJZWlFRTG9tMm9ZVFpVSERXMDNpeERXSFZkRF9GLTA5NXNxd2hTZ1F3YW1CYUx5QlhPYm4tWWJmN2xMenItbEJhVkF5Y2FNYThMVkZmS0lld0QtY0NuSU1iUTl6dnBzM2NndkY0TG95QWNCNVpDUnJXYXF5RC05SVZES1VlbmVuZHhBTFpobWxraERFNWtDcDVrMEFPSTNYYklkWmc1YTRIQVRNeNIB2gFBVV95cUxPV0JQYmlHSlhDZ3I1T1A3TTZqWmtfQ0E0aDBSSjVTN3lCaU1WaUp4eVhPalNGNzZaYTZoVERNU1RDSGhIMUxQMHRlUmYwSmZTQ01HRTdGWE8waVlZbEJVTUt2Tmllcnk0elQ2ZHpTa0RhX3d5RGE0bzdZOTlqaGlPR2t3dVVvY1BpLXBiLVBpXzllOHpQbjNfV3BlNWZCWVd4a0E1RWhVcmctYlBUZHloLVRtbDRfYmNyTEMxZVBGVm1CcFNHYzNnaDZTZ3dGZk44MmNVLTNlQnNFQQ?oc=5",
-          "age_h": 77.0
+          "age_h": 77.1
         }
       ],
-      "narrative": "# Energy Transition & Decarbonisation in SEA Commodity Markets\n\nMajor commodity players are strategically repositioning their portfolios to capitalise on decarbonisation opportunities across Southeast Asia and beyond. TotalEnergies Trading Asia is expanding its renewables portfolio amid ongoing oil market volatility, signalling a deliberate shift away from traditional hydrocarbon exposure. Rio Tinto is leading the charge in low-carbon aluminium production, committing $1.5 billion to a Canadian project while simultaneously advancing automation technologies to enhance operational efficiency and reduce emissions intensity. Meanwhile, Malaysia's state utility Tenaga Nasional Berhad continues to receive government backing as a key driver of the nation's broader energy transition agenda, underlining the critical role of diversified energy infrastructure in SEA's decarbonisation pathway.",
+      "narrative": "Across Southeast Asia's commodity markets, major players are strategically repositioning toward decarbonisation despite valuation pressures. TotalEnergies Trading Asia is expanding its renewables portfolio in response to disruptions in traditional oil markets, signalling a shift away from fossil fuel dependency. Rio Tinto is leading the low-carbon transition in aluminium production through significant capital investment, including a $1.5 billion project in Canada, while simultaneously advancing automation to enhance operational efficiency and reduce emissions. These moves reflect how major commodity companies are integrating energy transition priorities into core growth strategies, even as market valuations reflect broader uncertainty in the sector.",
       "driver_tags": [
         "energy_transition"
       ]
@@ -3328,56 +3303,53 @@
           "title": "Rio Tinto Advances Automation And Low Carbon Aluminium In Growth Push - Yahoo Finance",
           "source": "Google News",
           "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOY2c1UGlBT213N281bmhkZ1J5SGZ3LU5oQ0VJU0hLd0VTNHVhQXhacFBzN3ItVC1sZWhMdUFxb1ktelVRVWprQWJ6WnFBSl9WV1hSdmJpanpNS1JXZUhKRHp4bld1bkR5RENoUkZDZW5XbmNuQ1RJSU1Ma3NQdV9ZR1lqdHZLSzZobzZwNWVtNTJha0NHM0FBejd6M0hzdGc?oc=5",
-          "age_h": 31.4
+          "age_h": 31.6
         },
         {
           "title": "Bank of England Official Says Oil Crisis Clouds Rate Outlook",
           "source": "OilPrice.com",
           "url": "https://oilprice.com/Latest-Energy-News/World-News/Bank-of-England-Official-Says-Oil-Crisis-Clouds-Rate-Outlook.html",
-          "age_h": 44.9
+          "age_h": 45.1
         },
         {
-          "title": "Rio Tinto’s Automation and Low-Carbon Aluminium Production Strategy - Discovery Alert",
+          "title": "Rio Tinto emphasises on automation and low-carbon aluminium production amid valuation concerns - AL Circle",
           "source": "Google News",
-          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOVGtaMlo2aDVlUmZoM2dtWHY4MzdhaEpTZVFMSkcxNnI5bVN3OWFKZlNaUEpvWTF5LU51RHJDejVyVWdGWVVweHUzaV9jdjdJQzVXT1dUMk5XUnlaVUM5bUtUWkZHUGRzc2VJeUdwUmljX1V3SExxeTVJcTZZcS02RXhTZ0w1UFJMMENFUFZCdTZadw?oc=5",
-          "age_h": 50.4
+          "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOajNHdm9pRGp4ZjdMRW1vTGVOdGNlMGxFRU13cXFXWGktanpNX1VYLUNlaHNCTHF5ZE03V2JIVTNmWUduQjFqYmVpc2ppejhCejlUYzRlVEZ6N0x4US1ka1U0WmFYMi02Wk00UHdPbURWWW5ReGpld2JoTV9SQkdfNExHMHJOZXF4ZWhDWlZSWExMdWxiZjlUekxsSkJ3Mk1RN1NrOFZDOE5WWWxFVWxHUTJwclVUTWl0MWt1dGtsc3dTYU5Kd0NTVDRPUQ?oc=5",
+          "age_h": 51.8
         }
       ],
-      "narrative": "Rio Tinto is spearheading digital transformation in SEA commodity markets through automation and low-carbon aluminium production, positioning these technologies as core growth drivers despite valuation pressures. While the headlines emphasize Rio Tinto's strategic pivot toward automated operations and sustainable aluminium output, PETRONAS and regional players including IOI Properties, Sime Darby, PETRONAS Gas, TNB, and MISC appear within the broader SEA commodity and energy ecosystem, though specific details on their digital or AI trading initiatives are not evident from the available signals. This suggests automation and carbon efficiency—rather than advanced AI trading systems—are currently the visible digital priorities shaping commodity strategy in the region.",
+      "narrative": "Rio Tinto is leveraging automation and low-carbon aluminium production as strategic growth pillars to address valuation pressures in SEA commodity markets, despite recent analyst downgrades citing iron ore concerns. The company's digital and AI-driven automation initiatives represent a broader shift toward operational efficiency and sustainability in mining, positioning it to manage commodity price volatility while offsetting valuation headwinds. Meanwhile, PETRONAS and integrated energy players across the region—including PETRONAS Gas, MISC, and Velesto Energy—are similarly navigating digital transformation within the broader commodity and energy ecosystem, though specific automation or AI strategies remain less prominently featured in headline coverage compared to Rio Tinto's explicit technology push.",
       "driver_tags": [
         "digital_tech_driver"
       ]
     },
     {
       "name": "Supply Diversification & Resilience",
-      "commodities": [
-        "natgas_lng"
-      ],
+      "commodities": [],
       "companies": [
-        "TotalEnergies Trading Asia",
-        "Tenaga Nasional Berhad"
+        "TotalEnergies Trading Asia"
       ],
       "headlines": [
-        {
-          "title": "TNB POWER OUTAGE | Saturday, 8 June 2024 (dc60D4GBMN) - Fathom Journal",
-          "source": "Google News",
-          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1xQXliY1Z0UFZwMGJ0cDFnWHdNMjVQdk1oVW1uNXh3aDV6OTRLdjNIVTUyZk5BR1pxWGgtZWZaZy11RjlmLTdPOHczMm03dDBtVWVFY3NRTV9RWUVXWkhUZkxOUE9tN29maFlEdVc3R01oZHp4a3c?oc=5",
-          "age_h": 36.5
-        },
         {
           "title": "Oil Markets Stop Believing Trump’s Peace Narrative",
           "source": "OilPrice.com",
           "url": "https://oilprice.com/Energy/Energy-General/Oil-Markets-Stop-Believing-Trumps-Peace-Narrative.html",
-          "age_h": 46.2
+          "age_h": 46.4
         },
         {
           "title": "Norway oil companies, unions agree wage deal, averting strike - Reuters",
           "source": "Google News - Reuters Crude/LNG/Brent",
           "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQRHlkM0pUYlppenYyS0RHelRSaHBMWjQ3djJNWndvcmhHb05BNjEwZy11MFVWeUNzYmFueDF1ZjZkTEJaMFJMZ3FjaWstQ2tvVno1QkZvZS1kWkJ0ckVrWVdaRk5xZVg3Ulo0aU0yM0VCc1Nxb05WOUdFU25IWkhoc0kxN2E3RUZHRXZPalBsYlJiQjhDRzFiaFhUbEFMSHRwSW01Z0FDZ3Z1T2xMcjVsc1MzQjJDeFBmMWc?oc=5",
-          "age_h": 59.7
+          "age_h": 59.8
+        },
+        {
+          "title": "Ukraine strikes St Petersburg oil terminal, naval base as Putin's 'Davos' gets under way - Reuters",
+          "source": "Google News - Reuters Crude/LNG/Brent",
+          "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNSXU1OFZuOUl3SEFtWTlaSzlzOTVNQVdreDdLaHVGcVdqeEM4aUY4MHg4Tmg3Z1FKb25kXzJuc2RoejFrcUhFcEsyYkxaenZnc0h0ZVhuN0UyLWthVUQzME5MV2swek5DeG9qaUh5U0dsdUhoallBUllBV1BHX0FucFRtWjhhbmU3TDFIYVhtWFNObTNyQkdydkMxVWJsbC00Z0h4eWR0SUdscFlrQVotbTFXUHBCR3V1bl85cmtqalFueEZaVnc?oc=5",
+          "age_h": 95.9
         }
       ],
-      "narrative": "Supply diversification emerges as critical for SEA energy resilience amid mounting disruptions, as evidenced by TotalEnergies Trading Asia's expansion into renewables to buffer against oil market volatility and geopolitical tensions, while Tenaga Nasional Berhad faces infrastructure pressures illustrated by recent power outages. The Ichthys LNG project's 2026 timeline signals attempts to strengthen regional LNG supply chains, yet broader market instability—from refining constraints tied to international conflicts to unpredictable oil pricing dynamics—underscores the urgency for SEA commodity markets to reduce dependency on single sources or suppliers. These developments collectively highlight that energy security in the region increasingly depends on portfolio diversification across renewable and conventional sources, coupled with reliable LNG partnerships.",
+      "narrative": "Supply diversification in Southeast Asian commodity markets reflects broader global pressures reshaping energy and metals sourcing strategies. TotalEnergies Trading Asia's expansion into renewables signals a strategic pivot away from traditional oil exposure as market disruptions—including drone strikes affecting refining capacity and geopolitical volatility around peace narratives—create uncertainty in conventional energy supplies. Meanwhile, labor resilience challenges emerge across production nodes, exemplified by Norway's offshore workers securing wage increases and CMOC's Congo copper operations deploying bonuses to prevent strikes, underscoring how supply chain stability now depends on managing both commodity price volatility and workforce stability simultaneously.",
       "driver_tags": [
         "mine_disruption",
         "supply_side"
@@ -3392,19 +3364,19 @@
           "title": "China's nuclear power capacity nearly doubled since 2016",
           "source": "EIA Today in Energy",
           "url": "https://www.eia.gov/todayinenergy/detail.php?id=67746",
-          "age_h": 47.6
+          "age_h": 47.7
         },
         {
           "title": "Top iron ore miners seek Canberra’s help in price fight with China - Mining.com",
           "source": "Google News - Metals Mining",
           "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQRHJITmNOcmtScXEtNERaSWZNMV8wZ21BT1lOanhiM3RrMTV2N2JadG9IMDFvUmU2U0NNWS1kZ25mMGxUM1V3VnhZT3dHZ0QwUTV1VlpqelE1MEp2RFRPd2o5d3JSS1JIaXdFbFBCdkRidFJfOE5sc3BSLTlOMF9tRUthSm94dDJVREJkQzJidXA3cWZFX0JLTQ?oc=5",
-          "age_h": 48.2
+          "age_h": 48.3
         },
         {
           "title": "Miners seek government intervention to counter China iron ore monopoly - AFR",
           "source": "Google News - Metals Mining",
           "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNWkZhMDRNaGMtN0tIR2VIODM1UmN4azJTNm1ieGZyamkxZDhKeFk5ckFPWGRGQ0RQbnNrUmh4N1BkcWVIM29RYUlPUEFZc1RTeEVpUmNhV2RPTkFqRVVmX3lZa2JCU2JUWmhBUW10ZFgtTFNqdGNFMmh5NzllUk5JajZwOUdjNTBUUWQycWFmdE80cUpQZGRxTDNvektpcWhoaUhyeG9jUHRhemc5YVVJS3NHQ0N1M01mbjltLXBKY1o?oc=5",
-          "age_h": 62.9
+          "age_h": 63.0
         }
       ],
       "narrative": "China's demand dynamics are reshaping SEA commodity markets with divergent signals across sectors. While CATL's pivot toward energy storage signals long-term Chinese shift away from traditional commodities, near-term demand weakness is evident in oil and iron ore—Chinese importers are drawing down stockpiles as crude purchases hit decade lows, depressing Iranian oil prices, and major iron ore miners are now lobbying Canberra against Chinese pricing pressure. Nickel presents a transitional case, where Chinese investors previously drove Indonesia's boom but are now scouting alternatives as policy tightening constrains operations, reflecting how Beijing's industrial priorities and regulatory environment are simultaneously reshaping both commodity demand patterns and investment flows across the region.",
@@ -3416,8 +3388,8 @@
       "name": "Indonesia Policy & Downstreaming",
       "commodities": [],
       "companies": [
-        "Danantara",
         "Pertamina",
+        "Danantara",
         "MIND ID"
       ],
       "headlines": [
@@ -3425,22 +3397,22 @@
           "title": "Indonesia gears up to face Vietnam in ASEAN U-19's last Group A match",
           "source": "Jakarta Post Business",
           "url": "https://www.thejakartapost.com/sports/2026/06/07/indonesia-gears-up-to-face-vietnam-in-asean-u-19s-last-group-a-match.html",
-          "age_h": 7.9
+          "age_h": 8.0
         },
         {
           "title": "Indonesia centralizes strategic commodity exports under Danantara Sumberdaya Indonesia control from June 1 - Crypto Briefing",
           "source": "Google News",
           "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBITnpYQzFVRE9McC1hWHp4Rl9PdHNMUmFzYkZjY2hsS3Y0ajNOTHRfMnoxZ1hXcTZvc09RVnRTSFpicDNFbHRqNXZBb0U0NHVKR2p0TkNpOEJzVnhiNXJZNk1sbkdwcGlJSU0waW9RZTNYQXdrN2hqanBJbDE?oc=5",
-          "age_h": 18.6
+          "age_h": 18.7
         },
         {
           "title": "Conrad seals rig deal for Mako gas development offshore Indonesia - Upstream Online",
           "source": "Google News",
           "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPMW9oOXV5bk8tZ2hNaEw0c0VhdlpDLWtpNzV1cGp1RHM0RG9DbUdqejl1YVlrUThScm4yeHV1YlFBUjZyOFFJUVNoM0Z5Q01PNUluampPSzJ2cGsxWWFISDE1cjRfMENIZkJRdVVxMl9nTVIyQ1JOM1NhbkFIbFY1T2VRQUhLV20zaU84UEpKaXZKZzgzZ3NWc283NjRzSjNacEdXVGtUSVhXajJIMlZtUkFUekUyQzZYa0NObENUcG4xOG8?oc=5",
-          "age_h": 37.7
+          "age_h": 37.9
         }
       ],
-      "narrative": "Indonesia's push toward downstream integration and export centralization through state entities like Danantara and MIND ID reflects a strategic shift in commodity market control, with investor ratings increasingly reflecting concerns about policy clarity and governance frameworks governing strategic commodity exports. The establishment of centralized export mechanisms for Indonesia's commodity portfolios—signaled by recent regulatory moves—contrasts with market dynamics elsewhere in Southeast Asia, where private operators like Dangote's refinery in Nigeria are expanding capacity and establishing themselves as global suppliers of refined products. For international investors tracking SEA commodity exposure, Indonesia's policy direction toward state-controlled downstream operations presents both governance risks and potential consolidation opportunities, with Pertamina and other state enterprises positioned as primary beneficiaries of the centralization framework. These structural shifts underscore how regulatory decisions in major commodity-producing nations are reshaping regional supply chains and investor positioning across energy and strategic materials markets.",
+      "narrative": "Indonesia's push toward centralized commodity export control through state entities like Danantara and MIND ID reflects a broader regional shift in resource governance, with rating agencies now closely monitoring how these policy changes affect investor confidence and market access. The government's new regulations requiring strategic commodities to flow through centralized channels have prompted businesses to seek clarity on implementation, signaling friction between state consolidation objectives and private sector operational flexibility. While Indonesia strengthens domestic control over exports, competing regional players like Nigeria's Dangote refinery are expanding capacity—reportedly exceeding 700,000 barrels per day—positioning themselves as global suppliers in jet fuel and other refined products, potentially advantaging jurisdictions with more predictable export frameworks.",
       "driver_tags": [
         "regulatory_driver"
       ]
@@ -3752,15 +3724,6 @@
       "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQZ3QyS1VCbzZxZHFBaFNKdkRPZFVCMEIxZFZaWmlHRmpwZmI1SGdDenlRU0xBRy1xM3FwLWo4NThPMHVLLWc0RUtBay02UVVUR09rXy11X1hLOWx4Z3NKREk2b2U3MDBNeDlpakljUVZKRkVZUVZzejNhcDR6amZ3NUhBQnBlWkF5ZG5KU19mX01mNkxH?oc=5"
     },
     {
-      "title": "Indonesia Launches Centralised Commodity Export System Under New State Firm - BusinessToday Malaysia",
-      "jurisdiction": "Indonesia",
-      "commodities": [],
-      "companies": [],
-      "effective_date": "",
-      "source": "Google News",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOek9WdFItbzZoUkZzU3VWQVBaNXd4d0hoQ091VnJQQ09yV3lYZlZFRkNyYnJBN2M1VVplbHNWLWY4ZkRpZm9YWWZMU3k4bXkyWmVsV1BQTVVDeG4yWHRrVlowbTBJSFZlVy13WUFRcF9mc0lBOHZOODVIRmN0OERaUGZKQ1J4WGNxcjVrd29Lc2ZvdVYweWhqaDJ4Qjl4X3dmZmdBMWlzN01EcUJwRVpGelRGTFZFWlVJTG5RSQ?oc=5"
-    },
-    {
       "title": "Indonesian business groups call for clarity about new commodity export rules - The Business Times",
       "jurisdiction": "Indonesia",
       "commodities": [],
@@ -3768,6 +3731,15 @@
       "effective_date": "",
       "source": "Google News",
       "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOS0dZX21aanJxWXBkU0VReFdyLUZzX3pFZTZ1VUo4dEpQSGVVUV9TVkZsNHBNaGhYZmdtR1RBNHZvWnY1VFkxV1dqOFJFdURMd2c2SGN4TjVORUh2RmlEN0FYNFZzcDY0Z09SVWhodi1wcWU2blZlUG1TR0VqT1g4c2FUSDk2TnN2N3FnOW5aMXBIV1gzVTBUUy1ZaEhUQTJqb2lpWG1ZTnlJMVpmNnc5Vkh3eUQtNWxnTjU0UXhua1k3Nnc?oc=5"
+    },
+    {
+      "title": "Indonesia Launches Centralised Commodity Export System Under New State Firm - BusinessToday Malaysia",
+      "jurisdiction": "Indonesia",
+      "commodities": [],
+      "companies": [],
+      "effective_date": "",
+      "source": "Google News",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOek9WdFItbzZoUkZzU3VWQVBaNXd4d0hoQ091VnJQQ09yV3lYZlZFRkNyYnJBN2M1VVplbHNWLWY4ZkRpZm9YWWZMU3k4bXkyWmVsV1BQTVVDeG4yWHRrVlowbTBJSFZlVy13WUFRcF9mc0lBOHZOODVIRmN0OERaUGZKQ1J4WGNxcjVrd29Lc2ZvdVYweWhqaDJ4Qjl4X3dmZmdBMWlzN01EcUJwRVpGelRGTFZFWlVJTG5RSQ?oc=5"
     },
     {
       "title": "Danantara to Announce State-Owned Export Firm Management Soon - Tempo.co English",
@@ -3966,17 +3938,6 @@
       "url": "https://www.rigzone.com/news/albanese_says_40mm_more_liters_of_diesel_secured_for_queensland-04-jun-2026-183850-article/?rss=true"
     },
     {
-      "title": "Copper slips below $14,000 as tariff fears rattle the market - TradingView",
-      "jurisdiction": "Other",
-      "commodities": [
-        "Copper (COMEX)"
-      ],
-      "companies": [],
-      "effective_date": "",
-      "source": "Google News - Metals Mining",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOZnMxNzNTa2NZTkNLdF9QaE9RY1piZTFoN2lYdE0yOXNsS2FKOHNwOEZ6Z0d4QTRRNmNWTDMwRU5PR2ZRS2duSnBNazZCVG15VUFYTlFMeDVXcjFFYWdOX2phc1hhdWcxMkh1My01WFNxeGhRRW1PQ2dJVXBQVTBXSWZoTGRTODRNYW91SjU1SnRrU2YwMUstZWF4QkktdGhzTjA4Vk9rQlBQODA5Sm03ckQtU3c4bXM?oc=5"
-    },
-    {
       "title": "Trump tweaks copper tariff rules ahead of refined metal review - Mining.com",
       "jurisdiction": "Other",
       "commodities": [
@@ -3986,6 +3947,17 @@
       "effective_date": "",
       "source": "Google News - Metals Mining",
       "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPR2dhUVJ2djhaWkVLcGk3Y1B6SDBPaEtLT183NmJhdTdFNk9paXh2WEIzS2VLOS1fQ09fMXptVC1sdXd6UjB4MGdMNnB2S1pHazRLMUVsQlRXd1Qwd2tSUWtxYWMxOUdwLWV1amlONzdETHZ5V3RidTBCQTBWWURYc3ZvN0ZMaFNoNmFtV25ybDZ0bWlE?oc=5"
+    },
+    {
+      "title": "Copper slips below $14,000 as tariff fears rattle the market - TradingView",
+      "jurisdiction": "Other",
+      "commodities": [
+        "Copper (COMEX)"
+      ],
+      "companies": [],
+      "effective_date": "",
+      "source": "Google News - Metals Mining",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOZnMxNzNTa2NZTkNLdF9QaE9RY1piZTFoN2lYdE0yOXNsS2FKOHNwOEZ6Z0d4QTRRNmNWTDMwRU5PR2ZRS2duSnBNazZCVG15VUFYTlFMeDVXcjFFYWdOX2phc1hhdWcxMkh1My01WFNxeGhRRW1PQ2dJVXBQVTBXSWZoTGRTODRNYW91SjU1SnRrU2YwMUstZWF4QkktdGhzTjA4Vk9rQlBQODA5Sm03ckQtU3c4bXM?oc=5"
     },
     {
       "title": "Middle East, Chinese state miners secure lion's share of Zambia's duty-free copper export quota - Business Insider Africa",
@@ -4174,15 +4146,6 @@
       "effective_date": "",
       "source": "Google News - IEA",
       "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPb2JDM1NwZXJqYkhlbHN1bzlKYVh2d1BaV0JJNEdJaXRpRDlxTjdqODZTQUlLTVZUSUh1b1NWMGhiLUxQVEI4WFJ0RGxaaFRGSDhNNmU3OThTazViS0FIR0Q3RGtnRHExZjkya05qZEFFOVFIaktQcmtKVFN5SzlSVHUtb3FNdVNySldiQUd3Q3ZmZm5qN3loVWQwaUg3Z1ZJ?oc=5"
-    },
-    {
-      "title": "IEA, IMF, World Bank and WTO Warn Of Growing Energy And Economic Risks from Middle East Conflict - SolarQuarter",
-      "jurisdiction": "Regional / Global",
-      "commodities": [],
-      "companies": [],
-      "effective_date": "",
-      "source": "Google News - IEA",
-      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNYzJHU2pIUVVsRF9tZG5BdDJkOE0zTnpwOHl5NW8tUWM0U1B2RWFaTTlJMG9vWllTWlB3NktsVEE0TElDSURHR1dtLXpzQ2pUaU1VQjR1YTN6SmkwRktXUk41Z2xzbC11WURrSi1YWXVUeWhJcktWZXQ4RFFJeGhJaTRVWXJPRXAwa2VhNzlQSU0wMERpOXJSdTdZOVFoYnNKcXhxdURVUnVaYkxVQzVsQTI0V2dPaWtRUkpQeDZIUmFZTDZCbEhUVzllSQ?oc=5"
     }
   ],
   "heatmap": {
@@ -4242,9 +4205,9 @@
         "Shell",
         "TotalEnergies Trading Asia",
         "BHP",
-        "Tenaga Nasional Berhad"
+        "Rio Tinto"
       ],
-      "text": "5 portfolio companies share geopolitical exposure — consider coordinated briefing.",
+      "text": "6 portfolio companies share geopolitical exposure — consider coordinated briefing.",
       "signal": "geopolitical"
     },
     {
@@ -4254,7 +4217,7 @@
         "Shell",
         "TotalEnergies Trading Asia",
         "Woodside Energy",
-        "Anglo American"
+        "Rio Tinto"
       ],
       "text": "M&A activity across 8 accounts (Chevron, Shell, TotalEnergies Trading Asia) — potential transaction advisory pipeline.",
       "signal": "ma"
