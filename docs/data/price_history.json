@@ -53,22 +53,22 @@
         "unit": "USD/MMBtu"
       },
       "copper": {
-        "price": 13808.6378,
+        "price": 13854.9347,
         "source": "yfinance",
         "unit": "USD/t"
       },
       "gold": {
-        "price": 4337.1001,
+        "price": 4365.2998,
         "source": "yfinance",
         "unit": "USD/oz"
       },
       "silver": {
-        "price": 68.943,
+        "price": 69.103,
         "source": "yfinance",
         "unit": "USD/oz"
       },
       "aluminium": {
-        "price": 3950.25,
+        "price": 3663.25,
         "source": "yfinance",
         "unit": "USD/t"
       },
