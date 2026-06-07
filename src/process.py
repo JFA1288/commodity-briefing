@@ -125,7 +125,7 @@ def filter_recent(items: list[NewsItem], hours: Optional[int] = None) -> list[Ne
     cutoff = datetime.now(timezone.utc) - timedelta(hours=hours)
     out = []
     for item in items:
-        if item.published is None or item.published >= cutoff:
+        if item.published is not None and item.published >= cutoff:
             out.append(item)
     return out
 

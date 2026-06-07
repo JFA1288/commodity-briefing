@@ -635,10 +635,14 @@ def build_outlook(
                     wb_text = f.balance_read
                     break
 
-        # Find relevant news headlines
+        # Find relevant news headlines — T-7 only
+        from datetime import datetime, timedelta, timezone as _tz
+        _cutoff = datetime.now(_tz.utc) - timedelta(days=7)
         headlines: list[dict] = []
         for group_id, items in commodity_news.items():
             for item in items:
+                if item.published is not None and item.published < _cutoff:
+                    continue
                 text = (item.title + " " + item.summary).lower()
                 if comm_name.lower().split()[0] in text:
                     headlines.append({"title": item.title, "source": item.source, "url": item.url})

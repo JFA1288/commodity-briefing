@@ -27,7 +27,7 @@ dashboard:
 
 # ── News fetch settings ───────────────────────────────────────────────────────
 news:
-  lookback_hours: 36
+  lookback_hours: 168
   max_per_company: 10
   max_per_commodity: 6
   top_headlines_count: 15

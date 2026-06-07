@@ -113,7 +113,7 @@ def fetch_world_bank_fundamentals() -> list[FundamentalsItem]:
             direction = "up" if pct > 2 else ("down" if pct < -2 else "flat")
             period = rows[0].get("date", "")
             word = "rising" if direction == "up" else ("falling" if direction == "down" else "stable")
-            balance = (f"World Bank ({period}): {latest:.1f} ({pct:+.1f}% QoQ) — {word}")
+            balance = (f"World Bank benchmark ({period}): {latest:.1f} ({pct:+.1f}% QoQ) — {word} [quarterly ref]")
             results.append(FundamentalsItem(
                 commodity=commodity_name,
                 inventory_direction=direction,
