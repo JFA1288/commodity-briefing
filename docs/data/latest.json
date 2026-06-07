@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-06-07T08:16:53.857142Z",
+  "generated_at": "2026-06-07T10:12:53.468011Z",
   "executive_brief": {
-    "narrative": "Three distinct structural signals are converging to reshape SEA commodity trading conditions this week. Rio Tinto's accelerating push into automation and low-carbon aluminium will segment global supply between ESG-compliant and conventional grades, compressing margins for regional smelters and forcing SEA buyers to actively negotiate offtake access to certified volumes before pricing premiums widen. Simultaneously, Danantara Sumberdaya Indonesia's assumption of centralized control over Indonesia's strategic commodity exports from June 1 introduces immediate counterparty and sovereign risk variables — SEA traders with Indonesian commodity exposure must urgently audit force majeure clauses and map revised approval workflows, as settlement timelines and contract terms face near-certain renegotiation. Tenaga Nasional Berhad's compliance risk exposure around its renewable energy transition adds a third layer of uncertainty, signalling potential delays or cost escalations in Malaysian green capacity additions that could affect power offtake partners and energy project timelines across the region. With energy markets quiet, these three signals — supply segmentation in aluminium, regulatory centralization in Indonesia, and green compliance friction in Malaysia — collectively tighten the operational and commercial environment for SEA trading and energy companies heading into Q3.",
+    "narrative": "Today's most actionable signals center on structural shifts in Indonesian commodity governance, SEA power procurement, and aluminium supply segmentation. Danantara Sumberdaya Indonesia's assumption of centralized control over Indonesia's strategic commodity exports from June 1 is the single most operationally urgent development — SEA trading desks with Indonesian commodity exposure must immediately audit contract clauses and begin mapping revised counterparty and approval workflows, as settlement delays and renegotiation risk are near-certain in the transition window. On the power side, DayOne's 1 GW+ renewable offtake commitment for Malaysian data centers signals that hyperscaler-driven corporate PPA demand is becoming a material force in SEA grid planning, placing Tenaga Nasional Berhad under simultaneous pressure to supply anchor baseload tenants and accelerate its own renewable build-out to remain competitive. Rio Tinto's automation and low-carbon aluminium push introduces a supply segmentation dynamic that SEA buyers and regional smelters cannot ignore — the emergence of ESG-compliant versus standard aluminium grades will compress margins on conventional volumes while rewarding early movers who secure certified offtake partnerships. Taken together, these signals point to a week where compliance readiness, green procurement positioning, and counterparty risk reassessment are the priority actions across trading, operations, and strategy functions.",
     "themes": [
+      "Indonesia sovereign commodity risk",
       "ESG aluminium supply segmentation",
-      "Indonesia sovereign commodity control",
-      "Green compliance execution risk",
-      "SEA contract renegotiation pressure",
-      "Regulatory friction arbitrage"
+      "Hyperscaler-driven renewable PPA demand",
+      "SEA grid decarbonization pressure",
+      "Transition-period arbitrage windows"
     ]
   },
   "what_to_watch": [
@@ -25,7 +25,7 @@
     },
     {
       "category": "event",
-      "text": "Tenaga Nasional Berhad: material events flagged (geopolitical, outage)."
+      "text": "Tenaga Nasional Berhad: material events flagged (esg, geopolitical)."
     },
     {
       "category": "event",
@@ -49,7 +49,7 @@
       "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1xOG1kWTUzb1ZLV0lpczBMYXZsTHYtcjdMSTFEcmpZaExDZkZRTGpDc1J6MVl4Q1h2RGlaazlaUWVRMy0ta0RVSTBibldnNGdlUm90cjJScUg1enc?oc=5",
       "why": "Geopolitical exposure — sanctions risk or trade compliance advisory.",
       "published": "2026-06-06T22:49:39Z",
-      "score": 2.8475,
+      "score": 2.8108,
       "engagement_context": "Typical scope: Compliance team · 3-6 months · Regulatory risk assessment"
     },
     {
@@ -60,7 +60,7 @@
       "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBITnpYQzFVRE9McC1hWHp4Rl9PdHNMUmFzYkZjY2hsS3Y0ajNOTHRfMnoxZ1hXcTZvc09RVnRTSFpicDNFbHRqNXZBb0U0NHVKR2p0TkNpOEJzVnhiNXJZNk1sbkdwcGlJSU0waW9RZTNYQXdrN2hqanBJbDE?oc=5",
       "why": "Regulatory action — compliance advisory, remediation, or sanctions screening.",
       "published": "2026-06-06T19:00:53Z",
-      "score": 2.7788,
+      "score": 2.7494,
       "engagement_context": "Typical scope: Legal team · 2-4 months · Export compliance advisory"
     },
     {
@@ -71,7 +71,7 @@
       "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOY2c1UGlBT213N281bmhkZ1J5SGZ3LU5oQ0VJU0hLd0VTNHVhQXhacFBzN3ItVC1sZWhMdUFxb1ktelVRVWprQWJ6WnFBSl9WV1hSdmJpanpNS1JXZUhKRHp4bld1bkR5RENoUkZDZW5XbmNuQ1RJSU1Ma3NQdV9ZR1lqdHZLSzZobzZwNWVtNTJha0NHM0FBejd6M0hzdGc?oc=5",
       "why": "ESG or decarbonisation signal — sustainability strategy or reporting mandate.",
       "published": "2026-06-06T06:11:00Z",
-      "score": 2.6329,
+      "score": 2.6188,
       "engagement_context": "Typical scope: Sustainability team · 4-8 months · Carbon reduction strategy"
     }
   ],
@@ -113,9 +113,9 @@
     {
       "sector": "power_utilities",
       "sector_label": "Power & Utilities",
-      "top_signal": "Compliance Risk",
+      "top_signal": "Sustainability",
       "signal_counts": {
-        "Compliance Risk": 1
+        "Sustainability": 1
       },
       "active_companies": [
         "EGAT",
@@ -124,8 +124,8 @@
         "Tenaga Nasional Berhad"
       ],
       "quiet_companies": [],
-      "pulse": "Power & Utilities: Compliance Risk signal detected — Tenaga Nasional Berhad.",
-      "narrative": "# Power & Utilities — Daily Signal Summary\n\nTenaga Nasional Berhad faces compliance risk exposure related to its renewable energy transition strategy, per Aliran reporting, which could create operational constraints if environmental or regulatory standards are not met during project implementation. For TNB's trading counterparties and power offtake partners, this signals potential delays or cost escalations in green capacity additions, warranting contract flexibility reviews and timeline confirmations on renewable projects currently in development pipelines."
+      "pulse": "Power & Utilities: Sustainability signal detected — Tenaga Nasional Berhad.",
+      "narrative": "DayOne's securing of over 1 GW renewable capacity for Malaysian data centers signals accelerating demand for clean power offtake agreements in SEA, with direct implications for Tenaga Nasional Berhad's (TNB) grid planning and renewable procurement strategy—TNB will likely face both opportunities to supply baseload power to anchor tenants and pressure to expand its own renewable portfolio to meet corporate PPA demand from hyperscalers. This renewable procurement trend may require TNB to accelerate capital deployment in solar and wind assets while managing grid integration complexity from distributed generation."
     },
     {
       "sector": "trading",
@@ -155,7 +155,7 @@
       "driver": "digital_tech",
       "service_line": "Digital & Technology",
       "suggested_angle": "Propose digital or technology-transformation advisory — strong team capability fit",
-      "score": 0.615,
+      "score": 0.571,
       "published": "2026-06-06T06:11:00Z"
     }
   ],
@@ -246,12 +246,10 @@
         }
       ],
       "top_headlines": [
-        "Rio Tinto Advances Automation And Low Carbon Aluminium In Growth Push - Yahoo Finance",
-        "Assessing Rio Tinto Group (LSE:RIO) Valuation After Recent Share Price Pullback And Strong One Year Return - simplywall.st"
+        "Rio Tinto Advances Automation And Low Carbon Aluminium In Growth Push - Yahoo Finance"
       ],
       "top_urls": [
-        "https://news.google.com/rss/articles/CBMinwFBVV95cUxOY2c1UGlBT213N281bmhkZ1J5SGZ3LU5oQ0VJU0hLd0VTNHVhQXhacFBzN3ItVC1sZWhMdUFxb1ktelVRVWprQWJ6WnFBSl9WV1hSdmJpanpNS1JXZUhKRHp4bld1bkR5RENoUkZDZW5XbmNuQ1RJSU1Ma3NQdV9ZR1lqdHZLSzZobzZwNWVtNTJha0NHM0FBejd6M0hzdGc?oc=5",
-        "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOdzYtZFJhM0IxcVg1OFhFTDAwZGtfV296MkpIQzdySjRrVEVKNnRkV0EtcEFGZUZ3RFRydUZwdGJoLUtvSHI5Zjh5b3NPajNnMk9jRnMwZVRpNnBrWVNHNHBpbUdFZVYwNHZnbGdMM3N6YVN2TGIybktjaERGMG5GZlVhd0h4OXNMQklORWFVby0xdUpEU21nd25mTWtoeVgxdnZGM3F2elJQLUxqU1VWUHNUMWRkQWJBYW5iamhkc0FOTDdaRU8wa3dtM2paUi1fR2t5ZdIB2gFBVV95cUxQVDVPQmJXYjA1SDA3ZDJfT0VWczhBNXdtRldDVDRtcWhUOEQtMFZuSEZWT2JVcGlvb3pLLVpYRFEzRFM1d3FoejRpOG9fZ2pkOGtFYVhSWEk3WFZzekdpeEk0YnA0Qy00S3Y0eTVhNXM5TlNBdzB5TC1mZkNrek93cklSM2NHRUd3blgtdHhEa2NUYl9UY3hPczcyUUZXdlkzWE9FbXpjcFdoLU1laU02blN0MEpETGV4dGE1dXJINVVQMGJMZ0lLMWNRd2M4TlE3bjlWd0ljSTR6dw?oc=5"
+        "https://news.google.com/rss/articles/CBMinwFBVV95cUxOY2c1UGlBT213N281bmhkZ1J5SGZ3LU5oQ0VJU0hLd0VTNHVhQXhacFBzN3ItVC1sZWhMdUFxb1ktelVRVWprQWJ6WnFBSl9WV1hSdmJpanpNS1JXZUhKRHp4bld1bkR5RENoUkZDZW5XbmNuQ1RJSU1Ma3NQdV9ZR1lqdHZLSzZobzZwNWVtNTJha0NHM0FBejd6M0hzdGc?oc=5"
       ],
       "consulting_angles": [
         "Digital & Technology: Propose digital or technology-transformation advisory — strong team capability fit",
@@ -273,11 +271,11 @@
       "active_triggers": [],
       "top_headlines": [
         "TNB’s green gamble - Aliran",
-        "TNB POWER OUTAGE | Saturday, 8 June 2024 (dc60D4GBMN) - Fathom Journal"
+        "DayOne Secures Over 1 GW of Renewable Energy for Data Centers in Malaysia - Inspenet"
       ],
       "top_urls": [
         "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1xOG1kWTUzb1ZLV0lpczBMYXZsTHYtcjdMSTFEcmpZaExDZkZRTGpDc1J6MVl4Q1h2RGlaazlaUWVRMy0ta0RVSTBibldnNGdlUm90cjJScUg1enc?oc=5",
-        "https://news.google.com/rss/articles/CBMidkFVX3lxTE1xQXliY1Z0UFZwMGJ0cDFnWHdNMjVQdk1oVW1uNXh3aDV6OTRLdjNIVTUyZk5BR1pxWGgtZWZaZy11RjlmLTdPOHczMm03dDBtVWVFY3NRTV9RWUVXWkhUZkxOUE9tN29maFlEdVc3R01oZHp4a3c?oc=5"
+        "https://news.google.com/rss/articles/CBMipgFBVV95cUxQSkVTM2ZmdGItSmlsbU9qbTcwODk1T3l6VW0ydHMxLTlEemcwel9SdUlzQ0hnZTFXa1hoYzRuVDNUV1JuUEpISy0weE51VnVrSFlabE9IWUJhUS1IcXRsS2JmRGROQVRMLVROVHU0S0lOdk9SY1dtYlhLaXd3TE1wNUxHR3B3N1NtY3ZKVXFXbkFUbUhQVGpiSHVnM1NnZUNlTVhldTBn?oc=5"
       ],
       "consulting_angles": [],
       "talking_points": [
@@ -472,12 +470,12 @@
     "active_account_count": 5
   },
   "exec_summary": [
-    "OPEC+ eyeing fourth consecutive quota hike; combined with WTI -2.8% and Brent -2.4%, accelerated supply unwind is structurally pressuring crude — flag for any long crude exposure.",
-    "Dark tanker traffic surging in Hormuz as market flies blind on flows; compliance risk acute for SEA traders with Middle East crude or LNG liftings — verify counterparty vessel screening now.",
-    "Silver -5.2%, Gold -2.3% overnight; China industrial demand weakness driving metals selloff — SEA commodity houses with silver or precious metals inventory face mark-to-market pressure today.",
-    "Henry Hub gas -3.6%; watch LNG cargo economics for SEA buyers — spot purchase windows may open if US supply overhang persists into next week.",
-    "Indonesia centralizes strategic commodity exports under Danantara Sumberdaya Indonesia from June 1; immediate compliance and counterparty review required for any Indonesian coal, nickel, or palm oil contracts.",
-    "TNB's green strategy under scrutiny via Aliran critique; partners advising Malaysian utilities should note reputational and regulatory overhang on TNB's renewable capex narrative."
+    "OPEC+ preparing fourth consecutive quota hike; combined with dark tanker surge in Hormuz, WTI -2.8% and Brent -2.4% — oversupply narrative now dominant.",
+    "Henry Hub gas -3.6%; watch SEA LNG procurement windows — spot softness may offer near-term contract repricing opportunities before any Hormuz disruption premium returns.",
+    "Silver -5.2%, Gold -2.3% signal broad risk-off and China demand pessimism; metals-linked SEA trading books face mark-to-market pressure this morning.",
+    "Dark tanker traffic surging in Hormuz per OilPrice — compliance and sanctions exposure elevated for SEA traders with opaque counterparty chains; flag for legal review now.",
+    "Tenaga Nasional secured 1GW+ renewable offtake for Malaysian data centers via DayOne; confirms accelerating SEA power demand as structural driver for TNB capex and grid stress.",
+    "Trump redirecting defense funds into US coal plants while solar booms — limited direct SEA impact but signals policy volatility; monitor coal import pricing and US export competitiveness."
   ],
   "top_headlines": [
     {
@@ -494,11 +492,32 @@
       "drivers": [
         "opec_supply"
       ],
-      "score": 3.4374,
+      "score": 3.3383,
       "title_norm": "closure fourth hike hormuz oil opec quota reuters say set since sources",
       "consulting_label": "Compliance Risk",
       "why_it_matters": "Geopolitical exposure — sanctions risk or trade compliance advisory.",
-      "age_h": 1.1,
+      "age_h": 3.1,
+      "snippet": ""
+    },
+    {
+      "title": "DayOne Secures Over 1 GW of Renewable Energy for Data Centers in Malaysia - Inspenet",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQSkVTM2ZmdGItSmlsbU9qbTcwODk1T3l6VW0ydHMxLTlEemcwel9SdUlzQ0hnZTFXa1hoYzRuVDNUV1JuUEpISy0weE51VnVrSFlabE9IWUJhUS1IcXRsS2JmRGROQVRMLVROVHU0S0lOdk9SY1dtYlhLaXd3TE1wNUxHR3B3N1NtY3ZKVXFXbkFUbUhQVGpiSHVnM1NnZUNlTVhldTBn?oc=5",
+      "source": "Google News",
+      "published": "2026-06-07T06:34:00Z",
+      "summary": "DayOne Secures Over 1 GW of Renewable Energy for Data Centers in Malaysia Inspenet",
+      "company": "Tenaga Nasional Berhad",
+      "commodity": null,
+      "flags": [
+        "esg"
+      ],
+      "drivers": [
+        "ai_metals"
+      ],
+      "score": 2.986,
+      "title_norm": "centers data dayone energy inspenet malaysia over renewable secures",
+      "consulting_label": "Sustainability",
+      "why_it_matters": "ESG or decarbonisation signal — sustainability strategy or reporting mandate.",
+      "age_h": 3.6,
       "snippet": ""
     },
     {
@@ -517,11 +536,11 @@
         "ai_metals",
         "geopolitical_driver"
       ],
-      "score": 2.9388,
+      "score": 2.8924,
       "title_norm": "blind dark flying hormuz market oil surges tanker traffic",
       "consulting_label": "Compliance Risk",
       "why_it_matters": "Geopolitical exposure — sanctions risk or trade compliance advisory.",
-      "age_h": 9.3,
+      "age_h": 11.2,
       "snippet": ""
     },
     {
@@ -538,11 +557,11 @@
       "drivers": [
         "ai_metals"
       ],
-      "score": 2.8909,
+      "score": 2.8496,
       "title_norm": "booming power solar trump under why",
       "consulting_label": "Sustainability",
       "why_it_matters": "ESG or decarbonisation signal — sustainability strategy or reporting mandate.",
-      "age_h": 11.3,
+      "age_h": 13.2,
       "snippet": ""
     },
     {
@@ -557,11 +576,11 @@
         "geopolitical"
       ],
       "drivers": [],
-      "score": 2.8475,
+      "score": 2.8108,
       "title_norm": "aliran gamble green tnbs",
       "consulting_label": "Compliance Risk",
       "why_it_matters": "Geopolitical exposure — sanctions risk or trade compliance advisory.",
-      "age_h": 9.5,
+      "age_h": 11.4,
       "snippet": ""
     },
     {
@@ -581,11 +600,11 @@
         "ai_metals",
         "geopolitical_driver"
       ],
-      "score": 2.8102,
+      "score": 2.7775,
       "title_norm": "boom channels coal defense dying funds into plants play political trump",
       "consulting_label": "Enterprise Risk",
       "why_it_matters": "Enterprise risk or governance signal — ERM framework or internal audit advisory.",
-      "age_h": 15.3,
+      "age_h": 17.2,
       "snippet": ""
     },
     {
@@ -600,11 +619,11 @@
         "regulatory"
       ],
       "drivers": [],
-      "score": 2.7788,
+      "score": 2.7494,
       "title_norm": "briefing centralizes commodity control crypto danantara exports indonesia indonesia june strategic sumberdaya under",
       "consulting_label": "Compliance Risk",
       "why_it_matters": "Regulatory action — compliance advisory, remediation, or sanctions screening.",
-      "age_h": 13.3,
+      "age_h": 15.2,
       "snippet": ""
     },
     {
@@ -623,11 +642,11 @@
         "ai_metals",
         "geopolitical_driver"
       ],
-      "score": 2.7324,
+      "score": 2.7079,
       "title_norm": "100 2028 oil risk sees until",
       "consulting_label": "Performance",
       "why_it_matters": "Earnings or guidance release — CFO advisory, margin improvement, or FP&A opportunity.",
-      "age_h": 20.3,
+      "age_h": 22.2,
       "snippet": ""
     },
     {
@@ -645,30 +664,11 @@
       "drivers": [
         "geopolitical_driver"
       ],
-      "score": 2.6382,
+      "score": 2.6236,
       "title_norm": "affect between brent com core crude differences energynow intermediate iran texas war west wti",
       "consulting_label": "Enterprise Risk",
       "why_it_matters": "Enterprise risk or governance signal — ERM framework or internal audit advisory.",
-      "age_h": 25.4,
-      "snippet": ""
-    },
-    {
-      "title": "Goldman Sachs says global oil demand takes big hit, sees risks to price forecast - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQV0toMGFvcW1NeUg0a2M2cFdtTVdLd19jV0ZhaHBLa2xyZllKTXdLY3JadXlNekNUeFJURUJNdHVZWVBISjVNcVNnOVc1aF9fNnNvMloyRVpITlZsWFJEM1FnMGJ2SGVoR1llQWpFQ1dMdklXNEdfUDlhamdBd3lWQ0RjZzZjaFhELU4tNVdidWtFNTdYaWUzdWJuLS1BY0hGTWt0V2wtY0kzNnRZWmtlNWNTNEhaaDNEREZ6ai03QTU3ZlNyd1hr?oc=5",
-      "source": "Google News - Reuters Crude/LNG/Brent",
-      "published": "2026-06-05T21:29:43Z",
-      "summary": "Goldman Sachs says global oil demand takes big hit, sees risks to price forecast Reuters",
-      "company": null,
-      "commodity": null,
-      "flags": [
-        "earnings"
-      ],
-      "drivers": [],
-      "score": 2.6341,
-      "title_norm": "big demand forecast global goldman hit oil price reuters risks sachs says sees takes",
-      "consulting_label": "Performance",
-      "why_it_matters": "Earnings or guidance release — CFO advisory, margin improvement, or FP&A opportunity.",
-      "age_h": 34.8,
+      "age_h": 27.4,
       "snippet": ""
     },
     {
@@ -686,11 +686,11 @@
         "energy_transition",
         "digital_tech_driver"
       ],
-      "score": 2.6329,
+      "score": 2.6188,
       "title_norm": "advances aluminium automation carbon finance growth low push rio tinto yahoo",
       "consulting_label": "Sustainability",
       "why_it_matters": "ESG or decarbonisation signal — sustainability strategy or reporting mandate.",
-      "age_h": 26.1,
+      "age_h": 28.0,
       "snippet": ""
     },
     {
@@ -705,54 +705,30 @@
         "trading_moves"
       ],
       "drivers": [],
-      "score": 2.6241,
+      "score": 2.611,
       "title_norm": "450 500 b67 down gold prices",
       "consulting_label": "Leadership Change",
       "why_it_matters": "Senior leadership transition — change management or org design opportunity.",
-      "age_h": 29.9,
+      "age_h": 31.9,
       "snippet": ""
     },
     {
-      "title": "TNB POWER OUTAGE | Saturday, 8 June 2024 (dc60D4GBMN) - Fathom Journal",
-      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1xQXliY1Z0UFZwMGJ0cDFnWHdNMjVQdk1oVW1uNXh3aDV6OTRLdjNIVTUyZk5BR1pxWGgtZWZaZy11RjlmLTdPOHczMm03dDBtVWVFY3NRTV9RWUVXWkhUZkxOUE9tN29maFlEdVc3R01oZHp4a3c?oc=5",
-      "source": "Google News",
-      "published": "2026-06-06T01:06:02Z",
-      "summary": "TNB POWER OUTAGE | Saturday, 8 June 2024 (dc60D4GBMN) Fathom Journal",
-      "company": "Tenaga Nasional Berhad",
-      "commodity": null,
-      "flags": [
-        "outage"
-      ],
-      "drivers": [
-        "mine_disruption"
-      ],
-      "score": 2.5991,
-      "title_norm": "2024 dc60d4gbmn fathom journal june outage power saturday tnb",
-      "consulting_label": "Ops Resilience",
-      "why_it_matters": "Operational disruption — business continuity or resilience advisory opportunity.",
-      "age_h": 31.2,
-      "snippet": ""
-    },
-    {
-      "title": "Thailand inches towards negative income tax",
-      "url": "https://www.bangkokpost.com/business/general/3266634/thailand-inches-towards-negative-income-tax",
+      "title": "B14bn spent in first week of 4-month co-payment scheme",
+      "url": "https://www.bangkokpost.com/business/general/3267254/b14bn-spent-in-first-week-of-4month-copayment-scheme",
       "source": "Bangkok Post Business",
-      "published": "2026-06-05T21:36:00Z",
-      "summary": "The Finance Ministry is preparing a comprehensive overhaul of the government's welfare system, laying the groundwork to implement a negative income tax (NIT) system in Thailand.",
+      "published": "2026-06-07T07:07:00Z",
+      "summary": "About 14 billion baht was spent in the first week of the government’s Thais Help Thais Plus co-payment scheme which began on June 1, according to a government spokeswoman.",
       "company": null,
       "commodity": null,
-      "flags": [
-        "geopolitical"
-      ],
+      "flags": [],
       "drivers": [
-        "ai_metals",
-        "geopolitical_driver"
+        "ai_metals"
       ],
-      "score": 2.5944,
-      "title_norm": "inches income negative tax thailand towards",
-      "consulting_label": "Compliance Risk",
-      "why_it_matters": "Geopolitical exposure — sanctions risk or trade compliance advisory.",
-      "age_h": 34.7,
+      "score": 0.5853,
+      "title_norm": "b14bn first month payment scheme spent week",
+      "consulting_label": "",
+      "why_it_matters": "",
+      "age_h": 3.1,
       "snippet": ""
     },
     {
@@ -765,28 +741,47 @@
       "commodity": null,
       "flags": [],
       "drivers": [],
-      "score": 0.272,
+      "score": 0.2432,
       "title_norm": "cave halt laos last lost men rescuers search two",
       "consulting_label": "",
       "why_it_matters": "",
-      "age_h": 24.2,
+      "age_h": 26.1,
       "snippet": ""
     },
     {
-      "title": "Singapore oil stocks fall as fuel oil, light ends decline - Quantum Commodity Intelligence",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQRUZBaVFZN3ZUUkdMZmV5YTNWMHpaRURNdUJHMmV3VXhjdFNOSlhHT0dzMU1welM1Z21zZmZaQ05KR21Ea01Ib1NhdF9hZ2hYOXFQOHdRUkJpUk9nQTRYb25xZm03bk5HN1B0UTM4UzFjWU02TENDaDZVeGxJWmdVTlFmb1A4MmtkeWtCa3IyS0JUYkk4c0UyZURHTTMwYWlQ?oc=5",
+      "title": "Chevron Corporation’s Energy Story Gets Sharper - Kalkine Media",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNRkd6b0JnVXFqd05xTkhpMHRFMTdJMzFsUDJUXzVFeENSdVRiSm9jXzNnd2RoRlFLS3RWME1XSWNtekZrcGF2WHNGODhSLUlVYmdmbzdwN3gwN3FsakxDTm5NRk9DN3NmaEJ6c0VDV25OYXZHbkt6OUk5VGtKLThZcDBxWWlFeTJFZ3R2RTRzem1Xakk?oc=5",
       "source": "Google News",
-      "published": "2026-06-06T12:39:02Z",
-      "summary": "Singapore oil stocks fall as fuel oil, light ends decline Quantum Commodity Intelligence",
-      "company": null,
-      "commodity": "refined",
+      "published": "2026-06-06T07:21:00Z",
+      "summary": "Chevron Corporation’s Energy Story Gets Sharper Kalkine Media",
+      "company": "Chevron",
+      "commodity": null,
       "flags": [],
-      "drivers": [],
-      "score": 0.1931,
-      "title_norm": "commodity decline ends fall fuel intelligence light oil oil quantum singapore stocks",
+      "drivers": [
+        "ai_metals"
+      ],
+      "score": 0.1271,
+      "title_norm": "chevron corporations energy gets kalkine media sharper story",
       "consulting_label": "",
       "why_it_matters": "",
-      "age_h": 19.6,
+      "age_h": 26.9,
+      "snippet": ""
+    },
+    {
+      "title": "Saving breath: Why Havah-Linn Cargill's name resonates with parents after near-death - Big Rapids Pioneer",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQMXJ0eERTcml2SXFBMHdQYm1sZVJLaFdTTjVKMkxWdHhyaHZUcEtPdUFLNi1JZ1J1TktRakQxTE5iRm1ETFpFMlJBSjdCSl9tTEtCNTBaOFNTQnJ2SjducVhNOHVveGZveDBhOWtiaGZ4WjVHTVN6ODFURTY5czQ4ZkRaRVZtT1lFM3d3RHptb095U1E?oc=5",
+      "source": "Google News",
+      "published": "2026-06-06T01:49:10Z",
+      "summary": "Saving breath: Why Havah-Linn Cargill's name resonates with parents after near-death Big Rapids Pioneer",
+      "company": "Cargill Asia",
+      "commodity": null,
+      "flags": [],
+      "drivers": [],
+      "score": 0.0924,
+      "title_norm": "after big breath cargill death havah linn name near parents pioneer rapids resonates saving why",
+      "consulting_label": "",
+      "why_it_matters": "",
+      "age_h": 32.4,
       "snippet": ""
     }
   ],
@@ -902,18 +897,18 @@
             "energy_transition",
             "digital_tech_driver"
           ],
-          "score": 2.6329,
+          "score": 2.6188,
           "title_norm": "advances aluminium automation carbon finance growth low push rio tinto yahoo",
           "consulting_label": "Sustainability",
           "why_it_matters": "ESG or decarbonisation signal — sustainability strategy or reporting mandate.",
-          "age_h": 26.1,
+          "age_h": 28.0,
           "snippet": ""
         }
       ],
       "flags": [
         "esg"
       ],
-      "highlight": "Indonesia's centralization of strategic commodity exports under Danantara Sumberdaya Indonesia (effective June 1) represents a major regulatory and market access shift that directly impacts trading companies' operational licenses and supply chain control. Signal type: Compliance Risk.",
+      "highlight": "Danantara Sumberdaya Indonesia's centralized control of strategic commodity exports from June 1 represents a state-led consolidation of Indonesia's critical minerals trade. Signal type: Compliance Risk—regulatory/geopolitical shift reshaping commodity supply chains and export access.",
       "summary": "Rio Tinto is advancing automation and low-carbon aluminium production as part of a growth strategy aimed at improving operational efficiency and meeting decarbonization demands. This initiative positions the company to capture rising demand for sustainable metals while enhancing cost competitiveness in key operations."
     },
     {
@@ -953,6 +948,27 @@
       "ticker": "TENAGA.KL",
       "items": [
         {
+          "title": "DayOne Secures Over 1 GW of Renewable Energy for Data Centers in Malaysia - Inspenet",
+          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQSkVTM2ZmdGItSmlsbU9qbTcwODk1T3l6VW0ydHMxLTlEemcwel9SdUlzQ0hnZTFXa1hoYzRuVDNUV1JuUEpISy0weE51VnVrSFlabE9IWUJhUS1IcXRsS2JmRGROQVRMLVROVHU0S0lOdk9SY1dtYlhLaXd3TE1wNUxHR3B3N1NtY3ZKVXFXbkFUbUhQVGpiSHVnM1NnZUNlTVhldTBn?oc=5",
+          "source": "Google News",
+          "published": "2026-06-07T06:34:00Z",
+          "summary": "DayOne Secures Over 1 GW of Renewable Energy for Data Centers in Malaysia Inspenet",
+          "company": "Tenaga Nasional Berhad",
+          "commodity": null,
+          "flags": [
+            "esg"
+          ],
+          "drivers": [
+            "ai_metals"
+          ],
+          "score": 2.986,
+          "title_norm": "centers data dayone energy inspenet malaysia over renewable secures",
+          "consulting_label": "Sustainability",
+          "why_it_matters": "ESG or decarbonisation signal — sustainability strategy or reporting mandate.",
+          "age_h": 3.6,
+          "snippet": ""
+        },
+        {
           "title": "TNB’s green gamble - Aliran",
           "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1xOG1kWTUzb1ZLV0lpczBMYXZsTHYtcjdMSTFEcmpZaExDZkZRTGpDc1J6MVl4Q1h2RGlaazlaUWVRMy0ta0RVSTBibldnNGdlUm90cjJScUg1enc?oc=5",
           "source": "Google News",
@@ -964,41 +980,20 @@
             "geopolitical"
           ],
           "drivers": [],
-          "score": 2.8475,
+          "score": 2.8108,
           "title_norm": "aliran gamble green tnbs",
           "consulting_label": "Compliance Risk",
           "why_it_matters": "Geopolitical exposure — sanctions risk or trade compliance advisory.",
-          "age_h": 9.5,
-          "snippet": ""
-        },
-        {
-          "title": "TNB POWER OUTAGE | Saturday, 8 June 2024 (dc60D4GBMN) - Fathom Journal",
-          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1xQXliY1Z0UFZwMGJ0cDFnWHdNMjVQdk1oVW1uNXh3aDV6OTRLdjNIVTUyZk5BR1pxWGgtZWZaZy11RjlmLTdPOHczMm03dDBtVWVFY3NRTV9RWUVXWkhUZkxOUE9tN29maFlEdVc3R01oZHp4a3c?oc=5",
-          "source": "Google News",
-          "published": "2026-06-06T01:06:02Z",
-          "summary": "TNB POWER OUTAGE | Saturday, 8 June 2024 (dc60D4GBMN) Fathom Journal",
-          "company": "Tenaga Nasional Berhad",
-          "commodity": null,
-          "flags": [
-            "outage"
-          ],
-          "drivers": [
-            "mine_disruption"
-          ],
-          "score": 2.5991,
-          "title_norm": "2024 dc60d4gbmn fathom journal june outage power saturday tnb",
-          "consulting_label": "Ops Resilience",
-          "why_it_matters": "Operational disruption — business continuity or resilience advisory opportunity.",
-          "age_h": 31.2,
+          "age_h": 11.4,
           "snippet": ""
         }
       ],
       "flags": [
-        "outage",
+        "esg",
         "geopolitical"
       ],
-      "highlight": "Rio Tinto is investing in automation and low-carbon aluminum production to position itself competitively as ESG and decarbonization pressures intensify in metals mining. Signal type: Sustainability.",
-      "summary": "TNB experienced a significant power outage on Saturday, 8 June 2024, while continuing its renewable energy expansion strategy. The outage represents an operational disruption risk, though details on cause and scope remain limited in the available headlines."
+      "highlight": "Rio Tinto is accelerating automation and low-carbon aluminum production to maintain competitiveness in a decarbonizing metals market. Signal type: Sustainability—capex shift toward emissions reduction and operational efficiency.",
+      "summary": "# Tenaga Nasional Berhad (TNB) News Summary\n\nTNB is positioning itself in Malaysia's growing renewable energy market for data center demand, as DayOne secures over 1 GW of renewable capacity in the country, signaling both opportunity and competitive pressure in the sector's green energy transition. The \"green gamble\" reference suggests TNB faces strategic choices in balancing renewable investments against traditional generation assets and grid stability obligations."
     },
     {
       "name": "Cargill Asia",
@@ -1028,18 +1023,18 @@
             "regulatory"
           ],
           "drivers": [],
-          "score": 2.7788,
+          "score": 2.7494,
           "title_norm": "briefing centralizes commodity control crypto danantara exports indonesia indonesia june strategic sumberdaya under",
           "consulting_label": "Compliance Risk",
           "why_it_matters": "Regulatory action — compliance advisory, remediation, or sanctions screening.",
-          "age_h": 13.3,
+          "age_h": 15.2,
           "snippet": ""
         }
       ],
       "flags": [
         "regulatory"
       ],
-      "highlight": "TNB faces dual compliance risks: a strategic green energy transition commitment (sustainability compliance) alongside operational reliability failures (June 2024 power outages), exposing tensions between growth mandates and execution capability in Malaysia's power sector. Signal type: Compliance Risk.",
+      "highlight": "Tenaga Nasional Berhad is pivoting toward renewable energy infrastructure to capture Malaysia's growing data center demand, with DayOne securing over 1 GW of capacity. Signal type: Sustainability—strategic expansion into high-margin green power segments.",
       "summary": "Indonesia is consolidating control of strategic commodity exports under Danantara Sumberdaya Indonesia effective June 1, centralizing a previously fragmented export system. This regulatory shift will consolidate the state's oversight of critical commodities trading and represents a significant operational restructuring for the sector."
     },
     {
@@ -1077,7 +1072,7 @@
         "change_pct": -2.42,
         "source": "yfinance",
         "quality": "market",
-        "as_of": "2026-06-07T08:14:55.061368Z"
+        "as_of": "2026-06-07T10:10:57.528026Z"
       },
       "items": [
         {
@@ -1095,11 +1090,11 @@
           "drivers": [
             "geopolitical_driver"
           ],
-          "score": 2.6382,
+          "score": 2.6236,
           "title_norm": "affect between brent com core crude differences energynow intermediate iran texas war west wti",
           "consulting_label": "Enterprise Risk",
           "why_it_matters": "Enterprise risk or governance signal — ERM framework or internal audit advisory.",
-          "age_h": 25.4,
+          "age_h": 27.4,
           "snippet": ""
         }
       ]
@@ -1117,7 +1112,7 @@
         "change_pct": -3.64,
         "source": "yfinance",
         "quality": "market",
-        "as_of": "2026-06-07T08:14:56.102139Z"
+        "as_of": "2026-06-07T10:10:58.567531Z"
       },
       "items": []
     },
@@ -1125,25 +1120,7 @@
       "commodity_id": "refined",
       "display": "Refined",
       "price": null,
-      "items": [
-        {
-          "title": "Singapore oil stocks fall as fuel oil, light ends decline - Quantum Commodity Intelligence",
-          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQRUZBaVFZN3ZUUkdMZmV5YTNWMHpaRURNdUJHMmV3VXhjdFNOSlhHT0dzMU1welM1Z21zZmZaQ05KR21Ea01Ib1NhdF9hZ2hYOXFQOHdRUkJpUk9nQTRYb25xZm03bk5HN1B0UTM4UzFjWU02TENDaDZVeGxJWmdVTlFmb1A4MmtkeWtCa3IyS0JUYkk4c0UyZURHTTMwYWlQ?oc=5",
-          "source": "Google News",
-          "published": "2026-06-06T12:39:02Z",
-          "summary": "Singapore oil stocks fall as fuel oil, light ends decline Quantum Commodity Intelligence",
-          "company": null,
-          "commodity": "refined",
-          "flags": [],
-          "drivers": [],
-          "score": 0.1931,
-          "title_norm": "commodity decline ends fall fuel intelligence light oil oil quantum singapore stocks",
-          "consulting_label": "",
-          "why_it_matters": "",
-          "age_h": 19.6,
-          "snippet": ""
-        }
-      ]
+      "items": []
     },
     {
       "commodity_id": "coal",
@@ -1175,7 +1152,7 @@
         "change_pct": -2.23,
         "source": "yfinance",
         "quality": "market",
-        "as_of": "2026-06-07T08:14:56.624878Z"
+        "as_of": "2026-06-07T10:10:59.093704Z"
       },
       "items": []
     },
@@ -1198,7 +1175,7 @@
         "change_pct": -0.69,
         "source": "yfinance",
         "quality": "market",
-        "as_of": "2026-06-07T08:14:58.713822Z"
+        "as_of": "2026-06-07T10:11:01.260891Z"
       },
       "items": []
     }
@@ -1214,7 +1191,7 @@
       "change_pct": -2.42,
       "source": "yfinance",
       "quality": "market",
-      "as_of": "2026-06-07T08:14:55.061368Z"
+      "as_of": "2026-06-07T10:10:57.528026Z"
     },
     {
       "commodity_id": "wti",
@@ -1226,7 +1203,7 @@
       "change_pct": -2.79,
       "source": "yfinance",
       "quality": "market",
-      "as_of": "2026-06-07T08:14:55.583372Z"
+      "as_of": "2026-06-07T10:10:58.049320Z"
     },
     {
       "commodity_id": "henry_hub",
@@ -1238,7 +1215,7 @@
       "change_pct": -3.64,
       "source": "yfinance",
       "quality": "market",
-      "as_of": "2026-06-07T08:14:56.102139Z"
+      "as_of": "2026-06-07T10:10:58.567531Z"
     },
     {
       "commodity_id": "copper",
@@ -1250,7 +1227,7 @@
       "change_pct": -2.23,
       "source": "yfinance",
       "quality": "market",
-      "as_of": "2026-06-07T08:14:56.624878Z"
+      "as_of": "2026-06-07T10:10:59.093704Z"
     },
     {
       "commodity_id": "gold",
@@ -1262,7 +1239,7 @@
       "change_pct": -2.31,
       "source": "yfinance",
       "quality": "market",
-      "as_of": "2026-06-07T08:14:57.147881Z"
+      "as_of": "2026-06-07T10:10:59.624330Z"
     },
     {
       "commodity_id": "silver",
@@ -1274,7 +1251,7 @@
       "change_pct": -5.2,
       "source": "yfinance",
       "quality": "market",
-      "as_of": "2026-06-07T08:14:57.669490Z"
+      "as_of": "2026-06-07T10:11:00.174004Z"
     },
     {
       "commodity_id": "aluminium",
@@ -1286,7 +1263,7 @@
       "change_pct": -0.54,
       "source": "yfinance",
       "quality": "market",
-      "as_of": "2026-06-07T08:14:58.190250Z"
+      "as_of": "2026-06-07T10:11:00.701681Z"
     },
     {
       "commodity_id": "soybeans",
@@ -1298,7 +1275,7 @@
       "change_pct": -0.69,
       "source": "yfinance",
       "quality": "market",
-      "as_of": "2026-06-07T08:14:58.713822Z"
+      "as_of": "2026-06-07T10:11:01.260891Z"
     },
     {
       "commodity_id": "wheat",
@@ -1310,7 +1287,7 @@
       "change_pct": -0.17,
       "source": "yfinance",
       "quality": "market",
-      "as_of": "2026-06-07T08:14:59.241433Z"
+      "as_of": "2026-06-07T10:11:01.787940Z"
     },
     {
       "commodity_id": "jkm",
@@ -1381,7 +1358,7 @@
         "unit": "Index",
         "last": 100.071,
         "change_pct": 0.66,
-        "as_of": "2026-06-07T08:15:02.877928Z"
+        "as_of": "2026-06-07T10:11:05.440500Z"
       },
       {
         "name": "US 10Y Yield",
@@ -1389,7 +1366,7 @@
         "unit": "%",
         "last": 4.536,
         "change_pct": 1.32,
-        "as_of": "2026-06-07T08:15:03.306129Z"
+        "as_of": "2026-06-07T10:11:05.868202Z"
       },
       {
         "name": "Hang Seng",
@@ -1397,7 +1374,7 @@
         "unit": "Index",
         "last": 24961.949,
         "change_pct": -1.15,
-        "as_of": "2026-06-07T08:15:03.738133Z"
+        "as_of": "2026-06-07T10:11:06.334010Z"
       }
     ],
     "geopolitical": [
@@ -1405,37 +1382,31 @@
         "title": "Core Differences Between West Texas Intermediate (WTI) and Brent Crude and the Affect of the Iran War - EnergyNow.com",
         "source": "Google News",
         "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQN1ZOVFVuUnFFYUstVktuczhxdzBYN1lUbUlqbTIwZEVnX2lCclN2dDZyeVJxUnFPLXdLLWhHcTd1MUUyM0kxTFBUZWJZSVlfN2RCZkRlRXhqT3ZfdUJTQkFjSkR1dDFsQ2Rmc19VTERhc1hsV2Nka2RDVEFvZ0FUcFdJQ0dCR21lcm5mZU12UzJZZHlyOFh3WGEzVWpCVDlUeHc?oc=5",
-        "age_h": 25.4
+        "age_h": 27.4
       },
       {
         "title": "Oil Market Flying Blind as Dark Tanker Traffic Surges in Hormuz",
         "source": "OilPrice.com",
         "url": "https://oilprice.com/Energy/Energy-General/Oil-Market-Flying-Blind-as-Dark-Tanker-Traffic-Surges-in-Hormuz.html",
-        "age_h": 9.3
+        "age_h": 11.2
       },
       {
         "title": "AI Boom or Political Play? Trump Channels Defense Funds Into Dying Coal Plants",
         "source": "OilPrice.com",
         "url": "https://oilprice.com/Energy/Coal/AI-Boom-or-Political-Play-Trump-Channels-Defense-Funds-Into-Dying-Coal-Plants.html",
-        "age_h": 15.3
+        "age_h": 17.2
       },
       {
         "title": "UK Sees Risk of $100 Oil Until 2028",
         "source": "Rigzone News",
         "url": "https://www.rigzone.com/news/wire/uk_sees_risk_of_100_oil_until_2028-06-jun-2026-183867-article/?rss=true",
-        "age_h": 20.3
-      },
-      {
-        "title": "Thailand inches towards negative income tax",
-        "source": "Bangkok Post Business",
-        "url": "https://www.bangkokpost.com/business/general/3266634/thailand-inches-towards-negative-income-tax",
-        "age_h": 34.7
+        "age_h": 22.2
       },
       {
         "title": "OPEC+ set for fourth oil quota hike since Hormuz closure, sources say - Reuters",
         "source": "Google News - Reuters Crude/LNG/Brent",
         "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPaWZrV2dPZ2xjY0NWT0lIUFVNeUlJZ1I5V3BsdkU0X01tWFVHLWZWTVBQN0pHeHNGZF9fS01BY2RrbWtLWFcyazR0bVNOWERwQVFBYjhHMFNZYW5XWHNRM2VWZUU2aFpTd3IzRGhiVUZHNUJsbWlCb19CX19SUG5DOXozd1cyak1RdUFhS0FtaUYxMG5xNGtfYW9idFhNWGRUd25PeUFYTWJJWVhqeS1lNUJHS3pCUQ?oc=5",
-        "age_h": 1.1
+        "age_h": 3.1
       }
     ]
   },
@@ -1503,7 +1474,7 @@
       "demand_signals": [],
       "balance_read": "FRED (2026-05-01): $2.94 (+47.7% over 30 days) — rising trend",
       "source": "FRED",
-      "as_of": "2026-06-07T08:15:41.972814Z"
+      "as_of": "2026-06-07T10:11:43.195000Z"
     }
   ],
   "themes": [],
