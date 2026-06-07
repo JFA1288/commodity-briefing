@@ -346,13 +346,14 @@ supplementary_feeds:
     url: "https://www.rigzone.com/news/rss/rigzone_latest.aspx"
     weight: 1.2
 
-  # Mining.com blocks bots; replaced with Kitco metals news
-  - name: Kitco Metals News
-    url: "https://www.kitco.com/rss/news"
+  # Mining.com/Kitco block bots; use Google News for metals coverage instead
+  - name: Google News - Metals Mining
+    url: "https://news.google.com/rss/search?q=copper+OR+nickel+OR+%22iron+ore%22+OR+aluminium+OR+%22base+metals%22+mining&hl=en-US&gl=US&ceid=US:en"
     weight: 1.2
 
+  # Hellenic Shipping News now rejects bots (415); use their category RSS with correct path
   - name: Hellenic Shipping News
-    url: "https://www.hellenicshippingnews.com/feed/"
+    url: "https://www.hellenicshippingnews.com/category/energy/feed/"
     weight: 1.0
 
   # The Edge Malaysia — use Google News to pull their articles reliably
