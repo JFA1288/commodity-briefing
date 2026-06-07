@@ -898,58 +898,66 @@ def build_exec_summary(
 
 # ── Heatmap ───────────────────────────────────────────────────────────────────
 
-def build_heatmap(price_history: list[dict], prices: list[PriceRecord]) -> Optional[HeatmapData]:
-    """Compute 1D / 1W / 1M return matrix from price_history + today's prices."""
-    if not price_history or not prices:
+def build_heatmap(price_history: list[dict], prices: list[PriceRecord],
+                  returns: Optional[dict] = None) -> Optional[HeatmapData]:
+    """Build 1D/1W/1M return matrix.
+
+    Uses yfinance-derived returns dict (keyed by commodity_id) when available —
+    this gives accurate multi-period returns without needing N days of stored history.
+    Falls back to price_history comparison for any commodity not covered.
+    """
+    if not prices:
         return None
 
     commodity_ids = [p.commodity_id for p in prices if p.price is not None]
     if not commodity_ids:
         return None
 
-    # Index history by date
+    # Build fallback from price_history (used only when returns dict is missing an entry)
     history_by_date: dict[str, dict] = {}
-    for entry in price_history:
+    for entry in (price_history or []):
         history_by_date[entry.get("date", "")] = entry.get("prices", {})
-
     sorted_dates = sorted(history_by_date.keys())
-    if not sorted_dates:
-        return None
 
-    today_prices = {p.commodity_id: p.price for p in prices if p.price is not None}
-    today_str = sorted_dates[-1] if sorted_dates else ""
-
-    def get_price(cid: str, n_days_ago: int) -> Optional[float]:
-        if len(sorted_dates) <= n_days_ago:
+    def _hist_pct(cid: str, n_days: int, current: float) -> Optional[float]:
+        if len(sorted_dates) <= n_days:
             return None
-        d = sorted_dates[-(n_days_ago + 1)]
-        return history_by_date.get(d, {}).get(cid, {}).get("price")
+        d = sorted_dates[-(n_days + 1)]
+        prev = history_by_date.get(d, {}).get(cid, {}).get("price")
+        if prev is None or prev == 0:
+            return None
+        return round((current - prev) / prev * 100, 2)
 
-    returns: dict[str, list] = {"1d": [], "1w": [], "1m": []}
+    hm_returns: dict[str, list] = {"1d": [], "1w": [], "1m": []}
     display_names: list[str] = []
-
     price_display = {p.commodity_id: p.display for p in prices}
+    returns = returns or {}
 
-    for cid in commodity_ids:
-        current = today_prices.get(cid)
-        if current is None:
+    for p in prices:
+        if p.price is None:
             continue
+        cid = p.commodity_id
+        r = returns.get(cid, {})
+
+        # 1D: prefer yfinance history return, then PriceRecord.change_pct, then history file
+        r1d = r.get("1d")
+        if r1d is None and p.change_pct is not None:
+            r1d = p.change_pct
+        if r1d is None:
+            r1d = _hist_pct(cid, 1, p.price)
+
+        r1w = r.get("1w") or _hist_pct(cid, 5, p.price)
+        r1m = r.get("1m") or _hist_pct(cid, 21, p.price)
 
         display_names.append(price_display.get(cid, cid))
-
-        def _return(prev: Optional[float]) -> Optional[float]:
-            if prev is None or prev == 0:
-                return None
-            return round((current - prev) / prev * 100, 2)
-
-        returns["1d"].append(_return(get_price(cid, 1)))
-        returns["1w"].append(_return(get_price(cid, 5)))
-        returns["1m"].append(_return(get_price(cid, 21)))
+        hm_returns["1d"].append(r1d)
+        hm_returns["1w"].append(r1w)
+        hm_returns["1m"].append(r1m)
 
     if not display_names:
         return None
 
-    return HeatmapData(commodities=display_names, returns=returns)
+    return HeatmapData(commodities=display_names, returns=hm_returns)
 
 
 # ── Correlation matrix ────────────────────────────────────────────────────────
@@ -1063,6 +1071,7 @@ def build_digest(
     eia_fundamentals: Optional[list[FundamentalsItem]] = None,
     regulatory: Optional[list[RegulatoryItem]] = None,
     price_history: Optional[list[dict]] = None,
+    price_returns: Optional[dict] = None,
 ) -> DailyDigest:
     from .summarize import enrich_opportunities, summarize_company_highlights, summarize_executive_brief
     from .process import tag_drivers, annotate_age
@@ -1135,7 +1144,7 @@ def build_digest(
     exec_summary = build_exec_summary(prices, headlines, market_themes, risks)
 
     # Heatmap & correlation
-    heatmap = build_heatmap(price_history, prices) if price_history else None
+    heatmap = build_heatmap(price_history, prices, returns=price_returns)
     correlations = build_correlation(price_history, prices) if price_history else None
 
     # Macro geo signals

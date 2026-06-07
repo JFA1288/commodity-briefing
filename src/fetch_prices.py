@@ -224,6 +224,46 @@ def fetch_all() -> list[PriceRecord]:
     return records
 
 
+def fetch_returns(commodities: list[dict]) -> dict[str, dict[str, Optional[float]]]:
+    """Fetch 1D/1W/1M price returns for each commodity via yfinance history.
+
+    Returns {commodity_id: {"1d": pct, "1w": pct, "1m": pct}}.
+    Only commodities with a yfinance_ticker are included.
+    """
+    results: dict[str, dict[str, Optional[float]]] = {}
+    for c in commodities:
+        cid = c["id"]
+        ticker = c.get("yfinance_ticker", "")
+        multiplier = c.get("yfinance_unit_multiplier", 1.0)
+        if not ticker:
+            continue
+        try:
+            t = yf.Ticker(ticker)
+            hist = t.history(period="1mo", auto_adjust=True)
+            if hist.empty or len(hist) < 2:
+                continue
+            closes = (hist["Close"] * multiplier).dropna()
+            if len(closes) < 2:
+                continue
+
+            latest = float(closes.iloc[-1])
+
+            def _pct(prev: float) -> Optional[float]:
+                if prev == 0:
+                    return None
+                return round((latest - prev) / prev * 100, 2)
+
+            r1d = _pct(float(closes.iloc[-2])) if len(closes) >= 2 else None
+            r1w = _pct(float(closes.iloc[-6])) if len(closes) >= 6 else None
+            r1m = _pct(float(closes.iloc[0]))
+
+            results[cid] = {"1d": r1d, "1w": r1w, "1m": r1m}
+            time.sleep(0.2)
+        except Exception as exc:
+            print(f"    [returns] {ticker} error: {exc}")
+    return results
+
+
 def fetch_macro() -> MacroSection:
     """Fetch macro tickers (DXY, US 10Y yield, Hang Seng)."""
     cfg = config.load()

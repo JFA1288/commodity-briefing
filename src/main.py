@@ -8,7 +8,7 @@ from datetime import datetime, timezone
 
 from . import config
 from .fetch_news import fetch_company_news, fetch_commodity_news, fetch_supplementary
-from .fetch_prices import fetch_all as fetch_prices, fetch_macro
+from .fetch_prices import fetch_all as fetch_prices, fetch_macro, fetch_returns
 from .fetch_fundamentals import fetch_all_fundamentals, build_news_fundamentals
 from .process import dedup, filter_recent, filter_relevant, extract_regulatory
 from .digest import build_digest
@@ -32,11 +32,20 @@ def run(dry_run: bool = False) -> None:
     print("[1/5] Fetching commodity prices …")
     prices = []
     macro = None
+    price_returns: dict = {}
     try:
         prices = fetch_prices()
         print(f"  → {len(prices)} commodities processed")
     except Exception:
         print("  ERROR fetching prices:")
+        traceback.print_exc()
+
+    try:
+        cfg = config.load()
+        price_returns = fetch_returns(cfg.get("commodities", []))
+        print(f"  → {len(price_returns)} commodities with 1D/1W/1M returns")
+    except Exception:
+        print("  ERROR fetching price returns:")
         traceback.print_exc()
 
     try:
@@ -141,6 +150,7 @@ def run(dry_run: bool = False) -> None:
             eia_fundamentals=eia_fundamentals,
             regulatory=regulatory,
             price_history=price_history,
+            price_returns=price_returns,
         )
         print(
             f"  → {len(digest.top_headlines)} top headlines, "
