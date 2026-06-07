@@ -282,6 +282,52 @@ def extract_geopolitical(items: list[NewsItem]) -> list[GeopoliticalItem]:
     return geo[:10]
 
 
+def extract_macro_signals(items: list[NewsItem]) -> list[GeopoliticalItem]:
+    """Extract macro-economy watch items from news (Fed, China data, FX, global demand)."""
+    cfg = config.load()
+    macro_terms = cfg.get("macro_watch_terms", [])
+    # Hardcoded core keywords that always apply
+    core_keywords = [
+        "federal reserve", "fed rate", "fomc", "interest rate", "rate cut", "rate hike",
+        "monetary policy", "ecb", "bank of japan", "boj", "rba", "central bank",
+        "china gdp", "china pmi", "china demand", "chinese demand", "china import",
+        "china export", "pboc", "yuan", "renminbi",
+        "iea demand", "eia demand", "oil demand", "global demand", "global growth",
+        "recession", "inflation", "cpi", "pce",
+        "dollar index", "dxy", "usd strength", "usd weakness", "currency",
+        "imf", "world bank forecast", "gdp growth",
+    ]
+    all_terms = [t.lower() for t in (macro_terms + core_keywords)]
+    geo_terms = cfg.get("keyword_sets", {}).get("geopolitical_watch", [])
+    geo_lower = {t.lower() for t in geo_terms}
+    now = datetime.now(timezone.utc)
+
+    macro: list[GeopoliticalItem] = []
+    seen: set[str] = set()
+    for item in items:
+        text = (item.title + " " + item.summary).lower()
+        if not any(kw in text for kw in all_terms):
+            continue
+        # Skip items already captured by geopolitical watch
+        if any(kw in text for kw in geo_lower):
+            continue
+        url = item.url.split("?")[0].rstrip("/")
+        if url in seen:
+            continue
+        seen.add(url)
+        age_h = 0.0
+        if item.published:
+            age_h = round((now - item.published).total_seconds() / 3600, 1)
+        macro.append(GeopoliticalItem(
+            title=item.title,
+            source=item.source,
+            url=item.url,
+            age_h=age_h,
+        ))
+
+    return macro[:8]
+
+
 # ── Demand-driver trigger detection ──────────────────────────────────────────
 
 def detect_triggers(item: NewsItem) -> list[TriggerMatch]:

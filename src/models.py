@@ -60,6 +60,7 @@ class GeopoliticalItem(BaseModel):
 class MacroSection(BaseModel):
     tickers: list[MacroTickerRecord] = Field(default_factory=list)
     geopolitical: list[GeopoliticalItem] = Field(default_factory=list)
+    macro_watch: list[GeopoliticalItem] = Field(default_factory=list)
 
 
 class OutlookItem(BaseModel):

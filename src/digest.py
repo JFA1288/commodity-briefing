@@ -1289,15 +1289,9 @@ def build_digest(
 
     # Macro geo signals
     if macro and all_news_items:
-        from .process import extract_geopolitical
-        geo = extract_geopolitical(all_news_items)
-        macro.geopolitical = geo
-
-    # Add interpreted narratives to macro tickers
-    if macro:
-        for t in macro.tickers:
-            if not t.narrative:
-                t.narrative = _macro_narrative(t.name, t.symbol, t.last, t.change_pct)
+        from .process import extract_geopolitical, extract_macro_signals
+        macro.geopolitical = extract_geopolitical(all_news_items)
+        macro.macro_watch = extract_macro_signals(all_news_items)
 
     # Demand-driver intel
     opportunity_radar = build_opportunity_radar(company_news)

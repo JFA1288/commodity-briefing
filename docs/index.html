@@ -336,7 +336,7 @@ h4{font-size:.9rem;font-weight:600;color:var(--text2)}
     <div class="section-header">
       <span class="section-icon">◎</span>
       <span class="section-title">Macro &amp; Geopolitical</span>
-      <span class="section-meta">DXY · US 10Y · Hang Seng</span>
+      <span class="section-meta">Central banks · China · FX · Global demand</span>
     </div>
     <div id="macro-body"></div>
   </section>
@@ -521,36 +521,18 @@ function renderExecSummary(bullets,brief,convStarter){
 }
 
 // ── 2. Macro & Geopolitical ───────────────────────────────────────────────────
+function renderMacroWatchList(items,label,emptyMsg){
+  if(!items||!items.length)return`<div style="font-size:.78rem;color:var(--text3);padding:.3rem 0">${emptyMsg}</div>`;
+  return items.map(g=>`<div class="geo-item"><div class="geo-text"><a href="${esc(g.url)}" target="_blank" rel="noopener">${esc(g.title)}</a><div class="geo-meta">${esc(g.source)} · ${fmtAge(g.age_h)}</div></div></div>`).join('');
+}
 function renderMacro(macro){
   const el=document.getElementById('macro-body');
   if(!macro){el.innerHTML='<div class="card card-sm" style="color:var(--text3);font-size:.82rem">Macro data unavailable.</div>';return}
   let html='';
-  if(macro.tickers&&macro.tickers.length){
-    html+='<h3 style="font-size:.8rem;color:var(--text2);margin:0 0 .5rem">Market Signals</h3>';
-    macro.tickers.forEach(t=>{
-      const cc=(t.change_pct||0)>0.05?'up':((t.change_pct||0)<-0.05?'dn':'flat');
-      const cs=t.change_pct!=null?((t.change_pct>0?'+':'')+t.change_pct.toFixed(2)+'%'):'—';
-      const vs=t.last!=null?t.last.toLocaleString('en-US',{maximumFractionDigits:2}):'—';
-      html+=`<div class="geo-item">
-        <div class="geo-text">
-          <div style="display:flex;align-items:baseline;gap:.5rem;margin-bottom:.2rem">
-            <span style="font-weight:600;font-size:.85rem">${esc(t.name)}</span>
-            <span style="font-size:.85rem;color:var(--text2)">${vs}<span style="font-size:.72rem;color:var(--text3);margin-left:.2rem">${esc(t.unit||'')}</span></span>
-            <span class="price-chg ${cc}" style="font-size:.78rem">${cs}</span>
-          </div>
-          ${t.narrative?`<div style="font-size:.78rem;color:var(--text2);line-height:1.5">${esc(t.narrative)}</div>`:''}
-        </div>
-      </div>`;
-    });
-  }
-  if(macro.geopolitical&&macro.geopolitical.length){
-    html+='<h3 style="font-size:.8rem;color:var(--text2);margin:.9rem 0 .5rem">Geopolitical Watch</h3>';
-    macro.geopolitical.forEach(g=>{
-      html+=`<div class="geo-item"><div class="geo-text"><a href="${esc(g.url)}" target="_blank" rel="noopener">${esc(g.title)}</a><div class="geo-meta">${esc(g.source)} · ${fmtAge(g.age_h)}</div></div></div>`;
-    });
-  }else{
-    html+='<div style="font-size:.78rem;color:var(--text3);padding:.4rem 0">No geopolitical signals flagged today.</div>';
-  }
+  html+='<h3 style="font-size:.8rem;color:var(--text2);margin:0 0 .5rem">Macro Watch</h3>';
+  html+=renderMacroWatchList(macro.macro_watch,'Macro Watch','No macro signals flagged today.');
+  html+='<h3 style="font-size:.8rem;color:var(--text2);margin:.9rem 0 .5rem">Geopolitical Watch</h3>';
+  html+=renderMacroWatchList(macro.geopolitical,'Geopolitical Watch','No geopolitical signals flagged today.');
   el.innerHTML=html;
 }
 
