@@ -1,4 +1,4 @@
-"""Dedup, relevance filter, sector grouping, and demand-driver trigger detection."""
+"""Dedup, relevance filter, driver tagging, supply/demand classification, regulatory extraction."""
 
 from __future__ import annotations
 
@@ -8,7 +8,7 @@ from datetime import datetime, timedelta, timezone
 from typing import Optional
 
 from . import config
-from .models import NewsItem, TriggerMatch
+from .models import NewsItem, TriggerMatch, RegulatoryItem, GeopoliticalItem
 
 # ── Dedup ─────────────────────────────────────────────────────────────────────
 
@@ -23,11 +23,11 @@ def _normalize_title(title: str) -> str:
     t = t.lower()
     t = re.sub(r"[^\w\s]", " ", t)
     tokens = [w for w in t.split() if w not in _STOPWORDS and len(w) > 2]
-    return " ".join(sorted(tokens))  # sorted bag-of-words fingerprint
+    return " ".join(sorted(tokens))
 
 
 def dedup(items: list[NewsItem]) -> list[NewsItem]:
-    """Remove near-duplicate headlines; prefer the item from a higher-weight source."""
+    """Remove near-duplicate headlines; prefer higher-weight source."""
     seen_urls: set[str] = set()
     seen_norms: dict[str, NewsItem] = {}
     out: list[NewsItem] = []
@@ -50,7 +50,6 @@ def dedup(items: list[NewsItem]) -> list[NewsItem]:
 
         if norm in seen_norms:
             existing = seen_norms[norm]
-            # keep whichever has a higher source weight, or earlier publish date
             if weight(item) > weight(existing):
                 seen_norms[norm] = item
                 out = [item if x is existing else x for x in out]
@@ -71,7 +70,6 @@ def _build_entity_terms() -> list[str]:
     for c in cfg.get("commodities", []):
         terms.append(c["display"].lower())
         terms.append(c["id"].replace("_", " ").lower())
-    # add commodity group terms
     terms += [
         "crude oil", "brent", "wti", "tapis", "dubai", "oman",
         "lng", "liquefied natural gas", "jkm", "henry hub",
@@ -82,6 +80,7 @@ def _build_entity_terms() -> list[str]:
         "commodity", "commodities", "energy", "oil", "gas",
         "refinery", "tanker", "cargo", "shipment", "pipeline",
         "upstream", "downstream", "LME", "CBOT", "ICE", "NYMEX",
+        "OPEC", "trading", "Singapore commodity",
     ]
     return list(dict.fromkeys(t for t in terms if t))
 
@@ -96,7 +95,6 @@ def _entity_terms() -> list[str]:
     return _ENTITY_TERMS
 
 
-# Obvious noise patterns – skip items where title matches
 _NOISE_PATTERNS = [
     re.compile(r"\b(horoscope|sports|football|cricket|celebrity|recipe|travel|fashion)\b", re.I),
     re.compile(r"\b(covid|pandemic|vaccine|hospital|medical)\b", re.I),
@@ -132,12 +130,136 @@ def filter_recent(items: list[NewsItem], hours: Optional[int] = None) -> list[Ne
     return out
 
 
-# ── Sector grouping ───────────────────────────────────────────────────────────
+# ── Age annotation ────────────────────────────────────────────────────────────
+
+def annotate_age(items: list[NewsItem]) -> list[NewsItem]:
+    now = datetime.now(timezone.utc)
+    for item in items:
+        if item.published:
+            item.age_h = round((now - item.published).total_seconds() / 3600, 1)
+    return items
+
+
+# ── Market driver tagging ─────────────────────────────────────────────────────
+
+def tag_drivers(items: list[NewsItem]) -> list[NewsItem]:
+    """Attach market-driver tags (china_demand, opec_supply, etc.) to each item."""
+    cfg = config.load()
+    driver_kw: dict[str, list[str]] = cfg.get("keyword_sets", {}).get("drivers", {})
+
+    for item in items:
+        text = (item.title + " " + item.summary).lower()
+        item.drivers = []
+        for driver_key, keywords in driver_kw.items():
+            for kw in keywords:
+                if kw.lower() in text:
+                    item.drivers.append(driver_key)
+                    break
+
+    return items
+
+
+# ── Supply/demand classification ──────────────────────────────────────────────
+
+def classify_supply_demand(item: NewsItem) -> tuple[list[str], list[str]]:
+    """Return (supply_signals, demand_signals) keyword lists found in the item."""
+    cfg = config.load()
+    kw_sets = cfg.get("keyword_sets", {})
+    supply_kw = kw_sets.get("supply_side", [])
+    demand_kw = kw_sets.get("demand_side", [])
+    text = (item.title + " " + item.summary).lower()
+    supply = [kw for kw in supply_kw if kw.lower() in text]
+    demand = [kw for kw in demand_kw if kw.lower() in text]
+    return supply, demand
+
+
+# ── Regulatory extraction ─────────────────────────────────────────────────────
+
+_JURISDICTION_TERMS = {
+    "Indonesia": ["indonesia", "indonesian", "jakarta", "ojk", "esdm"],
+    "Malaysia": ["malaysia", "malaysian", "kuala lumpur", "sc malaysia", "petronas"],
+    "Thailand": ["thailand", "thai", "bangkok", "egat", "set thailand"],
+    "Singapore": ["singapore", "mas singapore", "ies", "edb singapore"],
+    "Regional / Global": ["asean", "opec", "iea", "world bank", "g20", "un", "imo"],
+}
+
+
+def extract_regulatory(items: list[NewsItem]) -> list[RegulatoryItem]:
+    """Extract regulatory/policy items and classify them by jurisdiction."""
+    cfg = config.load()
+    reg_keywords = cfg.get("material_event_keywords", {}).get("regulatory", [])
+
+    regulatory: list[RegulatoryItem] = []
+    for item in items:
+        text = (item.title + " " + item.summary).lower()
+        if not any(kw.lower() in text for kw in reg_keywords):
+            continue
+
+        # Determine jurisdiction
+        jurisdiction = "Other"
+        for jur, terms in _JURISDICTION_TERMS.items():
+            if any(t in text for t in terms):
+                jurisdiction = jur
+                break
+
+        # Extract affected commodities and companies
+        commodities: list[str] = []
+        for c in cfg.get("commodities", []):
+            if c["display"].lower() in text or c["id"].replace("_", " ") in text:
+                commodities.append(c["display"])
+
+        companies: list[str] = []
+        for comp in cfg.get("companies", []):
+            if any(a.lower() in text for a in comp.get("aliases", [])):
+                companies.append(comp["name"])
+
+        regulatory.append(RegulatoryItem(
+            title=item.title,
+            jurisdiction=jurisdiction,
+            commodities=commodities[:3],
+            companies=companies[:3],
+            source=item.source,
+            url=item.url,
+        ))
+
+    return regulatory
+
+
+# ── Geopolitical detection ────────────────────────────────────────────────────
+
+def extract_geopolitical(items: list[NewsItem]) -> list[GeopoliticalItem]:
+    """Extract geopolitical/macro watch items from news."""
+    cfg = config.load()
+    geo_keywords = cfg.get("keyword_sets", {}).get("geopolitical_watch", [])
+    now = datetime.now(timezone.utc)
+
+    geo: list[GeopoliticalItem] = []
+    seen: set[str] = set()
+    for item in items:
+        text = (item.title + " " + item.summary).lower()
+        if not any(kw.lower() in text for kw in geo_keywords):
+            continue
+        url = item.url.split("?")[0].rstrip("/")
+        if url in seen:
+            continue
+        seen.add(url)
+        age_h = 0.0
+        if item.published:
+            age_h = round((now - item.published).total_seconds() / 3600, 1)
+        geo.append(GeopoliticalItem(
+            title=item.title,
+            source=item.source,
+            url=item.url,
+            age_h=age_h,
+        ))
+
+    return geo[:10]
+
 
 # ── Demand-driver trigger detection ──────────────────────────────────────────
 
 def detect_triggers(item: NewsItem) -> list[TriggerMatch]:
-    """Match demand-driver keywords against a news item; return all matching triggers."""
+    """Match demand-driver keywords; return all matching triggers."""
     cfg = config.load()
     drivers: dict = cfg.get("demand_drivers", {})
     sl_labels: dict = cfg.get("service_lines", {})
@@ -158,6 +280,8 @@ def detect_triggers(item: NewsItem) -> list[TriggerMatch]:
             ))
     return matches
 
+
+# ── Sector grouping ───────────────────────────────────────────────────────────
 
 def group_by_sector(company_news: dict[str, list[NewsItem]]) -> dict[str, list[tuple[str, list[NewsItem]]]]:
     """Returns {sector: [(company_name, [items]), ...]}"""

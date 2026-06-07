@@ -17,10 +17,13 @@ class NewsItem(BaseModel):
     company: Optional[str] = None
     commodity: Optional[str] = None
     flags: list[str] = Field(default_factory=list)
+    drivers: list[str] = Field(default_factory=list)   # market-driver tags
     score: float = 0.0
     title_norm: str = ""
     consulting_label: str = ""
     why_it_matters: str = ""
+    age_h: float = 0.0                                  # hours since published
+    snippet: str = ""
 
 
 class PriceRecord(BaseModel):
@@ -32,16 +35,105 @@ class PriceRecord(BaseModel):
     prev_close: Optional[float] = None
     change_pct: Optional[float] = None
     source: str = "yfinance"
+    quality: str = "market"   # "market" | "indicative" | "web"
     as_of: Optional[datetime] = None
+
+
+class MacroTickerRecord(BaseModel):
+    name: str
+    symbol: str
+    unit: str = ""
+    last: Optional[float] = None
+    change_pct: Optional[float] = None
+    as_of: Optional[datetime] = None
+
+
+class GeopoliticalItem(BaseModel):
+    title: str
+    source: str
+    url: str
+    age_h: float = 0.0
+
+
+class MacroSection(BaseModel):
+    tickers: list[MacroTickerRecord] = Field(default_factory=list)
+    geopolitical: list[GeopoliticalItem] = Field(default_factory=list)
+
+
+class OutlookItem(BaseModel):
+    commodity: str
+    eia_forecast: str = ""
+    wb_forecast: str = ""
+    horizon: str = ""
+    direction: str = "neutral"   # bullish | bearish | neutral
+    narrative: str = ""
+    headlines: list[dict] = Field(default_factory=list)
+
+
+class FundamentalsItem(BaseModel):
+    commodity: str
+    inventory_level: Optional[float] = None
+    inventory_change: Optional[float] = None
+    inventory_direction: str = ""   # up | down | flat
+    production: Optional[float] = None
+    supply_signals: list[str] = Field(default_factory=list)
+    demand_signals: list[str] = Field(default_factory=list)
+    balance_read: str = ""
+    source: str = ""
+    as_of: Optional[datetime] = None
+
+
+class ThemeItem(BaseModel):
+    name: str
+    commodities: list[str] = Field(default_factory=list)
+    companies: list[str] = Field(default_factory=list)
+    headlines: list[dict] = Field(default_factory=list)
+    narrative: str = ""
+    driver_tags: list[str] = Field(default_factory=list)
+
+
+class RiskItem(BaseModel):
+    direction: str   # upside | downside
+    text: str
+
+
+class EventItem(BaseModel):
+    date: str        # ISO date string YYYY-MM-DD
+    title: str
+    type: str = ""
+    related: list[str] = Field(default_factory=list)
+    upcoming: bool = False   # within next 7 days
+
+
+class RegulatoryItem(BaseModel):
+    title: str
+    jurisdiction: str
+    commodities: list[str] = Field(default_factory=list)
+    companies: list[str] = Field(default_factory=list)
+    effective_date: str = ""
+    source: str = ""
+    url: str = ""
+
+
+class HeatmapData(BaseModel):
+    commodities: list[str] = Field(default_factory=list)
+    returns: dict[str, list] = Field(default_factory=dict)   # "1d": [...], "1w": [...], "1m": [...]
+
+
+class CorrelationData(BaseModel):
+    commodities: list[str] = Field(default_factory=list)
+    matrix: list[list] = Field(default_factory=list)
 
 
 class CompanyDigest(BaseModel):
     name: str
     sector: str
     country: str
+    ticker: str = ""
     items: list[NewsItem] = Field(default_factory=list)
     flags: list[str] = Field(default_factory=list)
     highlight: str = ""
+    summary: str = ""   # Claude-written 1-2 sentence synthesis
 
 
 class CommodityDigest(BaseModel):
@@ -84,13 +176,13 @@ class ExecutiveBrief(BaseModel):
     themes: list[str] = Field(default_factory=list)
 
 
-# ── New: demand-driver opportunity intelligence ────────────────────────────────
+# ── Demand-driver opportunity intelligence ────────────────────────────────────
 
 class TriggerMatch(BaseModel):
     """A demand-driver keyword match detected in a news item."""
-    driver: str                  # demand_driver key from config (e.g. "ma", "digital_tech")
-    service_line: str            # display label (e.g. "Strategy & Transactions")
-    suggested_angle: str         # templated next-step text
+    driver: str
+    service_line: str
+    suggested_angle: str
     keywords_matched: list[str] = Field(default_factory=list)
     materiality_weight: float = 1.0
 
@@ -102,8 +194,8 @@ class OpportunityCard(BaseModel):
     country: str
     headline: str
     url: str
-    driver: str                  # demand_driver key
-    service_line: str            # display label
+    driver: str
+    service_line: str
     suggested_angle: str
     score: float = 0.0
     published: Optional[datetime] = None
@@ -126,17 +218,17 @@ class AccountBrief(BaseModel):
 
 class SectorTheme(BaseModel):
     """Cross-account thematic roll-up derived from clustered triggers."""
-    theme: str                   # human-readable theme name
-    driver: str                  # dominant demand_driver key
+    theme: str
+    driver: str
     service_lines: list[str] = Field(default_factory=list)
     accounts: list[str] = Field(default_factory=list)
     description: str = ""
 
 
 class WeeklyBrief(BaseModel):
-    """Partner-level executive summary for the top of the dashboard."""
-    period: str = ""             # e.g. "Week of 2026-06-06"
-    top_opportunities: list[str] = Field(default_factory=list)   # narrative bullets
+    """Partner-level executive summary."""
+    period: str = ""
+    top_opportunities: list[str] = Field(default_factory=list)
     hottest_accounts: list[str] = Field(default_factory=list)
     key_themes: list[str] = Field(default_factory=list)
     what_changed: list[str] = Field(default_factory=list)
@@ -146,16 +238,28 @@ class WeeklyBrief(BaseModel):
 
 class DailyDigest(BaseModel):
     generated_at: datetime
+    # Legacy fields (kept for backward compat)
     executive_brief: Optional[ExecutiveBrief] = None
-    top_headlines: list[NewsItem] = Field(default_factory=list)
-    companies: list[CompanyDigest] = Field(default_factory=list)
-    commodities: list[CommodityDigest] = Field(default_factory=list)
     what_to_watch: list[WatchBullet] = Field(default_factory=list)
-    prices: list[PriceRecord] = Field(default_factory=list)
     opportunities: list[OpportunityItem] = Field(default_factory=list)
     sector_summaries: list[SectorSummary] = Field(default_factory=list)
-    # New fields — absent keys degrade gracefully in the dashboard
     opportunity_radar: list[OpportunityCard] = Field(default_factory=list)
     account_briefs: list[AccountBrief] = Field(default_factory=list)
     sector_themes: list[SectorTheme] = Field(default_factory=list)
     weekly_brief: Optional[WeeklyBrief] = None
+    # Core data
+    exec_summary: list[str] = Field(default_factory=list)
+    top_headlines: list[NewsItem] = Field(default_factory=list)
+    companies: list[CompanyDigest] = Field(default_factory=list)
+    commodities: list[CommodityDigest] = Field(default_factory=list)
+    prices: list[PriceRecord] = Field(default_factory=list)
+    # New MI sections
+    macro: Optional[MacroSection] = None
+    outlook: list[OutlookItem] = Field(default_factory=list)
+    fundamentals: list[FundamentalsItem] = Field(default_factory=list)
+    themes: list[ThemeItem] = Field(default_factory=list)
+    risks: list[RiskItem] = Field(default_factory=list)
+    events: list[EventItem] = Field(default_factory=list)
+    regulatory: list[RegulatoryItem] = Field(default_factory=list)
+    heatmap: Optional[HeatmapData] = None
+    correlations: Optional[CorrelationData] = None

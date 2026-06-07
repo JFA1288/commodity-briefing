@@ -1,4 +1,4 @@
-"""Write docs/data/latest.json, append price_history.json, write daily digest HTML."""
+"""Write docs/data/latest.json, append price_history.json, update llm_cache.json."""
 
 from __future__ import annotations
 
@@ -36,6 +36,17 @@ def write_latest_json(digest: DailyDigest) -> Path:
     return out
 
 
+def load_price_history() -> list[dict]:
+    """Load existing price history for heatmap/correlation computation."""
+    hist_path = _DATA / "price_history.json"
+    if hist_path.exists():
+        try:
+            return json.loads(hist_path.read_text())
+        except Exception:
+            pass
+    return []
+
+
 def append_price_history(prices: list[PriceRecord]) -> Path:
     hist_path = _DATA / "price_history.json"
     cap_days = config.get("price_history_days", 90)
@@ -48,7 +59,6 @@ def append_price_history(prices: list[PriceRecord]) -> Path:
         except Exception:
             existing = []
 
-    # keep only entries within the cap window
     kept = [e for e in existing if _dt(e.get("date", "")) > cutoff]
 
     today_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
@@ -57,7 +67,6 @@ def append_price_history(prices: list[PriceRecord]) -> Path:
         "prices": {p.commodity_id: {"price": p.price, "source": p.source, "unit": p.unit}
                    for p in prices},
     }
-    # replace today's entry if it already exists
     kept = [e for e in kept if e.get("date") != today_str]
     kept.append(entry)
     kept.sort(key=lambda e: e.get("date", ""))
@@ -78,26 +87,27 @@ def write_digest_html(digest: DailyDigest) -> Path:
     date_str = digest.generated_at.strftime("%Y-%m-%d")
     out_path = _DIGESTS / f"{date_str}.html"
 
-    env = Environment(loader=FileSystemLoader(str(_TEMPLATES)), autoescape=True)
-    tmpl = env.get_template("digest.html.j2")
+    try:
+        env = Environment(loader=FileSystemLoader(str(_TEMPLATES)), autoescape=True)
+        tmpl = env.get_template("digest.html.j2")
+        sgt_offset = timedelta(hours=8)
+        sgt_time = digest.generated_at + sgt_offset
+        html = tmpl.render(
+            digest=digest,
+            date_str=date_str,
+            utc_time=digest.generated_at.strftime("%Y-%m-%d %H:%M UTC"),
+            sgt_time=sgt_time.strftime("%Y-%m-%d %H:%M SGT"),
+            cfg=config.load(),
+        )
+        out_path.write_text(html, encoding="utf-8")
+        print(f"  [render] wrote digest → {out_path}")
+    except Exception as exc:
+        print(f"  [render] digest HTML skipped (template error): {exc}")
 
-    sgt_offset = timedelta(hours=8)
-    sgt_time = digest.generated_at + sgt_offset
-
-    html = tmpl.render(
-        digest=digest,
-        date_str=date_str,
-        utc_time=digest.generated_at.strftime("%Y-%m-%d %H:%M UTC"),
-        sgt_time=sgt_time.strftime("%Y-%m-%d %H:%M SGT"),
-        cfg=config.load(),
-    )
-    out_path.write_text(html, encoding="utf-8")
-    print(f"  [render] wrote digest → {out_path}")
     return out_path
 
 
 def update_archive_index(digest_dir: Path = _DIGESTS) -> None:
-    """Write docs/data/archive.json listing all past digests."""
     files = sorted(digest_dir.glob("*.html"), reverse=True)
     entries = [{"date": f.stem, "path": f"digests/{f.name}"} for f in files]
     out = _DATA / "archive.json"

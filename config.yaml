@@ -1,13 +1,19 @@
 # ─────────────────────────────────────────────────────────────────────────────
-# Energy & Resources — Sector Intelligence
-# Configuration for the E&R advisory team
-# Edit companies, drivers, and scoring weights here; no code changes needed.
+# SEA Commodity Trading — Sector Intelligence
+# Configuration — edit companies, drivers, scoring weights, and keyword sets
+# here without touching any Python code.
 # ─────────────────────────────────────────────────────────────────────────────
 
 # ── Summarizer ────────────────────────────────────────────────────────────────
-# "heuristic" = fully rule-based (default, works in CI, no API costs)
-# "ollama"    = narrative summaries via local Ollama (local only, not CI)
-summarizer: heuristic
+# mode: claude     → Anthropic Claude API (requires ANTHROPIC_API_KEY secret)
+# mode: heuristic  → fully rule-based (default, works in CI, no API costs)
+# mode: ollama     → local Ollama model (local runs only, not in CI)
+summarizer:
+  mode: claude
+  model: claude-haiku-4-5-20251001   # verify current haiku model at docs.anthropic.com
+  sonnet_model: claude-sonnet-4-6    # used for exec summary only (highest quality)
+  max_tokens: 300
+  cache_ttl_days: 3                  # LLM output cache lifetime in docs/data/llm_cache.json
 
 ollama:
   base_url: http://localhost:11434
@@ -16,7 +22,7 @@ ollama:
 # ── Dashboard identity ────────────────────────────────────────────────────────
 dashboard:
   site_title: "Commodity Trading — Sector Intelligence"
-  subtitle: "Advisory Intelligence | SEA Commodity Trading"
+  subtitle: "SEA Commodity Markets | Daily Intelligence"
   timezone_display: "SGT (UTC+8)"
 
 # ── News fetch settings ───────────────────────────────────────────────────────
@@ -36,10 +42,29 @@ google_news_regions:
   - { gl: ID, ceid: "ID:en", hl: en-ID }
   - { gl: TH, ceid: "TH:en", hl: en-TH }
 
+# ── EIA Open Data API (free — register at eia.gov) ───────────────────────────
+# Set EIA_API_KEY env var or GitHub Actions secret. If absent, skips gracefully.
+eia:
+  enabled: true
+  series:
+    crude_inventory: "PET.WCRSTUS1.W"        # US crude oil inventories (weekly, Mbbl)
+    natgas_storage:  "NG.NW2_EPG0_SWO_R48_BCF.W"  # US natgas storage (weekly, Bcf)
+    crude_production: "PET.WCRFPUS2.W"       # US crude production (weekly, kbd)
+    crude_imports:    "PET.WCRIMUS2.W"        # US crude imports (weekly, kbd)
+
+# ── World Bank Commodity Markets / Pink Sheet ─────────────────────────────────
+# Free monthly benchmark price data + published forecasts.
+# Update the URL to the latest Pink Sheet CSV from:
+# https://www.worldbank.org/en/research/commodity-markets
+world_bank:
+  pink_sheet_url: "https://thedocs.worldbank.org/en/doc/18675f1d1639c7a34d463f2e8f78b444-0050012024/related/CMO-Pink-Sheet-May-2024.xlsx"
+  cache_days: 30
+
 # ── Companies ─────────────────────────────────────────────────────────────────
-# sector:       energy | metals_mining | power_utilities | trading
-# ticker:       listed ticker for reference (blank if private)
-# one_liner:    brief description shown in Account Intelligence
+# sector: energy | metals_mining | power_utilities | trading
+# ticker: listed ticker for reference (blank if private/state-owned)
+# one_liner: brief description shown in Account Intelligence cards
+# search_query: custom Google News query (uses name + trading/sector context)
 companies:
   - name: Shell
     aliases: [Shell, "Shell plc", "Royal Dutch Shell"]
@@ -47,7 +72,6 @@ companies:
     sector: energy
     ticker: SHEL.L
     one_liner: "Global supermajor; major LNG trader and downstream operator across Asia-Pacific."
-    # Company name + trading/energy context to stay relevant without being too narrow
     search_query: '"Shell" trading OR "Shell" LNG OR "Shell" Singapore OR "Shell" energy'
 
   - name: ExxonMobil
@@ -69,42 +93,10 @@ companies:
   - name: TotalEnergies Trading Asia
     aliases: [TotalEnergies, "Total Energies", "TotalEnergies Trading Asia"]
     country: FR
-    sector: trading
+    sector: energy
     ticker: TTE.PA
     one_liner: "Trading arm of TotalEnergies; significant LNG and crude trading hub in Singapore."
     search_query: '"TotalEnergies" Singapore OR "TotalEnergies" trading OR "TotalEnergies" LNG OR "TotalEnergies" Asia'
-
-  - name: Aramco Trading Singapore
-    aliases: ["Aramco Trading", "Saudi Aramco", "Aramco Trading Singapore"]
-    country: SA
-    sector: trading
-    ticker: ""
-    one_liner: "Trading subsidiary of Saudi Aramco; crude and products marketing across Asia."
-    search_query: '"Aramco Trading" OR "Saudi Aramco" trading OR "Saudi Aramco" Singapore OR "Saudi Aramco" Asia'
-
-  - name: Anglo American
-    aliases: ["Anglo American", "Anglo American plc"]
-    country: GB
-    sector: metals_mining
-    ticker: AAL.L
-    one_liner: "Diversified global miner; platinum, copper, iron ore, and steelmaking coal."
-    search_query: '"Anglo American" trading OR "Anglo American" Singapore OR "Anglo American" commodity OR "Anglo American" metals'
-
-  - name: Rio Tinto
-    aliases: ["Rio Tinto", "Rio Tinto Group"]
-    country: GB
-    sector: metals_mining
-    ticker: RIO.L
-    one_liner: "Global miner; iron ore, copper, aluminium, and battery-materials strategy."
-    search_query: '"Rio Tinto" trading OR "Rio Tinto" Singapore OR "Rio Tinto" commodity OR "Rio Tinto" metals'
-
-  - name: BHP
-    aliases: [BHP, "BHP Group", "BHP Billiton"]
-    country: AU
-    sector: metals_mining
-    ticker: BHP.AX
-    one_liner: "Diversified global miner; iron ore, copper, coal, and nickel operations."
-    search_query: '"BHP" trading OR "BHP" Singapore OR "BHP" commodity OR "BHP" metals'
 
   - name: Woodside Energy
     aliases: ["Woodside Energy", "Woodside Petroleum", Woodside]
@@ -114,13 +106,45 @@ companies:
     one_liner: "Australian LNG producer; Pluto, North West Shelf, and emerging hydrogen assets."
     search_query: '"Woodside" LNG OR "Woodside" trading OR "Woodside" Singapore OR "Woodside" Asia'
 
-  - name: PETRONAS
-    aliases: [PETRONAS, "Petronas", "Petronas Trading", PFLB]
-    country: MY
+  - name: Aramco Trading Singapore
+    aliases: ["Aramco Trading", "Saudi Aramco", "Aramco Trading Singapore"]
+    country: SA
     sector: energy
     ticker: ""
-    one_liner: "Malaysian national oil company; major LNG exporter, upstream, and trading arm."
-    search_query: '"PETRONAS" trading OR "Petronas" LNG OR "Petronas" Singapore OR "PTLSB"'
+    one_liner: "Trading subsidiary of Saudi Aramco; crude and products marketing across Asia."
+    search_query: '"Aramco Trading" OR "Saudi Aramco" trading OR "Saudi Aramco" Singapore OR "Saudi Aramco" Asia'
+
+  - name: BHP
+    aliases: [BHP, "BHP Group", "BHP Billiton"]
+    country: AU
+    sector: metals_mining
+    ticker: BHP.AX
+    one_liner: "Diversified global miner; iron ore, copper, coal, and nickel operations."
+    search_query: '"BHP" trading OR "BHP" Singapore OR "BHP" commodity OR "BHP" metals'
+
+  - name: Rio Tinto
+    aliases: ["Rio Tinto", "Rio Tinto Group"]
+    country: GB
+    sector: metals_mining
+    ticker: RIO.L
+    one_liner: "Global miner; iron ore, copper, aluminium, and battery-materials strategy."
+    search_query: '"Rio Tinto" trading OR "Rio Tinto" Singapore OR "Rio Tinto" commodity OR "Rio Tinto" metals'
+
+  - name: Anglo American
+    aliases: ["Anglo American", "Anglo American plc"]
+    country: GB
+    sector: metals_mining
+    ticker: AAL.L
+    one_liner: "Diversified global miner; platinum, copper, iron ore, and steelmaking coal."
+    search_query: '"Anglo American" trading OR "Anglo American" Singapore OR "Anglo American" commodity OR "Anglo American" metals'
+
+  - name: MIND ID
+    aliases: ["MIND ID", ANTAM, "Aneka Tambang", "Bukit Asam", PTBA, Timah]
+    country: ID
+    sector: metals_mining
+    ticker: ""
+    one_liner: "Indonesian state mining holding company; nickel, coal, aluminium, tin, and gold."
+    search_query: '"MIND ID" OR "ANTAM" nickel OR "Bukit Asam" coal OR "Aneka Tambang" trading'
 
   - name: Tenaga Nasional Berhad
     aliases: [TNB, "Tenaga Nasional", "Tenaga Nasional Berhad"]
@@ -133,7 +157,7 @@ companies:
   - name: PTT
     aliases: [PTT, "PTT Public", "PTT Thailand", "PTT Group"]
     country: TH
-    sector: energy
+    sector: power_utilities
     ticker: PTT.BK
     one_liner: "Thai national oil and gas company; upstream, downstream, LNG, and petrochemicals."
     search_query: '"PTT" trading OR "PTT" Singapore OR "PTT" LNG OR "PTT Group" commodity'
@@ -141,18 +165,10 @@ companies:
   - name: Pertamina
     aliases: [Pertamina, "PT Pertamina"]
     country: ID
-    sector: energy
+    sector: power_utilities
     ticker: ""
     one_liner: "Indonesian national oil company; refining, upstream, and trading operations."
     search_query: '"Pertamina" trading OR "Pertamina" Singapore OR "Pertamina" LNG OR "Pertamina" commodity'
-
-  - name: MIND ID
-    aliases: ["MIND ID", ANTAM, "Aneka Tambang", "Bukit Asam", PTBA, Timah]
-    country: ID
-    sector: metals_mining
-    ticker: ""
-    one_liner: "Indonesian state mining holding company; nickel, coal, aluminium, tin, and gold."
-    search_query: '"MIND ID" OR "ANTAM" nickel OR "Bukit Asam" coal OR "Aneka Tambang" trading'
 
   - name: EGAT
     aliases: [EGAT, "Electricity Generating Authority of Thailand"]
@@ -162,6 +178,14 @@ companies:
     one_liner: "Thailand's state electricity authority; power generation, grid, and renewable projects."
     search_query: '"EGAT" LNG OR "EGAT" power OR "EGAT" trading OR "Electricity Generating Authority"'
 
+  - name: Mercuria
+    aliases: [Mercuria, "Mercuria Energy"]
+    country: CH
+    sector: trading
+    ticker: ""
+    one_liner: "Swiss-origin independent commodity trading house; energy and metals trading globally."
+    search_query: '"Mercuria" OR "Mercuria Energy" trading OR "Mercuria" Singapore'
+
   - name: Cargill Asia
     aliases: [Cargill, "Cargill Asia", "Cargill Singapore"]
     country: US
@@ -170,13 +194,13 @@ companies:
     one_liner: "Global agri-commodity trading and processing giant; large Asia-Pacific presence."
     search_query: '"Cargill" Singapore OR "Cargill" Asia OR "Cargill" commodity OR "Cargill" trading'
 
-  - name: Mercuria
-    aliases: [Mercuria, "Mercuria Energy"]
-    country: CH
+  - name: PETRONAS
+    aliases: [PETRONAS, "Petronas", "Petronas Trading", PFLB]
+    country: MY
     sector: trading
     ticker: ""
-    one_liner: "Swiss-origin independent commodity trading house; energy and metals trading globally."
-    search_query: '"Mercuria" OR "Mercuria Energy" trading OR "Mercuria" Singapore'
+    one_liner: "Malaysian national oil company; major LNG exporter, upstream, and trading arm."
+    search_query: '"PETRONAS" trading OR "Petronas" LNG OR "Petronas" Singapore OR "PTLSB"'
 
   - name: Danantara
     aliases: [Danantara, "Danantara Indonesia", "BPI Danantara"]
@@ -187,25 +211,30 @@ companies:
     search_query: '"Danantara" OR "BPI Danantara" OR "Danantara Indonesia"'
 
 # ── Commodities ───────────────────────────────────────────────────────────────
-# Only tickers confirmed to return live data via yfinance (Yahoo Finance).
+# yfinance_ticker: Yahoo Finance symbol (leave blank if unavailable)
+# quality: "market" = exchange-traded live data | "indicative" = web-sourced estimate
+# yfinance_unit_multiplier: conversion factor to reach the stated unit
 commodities:
   - id: brent
     display: "Brent Crude"
     unit: "USD/bbl"
     group: crude_oil
     yfinance_ticker: "BZ=F"
+    quality: market
 
   - id: wti
     display: "WTI Crude"
     unit: "USD/bbl"
     group: crude_oil
     yfinance_ticker: "CL=F"
+    quality: market
 
   - id: henry_hub
     display: "Henry Hub Gas"
     unit: "USD/MMBtu"
     group: natgas_lng
     yfinance_ticker: "NG=F"
+    quality: market
 
   - id: copper
     display: "Copper (COMEX)"
@@ -213,22 +242,98 @@ commodities:
     group: base_metals
     yfinance_ticker: "HG=F"
     yfinance_unit_multiplier: 2204.62
+    quality: market
+
+  - id: gold
+    display: "Gold"
+    unit: "USD/oz"
+    group: precious_metals
+    yfinance_ticker: "GC=F"
+    quality: market
+
+  - id: silver
+    display: "Silver"
+    unit: "USD/oz"
+    group: precious_metals
+    yfinance_ticker: "SI=F"
+    quality: market
+
+  - id: aluminium
+    display: "Aluminium"
+    unit: "USD/t"
+    group: base_metals
+    yfinance_ticker: "ALI=F"
+    quality: market
 
   - id: soybeans
     display: "Soybeans (CBOT)"
     unit: "USc/bu"
     group: agri
     yfinance_ticker: "ZS=F"
+    quality: market
 
   - id: wheat
     display: "Wheat (CBOT)"
     unit: "USc/bu"
     group: agri
     yfinance_ticker: "ZW=F"
+    quality: market
+
+  - id: jkm
+    display: "JKM LNG"
+    unit: "USD/MMBtu"
+    group: natgas_lng
+    yfinance_ticker: ""
+    quality: indicative
+    note: "Asian LNG spot marker — no free real-time ticker; web-sourced"
+
+  - id: newcastle_coal
+    display: "Newcastle Coal"
+    unit: "USD/t"
+    group: coal
+    yfinance_ticker: ""
+    quality: indicative
+    note: "Thermal coal benchmark — web-sourced"
+
+  - id: iron_ore
+    display: "Iron Ore (62% Fe)"
+    unit: "USD/t"
+    group: base_metals
+    yfinance_ticker: ""
+    quality: indicative
+    note: "No free real-time ticker — web-sourced"
+
+  - id: nickel
+    display: "Nickel (LME)"
+    unit: "USD/t"
+    group: base_metals
+    yfinance_ticker: "NI=F"
+    quality: market
+
+  - id: palm_oil
+    display: "Palm Oil (BMD)"
+    unit: "MYR/t"
+    group: agri
+    yfinance_ticker: "FCPO.KL"
+    quality: indicative
+    note: "BMD crude palm oil futures — may have data gaps"
+
+# ── Macro tickers ─────────────────────────────────────────────────────────────
+# Displayed in the Macro & Geopolitical strip. No FX pairs — DXY, US 10Y, HSI.
+macro_tickers:
+  - symbol: "DX-Y.NYB"
+    name: "DXY"
+    unit: "Index"
+  - symbol: "^TNX"
+    name: "US 10Y Yield"
+    unit: "%"
+  - symbol: "^HSI"
+    name: "Hang Seng"
+    unit: "Index"
 
 # ── Supplementary RSS feeds ───────────────────────────────────────────────────
 supplementary_feeds:
-  - name: Reuters Commodities
+  - name: Reuters Business
     url: "https://feeds.reuters.com/reuters/businessNews"
     weight: 1.8
 
@@ -268,8 +373,214 @@ supplementary_feeds:
     url: "https://www.spglobal.com/commodityinsights/en/rss-feed/oil"
     weight: 1.5
 
+# ── Source trust weights (for headline scoring) ───────────────────────────────
+source_weights:
+  Reuters: 1.0
+  "S&P Global": 1.0
+  "Business Times": 0.85
+  "The Edge Malaysia": 0.85
+  "Hellenic Shipping News": 0.8
+  OilPrice.com: 0.75
+  "Rigzone": 0.75
+  "Mining.com": 0.75
+  "Jakarta Post": 0.7
+  "Bangkok Post": 0.7
+  default: 0.6
+
+# ── Keyword sets ──────────────────────────────────────────────────────────────
+# Used by process.py to classify news items into supply/demand signals and driver tags.
+keyword_sets:
+  supply_side:
+    - outage
+    - "force majeure"
+    - "export ban"
+    - "production cut"
+    - "mine closure"
+    - disruption
+    - shortfall
+    - "supply deal"
+    - "OPEC cut"
+    - shutdown
+    - curtailment
+    - "capacity cut"
+
+  demand_side:
+    - stockpiling
+    - "demand slowdown"
+    - "import surge"
+    - consumption
+    - restocking
+    - draw
+    - offtake
+    - "demand growth"
+    - "import increase"
+    - "buying surge"
+
+  drivers:
+    china_demand:
+      - China
+      - Chinese
+      - SHFE
+      - "iron ore demand"
+      - "steel output"
+      - "Chinese imports"
+      - "China GDP"
+      - "Chinese manufacturing"
+    ai_metals:
+      - "data centre"
+      - "data center"
+      - AI
+      - semiconductor
+      - battery
+      - EV
+      - "copper demand"
+      - "critical minerals"
+      - "clean energy metals"
+    opec_supply:
+      - OPEC
+      - "OPEC+"
+      - Saudi
+      - "production quota"
+      - "output cut"
+      - "supply agreement"
+      - "OPEC decision"
+    mine_disruption:
+      - strike
+      - "mine closure"
+      - outage
+      - disruption
+      - flooding
+      - "force majeure"
+      - "mine accident"
+      - "production halt"
+    energy_transition:
+      - "net zero"
+      - decarbonisation
+      - decarbonization
+      - CCS
+      - CCUS
+      - hydrogen
+      - renewables
+      - "clean energy"
+      - ESG
+      - CBAM
+      - "carbon tax"
+      - "energy transition"
+      - "low carbon"
+    digital_tech_driver:
+      - "digital transformation"
+      - automation
+      - ERP
+      - SAP
+      - cloud
+      - treasury
+      - TMS
+      - "trading platform"
+      - "finance transformation"
+      - "IT modernisation"
+    geopolitical_driver:
+      - sanctions
+      - tariff
+      - "export ban"
+      - war
+      - conflict
+      - seizure
+      - embargo
+      - "trade restriction"
+      - OFAC
+      - "Red Sea"
+      - blockade
+    regulatory_driver:
+      - regulation
+      - compliance
+      - licence
+      - fine
+      - investigation
+      - "carbon tax"
+      - CBAM
+      - "position limit"
+      - "export restriction"
+      - policy
+
+  geopolitical_watch:
+    - OPEC+
+    - tariffs
+    - sanctions
+    - "export controls"
+    - conflict
+    - war
+    - "Red Sea"
+    - blockade
+    - embargo
+    - "trade war"
+
+# ── Market themes (seeded; new themes added dynamically when cluster ≥ min_items) ──
+themes:
+  - name: "Energy Transition & Decarbonisation"
+    driver_tags: [energy_transition]
+    min_items: 2
+    description: "Policies, investments, and corporate actions driving the low-carbon shift"
+
+  - name: "Digital & AI in Trading / Treasury"
+    driver_tags: [digital_tech_driver]
+    min_items: 2
+    description: "Technology transformation in trading operations, finance, and back-office"
+
+  - name: "Supply Diversification & Resilience"
+    driver_tags: [mine_disruption, supply_side]
+    min_items: 2
+    description: "Supply disruptions, diversification strategies, and resilience investments"
+
+  - name: "China Demand & Industrial Activity"
+    driver_tags: [china_demand]
+    min_items: 2
+    description: "Chinese economic signals and their commodity demand implications"
+
+  - name: "Indonesia Policy & Downstreaming"
+    driver_tags: [regulatory_driver]
+    keywords: [Indonesia, Indonesian, downstreaming, "nickel export", "MIND ID", Pertamina, "hilirisasi"]
+    min_items: 2
+    description: "Indonesian downstream industrialisation policy and resource nationalism"
+
+# ── Standing risks (always included in Risks & Events section) ────────────────
+standing_risks:
+  - direction: downside
+    text: "OPEC+ accelerated output unwind adding supply and weighing on crude prices"
+  - direction: downside
+    text: "China industrial slowdown and property-sector weakness dampening metals demand"
+  - direction: upside
+    text: "Middle East escalation risk disrupting Strait of Hormuz shipping lanes"
+  - direction: upside
+    text: "Weather events (El Niño / La Niña) reducing hydro power and agricultural yields"
+  - direction: downside
+    text: "USD strength pressuring USD-denominated commodity prices across all asset classes"
+
+# ── Events calendar ───────────────────────────────────────────────────────────
+# recurrence: weekly | monthly | quarterly | annual
+# weekday: Monday–Sunday (used with weekly recurrence)
+events:
+  - title: "EIA Weekly Petroleum Status Report"
+    recurrence: weekly
+    weekday: Wednesday
+    type: data_release
+    related: [Brent Crude, WTI Crude, Henry Hub Gas]
+
+  - title: "OPEC+ Monitoring Committee Meeting"
+    date: "2026-08-03"
+    type: opec
+    related: [Brent Crude, WTI Crude]
+
+  - title: "World Bank Commodity Markets Outlook"
+    recurrence: quarterly
+    type: report
+    related: []
+
+  - title: "EIA Short-Term Energy Outlook (STEO)"
+    recurrence: monthly
+    type: report
+    related: [Brent Crude, WTI Crude, Henry Hub Gas]
+
 # ── Service lines ─────────────────────────────────────────────────────────────
-# Key → display label used in Opportunity Radar and Account Intelligence.
 service_lines:
   ma:               "Strategy & Transactions"
   capital_projects: "Capital Projects"
@@ -283,10 +594,6 @@ service_lines:
   supply_chain:     "Supply Chain"
 
 # ── Demand-driver taxonomy ─────────────────────────────────────────────────────
-# Each driver: keywords matched against headline+summary, materiality_weight
-# (higher = more impactful mandate), service_line key, and suggested_angle
-# (a templated one-liner shown as the "next step" on opportunity cards).
-# Add/remove keywords here without touching code.
 demand_drivers:
   ma:
     keywords:
@@ -471,42 +778,47 @@ demand_drivers:
     suggested_angle: "Offer supply-chain resilience or procurement-optimisation advisory"
 
 # ── Opportunity scoring weights ────────────────────────────────────────────────
-# Final score = materiality_weight × recency_factor × source_weight
 opportunity_scoring:
-  recency_halflife_hours: 18      # longer than news scoring — opportunities stay relevant longer
-  max_opportunities: 12           # maximum cards shown in Opportunity Radar
+  recency_halflife_hours: 18
+  max_opportunities: 12
 
-# ── Legacy material-event keyword lists (used by consulting signal flags) ─────
+# ── Legacy material-event keyword lists ───────────────────────────────────────
 scoring:
   recency_halflife_hours: 12
   source_weight_default: 1.0
   material_event_bonus: 2.5
 
 material_event_keywords:
-  earnings:         [earnings, profit, loss, revenue, EBITDA, "net income", quarterly, annual, results, EPS, dividend, guidance, outlook, forecast]
-  ma:               [merger, acquisition, takeover, "take-over", buyout, "take private", bid, deal, stake, divest, divestment, JV, "joint venture", partnership]
-  outage:           [outage, shutdown, "force majeure", disruption, offline, curtailment, maintenance, explosion, fire, accident, spill, leak]
-  regulatory:       [sanction, ban, embargo, tariff, export, import, licence, license, permit, regulation, investigation, fine, penalty, court, lawsuit, antitrust]
-  trading_moves:    [trader, "trading desk", hire, appoint, resign, restructure, layoff, headcount, "cost cut"]
-  esg:              [ESG, decarbonization, "net zero", carbon, emissions, renewable, solar, wind, hydrogen, CCS, CCUS, sustainability]
-  geopolitical:     [OPEC, OPEC+, Russia, Ukraine, Iran, China, "Red Sea", Strait, blockade, war, conflict, tension, sanctions]
-  price_shock:      [surge, plunge, crash, spike, record, "all-time high", "all-time low", collapse, rally, soar]
-  growth_strategy:  [expansion, "new market", greenfield, investment, "capacity addition", "new project", "strategic plan", "growth strategy", "market entry", "new terminal", "new plant"]
-  trading_risk:     [hedge, hedging, derivatives, exposure, position, "margin call", counterparty, "mark-to-market", "risk limit", VaR, "stop-loss", "basis risk", "price risk", "market risk", volatility]
-  enterprise_risk:  ["risk management", "enterprise risk", ERM, "internal controls", "internal audit", governance, "risk appetite", "risk register", "risk committee", "board risk", oversight, "control framework"]
+  earnings:      [earnings, profit, loss, revenue, EBITDA, "net income", quarterly, annual, results, EPS, dividend, guidance, outlook, forecast]
+  ma:            [merger, acquisition, takeover, "take-over", buyout, bid, deal, stake, divest, divestment, JV, "joint venture", partnership]
+  outage:        [outage, shutdown, "force majeure", disruption, offline, curtailment, maintenance, explosion, fire, accident, spill, leak]
+  regulatory:    [sanction, ban, embargo, tariff, export, import, licence, license, permit, regulation, investigation, fine, penalty, court, lawsuit, antitrust]
+  trading_moves: [trader, "trading desk", hire, appoint, resign, restructure, layoff, headcount, "cost cut"]
+  esg:           [ESG, decarbonization, "net zero", carbon, emissions, renewable, solar, wind, hydrogen, CCS, CCUS, sustainability]
+  geopolitical:  [OPEC, OPEC+, Russia, Ukraine, Iran, China, "Red Sea", Strait, blockade, war, conflict, tension, sanctions]
+  price_shock:   [surge, plunge, crash, spike, record, "all-time high", "all-time low", collapse, rally, soar]
+  growth_strategy: [expansion, "new market", greenfield, investment, "capacity addition", "new project", "strategic plan", "growth strategy", "market entry"]
+  trading_risk:  [hedge, hedging, derivatives, exposure, position, "margin call", counterparty, "mark-to-market", VaR, volatility]
+  enterprise_risk: ["risk management", "enterprise risk", ERM, "internal controls", governance, "risk appetite", "risk register", oversight]
 
-# ── "What to watch" macro context terms ───────────────────────────────────────
+# ── Macro watch terms ─────────────────────────────────────────────────────────
 macro_watch_terms:
   - "USD strength"
   - "China demand"
   - "OPEC+ production"
   - "Fed rate"
-  - "USD/MYR"
-  - "USD/IDR"
-  - "USD/THB"
   - "weather El Niño"
   - "monsoon season"
 
 # ── Price history cap ─────────────────────────────────────────────────────────
 price_history_days: 90
 
+# ── Optional threshold alerts (off by default) ────────────────────────────────
+# To enable: set enabled: true and add SMTP_HOST / SMTP_USER / ALERT_RECIPIENTS
+# as GitHub Actions secrets; add smtp_password as a secret separately.
+alerts:
+  enabled: false
+  price_move_threshold_pct: 3.0
+  smtp_host: ""
+  smtp_user: ""
+  recipients: []

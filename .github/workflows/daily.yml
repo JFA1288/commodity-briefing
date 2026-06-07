@@ -1,20 +1,18 @@
-name: Daily Commodity Digest
+name: Daily Commodity Intelligence
 
 on:
   schedule:
-    # 23:00 UTC ≈ 07:00 Singapore (SGT, UTC+8). Adjust as needed.
+    # 23:00 UTC = 07:00 Singapore (SGT, UTC+8). Adjust as needed.
     - cron: "0 23 * * *"
-  workflow_dispatch:        # manual "Run workflow" button (and a backup if
-                            # GitHub disables the schedule after ~60d inactivity)
+  workflow_dispatch:   # manual "Run workflow" button; also a fallback if GitHub
+                       # disables the schedule after ~60 days of repo inactivity
 
-# Allow the workflow to commit the regenerated docs/ back to the repo.
 permissions:
-  contents: write
+  contents: write      # needed to commit regenerated docs/ back to the repo
 
-# Don't let two runs overlap (e.g. a manual run during the scheduled one).
 concurrency:
   group: daily-digest
-  cancel-in-progress: false
+  cancel-in-progress: false   # let a running job finish; don't cancel it
 
 jobs:
   build-and-publish:
@@ -23,7 +21,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0     # full history so the commit/push is clean
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -37,20 +35,20 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run the agent
-        run: python -m src.main
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          EIA_API_KEY: ${{ secrets.EIA_API_KEY }}    # free key — register at eia.gov
+        run: python -m src.main
 
       - name: Commit and push updated dashboard
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add docs/
-          # Only commit if something actually changed.
           if git diff --staged --quiet; then
-            echo "No changes to publish today."
+            echo "No changes to commit."
           else
-            git commit -m "chore: daily commodity digest $(date -u +'%Y-%m-%d')"
+            git commit -m "chore: daily commodity intelligence $(date -u +'%Y-%m-%d')"
             git pull --rebase origin main
             git push
           fi

@@ -1,4 +1,4 @@
-"""Fetch commodity prices via yfinance (free) with web-fallback for missing tickers."""
+"""Fetch commodity and macro prices via yfinance (free)."""
 
 from __future__ import annotations
 
@@ -11,21 +11,13 @@ import httpx
 import yfinance as yf
 
 from . import config
-from .models import PriceRecord
-
-_cfg = config.load
+from .models import PriceRecord, MacroTickerRecord, MacroSection
 
 
 def _yf_price(ticker: str, multiplier: float = 1.0) -> tuple[Optional[float], Optional[float], Optional[datetime]]:
-    """Return (price, prev_close, as_of) or (None, None, None) on failure.
-
-    Tries fast_info first (current quote, no session issues), falls back to
-    history() for prev_close calculation.
-    """
+    """Return (price, prev_close, as_of) or (None, None, None) on failure."""
     try:
         t = yf.Ticker(ticker)
-
-        # fast_info gives regularMarketPrice without a full history download
         fi = t.fast_info
         price_raw = getattr(fi, "last_price", None) or getattr(fi, "regular_market_price", None)
         prev_raw = getattr(fi, "previous_close", None) or getattr(fi, "regular_market_previous_close", None)
@@ -33,10 +25,8 @@ def _yf_price(ticker: str, multiplier: float = 1.0) -> tuple[Optional[float], Op
         if price_raw is not None:
             price = float(price_raw) * multiplier
             prev_close = float(prev_raw) * multiplier if prev_raw is not None else None
-            as_of = datetime.now(timezone.utc)
-            return price, prev_close, as_of
+            return price, prev_close, datetime.now(timezone.utc)
 
-        # Fallback: history-based fetch
         hist = t.history(period="5d", auto_adjust=True)
         if hist.empty:
             return None, None, None
@@ -51,7 +41,6 @@ def _yf_price(ticker: str, multiplier: float = 1.0) -> tuple[Optional[float], Op
 
 
 def _extract_price_from_text(text: str) -> Optional[float]:
-    """Pull the first plausible price value from a text snippet."""
     patterns = [
         r"\$\s*([\d,]+\.?\d*)",
         r"([\d,]+\.?\d*)\s*(?:USD|usd|US\$)",
@@ -70,11 +59,10 @@ def _extract_price_from_text(text: str) -> Optional[float]:
 
 
 def _web_fallback(commodity: dict) -> tuple[Optional[float], str]:
-    """DuckDuckGo HTML search for an indicative price. Returns (price|None, source_label)."""
+    """DuckDuckGo HTML search for an indicative price."""
     query = commodity.get("web_search_query", "")
     if not query:
         return None, "unavailable"
-
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
                       "(KHTML, like Gecko) Chrome/124.0 Safari/537.36",
@@ -98,7 +86,7 @@ def _web_fallback(commodity: dict) -> tuple[Optional[float], str]:
 
 
 def fetch_all() -> list[PriceRecord]:
-    cfg = _cfg()
+    cfg = config.load()
     commodities = cfg.get("commodities", [])
     records: list[PriceRecord] = []
 
@@ -106,6 +94,7 @@ def fetch_all() -> list[PriceRecord]:
         cid = c["id"]
         ticker = c.get("yfinance_ticker")
         multiplier = c.get("yfinance_unit_multiplier", 1.0)
+        quality = c.get("quality", "market")
 
         price, prev_close, as_of = None, None, None
         source = "unavailable"
@@ -115,15 +104,16 @@ def fetch_all() -> list[PriceRecord]:
             if price is not None:
                 source = "yfinance"
             else:
-                print(f"  [prices] yfinance returned no data for {ticker} ({cid}), trying web fallback")
+                print(f"  [prices] yfinance no data for {ticker} ({cid}), trying web fallback")
 
         if price is None:
             price, source = _web_fallback(c)
             if price is not None:
                 as_of = datetime.now(timezone.utc)
-                print(f"  [prices] {cid}: indicative price {price} (web-sourced — approximate)")
+                quality = "indicative"
+                print(f"  [prices] {cid}: indicative price {price} (web-sourced)")
             else:
-                print(f"  [prices] {cid}: no price available — marked unavailable")
+                print(f"  [prices] {cid}: no price available")
 
         change_pct = None
         if price is not None and prev_close and prev_close != 0:
@@ -134,13 +124,43 @@ def fetch_all() -> list[PriceRecord]:
             display=c["display"],
             unit=c["unit"],
             group=c["group"],
-            price=round(price, 4) if price else None,
-            prev_close=round(prev_close, 4) if prev_close else None,
+            price=round(price, 4) if price is not None else None,
+            prev_close=round(prev_close, 4) if prev_close is not None else None,
             change_pct=change_pct,
             source=source,
+            quality=quality,
             as_of=as_of,
         ))
 
         time.sleep(0.4)
 
     return records
+
+
+def fetch_macro() -> MacroSection:
+    """Fetch macro tickers (DXY, US 10Y yield, Hang Seng)."""
+    cfg = config.load()
+    macro_cfg = cfg.get("macro_tickers", [])
+    tickers: list[MacroTickerRecord] = []
+
+    for m in macro_cfg:
+        symbol = m.get("symbol", "")
+        name = m.get("name", symbol)
+        unit = m.get("unit", "")
+        if not symbol:
+            continue
+        price, prev_close, as_of = _yf_price(symbol)
+        change_pct = None
+        if price is not None and prev_close and prev_close != 0:
+            change_pct = round((price - prev_close) / prev_close * 100, 2)
+        tickers.append(MacroTickerRecord(
+            name=name,
+            symbol=symbol,
+            unit=unit,
+            last=round(price, 3) if price is not None else None,
+            change_pct=change_pct,
+            as_of=as_of,
+        ))
+        time.sleep(0.3)
+
+    return MacroSection(tickers=tickers, geopolitical=[])

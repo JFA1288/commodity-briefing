@@ -5,900 +5,737 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Commodity Trading — Sector Intelligence</title>
 <style>
-/* ── CSS variables ───────────────────────────────────────────────────── */
-:root {
-  --accent:       #86BC25;
-  --accent-dark:  #6a9a1e;
-  --black:        #1a1a1a;
-  --white:        #ffffff;
-  --bg:           #f7f7f7;
-  --surface:      #ffffff;
-  --surface2:     #f0f0f0;
-  --border:       #e0e0e0;
-  --text:         #1a1a1a;
-  --text-muted:   #666666;
-  --text-light:   #999999;
-  --sidebar-w:    220px;
-  --radius:       4px;
-  --shadow:       0 1px 4px rgba(0,0,0,.08);
-  --restricted:   #c0392b;
+/* ── Reset & variables ────────────────────────────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --accent:#86BC25;--accent-dark:#a0d933;
+  --bg:#0f0f0f;--surface:#1c1c1c;--surface2:#252525;--surface3:#2e2e2e;
+  --border:#333;--border2:#444;
+  --text:#e8e8e8;--text2:#aaa;--text3:#777;
+  --up:#4caf50;--dn:#ef5350;--up-bg:rgba(76,175,80,.15);--dn-bg:rgba(239,83,80,.15);
+  --neutral:#f5a623;--neutral-bg:rgba(245,166,35,.12);
+  --font:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+  --mono:"Fira Code","Cascadia Code","SF Mono",monospace;
+  --sidebar-w:240px;--radius:8px;
 }
-[data-theme="dark"] {
-  --bg:           #0f0f0f;
-  --surface:      #1c1c1c;
-  --surface2:     #242424;
-  --border:       #2e2e2e;
-  --text:         #f0f0f0;
-  --text-muted:   #b0b0b0;
-  --text-light:   #6a6a6a;
-  --shadow:       0 1px 6px rgba(0,0,0,.5);
-  --black:        #000000;
-  --accent-dark:  #a0d933;   /* brighter green for links on dark bg */
+[data-theme="light"]{
+  --bg:#f5f5f5;--surface:#fff;--surface2:#f0f0f0;--surface3:#e8e8e8;
+  --border:#ddd;--border2:#ccc;
+  --text:#111;--text2:#555;--text3:#888;
+  --accent:#5a8a00;--accent-dark:#4a7500;
+  --up:#2e7d32;--dn:#c62828;--up-bg:rgba(46,125,50,.1);--dn-bg:rgba(198,40,40,.1);
 }
-/* Dark-mode targeted overrides for elements that use --black as a surface */
-[data-theme="dark"] .tag.sl {
-  background: #1f2e0a;
-  color: var(--accent);
-  border-color: #3a5212;
-}
-[data-theme="dark"] .filter-btn.active,
-[data-theme="dark"] .filter-btn:hover {
-  background: #1f2e0a;
-  color: var(--accent);
-  border-color: #3a5212;
-}
-[data-theme="dark"] details.acc[open] { border-color: #3a3a3a; }
-[data-theme="dark"] #brief-card {
-  background: #141414;
-  border: 1px solid #2e2e2e;
-}
-[data-theme="dark"] .opp-card { background: #1c1c1c; }
-[data-theme="dark"] .theme-card { background: #1c1c1c; }
-[data-theme="dark"] details.acc { background: #1c1c1c; }
-[data-theme="dark"] .hl-item { background: #1c1c1c; }
-[data-theme="dark"] .archive-item { background: #1c1c1c; }
-[data-theme="dark"] .market-strip { background: #1c1c1c; }
-[data-theme="dark"] .price-chip { background: #242424; }
-[data-theme="dark"] .indicative { background: #242424; }
+html{font-size:16px;scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.55;display:flex;min-height:100vh}
+a{color:var(--accent-dark);text-decoration:none}
+a:hover{text-decoration:underline}
+h2{font-size:1.15rem;font-weight:600;margin-bottom:1rem;color:var(--text)}
+h3{font-size:1rem;font-weight:600;color:var(--text)}
+h4{font-size:.9rem;font-weight:600;color:var(--text2)}
 
-/* ── Reset / base ────────────────────────────────────────────────────── */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { font-size: 16px; scroll-behavior: smooth; }
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.5;
-  display: flex;
+/* ── Sidebar ─────────────────────────────────────────────────────────────── */
+#sidebar{
+  width:var(--sidebar-w);min-height:100vh;background:var(--surface);
+  border-right:1px solid var(--border);position:sticky;top:0;height:100vh;
+  overflow-y:auto;display:flex;flex-direction:column;z-index:200;flex-shrink:0;
+  scrollbar-width:thin;scrollbar-color:var(--border) transparent;
 }
-a { color: var(--accent-dark); text-decoration: none; }
-a:hover { text-decoration: underline; }
-h1, h2, h3, h4 { font-weight: 600; line-height: 1.3; }
+.sidebar-header{padding:1rem 1.2rem;border-bottom:1px solid var(--border)}
+.sidebar-title{font-size:.85rem;font-weight:700;color:var(--accent);letter-spacing:.04em;text-transform:uppercase;line-height:1.3}
+.sidebar-sub{font-size:.72rem;color:var(--text3);margin-top:.25rem}
+.sidebar-nav{padding:.5rem 0;flex:1}
+.nav-section{font-size:.65rem;font-weight:700;color:var(--text3);letter-spacing:.08em;text-transform:uppercase;padding:.75rem 1.2rem .3rem}
+.nav-link{display:block;padding:.4rem 1.2rem;font-size:.8rem;color:var(--text2);border-left:2px solid transparent;transition:all .15s}
+.nav-link:hover,.nav-link.active{color:var(--accent-dark);border-left-color:var(--accent);background:rgba(134,188,37,.07);text-decoration:none}
+.sidebar-footer{padding:.75rem 1.2rem;border-top:1px solid var(--border);font-size:.7rem;color:var(--text3)}
+.theme-btn{background:none;border:1px solid var(--border2);color:var(--text2);padding:.25rem .6rem;border-radius:4px;cursor:pointer;font-size:.75rem;margin-bottom:.5rem;width:100%}
+.theme-btn:hover{border-color:var(--accent);color:var(--accent)}
 
-/* ── Sidebar ─────────────────────────────────────────────────────────── */
-#sidebar {
-  width: var(--sidebar-w);
-  min-height: 100vh;
-  background: var(--black);
-  color: #e0e0e0;
-  position: fixed;
-  top: 0; left: 0;
-  display: flex;
-  flex-direction: column;
-  z-index: 100;
-  overflow-y: auto;
-}
-.sidebar-brand {
-  padding: 18px 16px 14px;
-  border-bottom: 1px solid #2a2a2a;
-}
-.sidebar-brand .brand-title {
-  font-size: .85rem;
-  font-weight: 700;
-  color: #fff;
-  line-height: 1.45;
-  display: block;
-}
-.sidebar-brand .brand-sub {
-  font-size: .72rem;
-  color: var(--accent);
-  margin-top: 4px;
-  display: block;
-}
-.sidebar-brand .brand-ts {
-  font-size: .66rem;
-  color: #666;
-  margin-top: 6px;
-  display: block;
-}
-.sidebar-nav { padding: 8px 0; flex: 1; }
-.sidebar-nav li { list-style: none; }
-.sidebar-nav a {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 16px;
-  color: #aaa;
-  font-size: .78rem;
-  transition: background .15s, color .15s;
-}
-.sidebar-nav a:hover, .sidebar-nav a.active {
-  background: #242424;
-  color: var(--accent);
-  text-decoration: none;
-}
-.nav-icon { font-size: .85rem; width: 18px; text-align: center; }
-.sidebar-sep { height: 1px; background: #242424; margin: 4px 16px; }
-.sidebar-bottom { padding: 12px 16px; border-top: 1px solid #242424; }
-.sidebar-bottom button {
-  width: 100%;
-  padding: 7px;
-  background: transparent;
-  border: 1px solid #3a3a3a;
-  color: #999;
-  border-radius: var(--radius);
-  cursor: pointer;
-  font-size: .72rem;
-  transition: border-color .15s, color .15s;
-}
-.sidebar-bottom button:hover { border-color: var(--accent); color: var(--accent); }
+/* ── Main ────────────────────────────────────────────────────────────────── */
+#main{flex:1;min-width:0;padding:1.5rem 2rem;max-width:1100px}
+.section{margin-bottom:2.5rem;scroll-margin-top:1rem}
+.section-header{display:flex;align-items:center;gap:.75rem;margin-bottom:1.25rem;padding-bottom:.5rem;border-bottom:1px solid var(--border)}
+.section-icon{font-size:1rem;color:var(--accent)}
+.section-title{font-size:1.1rem;font-weight:600;color:var(--text)}
+.section-meta{font-size:.72rem;color:var(--text3);margin-left:auto}
 
-/* ── Main ─────────────────────────────────────────────────────────────── */
-#main {
-  margin-left: var(--sidebar-w);
-  flex: 1;
-  min-width: 0;
-  padding: 24px 28px 60px;
-  max-width: 980px;
-}
-.page-header {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  margin-bottom: 28px;
-  padding-bottom: 14px;
-  border-bottom: 3px solid var(--accent);
-}
-.page-header h1 { font-size: 1.35rem; }
-.page-header .hdr-meta { font-size: .75rem; color: var(--text-muted); }
+/* ── Cards ───────────────────────────────────────────────────────────────── */
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.1rem;margin-bottom:.75rem}
+.card-sm{padding:.75rem 1rem}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:.75rem}
 
-/* ── Section ─────────────────────────────────────────────────────────── */
-.section { margin-bottom: 40px; }
-.section-title {
-  font-size: .68rem;
-  font-weight: 700;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  margin-bottom: 14px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.section-title::after { content:""; flex:1; height:1px; background:var(--border); }
+/* ── Tags ────────────────────────────────────────────────────────────────── */
+.tag{display:inline-block;font-size:.67rem;font-weight:600;padding:.15rem .45rem;border-radius:3px;text-transform:uppercase;letter-spacing:.04em;margin-right:.25rem;margin-bottom:.2rem}
+.tag.sector-energy{background:rgba(255,152,0,.18);color:#ffb74d}
+.tag.sector-metals{background:rgba(158,158,158,.18);color:#bdbdbd}
+.tag.sector-power{background:rgba(33,150,243,.18);color:#64b5f6}
+.tag.sector-trading{background:rgba(134,188,37,.18);color:var(--accent)}
+.tag.flag{background:var(--surface2);color:var(--text2)}
+.tag.driver{background:rgba(134,188,37,.12);color:var(--accent-dark);border:1px solid rgba(134,188,37,.25)}
+.tag.up{background:var(--up-bg);color:var(--up)}
+.tag.dn{background:var(--dn-bg);color:var(--dn)}
+.tag.quality-market{background:rgba(76,175,80,.1);color:#66bb6a;border:1px solid rgba(76,175,80,.2)}
+.tag.quality-indicative{background:rgba(245,166,35,.1);color:#ffb74d;border:1px solid rgba(245,166,35,.2)}
+.tag.quality-web{background:rgba(245,166,35,.1);color:#ffb74d}
+.tag.upcoming{background:rgba(134,188,37,.2);color:var(--accent);border:1px solid var(--accent)}
 
-/* ── Tags / badges ───────────────────────────────────────────────────── */
-.tag {
-  display: inline-block;
-  padding: 2px 8px;
-  border-radius: 3px;
-  font-size: .68rem;
-  font-weight: 600;
-  background: var(--surface2);
-  color: var(--text-muted);
-  border: 1px solid var(--border);
-  white-space: nowrap;
-}
-.tag.sl { background: var(--black); color: var(--accent); border-color: var(--black); }
-.tag.new { background: var(--accent); color: #fff; border-color: var(--accent); }
+/* ── Macro strip ─────────────────────────────────────────────────────────── */
+.macro-strip{display:flex;flex-wrap:wrap;gap:.5rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:.75rem 1rem;margin-bottom:1rem}
+.macro-item{display:flex;flex-direction:column;align-items:flex-start;min-width:90px}
+.macro-name{font-size:.67rem;color:var(--text3);text-transform:uppercase;letter-spacing:.05em}
+.macro-val{font-size:.95rem;font-weight:600;color:var(--text)}
+.macro-chg{font-size:.72rem;font-weight:600}
+.macro-chg.up{color:var(--up)}
+.macro-chg.dn{color:var(--dn)}
+.macro-chg.flat{color:var(--text3)}
 
-/* ── Partner Brief ───────────────────────────────────────────────────── */
-#brief-card {
-  background: var(--black);
-  color: #e8e8e8;
-  border-radius: var(--radius);
-  padding: 24px 28px;
-  position: relative;
-  overflow: hidden;
-}
-#brief-card::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 4px; height: 100%;
-  background: var(--accent);
-}
-.brief-period {
-  font-size: .68rem;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 16px;
-}
-.brief-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-  margin-bottom: 16px;
-}
-.brief-col h4 {
-  font-size: .68rem;
-  text-transform: uppercase;
-  letter-spacing: .07em;
-  color: #777;
-  margin-bottom: 8px;
-}
-.brief-col ul { list-style: none; }
-.brief-col li {
-  font-size: .8rem;
-  padding: 4px 0;
-  border-bottom: 1px solid #242424;
-  line-height: 1.5;
-}
-.brief-hottest { margin-bottom: 16px; }
-.brief-hottest-label {
-  font-size: .68rem;
-  text-transform: uppercase;
-  letter-spacing: .07em;
-  color: #777;
-  display: block;
-  margin-bottom: 6px;
-}
-.brief-stats {
-  display: flex;
-  gap: 28px;
-  padding-top: 14px;
-  border-top: 1px solid #242424;
-  margin-bottom: 16px;
-}
-.brief-stat .stat-n {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: var(--accent);
-  line-height: 1;
-}
-.brief-stat .stat-l { font-size: .68rem; color: #666; margin-top: 2px; }
-.brief-actions { display: flex; gap: 8px; }
-.btn {
-  padding: 7px 16px;
-  border-radius: var(--radius);
-  font-size: .78rem;
-  font-weight: 600;
-  cursor: pointer;
-  border: none;
-  transition: opacity .15s;
-}
-.btn:hover { opacity: .85; text-decoration: none; }
-.btn-primary { background: var(--accent); color: #fff; }
-.btn-ghost { background: transparent; border: 1px solid #3a3a3a; color: #ccc; }
+/* ── Price grid ──────────────────────────────────────────────────────────── */
+.price-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:.5rem}
+.price-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:.7rem .9rem}
+.price-name{font-size:.72rem;color:var(--text2);margin-bottom:.2rem}
+.price-val{font-size:1.1rem;font-weight:700;color:var(--text)}
+.price-unit{font-size:.65rem;color:var(--text3);margin-left:.2rem}
+.price-chg{font-size:.78rem;font-weight:600;margin-top:.15rem}
+.price-chg.up{color:var(--up)}.price-chg.dn{color:var(--dn)}.price-chg.flat{color:var(--text3)}
+.price-source{font-size:.62rem;color:var(--text3);margin-top:.2rem}
 
-/* ── Radar ───────────────────────────────────────────────────────────── */
-.filters {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin-bottom: 14px;
-}
-.filter-btn {
-  padding: 4px 12px;
-  border-radius: 20px;
-  border: 1px solid var(--border);
-  background: var(--surface);
-  color: var(--text-muted);
-  font-size: .72rem;
-  cursor: pointer;
-  transition: all .15s;
-}
-.filter-btn.active, .filter-btn:hover {
-  background: var(--black);
-  color: var(--accent);
-  border-color: var(--black);
-}
-.opp-grid { display: flex; flex-direction: column; gap: 10px; }
-.opp-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-left: 3px solid var(--accent);
-  border-radius: var(--radius);
-  padding: 14px 16px;
-  box-shadow: var(--shadow);
-  transition: box-shadow .15s;
-}
-.opp-card:hover { box-shadow: 0 3px 10px rgba(0,0,0,.12); }
-.opp-hdr {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 12px;
-  margin-bottom: 8px;
-}
-.opp-company { font-weight: 700; font-size: .92rem; }
-.opp-tags { display: flex; gap: 4px; flex-wrap: wrap; margin-top: 4px; }
-.score-badge {
-  background: var(--accent);
-  color: #fff;
-  font-size: .7rem;
-  font-weight: 700;
-  padding: 2px 8px;
-  border-radius: 3px;
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-.opp-headline { font-size: .83rem; color: var(--text); margin-bottom: 5px; }
-.opp-headline a { color: inherit; }
-.opp-headline a:hover { color: var(--accent-dark); }
-.opp-angle { font-size: .8rem; color: var(--accent-dark); font-weight: 500; margin-top: 5px; }
-.opp-angle::before { content: "→ "; }
+/* ── Heatmap ─────────────────────────────────────────────────────────────── */
+.heatmap-wrap{overflow-x:auto;margin-top:.75rem}
+.heatmap-table{border-collapse:collapse;width:100%;font-size:.78rem}
+.heatmap-table th{text-align:left;padding:.4rem .7rem;color:var(--text3);font-weight:600;border-bottom:1px solid var(--border);white-space:nowrap}
+.heatmap-table td{padding:.35rem .7rem;white-space:nowrap;text-align:center}
+.heatmap-table td.name{text-align:left;color:var(--text2);font-weight:500}
+.hm-strong-up{background:rgba(76,175,80,.35);color:#81c784;font-weight:600}
+.hm-up{background:rgba(76,175,80,.2);color:#a5d6a7}
+.hm-flat{color:var(--text3)}
+.hm-dn{background:rgba(239,83,80,.2);color:#ef9a9a}
+.hm-strong-dn{background:rgba(239,83,80,.35);color:#e57373;font-weight:600}
+.hm-na{color:var(--text3);font-size:.7rem}
 
-/* ── Account Intel ───────────────────────────────────────────────────── */
-.account-grid { display: flex; flex-direction: column; gap: 8px; }
-details.acc {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  overflow: hidden;
-}
-details.acc[open] { border-color: #aaa; }
-details.acc summary {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 11px 15px;
-  cursor: pointer;
-  list-style: none;
-  user-select: none;
-}
-details.acc summary::-webkit-details-marker { display: none; }
-.acc-chevron { font-size: .65rem; color: var(--text-muted); transition: transform .2s; flex-shrink: 0; }
-details.acc[open] .acc-chevron { transform: rotate(90deg); }
-.acc-name { font-weight: 700; font-size: .88rem; flex: 1; }
-.acc-meta { display: flex; align-items: center; gap: 5px; flex-wrap: wrap; }
-.acc-body { padding: 0 15px 14px; border-top: 1px solid var(--border); }
-.acc-one-liner { font-size: .78rem; color: var(--text-muted); padding: 10px 0 11px; border-bottom: 1px solid var(--border); margin-bottom: 11px; }
-.acc-sublabel { font-size: .65rem; text-transform: uppercase; letter-spacing: .07em; color: var(--text-light); font-weight: 700; margin-bottom: 6px; }
-.acc-trigger-row { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 11px; }
-.acc-list { list-style: none; margin-bottom: 11px; }
-.acc-list li { font-size: .78rem; padding: 3px 0 3px 14px; position: relative; line-height: 1.5; }
-.acc-list.angles li::before { content: "•"; position: absolute; left: 0; color: var(--accent); }
-.acc-list.points { counter-reset: pts; }
-.acc-list.points li::before { content: counter(pts) "."; counter-increment: pts; position: absolute; left: 0; color: var(--text-muted); font-size: .68rem; }
-.acc-headlines { margin-bottom: 8px; }
-.acc-hl-item { font-size: .76rem; padding: 4px 0; border-bottom: 1px dotted var(--border); }
-.acc-hl-item a { color: var(--text); }
-.acc-hl-item a:hover { color: var(--accent-dark); }
-.acc-no-news { font-size: .76rem; color: var(--text-light); font-style: italic; margin-top: 8px; }
+/* ── Correlation ─────────────────────────────────────────────────────────── */
+.corr-wrap{overflow-x:auto;margin-top:.75rem}
+.corr-table{border-collapse:collapse;font-size:.72rem}
+.corr-table th,.corr-table td{padding:.3rem .5rem;border:1px solid var(--border);text-align:center;white-space:nowrap;min-width:58px}
+.corr-table th{color:var(--text3);font-weight:600;background:var(--surface2)}
+.corr-table td.label{text-align:left;color:var(--text2);font-weight:500;background:var(--surface2)}
+.corr-hi{background:rgba(76,175,80,.3);color:#81c784}
+.corr-lo{background:rgba(239,83,80,.3);color:#ef9a9a}
+.corr-self{background:var(--surface3);color:var(--text3)}
 
-/* ── Sector Themes ───────────────────────────────────────────────────── */
-.themes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-.theme-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 14px;
-  box-shadow: var(--shadow);
-}
-.theme-name { font-size: .85rem; font-weight: 700; margin-bottom: 7px; }
-.theme-accs { font-size: .73rem; color: var(--text-muted); margin-bottom: 6px; }
-.theme-desc { font-size: .76rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 7px; }
-.theme-sls { display: flex; flex-wrap: wrap; gap: 4px; }
+/* ── Outlook ─────────────────────────────────────────────────────────────── */
+.outlook-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:.75rem}
+.outlook-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:.9rem 1rem}
+.outlook-commodity{font-size:.78rem;font-weight:700;color:var(--text);margin-bottom:.3rem}
+.outlook-direction{font-size:.7rem;font-weight:700;text-transform:uppercase;padding:.1rem .4rem;border-radius:3px;display:inline-block;margin-bottom:.4rem}
+.outlook-direction.bullish{background:var(--up-bg);color:var(--up)}
+.outlook-direction.bearish{background:var(--dn-bg);color:var(--dn)}
+.outlook-direction.neutral{background:var(--neutral-bg);color:var(--neutral)}
+.outlook-narrative{font-size:.8rem;color:var(--text2);margin-bottom:.5rem;line-height:1.5}
+.outlook-source{font-size:.7rem;color:var(--text3)}
 
-/* ── Market strip ────────────────────────────────────────────────────── */
-.market-strip {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  padding: 14px 16px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-}
-.price-chip {
-  display: flex;
-  flex-direction: column;
-  min-width: 88px;
-  padding: 6px 10px;
-  background: var(--surface2);
-  border-radius: 3px;
-  border: 1px solid var(--border);
-}
-.pc-name { font-size: .65rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: .03em; }
-.pc-val { font-size: .9rem; font-weight: 700; margin: 2px 0; }
-.pc-chg { font-size: .7rem; font-weight: 600; }
-.pc-chg.up   { color: #27ae60; }
-.pc-chg.down { color: var(--restricted); }
-.pc-chg.flat { color: var(--text-muted); }
-.pc-unit { font-size: .62rem; color: var(--text-light); }
-.indicative { font-size: .62rem; background: var(--surface2); color: var(--text-muted); padding: 1px 4px; border-radius: 2px; margin-top: 2px; display: inline-block; border: 1px solid var(--border); }
+/* ── Fundamentals ────────────────────────────────────────────────────────── */
+.fund-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:.9rem 1rem;margin-bottom:.6rem;display:flex;align-items:flex-start;gap:1rem}
+.fund-commodity{font-size:.85rem;font-weight:700;color:var(--text);min-width:110px;padding-top:.1rem}
+.fund-body{flex:1}
+.fund-balance{font-size:.82rem;color:var(--text2);margin-bottom:.4rem;line-height:1.5}
+.fund-signals{display:flex;gap:.5rem;flex-wrap:wrap}
+.fund-signal{font-size:.67rem;padding:.1rem .4rem;border-radius:3px}
+.fund-signal.supply{background:rgba(239,83,80,.12);color:#ef9a9a}
+.fund-signal.demand{background:rgba(33,150,243,.12);color:#64b5f6}
+.fund-arrow.up{color:var(--up)}.fund-arrow.dn{color:var(--dn)}.fund-arrow.flat{color:var(--text3)}
 
-/* ── Headlines ───────────────────────────────────────────────────────── */
-.headlines-list { display: flex; flex-direction: column; gap: 7px; }
-.hl-item {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 9px 13px;
-  display: flex;
-  gap: 10px;
-  box-shadow: var(--shadow);
-}
-.hl-rank { font-size: .68rem; font-weight: 700; color: var(--text-light); width: 16px; flex-shrink: 0; padding-top: 2px; }
-.hl-body { flex: 1; min-width: 0; }
-.hl-title { font-size: .83rem; margin-bottom: 4px; }
-.hl-title a { color: var(--text); }
-.hl-title a:hover { color: var(--accent-dark); }
-.hl-meta { font-size: .7rem; color: var(--text-muted); display: flex; gap: 7px; flex-wrap: wrap; }
+/* ── Themes ──────────────────────────────────────────────────────────────── */
+.theme-card{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:var(--radius);padding:.9rem 1rem;margin-bottom:.75rem}
+.theme-name{font-size:.9rem;font-weight:700;color:var(--text);margin-bottom:.4rem}
+.theme-narrative{font-size:.82rem;color:var(--text2);line-height:1.55;margin-bottom:.6rem}
+.theme-meta{font-size:.72rem;color:var(--text3)}
 
-/* ── Archive ─────────────────────────────────────────────────────────── */
-.archive-list { display: flex; flex-direction: column; gap: 5px; }
-.archive-item {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 7px 13px;
-  font-size: .8rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* ── Risks ───────────────────────────────────────────────────────────────── */
+.risk-list{display:flex;flex-direction:column;gap:.4rem}
+.risk-item{display:flex;align-items:flex-start;gap:.7rem;padding:.6rem .8rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);font-size:.82rem}
+.risk-dir{font-size:.65rem;font-weight:700;text-transform:uppercase;padding:.15rem .4rem;border-radius:3px;white-space:nowrap;flex-shrink:0;margin-top:.05rem}
+.risk-dir.upside{background:var(--up-bg);color:var(--up)}
+.risk-dir.downside{background:var(--dn-bg);color:var(--dn)}
+.risk-text{color:var(--text2);line-height:1.45}
+
+/* ── Events ──────────────────────────────────────────────────────────────── */
+.events-list{display:flex;flex-direction:column;gap:.4rem}
+.event-item{display:flex;align-items:flex-start;gap:1rem;padding:.6rem .8rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius)}
+.event-date{font-size:.72rem;font-weight:600;color:var(--text3);min-width:70px;white-space:nowrap;padding-top:.1rem;font-family:var(--mono)}
+.event-item.upcoming{border-color:rgba(134,188,37,.4);background:rgba(134,188,37,.04)}
+.event-item.upcoming .event-date{color:var(--accent)}
+.event-title{font-size:.83rem;color:var(--text2);line-height:1.4}
+.event-related{font-size:.7rem;color:var(--text3);margin-top:.2rem}
+
+/* ── Headlines ───────────────────────────────────────────────────────────── */
+.headline-item{padding:.6rem 0;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:.75rem}
+.headline-item:last-child{border-bottom:none}
+.headline-text{flex:1;font-size:.84rem;line-height:1.45}
+.headline-text a{color:var(--text);font-weight:500}
+.headline-text a:hover{color:var(--accent-dark)}
+.headline-meta{font-size:.7rem;color:var(--text3);margin-top:.2rem;display:flex;gap:.5rem;flex-wrap:wrap}
+.headline-score{font-size:.65rem;font-family:var(--mono);color:var(--text3);padding:.1rem .3rem;background:var(--surface2);border-radius:3px;white-space:nowrap}
+
+/* ── Company panels ──────────────────────────────────────────────────────── */
+.company-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:.75rem}
+.company-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.1rem}
+.company-name{font-size:.9rem;font-weight:700;color:var(--text);margin-bottom:.15rem}
+.company-meta{font-size:.68rem;color:var(--text3);margin-bottom:.3rem}
+.company-ticker{font-family:var(--mono);font-size:.68rem;color:var(--text3)}
+.company-summary{font-size:.78rem;color:var(--text2);font-style:italic;margin-bottom:.6rem;line-height:1.5;border-left:2px solid var(--accent);padding-left:.6rem}
+.company-no-news{font-size:.78rem;color:var(--text3);font-style:italic;padding:.3rem 0}
+.company-item{padding:.4rem 0;border-bottom:1px solid var(--border);font-size:.78rem;line-height:1.45}
+.company-item:last-child{border-bottom:none}
+.company-item a{color:var(--text2)}
+.company-item a:hover{color:var(--accent-dark)}
+.company-item-meta{font-size:.68rem;color:var(--text3);margin-top:.15rem;display:flex;gap:.4rem;flex-wrap:wrap}
+
+/* ── Regulatory ──────────────────────────────────────────────────────────── */
+.reg-jurisdiction{font-size:.8rem;font-weight:700;color:var(--accent);margin:.75rem 0 .3rem}
+.reg-item{padding:.55rem .75rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:.4rem;font-size:.8rem}
+.reg-title{color:var(--text);margin-bottom:.3rem;line-height:1.4}
+.reg-meta{font-size:.7rem;color:var(--text3);display:flex;gap:.5rem;flex-wrap:wrap}
+
+/* ── Exec summary ────────────────────────────────────────────────────────── */
+.exec-bullets{list-style:none;display:flex;flex-direction:column;gap:.5rem}
+.exec-bullets li{display:flex;align-items:flex-start;gap:.7rem;font-size:.88rem;color:var(--text2);line-height:1.5}
+.exec-bullets li::before{content:"▸";color:var(--accent);flex-shrink:0;margin-top:.15rem;font-size:.8rem}
+
+/* ── Geopolitical ────────────────────────────────────────────────────────── */
+.geo-item{padding:.5rem .75rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:.4rem;display:flex;align-items:flex-start;gap:.75rem}
+.geo-text{flex:1;font-size:.8rem;color:var(--text2);line-height:1.4}
+.geo-text a{color:var(--text2)}
+.geo-meta{font-size:.68rem;color:var(--text3);margin-top:.15rem}
+.geo-age{font-size:.68rem;color:var(--text3);white-space:nowrap;padding-top:.1rem}
+
+/* ── Archive ─────────────────────────────────────────────────────────────── */
+.archive-list{display:flex;flex-wrap:wrap;gap:.4rem}
+.archive-link{font-size:.75rem;padding:.3rem .65rem;background:var(--surface);border:1px solid var(--border);border-radius:4px;color:var(--text2)}
+.archive-link:hover{border-color:var(--accent);color:var(--accent-dark);text-decoration:none}
+
+/* ── Timestamp bar ───────────────────────────────────────────────────────── */
+.generated-bar{font-size:.72rem;color:var(--text3);padding:.4rem 0;margin-bottom:1.5rem;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.75rem;flex-wrap:wrap}
+.generated-dot{width:7px;height:7px;border-radius:50%;background:var(--accent);display:inline-block;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+
+/* ── Buttons ─────────────────────────────────────────────────────────────── */
+.print-btn{background:none;border:1px solid var(--border2);color:var(--text2);padding:.3rem .7rem;border-radius:4px;cursor:pointer;font-size:.75rem;margin-left:auto}
+.print-btn:hover{border-color:var(--accent);color:var(--accent)}
+.collapse-btn{background:none;border:none;color:var(--text3);cursor:pointer;font-size:.75rem;padding:.15rem .3rem;border-radius:3px;float:right}
+.collapse-btn:hover{color:var(--text);background:var(--surface2)}
+.collapsible-body.hidden{display:none}
+
+/* ── Mobile sidebar toggle ───────────────────────────────────────────────── */
+#sidebar-toggle{display:none;position:fixed;bottom:1.5rem;right:1.5rem;width:48px;height:48px;background:var(--accent);color:#000;border:none;border-radius:50%;font-size:1.3rem;cursor:pointer;z-index:300;box-shadow:0 3px 12px rgba(0,0,0,.4);align-items:center;justify-content:center}
+#sidebar-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:190}
+
+/* ── Data footer ─────────────────────────────────────────────────────────── */
+.data-footer{margin-top:3rem;padding:1rem 1.2rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);font-size:.72rem;color:var(--text3);line-height:1.6}
+
+/* ── Responsive ──────────────────────────────────────────────────────────── */
+@media(max-width:768px){
+  html{font-size:17px}
+  #sidebar{position:fixed;left:0;top:0;transform:translateX(-100%);transition:transform .25s ease;z-index:200}
+  #sidebar.open{transform:translateX(0)}
+  #sidebar-toggle{display:flex}
+  #sidebar-overlay.show{display:block}
+  #main{padding:1rem;width:100%}
+  .price-grid{grid-template-columns:repeat(auto-fill,minmax(130px,1fr))}
+  .company-grid,.card-grid,.outlook-grid{grid-template-columns:1fr}
 }
 
-/* ── Footer ──────────────────────────────────────────────────────────── */
-footer { margin-top: 40px; padding-top: 18px; border-top: 1px solid var(--border); font-size: .7rem; color: var(--text-muted); }
-.disclaimer {
-  background: var(--surface2);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 10px 13px;
-  margin-top: 10px;
-  line-height: 1.6;
-}
-
-/* ── Utilities ───────────────────────────────────────────────────────── */
-.empty-state { text-align: center; padding: 28px; color: var(--text-muted); font-size: .8rem; background: var(--surface); border: 1px dashed var(--border); border-radius: var(--radius); }
-.loading { text-align: center; padding: 40px; color: var(--text-muted); }
-
-/* ── Print / PDF ─────────────────────────────────────────────────────── */
-@media print {
-  body { display: block; font-size: 11pt; background: #fff; color: #000; }
-  #sidebar, .filters, .brief-actions .btn-ghost, .filter-btn { display: none !important; }
-  #main { margin-left: 0; padding: 0; max-width: 100%; }
-  .page-header { border-bottom: 2pt solid #86BC25; }
-  .page-header::before {
-    content: "Commodity Trading — Sector Intelligence | Confidential — Internal Use Only";
-    display: block; font-size: 8pt; color: #666; margin-bottom: 4pt;
-  }
-  #brief-card { background: #1a1a1a !important; color: #fff !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  details.acc { break-inside: avoid; }
-  details.acc .acc-body { display: block !important; }
-  .opp-card, .theme-card { break-inside: avoid; }
-  #archive, #headlines { display: none !important; }
-  .themes-grid { grid-template-columns: 1fr 1fr; }
-}
-
-/* ── Mobile menu button ──────────────────────────────────────────────── */
-#menu-btn {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 200;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: var(--accent);
-  color: #fff;
-  border: none;
-  font-size: 1.3rem;
-  cursor: pointer;
-  box-shadow: 0 3px 12px rgba(0,0,0,.4);
-  align-items: center;
-  justify-content: center;
-}
-#sidebar-overlay {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,.5);
-  z-index: 99;
-}
-
-/* ── Responsive ──────────────────────────────────────────────────────── */
-@media (max-width: 700px) {
-  :root { --sidebar-w: 0px; }
-  html { font-size: 17px; }
-  #sidebar { display: flex; transform: translateX(-100%); transition: transform .25s; position: fixed; width: 240px; z-index: 150; }
-  #sidebar.open { transform: translateX(0); }
-  #menu-btn { display: flex; }
-  #main { margin-left: 0; padding: 14px; }
-  .brief-grid, .themes-grid { grid-template-columns: 1fr; }
-  .opp-company, .acc-name { font-size: 1.05rem; }
-  .opp-headline, .hl-title { font-size: 1rem; }
-  .opp-angle { font-size: .95rem; }
-  .acc-list li, .acc-one-liner { font-size: .95rem; }
-  .price-chip .pc-val { font-size: 1.1rem; }
-  .score-badge { font-size: .85rem; padding: 3px 10px; }
-  .brief-col li { font-size: .95rem; }
-  .tag { font-size: .78rem; padding: 3px 9px; }
-  .section-title { font-size: .78rem; }
+/* ── Print ───────────────────────────────────────────────────────────────── */
+@media print{
+  #sidebar,#sidebar-toggle,#sidebar-overlay,.print-btn,.theme-btn,.collapse-btn{display:none!important}
+  #main{padding:0;max-width:100%}
+  body{background:#fff;color:#000;font-size:11pt}
+  .card,.company-card,.price-card,.theme-card,.risk-item,.event-item{border:1px solid #ccc;break-inside:avoid}
+  .collapsible-body.hidden{display:block!important}
+  a{color:#000}
+  a[href]::after{content:" (" attr(href) ")";font-size:.7em;color:#555}
+  body::before{content:"COMMODITY TRADING — SECTOR INTELLIGENCE";display:block;font-size:9pt;color:#555;margin-bottom:1rem;border-bottom:1px solid #ccc;padding-bottom:.5rem}
 }
 </style>
 </head>
 <body>
-
 <div id="sidebar-overlay" onclick="closeSidebar()"></div>
-<button id="menu-btn" onclick="toggleSidebar()" aria-label="Open navigation">☰</button>
-<nav id="sidebar" aria-label="Page navigation">
-  <div class="sidebar-brand">
-    <div class="brand-title">Commodity Trading<br>Sector Intelligence</div>
-    <div class="brand-sub">Advisory Intelligence</div>
-    <div class="brand-ts" id="sidebar-ts">—</div>
+
+<nav id="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-title">Commodity Trading</div>
+    <div class="sidebar-sub">SEA Sector Intelligence</div>
   </div>
-  <ul class="sidebar-nav">
-    <li><a href="#brief"    class="nav-link"><span class="nav-icon">📋</span>Partner Brief</a></li>
-    <li><a href="#radar"    class="nav-link"><span class="nav-icon">🎯</span>Opportunity Radar</a></li>
-    <li><a href="#accounts" class="nav-link"><span class="nav-icon">🏢</span>Account Intel</a></li>
-    <li><a href="#themes"   class="nav-link"><span class="nav-icon">🔗</span>Sector Themes</a></li>
-    <div class="sidebar-sep"></div>
-    <li><a href="#market"   class="nav-link"><span class="nav-icon">📊</span>Market Context</a></li>
-    <li><a href="#headlines" class="nav-link"><span class="nav-icon">📰</span>Headlines</a></li>
-    <div class="sidebar-sep"></div>
-    <li><a href="#archive"  class="nav-link"><span class="nav-icon">🗂</span>Archive</a></li>
-  </ul>
-  <div class="sidebar-bottom">
-    <button onclick="toggleTheme()">☀ Toggle theme</button>
+  <div class="sidebar-nav">
+    <div class="nav-section">Intelligence</div>
+    <a class="nav-link" href="#exec-summary">Executive Summary</a>
+    <a class="nav-link" href="#macro">Macro &amp; Geopolitical</a>
+    <a class="nav-link" href="#prices">Commodity Prices</a>
+    <a class="nav-link" href="#outlook">Forecasts &amp; Outlook</a>
+    <a class="nav-link" href="#fundamentals">Fundamentals</a>
+    <a class="nav-link" href="#themes">Themes &amp; Drivers</a>
+    <a class="nav-link" href="#risks-events">Risks &amp; Events</a>
+    <div class="nav-section">News</div>
+    <a class="nav-link" href="#headlines">Top Headlines</a>
+    <a class="nav-link" href="#energy">Energy</a>
+    <a class="nav-link" href="#metals-mining">Metals &amp; Mining</a>
+    <a class="nav-link" href="#power-utilities">Power &amp; Utilities</a>
+    <a class="nav-link" href="#trading">Trading</a>
+    <div class="nav-section">More</div>
+    <a class="nav-link" href="#regulatory">Regulatory &amp; Policy</a>
+    <a class="nav-link" href="#archive">Archive</a>
+  </div>
+  <div class="sidebar-footer">
+    <button class="theme-btn" onclick="toggleTheme()">Toggle Light / Dark</button>
+    <div id="sidebar-ts" style="font-size:.67rem"></div>
   </div>
 </nav>
 
+<button id="sidebar-toggle" onclick="toggleSidebar()" aria-label="Menu">☰</button>
+
 <main id="main">
-  <div class="page-header">
-    <h1>Commodity Trading — Sector Intelligence</h1>
-    <span class="hdr-meta" id="header-ts">Loading…</span>
+  <div class="generated-bar" id="gen-bar">
+    <span class="generated-dot"></span>
+    <span id="gen-ts">Loading…</span>
+    <button class="print-btn" onclick="window.print()">Print / Save PDF</button>
   </div>
-  <div id="loading" class="loading">Loading intelligence…</div>
 
-  <section class="section" id="brief" style="display:none">
-    <div class="section-title">Partner Weekly Brief</div>
-    <div id="brief-card"></div>
+  <section class="section" id="exec-summary">
+    <div class="section-header">
+      <span class="section-icon">★</span>
+      <span class="section-title">Executive Summary</span>
+      <span class="section-meta">Today's key signals</span>
+    </div>
+    <div id="exec-body"><div class="card card-sm" style="color:var(--text3);font-size:.82rem">Loading…</div></div>
   </section>
 
-  <section class="section" id="radar" style="display:none">
-    <div class="section-title">Opportunity Radar</div>
-    <div class="filters" id="radar-filters"></div>
-    <div class="opp-grid" id="opp-grid"></div>
+  <section class="section" id="macro">
+    <div class="section-header">
+      <span class="section-icon">◎</span>
+      <span class="section-title">Macro &amp; Geopolitical</span>
+      <span class="section-meta">DXY · US 10Y · Hang Seng</span>
+    </div>
+    <div id="macro-body"></div>
   </section>
 
-  <section class="section" id="accounts" style="display:none">
-    <div class="section-title">Account Intelligence</div>
-    <div class="filters" id="acc-filters"></div>
-    <div class="account-grid" id="acc-grid"></div>
+  <section class="section" id="prices">
+    <div class="section-header">
+      <span class="section-icon">$</span>
+      <span class="section-title">Commodity Prices</span>
+      <span class="section-meta">Market data</span>
+    </div>
+    <div id="prices-body"></div>
+    <div id="analytics-body"></div>
   </section>
 
-  <section class="section" id="themes" style="display:none">
-    <div class="section-title">Sector Themes</div>
-    <div class="themes-grid" id="themes-grid"></div>
+  <section class="section" id="outlook">
+    <div class="section-header">
+      <span class="section-icon">→</span>
+      <span class="section-title">Forecasts &amp; Outlook</span>
+      <span class="section-meta">EIA · World Bank · Consensus</span>
+    </div>
+    <div id="outlook-body"></div>
   </section>
 
-  <section class="section" id="market" style="display:none">
-    <div class="section-title">Market Context</div>
-    <div class="market-strip" id="market-strip"></div>
+  <section class="section" id="fundamentals">
+    <div class="section-header">
+      <span class="section-icon">≡</span>
+      <span class="section-title">Fundamentals</span>
+      <span class="section-meta">Supply / demand signals</span>
+    </div>
+    <div id="fund-body"></div>
   </section>
 
-  <section class="section" id="headlines" style="display:none">
-    <div class="section-title">Top Headlines</div>
-    <div class="headlines-list" id="headlines-list"></div>
+  <section class="section" id="themes">
+    <div class="section-header">
+      <span class="section-icon">◇</span>
+      <span class="section-title">Themes &amp; Drivers</span>
+      <span class="section-meta">Structural patterns</span>
+    </div>
+    <div id="themes-body"></div>
+  </section>
+
+  <section class="section" id="risks-events">
+    <div class="section-header">
+      <span class="section-icon">!</span>
+      <span class="section-title">Risks &amp; Events to Watch</span>
+    </div>
+    <div id="risks-body"></div>
+    <div id="events-body"></div>
+  </section>
+
+  <section class="section" id="headlines">
+    <div class="section-header">
+      <span class="section-icon">≫</span>
+      <span class="section-title">Top Headlines</span>
+      <button class="collapse-btn" onclick="toggleSection('hl-body',this)">collapse</button>
+    </div>
+    <div id="hl-body"></div>
+  </section>
+
+  <section class="section" id="energy">
+    <div class="section-header">
+      <span class="section-icon" style="color:#ffb74d">●</span>
+      <span class="section-title">Company News — Energy</span>
+      <button class="collapse-btn" onclick="toggleSection('energy-body',this)">collapse</button>
+    </div>
+    <div id="energy-body"></div>
+  </section>
+
+  <section class="section" id="metals-mining">
+    <div class="section-header">
+      <span class="section-icon" style="color:#bdbdbd">●</span>
+      <span class="section-title">Company News — Metals &amp; Mining</span>
+      <button class="collapse-btn" onclick="toggleSection('metals-body',this)">collapse</button>
+    </div>
+    <div id="metals-body"></div>
+  </section>
+
+  <section class="section" id="power-utilities">
+    <div class="section-header">
+      <span class="section-icon" style="color:#64b5f6">●</span>
+      <span class="section-title">Company News — Power &amp; Utilities</span>
+      <button class="collapse-btn" onclick="toggleSection('power-body',this)">collapse</button>
+    </div>
+    <div id="power-body"></div>
+  </section>
+
+  <section class="section" id="trading">
+    <div class="section-header">
+      <span class="section-icon" style="color:var(--accent)">●</span>
+      <span class="section-title">Company News — Trading</span>
+      <button class="collapse-btn" onclick="toggleSection('trading-body',this)">collapse</button>
+    </div>
+    <div id="trading-body"></div>
+  </section>
+
+  <section class="section" id="regulatory">
+    <div class="section-header">
+      <span class="section-icon">⚖</span>
+      <span class="section-title">Regulatory &amp; Policy</span>
+      <button class="collapse-btn" onclick="toggleSection('reg-body',this)">collapse</button>
+    </div>
+    <div id="reg-body"></div>
   </section>
 
   <section class="section" id="archive">
-    <div class="section-title">Archive</div>
-    <div class="archive-list" id="archive-list"><div class="empty-state">No past digests.</div></div>
+    <div class="section-header">
+      <span class="section-icon">▤</span>
+      <span class="section-title">Archive</span>
+    </div>
+    <div id="archive-body"></div>
   </section>
 
-  <footer>
-    <span>Commodity Trading — Sector Intelligence · SEA Advisory · Public news aggregation only</span>
-    <div class="disclaimer">
-      This tool aggregates publicly available news for internal awareness purposes only.
-      This is not investment advice.
-    </div>
-  </footer>
+  <div class="data-footer">
+    <strong>Data quality notes:</strong>
+    EIA data is US-specific and used as a global benchmark indicator.
+    JKM / Tapis / Newcastle Coal prices are indicative / web-sourced — verify before trading.
+    World Bank forecasts are published third-party figures.
+    LLM summaries are synthesised from fetched inputs — verify claims before use.
+    Macro data via Yahoo Finance (yfinance). Free-tier data may lag 15–20 min.
+    Source badges: <span class="tag quality-market">market</span> = exchange data · <span class="tag quality-indicative">indicative</span> = web-sourced estimate.
+  </div>
 </main>
 
 <script>
-/* ── Sidebar toggle ─────────────────────────────────────────────────────────── */
-function toggleSidebar() {
-  const open = document.getElementById('sidebar').classList.toggle('open');
-  document.getElementById('sidebar-overlay').style.display = open ? 'block' : 'none';
-  document.getElementById('menu-btn').textContent = open ? '✕' : '☰';
-}
-function closeSidebar() {
-  document.getElementById('sidebar').classList.remove('open');
-  document.getElementById('sidebar-overlay').style.display = 'none';
-  document.getElementById('menu-btn').textContent = '☰';
-}
-// Close sidebar when a nav link is tapped on mobile
-document.querySelectorAll('.nav-link').forEach(l => l.addEventListener('click', () => {
-  if (window.innerWidth <= 700) closeSidebar();
-}));
+// ── Theme ────────────────────────────────────────────────────────────────────
+(function(){const s=localStorage.getItem('er-theme');if(s)document.documentElement.setAttribute('data-theme',s)})();
+function toggleTheme(){const c=document.documentElement.getAttribute('data-theme');const n=c==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',n);localStorage.setItem('er-theme',n)}
 
-/* ── Theme ──────────────────────────────────────────────────────────────────── */
-function toggleTheme() {
-  const root = document.documentElement;
-  const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-  root.setAttribute('data-theme', next);
-  localStorage.setItem('er-theme', next);
-}
-(function(){
-  const saved = localStorage.getItem('er-theme') || 'dark';
-  document.documentElement.setAttribute('data-theme', saved);
-})();
+// ── Sidebar ──────────────────────────────────────────────────────────────────
+function toggleSidebar(){document.getElementById('sidebar').classList.toggle('open');document.getElementById('sidebar-overlay').classList.toggle('show')}
+function closeSidebar(){document.getElementById('sidebar').classList.remove('open');document.getElementById('sidebar-overlay').classList.remove('show')}
+document.querySelectorAll('.nav-link').forEach(a=>a.addEventListener('click',closeSidebar));
+function toggleSection(id,btn){const el=document.getElementById(id);const h=el.classList.toggle('hidden');btn.textContent=h?'expand':'collapse'}
 
-/* ── Helpers ────────────────────────────────────────────────────────────────── */
-function esc(s) {
-  return String(s ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;')
-    .replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
-}
-function fmtDateTime(iso) {
-  if (!iso) return '—';
-  try { return new Date(iso).toLocaleString('en-SG',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit',timeZone:'Asia/Singapore'}); }
-  catch { return iso.slice(0,16); }
-}
-function fmtDateShort(iso) {
-  if (!iso) return '';
-  try { return new Date(iso).toLocaleDateString('en-SG',{day:'numeric',month:'short'}); }
-  catch { return ''; }
-}
-function show(id) { const el=document.getElementById(id); if(el) el.style.display=''; }
+// ── Utils ────────────────────────────────────────────────────────────────────
+function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
+function fmtAge(h){if(h==null)return '';if(h<1)return Math.round(h*60)+'m ago';if(h<24)return h.toFixed(0)+'h ago';return (h/24).toFixed(0)+'d ago'}
+function flagTags(flags){if(!flags||!flags.length)return '';return flags.slice(0,4).map(f=>`<span class="tag flag">${esc(f.replace(/_/g,' '))}</span>`).join('')}
+function driverTags(drivers){if(!drivers||!drivers.length)return '';return drivers.slice(0,3).map(d=>`<span class="tag driver">${esc(d.replace(/_/g,' '))}</span>`).join('')}
+function sectorClass(s){return{energy:'sector-energy',metals_mining:'sector-metals',power_utilities:'sector-power',trading:'sector-trading'}[s]||'flag'}
 
-/* ── Scroll-spy ─────────────────────────────────────────────────────────────── */
-(function(){
-  const links = document.querySelectorAll('.nav-link');
-  const obs = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        links.forEach(l => l.classList.remove('active'));
-        const a = document.querySelector(`.nav-link[href="#${e.target.id}"]`);
-        if (a) a.classList.add('active');
-      }
+// ── 1. Executive Summary ──────────────────────────────────────────────────────
+function renderExecSummary(bullets,brief){
+  const el=document.getElementById('exec-body');
+  let html='';
+  if(bullets&&bullets.length){
+    html+='<div class="card"><ul class="exec-bullets">';
+    bullets.forEach(b=>{html+=`<li>${esc(b)}</li>`});
+    html+='</ul></div>';
+  }
+  if(brief&&brief.narrative){
+    html+=`<div class="card card-sm" style="font-size:.82rem;color:var(--text2);line-height:1.6">${esc(brief.narrative)}`;
+    if(brief.themes&&brief.themes.length){html+='<div style="margin-top:.6rem">';brief.themes.forEach(t=>{html+=`<span class="tag driver">${esc(t)}</span>`});html+='</div>'}
+    html+='</div>';
+  }
+  if(!html)html='<div class="card card-sm" style="color:var(--text3);font-size:.82rem">No executive summary — run agent to populate.</div>';
+  el.innerHTML=html;
+}
+
+// ── 2. Macro & Geopolitical ───────────────────────────────────────────────────
+function renderMacro(macro){
+  const el=document.getElementById('macro-body');
+  if(!macro){el.innerHTML='<div class="card card-sm" style="color:var(--text3);font-size:.82rem">Macro data unavailable.</div>';return}
+  let html='';
+  if(macro.tickers&&macro.tickers.length){
+    html+='<div class="macro-strip">';
+    macro.tickers.forEach(t=>{
+      const cc=(t.change_pct||0)>0.05?'up':((t.change_pct||0)<-0.05?'dn':'flat');
+      const cs=t.change_pct!=null?((t.change_pct>0?'+':'')+t.change_pct.toFixed(2)+'%'):'—';
+      const vs=t.last!=null?t.last.toLocaleString('en-US',{maximumFractionDigits:2}):'—';
+      html+=`<div class="macro-item"><span class="macro-name">${esc(t.name)}</span><span class="macro-val">${vs}<span class="price-unit">${esc(t.unit||'')}</span></span><span class="macro-chg ${cc}">${cs}</span></div>`;
     });
-  }, {threshold: 0.15});
-  document.querySelectorAll('section[id]').forEach(s => obs.observe(s));
-})();
-
-/* ── Partner Brief ──────────────────────────────────────────────────────────── */
-function renderPartnerBrief(brief, generatedAt) {
-  if (!brief) return;
-  show('brief');
-  const period = brief.period || fmtDateTime(generatedAt);
-  const topOpps = (brief.top_opportunities || []).map(o => `<li>${esc(o)}</li>`).join('');
-  const themes  = (brief.key_themes || []).map(t => `<li>${esc(t)}</li>`).join('');
-  const changed = (brief.what_changed || []).map(c => `<li>${esc(c)}</li>`).join('');
-  const hottest = (brief.hottest_accounts || []).map(a => `<span class="tag">${esc(a)}</span>`).join(' ');
-
-  document.getElementById('brief-card').innerHTML = `
-    <div class="brief-period">${esc(period)}</div>
-    <div class="brief-grid">
-      <div class="brief-col">
-        <h4>Top Opportunities</h4>
-        <ul>${topOpps || '<li>No signals detected yet.</li>'}</ul>
-      </div>
-      <div class="brief-col">
-        <h4>Key Themes</h4>
-        <ul>${themes || '<li>—</li>'}</ul>
-        <h4 style="margin-top:12px">What Changed</h4>
-        <ul>${changed || '<li>—</li>'}</ul>
-      </div>
-    </div>
-    <div class="brief-hottest">
-      <span class="brief-hottest-label">Hottest Accounts</span>
-      ${hottest || '<span style="color:#666;font-size:.78rem">—</span>'}
-    </div>
-    <div class="brief-stats">
-      <div class="brief-stat"><div class="stat-n">${brief.opportunity_count || 0}</div><div class="stat-l">Opportunities detected</div></div>
-      <div class="brief-stat"><div class="stat-n">${brief.active_account_count || 0}</div><div class="stat-l">Active accounts</div></div>
-    </div>
-    <div class="brief-actions">
-      <button class="btn btn-primary" onclick="window.print()">Export to PDF</button>
-      <button class="btn btn-ghost" onclick="document.getElementById('radar').scrollIntoView({behavior:'smooth'})">View Radar →</button>
-    </div>`;
+    html+='</div>';
+  }
+  if(macro.geopolitical&&macro.geopolitical.length){
+    html+='<h3 style="font-size:.8rem;color:var(--text2);margin:.75rem 0 .4rem">Geopolitical Watch</h3>';
+    macro.geopolitical.forEach(g=>{
+      html+=`<div class="geo-item"><div class="geo-text"><a href="${esc(g.url)}" target="_blank" rel="noopener">${esc(g.title)}</a><div class="geo-meta">${esc(g.source)} · ${fmtAge(g.age_h)}</div></div></div>`;
+    });
+  }else{
+    html+='<div style="font-size:.78rem;color:var(--text3);padding:.4rem 0">No geopolitical signals flagged today.</div>';
+  }
+  el.innerHTML=html;
 }
 
-/* ── Opportunity Radar ──────────────────────────────────────────────────────── */
-let _allOpps = [];
+// ── 3. Prices + Analytics ────────────────────────────────────────────────────
+function renderPrices(prices,heatmap,correlations){
+  const el=document.getElementById('prices-body');
+  const ae=document.getElementById('analytics-body');
+  if(!prices||!prices.length){el.innerHTML='<div class="card card-sm" style="color:var(--text3)">Price data unavailable.</div>';return}
+  const groups={};prices.forEach(p=>{(groups[p.group]=groups[p.group]||[]).push(p)});
+  const order=['crude_oil','natgas_lng','coal','base_metals','precious_metals','agri'];
+  const labels={crude_oil:'Crude Oil',natgas_lng:'Natural Gas / LNG',coal:'Coal',base_metals:'Base Metals',precious_metals:'Precious Metals',agri:'Agricultural'};
+  let html='';
+  (order.concat(Object.keys(groups).filter(g=>!order.includes(g)))).forEach(gid=>{
+    const items=groups[gid];if(!items)return;
+    html+=`<h4 style="font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;color:var(--text3);margin:.75rem 0 .4rem">${labels[gid]||gid.replace(/_/g,' ')}</h4><div class="price-grid">`;
+    items.forEach(p=>{
+      const cc=(p.change_pct||0)>0.05?'up':((p.change_pct||0)<-0.05?'dn':'flat');
+      const sign=p.change_pct!=null&&p.change_pct>0?'+':'';
+      const pv=p.price!=null?p.price.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}):'—';
+      const qb=p.quality&&p.quality!=='market'?`<span class="tag quality-${p.quality}" style="font-size:.6rem">${p.quality}</span>`:'';
+      html+=`<div class="price-card"><div class="price-name">${esc(p.display)}</div><div class="price-val">${pv}<span class="price-unit">${esc(p.unit)}</span></div><div class="price-chg ${cc}">${p.change_pct!=null?sign+p.change_pct.toFixed(2)+'%':'—'}</div><div class="price-source">${esc(p.source)} ${qb}</div></div>`;
+    });
+    html+='</div>';
+  });
+  el.innerHTML=html;
 
-function renderOpportunityRadar(cards) {
-  if (!cards || !cards.length) return;
-  _allOpps = cards;
-  show('radar');
-
-  const sls = ['all', ...new Set(cards.map(c => c.service_line))];
-  document.getElementById('radar-filters').innerHTML = sls.map(sl =>
-    `<button class="filter-btn${sl==='all'?' active':''}" onclick="filterRadar('${esc(sl)}')">${sl==='all'?'All':esc(sl)}</button>`
-  ).join('');
-
-  renderOppCards(cards);
+  let ah='';
+  if(heatmap&&heatmap.commodities&&heatmap.commodities.length){
+    ah+=`<div style="margin-top:1.25rem"><h3 style="font-size:.85rem;margin-bottom:.1rem">Price Performance Heatmap</h3><p style="font-size:.72rem;color:var(--text3);margin-bottom:.4rem">1D / 1W / 1M returns (%). Green = positive, red = negative.</p><div class="heatmap-wrap"><table class="heatmap-table"><thead><tr><th>Commodity</th><th>1D</th><th>1W</th><th>1M</th></tr></thead><tbody>`;
+    heatmap.commodities.forEach((n,i)=>{
+      const r1=heatmap.returns['1d']?heatmap.returns['1d'][i]:null;
+      const r7=heatmap.returns['1w']?heatmap.returns['1w'][i]:null;
+      const r30=heatmap.returns['1m']?heatmap.returns['1m'][i]:null;
+      ah+=`<tr><td class="name">${esc(n)}</td>${[r1,r7,r30].map(hmCell).join('')}</tr>`;
+    });
+    ah+='</tbody></table></div></div>';
+  }
+  if(correlations&&correlations.commodities&&correlations.commodities.length>=2){
+    ah+=`<div style="margin-top:1.5rem"><h3 style="font-size:.85rem;margin-bottom:.1rem">90-Day Return Correlation</h3><p style="font-size:.72rem;color:var(--text3);margin-bottom:.4rem">Pairwise daily-return correlation. Min 15 days of data required.</p><div class="corr-wrap"><table class="corr-table"><thead><tr><th></th>`;
+    correlations.commodities.forEach(c=>{ah+=`<th>${esc(c.split(' ')[0])}</th>`});
+    ah+='</tr></thead><tbody>';
+    correlations.matrix.forEach((row,i)=>{
+      ah+=`<tr><td class="label">${esc(correlations.commodities[i])}</td>`;
+      row.forEach((v,j)=>{ah+=corrCell(v,i===j)});
+      ah+='</tr>';
+    });
+    ah+='</tbody></table></div></div>';
+  }
+  ae.innerHTML=ah;
 }
 
-function filterRadar(sl) {
-  document.querySelectorAll('#radar-filters .filter-btn').forEach(b =>
-    b.classList.toggle('active', b.textContent.trim() === (sl==='all'?'All':sl))
-  );
-  renderOppCards(sl==='all' ? _allOpps : _allOpps.filter(c => c.service_line === sl));
+function hmCell(v){
+  if(v==null)return '<td class="hm-na">—</td>';
+  const c=v>2?'hm-strong-up':v>0.2?'hm-up':v>-0.2?'hm-flat':v>-2?'hm-dn':'hm-strong-dn';
+  return `<td class="${c}">${v>0?'+':''}${v.toFixed(1)}%</td>`;
+}
+function corrCell(v,self){
+  if(self)return `<td class="corr-self">1.00</td>`;
+  if(v==null)return `<td style="color:var(--text3)">—</td>`;
+  const c=v>0.6?'corr-hi':v<-0.3?'corr-lo':'';
+  return `<td class="${c}" title="${v.toFixed(2)}">${v.toFixed(2)}</td>`;
 }
 
-function renderOppCards(cards) {
-  const grid = document.getElementById('opp-grid');
-  if (!cards.length) { grid.innerHTML='<div class="empty-state">No opportunities match this filter.</div>'; return; }
-  grid.innerHTML = cards.map(c => {
-    return `<div class="opp-card">
-      <div class="opp-hdr">
-        <div>
-          <div class="opp-company">${esc(c.company)}</div>
-          <div class="opp-tags">
-            <span class="tag sl">${esc(c.service_line)}</span>
-            ${c.published ? `<span class="tag">${fmtDateShort(c.published)}</span>` : ''}
-          </div>
-        </div>
-        <span class="score-badge">Score ${Number(c.score).toFixed(2)}</span>
-      </div>
-      <div class="opp-headline"><a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(c.headline)}</a></div>
-      ${c.suggested_angle ? `<div class="opp-angle">${esc(c.suggested_angle)}</div>` : ''}
-    </div>`;
-  }).join('');
+// ── 4. Outlook ────────────────────────────────────────────────────────────────
+function renderOutlook(outlook){
+  const el=document.getElementById('outlook-body');
+  if(!outlook||!outlook.length){el.innerHTML='<div class="card card-sm" style="color:var(--text3);font-size:.82rem">Outlook data not available. EIA_API_KEY required for inventory forecasts.</div>';return}
+  let html='<div class="outlook-grid">';
+  outlook.forEach(o=>{
+    const dc=o.direction||'neutral';
+    html+=`<div class="outlook-card"><div class="outlook-commodity">${esc(o.commodity)}</div><span class="outlook-direction ${dc}">${esc(o.direction||'neutral')}</span>`;
+    if(o.narrative)html+=`<div class="outlook-narrative">${esc(o.narrative)}</div>`;
+    if(o.eia_forecast)html+=`<div class="outlook-source">EIA: ${esc(o.eia_forecast)}</div>`;
+    if(o.wb_forecast)html+=`<div class="outlook-source">World Bank: ${esc(o.wb_forecast)}</div>`;
+    if(o.headlines&&o.headlines.length){
+      html+='<div style="margin-top:.5rem">';
+      o.headlines.slice(0,2).forEach(h=>{html+=`<div style="font-size:.72rem;color:var(--text3);margin-bottom:.2rem"><a href="${esc(h.url||'#')}" target="_blank" rel="noopener" style="color:var(--text3)">${esc(h.title||'')}</a></div>`});
+      html+='</div>';
+    }
+    html+='</div>';
+  });
+  html+='</div>';
+  el.innerHTML=html;
 }
 
-/* ── Account Intelligence ───────────────────────────────────────────────────── */
-let _allAccounts = [];
-const SECTOR_LABELS = {energy:'Energy',metals_mining:'Metals & Mining',power_utilities:'Power & Utilities',trading:'Trading'};
-const COUNTRY_FLAGS = {AU:'🇦🇺',CH:'🇨🇭',FR:'🇫🇷',GB:'🇬🇧',ID:'🇮🇩',MY:'🇲🇾',NL:'🇳🇱',SA:'🇸🇦',TH:'🇹🇭',US:'🇺🇸'};
-
-function renderAccountIntelligence(briefs) {
-  if (!briefs || !briefs.length) return;
-  _allAccounts = briefs;
-  show('accounts');
-
-  const sectors = ['all', ...new Set(briefs.map(b => b.sector))];
-  document.getElementById('acc-filters').innerHTML = sectors.map(s =>
-    `<button class="filter-btn${s==='all'?' active':''}" onclick="filterAccounts('${esc(s)}')">${s==='all'?'All':esc(SECTOR_LABELS[s]||s)}</button>`
-  ).join('');
-
-  renderAccCards(briefs);
+// ── 5. Fundamentals ───────────────────────────────────────────────────────────
+function renderFundamentals(fundamentals){
+  const el=document.getElementById('fund-body');
+  if(!fundamentals||!fundamentals.length){el.innerHTML='<div class="card card-sm" style="color:var(--text3);font-size:.82rem">Fundamentals data unavailable. Set EIA_API_KEY to enable US inventory data.</div>';return}
+  let html='';
+  fundamentals.forEach(f=>{
+    const a=f.inventory_direction==='up'?'↑':f.inventory_direction==='down'?'↓':'→';
+    const ac=f.inventory_direction==='up'?'up':f.inventory_direction==='down'?'dn':'flat';
+    html+=`<div class="fund-card"><div class="fund-commodity">${esc(f.commodity)} <span class="fund-arrow ${ac}" style="font-size:1rem">${f.inventory_direction?a:''}</span></div><div class="fund-body">`;
+    if(f.balance_read)html+=`<div class="fund-balance">${esc(f.balance_read)}</div>`;
+    html+='<div class="fund-signals">';
+    (f.supply_signals||[]).forEach(s=>{html+=`<span class="fund-signal supply">${esc(s)}</span>`});
+    (f.demand_signals||[]).forEach(s=>{html+=`<span class="fund-signal demand">${esc(s)}</span>`});
+    html+='</div>';
+    if(f.source)html+=`<div style="font-size:.68rem;color:var(--text3);margin-top:.3rem">Source: ${esc(f.source)}</div>`;
+    html+='</div></div>';
+  });
+  el.innerHTML=html;
 }
 
-function filterAccounts(sector) {
-  document.querySelectorAll('#acc-filters .filter-btn').forEach(b =>
-    b.classList.toggle('active', b.textContent.trim() === (sector==='all'?'All':(SECTOR_LABELS[sector]||sector)))
-  );
-  renderAccCards(sector==='all' ? _allAccounts : _allAccounts.filter(b => b.sector === sector));
+// ── 6. Themes & Drivers ───────────────────────────────────────────────────────
+function renderThemes(themes){
+  const el=document.getElementById('themes-body');
+  if(!themes||!themes.length){el.innerHTML='<div class="card card-sm" style="color:var(--text3);font-size:.82rem">No structural themes detected today.</div>';return}
+  let html='';
+  themes.forEach(t=>{
+    html+=`<div class="theme-card"><div class="theme-name">${esc(t.name)}</div>`;
+    if(t.narrative)html+=`<div class="theme-narrative">${esc(t.narrative)}</div>`;
+    html+='<div class="theme-meta">';
+    if(t.companies&&t.companies.length)html+=`Companies: ${t.companies.slice(0,5).map(esc).join(', ')}`;
+    if(t.commodities&&t.commodities.length)html+=` · Commodities: ${t.commodities.slice(0,4).map(esc).join(', ')}`;
+    html+='</div>';
+    if(t.headlines&&t.headlines.length){
+      html+='<div style="margin-top:.5rem">';
+      t.headlines.slice(0,3).forEach(h=>{html+=`<div style="font-size:.72rem;color:var(--text3);margin-bottom:.2rem;padding-left:.6rem;border-left:2px solid var(--border2)"><a href="${esc(h.url||'#')}" target="_blank" rel="noopener" style="color:var(--text3)">${esc(h.title||'')}</a>${h.source?` <span style="margin-left:.3rem">${esc(h.source)}</span>`:''}</div>`});
+      html+='</div>';
+    }
+    html+='</div>';
+  });
+  el.innerHTML=html;
 }
 
-function renderAccCards(briefs) {
-  const grid = document.getElementById('acc-grid');
-  grid.innerHTML = briefs.map(b => {
-    const flag = COUNTRY_FLAGS[b.country] || '';
-
-    const trigTags = (b.active_triggers||[]).length
-      ? (b.active_triggers||[]).map(t => `<span class="tag sl">${esc(t.service_line)}</span>`).join('')
-      : `<span style="font-size:.73rem;color:var(--text-light)">No signals this cycle</span>`;
-
-    const angles = (b.consulting_angles||[]).map(a => `<li>${esc(a)}</li>`).join('');
-    const points = (b.talking_points||[]).map(p => `<li>${esc(p)}</li>`).join('');
-    const headlines = (b.top_headlines||[]).slice(0,3).map((h,i) => {
-      const url = (b.top_urls||[])[i] || '#';
-      return `<div class="acc-hl-item">↗ <a href="${esc(url)}" target="_blank" rel="noopener">${esc(h)}</a></div>`;
-    }).join('');
-
-    return `<details class="acc">
-      <summary>
-        <span class="acc-chevron">▶</span>
-        <span class="acc-name">${flag} ${esc(b.name)}</span>
-        <div class="acc-meta">
-          <span class="tag">${esc(SECTOR_LABELS[b.sector]||b.sector)}</span>
-          ${b.ticker ? `<span class="tag">${esc(b.ticker)}</span>` : ''}
-        </div>
-      </summary>
-      <div class="acc-body">
-        ${b.one_liner ? `<div class="acc-one-liner">${esc(b.one_liner)}</div>` : ''}
-        <div class="acc-sublabel">This cycle's signals</div>
-        <div class="acc-trigger-row">${trigTags}</div>
-        ${!b.has_news ? `<div class="acc-no-news">No material news this cycle.</div>` : ''}
-        ${angles ? `<div class="acc-sublabel">Consulting angles</div><ul class="acc-list angles">${angles}</ul>` : ''}
-        ${points ? `<div class="acc-sublabel">Talking points for a partner meeting</div><ol class="acc-list points">${points}</ol>` : ''}
-        ${headlines ? `<div class="acc-sublabel">This cycle's headlines</div><div class="acc-headlines">${headlines}</div>` : ''}
-      </div>
-    </details>`;
-  }).join('');
-}
-
-/* ── Sector Themes ──────────────────────────────────────────────────────────── */
-function renderSectorThemes(themes) {
-  if (!themes || !themes.length) return;
-  show('themes');
-  document.getElementById('themes-grid').innerHTML = themes.map(t => `
-    <div class="theme-card">
-      <div class="theme-name">${esc(t.theme)}</div>
-      <div class="theme-accs"><strong>Accounts:</strong> ${esc((t.accounts||[]).join(', '))}</div>
-      <div class="theme-desc">${esc(t.description)}</div>
-      <div class="theme-sls">${(t.service_lines||[]).map(sl=>`<span class="tag sl">${esc(sl)}</span>`).join('')}</div>
-    </div>`).join('');
-}
-
-/* ── Market Strip ───────────────────────────────────────────────────────────── */
-function renderMarketStrip(prices) {
-  if (!prices || !prices.length) return;
-  show('market');
-  document.getElementById('market-strip').innerHTML = prices.map(p => {
-    const chg = p.change_pct;
-    const cls = chg == null ? 'flat' : chg > 0 ? 'up' : chg < 0 ? 'down' : 'flat';
-    const chgStr = chg == null ? '—' : (chg > 0 ? '+' : '') + Number(chg).toFixed(1) + '%';
-    const priceStr = p.price != null ? Number(p.price).toFixed(2) : 'N/A';
-    const indic = (p.source === 'web' || p.source === 'unavailable')
-      ? `<span class="indicative">indicative</span>` : '';
-    return `<div class="price-chip">
-      <span class="pc-name">${esc(p.display)}</span>
-      <span class="pc-val">${priceStr}</span>
-      <span class="pc-chg ${cls}">${chgStr}</span>
-      <span class="pc-unit">${esc(p.unit)}</span>
-      ${indic}
-    </div>`;
-  }).join('');
-}
-
-/* ── Headlines ──────────────────────────────────────────────────────────────── */
-function renderHeadlines(headlines) {
-  if (!headlines || !headlines.length) return;
-  show('headlines');
-  document.getElementById('headlines-list').innerHTML = headlines.map((h,i) => `
-    <div class="hl-item">
-      <div class="hl-rank">${i+1}</div>
-      <div class="hl-body">
-        <div class="hl-title"><a href="${esc(h.url)}" target="_blank" rel="noopener">${esc(h.title)}</a></div>
-        <div class="hl-meta">
-          <span>${esc(h.source)}</span>
-          ${h.published ? `<span>${fmtDateShort(h.published)}</span>` : ''}
-        </div>
-      </div>
-    </div>`).join('');
-}
-
-/* ── Archive ────────────────────────────────────────────────────────────────── */
-async function loadArchive() {
-  try {
-    const resp = await fetch('data/archive.json');
-    if (!resp.ok) return;
-    const entries = await resp.json();
-    if (!entries.length) return;
-    document.getElementById('archive-list').innerHTML = entries.slice(0,20).map(e =>
-      `<div class="archive-item"><span>${esc(e.date)}</span><a href="${esc(e.path)}">View digest →</a></div>`
-    ).join('');
-  } catch {}
-}
-
-/* ── Load ───────────────────────────────────────────────────────────────────── */
-async function loadDashboard() {
-  try {
-    const resp = await fetch('data/latest.json');
-    if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-    const d = await resp.json();
-
-    document.getElementById('loading').style.display = 'none';
-
-    const ts = fmtDateTime(d.generated_at);
-    document.getElementById('header-ts').textContent = ts;
-    document.getElementById('sidebar-ts').textContent = ts;
-
-    renderPartnerBrief(d.weekly_brief, d.generated_at);
-    renderOpportunityRadar(d.opportunity_radar || []);
-    renderAccountIntelligence(d.account_briefs || []);
-    renderSectorThemes(d.sector_themes || []);
-    renderMarketStrip(d.prices || []);
-    renderHeadlines(d.top_headlines || []);
-    loadArchive();
-  } catch(err) {
-    document.getElementById('loading').textContent = 'Failed to load: ' + err.message;
+// ── 7. Risks & Events ─────────────────────────────────────────────────────────
+function renderRisksEvents(risks,events){
+  const re=document.getElementById('risks-body');
+  const ee=document.getElementById('events-body');
+  if(risks&&risks.length){
+    let h='<h3 style="font-size:.85rem;margin-bottom:.6rem">Risks to Watch</h3><div class="risk-list">';
+    risks.forEach(r=>{h+=`<div class="risk-item"><span class="risk-dir ${r.direction||'downside'}">${esc(r.direction||'downside')}</span><span class="risk-text">${esc(r.text)}</span></div>`});
+    re.innerHTML=h+'</div>';
+  }
+  if(events&&events.length){
+    let h='<h3 style="font-size:.85rem;margin:1rem 0 .6rem">Events Calendar</h3><div class="events-list">';
+    events.forEach(e=>{
+      const uc=e.upcoming?' upcoming':'';
+      const rel=(e.related&&e.related.length)?e.related.slice(0,3).map(esc).join(', '):'';
+      h+=`<div class="event-item${uc}"><span class="event-date">${esc(e.date)}</span><div><div class="event-title">${esc(e.title)}${e.upcoming?' <span class="tag upcoming">this week</span>':''}</div>${rel?`<div class="event-related">${rel}</div>`:''}</div></div>`;
+    });
+    ee.innerHTML=h+'</div>';
   }
 }
 
-loadDashboard();
+// ── 8. Headlines ─────────────────────────────────────────────────────────────
+function renderHeadlines(headlines){
+  const el=document.getElementById('hl-body');
+  if(!headlines||!headlines.length){el.innerHTML='<div style="color:var(--text3);font-size:.82rem">No headlines.</div>';return}
+  let html='<div class="card">';
+  headlines.forEach(h=>{
+    html+=`<div class="headline-item"><div class="headline-text"><a href="${esc(h.url)}" target="_blank" rel="noopener">${esc(h.title)}</a><div class="headline-meta"><span>${esc(h.source)}</span><span>${fmtAge(h.age_h)}</span>${flagTags(h.flags)}${driverTags(h.drivers)}</div></div><span class="headline-score">${(h.score||0).toFixed(2)}</span></div>`;
+  });
+  el.innerHTML=html+'</div>';
+}
+
+// ── 9-12. Company panels ─────────────────────────────────────────────────────
+function renderCompanies(companies,sector,bodyId){
+  const el=document.getElementById(bodyId);
+  const filtered=(companies||[]).filter(c=>c.sector===sector);
+  if(!filtered.length){el.innerHTML='<div style="color:var(--text3);font-size:.82rem;padding:.5rem 0">No companies with flagged news in this sector today.</div>';return}
+  filtered.sort((a,b)=>(b.items||[]).length-(a.items||[]).length);
+  let html='<div class="company-grid">';
+  filtered.forEach(co=>{
+    const st=`<span class="tag ${sectorClass(co.sector)}">${esc(co.sector.replace(/_/g,' '))}</span>`;
+    html+=`<div class="company-card"><div class="company-name">${esc(co.name)}</div><div class="company-meta">${esc(co.country||'')} ${co.ticker?`<span class="company-ticker">${esc(co.ticker)}</span>`:''} ${st}</div>`;
+    if(co.summary)html+=`<div class="company-summary">${esc(co.summary)}</div>`;
+    const items=co.items||[];
+    if(!items.length){html+='<div class="company-no-news">No flagged news in last 36h.</div>'}
+    else{
+      html+='<div>';
+      items.forEach(item=>{html+=`<div class="company-item"><a href="${esc(item.url)}" target="_blank" rel="noopener">${esc(item.title)}</a><div class="company-item-meta"><span>${esc(item.source)}</span><span>${fmtAge(item.age_h)}</span>${flagTags(item.flags)}${driverTags(item.drivers)}</div></div>`});
+      html+='</div>';
+    }
+    html+='</div>';
+  });
+  el.innerHTML=html+'</div>';
+}
+
+// ── 13. Regulatory ───────────────────────────────────────────────────────────
+function renderRegulatory(regulatory){
+  const el=document.getElementById('reg-body');
+  if(!regulatory||!regulatory.length){el.innerHTML='<div style="color:var(--text3);font-size:.82rem;padding:.5rem 0">No regulatory items detected today.</div>';return}
+  const byJur={};
+  regulatory.forEach(r=>{const j=r.jurisdiction||'Other';(byJur[j]=byJur[j]||[]).push(r)});
+  const order=['Singapore','Malaysia','Indonesia','Thailand','Regional / Global','Other'];
+  let html='';
+  (order.concat(Object.keys(byJur).filter(j=>!order.includes(j)))).forEach(jur=>{
+    const items=byJur[jur];if(!items)return;
+    html+=`<div class="reg-jurisdiction">${esc(jur)}</div>`;
+    items.forEach(r=>{
+      html+=`<div class="reg-item"><div class="reg-title"><a href="${esc(r.url||'#')}" target="_blank" rel="noopener">${esc(r.title)}</a></div><div class="reg-meta">${r.source?`<span>${esc(r.source)}</span>`:''}${(r.commodities||[]).length?`<span>Commodities: ${r.commodities.map(esc).join(', ')}</span>`:''}${(r.companies||[]).length?`<span>Companies: ${r.companies.map(esc).join(', ')}</span>`:''}${r.effective_date?`<span>Effective: ${esc(r.effective_date)}</span>`:''}</div></div>`;
+    });
+  });
+  el.innerHTML=html;
+}
+
+// ── 14. Archive ───────────────────────────────────────────────────────────────
+function renderArchive(entries){
+  const el=document.getElementById('archive-body');
+  if(!entries||!entries.length){el.innerHTML='<div style="color:var(--text3);font-size:.82rem">No archive entries yet.</div>';return}
+  let html='<div class="archive-list">';
+  entries.forEach(e=>{html+=`<a class="archive-link" href="${esc(e.path)}">${esc(e.date)}</a>`});
+  el.innerHTML=html+'</div>';
+}
+
+// ── Main load ─────────────────────────────────────────────────────────────────
+async function load(){
+  let data=null,archive=[];
+  try{data=await fetch('data/latest.json').then(r=>{if(!r.ok)throw r;return r.json()})}
+  catch(e){document.getElementById('gen-ts').textContent='Could not load data/latest.json — run agent first.';return}
+  try{archive=await fetch('data/archive.json').then(r=>r.ok?r.json():[])}catch(e){archive=[]}
+
+  const ts=data.generated_at?new Date(data.generated_at):null;
+  const sgt=ts?new Date(ts.getTime()+8*3600000):null;
+  document.getElementById('gen-ts').textContent=ts?`Generated ${ts.toUTCString()} · ${sgt?sgt.toUTCString().replace(' GMT',''):''} SGT`:'No timestamp';
+  document.getElementById('sidebar-ts').textContent=ts?ts.toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'}):'';
+  document.title=`Commodity Trading — Sector Intelligence${ts?' | '+ts.toLocaleDateString('en-GB',{day:'2-digit',month:'short'}):''}`;
+
+  renderExecSummary(data.exec_summary,data.executive_brief);
+  renderMacro(data.macro);
+  renderPrices(data.prices,data.heatmap,data.correlations);
+  renderOutlook(data.outlook);
+  renderFundamentals(data.fundamentals);
+  renderThemes(data.themes);
+  renderRisksEvents(data.risks,data.events);
+  renderHeadlines(data.top_headlines);
+  renderCompanies(data.companies,'energy','energy-body');
+  renderCompanies(data.companies,'metals_mining','metals-body');
+  renderCompanies(data.companies,'power_utilities','power-body');
+  renderCompanies(data.companies,'trading','trading-body');
+  renderRegulatory(data.regulatory);
+  renderArchive(archive);
+
+  // Active nav
+  const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){document.querySelectorAll('.nav-link').forEach(a=>a.classList.remove('active'));const l=document.querySelector(`.nav-link[href="#${e.target.id}"]`);if(l)l.classList.add('active')}})},{threshold:.2});
+  document.querySelectorAll('.section').forEach(s=>obs.observe(s));
+}
+load();
 </script>
 </body>
 </html>
