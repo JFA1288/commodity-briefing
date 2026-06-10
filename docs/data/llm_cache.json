@@ -770,5 +770,57 @@
   "a511fa9ebb12f0ca": {
     "text": "```json\n{\n  \"bullets\": [\n    \"Henry Hub surged 3.3% — tightest near-term LNG supply signal in weeks; SEA buyers on spot cargoes should reassess price exposure before fixing.\",\n    \"China PPI hit near 4-year high in May on AI-driven commodity surge, but CPI underwhelmed — industrial demand real, consumer pass-through weak; watch copper.\",\n    \"Copper (COMEX) fell 1.1% despite China PPI strength — OPEC+ supply unwind and property sector drag keeping metals bulls cautious; Capstone Copper still posting record earnings.\",\n    \"Indonesia scraps mining profit-sharing plan, relaxes coal and nickel quotas — material supply-side relief for SEA traders; monitor volume and offtake contract renegotiations.\",\n    \"WTI +1.6%, Brent +1.4% despite OPEC+ unwind overhang — Iran energy shock warning from DIW economists adds Middle East risk premium; Hormuz exposure critical.\",\n    \"Wheat (CBOT) +1.4% — grain price pressure building alongside energy; SEA food and agri-commodity importers face dual input cost squeeze heading into Q3.\"\n  ]\n}\n```",
     "ts": "2026-06-10T11:53:03.787527+00:00"
+  },
+  "060c07e6322e5e31": {
+    "text": "Anglo American's share price declined as copper prices weakened and its proposed Teck Resources merger faced increased scrutiny, while the company simultaneously undergoes a strategic review and asset reassessment following the failed BHP takeover bid. The miner is now shifting focus to valuation metrics amid its announced coal exit and continued pursuit of the Teck combination.",
+    "ts": "2026-06-10T12:00:09.531189+00:00"
+  },
+  "9f46cf678aa6b4c6": {
+    "text": "Pertamina secured $477 million in international financing for three geothermal projects while deepening upstream technology and low-carbon solutions partnerships with SLB, signaling strategic pivot toward renewable energy. The assignment of Russian oil import handling to Lemigas instead of Pertamina reflects potential regulatory shifts in the company's role in crude oil management.",
+    "ts": "2026-06-10T12:00:11.394499+00:00"
+  },
+  "50bbe867832706cc": {
+    "text": "```json\n[\n  \"Typical scope: M&A · 6-9 months · Deal integration & production optimization\",\n  \"Typical scope: M&A · 9-12 months · Merger integration & copper portfolio alignment\",\n  \"Typical scope: Operations · 3-6 months · Joint venture structuring & asset development\",\n  \"Typical scope: M&A · 6-9 months · Partnership integration & renewable energy scaling\",\n  \"Typical scope: M&A · 9-12 months · Portfolio optimization & commodity market strategy\",\n  \"Typical scope: M&A · 6-9 months · Joint venture management & solar partnership integration\",\n  \"Typical scope: Regulatory · 3-6 months · Policy compliance & export deal structuring\",\n  \"Typical scope: Operations · 6-9 months · Asset development & offshore rig integration\"\n]\n```",
+    "ts": "2026-06-10T12:00:22.601642+00:00"
+  },
+  "a89ffff43fffd43f": {
+    "text": "```json\n[\n  \"Shell faces sustained oil price strength driven by geopolitical tensions (Iran conflict) and structural supply constraints, while simultaneously diversifying into offshore discoveries (Namibia) and positioning for China's energy transition—creating tension between maximizing near-term commodity upside and long-term energy transition positioning. [Signal Type: Compliance Risk]\",\n  \n  \"Anglo American is navigating strategic repositioning following the failed BHP takeover bid, with its proposed Teck copper merger under regulatory scrutiny and a coal exit strategy that fundamentally reshapes its portfolio toward battery metals—exposing execution risk as valuation multiples compress amid commodity price volatility. [Signal Type: Integration]\",\n  \n  \"PETRONAS is leveraging its Malaysia upstream assets to consolidate regional dominance through strategic M&A (EnQuest acquisition doubling production volumes) while maintaining brand portfolio strength, positioning itself as a tier-one Asian energy company despite global energy transition headwinds. [Signal Type: Integration]\"\n]\n```",
+    "ts": "2026-06-10T12:00:25.928305+00:00"
+  },
+  "76f9da01ec24f1e1": {
+    "text": "Major energy companies operating in Southeast Asian commodity markets are navigating the dual pressures of maintaining shareholder returns while advancing energy transition strategies. TotalEnergies Trading Asia and Shell are prominently positioning energy transition alongside dividend decisions in investor communications, reflecting market expectations for sustainable business models. Shell's leadership appointment at TenneT—appointing Shell Nederland's head as CEO—signals the oil majors' strategic pivot toward renewable infrastructure, while Rio Tinto's involvement in the region indicates how diversified commodity players are adapting their portfolios. These moves suggest that SEA commodity markets are experiencing a structural shift where energy transition commitments have become integral to corporate strategy and investor value propositions, not peripheral to traditional dividend-focused operations.",
+    "ts": "2026-06-10T12:00:28.841059+00:00"
+  },
+  "4d0b9eb77a642c56": {
+    "text": "Across Southeast Asian commodity markets, major players are pursuing distinct digital and automation strategies to address investor concerns. Rio Tinto is leading the charge with significant investments in automation and low-carbon aluminium production as a growth lever amid valuation pressures, while Shell faces headwinds with shrinking reserves and limited growth prospects that have raised questions about stock valuation. PETRONAS and other regional players listed on the KLSE—including energy and resource companies like MISC, Velesto Energy, and Sapura Industrial—operate within this evolving landscape where automation and sustainability increasingly shape competitive positioning. The divergence between Rio Tinto's proactive technology adoption and Shell's operational challenges illustrates how digital capabilities and production innovation are becoming critical differentiators in SEA commodity trading and treasury operations.",
+    "ts": "2026-06-10T12:00:31.529230+00:00"
+  },
+  "456a90d28285f8fc": {
+    "text": "SEA's crude oil markets face significant supply resilience challenges, as evidenced by volatile price swings tied to geopolitical tensions in the Middle East—with Brent crude fluctuating near $92 amid US-Iran strikes and peace negotiations—while domestic energy infrastructure remains vulnerable, exemplified by TNB's power outages in Malaysia. PETRONAS and Tenaga Nasional Berhad operate within this precarious environment where energy disruptions can cascade across the broader economy, as warned by Hassan Marican, highlighting how crude oil supply shocks directly threaten the region's power generation and industrial stability. The disconnect between global crude volatility and SEA's ability to absorb price swings underscores the critical need for supply diversification beyond traditional oil-dependent energy portfolios.",
+    "ts": "2026-06-10T12:00:34.576638+00:00"
+  },
+  "5ae63548eb8c8ae9": {
+    "text": "Indonesia's push to centralize control over strategic commodity exports through new Downstream Steelmaking Initiative (DSI) regulations signals a significant policy shift that is drawing investor scrutiny, as evidenced by Danantara's ratings focus on governance and policy direction; however, Danantara has clarified that the new DSI policy will not disrupt existing export agreements, potentially mitigating concerns for major players like Pertamina, PETRONAS, Shell, and TotalEnergies Trading Asia operating across SEA commodity markets. This regulatory tightening reflects Indonesia's intent to strengthen its leverage over commodity supply chains, though the carve-out for legacy contracts suggests a measured implementation approach designed to balance policy objectives with investor confidence.",
+    "ts": "2026-06-10T12:00:39.556031+00:00"
+  },
+  "44dfbd2f0dcfed2e": {
+    "text": "The World Bank benchmark for crude oil stands at $1,130 per metric ton as of May 1, 2026, representing a modest 0.8% quarterly increase despite flat momentum. Live trading reflects stronger near-term sentiment, with Brent crude up 1.3% today to $93.08 per barrel, suggesting intraday bullish momentum offsetting the measured quarterly trend.",
+    "ts": "2026-06-10T12:00:41.039278+00:00"
+  },
+  "86d589c46bb56020": {
+    "text": "The World Bank benchmark for natural gas stands at 2.9 USD/MMBtu, down 3.3% quarter-over-quarter, reflecting softer underlying demand conditions. However, live Henry Hub prices at 3.24 USD/MMBtu are up 3.5% today, suggesting near-term volatility and potential supply concerns offsetting the broader downward trend.",
+    "ts": "2026-06-10T12:00:42.743454+00:00"
+  },
+  "21bc3bcd204962bd": {
+    "text": "The World Bank benchmark for copper stands at $13,483.8 per metric ton, representing a +7.6% increase quarter-over-quarter, reflecting sustained strength in the market. However, live COMEX copper prices at $13,745.81 per ton have declined 1.2% today, suggesting some near-term profit-taking despite the broader uptrend.",
+    "ts": "2026-06-10T12:00:44.024743+00:00"
+  },
+  "3175c8b0dcce481f": {
+    "text": "The World Bank benchmark for aluminium stands at $3,654.0/mt as of May 1st, 2026, reflecting an 8.3% quarterly increase and signalling sustained upward momentum in the market. However, live pricing at $3,520.00/t shows a modest 0.7% daily decline, suggesting some near-term consolidation despite the broader bullish quarterly trend.",
+    "ts": "2026-06-10T12:00:45.646386+00:00"
+  },
+  "244f5287b34d4db4": {
+    "text": "```json\n{\n  \"bullets\": [\n    \"Henry Hub surged 3.5%; monitor LNG offtake exposure — SEA buyers with spot or short-term contracts face immediate repricing pressure this week.\",\n    \"China PPI hit near 4-year high in May on AI infrastructure and commodity demand; supports metals and energy import volumes near-term despite weak CPI.\",\n    \"Indonesia scraps mining profit-sharing plan, relaxes coal and nickel export quotas — direct upside for SEA traders; revisit supply agreements and quota assumptions now.\",\n    \"WTI +1.6%, Brent +1.3% despite OPEC+ accelerated unwind — Iran escalation risk and Hormuz disruption fears overriding supply overhang; hedge crude freight exposure.\",\n    \"Copper (COMEX) -1.2% on China property weakness; Capstone Copper posting record earnings signals producer resilience — price dip may offer entry for physical buyers.\",\n    \"Germany recession risk from Iran energy shock (DIW warning) could suppress European industrial demand, redirecting Middle East and Russian energy flows toward SEA markets.\"\n  ]\n}\n```",
+    "ts": "2026-06-10T12:00:52.841012+00:00"
   }
 }
