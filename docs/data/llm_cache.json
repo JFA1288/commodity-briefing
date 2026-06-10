@@ -1,160 +1,4 @@
 {
-  "0c252cc1c0fcf703": {
-    "text": "BHP's copper business is growing to rival its traditional iron ore operations, signaling a strategic shift in the company's portfolio as it positions itself for the energy transition demand. This rebalancing could reshape investor perception of BHP's growth profile and earnings composition in coming years.",
-    "ts": "2026-06-07T04:00:58.118544+00:00"
-  },
-  "d127e38697edfbb4": {
-    "text": "Rio Tinto is advancing automation and low-carbon aluminium production as part of a growth strategy while benefiting from rising metals prices driven by optimism around Iran nuclear deal negotiations. The company's stock has broken out, reflecting broader sector strength from potential geopolitical supply constraints.",
-    "ts": "2026-06-07T04:00:59.843180+00:00"
-  },
-  "c64ad8e78adf929a": {
-    "text": "TNB experienced a significant power outage on Saturday, 8 June 2024, while continuing its renewable energy expansion strategy. The outage represents an operational disruption risk, though details on cause and scope remain limited in the available headlines.",
-    "ts": "2026-06-07T04:01:01.281124+00:00"
-  },
-  "173af11a08236688": {
-    "text": "Indonesia is consolidating control of strategic commodity exports under Danantara Sumberdaya Indonesia effective June 1, centralizing a previously fragmented export system. This regulatory shift will consolidate the state's oversight of critical commodities trading and represents a significant operational restructuring for the sector.",
-    "ts": "2026-06-07T04:01:02.670641+00:00"
-  },
-  "6acb5fbfb68989be": {
-    "text": "BHP's copper portfolio is now outpacing iron ore as a growth driver, signaling a strategic pivot that will reshape capital allocation and operational focus toward higher-margin battery-metal exposure—critical for SEA traders hedging against iron ore volatility. Simultaneously, Rio Tinto's push into automation and low-carbon aluminium production indicates competitive pressure on cost structures and carbon pricing, which will compress margins for regional smelters lacking equivalent capex investments. Together, these moves suggest major miners are repositioning upstream toward energy transition commodities while squeezing downstream operators, forcing SEA companies to either integrate vertically or accept margin compression in traditional segments.",
-    "ts": "2026-06-07T04:01:05.221399+00:00"
-  },
-  "7ba4d839f3ee3f22": {
-    "text": "# Power & Utilities — Daily Signal Summary\n\nTNB faces compliance scrutiny over its renewable energy transition strategy, with Aliran flagging governance risks that could delay project approvals or increase regulatory oversight costs on its utility operations. For TNB's management, this signals the need to tighten stakeholder communication on green capex allocation and environmental impact assessments to avoid operational bottlenecks in its decarbonization roadmap. PTT, Pertamina, and EGAT show no material moves today, leaving regional power market dynamics largely unchanged.",
-    "ts": "2026-06-07T04:01:07.488298+00:00"
-  },
-  "6a6ba358e8d49218": {
-    "text": "# Trading Sector Brief\n\nDanantara Sumberdaya Indonesia's assumption of centralized export control for Indonesia's strategic commodities effective June 1 creates immediate operational friction for traders: counterparties must now route transactions through a state intermediary, adding compliance layers and potentially extending settlement timelines. For Mercuria, Cargill Asia, and PETRONAS operating in Indonesian commodity flows, this signals tightened government oversight and reduced direct market access, requiring rapid contract review and relationship recalibration with Danantara to maintain supply continuity.",
-    "ts": "2026-06-07T04:01:09.665397+00:00"
-  },
-  "8b1426050e474fe8": {
-    "text": "```json\n[\n  \"Typical scope: M&A · 3-6 months · Post-acquisition integration planning\",\n  \"Typical scope: Risk · 2-3 months · Regulatory compliance assessment\",\n  \"Typical scope: Risk · 1-2 months · Export control compliance review\",\n  \"Typical scope: Strategy · 4-6 months · Business portfolio optimization\"\n]\n```",
-    "ts": "2026-06-07T04:01:10.852064+00:00"
-  },
-  "a8180578cc860f3a": {
-    "text": "```json\n[\n  \"Rio Tinto is capitalizing on geopolitical tailwinds (Iran deal hopes lifting metals prices) while simultaneously advancing automation and low-carbon aluminium production to address ESG pressures—positioning itself for both near-term commodity upside and long-term regulatory compliance. Signal type: Sustainability + Market Opportunity.\",\n  \"Tenaga Nasional Berhad faces a critical tension between its green energy transition commitments and operational reliability, as evidenced by recent major power outages that undermine confidence in its grid management amid the shift to renewable sources. Signal type: Compliance Risk + Operational Vulnerability.\",\n  \"Indonesia's centralization of strategic commodity exports under Danantara Sumberdaya Indonesia starting June 1 represents a significant compliance and market access risk for traders, as the new state-controlled monopoly will reshape export channels and pricing power for critical materials. Signal type: Compliance Risk + Regulatory Disruption.\"\n]\n```",
-    "ts": "2026-06-07T04:01:13.389617+00:00"
-  },
-  "4f131be1946aafed": {
-    "text": "```json\n{\n  \"narrative\": \"The dominant signal today is a structural repositioning by major miners away from bulk commodities: BHP's copper portfolio is overtaking iron ore as its primary growth engine, while Rio Tinto is accelerating automation and low-carbon aluminium production — together signaling that upstream capital is flowing decisively toward energy transition metals, leaving SEA traders with legacy iron ore and aluminium exposure facing sustained margin compression unless they move to vertically integrate. Rio Tinto's breakout on Iran deal optimism adds a near-term metals price tailwind, but the underlying strategic shift is secular, not cyclical. On the regulatory front, Indonesia's centralization of strategic commodity exports under Danantara Sumberdaya Indonesia from June 1 introduces immediate operational friction for major trading houses including Mercuria, Cargill Asia, and PETRONAS, who must urgently review contracts and establish direct working relationships with the new state intermediary to avoid supply chain disruption. TNB's governance scrutiny from Aliran over its renewable energy transition adds a compliance risk layer for Malaysian utility-linked commodity flows, with potential project approval delays threatening the decarbonization timelines that regional energy traders are pricing into forward capacity assumptions. Collectively, today's signals underscore a trifecta of pressures — commodity mix shift, state intervention in trade flows, and green transition compliance risk — that require SEA trading and energy firms to reassess counterparty exposure, regulatory buffers, and hedging strategies simultaneously.\",\n  \"themes\": [\n    \"Battery Metals Upstream Pivot\",\n    \"Indonesia Export Centralization Risk\",\n    \"Downstream Margin Compression\",\n    \"Green Transition Compliance Drag\",\n    \"State Intermediary Trade Friction\"\n  ]\n}\n```",
-    "ts": "2026-06-07T04:01:23.001206+00:00"
-  },
-  "672289e29aa10cd6": {
-    "text": "Rio Tinto is positioning itself at the forefront of the energy transition through investments in automation and low-carbon aluminium production, critical commodities for the clean energy shift. The broader SEA commodities landscape reflects accelerating decarbonisation momentum, with solar power expansion continuing despite geopolitical shifts, while maritime transport—exemplified by resilient VLCC tanker demand—adapts to support growing clean energy supply chains. These developments underscore how SEA commodity markets are increasingly shaped by energy transition imperatives, from production innovations in aluminium to logistics infrastructure supporting renewable energy deployment across the region.",
-    "ts": "2026-06-07T04:01:27.532950+00:00"
-  },
-  "0d6045ab44bcd8c9": {
-    "text": "Rio Tinto is advancing automation technologies across its commodity operations, including low-carbon aluminium production, as part of a broader industry shift toward digitalization in Southeast Asian markets; however, the company faces headwinds from iron ore market pressures, with RBC downgrading its stock to Underperform. The broader commodity trading and treasury landscape is being shaped by macroeconomic uncertainties, including oil price volatility that is influencing central bank policy decisions, as evidenced by Bank of England officials citing energy crisis concerns in rate deliberations. Meanwhile, geopolitical factors—such as government funding redirected toward coal infrastructure—add complexity to long-term commodity market forecasting and the strategic digital investments that trading desks must navigate.",
-    "ts": "2026-06-07T04:01:30.112506+00:00"
-  },
-  "77e1e85c59238b83": {
-    "text": "Indonesia's consolidation of strategic commodity exports under state-controlled Danantara Sumberdaya Indonesia from June 1 reflects a significant policy shift reshaping Southeast Asian commodity markets, particularly affecting coal exports which are reportedly retreating according to dry bulk market indicators. This centralization initiative occurs amid broader macroeconomic pressures, as evidenced by Bank of England officials flagging oil-related risks to monetary policy outlooks across global markets. The downstreaming strategy through Danantara positions Indonesia to exert greater control over various commodity supply chains, potentially influencing regional trade dynamics at a time when shipping and logistics sectors—as reflected in Posidonia 2026's record 35,000 visitors and 2,200 exhibitors—are tracking substantial shifts in commodity flows and maritime commerce patterns.",
-    "ts": "2026-06-07T04:01:32.488094+00:00"
-  },
-  "9701d100aff95e2c": {
-    "text": "```json\n{\n  \"risks\": [\n    {\n      \"direction\": \"downside\",\n      \"text\": \"Brent and WTI both sold off sharply today (-2.4% and -2.8% respectively), with momentum now pointing lower; OPEC+ accelerated output unwinding continues to add barrels to an already well-supplied market, raising the risk of follow-through selling and a test of key support levels in the near term.\"\n    },\n    {\n      \"direction\": \"downside\",\n      \"text\": \"China's persistent industrial slowdown and ongoing property-sector distress continue to suppress base metals demand, with copper, iron ore, and aluminium all exposed to further downside if Beijing refrains from delivering meaningful stimulus — a particular headwind for SEA exporters such as Indonesia and the Philippines.\"\n    },\n    {\n      \"direction\": \"downside\",\n      \"text\": \"Broad USD strength is amplifying losses across USD-denominated commodities; SEA importers face tightening cost pressure while regional currencies remain under pressure, reducing domestic demand appetite and compressing refining and processing margins.\"\n    },\n    {\n      \"direction\": \"upside\",\n      \"text\": \"Escalating Middle East tensions retain the capacity to spike crude prices sharply higher should conflict broaden and threaten Strait of Horm",
-    "ts": "2026-06-07T04:01:40.068017+00:00"
-  },
-  "7068dff6f9275706": {
-    "text": "Goldman Sachs has raised its 2026 Brent crude average price forecast by $8 to $85 per barrel, with WTI projected at $79 per barrel. Current prices show Brent at $67.73 and WTI at $63.68 per barrel, according to News On AIR.",
-    "ts": "2026-06-07T04:01:41.855038+00:00"
-  },
-  "0913c1564129ac2e": {
-    "text": "```json\n{\n  \"bullets\": [\n    \"Aluminium surges 7.2% — strongest mover today; watch LME positioning and downstream impact on SEA manufacturing and packaging clients.\",\n    \"WTI drops 2.8% amid OPEC+ accelerated unwind; dark tanker traffic surging near Hormuz adds execution and compliance risk for crude liftings.\",\n    \"Indonesia's Danantara Sumberdaya Indonesia assumes control of strategic commodity exports from June 1 — immediate counterparty and contract review required for SEA traders.\",\n    \"Rigzone flags $100 oil risk through 2028 despite near-term weakness; advise clients to maintain hedge cover beyond current OPEC+ noise.\",\n    \"TNB flagged on compliance risk over green energy commitments; relevant for SEA energy transition financing and offtake exposure in Malaysia.\",\n    \"Silver -5.4%, Gold -2.9% signal broad risk-off in metals; China industrial slowdown narrative reinforcing — reassess metals-linked trade finance exposures.\"\n  ]\n}\n```",
-    "ts": "2026-06-07T04:01:49.712100+00:00"
-  },
-  "f446c395f3a78cc8": {
-    "text": "BHP's copper portfolio is now outpacing iron ore in growth trajectory, signalling a strategic portfolio rebalancing that SEA traders should monitor for volume and pricing shifts in regional copper markets; simultaneously, Rio Tinto's acceleration of automation and low-carbon aluminium production indicates capex intensity will remain elevated while competing on ESG-compliant supply, potentially pressuring margins for traditional producers and reshaping offtake agreements across Southeast Asia.",
-    "ts": "2026-06-07T04:08:00.149641+00:00"
-  },
-  "2c1c83cb13bd4647": {
-    "text": "# Power & Utilities — Daily Signal Summary\n\nTenaga Nasional Berhad faces compliance risk exposure related to its renewable energy transition strategy, per Aliran reporting, which could create operational constraints if environmental or regulatory standards are not met during project implementation. For TNB's trading counterparties and power offtake partners, this signals potential delays or cost escalations in green capacity additions, warranting contract flexibility reviews and timeline confirmations on renewable projects currently in development pipelines.",
-    "ts": "2026-06-07T04:08:02.291409+00:00"
-  },
-  "0c6b51a5c204dc74": {
-    "text": "# Trading Sector Brief\n\nDanantara Sumberdaya Indonesia's June 1 assumption of centralized control over Indonesia's strategic commodity exports represents a structural compliance shift that will require SEA traders to route transactions through this new state entity, likely triggering contract renegotiations, extended settlement timelines, and mandatory regulatory filings—operations teams should begin mapping revised approval workflows and counterparty relationships immediately. This consolidation increases bureaucratic friction for commodity flow but may create arbitrage opportunities around timing delays and pricing gaps during the transition period. Traders with existing Indonesian commodity positions should audit contract force majeure and regulatory change clauses now, as Danantara's control introduces new counterparty and sovereign risk variables.",
-    "ts": "2026-06-07T04:08:05.041893+00:00"
-  },
-  "fcb37b6b1656119c": {
-    "text": "```json\n{\n  \"narrative\": \"The most consequential signal today is Danantara Sumberdaya Indonesia's June 1 assumption of centralized control over Indonesia's strategic commodity exports, which introduces immediate structural compliance risk for SEA traders who must now reroute transactions through a new state entity — operations teams should audit force majeure and regulatory change clauses in existing Indonesian commodity contracts without delay. Simultaneously, BHP's copper portfolio surpassing iron ore in growth trajectory signals a strategic rebalancing that will likely tighten regional copper supply dynamics and reprice offtake agreements across Southeast Asia, while Rio Tinto's breakout — partly driven by Iran deal optimism lifting metals prices — adds a geopolitical demand-side catalyst that amplifies near-term copper and aluminium price volatility. Rio Tinto's concurrent push into automation and low-carbon aluminium production signals sustained capex intensity and ESG-compliant supply differentiation, which will pressure traditional producers and reshape offtake terms for SEA buyers lacking green procurement mandates. On the power side, Tenaga Nasional Berhad's compliance risk exposure around its renewable energy transition — flagged by Aliran — warrants immediate contract flexibility reviews for TNB offtake partners, as regulatory or environmental shortfalls could delay green capacity additions and create cost escalations across development pipelines. Taken together, today's signals point to a tightening compliance and counterparty risk environment across Indonesian commodity flows, metals supply chains, and SEA power infrastructure simultaneously.\",\n  \"themes\": [\n    \"Indonesia sovereign commodity risk\",\n    \"Copper portfolio rebalancing\",\n    \"ESG supply differentiation pressure\",\n    \"TNB renewable compliance delays\",\n    \"Geopolitical metals price catalyst\"\n  ]\n}\n```",
-    "ts": "2026-06-07T04:08:13.580067+00:00"
-  },
-  "9087e8e72a2cf525": {
-    "text": "# Energy Transition & Decarbonisation in SEA Commodity Markets\n\nRio Tinto is positioning itself at the forefront of the energy transition by advancing automation and developing low-carbon aluminium production, signalling a strategic pivot toward decarbonised commodity supply chains. The broader regional momentum reflects growing momentum in clean energy sectors, with solar power expansion accelerating globally, while strategic petroleum reserves (SPR) dynamics indicate an ongoing shift away from fossil fuel dependence. This convergence demonstrates that major commodity producers and investors across Southeast Asia and beyond are increasingly aligning capital and operations toward renewable energy and low-carbon alternatives, reshaping traditional commodity markets as decarbonisation imperatives reshape investment priorities.",
-    "ts": "2026-06-07T04:08:15.775524+00:00"
-  },
-  "acd0735f9544ab82": {
-    "text": "Rio Tinto is advancing automation and low-carbon aluminium production as part of a broader industry shift toward digital efficiency in commodity markets, positioning itself to capture value from technological innovation. Meanwhile, geopolitical pressures are reshaping energy commodity dynamics, with U.S. coal plants receiving defense funding despite long-term industry decline, while oil price volatility continues to influence monetary policy decisions as evidenced by Bank of England officials flagging oil crisis impacts on rate decisions. These developments underscore how digital transformation, energy transition tensions, and macroeconomic factors are simultaneously reshaping commodity trading and treasury operations across global markets. The competing forces of automation-driven efficiency gains and political interventions in legacy energy commodities create complex risk management challenges for treasury and trading operations navigating SEA commodity exposure.",
-    "ts": "2026-06-07T04:08:19.392126+00:00"
-  },
-  "78dbde5490c34f78": {
-    "text": "Indonesia's centralization of strategic commodity exports under state-owned Danantara Sumberdaya Indonesia, effective June 1, represents a significant downstreaming policy shift in Southeast Asian commodity markets that could influence global supply dynamics. This consolidation of export control coincides with broader macroeconomic uncertainty, as Bank of England officials have flagged that oil market volatility is complicating monetary policy decisions across developed economies. The tightening of Indonesia's commodity export governance through Danantara may reshape regional trading patterns and pricing mechanisms for various commodities, while simultaneously exposing these markets to external shocks stemming from energy sector instability.",
-    "ts": "2026-06-07T04:08:21.361982+00:00"
-  },
-  "5f810c21d337e98c": {
-    "text": "The World Bank forecasts natural gas prices to reach $2.94 by May 1, 2026, representing a 47.7% increase over 30 days with an overall rising trend according to FRED data. Recent market dynamics show natural gas moving in tandem with oil markets, which have retreated as the dollar rallied following the NFP report, per FXEmpire.",
-    "ts": "2026-06-07T04:08:22.681472+00:00"
-  },
-  "6f9da5116159e9ed": {
-    "text": "Rio Tinto is advancing automation and low-carbon aluminium production as part of a growth strategy aimed at improving operational efficiency and meeting decarbonization demands. This initiative positions the company to capture rising demand for sustainable metals while enhancing cost competitiveness in key operations.",
-    "ts": "2026-06-07T07:57:33.543772+00:00"
-  },
-  "03d2d074433be2e2": {
-    "text": "Rio Tinto's push into automation and low-carbon aluminium signals accelerating capex deployment in premium-grade production, directly reshaping operational cost structures and market positioning in SEA's energy-intensive aluminium refining sector. For trading desks, this indicates Rio Tinto will prioritize volume and margin expansion in decarbonized products, potentially softening near-term spot pricing while creating supply segmentation between standard and ESG-compliant grades that SEA buyers must navigate. Operations teams should model margin compression on conventional aluminium while identifying offtake partnerships for certified low-carbon volumes, as Rio Tinto's scale advantages in automation will drive competitive pressure across regional smelters.",
-    "ts": "2026-06-07T07:57:36.301412+00:00"
-  },
-  "a7e32efe69e2b9e4": {
-    "text": "```json\n[\n  \"Typical scope: Compliance team · 3-6 months · Regulatory risk assessment\",\n  \"Typical scope: Legal team · 2-4 months · Export compliance advisory\",\n  \"Typical scope: Sustainability team · 4-8 months · Carbon reduction strategy\"\n]\n```",
-    "ts": "2026-06-07T07:57:38.621169+00:00"
-  },
-  "1f18ee748830fd0e": {
-    "text": "```json\n[\n  \"Rio Tinto is investing in automation and low-carbon aluminum production to position itself competitively as ESG and decarbonization pressures intensify in metals mining. Signal type: Sustainability.\",\n  \"TNB faces dual compliance risks: a strategic green energy transition commitment (sustainability compliance) alongside operational reliability failures (June 2024 power outages), exposing tensions between growth mandates and execution capability in Malaysia's power sector. Signal type: Compliance Risk.\",\n  \"Indonesia's centralization of strategic commodity exports under Danantara Sumberdaya Indonesia (effective June 1) represents a major regulatory and market access shift that directly impacts trading companies' operational licenses and supply chain control. Signal type: Compliance Risk.\"\n]\n```",
-    "ts": "2026-06-07T07:57:41.307086+00:00"
-  },
-  "575fe42a2301e8b4": {
-    "text": "```json\n{\n  \"narrative\": \"Three distinct structural signals are converging to reshape SEA commodity trading conditions this week. Rio Tinto's accelerating push into automation and low-carbon aluminium will segment global supply between ESG-compliant and conventional grades, compressing margins for regional smelters and forcing SEA buyers to actively negotiate offtake access to certified volumes before pricing premiums widen. Simultaneously, Danantara Sumberdaya Indonesia's assumption of centralized control over Indonesia's strategic commodity exports from June 1 introduces immediate counterparty and sovereign risk variables — SEA traders with Indonesian commodity exposure must urgently audit force majeure clauses and map revised approval workflows, as settlement timelines and contract terms face near-certain renegotiation. Tenaga Nasional Berhad's compliance risk exposure around its renewable energy transition adds a third layer of uncertainty, signalling potential delays or cost escalations in Malaysian green capacity additions that could affect power offtake partners and energy project timelines across the region. With energy markets quiet, these three signals — supply segmentation in aluminium, regulatory centralization in Indonesia, and green compliance friction in Malaysia — collectively tighten the operational and commercial environment for SEA trading and energy companies heading into Q3.\",\n  \"themes\": [\n    \"ESG aluminium supply segmentation\",\n    \"Indonesia sovereign commodity control\",\n    \"Green compliance execution risk\",\n    \"SEA contract renegotiation pressure\",\n    \"Regulatory friction arbitrage\"\n  ]\n}\n```",
-    "ts": "2026-06-07T07:57:49.615555+00:00"
-  },
-  "404e722fb8cb438c": {
-    "text": "Rio Tinto is positioning itself as a key player in Southeast Asia's energy transition by advancing low-carbon aluminium production and automation technologies, addressing growing demand for decarbonised commodities in global supply chains. While solar power expansion continues to accelerate in the region, driven by favourable policy conditions, the resilience of VLCC tanker demand reflects ongoing requirements for transporting energy commodities during this transitional period. Together, these developments signal a mixed energy landscape in SEA where decarbonisation initiatives coexist with sustained fossil fuel logistics, though major producers like Rio Tinto are increasingly investing in cleaner production methods to align with decarbonisation objectives.",
-    "ts": "2026-06-07T07:57:52.743770+00:00"
-  },
-  "91348b512348e66b": {
-    "text": "Rio Tinto's strategic push toward automation and low-carbon aluminium production reflects the sector's broader shift toward digital and AI-driven efficiencies in SEA commodity markets, positioning the company to capture premium valuations as environmental standards tighten. However, this modernization agenda faces headwinds from commodity price volatility, as evidenced by RBC's recent downgrade citing iron ore concerns, highlighting how AI and automation investments must compete with near-term market pressures. Meanwhile, geopolitical factors—such as government support for traditional coal infrastructure—underscore the tension between long-term digital transformation in commodity trading and short-term political priorities that could reshape regional supply dynamics. For treasury and trading operations, this environment demands sophisticated AI-powered risk management tools to navigate both the efficiency gains from automation and the unpredictable policy shifts affecting major commodities across Southeast Asia.",
-    "ts": "2026-06-07T07:57:55.541361+00:00"
-  },
-  "b2b6a76eae2143ac": {
-    "text": "Indonesia's shift toward centralizing commodity export control through Danantara Sumberdaya Indonesia, effective June 1, represents a significant policy realignment in Southeast Asian commodity markets that affects key exports like coal, which have recently shown retreating export volumes in the dry bulk sector. This downstreaming strategy consolidates Indonesia's strategic commodity trade under state management, potentially reshaping supply chains and market dynamics across SEA. The timing coincides with renewed industry engagement, as evidenced by major maritime trade events like Posidonia 2026—which attracted over 35,000 visitors and 2,200 exhibitors—suggesting ongoing stakeholder interest in navigating Indonesia's evolving regulatory environment. The centralization of commodity exports through Danantara signals Jakarta's intent to capture greater value from resource extraction while managing the strategic commodities essential to regional commerce.",
-    "ts": "2026-06-07T07:57:58.199100+00:00"
-  },
-  "54a68c2ea1dccb63": {
-    "text": "Natural gas prices are expected to rise, with the World Bank forecasting continued upward momentum. According to FRED data from May 1, 2026, prices reached $2.94, representing a 47.7% increase over the previous 30 days.",
-    "ts": "2026-06-07T07:58:00.618140+00:00"
-  },
-  "6200acbc0e3e7ef4": {
-    "text": "```json\n{\n  \"bullets\": [\n    \"OPEC+ eyeing fourth consecutive quota hike; combined with WTI -2.8% and Brent -2.4%, accelerated supply unwind is structurally pressuring crude — flag for any long crude exposure.\",\n    \"Dark tanker traffic surging in Hormuz as market flies blind on flows; compliance risk acute for SEA traders with Middle East crude or LNG liftings — verify counterparty vessel screening now.\",\n    \"Silver -5.2%, Gold -2.3% overnight; China industrial demand weakness driving metals selloff — SEA commodity houses with silver or precious metals inventory face mark-to-market pressure today.\",\n    \"Henry Hub gas -3.6%; watch LNG cargo economics for SEA buyers — spot purchase windows may open if US supply overhang persists into next week.\",\n    \"Indonesia centralizes strategic commodity exports under Danantara Sumberdaya Indonesia from June 1; immediate compliance and counterparty review required for any Indonesian coal, nickel, or palm oil contracts.\",\n    \"TNB's green strategy under scrutiny via Aliran critique; partners advising Malaysian utilities should note reputational and regulatory overhang on TNB's renewable capex narrative.\"\n  ]\n}\n```",
-    "ts": "2026-06-07T08:17:03.154547+00:00"
-  },
-  "214420775e3242c5": {
-    "text": "# Tenaga Nasional Berhad (TNB) News Summary\n\nTNB is positioning itself in Malaysia's growing renewable energy market for data center demand, as DayOne secures over 1 GW of renewable capacity in the country, signaling both opportunity and competitive pressure in the sector's green energy transition. The \"green gamble\" reference suggests TNB faces strategic choices in balancing renewable investments against traditional generation assets and grid stability obligations.",
-    "ts": "2026-06-07T10:12:55.672478+00:00"
-  },
-  "d38fd2261fcec9da": {
-    "text": "DayOne's securing of over 1 GW renewable capacity for Malaysian data centers signals accelerating demand for clean power offtake agreements in SEA, with direct implications for Tenaga Nasional Berhad's (TNB) grid planning and renewable procurement strategy—TNB will likely face both opportunities to supply baseload power to anchor tenants and pressure to expand its own renewable portfolio to meet corporate PPA demand from hyperscalers. This renewable procurement trend may require TNB to accelerate capital deployment in solar and wind assets while managing grid integration complexity from distributed generation.",
-    "ts": "2026-06-07T10:12:58.571039+00:00"
-  },
-  "da2207bb2fdb281d": {
-    "text": "```json\n[\n  \"Rio Tinto is accelerating automation and low-carbon aluminum production to maintain competitiveness in a decarbonizing metals market. Signal type: Sustainability—capex shift toward emissions reduction and operational efficiency.\",\n  \"Tenaga Nasional Berhad is pivoting toward renewable energy infrastructure to capture Malaysia's growing data center demand, with DayOne securing over 1 GW of capacity. Signal type: Sustainability—strategic expansion into high-margin green power segments.\",\n  \"Danantara Sumberdaya Indonesia's centralized control of strategic commodity exports from June 1 represents a state-led consolidation of Indonesia's critical minerals trade. Signal type: Compliance Risk—regulatory/geopolitical shift reshaping commodity supply chains and export access.\"\n]\n```",
-    "ts": "2026-06-07T10:13:00.847419+00:00"
-  },
-  "2438ff59138959be": {
-    "text": "```json\n{\n  \"narrative\": \"Today's most actionable signals center on structural shifts in Indonesian commodity governance, SEA power procurement, and aluminium supply segmentation. Danantara Sumberdaya Indonesia's assumption of centralized control over Indonesia's strategic commodity exports from June 1 is the single most operationally urgent development — SEA trading desks with Indonesian commodity exposure must immediately audit contract clauses and begin mapping revised counterparty and approval workflows, as settlement delays and renegotiation risk are near-certain in the transition window. On the power side, DayOne's 1 GW+ renewable offtake commitment for Malaysian data centers signals that hyperscaler-driven corporate PPA demand is becoming a material force in SEA grid planning, placing Tenaga Nasional Berhad under simultaneous pressure to supply anchor baseload tenants and accelerate its own renewable build-out to remain competitive. Rio Tinto's automation and low-carbon aluminium push introduces a supply segmentation dynamic that SEA buyers and regional smelters cannot ignore — the emergence of ESG-compliant versus standard aluminium grades will compress margins on conventional volumes while rewarding early movers who secure certified offtake partnerships. Taken together, these signals point to a week where compliance readiness, green procurement positioning, and counterparty risk reassessment are the priority actions across trading, operations, and strategy functions.\",\n  \"themes\": [\n    \"Indonesia sovereign commodity risk\",\n    \"ESG aluminium supply segmentation\",\n    \"Hyperscaler-driven renewable PPA demand\",\n    \"SEA grid decarbonization pressure\",\n    \"Transition-period arbitrage windows\"\n  ]\n}\n```",
-    "ts": "2026-06-07T10:13:09.580321+00:00"
-  },
-  "aa2ee944b2090b58": {
-    "text": "```json\n{\n  \"bullets\": [\n    \"OPEC+ preparing fourth consecutive quota hike; combined with dark tanker surge in Hormuz, WTI -2.8% and Brent -2.4% — oversupply narrative now dominant.\",\n    \"Henry Hub gas -3.6%; watch SEA LNG procurement windows — spot softness may offer near-term contract repricing opportunities before any Hormuz disruption premium returns.\",\n    \"Silver -5.2%, Gold -2.3% signal broad risk-off and China demand pessimism; metals-linked SEA trading books face mark-to-market pressure this morning.\",\n    \"Dark tanker traffic surging in Hormuz per OilPrice — compliance and sanctions exposure elevated for SEA traders with opaque counterparty chains; flag for legal review now.\",\n    \"Tenaga Nasional secured 1GW+ renewable offtake for Malaysian data centers via DayOne; confirms accelerating SEA power demand as structural driver for TNB capex and grid stress.\",\n    \"Trump redirecting defense funds into US coal plants while solar booms — limited direct SEA impact but signals policy volatility; monitor coal import pricing and US export competitiveness.\"\n  ]\n}\n```",
-    "ts": "2026-06-07T10:13:17.493540+00:00"
-  },
   "abc89306280f911e": {
     "text": "Shell is partnering with C3 AI to deploy AI agents for predictive maintenance automation, while simultaneously divesting non-core assets—Mercuria acquired Shell's oil trading venture for $1.4bn and Shell is considering selling its stake in an Australian carbon credits developer. These moves signal Shell's strategic shift toward technology integration and portfolio streamlining amid energy transition pressures.",
     "ts": "2026-06-07T11:13:06.350814+00:00"
@@ -898,5 +742,121 @@
   "5955b4282661847a": {
     "text": "```json\n{\n  \"bullets\": [\n    \"Copper +1.5% on COMEX leads metals; watch China industrial data — property weakness remains a ceiling risk for sustained rally.\",\n    \"WTI -1.0%, Brent -0.9% as OPEC+ accelerated unwind adds supply; Oil surrendering Monday gains signals bearish near-term crude positioning.\",\n    \"Kuwait re-entering Asian oil sales for first time since conflict began — supply diversification opportunity for SEA buyers; assess contract terms urgently.\",\n    \"Morgan Stanley flags Asian LNG prices heading to 3.5-year highs; China buying post-Iran shock tightening spot market — hedge exposure now.\",\n    \"Iron ore ASX miner compliance risk elevated as China's property slowdown deepens; BHP, Rio Tinto demand outlook warrants downside scenario review.\",\n    \"Henry Hub +0.8% amid LNG Asia demand recovery — SEA energy traders should monitor LNG-gas spread widening for arbitrage or cost exposure.\"\n  ]\n}\n```",
     "ts": "2026-06-09T10:56:13.849252+00:00"
+  },
+  "5af85912f1ed21db": {
+    "text": "Shell's leadership expects sustained upward pressure on oil prices beyond any Iran conflict resolution, while the company advances its production portfolio with an oil discovery offshore Namibia and anticipates robust long-term LNG demand growth despite near-term geopolitical volatility.",
+    "ts": "2026-06-10T10:43:08.228269+00:00"
+  },
+  "0c1aa521819e0cb7": {
+    "text": "TotalEnergies is advancing its energy transition strategy with an extended solar partnership with Ceres in Indonesia through its ENEOS subsidiary, while the company faces upcoming dividend decisions that will likely reflect its strategic pivot toward renewables and lower-carbon energy.",
+    "ts": "2026-06-10T10:43:10.347789+00:00"
+  },
+  "69e20366d0c4e22a": {
+    "text": "BHP is experiencing a strategic shift as its copper business grows to rival iron ore amid strong copper prices and record earnings, though softer iron ore and copper markets present valuation challenges. The company is expanding potash operations with rail deals while securing contracts with partners like Macro Metals, signaling portfolio diversification amid commodity price volatility.",
+    "ts": "2026-06-10T10:43:11.815065+00:00"
+  },
+  "82cd0595ff5734f8": {
+    "text": "PT Aneka Tambang Tbk reported a significant Q1 2026 profit increase despite softening gold prices, suggesting improved operational efficiency or higher production volumes offsetting commodity price headwinds. The result demonstrates resilience in the Indonesian metals mining sector amid volatile precious metals markets.",
+    "ts": "2026-06-10T10:43:13.560874+00:00"
+  },
+  "235ead351d9a0e91": {
+    "text": "TNB has executed major renewable energy partnerships, with DayOne securing approximately 1.5 GW of solar capacity and 2.2 GWh of battery storage across multiple agreements, while Blueleaf Energy Consortium advanced a 100 MW battery storage project—signaling TNB's strategic pivot toward utility-scale renewables and energy storage to support Malaysia's decarbonization goals. These transactions represent significant capacity additions and suggest TNB is leveraging partnerships to scale clean energy infrastructure amid growing demand from data centers and industrial users.",
+    "ts": "2026-06-10T10:43:15.568814+00:00"
+  },
+  "dd4935fbaf2f9ee4": {
+    "text": "Pertamina strengthened a strategic collaboration with Schlumberger Baker Hughes (SLB) to develop upstream technology and low-carbon solutions, signaling a shift toward energy transition initiatives. Pertamina Hulu Indonesia exceeded its 2025 production targets at its annual shareholder meeting, demonstrating operational strength amid the company's environmental commitments.",
+    "ts": "2026-06-10T10:43:16.890232+00:00"
+  },
+  "06e088cdcb562b5f": {
+    "text": "Mercuria reported an 88% surge in first-half profit, capitalizing on commodity market volatility and price shocks across its trading portfolio. The result demonstrates the commodity trader's ability to extract value from market dislocations, though sustainability depends on ongoing volatility.",
+    "ts": "2026-06-10T10:43:18.028252+00:00"
+  },
+  "84abda5f8a036f6a": {
+    "text": "Cargill strengthened its European logistics and production capacity with a €56m Belgian expansion and took delivery of a newbuilding tanker vessel, enhancing supply chain efficiency across the region. A new VP of Human Resources appointment signals continued organizational development amid operational growth.",
+    "ts": "2026-06-10T10:43:19.760948+00:00"
+  },
+  "af0d6d91ecc0d098": {
+    "text": "PETRONAS signed a 20-year LNG supply agreement with Japan's JERA, securing long-term demand and revenue while EnQuest's proposed $833 million acquisition of offshore Malaysian PSC interests signals continued portfolio consolidation in the region. These developments reflect PETRONAS's strategy to strengthen upstream assets and lock in energy security partnerships amid geopolitical tensions in the Middle East.",
+    "ts": "2026-06-10T10:43:21.343798+00:00"
+  },
+  "00beeb38e9dffc5e": {
+    "text": "Indonesia's state trading company Danantara has launched a centralized export portal while pledging to honor existing contracts, despite market hesitation over the new regime. The company is simultaneously exploring expansion into aircraft leasing, signaling diversification beyond its core trading operations.",
+    "ts": "2026-06-10T10:43:22.615231+00:00"
+  },
+  "e0b107dfcae88f73": {
+    "text": "Shell's leadership expects sustained crude price support beyond any Iran geopolitical resolution, signaling confidence in upstream pricing—operationally, trading desks should model higher floor assumptions for H2 planning and hedging strategies. TotalEnergies Trading Asia faces investor scrutiny on dividend policy and energy transition capex allocation, creating near-term volatility that may pressure regional trading margins and require careful position management across their SEA operations. Both signals suggest traders should anticipate tighter crude balances and potential dividend-driven repricing, warranting immediate review of exposure and working capital assumptions.",
+    "ts": "2026-06-10T10:43:25.287177+00:00"
+  },
+  "efcfb434ce5506d2": {
+    "text": "Anglo American's post-BHP rejection asset review signals potential divestments that could reshape SEA supply chains for iron ore and copper, while BHP faces margin pressure from softening commodity prices despite potash rail infrastructure gains—operationally, both majors are likely to reduce near-term capex and reassess regional project economics. Rio Tinto's automation and low-carbon aluminium push indicates competitive differentiation through operational efficiency and ESG positioning, whereas MIND ID's Q1 profit resilience despite gold price softening suggests Indonesian miners can maintain margins through cost discipline, critical for SEA sourcing strategies. These signals collectively point to sector consolidation risk, selective investment in automation/decarbonization, and regional producer resilience in a softer pricing environment.",
+    "ts": "2026-06-10T10:43:27.999684+00:00"
+  },
+  "281ad8fe9b86df5c": {
+    "text": "Pertamina's deepened partnership with SLB on low-carbon upstream technology signals the national oil major is operationalizing its energy transition strategy beyond downstream, potentially reducing project development costs through shared expertise while hedging against carbon-linked regulatory risk. TNB's formalization of the 100MW battery storage project via Blueleaf Energy Consortium indicates Malaysia's grid operator is locking in critical infrastructure for renewable integration, directly impacting dispatch flexibility and ancillary service revenues as renewable penetration increases. Both moves suggest SEA's energy majors are shifting capex allocation toward transition assets, creating near-term opportunities in low-carbon tech services and grid modernization while pressuring traditional thermal generation economics.",
+    "ts": "2026-06-10T10:43:33.945460+00:00"
+  },
+  "8b94796100a360d0": {
+    "text": "Cargill Asia's HR leadership restructure signals potential operational realignment, while Danantara's mandatory centralized export portal creates compliance friction that trading houses must navigate immediately to avoid clearance delays. Mercuria's 88% profit surge demonstrates strong positioning to capitalize on volatility, contrasting with PETRONAS's $833M acquisition activity that could reshape offshore PSC participation and alter partner obligations in Malaysian operations.",
+    "ts": "2026-06-10T10:43:35.993378+00:00"
+  },
+  "f076b1e7f73839b7": {
+    "text": "```json\n[\n  \"Typical scope: M&A · 3-4 months · Acquisition integration planning\",\n  \"Typical scope: Operations · 2-3 months · Discovery development advisory\",\n  \"Typical scope: Energy · 4-6 months · Renewable partnership structuring\",\n  \"Typical scope: Strategy · 3-4 months · Portfolio optimization review\",\n  \"Typical scope: Strategy · 4-6 months · Post-bid strategic repositioning\",\n  \"Typical scope: Business Dev · 2-3 months · Partnership expansion support\",\n  \"Typical scope: Regulatory · 1-2 months · Export policy compliance\",\n  \"Typical scope: Risk · 2-3 months · Commodity exposure management\"\n]\n```",
+    "ts": "2026-06-10T10:43:37.961618+00:00"
+  },
+  "f5b1b5bcc9581148": {
+    "text": "```json\n[\n  \"Shell [Compliance Risk]: Shell's leadership is signaling sustained high oil prices despite geopolitical de-escalation, while simultaneously advancing new offshore discoveries (Namibia) and positioning for China's accelerating energy transition—creating tension between defending legacy hydrocarbon assets and capturing renewable upside.\",\n  \"Tenaga Nasional Berhad [Sustainability]: TNB is rapidly scaling battery storage and solar capacity through multiple large partnerships (100MW BESS, 1+ GW renewable), signaling a strategic pivot toward grid-stabilizing renewables infrastructure rather than traditional generation—a material reorientation of Malaysia's power utility backbone.\",\n  \"PETRONAS [Integration]: PETRONAS is simultaneously consolidating upstream PSC positions in Malaysia ($833M acquisition), locking in long-term LNG export commitments to Japan (20 years), and leveraging regional energy security concerns—vertically integrating the value chain from production through strategic long-term offtake agreements.\"\n]\n```",
+    "ts": "2026-06-10T10:43:41.431651+00:00"
+  },
+  "74dbdb5ddc525770": {
+    "text": "```json\n{\n  \"bullets\": [\n    \"Shell signals crude price floor support beyond Iran resolution; H2 trading desks should revise upward hedging assumptions and working capital buffers immediately.\",\n    \"PETRONAS acquires $833M in Malaysian PSC interests; offshore partner obligations and PSC participation terms face near-term restructuring across SEA operations.\",\n    \"Anglo American post-BHP asset review risks SEA iron ore and copper supply chain disruption; BHP margin pressure compounds capex retreat across both majors.\",\n    \"Mercuria posts 88% profit surge on volatility capture; contrasts sharply with TotalEnergies Trading Asia dividend scrutiny pressuring SEA regional margins.\",\n    \"TNB locks 100MW battery storage via Blueleaf Consortium; renewable dispatch flexibility and ancillary revenues reshaping Malaysian grid economics now.\",\n    \"Pertamina-SLB low-carbon upstream partnership and MIND ID Q1 margin resilience signal SEA national producers accelerating transition capex while defending cost discipline.\"\n  ],\n  \"themes\": [\n    \"Crude floor repricing\",\n    \"SEA upstream consolidation\",\n    \"Grid transition capex shift\",\n    \"Volatility divergence trading\",\n    \"National producer resilience\"\n  ]\n}\n```",
+    "ts": "2026-06-10T10:43:48.888413+00:00"
+  },
+  "9e17955109f5d7f6": {
+    "text": "Across Southeast Asian commodity markets, major energy and mining players are advancing decarbonisation initiatives while balancing shareholder returns. TotalEnergies is maintaining focus on its energy transition strategy alongside dividend decisions, signalling commitment to both renewable investments and investor returns. Shell's leadership transition, with its Nederland head appointed as CEO of grid operator TenneT, reflects the company's pivot toward renewable infrastructure development. Rio Tinto is similarly positioning itself for sustainable growth by advancing automation and low-carbon aluminium production, demonstrating how traditional commodity producers are integrating decarbonisation into core business strategies across the region.",
+    "ts": "2026-06-10T10:43:50.927887+00:00"
+  },
+  "509ac91791a588b7": {
+    "text": "Rio Tinto is leveraging automation and digital technologies to enhance operational efficiency in low-carbon aluminium production as it addresses valuation pressures, signaling a strategic shift toward technology-driven commodity processing in the region. Meanwhile, Shell faces headwinds with shrinking reserves and modest growth prospects that have drawn valuation concerns, contrasting with Rio Tinto's expansion-focused automation strategy. Across SEA's broader commodity and energy landscape—spanning players like PETRONAS, Danantara, and listed entities including PETRONAS Gas, MISC, and Velesto Energy—the theme reflects a divergence: established majors are deploying digital and automation tools to improve margins and sustainability, while traditional growth narratives face skepticism. This suggests that digital capability and operational modernization are becoming critical competitive differentiators in SEA commodity trading and treasury operations.",
+    "ts": "2026-06-10T10:43:54.170921+00:00"
+  },
+  "5b85708c6f7d320a": {
+    "text": "SEA's crude oil market resilience faces vulnerabilities highlighted by recent geopolitical volatility and domestic infrastructure challenges. While Brent crude fluctuated near $92 amid Iran-Israel tensions—signaling global supply uncertainty—Malaysia's energy sector exemplified localized fragility, with Tenaga Nasional Berhad (TNB) experiencing power outages that prompted warnings from industry figures like Hassan Marican about economic spillover effects. These incidents underscore SEA's exposure to both international crude oil price shocks (driven by Middle Eastern geopolitical risk) and domestic supply chain disruptions, suggesting that true market resilience requires both diversification of crude sources and strengthening of domestic energy infrastructure beyond major players like PETRONAS.",
+    "ts": "2026-06-10T10:43:57.730577+00:00"
+  },
+  "f435358900b98f5b": {
+    "text": "China's industrial pivot toward green energy is reshaping SEA commodity demand patterns across multiple sectors. CATL's advancement in sodium-ion battery technology—achieving a 20-year lifespan through its \"One Shell, Two Cells\" design—signals accelerating demand for energy storage materials, with the battery maker projecting energy storage will constitute half its global sales by 2030. Simultaneously, China's traditional energy requirements remain substantial, with Chinese refiners delaying projects amid Middle East supply disruptions while LNG demand in Asia recovers through Chinese purchases, demonstrating that the energy transition is additive rather than immediately substitutive. This dual momentum—simultaneous growth in green technology adoption and continued hydrocarbon demand—creates complex commodity dynamics for suppliers including Shell operating across the region.",
+    "ts": "2026-06-10T10:44:00.374119+00:00"
+  },
+  "f78d433f27af57c1": {
+    "text": "Indonesia's downstream integration (DSI) policy has emerged as a critical governance issue shaping investor sentiment across SEA commodity markets, with Danantara's ratings signals reflecting heightened scrutiny of the nation's policy direction. The Indonesian government's move to centralize control over strategic commodity exports through new regulation has prompted clarification from industry players—Danantara notably reassured stakeholders that the DSI policy would not retroactively affect existing export arrangements, a statement aimed at stabilizing confidence among majors like Shell, PETRONAS, and Pertamina operating in the region. This regulatory shift underscores Indonesia's broader strategy to capture greater value in commodity downstreaming, a theme particularly relevant to oil and gas traders including TotalEnergies Trading Asia navigating the region's evolving policy landscape.",
+    "ts": "2026-06-10T10:44:06.206329+00:00"
+  },
+  "6d4299feaa72ab01": {
+    "text": "```json\n{\n  \"risks\": [\n    {\n      \"direction\": \"upside\",\n      \"text\": \"Shell CEO warnings that energy shortages could persist into 2027 amid Iran conflict signal a structural tightening in LNG and crude supply — SEA buyers reliant on Middle East cargoes face sustained price pressure and potential spot market scramble, supporting elevated energy benchmarks through the medium term.\"\n    },\n    {\n      \"direction\": \"upside\",\n      \"text\": \"Strait of Hormuz disruption risk remains acute; any escalation beyond current Iran conflict parameters could choke ~20% of global oil and LNG flows, creating sharp spot premium spikes for SEA importers (Japan, South Korea, Thailand) and amplifying regional energy security concerns.\"\n    },\n    {\n      \"direction\": \"upside\",\n      \"text\": \"BHP contract award to Macro Metals (ASX:M4M) signals major miners are actively locking in supply agreements, suggesting underlying confidence in long-cycle metals demand — potential upside catalyst for bulk commodities and base metals sentiment in SEA trading desks despite soft Chinese macro data.\"\n    },\n    {\n      \"direction\": \"downside\",\n      \"text\": \"OPEC+ accelerated output unwind continues to add barrels to an already uncertain demand environment; if Iran conflict",
+    "ts": "2026-06-10T10:44:14.313590+00:00"
+  },
+  "056cbddc7478fa37": {
+    "text": "The World Bank benchmark for crude oil stands at $1,130.0 USD/mt, up 0.8% quarter-over-quarter as of May 1, 2026, indicating modest positive momentum in the broader market. However, intraday trading reflects some weakness, with Brent Crude currently at $91.27 USD/bbl and down 0.7% today, suggesting near-term price consolidation.",
+    "ts": "2026-06-10T10:44:16.033613+00:00"
+  },
+  "468938252aec977e": {
+    "text": "The World Bank benchmark for natural gas stands at 2.9 USD/MMBtu, down 3.3% quarter-over-quarter, reflecting continued downward pressure on prices. Henry Hub gas is currently trading at 3.16 USD/MMBtu with a 1.1% gain today, suggesting modest intraday recovery within the broader declining trend.",
+    "ts": "2026-06-10T10:44:17.171251+00:00"
+  },
+  "09ed5cfd096b453c": {
+    "text": "The World Bank benchmark for copper stands at $13,483.8/mt, up 7.6% quarter-over-quarter as of May 1, 2026, reflecting sustained strength in the market. COMEX copper is currently trading at $13,791.00/t with a modest daily decline of 0.9%, indicating consolidation within the uptrend.",
+    "ts": "2026-06-10T10:44:18.479880+00:00"
+  },
+  "c18baadece44b5af": {
+    "text": "The World Bank benchmark shows aluminium at $3,654.0/mt, up 8.3% quarter-on-quarter as of May 1, 2026, signalling strengthening market fundamentals. However, today's live price of $3,510.50/t reflects a 1.0% daily decline, suggesting near-term consolidation after the recent quarterly gains.",
+    "ts": "2026-06-10T10:44:20.814052+00:00"
+  },
+  "0d82a0a812204e06": {
+    "text": "```json\n{\n  \"bullets\": [\n    \"China PPI hit near 4-year high in May on AI-driven commodity surge, but weak CPI signals uneven demand — watch industrial metals repricing.\",\n    \"Brent Crude -0.7%: OPEC+ output unwind pressure compounds China tapping strategic oil stockpiles, reducing spot import pull for SEA traders.\",\n    \"Indonesia scraps mining profit-sharing plan, relaxes coal and nickel quotas — near-term supply upside for SEA buyers; monitor contract renegotiation risk.\",\n    \"CBOT Wheat +1.3%, Henry Hub +1.1%: energy and grain costs firming simultaneously — margin squeeze alert for SEA food processors and LNG importers.\",\n    \"Copper -0.9%, Aluminium -1.0%: China property weakness continues dampening base metals demand despite strong PPI — Capstone Copper earnings resilience is an outlier.\",\n    \"Strait of Hormuz escalation risk persists as China draws stockpiles — SEA energy traders should stress-test crude supply routing and freight cost assumptions now.\"\n  ]\n}\n```",
+    "ts": "2026-06-10T10:44:30.647141+00:00"
+  },
+  "0c90fc48043a1d68": {
+    "text": "If Shell's CEO is right that oil prices rise structurally beyond the Iran conflict, how are you repositioning your long-term supply contracts and hedging strategy before the market fully prices this in?",
+    "ts": "2026-06-10T10:44:35.004827+00:00"
   }
 }
