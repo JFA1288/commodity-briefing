@@ -263,47 +263,47 @@
     "date": "2026-06-10",
     "prices": {
       "brent": {
-        "price": 91.27,
+        "price": 93.13,
         "source": "yfinance",
         "unit": "USD/bbl"
       },
       "wti": {
-        "price": 88.14,
+        "price": 90.0,
         "source": "yfinance",
         "unit": "USD/bbl"
       },
       "henry_hub": {
-        "price": 3.162,
+        "price": 3.23,
         "source": "yfinance",
         "unit": "USD/MMBtu"
       },
       "copper": {
-        "price": 13791.0001,
+        "price": 13760.1355,
         "source": "yfinance",
         "unit": "USD/t"
       },
       "gold": {
-        "price": 4191.7998,
+        "price": 4183.2998,
         "source": "yfinance",
         "unit": "USD/oz"
       },
       "silver": {
-        "price": 64.345,
+        "price": 64.37,
         "source": "yfinance",
         "unit": "USD/oz"
       },
       "aluminium": {
-        "price": 3510.5,
+        "price": 3523.25,
         "source": "yfinance",
         "unit": "USD/t"
       },
       "soybeans": {
-        "price": 1119.5,
+        "price": 1121.75,
         "source": "yfinance",
         "unit": "USc/bu"
       },
       "wheat": {
-        "price": 596.0,
+        "price": 596.75,
         "source": "yfinance",
         "unit": "USc/bu"
       },
