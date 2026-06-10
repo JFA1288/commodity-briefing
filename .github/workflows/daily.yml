@@ -40,6 +40,11 @@ jobs:
           EIA_API_KEY: ${{ secrets.EIA_API_KEY }}    # free key — register at eia.gov
         run: python -m src.main
 
+      - name: Encrypt digest for password gate
+        env:
+          DASHBOARD_PASSWORD: ${{ secrets.DASHBOARD_PASSWORD }}
+        run: python scripts/encrypt_digest.py
+
       - name: Commit and push updated dashboard
         run: |
           git config user.name  "github-actions[bot]"

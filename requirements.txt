@@ -10,3 +10,4 @@ urllib3==2.2.2
 certifi==2024.6.2
 charset-normalizer==3.3.2
 anthropic>=0.30.0         # Claude API for sector narrative summaries (set ANTHROPIC_API_KEY)
+cryptography>=42.0.0      # AES-256-GCM encryption for dashboard password gate
