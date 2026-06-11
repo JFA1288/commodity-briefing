@@ -333,5 +333,80 @@
         "unit": "MYR/t"
       }
     }
+  },
+  {
+    "date": "2026-06-11",
+    "prices": {
+      "brent": {
+        "price": 93.4,
+        "source": "yfinance",
+        "unit": "USD/bbl"
+      },
+      "wti": {
+        "price": 90.45,
+        "source": "yfinance",
+        "unit": "USD/bbl"
+      },
+      "henry_hub": {
+        "price": 3.132,
+        "source": "yfinance",
+        "unit": "USD/MMBtu"
+      },
+      "copper": {
+        "price": 13741.396,
+        "source": "yfinance",
+        "unit": "USD/t"
+      },
+      "gold": {
+        "price": 4101.3999,
+        "source": "yfinance",
+        "unit": "USD/oz"
+      },
+      "silver": {
+        "price": 63.565,
+        "source": "yfinance",
+        "unit": "USD/oz"
+      },
+      "aluminium": {
+        "price": 3519.75,
+        "source": "yfinance",
+        "unit": "USD/t"
+      },
+      "soybeans": {
+        "price": 1121.75,
+        "source": "yfinance",
+        "unit": "USc/bu"
+      },
+      "wheat": {
+        "price": 586.5,
+        "source": "yfinance",
+        "unit": "USc/bu"
+      },
+      "jkm": {
+        "price": null,
+        "source": "unavailable",
+        "unit": "USD/MMBtu"
+      },
+      "newcastle_coal": {
+        "price": null,
+        "source": "unavailable",
+        "unit": "USD/t"
+      },
+      "iron_ore": {
+        "price": null,
+        "source": "unavailable",
+        "unit": "USD/t"
+      },
+      "nickel": {
+        "price": null,
+        "source": "unavailable",
+        "unit": "USD/t"
+      },
+      "palm_oil": {
+        "price": null,
+        "source": "unavailable",
+        "unit": "MYR/t"
+      }
+    }
   }
 ]
