@@ -1,0 +1,1050 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Commodity Trading — Sector Intelligence — 2026-06-13</title>
+<style>
+:root {
+  --bg: #f8f9fa; --surface: #fff; --border: #e2e6ea;
+  --text: #212529; --muted: #6c757d; --accent: #0d6efd;
+  --up: #198754; --dn: #dc3545; --warn: #fd7e14;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+@media(prefers-color-scheme:dark){
+  :root{--bg:#0f1117;--surface:#1a1d24;--border:#2d3139;--text:#e8eaf0;--muted:#9098a9;--accent:#4d8ef9;}
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);line-height:1.6;font-size:15px}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:900px;margin:0 auto;padding:2rem 1.25rem}
+header{margin-bottom:2.5rem;border-bottom:1px solid var(--border);padding-bottom:1.5rem}
+header h1{font-size:1.5rem;font-weight:700;letter-spacing:-.02em}
+header .meta{color:var(--muted);font-size:.85rem;margin-top:.35rem}
+h2{font-size:1.1rem;font-weight:700;margin:2rem 0 .9rem;letter-spacing:-.01em;border-left:3px solid var(--accent);padding-left:.65rem}
+h3{font-size:.95rem;font-weight:600;margin:.75rem 0 .4rem}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:1.1rem 1.25rem;margin-bottom:.75rem}
+.tag{display:inline-block;font-size:.72rem;font-weight:600;letter-spacing:.03em;text-transform:uppercase;padding:.18rem .5rem;border-radius:4px;margin-right:.35rem;background:rgba(13,110,253,.1);color:var(--accent)}
+.tag.earnings{background:rgba(25,135,84,.12);color:#198754}
+.tag.ma{background:rgba(13,202,240,.12);color:#0dcaf0}
+.tag.outage{background:rgba(220,53,69,.12);color:#dc3545}
+.tag.regulatory{background:rgba(253,126,20,.12);color:#fd7e14}
+.tag.geopolitical{background:rgba(111,66,193,.12);color:#6f42c1}
+.tag.price_shock{background:rgba(220,53,69,.12);color:#dc3545}
+.headline{padding:.65rem 0;border-bottom:1px solid var(--border)}
+.headline:last-child{border-bottom:none}
+.headline .src{font-size:.78rem;color:var(--muted);margin-top:.2rem}
+.up{color:var(--up)} .dn{color:var(--dn)} .na{color:var(--muted)}
+.badge{display:inline-block;font-size:.72rem;padding:.15rem .45rem;border-radius:3px;font-weight:600}
+.badge.yfinance{background:rgba(25,135,84,.12);color:#198754}
+.badge.web{background:rgba(253,126,20,.15);color:#fd7e14}
+.badge.unavailable{background:rgba(108,117,125,.12);color:var(--muted)}
+.watch-list{list-style:none}
+.watch-list li{padding:.55rem 0;border-bottom:1px solid var(--border)}
+.watch-list li:last-child{border-bottom:none}
+.watch-list .cat{display:inline-block;width:100px;font-size:.72rem;text-transform:uppercase;font-weight:700;color:var(--muted)}
+details summary{cursor:pointer;user-select:none;font-weight:600;list-style:none;display:flex;align-items:center;gap:.4rem}
+details summary::-webkit-details-marker{display:none}
+details summary::before{content:"▶";font-size:.65rem;transition:transform .15s;display:inline-block}
+details[open] summary::before{transform:rotate(90deg)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Commodity Trading — Sector Intelligence</h1>
+  <div class="meta">Daily digest — 2026-06-13 10:13 UTC / 2026-06-13 18:13 SGT</div>
+  <div class="meta" style="margin-top:.5rem"><a href="../index.html">← Live Dashboard</a></div>
+</header>
+
+<!-- What to Watch -->
+
+<h2>What to Watch</h2>
+<div class="card">
+  <ul class="watch-list">
+    
+    <li><span class="cat">price mover</span> Aluminium up 8.5% to 3858.75 USD/t.</li>
+    
+    <li><span class="cat">price mover</span> Brent Crude down 1.7% to 87.33 USD/bbl.</li>
+    
+    <li><span class="cat">price mover</span> WTI Crude down 1.6% to 84.88 USD/bbl.</li>
+    
+    <li><span class="cat">event</span> TotalEnergies Trading Asia: material events flagged (earnings, esg, growth_strategy).</li>
+    
+    <li><span class="cat">event</span> Shell: material events flagged (esg, geopolitical, outage).</li>
+    
+    <li><span class="cat">event</span> Pertamina: material events flagged (esg, geopolitical, ma).</li>
+    
+    <li><span class="cat">event</span> BHP: material events flagged (earnings, ma, price_shock).</li>
+    
+    <li><span class="cat">data gap</span> Indicative/unavailable prices for: JKM LNG, Newcastle Coal, Iron Ore (62% Fe), Nickel (LME).</li>
+    
+  </ul>
+</div>
+
+
+<!-- Top Headlines -->
+<h2>Top Headlines</h2>
+<div class="card">
+  
+  <div class="headline">
+    <a href="https://news.google.com/rss/articles/CBMikwFBVV95cUxNNV9Gd01UaC1iWUEyWUtkNkxOUTRHVktRSFVSRWg1cG1QSE1zWmEzd1Y0QlVCRFo5dXV1a0VNUXFqRi1Rb0x3WjF5ZVBrLUs2cFVSbVJOXzA2NHBFLTc1UGZmMTQ3ZjJXVUdMWVh1MUtiT0FEYktDdnpLZnM0cTBFU2QtelR3bTh4aUk1QmVkNzRZQk0?oc=5" target="_blank" rel="noopener">Electra’s U.S. Nickel Refinery: Bridging North America’s Supply Gap - Discovery Alert</a>
+    <span class="tag regulatory">regulatory</span>
+    <div class="src">Google News - Metals Mining · Jun 13 09:56 UTC</div>
+  </div>
+  
+  <div class="headline">
+    <a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxNTWRUb2xxVEpVbDRLdHNqekhoUjItdjlSTHFhT0hDZjIwUlRDM1ZxSWdCRUl1cjNBMVRmOFVEOUYtTEp0ZmdxZUNoS2o3Z2trMHg3SXdJeURvd1BZSWN3YVhyU0pHQ1FseXNweXF4eVprR3VTbTJJS1JKeHBsT2w4bHp1UDRZTUhCb0tXWGtjU3U3SS1SSnhoNmc5X1JNNGN3QS1jbFlCTzRITFEtWFVDVXJrblMtMXPSAbcBQVVfeXFMTnhydUVXZWJGX3Z2WGNGMjlxQVo4Qk9KNlJuQmJlV0k2enIzZEh2Qlpfdktyc2lZNFBJY2szaFNhVXFMMWhUYTkyRHdaRmY1NUFRMlM2RUNDNnlYVVZyaFBOX2RNblRHRkpkN1lyQmNqWlRLaUpTQ2lteFU3R2lxVXRaQURhYWNWc3g0Qy1hOEdjOTR0MWwwcWZ3Y3hHSE03d3hkcm5fa3F5NmN2TTg4elFPN2ZoOWpR?oc=5" target="_blank" rel="noopener">Asian Angle | Indonesia’s nickel rule changes are spooking Chinese investors - South China Morning Post</a>
+    <span class="tag geopolitical">geopolitical</span>
+    <div class="src">Google News - Metals Mining · Jun 13 07:00 UTC</div>
+  </div>
+  
+  <div class="headline">
+    <a href="https://news.google.com/rss/articles/CBMizgFBVV95cUxOYkJZTWxqRkhXUGoxbjRpb2NmWC1VZHUtWE9lbnFVQklXTXdWUVFWelpHVm1BbkxOaTZXLWR2d0lVNXN4SE1nNzFnSGNaUEtPaTQwRzdoN3JFYWdIVUVHNXpqSG9BVU1rX0tQUElqOGRaS2NBdUlvVVNOeVZFekl0ejF4Q3FaRE5DelNBeVhRRXd3VXVESXo5U2RxSEx0NFRacDNTMVdnNFpFUFBnUk5GXzdzNFdKV0JkUElzcVFqSWhyb2F4TFdueTNaSTRKQdIB0wFBVV95cUxOZ24xMFVmY29ONVFkX1RzUDNOQlNmdXJ6LXFGSTVVaW9HQjZYb2JsUHpUTDN1dXdzNWVldC1kU0JzcEYyV0pnVC14LWxpeWgzQWpQam5zR3RnYkx4QXhmSmpnck5Ga29wN3QxdnZpdzFCbm54aS1MZzdEVGV2NWRIcm9sUHI1REpLQzRjNjUyWGpLbExqeXlPMXljVVRBRUtIMnU4MHdOd0NfT3E0OWwzR2RMVGJtU2E3MUR4Y3hKbzUzRWN3c1llblE0eEZjdFBzUF9z?oc=5" target="_blank" rel="noopener">Freeport-McMoRan’s Grasberg Extension Talks Shape Long Term Copper Outlook - simplywall.st</a>
+    <span class="tag earnings">earnings</span><span class="tag geopolitical">geopolitical</span><span class="tag enterprise_risk">enterprise_risk</span>
+    <div class="src">Google News - Metals Mining · Jun 13 05:27 UTC</div>
+  </div>
+  
+  <div class="headline">
+    <a href="https://www.channelnewsasia.com/asia/anwar-ibrahim-negeri-sembilan-snap-state-election-no-choice-6180876" target="_blank" rel="noopener">&#39;Never wanted a snap state election&#39; in Negeri Sembilan, but no choice given BN&#39;s actions: Anwar</a>
+    <span class="tag geopolitical">geopolitical</span>
+    <div class="src">Channel NewsAsia Business · Jun 13 04:02 UTC</div>
+  </div>
+  
+  <div class="headline">
+    <a href="https://news.google.com/rss/articles/CBMingFBVV95cUxQRm1yMXIxV050YlhybHhrTlpoZW11OHBGelNnYlVsLVljWFJoQjhzR1Ric0Q0Z3pMbWRMUEEzSmFRek5lM2FzMEk5WnpuQnpXMDk2VnNDeU5XZ1pYX0lZQkM0OTRCanJUV0JzSGJubm83b0Vua1dvejYyc1R4eHYyV3B3TUp4Tko5QjZ6V3JONnBIcXhZdUp0MlhRaUlTZw?oc=5" target="_blank" rel="noopener">Gold Price Forecast 2026: Central Bank Demand and Middle East Peace Drive Rebound - News and Statistics - IndexBox</a>
+    <span class="tag earnings">earnings</span><span class="tag regulatory">regulatory</span>
+    <div class="src">Google News - Metals Mining · Jun 13 02:31 UTC</div>
+  </div>
+  
+  <div class="headline">
+    <a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxNMjNiLXpDVlk4WVhMb0FnUkU5TEdUZTlVZS1fdlRIVlNHZVk2cXBDeTNRUzhWT0o1U1dTanZNbzFBT05EQmNYaDRvRkNyN0JfcXNUeXI3T2J6NmJyQWNyVmFieXpETzFDNlFSbUJtME1qMzVvUGsweDhoeDFPdnJabjAyMC1PMWd5NVIxci1lU2Iwa3p1OWZSOA?oc=5" target="_blank" rel="noopener">US$5.1 Billion in Copper Investment Hinges on Mexican Permits - Mexico Business News</a>
+    <span class="tag regulatory">regulatory</span><span class="tag growth_strategy">growth_strategy</span><span class="tag enterprise_risk">enterprise_risk</span>
+    <div class="src">Google News - Metals Mining · Jun 12 22:37 UTC</div>
+  </div>
+  
+  <div class="headline">
+    <a href="https://news.google.com/rss/articles/CBMivgFBVV95cUxNLWxuNHZOYmRHdERsUEl3U3U4VTIwSjBHMTFWUU9fQTltaEJDeGJ1aFBHSGZuVVhlbGxXSEFBelRZNlljNDRteEEtajVsNkFCVWNmUExiY3hjSmN2UE05c0xxSUVES0JGZ2tzNUVIc2s4TWgxYV9pTXdOTUJFUmxGOExpZVJFUXhaTWdsU1lUNDJNVjZGb1ZjaWNLNTFiQ2YxYWVRVDFZOXN6S2tRN2pta1FabjVjVTBHRjhZTFhB?oc=5" target="_blank" rel="noopener">Commodity wrap: Gold rebounds; oil slips 3% on hope of US-Iran deal - TradingView</a>
+    <span class="tag ma">ma</span><span class="tag geopolitical">geopolitical</span>
+    <div class="src">Google News - Commodity Markets · Jun 12 15:11 UTC</div>
+  </div>
+  
+  <div class="headline">
+    <a href="https://news.google.com/rss/articles/CBMiywFBVV95cUxOLXRNTS1RZmdoNG82U3ZRVTZUNkxLemR6MFo0WkdKcHBTYkdEWXVwQ3lRTTJzc0JhY0RaMWRMNFFZNEg3MVdMWkxKS01nR2xjTFBTbmk2OVFZZG1MYnktb3pKb3lyWHR4cS1OT2x0ZDctTHVRT1dZYzlJS3JoOGJUbGdOREYxUkxkSHFiYnpLa0dfRVFmazF6ZW5TNkIzRnRWek9wZW0zRUUwajFKZ1VQek0xOGhtVHZtY0ROMFhoZnIydkxrTFBCQWtZOA?oc=5" target="_blank" rel="noopener">US refiners can still absorb more Venezuelan oil, Energy Secretary Wright says - Reuters</a>
+    <span class="tag regulatory">regulatory</span>
+    <div class="src">Google News - Reuters Business · Jun 12 21:20 UTC</div>
+  </div>
+  
+  <div class="headline">
+    <a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxNQWg3TG5xNExlOE40WERlbU5TdUMwQlNZSC1TYUVKZV9HN1M3LUNoRGlCdkQ4cmRhQ1UtUkdJSDBrMzN4dGlHOWZ0b18yTFo2SHR1UTBGYkoxTS11aGNMTHAzRGFtMVNSQzRRZUtwLXRxWGsyN3FwVm9XY2stOHN4X21BOU91THhlb0JIakhjVGNEWmpQTkxzZzhONlhlUzRGS1dZdWQtOXAzZWs?oc=5" target="_blank" rel="noopener">Brent falls to lowest since March on expected peace deal - Reuters</a>
+    <span class="tag ma">ma</span>
+    <div class="src">Google News - Reuters Crude/LNG/Brent · Jun 12 19:53 UTC</div>
+  </div>
+  
+  <div class="headline">
+    <a href="https://news.google.com/rss/articles/CBMipAFBVV95cUxQRFFrU0VqUDhrVUVHQ25IRUlaU2RSV3k4RXdMUkxEVjdkX0JPZzRWY1VZZ2JRS1RuTWx2a3dEZW5Sc0dkVUZUS1RVSi1faUY3ZDhieEtnWmRuZ1VNYm9adFZBS3ZBVnl6WW5JaUpZczd6N1R4ZWF6OUw3em9la0xYWDJHWmpPNlctcjFaUEVuaFg3NEttVEhUMjI1NnFFcENNb05zNg?oc=5" target="_blank" rel="noopener">Antofagasta Shares Jump as Copper Rally Puts July Production Update in Focus - Bez Kabli</a>
+    <span class="tag price_shock">price_shock</span>
+    <div class="src">Google News - Metals Mining · Jun 12 15:58 UTC</div>
+  </div>
+  
+  <div class="headline">
+    <a href="https://oilprice.com/Energy/Crude-Oil/The-Oil-Market-Could-Be-Weeks-From-a-Breaking-Point.html" target="_blank" rel="noopener">The Oil Market Could Be Weeks From a Breaking Point</a>
+    <span class="tag ma">ma</span><span class="tag outage">outage</span><span class="tag geopolitical">geopolitical</span>
+    <div class="src">OilPrice.com · Jun 12 23:00 UTC</div>
+  </div>
+  
+  <div class="headline">
+    <a href="https://oilprice.com/Alternative-Energy/Nuclear-Power/Chinas-Fusion-Reactor-on-Track-for-Ignition-by-2027-Threatening-US-Lead.html" target="_blank" rel="noopener">China&#39;s Fusion Reactor on Track for Ignition by 2027, Threatening U.S. Lead</a>
+    <span class="tag geopolitical">geopolitical</span>
+    <div class="src">OilPrice.com · Jun 12 22:00 UTC</div>
+  </div>
+  
+  <div class="headline">
+    <a href="https://news.google.com/rss/articles/CBMiowFBVV95cUxNU2NwbnhSejZzNkxual9ZYm1wRmRmVjVHTlYwQjlVYmdZaW8yQlFVbVBaVWR5c1RXaTNyMGZXdVV0c2J2eV9STWRlaEExTndPVkZIc2g2WVpxdHdmZE9aT0txYTg5WXk5LWdpRmRyN29FMnNaeEhBb3FPOVc5NU1XQ3h0czRRNWxmdnRPTmVlWWowYVFOdFdtTE0yd0JJTHpmWDc0?oc=5" target="_blank" rel="noopener">European shares rally as Middle East peace hopes drag oil prices lower - Reuters</a>
+    <span class="tag price_shock">price_shock</span>
+    <div class="src">Google News - Reuters Crude/LNG/Brent · Jun 12 16:47 UTC</div>
+  </div>
+  
+  <div class="headline">
+    <a href="https://www.rigzone.com/news/wire/oil_drops_to_fourmonth_low-12-jun-2026-183918-article/?rss=true" target="_blank" rel="noopener">Oil Drops to Four-Month Low</a>
+    <span class="tag geopolitical">geopolitical</span>
+    <div class="src">Rigzone News · Jun 12 21:02 UTC</div>
+  </div>
+  
+  <div class="headline">
+    <a href="https://news.google.com/rss/articles/CBMipwFBVV95cUxORENFaVhIaTdJZmQzcURNT2t2aUstTFhuYjBjaVBUZld4RkpZUnZqQkx3Uk5WZWcyakRTZDN0ZFBhV2Q4V3Myc0Z2YUoyQURnemtVU1BKSEttMEQxQ0kyLUlCcVZXa05Vb3VsN2M1VWdxYTdlQ0ZzQThheV9mYnB0ejgzeVFWTk9ac2dmamFoOHRjbmh4cUhjV0FRbkJTc0FCTXU0aFQ4cw?oc=5" target="_blank" rel="noopener">Tired of chaos, investors retreat from oil market at record pace - Reuters</a>
+    <span class="tag price_shock">price_shock</span>
+    <div class="src">Google News - Reuters Crude/LNG/Brent · Jun 12 15:58 UTC</div>
+  </div>
+  
+</div>
+
+<!-- Prices -->
+<h2>Commodity Prices</h2>
+<div class="card">
+  <table style="width:100%;border-collapse:collapse;font-size:.9rem">
+    <thead>
+      <tr style="border-bottom:2px solid var(--border);color:var(--muted);font-size:.78rem;text-transform:uppercase">
+        <th style="text-align:left;padding:.4rem .5rem">Commodity</th>
+        <th style="text-align:right;padding:.4rem .5rem">Price</th>
+        <th style="text-align:right;padding:.4rem .5rem">Change</th>
+        <th style="text-align:right;padding:.4rem .5rem">Source</th>
+      </tr>
+    </thead>
+    <tbody>
+    
+    <tr style="border-bottom:1px solid var(--border)">
+      <td style="padding:.45rem .5rem">Brent Crude</td>
+      <td style="text-align:right;padding:.45rem .5rem;font-variant-numeric:tabular-nums">
+        87.33 <small style="color:var(--muted)">USD/bbl</small>
+      </td>
+      <td style="text-align:right;padding:.45rem .5rem;font-variant-numeric:tabular-nums">
+        
+          <span class="dn">-1.7%</span>
+        
+      </td>
+      <td style="text-align:right;padding:.45rem .5rem">
+        <span class="badge yfinance">yfinance</span>
+      </td>
+    </tr>
+    
+    <tr style="border-bottom:1px solid var(--border)">
+      <td style="padding:.45rem .5rem">WTI Crude</td>
+      <td style="text-align:right;padding:.45rem .5rem;font-variant-numeric:tabular-nums">
+        84.88 <small style="color:var(--muted)">USD/bbl</small>
+      </td>
+      <td style="text-align:right;padding:.45rem .5rem;font-variant-numeric:tabular-nums">
+        
+          <span class="dn">-1.6%</span>
+        
+      </td>
+      <td style="text-align:right;padding:.45rem .5rem">
+        <span class="badge yfinance">yfinance</span>
+      </td>
+    </tr>
+    
+    <tr style="border-bottom:1px solid var(--border)">
+      <td style="padding:.45rem .5rem">Henry Hub Gas</td>
+      <td style="text-align:right;padding:.45rem .5rem;font-variant-numeric:tabular-nums">
+        3.12 <small style="color:var(--muted)">USD/MMBtu</small>
+      </td>
+      <td style="text-align:right;padding:.45rem .5rem;font-variant-numeric:tabular-nums">
+        
+          <span class="up">+1.6%</span>
+        
+      </td>
+      <td style="text-align:right;padding:.45rem .5rem">
+        <span class="badge yfinance">yfinance</span>
+      </td>
+    </tr>
+    
+    <tr style="border-bottom:1px solid var(--border)">
+      <td style="padding:.45rem .5rem">Copper (COMEX)</td>
+      <td style="text-align:right;padding:.45rem .5rem;font-variant-numeric:tabular-nums">
+        14176.81 <small style="color:var(--muted)">USD/t</small>
+      </td>
+      <td style="text-align:right;padding:.45rem .5rem;font-variant-numeric:tabular-nums">
+        
+          <span class="up">+0.1%</span>
+        
+      </td>
+      <td style="text-align:right;padding:.45rem .5rem">
+        <span class="badge yfinance">yfinance</span>
+      </td>
+    </tr>
+    
+    <tr style="border-bottom:1px solid var(--border)">
+      <td style="padding:.45rem .5rem">Gold</td>
+      <td style="text-align:right;padding:.45rem .5rem;font-variant-numeric:tabular-nums">
+        4215.00 <small style="color:var(--muted)">USD/oz</small>
+      </td>
+      <td style="text-align:right;padding:.45rem .5rem;font-variant-numeric:tabular-nums">
+        
+          <span class="dn">-0.1%</span>
+        
+      </td>
+      <td style="text-align:right;padding:.45rem .5rem">
+        <span class="badge yfinance">yfinance</span>
+      </td>
+    </tr>
+    
+    <tr style="border-bottom:1px solid var(--border)">
+      <td style="padding:.45rem .5rem">Silver</td>
+      <td style="text-align:right;padding:.45rem .5rem;font-variant-numeric:tabular-nums">
+        67.86 <small style="color:var(--muted)">USD/oz</small>
+      </td>
+      <td style="text-align:right;padding:.45rem .5rem;font-variant-numeric:tabular-nums">
+        
+          <span class="up">+0.9%</span>
+        
+      </td>
+      <td style="text-align:right;padding:.45rem .5rem">
+        <span class="badge yfinance">yfinance</span>
+      </td>
+    </tr>
+    
+    <tr style="border-bottom:1px solid var(--border)">
+      <td style="padding:.45rem .5rem">Aluminium</td>
+      <td style="text-align:right;padding:.45rem .5rem;font-variant-numeric:tabular-nums">
+        3858.75 <small style="color:var(--muted)">USD/t</small>
+      </td>
+      <td style="text-align:right;padding:.45rem .5rem;font-variant-numeric:tabular-nums">
+        
+          <span class="up">+8.5%</span>
+        
+      </td>
+      <td style="text-align:right;padding:.45rem .5rem">
+        <span class="badge yfinance">yfinance</span>
+      </td>
+    </tr>
+    
+    <tr style="border-bottom:1px solid var(--border)">
+      <td style="padding:.45rem .5rem">Soybeans (CBOT)</td>
+      <td style="text-align:right;padding:.45rem .5rem;font-variant-numeric:tabular-nums">
+        1113.50 <small style="color:var(--muted)">USc/bu</small>
+      </td>
+      <td style="text-align:right;padding:.45rem .5rem;font-variant-numeric:tabular-nums">
+        
+          <span class="up">+0.0%</span>
+        
+      </td>
+      <td style="text-align:right;padding:.45rem .5rem">
+        <span class="badge yfinance">yfinance</span>
+      </td>
+    </tr>
+    
+    <tr style="border-bottom:1px solid var(--border)">
+      <td style="padding:.45rem .5rem">Wheat (CBOT)</td>
+      <td style="text-align:right;padding:.45rem .5rem;font-variant-numeric:tabular-nums">
+        584.50 <small style="color:var(--muted)">USc/bu</small>
+      </td>
+      <td style="text-align:right;padding:.45rem .5rem;font-variant-numeric:tabular-nums">
+        
+          <span class="dn">-0.9%</span>
+        
+      </td>
+      <td style="text-align:right;padding:.45rem .5rem">
+        <span class="badge yfinance">yfinance</span>
+      </td>
+    </tr>
+    
+    <tr style="border-bottom:1px solid var(--border)">
+      <td style="padding:.45rem .5rem">JKM LNG</td>
+      <td style="text-align:right;padding:.45rem .5rem;font-variant-numeric:tabular-nums">
+        <span class="na">—</span>
+      </td>
+      <td style="text-align:right;padding:.45rem .5rem;font-variant-numeric:tabular-nums">
+        <span class="na">—</span>
+      </td>
+      <td style="text-align:right;padding:.45rem .5rem">
+        <span class="badge unavailable">unavailable</span>
+      </td>
+    </tr>
+    
+    <tr style="border-bottom:1px solid var(--border)">
+      <td style="padding:.45rem .5rem">Newcastle Coal</td>
+      <td style="text-align:right;padding:.45rem .5rem;font-variant-numeric:tabular-nums">
+        <span class="na">—</span>
+      </td>
+      <td style="text-align:right;padding:.45rem .5rem;font-variant-numeric:tabular-nums">
+        <span class="na">—</span>
+      </td>
+      <td style="text-align:right;padding:.45rem .5rem">
+        <span class="badge unavailable">unavailable</span>
+      </td>
+    </tr>
+    
+    <tr style="border-bottom:1px solid var(--border)">
+      <td style="padding:.45rem .5rem">Iron Ore (62% Fe)</td>
+      <td style="text-align:right;padding:.45rem .5rem;font-variant-numeric:tabular-nums">
+        <span class="na">—</span>
+      </td>
+      <td style="text-align:right;padding:.45rem .5rem;font-variant-numeric:tabular-nums">
+        <span class="na">—</span>
+      </td>
+      <td style="text-align:right;padding:.45rem .5rem">
+        <span class="badge unavailable">unavailable</span>
+      </td>
+    </tr>
+    
+    <tr style="border-bottom:1px solid var(--border)">
+      <td style="padding:.45rem .5rem">Nickel (LME)</td>
+      <td style="text-align:right;padding:.45rem .5rem;font-variant-numeric:tabular-nums">
+        <span class="na">—</span>
+      </td>
+      <td style="text-align:right;padding:.45rem .5rem;font-variant-numeric:tabular-nums">
+        <span class="na">—</span>
+      </td>
+      <td style="text-align:right;padding:.45rem .5rem">
+        <span class="badge unavailable">unavailable</span>
+      </td>
+    </tr>
+    
+    <tr style="border-bottom:1px solid var(--border)">
+      <td style="padding:.45rem .5rem">Palm Oil (BMD)</td>
+      <td style="text-align:right;padding:.45rem .5rem;font-variant-numeric:tabular-nums">
+        <span class="na">—</span>
+      </td>
+      <td style="text-align:right;padding:.45rem .5rem;font-variant-numeric:tabular-nums">
+        <span class="na">—</span>
+      </td>
+      <td style="text-align:right;padding:.45rem .5rem">
+        <span class="badge unavailable">unavailable</span>
+      </td>
+    </tr>
+    
+    </tbody>
+  </table>
+</div>
+
+<!-- Company News -->
+
+
+
+
+<h2>Energy</h2>
+
+<div class="card">
+  <details>
+    <summary>
+      Aramco Trading Singapore
+      
+    </summary>
+    <div style="margin-top:.75rem">
+    
+    <p style="color:var(--muted);font-size:.85rem;margin-top:.5rem">No recent news.</p>
+    
+    </div>
+  </details>
+</div>
+
+<div class="card">
+  <details>
+    <summary>
+      Chevron
+      
+    </summary>
+    <div style="margin-top:.75rem">
+    
+    <p style="color:var(--muted);font-size:.85rem;margin-top:.5rem">No recent news.</p>
+    
+    </div>
+  </details>
+</div>
+
+<div class="card">
+  <details>
+    <summary>
+      ExxonMobil
+      
+    </summary>
+    <div style="margin-top:.75rem">
+    
+    <p style="color:var(--muted);font-size:.85rem;margin-top:.5rem">No recent news.</p>
+    
+    </div>
+  </details>
+</div>
+
+<div class="card">
+  <details>
+    <summary>
+      Shell
+      <span class="tag esg">esg</span><span class="tag geopolitical">geopolitical</span><span class="tag regulatory">regulatory</span><span class="tag outage">outage</span>
+    </summary>
+    <div style="margin-top:.75rem">
+    
+    <div class="headline">
+      <a href="https://news.google.com/rss/articles/CBMimgFBVV95cUxOY3YtSGZpaXAycUp5VnpKRVppYy14bmRnSV85YXhEMFFwazk2MVhxVnVDbklCRkpKdlk2Rzk4QTgwYjFFZlNYSXU3amlwNTdxdFNKS0FkU2hlLW1MR0JhOHdIVTNreWU1Z3pPWGwwV3BsSTlDUHpmRDFLNWxiQ2pkRjJMR3pWQTYza1dBUFZHRFBMaFl5cjY5amJn?oc=5" target="_blank" rel="noopener">Shell could walk away from offshore wind in $1 billion+ sell-off - Electrek</a>
+      <span class="tag esg">esg</span>
+      <div class="src">Google News · Jun 12 22:03 UTC</div>
+    </div>
+    
+    <div class="headline">
+      <a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxNU1VucnJubWFiVVQ2WkRScFJRWVd3VlNtaGZsdzNRaXR5VVJ0TVhjYTI0Q2I5b3o4Vk80MzM1LWlQMGJvSFFESEV5RHh3TGFrWmxwWGF3dy1vcDZvMTRkQjdva3lmOUU5MWozN1A5LVY3Ui00WnU0eFBfSkpLQ1dhcmUwS0pUM1VXSy1sdGlaeWdOX2dhaW5nMFYtRXhBbWF4U3BpR2lCVTVDY3l4Y2ZVdTl0VmxCdlB6?oc=5" target="_blank" rel="noopener">Shell plans $1 billion offshore wind farm sale - Bloomberg By Investing.com - Investing.com Canada</a>
+      <span class="tag esg">esg</span>
+      <div class="src">Google News · Jun 12 22:02 UTC</div>
+    </div>
+    
+    <div class="headline">
+      <a href="https://news.google.com/rss/articles/CBMihgJBVV95cUxOLW1OYVNCNVZGcEN0ZXVGLW1xRUU0NG1uTUd2V21iWnBKaTNrTFdwMUd0LW9CY2YxWmVjYlNmYndiNVlpYXBlSzk5eUFQR3FPX3Y1NHZnS3FBVl9SdWlZYThhdTJRVUhET0M0ZkdLQ0FQVUk1N1lIUDhDMDRUSGdlYnd1OTItTVZyRURocDVWSTFCTWZTX0hnTXk0YUJGMlNhZzFUV2VaWkd2clpGdEFsT1htdlM4dDlNY0xlNWZ3OFpkZUkyN0dhYUNYZmtldXQ1cElmc0FUdTVGR3ZRcHdVT2JuY0tnenQ3MWxzLVN0TWhJNDl6d2QyTGxpYW1PeTY5NEZCSkV3?oc=5" target="_blank" rel="noopener">Shell’s Great Green Shrink Ray: Oil Giant Reportedly Eyes $1 Billion Wind Farm Sell-Off While the ‘Energy Transition’ Banner Catches Fire - Royal Dutch Shell Plc .com</a>
+      <span class="tag outage">outage</span><span class="tag regulatory">regulatory</span><span class="tag esg">esg</span>
+      <div class="src">Google News · Jun 12 19:55 UTC</div>
+    </div>
+    
+    <div class="headline">
+      <a href="https://news.google.com/rss/articles/CBMickFVX3lxTE1QanFTYkJKS1VmZHB1RmhRcDdkbllzZ3c1c3JKN2NBRFFJZXpGU2otdmI5S0xyWXk3TG5ZTXFFRktETU5tY0IxbXRrVGZpd3hyeFRqZnZINkxIUER4TkY0TnhuOXE3Mll6ak1WVDlGR1Rudw?oc=5" target="_blank" rel="noopener">Venezuela Awards Shell License for Loran Gas Field - Energy Intelligence</a>
+      <span class="tag regulatory">regulatory</span><span class="tag geopolitical">geopolitical</span>
+      <div class="src">Google News · Jun 12 19:51 UTC</div>
+    </div>
+    
+    <div class="headline">
+      <a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxPSThfNHZhbmNEcVBvZ0ZxV053X0RlVFQxWHZUd3hnbU94OWVaa1FlaXB4clNQSFZRZVBVYTF6VUs0UmhNRXRYb2pDaHF3YkoyNDJONDJ1SF9LRkhiYnR6VzAwX2I3ZGdvZ2g4bHVFTE94WjZBZ1UzV1RXM3AwaVhuVjFLcnRkMUE3U1FVUjJmWHNwc0hObHJPajVyV3ZxV2s?oc=5" target="_blank" rel="noopener">Shell (SHEL) Plans to Sell Offshore Wind Farms, Eyeing Over $1B - GuruFocus</a>
+      <span class="tag esg">esg</span>
+      <div class="src">Google News · Jun 12 18:33 UTC</div>
+    </div>
+    
+    </div>
+  </details>
+</div>
+
+<div class="card">
+  <details>
+    <summary>
+      TotalEnergies Trading Asia
+      <span class="tag growth_strategy">growth_strategy</span><span class="tag earnings">earnings</span><span class="tag regulatory">regulatory</span><span class="tag ma">ma</span><span class="tag esg">esg</span>
+    </summary>
+    <div style="margin-top:.75rem">
+    
+    <div class="headline">
+      <a href="https://news.google.com/rss/articles/CBMi5wFBVV95cUxOT0RwMHpVdS1hNUJ2MzlDVThKcGY3aUV0ZlZ2cDY4ZEpJa1hLc3FLNWhNVTVIZEpwa0xuazY5NGRtRFdTR3NXZVRnc0NtOEhzMnBoNWVKWFpuVnZhVEtuaDlQZ3FDX2NOR0p6elpyaFRuMFhHLUl0aWxyTEtDSHB3V0dYRFBoSGd4SDRVMVRpZmNmQ0cyUmV1Rl9kRU9ybjZTRko5NUxXdndPMS1wMzcweGdzU0VkelQ4dnNUb1lsOWN4TkVVV3lwbnM2MTkwNk9iNmRXQTdpQWV1Tmc2b1NrZzA4b1dfN1E?oc=5" target="_blank" rel="noopener">TotalEnergies ENEOS Completes Phase 2 Rooftop Solar Expansion For Ceres Manufacturing Facility In Bandung, Indonesia - SolarQuarter</a>
+      <span class="tag regulatory">regulatory</span><span class="tag esg">esg</span><span class="tag growth_strategy">growth_strategy</span>
+      <div class="src">Google News · Jun 12 10:25 UTC</div>
+    </div>
+    
+    <div class="headline">
+      <a href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxPa2FwdG5DWVIwRGZ1U0c2LWRxSEw2VEY2T1U0eTNpUjJmZm11ZjhaaUE5NlA4WW9FcG9fcHdRal9GblFzTTl4NTVvODdXcUY5OHo3d2ZNUWFPMjVhcmpCbGhIN09pTkVPcGl2RXEwcGpBVmJyTXJmVlpOVUJZZzFkTVc4MFpOV29GNHFHMnJkdWs5RllsUVp4dnZ0R3Z6ZGhIbklhNGNtUG1mb2dqaW9iVi04MWdKUVZKVW5UdEt4czQ?oc=5" target="_blank" rel="noopener">TotalEnergies SE stock (FR0000120271): Dividend decision and energy transition strategy in focus - AD HOC NEWS</a>
+      <span class="tag earnings">earnings</span>
+      <div class="src">Google News · Jun 09 19:39 UTC</div>
+    </div>
+    
+    <div class="headline">
+      <a href="https://news.google.com/rss/articles/CBMiygFBVV95cUxOVjlhWW1ZdGVpZWNyQUxqTTZ3VFRPemRqd0FUX2hPYWV2Z3FVVTZrOWNBckRsSVRIOElxR2NOUHVJcVVJQ1dyY3M0RWlHUlZrdkpjOUFUc2wzdEJxcGpPUlk1b0lmR0dHQnlpN292UVdUbkFNYlNhZzlMNjl4R0hxVTNHVHh1b0pQNUhRcU5qUjZRMmQzLXVpWXIyYUZvV0dUSlViVHRkdlJnY0VqNXllMzhkeFF3dnExaFIxTW1CXzJTRTliQUpqSzN3?oc=5" target="_blank" rel="noopener">TotalEnergies ENEOS Extends Solar Partnership with Ceres in Indonesia - PR Newswire</a>
+      <span class="tag ma">ma</span><span class="tag esg">esg</span>
+      <div class="src">Google News · Jun 08 02:16 UTC</div>
+    </div>
+    
+    </div>
+  </details>
+</div>
+
+<div class="card">
+  <details>
+    <summary>
+      Woodside Energy
+      <span class="tag ma">ma</span>
+    </summary>
+    <div style="margin-top:.75rem">
+    
+    <div class="headline">
+      <a href="https://news.google.com/rss/articles/CBMiswFBVV95cUxQY3I4WWNYRWhGN0p1UjFvYy1nZHVIeXRpMW5kb1VkSXNJZ2ZnVFh5NmxrU1pRQXBNbzBfVXVhdndTRWlPekJPMjc2WG94Mkdodm5aOHR1SHNCMHNhdGdOUm50VXNYUzUwcEw3XzdrNVVVWUF3Z1hBc2h0Y3BMV2ZSWWJadnVzZlk0eDF6S1ZTYlJqOTNtMlE0bDlMeGZwVlo0OVE3TWUwa1ZVTmNVZmRmU3dJNA?oc=5" target="_blank" rel="noopener">Exxon Mobil Eyes Woodside Energy for Potential Acquisition (WDS) - GuruFocus</a>
+      <span class="tag ma">ma</span>
+      <div class="src">Google News · Jun 12 21:45 UTC</div>
+    </div>
+    
+    <div class="headline">
+      <a href="https://news.google.com/rss/articles/CBMijgFBVV95cUxQUzFOSjhzRjRMTGpfelpnTEhQN3FaUDFHUU5IYlpVNHdsQUJfZXBZOHV6MGUtX0d3c2VnVE4xU2hnNXpfcHl5ZWpZbGluUzZidmRkeklUbDBITzFxNkxTR1U5WVRCeTJlbXBBcUMyOFdPUHN4eEJRV1BsRWdpbTJHb2JQZGZsUDJyMWExMnNB?oc=5" target="_blank" rel="noopener">ExxonMobil Considers Acquisition of Woodside Energy - Intellectia AI</a>
+      <span class="tag ma">ma</span>
+      <div class="src">Google News · Jun 12 18:32 UTC</div>
+    </div>
+    
+    <div class="headline">
+      <a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxQdlk5Y1doTEROTlN3WklkcGRkaEE5VGtHem5mXzN5UUZLck11dFNFRGZ2RFJ2LUlUa3pXQ2RCNjNGSG9UM2M0Wl9BWWJYcVdoanBUTHozMTEycTBnRnVRZHNaR0x2Um5uWnpIdUNEUk9oLXFTU0hhNGc1WGc1eTA2VHFUWUZob0RtQUlReFZSdk16S3dhVFZ1dldnV013RHhLYVBQRldBZm9KSkR5dWIzSEpn?oc=5" target="_blank" rel="noopener">Woodside Energy (WDS) Rises 6.8% on Acquisition Interest from Ex - GuruFocus</a>
+      <span class="tag ma">ma</span>
+      <div class="src">Google News · Jun 12 17:34 UTC</div>
+    </div>
+    
+    <div class="headline">
+      <a href="https://news.google.com/rss/articles/CBMiigFBVV95cUxQTU1PR3ZtZ3B0ZmhhMlY1RExEanFFb3poWVVHT2dSbXFrd0d5NU4wN29xR2hoUEhtVlA3bHpaTjVOT0tsb2pHdzgtSkhETHBfXzFqMFcyb18xTnZLMzZwbFhHeUE4YkRYUkhIVTc5LURkeFhneGd0OGVPeDNvcVBueWpQcFlIVmFYVlE?oc=5" target="_blank" rel="noopener">Woodside Browse Joint Venture Pre-Emption: Ownership Shift in 2026 - Discovery Alert</a>
+      <span class="tag ma">ma</span>
+      <div class="src">Google News · Jun 12 17:34 UTC</div>
+    </div>
+    
+    <div class="headline">
+      <a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxQSW5IeXRiQWRLSVlRaGw1NVdveGpCYllPR2JYaEV0QXl4M20tYmVHWXFFa0JIdjduTzhVaTFHOFd6YkthY3VpSzlBOTlmV3p0WXQ2c1VURnpqN01RRTZjeEEzUDF5Ym5oclBXcUVxRW10YnF5elg5dXZNT1V6Si0tUWY2djNKSEZ6X0R2bnR0Tnp3QmlJbGE2Zg?oc=5" target="_blank" rel="noopener">ExxonMobil Explores Acquisition of Woodside Energy (WDS) - GuruFocus</a>
+      <span class="tag ma">ma</span>
+      <div class="src">Google News · Jun 12 17:24 UTC</div>
+    </div>
+    
+    </div>
+  </details>
+</div>
+
+
+
+
+
+<h2>Metals &amp; Mining</h2>
+
+<div class="card">
+  <details>
+    <summary>
+      Anglo American
+      <span class="tag ma">ma</span>
+    </summary>
+    <div style="margin-top:.75rem">
+    
+    <div class="headline">
+      <a href="https://news.google.com/rss/articles/CBMiowFBVV95cUxNUGcxajBKS3hPTk9Zb3d2TzJON09OUkhUNktfMmVxUGx5N2tTTXNscGNfWU1vd1RwTld3cGpUa1FWSlg0VTVRTlF3LUd6QVNCVWJsb1k0Z2I2VTZTbFBxd25qNVF2Z0JDR3NNYjFPLUhlWm5KTTJweEZ2ckdCSndEdGlSejBkVVdqWnRCTk1JblpuVWlNWHUtMFdtUVZOVkpLWmtj?oc=5" target="_blank" rel="noopener">Anglo American lower as copper prices stumble with Teck deal faces scrutiny - Bez Kabli</a>
+      <span class="tag ma">ma</span>
+      <div class="src">Google News · Jun 10 10:56 UTC</div>
+    </div>
+    
+    <div class="headline">
+      <a href="https://news.google.com/rss/articles/CBMiwwFBVV95cUxORVNNVW15c3NPZjM1TFcxbU84LXp6Z0NfRFpqdDU1MzJvUWVyZnNjR1doVEJqXzdjVzFBMzdYT296UWhpM1BmLXYtNW9rTlhEeGlueWZ0NGpvUE1hUlZ2Vm9jZ3NQZHBjWFJRRjl0ZkN6dGdaYkxaZVFtVUxDRXhBYlZLZFV3X3RQbGFnaGJVTk85XzQ5OE1tdlZreFprdGsyV3F6ZXNhRmdISHAxak5XRVV1elNQUDdwNkZGTHk4Z2FTRnc?oc=5" target="_blank" rel="noopener">Anglo American plc stock (GB00B1XZS820): After BHP bid drama, strategy shift and asset review move i - AD HOC NEWS</a>
+      <span class="tag ma">ma</span>
+      <div class="src">Google News · Jun 08 17:35 UTC</div>
+    </div>
+    
+    </div>
+  </details>
+</div>
+
+<div class="card">
+  <details>
+    <summary>
+      BHP
+      <span class="tag price_shock">price_shock</span><span class="tag ma">ma</span><span class="tag earnings">earnings</span>
+    </summary>
+    <div style="margin-top:.75rem">
+    
+    <div class="headline">
+      <a href="https://news.google.com/rss/articles/CBMizAFBVV95cUxOMERoYXF6STluNEVDS1J3UjNBdGxXeE04ZUdHVlk3LXYwdkloMHEzdm80dnItck1CZTNWOVdpb2ZLS3g1eERCcWk3Xzdtd2pVd0xnSUp2Vzl2QkpzZzZDaXg3b2VKenpVWGFzQlRlcmRlV1hTS2ZPaDNaVnpxRXZDNnhacm05YXlkdG1NV3gwT1Qyb2xDd0pXUEN1WVlydHVRUkpRcEdVanZZZUZTNExLdVpoaGpRR2RKOG52QUZERlRBQXF3RnlDbGU4SkvSAdIBQVVfeXFMTnZxdWFwalFZV3dEVHpzZXJOVFlSb29BNFBFaGRoejNYUWVkOFNhN08ybkZsaUEwTEp0QUdXcXhfenV4WjEtWDl5R0RvOWpmdDZJM0pQX0pqVUZWYVQ1WUhYaEhGZGNvZmEyb1FiYWFnRThyTzFTb1VMMjVhRzliaVBKR0E4bnZySU9TcjJZbkh4RjJ1TjBjYlNxSW5FclgybGdnenZHbmtadnhaYVlpTnFzZ3dRcmFLbnY2N3lhdVdranVyVjRHZXBCbEw5RFl0OWJR?oc=5" target="_blank" rel="noopener">A Look At BHP Group’s Valuation As Potash Rail Deals Meet Softer Iron Ore And Copper Markets - simplywall.st</a>
+      <span class="tag ma">ma</span>
+      <div class="src">Google News · Jun 09 09:21 UTC</div>
+    </div>
+    
+    <div class="headline">
+      <a href="https://news.google.com/rss/articles/CBMitgFBVV95cUxQcElFTThOT3ZCTG8wN1E4Vzk5RzEwZG1fcUFwYzhhV2NQWDVVMnRSYjVEeVhFQ2RoY2t0THFncGhjS2UwaEoyMFV6WVU0aUZRZG1rdEJSMDUyNk5qRVctSTNsd1Bwd0lWRTh3N1RGTU5rYU5oc2NMdHBzTkxCbGt5WGZxZXl3LWdob24xdlgxWjFrNk91UF9fYzV0bVNxSlhyMXp5VjZIOXZZX29YZWZtMzdCal9IZw?oc=5" target="_blank" rel="noopener">BHP Group: Copper&#39;s Ascent Fuels Record Earnings, But Can Demand Sustain the Rally? - Kavout</a>
+      <span class="tag earnings">earnings</span><span class="tag price_shock">price_shock</span>
+      <div class="src">Google News · Jun 07 12:47 UTC</div>
+    </div>
+    
+    </div>
+  </details>
+</div>
+
+<div class="card">
+  <details>
+    <summary>
+      MIND ID
+      <span class="tag regulatory">regulatory</span><span class="tag earnings">earnings</span>
+    </summary>
+    <div style="margin-top:.75rem">
+    
+    <div class="headline">
+      <a href="https://news.google.com/rss/articles/CBMiygFBVV95cUxQWUJscF9pXzBCN3RJVHotOU51bkxQekREMjVHWmxLTkR6NG9MT3NOdkZHQkhSZm9TUi1NRVpsU0paS29KaTVieThzcGFTQnlMeVZlSWFYemYyaDVMTnBHbU9PYkxsR2pkTVFBM1BxQ09zeXdxbWZSa2UtU0FVXzlOSTB0TS1YT1BlN1lqTFVaOFlzSVZCTVh4eU52eGgxNjJaeXoxTFVaQ1VjcXZZZk9JbXJkMVU5QzE3T3M0WVQwbnFUTS02NjJKcTVn?oc=5" target="_blank" rel="noopener">PT Aneka Tambang Tbk stock (ID1000106602): Q1 2026 profit jumps while gold prices soften - AD HOC NEWS</a>
+      <span class="tag earnings">earnings</span><span class="tag regulatory">regulatory</span>
+      <div class="src">Google News · Jun 09 17:55 UTC</div>
+    </div>
+    
+    </div>
+  </details>
+</div>
+
+<div class="card">
+  <details>
+    <summary>
+      Rio Tinto
+      <span class="tag esg">esg</span>
+    </summary>
+    <div style="margin-top:.75rem">
+    
+    <div class="headline">
+      <a href="https://news.google.com/rss/articles/CBMiswFBVV95cUxQYXdnLWN5WXVFVXFlRWRjQlJ6OEdwamNQY05pNGNOSFdBaXF0SXo4Q1ZZT283X3MwbTBLRE9VNFVEeFQxNnNJdjNhenVQbDROLUxTVWZQemVDMkp1SnVXdlRMUmtudzJ3RjJvU00wdjRpOGNHUUx0Qm5FV2ZlVGVrZlpMWWRwRUdfTl93Znd1OXU5Wm5UaFM3MzhiVWdwMFhoY080WFMxNW4zbDExbmxjMzZscw?oc=5" target="_blank" rel="noopener">Rio Tinto’s ESG Push Raises a Bigger Question for Shareholders - Kalkine Media</a>
+      <span class="tag esg">esg</span>
+      <div class="src">Google News · Jun 12 05:22 UTC</div>
+    </div>
+    
+    </div>
+  </details>
+</div>
+
+
+
+
+
+<h2>Power &amp; Utilities</h2>
+
+<div class="card">
+  <details>
+    <summary>
+      EGAT
+      
+    </summary>
+    <div style="margin-top:.75rem">
+    
+    <p style="color:var(--muted);font-size:.85rem;margin-top:.5rem">No recent news.</p>
+    
+    </div>
+  </details>
+</div>
+
+<div class="card">
+  <details>
+    <summary>
+      PTT
+      
+    </summary>
+    <div style="margin-top:.75rem">
+    
+    <p style="color:var(--muted);font-size:.85rem;margin-top:.5rem">No recent news.</p>
+    
+    </div>
+  </details>
+</div>
+
+<div class="card">
+  <details>
+    <summary>
+      Pertamina
+      <span class="tag esg">esg</span><span class="tag geopolitical">geopolitical</span><span class="tag regulatory">regulatory</span><span class="tag ma">ma</span>
+    </summary>
+    <div style="margin-top:.75rem">
+    
+    <div class="headline">
+      <a href="https://news.google.com/rss/articles/CBMiowFBVV95cUxQTTlJa0VvQWNzelFISDU1ZVNRamN4WmpFNS12SFpoUjVUbWEzNE5BNU03aTZwaGdTTW1mTXB2U2x4SkhWblVIY3k5VnZzX3BxYm5zSVM3dW13TWo5SHUwX2pRTEVDbmxCT3ZQaFJNbmQwRlNqcWQtb05FaGdnaWVYcEd0R3ZQOTY2akNOamVzSk5LN1VEUmR1aE1GWUNCa1pfdGZR?oc=5" target="_blank" rel="noopener">Photo News: Pertamina installs solar power system on oil barge - Petromindo</a>
+      <span class="tag esg">esg</span>
+      <div class="src">Google News · Jun 12 17:02 UTC</div>
+    </div>
+    
+    <div class="headline">
+      <a href="https://news.google.com/rss/articles/CBMiogFBVV95cUxNNGtzeEFoM1c0VEs5dHk4dFdHS1JjUThXd0pMRkIzeEJpeHdGeXUtRnFTVmtVb0pnTkRsSXNfbGw0YVRBcEthWTAwR0s3TnVscG5qMEVKdk9ITFptTmlTTjZJcEVVWFdUY2lERnJpek42SEFqSXdrbndUbVVMVExBbDNOT0d1SEwxNWQtUFJYOUZkM3NmUkNYVnF1bmh6YjZMQXc?oc=5" target="_blank" rel="noopener">Indonesia expands oil imports from Africa and Latin America - IDNFinancials.com</a>
+      <span class="tag regulatory">regulatory</span>
+      <div class="src">Google News · Jun 12 00:30 UTC</div>
+    </div>
+    
+    <div class="headline">
+      <a href="https://news.google.com/rss/articles/CBMirAFBVV95cUxQdmFTTjA2VjR3TEtOTS1WNTFBa2YxWkd6ZDZQaWgtUmhtdWZOejZkeV94YmVoZV80bVU2bnFYelBRQ1FIc3pZTGNFb0lmTmtrNm5hRlNzV1B5d3Q4eWVOdXBpVlFNXzZwRXJiMUhYNEw4cUhkLWJXSUtjV0JqZmxtLW5WSng3amJFbTVDUnZOQ2lvS2dzeGFqNTVDTXF0Zmk4UXNYX29aWUhIbk5P?oc=5" target="_blank" rel="noopener">Pertamina Unit Merger Generates Up to $700 Million in Savings, Danantara Says - Jakarta Globe</a>
+      <span class="tag ma">ma</span>
+      <div class="src">Google News · Jun 11 18:04 UTC</div>
+    </div>
+    
+    <div class="headline">
+      <a href="https://news.google.com/rss/articles/CBMiqgFBVV95cUxOLVVvbWNxV3F2aXlVSmdWUDNBWjY5TzVUZnY3TmIwS2dueE9tckZ4QU5tbDlPQlpXSnBHQUNmTkRWYXU5eXh4MlBUVzFDMGpPYk9rcHJ0TU1tamxHZmVDR0FpbFN2OTAxczdsMy1jTV85N0hwbXBqbGxtbXcwZUxaOW1oVUQ1a1dzT2puWW9Nem5jT2tuckM2a2ZQZk1HOEsxU1hWUjkzbFhjUdIBrwFBVV95cUxOM2p1NmJCVHJ3bDUyZGtzd3dTblBwN05QWnBlOTdDX0tmMlF2dUtxdnFvQXByWExhSzFiVndiYUV0aFM3OUdjdFJra3ZfZFlDZGxvWk4yREhoeUJmQ2lkUjk5S2k0UjdOUUxCMVI3X0lyWm5SSC1SbDZ6MU5uZWZXYmg0NlRFT3ItaEVKWlczMHZKQkpPLXA4OEstTnBpeGluQ2kxZzhTbW40WEF3V1NZ?oc=5" target="_blank" rel="noopener">RI-Iran maintain talks over two stranded Pertamina tankers: Deputy FM - ANTARA News</a>
+      <span class="tag geopolitical">geopolitical</span>
+      <div class="src">Google News · Jun 11 12:48 UTC</div>
+    </div>
+    
+    <div class="headline">
+      <a href="https://news.google.com/rss/articles/CBMitAFBVV95cUxPWTNjRmt0SjZlSjRORHJQT1p1SU1SWUt2ekFzY3VUOTRlTU5KeW5uYjBJZmwtMFd6b18tQ3d1bThydm9DLXQxeG84Z0ozZ3dNdVUtREZ0ZFJsVURJN29NUU9zUjM5VmtjUlZmUHZrNmNpT0dCQ2pzdE0tSUNMR2RmWWRkZDFfZHZMRkRBTVIzVUszNGhNVHhGRE55LVFhcERuMi0tZ0VQeTdrZWFNRXFrZ1YwNUs?oc=5" target="_blank" rel="noopener">Indonesia Turns to African Oil Amid Strait of Hormuz Tensions - CEO Insights Asia</a>
+      <span class="tag geopolitical">geopolitical</span>
+      <div class="src">Google News · Jun 11 12:07 UTC</div>
+    </div>
+    
+    </div>
+  </details>
+</div>
+
+<div class="card">
+  <details>
+    <summary>
+      Tenaga Nasional Berhad
+      <span class="tag esg">esg</span><span class="tag ma">ma</span>
+    </summary>
+    <div style="margin-top:.75rem">
+    
+    <div class="headline">
+      <a href="https://news.google.com/rss/articles/CBMi1gFBVV95cUxNcTZaQ09DN1VLRFhzc0RyTHIwQlFTcGZ2YWVHY05vYnNuVXZPTFBWVmVOZFI2dk1PRkRXNkoyVklfc1FlVC1VS25IampOdUNaaWlkYmdfdTlQbjdYM0dKQTRUZ2xJcDRHRUJHaWphRHRRMWxxcVZkLV9LemFxTkd1Y1liSUFCNDQ4N0FnTWYwZFo3YUZ6YzRjWnJHalFrNTFsZkk0b0lKM2dVYVlxWWhFSURndExieHcxLWRvYW9JZEVzcUp4MFl6N3JCVWJwMXRKeGk5TzZ3?oc=5" target="_blank" rel="noopener">Blueleaf Energy Consortium Signs Key TNB Agreements For Malaysia’s 100MW Battery Energy Storage Project - SolarQuarter</a>
+      <span class="tag esg">esg</span>
+      <div class="src">Google News · Jun 10 08:05 UTC</div>
+    </div>
+    
+    <div class="headline">
+      <a href="https://news.google.com/rss/articles/CBMivAFBVV95cUxNbTBBUEhzYklWY0hMVVB1TVFZTmJPd0ZNLVJrM2VDZUdhTmJleGVhcURnU2VnaWZGbXJuekdNczZrZXE2b1VJM1NtczFTd1pGR2MxSjJNYUVKRXl1WnNZZ1FnSW5xSHFqU1Y3Q2NKTUd6OEh4b1JCZDVoT2lYWGRHVDgwc0pzVVFybEhUb2xENllybkpXeGttQURIczBpRmQ3c003eG9qYlMzekdrNUNCTEpxZzBIaHBuY3RPbQ?oc=5" target="_blank" rel="noopener">DayOne Secures Over 1 GW Renewable Energy In Malaysia Through Major TNB Partnership - SolarQuarter</a>
+      <span class="tag ma">ma</span><span class="tag esg">esg</span>
+      <div class="src">Google News · Jun 09 09:57 UTC</div>
+    </div>
+    
+    <div class="headline">
+      <a href="https://news.google.com/rss/articles/CBMitgFBVV95cUxObXA5NXRTajlLM1NNNFktMlEzVnE0OXQyWkYzOUd3MDJBa2c1bHM2MmNYRTBWRXJKb0Zic0pPb1Z2OXB5eVhmTWp2ZzdsWTJNYlJGVmdPRUZYYWUtT3FMQkJmbzFkTzVUbGZXX0NLVzVEWU01MHN3UUhiSGczZ0FrWWQ1MFBMWkF2aHdGWmZUeVAzdkR5NFVtSHliY05Yal9OdjU4RjcxaHl0NEMyc2N2X2ZQd29KZw?oc=5" target="_blank" rel="noopener">DayOne signs 1.5 GWp solar and 2.2 GWh storage deal with TNB units in Malaysia - ESS News</a>
+      <span class="tag ma">ma</span><span class="tag esg">esg</span>
+      <div class="src">Google News · Jun 09 09:29 UTC</div>
+    </div>
+    
+    <div class="headline">
+      <a href="https://news.google.com/rss/articles/CBMipwFBVV95cUxOaldqYXYwckRseEFTaERjY29MdWtoZ1F0TGI2T0xmRHp6UFFhQTYwNXlobWRrdzctSTlLcEVXRlhiQTBOVC1XRWtyaVhVV1hHUElZcmxFTVZqY3ZWQnlraDZNd2l1eUpKb2VDenVaR2taY2lPNU5zQUlWRVBnV3RwaG8xRzdHaGtDYVI2NDRCcm9BRlA2OGt5UlhEanBoek1qdk81SUhINA?oc=5" target="_blank" rel="noopener">DayOne signs 1.5GW renewable supply deal with TNB in Malaysia - Data Center Dynamics</a>
+      <span class="tag ma">ma</span><span class="tag esg">esg</span>
+      <div class="src">Google News · Jun 08 12:17 UTC</div>
+    </div>
+    
+    <div class="headline">
+      <a href="https://news.google.com/rss/articles/CBMivgFBVV95cUxPM2FBdVJYc1gzeVNWY0hDSVA0QWdNVTJTVTB0akhmVUlSX0htSkEwNUJQbGdYN3E3WFVSZUtoQU5GeldmMmczSmdydGVCQkgzSmZSd0s2TGw1TF9hT3ctYUpyZTVxQ1VPVmg1d29Ga0c4Sm5BdmxzLTAxc2staG96ckV2TGpZN2h0ODl6V2Z1ZVpXVC1SMGFTcDdiSkM1UWNXX1N2R1lqRFNyaWNzUG91WnY0T2pWbE9VSm9MWVNn?oc=5" target="_blank" rel="noopener">Data centre developer DayOne signs solar and BESS PPAs in Malaysia with TNB subsidiaries - Energy-Storage.News</a>
+      <span class="tag esg">esg</span>
+      <div class="src">Google News · Jun 08 10:46 UTC</div>
+    </div>
+    
+    </div>
+  </details>
+</div>
+
+
+
+
+
+<h2>Trading</h2>
+
+<div class="card">
+  <details>
+    <summary>
+      Cargill Asia
+      <span class="tag outage">outage</span><span class="tag growth_strategy">growth_strategy</span>
+    </summary>
+    <div style="margin-top:.75rem">
+    
+    <div class="headline">
+      <a href="https://news.google.com/rss/articles/CBMiuwFBVV95cUxNdWw2dHFvV0syQzZ4SEdXQTJKZko3TXk0UDBTSENDOVN5ZzRFdzBGNkJKN2ZTc3dZOU5ScEhtaFVmU3U4WDN1Sl8xVHpJM2Y5VWtOUUNxTWZMZVhIODl3RXFGQWFNWWFDTnNUdkEtLWtPb05qZ1BGTUIxNWNtc1hHcUZBWTNSdzlsZzBqVGtmd1NVbXdxQ3BybWRFdlhickJ0ZVBEczM2U3hBSzZzMG80THF3WVdzTG1ST2hN?oc=5" target="_blank" rel="noopener">Jade Cargill attacks Tiffany Stratton after causing tag team disruption: SmackDown highlights - WWE</a>
+      <span class="tag outage">outage</span>
+      <div class="src">Google News · Jun 13 02:39 UTC</div>
+    </div>
+    
+    <div class="headline">
+      <a href="https://news.google.com/rss/articles/CBMilwFBVV95cUxPV19Sa0ZKUW83MU5GSk9OVWVQMmd2cEpqdF9Ibmd1eWhudnlmbFZObHhSRUY1UjBseDV3NHFXM1FISGJRZlJiMFo1cFlIWW80dDFORTVKTkNkVVVQQndDanplYUYxclF5UmQyT2M2cXgwRWlvdXdMQWtCUlBXMkVIWGliUDlIMWJSY0JSd3h0RllPcDJiVk1Z?oc=5" target="_blank" rel="noopener">Cargill Invests €56M in Belgium Expansions - foodengineeringmag.com</a>
+      <span class="tag growth_strategy">growth_strategy</span>
+      <div class="src">Google News · Jun 12 14:53 UTC</div>
+    </div>
+    
+    </div>
+  </details>
+</div>
+
+<div class="card">
+  <details>
+    <summary>
+      Danantara
+      <span class="tag trading_moves">trading_moves</span><span class="tag regulatory">regulatory</span>
+    </summary>
+    <div style="margin-top:.75rem">
+    
+    <div class="headline">
+      <a href="https://news.google.com/rss/articles/CBMi3gFBVV95cUxQSTFBMV82RklrWElTZWZKLWdqSkVhM0JIVnZMVmxSRURQYnk1aEpHSElOT28xOEtueGJhSWE5R0JjRWhuZEtRTmpDcHlpaEgzUWtmNy04YzJGby1BbEdkSXM0ck1DN0hsd3ZWWTFtM2V0UkxQM2llVmIxZDhKendDa05kT2hhSElnUTkyeUl1OHlqNUNrSTlrNFpOUEVld29EQ19heUhHYWg2TnVXd1prM1VNWGlDcklkM25UT0w0SjBSUTRsaGZOeFdvRWVFVGJmek5jWVNQSzJUNDM5QVE?oc=5" target="_blank" rel="noopener">Danantara says zero layoffs as Indonesia pushes ahead with sweeping SOE consolidation - People Matters Global</a>
+      <span class="tag trading_moves">trading_moves</span>
+      <div class="src">Google News · Jun 12 12:36 UTC</div>
+    </div>
+    
+    <div class="headline">
+      <a href="https://news.google.com/rss/articles/CBMi2gFBVV95cUxORzNvZ1JldER5VWhtM1p3UE1vNm1yeW1FMWI2VHViS1NULXJJR0dVYnRNNUtSdVZwazVHM0VHQU5qT3hPWmRCbG1oaUg1SmgzWkVtVjBCeVZIVVBfUXk1STFlMjFzanpqcVhnQkt5bUJuVGVwcTBWYWctaEVZODg5ZFBGYV9EVy1GQ2k1X00wZTdYY2ZWZno3YXhJMTRaQnBhRXhtOEZpRHJ2N0pKeV96WjFYYlJGejFmbzFnN2hmTHhGODJ5Z0dGTzFCcWFyaXVzRXlEdk9QZ3VvUQ?oc=5" target="_blank" rel="noopener">Danantara Indonesia unit will not take over contracts in new export plan, meeting minutes show - CNA</a>
+      <span class="tag regulatory">regulatory</span>
+      <div class="src">Google News · Jun 12 09:58 UTC</div>
+    </div>
+    
+    <div class="headline">
+      <a href="https://news.google.com/rss/articles/CBMiqgFBVV95cUxPT3hSU3ltaFNjaGJUSVNsNDYtTEY5NDNEaGpEQVhMbUlzUGJEZWc1MzdfemVzaXltaHRPS3BoaFhxcmhIR25BdEZnc25ZX1RKQmtpa2p0QkpFd0cwNzNWb25NcV92WUtrNnZKaDU0WExoclVleUR5aWEtRC00RTQzVTVsYUs3V1A2YVFkWjc3T0RwZ1dGMnFkX2lLV1RsczIzMjV5RkZIZmdqd9IBqgFBVV95cUxPT3hSU3ltaFNjaGJUSVNsNDYtTEY5NDNEaGpEQVhMbUlzUGJEZWc1MzdfemVzaXltaHRPS3BoaFhxcmhIR25BdEZnc25ZX1RKQmtpa2p0QkpFd0cwNzNWb25NcV92WUtrNnZKaDU0WExoclVleUR5aWEtRC00RTQzVTVsYUs3V1A2YVFkWjc3T0RwZ1dGMnFkX2lLV1RsczIzMjV5RkZIZmdqdw?oc=5" target="_blank" rel="noopener">Danantara says government bankrolls village cooperatives program - ANTARA News</a>
+      <span class="tag regulatory">regulatory</span>
+      <div class="src">Google News · Jun 12 08:26 UTC</div>
+    </div>
+    
+    <div class="headline">
+      <a href="https://news.google.com/rss/articles/CBMisAFBVV95cUxQN1VKQ3dfck1NaWRnZEl5ZkdXZ1VrOEJoZUlqMUF5dDdFeXJ6aFo0NnBZaThBOHVMYzV5ZlI2YTNJSDJfYXBMMHJONExFNHgyT0FQUzlIamtBeXlFQ1dWOW5QcGEwUm9QdS15VnB0bzhrQVdITVZjSkNGX2lFQkFhMEI1Ym5vTDBHQURuSnJNTzBYVzNObmxId0FZSk1zYTBRLVIydm16cVVJTWYzNUVsbw?oc=5" target="_blank" rel="noopener">Export SOE won’t take over commodity shipments, Danantara says - The Jakarta Post</a>
+      <span class="tag regulatory">regulatory</span>
+      <div class="src">Google News · Jun 12 06:48 UTC</div>
+    </div>
+    
+    <div class="headline">
+      <a href="https://news.google.com/rss/articles/CBMiswFBVV95cUxObV83Z2E5Vy1oQ1hNT0k3dXpna05GWXRzOWowT3ZyYmJIVkZrYkd4blFpeFZPbGRxcDZvUGNGRFVfbElubTdQV0dmSE5JUkhJM2Q2Tlg3VUJTY1RzX0J3OFB6ZHFlelhGVzd4ajNfbGpHN19KaU1CQ2V1bGZxYjhxOTNTT2t1UnFQUS15SC11UE50d0VNZHFtb3p4RVpOdGRDX3JnN3BsQjlaRGkybFNJc0hzbw?oc=5" target="_blank" rel="noopener">Indonesia Says Export Agency Will Focus on Price, Not Trading - Bloomberg.com</a>
+      <span class="tag regulatory">regulatory</span>
+      <div class="src">Google News · Jun 12 03:46 UTC</div>
+    </div>
+    
+    </div>
+  </details>
+</div>
+
+<div class="card">
+  <details>
+    <summary>
+      Mercuria
+      <span class="tag price_shock">price_shock</span><span class="tag earnings">earnings</span>
+    </summary>
+    <div style="margin-top:.75rem">
+    
+    <div class="headline">
+      <a href="https://news.google.com/rss/articles/CBMimwFBVV95cUxQR3Zma3BFU3gyd3VQMlRhN0ZubWQxSnY5djNvYUFXa0JaUUZOaG0waTg5bnlLenN0YlFjOUZwbFMyYUktUkZLZ2VBaEtYZWVPR2dqNTBTUmR1aXBFRXVHbUZxYU5QVk83YkFWUDZmYWZ2MTJTOU9oSGxjNFl0SHo2Uk04UVRRWHRVV2FaR0tfaE9XYnNvTVpCSG9XVQ?oc=5" target="_blank" rel="noopener">Mercuria’s First-Half Profit Surges 88% Amid Commodity Shocks - Discovery Alert</a>
+      <span class="tag earnings">earnings</span><span class="tag price_shock">price_shock</span>
+      <div class="src">Google News · Jun 08 20:32 UTC</div>
+    </div>
+    
+    <div class="headline">
+      <a href="https://news.google.com/rss/articles/CBMijgFBVV95cUxNcEVDeE1McUlkdDc5bktqZ2ZGemJEem9zcmVFZFJ3Yy1Hd0NqXzRxd2NJSDFpbkdrVGZpeVJWUmVtbE5mSHhBbWZPR0F0Ui1zdWFoZG81dmFLQ0FtcVhGOGxRQkNXaG1JTnRKeXUtUmh2Wk8wYk1Rb2dvWHNtYnhZSXJWTkpjX3F1aE1SUzZ3?oc=5" target="_blank" rel="noopener">Mercuria’s first-half profit jumped 88% on commodity shocks - Mining.com</a>
+      <span class="tag earnings">earnings</span>
+      <div class="src">Google News · Jun 08 18:28 UTC</div>
+    </div>
+    
+    </div>
+  </details>
+</div>
+
+<div class="card">
+  <details>
+    <summary>
+      PETRONAS
+      <span class="tag enterprise_risk">enterprise_risk</span><span class="tag ma">ma</span>
+    </summary>
+    <div style="margin-top:.75rem">
+    
+    <div class="headline">
+      <a href="https://news.google.com/rss/articles/CBMivgFBVV95cUxPTDhHbGZ5M3Q0ZXhpX0x5VWFZU2JjOUVBWHBsLVNSNFhGX3Zpc2xhc2NKcHJrLVFwdlNuNFZfeDRHLXJBUUhtX05NcGdOb2gyLXhadm5SSi1RYWtTY2F2Ym1mNXd4aHc5OUdpZWE1aEVLYU1FeENHZjZYM0dNUmZvT2tBZElGc2JNeklPbDFJQWVzYmlPVFk4WkZCOElJN3YyZF9PQlJrRENTZHBlMDZmVGp1Nms3YnZGRVA2ZFZ30gHEAUFVX3lxTFBObGlEdFVPQjdJMEpqSkx4THczOWtxOTBOZTFxTXh4dEY1ZE1CV3lHYmpld0ZYNks1U1Fsd0VKTGJjR0VacTc0OF8wakpncVlUbkpoNnJ1M1d3WE8tR2Y5STFXMGxlNzRlRVFlQzE4UjFwZFZnckE1M3pvRUowRGUwZVVJYU9fbDRFZy1qVGZaeDQwUS1YT0VaYzRBOWthTk1xaktTMHZRQXBPNVRzalZRbDEwLURuSHlVa3dDS293S1BYNF8?oc=5" target="_blank" rel="noopener">PETRONAS and JERA lock in landmark LNG deal extending partnership into 2040s - Indian Chemical News</a>
+      <span class="tag ma">ma</span>
+      <div class="src">Google News · Jun 12 08:49 UTC</div>
+    </div>
+    
+    <div class="headline">
+      <a href="https://news.google.com/rss/articles/CBMixgFBVV95cUxOYmhJZ2NGMnVJSzRUZ0h1VURYMDBISXNUOWdJR2RNTDZsS2pSOUNWdE9Fb0RFZmZjTnA5Sm9kQWduaEtJT0xfa293d2lnaUYyNGRteHM0amJZM0lKYTN0TnhtMlF0N0dhcHhxSU5IUm5qSFZfMk5kblVUdjg1S1JmSFlhdWFibl81dUQ2Yms0RHVEUF9zYWg0Z2VnNE5ZMmJ6X3VaSWRZeWZ5Q2hBdUE3dGZhd1BVRm1FOVhzcmo2MzN6cTZ1OUHSAcsBQVVfeXFMT2VCcjZVNFJ4YjdGNGM4R25VMzU5dzYtWEpyVnZadFRZaTY5b0xZTXhxaXhwTGZvX3Y4UUJYM056SFJaUmlSYmExcjRoMXZPMDJJcGdiZjA0aXF0SlNERGpKLV9vU1c1bWdnckxERHVHanc2WlRaVzVOVGpkTEkzdGNWeUhXaWJ4T1lEQ012ZDRMaWFsOFNZQUV2dXBKZmd2cUJUN0JCNl9fQ1IycWQtejN6UGNiYmZjVkVsR2phX2IyaEIybnZDZ2VaemM?oc=5" target="_blank" rel="noopener">PETRONAS and JERA sign new long-term supply deal extending partnership - LNG Industry</a>
+      <span class="tag ma">ma</span><span class="tag enterprise_risk">enterprise_risk</span>
+      <div class="src">Google News · Jun 11 13:00 UTC</div>
+    </div>
+    
+    <div class="headline">
+      <a href="https://news.google.com/rss/articles/CBMijgFBVV95cUxOeHh3SE1zelBzQlljZzlTTTBUY3VoQWc3bTJrY0ZkMGVTZ095QmlvQ3p0Y21rNGhONEhGTzdEc1d1dTRBdWRXYkUxWmwzZWtwUEcyWXpDQXZWZGtRejFvRTh3bjFqWndTWVVMV0tja1E0Vk1uNUk5SHgwRWE2NVZjVkRfemhPSUtvWEMyRlpn?oc=5" target="_blank" rel="noopener">Petronas Signs 20-Year LNG Deal with JERA: 2 Million Tonnes Per Annum from 2028 - News and Statistics - IndexBox</a>
+      <span class="tag ma">ma</span>
+      <div class="src">Google News · Jun 11 10:01 UTC</div>
+    </div>
+    
+    <div class="headline">
+      <a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxQc0pXV2MwVWJJdl93ZzA1VURIS0VGc0hzakZRR3Z6ZVN0VThQQXZhSnAxZXBXSkxUd2VZckZ2cmV2dWxVY0RZdERjeElwUVFPdGNIdm4tRXNFVlVjR1lSNGR6UUE3YW1TMjFkc09aMVBXVlNfMVFJOUV4b002NjFQQ042TmlXODNWQ2o4TjBqcnJuWTExUkZ0U21KcVMtTFk?oc=5" target="_blank" rel="noopener">Eni, PETRONAS launch new JV energy company in Southeast Asia - Petroleum Australia</a>
+      <span class="tag ma">ma</span>
+      <div class="src">Google News · Jun 11 09:53 UTC</div>
+    </div>
+    
+    <div class="headline">
+      <a href="https://news.google.com/rss/articles/CBMirwFBVV95cUxNX3A2bWkwUkZxakw4RnJmejQyanotZ2RJT1Rkb08zWTZUa2loVE9HQVFCVDZVcENhb3VhbDM3YTc5RWZ6dC1kVUtnVzM0UFF1Uk1Jd3Yya1Q2cWN6RGVPeWhGVDVLd1FJTmotX2hOaFdyLW5xYWxYdDI3cnpUUjZwR3RtLVhGZjhhSllnN2duNHIzSVRyNWhrUW5oR2ZJRHVxWTh6UGR1SU40SWdabDJR?oc=5" target="_blank" rel="noopener">Petronas strengthens upstream partnerships to secure Malaysia’s energy future - scoop.my</a>
+      <span class="tag ma">ma</span>
+      <div class="src">Google News · Jun 11 09:02 UTC</div>
+    </div>
+    
+    </div>
+  </details>
+</div>
+
+
+
+
+<!-- Commodity News -->
+
+
+<h2>Crude Oil</h2>
+<div class="card">
+  
+  <div class="headline">
+    <a href="https://news.google.com/rss/articles/CBMisAFBVV95cUxPRVg2X190YVA4cHR2S2JPek01bm1OV0NabE1jQUphdTFOZHk4R1FFUjlJS0dBdHgwb3B6b3FYN2trUFFRRUdfbUJPXzhORzl3dG8yZTNFOXc5cDFsY1B2V0FVbHFxNGRlSEc4NU1ONlhZT2JVS2hSalg2TUdOa3VfM3QzbDRRVHVwdWZLRWxadUpiOTFROERzNzFaZklCNGk5VHVtaWU3ZldTaFRxOGlpSQ?oc=5" target="_blank" rel="noopener">Goldman Sachs Raises 2026 Brent Crude Average Price Forecast by $8 to $85 a Barrel, WTI to $79 a Barrel - EnergyNow.com</a>
+    <span class="tag earnings">earnings</span>
+    <div class="src">Google News · Jun 12 21:48 UTC</div>
+  </div>
+  
+  <div class="headline">
+    <a href="https://news.google.com/rss/articles/CBMiogFBVV95cUxQN1ZOVFVuUnFFYUstVktuczhxdzBYN1lUbUlqbTIwZEVnX2lCclN2dDZyeVJxUnFPLXdLLWhHcTd1MUUyM0kxTFBUZWJZSVlfN2RCZkRlRXhqT3ZfdUJTQkFjSkR1dDFsQ2Rmc19VTERhc1hsV2Nka2RDVEFvZ0FUcFdJQ0dCR21lcm5mZU12UzJZZHlyOFh3WGEzVWpCVDlUeHc?oc=5" target="_blank" rel="noopener">Core Differences Between West Texas Intermediate (WTI) and Brent Crude and the Affect of the Iran War - EnergyNow.com</a>
+    <span class="tag geopolitical">geopolitical</span><span class="tag enterprise_risk">enterprise_risk</span>
+    <div class="src">Google News · Jun 12 21:32 UTC</div>
+  </div>
+  
+  <div class="headline">
+    <a href="https://news.google.com/rss/articles/CBMi4AFBVV95cUxPU2tBSXVlSV9iUGJzanFpVlRaTWpfeUtaSzl1bTB5RzBrWnRYREhTbW52cmplMXRKREZ3ZDg0OFB1SEZMZ3U3SVA0Zm5IOXY5bzFnZHp6d2VpcjNZY0pNZjZSaFE2Wmc5WW5JRUpzcmZScURDa2pvTFc2ZUdKNXBzV1NzbFAtdEVhUmhjZlE3X19LREx1eDdPUWtZUkZXSlQ1N2ZFS25uWDl1ZGw1MUV3RW01WmE4QU5hdXpobXk5R1VzNFRKSFNMYnBFY0RqNXZtWkctSzNmN3hoU1E4dXVlMQ?oc=5" target="_blank" rel="noopener">Natural Gas, WTI Oil, Brent Oil Forecasts – Oil Tests New Lows As U.S. And Iran Move Closer To A Deal - FXEmpire</a>
+    <span class="tag earnings">earnings</span><span class="tag ma">ma</span><span class="tag geopolitical">geopolitical</span>
+    <div class="src">Google News · Jun 12 17:20 UTC</div>
+  </div>
+  
+  <div class="headline">
+    <a href="https://news.google.com/rss/articles/CBMiuwFBVV95cUxQRkdyQmlDTzJhWmlNMy1Ld2FqVEFWWDdyV0xWX0xZdll2UDh2bU0tZEt1alhQS0QwUDJJN1U1UHIwaG1NVkQzb3hzaTc1RExVNTc1MktKNWVDRGpPWkN3MEVsY0p5c0QxRDhWdmtpc3ZUaWNTdkdQVDBoYmFDSkRTRGxXZXNrNXJhV0R4eVREUTJ5WkJBMG9FOHVYaUh1OFJ6aHItWXRybTduWktLRjhhb0tZWmsyS2NNbVJ3?oc=5" target="_blank" rel="noopener">US and Iran Rumored to Reach Deal at G7 Meeting. Crude Oil Prices Fall to Mid-April Levels, WTI Futures Slump About 4% - TradingKey</a>
+    <span class="tag ma">ma</span><span class="tag geopolitical">geopolitical</span>
+    <div class="src">Google News · Jun 12 15:36 UTC</div>
+  </div>
+  
+  <div class="headline">
+    <a href="https://news.google.com/rss/articles/CBMi1gFBVV95cUxQcHdfTkQtbE9hTHZwN2s5NW5KT24xMGRqWmVUcWc0bzQ3YU9kUldyREFFdndFR0owWWE2cTgyNjRobUQ1cTY0ZEI3UlNqbWRLUzVtM3dVenVOVWVGU2FpV2FLeXV3cWxrTmpIMXFhekZkMC03REFrbEtfcy1PMXBXNVZWTDlKRmgxZmJvZDRXampUWW9XczVBQ0lndkNXTzAtblp4UE96SzFST2R4WkhuU3dnR3ZDaUJIZ21kbHBFVV94aHlxejVPQWljSXZ4aVlBSDNud0FR0gHoAUFVX3lxTE9OOC1iZ0V6WXlIYTZ4SlJzVG5NM1VFUkFMeTNFWnZ3MXVsd05senZRWE5EXy1sQU1pcGJwSmdYVTR6U2gwLUpBenZJRldodUg2SjNmWHBQUklQUnZLVk84QzdBODlWeXJaR2luLTAxRTVqNWdhT0kwbHdXeV9XakNtSVlIZ2xkNTB6RFBXbEhzVkdqTDZOWWhrbS1Mbi0tUFE5WTZ6bVB2cWpWcUtla01lMVYwdkQyY3NObHN6N0RjajdjY1JQaklqTlV5b0ljOVlnNGNydWpmVHd5MHA3VjV2X1NsZUtjSG4?oc=5" target="_blank" rel="noopener">Why oil is failing: Crude benchmarks slide below $90 as traders reassess Hormuz, supply risks - Gulf News</a>
+    <span class="tag trading_moves">trading_moves</span>
+    <div class="src">Google News · Jun 12 15:23 UTC</div>
+  </div>
+  
+  <div class="headline">
+    <a href="https://news.google.com/rss/articles/CBMikgFBVV95cUxNbEJHQk5PUU1PWktqM01vM0ljMHFBbGl0U3FzWUZFYnB3UzBFZE1TVFFZQ3BmSUc0ZzVjTnF2V1VWa2NpLUJLdnRHc3pVcTVqOTU1Y050UXhMZXB2MlBYVGJWNnJXbWhiY0NaNno5WGNHMzFrQWRMR0tNa2J0bWdnMEEzSXh2MThSU0Z1dG1sN2Q1dw?oc=5" target="_blank" rel="noopener">Brent, WTI Slide 3% as Trump Halts Planned Strike on Iran - Business Post Nigeria</a>
+    <span class="tag geopolitical">geopolitical</span>
+    <div class="src">Google News · Jun 12 11:50 UTC</div>
+  </div>
+  
+</div>
+
+
+
+<h2>Natgas Lng</h2>
+<div class="card">
+  
+  <div class="headline">
+    <a href="https://news.google.com/rss/articles/CBMihAFBVV95cUxPNURyMjJlTGlOOS1FR0lFVlFocFBDQy1HLVUteTdMbURERkVCNlU2Mm93MDlfeUN2aHd6Nl9Yc1REb3hMR2lkN2p5b04xZXQ2RTJHMnJwZmRVbkFkZTVDZHo0dzZXS3RZV2hhNmJFZkdvMzhDVTZKY1hDU1FCZ0lDTmJRVEc?oc=5" target="_blank" rel="noopener">Europe’s Gas Balancing Act: LNG Shortfalls, Rising Russian Flows, and the Race to Refill Storage - Anas Alhajji | Substack</a>
+    <span class="tag geopolitical">geopolitical</span>
+    <div class="src">Google News · Jun 12 14:11 UTC</div>
+  </div>
+  
+  <div class="headline">
+    <a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxOUG9JeGlmQV9ManZDZU9vTFdiZFNCUHo3RktYM194Y1FYVk55VkNtRjJyRnpRQTZmUUk3TVNxVVZsVTBETkJpd2Mwb0NIRmJaLTE0a0RSRTNMeDdsSDliY1BTWUMxSjdMUm1HLW81VHVnakJQMGppYXdjM2FtNHNYWjcwTW1ua1RCTEFnQTJpRGhtME1vS0l4SEZ2SkpPeXRlLTVBZ3pZRXFOenhUSEE?oc=5" target="_blank" rel="noopener">Renewed Fighting Between Iran, Israel Lifts TTF, JKM as Supply Crunch Deepens - Natural Gas Intelligence</a>
+    <span class="tag geopolitical">geopolitical</span>
+    <div class="src">Google News · Jun 08 19:15 UTC</div>
+  </div>
+  
+  <div class="headline">
+    <a href="https://news.google.com/rss/articles/CBMiowFBVV95cUxNMEpyd2VXZGZucm5mMW1vdEN5N3FPT1lDNkNTSTFXejhmLUpsTjhuYllTUk1TczlOZzU3MlVuaDJfSzVoT2JOVFZwSm8xN1RBZURMcnRjRXJlaVlQdzRIbmtCN2VhRHg5T3YxTUdBc1o3VTNLYkZBSDFxbmROYXZMTGw0MWNPMG55cnRZaW1IR2RzYnc4ZTdJdm5aZlRYajNCNTFB?oc=5" target="_blank" rel="noopener">The market outlook for gas and LNG in Asia - Energy Connects</a>
+    <span class="tag earnings">earnings</span>
+    <div class="src">Google News · Jun 08 09:54 UTC</div>
+  </div>
+  
+  <div class="headline">
+    <a href="https://news.google.com/rss/articles/CBMinAFBVV95cUxQS1hob1pvZHpSbVZiODhpZ20xWnpXWFJDSkhGa05yalBqYjlNb29pR28xY1VvTVRhRnlCYUR4WVlOM19KdnREUFFZcGFBY0Q3S21DMW5mWXRQd0hKeUJkdm9ESGhoMWVHeEFGZXRVb1BtZlF4TzVSRTdHNUF0aEc5S09OM3NyMXJRRWdxZmdPYTJCTVBrTzNyS2dxaFI?oc=5" target="_blank" rel="noopener">Coal Continues Taking Outsized Role in Asia Amid LNG Shortages - Natural Gas Intelligence</a>
+    
+    <div class="src">Google News · Jun 10 13:05 UTC</div>
+  </div>
+  
+</div>
+
+
+
+<h2>Refined</h2>
+<div class="card">
+  
+  <div class="headline">
+    <a href="https://news.google.com/rss/articles/CBMiS0FVX3lxTFA1NEdha3dPU01SNXc5ODZMaE1FS2lPd1F6aFpfT2drRUtHdDE5VkpLbjNkS2RNTERTT1FZbWctTG8yczh4MnFhNVRjRQ?oc=5" target="_blank" rel="noopener">Govt approves import of Gas Oil, Jet A-1 fuel, Furnace Oil, Octane - Bangladesh Sangbad Sangstha (BSS)</a>
+    <span class="tag regulatory">regulatory</span>
+    <div class="src">Google News · Jun 10 06:53 UTC</div>
+  </div>
+  
+  <div class="headline">
+    <a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxNYkVVUnZzVFBpU2h2ejNKRG5jV1NmQ1hpZEstZWd3TFNIMTN4bml5eXRnZDhDNkJJRUdRNlpFV1FyaTM0bWlOT3R4YWxXWkpIazFsMzVGUjgxNkR4di1PVHh0bDNUQ0piR3ROU3JlcklvR0V6dmFyVk41U3NDbWNLS0ctRGg2VFlqWHE5SHloYm9fbmFFNnlHdGFlNWgwbXM?oc=5" target="_blank" rel="noopener">Fuel oil: HSFO drags market lower as supply worries ease - Quantum Commodity Intelligence</a>
+    
+    <div class="src">Google News · Jun 12 15:00 UTC</div>
+  </div>
+  
+  <div class="headline">
+    <a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxNaGo5WjB1dGVVOFBKRnlVbnZ3NDVTX3QwOURuMm5mNFcwNU5ZNG9Zek9VY2RzYTJubWVaazVJOHdyTjBUY2N1dWs4MW5DNXBNYnhiVldJRUtBYjZ5VzJrVkF2Ymh1d1hnR0hlYXNlTUNzdkhJQWxKS05LUkFySE9MY2tKdUMzLTFOam5mQVhIRWgwY1VCaHIwVDU4UFNTT3FUdTNVS1FwbWhQd2Vzb2c?oc=5" target="_blank" rel="noopener">Singapore&#39;s oil product inventories slump to near 13-year low - Reuters</a>
+    
+    <div class="src">Google News · Jun 11 09:43 UTC</div>
+  </div>
+  
+</div>
+
+
+
+<h2>Coal</h2>
+<div class="card">
+  
+  <div class="headline">
+    <a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxPUEd4aGtKSzBIUWRJLUFESE1uWDJWd0w0SnNZVkxMbXM3ay1ZQnc2MmdES09zNDRMQmt3THM4bFdmZkVWeXV3UzM2aWN1Q1BtYnAxakJiNm4zbHoxSjlvemRIVW5jcFhLbWM2aEktcXBCNXZuOEJPLVgzZnJGa3pkREViX2x0ZnItZVVkWEZmUm4tN091Z2szN2NEV2xOOXc?oc=5" target="_blank" rel="noopener">Thermal coal poised for further gains as we enter summer cooling season - The Coal Trader</a>
+    <span class="tag trading_moves">trading_moves</span><span class="tag enterprise_risk">enterprise_risk</span>
+    <div class="src">Google News · Jun 08 07:00 UTC</div>
+  </div>
+  
+</div>
+
+
+
+
+
+
+
+<h2>Agri</h2>
+<div class="card">
+  
+  <div class="headline">
+    <a href="https://news.google.com/rss/articles/CBMie0FVX3lxTE5sLXByR0NjOEZCb3N4NGUwc0xkRC15TndxSk5tUW9IR3dwN0Z2bzljdld3WHExU1haNHlzT0ZVV0pJSkJlX2NVTzFRbC1XRDJMYm53SG5oUEhVRUphTlh4UVFvVV82Qkx1akwybDNmOHQzTmlBVElJdzFqMA?oc=5" target="_blank" rel="noopener">Micro Soybean Oil - CME Group</a>
+    
+    <div class="src">Google News · Jun 06 17:40 UTC</div>
+  </div>
+  
+</div>
+
+
+
+<footer style="margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);color:var(--muted);font-size:.8rem">
+  Generated 2026-06-13 10:13 UTC · Rule-based extractive digest · Prices from yfinance (live) and web (indicative) · No LLM used
+</footer>
+</div>
+</body>
+</html>
